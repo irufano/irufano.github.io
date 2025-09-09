@@ -208,25 +208,165 @@ LLM Service → Response Validator → Frontend
 - Create effective result aggregation and ranking algorithms
 - Build comprehensive monitoring and observability tools
 
-## Future Implications
+## Implementation Agentic RAG with LLMfy
 
-### Evolution of RAG Systems
+### Define tools 
 
-The progression from Traditional to Agentic RAG represents a broader trend toward more intelligent, adaptive AI systems. Future developments may include:
+```python 
+@Tool()
+def company_info_search(question: str):
+    """Use for general company information."""
 
-- **Hybrid Architectures**: Systems that dynamically switch between traditional and agentic approaches
-- **Self-Improving Agents**: RAG systems that learn and optimize their retrieval strategies over time
-- **Multi-Modal Integration**: Agents capable of processing text, images, audio, and other data types
-- **Collaborative Agent Networks**: Multiple specialized agents working together for complex tasks
+    # YOUR SIMILARITY SEARCH LOGIC
+    return context
 
-### Industry Impact
 
-Organizations adopting these technologies should consider:
+@Tool()
+def legal_info_search(question: str):
+    """Use for legal information."""
 
-- **Skill Development**: Investing in team capabilities for agent-based system design
-- **Infrastructure Planning**: Preparing for more complex deployment and monitoring needs
-- **Ethical Considerations**: Ensuring transparency and control in agent decision-making
-- **Cost Management**: Balancing enhanced capabilities with operational expenses
+    # YOUR SIMILARITY SEARCH LOGIC
+    return context
+```
+
+### Define Agentic RAG
+
+```python
+from llmfy import (
+    LLMfy,
+    START,
+    END,
+    LLMfyPipe,
+    ToolRegistry,
+    WorkflowState,
+    tools_node,
+    BedrockModel,
+    BedrockConfig,
+)
+
+model = "amazon.nova-pro-v1:0"
+
+llm = BedrockModel(
+    model=model,
+    config=BedrockConfig(temperature=0.7),
+)
+
+SYSTEM_PROMPT = """You are an assistant with access to two retrieval tools:
+1) company_info_search — for general company information.
+2) legal_info_search — for legal information.
+
+
+Rules:
+- ALWAYS use the relevant tool(s) before answering. If both are relevant, call both.
+- If the question is outside these knowledge above, say you only cover company/legal.
+- Be concise, specific, and action-oriented. If there are differences across versions/dates, highlight them.
+"""
+
+# Initialize framework
+ai = LLMfy(llm, system_message=SYSTEM_PROMPT)
+
+tools = [amboja_info_search, portrai_info_search]
+
+# Register tool
+ai.register_tool(tools)
+
+# Register to ToolRegistry
+tool_registry = ToolRegistry(tools, llm)
+
+# Workflow
+workflow = LLMfyPipe(
+    {
+        "messages": [],
+    }
+)
+
+
+async def aggregator_agent(state: WorkflowState) -> dict:
+    messages = state.get("messages", [])
+    response = ai.chat(messages)
+    messages.append(response.messages[-1])
+    return {"messages": messages, "system": response.messages[0]}
+
+
+async def node_tools(state: WorkflowState) -> dict:
+    messages = tools_node(
+        messages=state.get("messages", []),
+        registry=tool_registry,
+    )
+    return {"messages": messages}
+
+
+def should_continue(state: WorkflowState) -> str:
+    messages = state.get("messages", [])
+    for msg in messages:
+        print(msg)
+    last_message = messages[-1]
+    if last_message.tool_calls:
+        return "tools"
+    return END
+
+
+# Add nodes
+workflow.add_node("aggregator_agent", aggregator_agent)
+workflow.add_node("tools", node_tools)
+
+# Define workflow structure
+workflow.add_edge(START, "aggregator_agent")
+workflow.add_conditional_edge("aggregator_agent", ["tools", END], should_continue)
+workflow.add_edge("tools", "aggregator_agent")
+
+```
+
+### Check workflow agent diagram in Notebooks
+
+```python
+from IPython.display import Image, display
+
+# Check diagram
+graph_url = workflow.get_diagram_url()
+display(Image(url=graph_url))
+```
+
+example:
+![](https://mermaid.ink/img/CgkJCSBncmFwaCBURAogICAgJSUgTm9kZSBTdHlsZXMKICAgICUlIE5vZGVzCiAgICBTVEFSVChbU1RBUlRdKQogICAgRU5EKFtFTkRdKQogICAgYWdncmVnYXRvcl9hZ2VudChhZ2dyZWdhdG9yX2FnZW50KQogICAgdG9vbHModG9vbHMpCiAgICAlJSBFZGdlcwogICAgU1RBUlQgLS0-IGFnZ3JlZ2F0b3JfYWdlbnQKICAgIGFnZ3JlZ2F0b3JfYWdlbnQgLS4tPnxjb25kaXRpb258IHRvb2xzCiAgICBhZ2dyZWdhdG9yX2FnZW50IC0uLT58Y29uZGl0aW9ufCBFTkQKICAgIHRvb2xzIC0tPiBhZ2dyZWdhdG9yX2FnZW50CnN0eWxlIFNUQVJUIGZpbGw6Izc3N0VGRSxzdHJva2U6IzRGNTRBQSxjb2xvcjp3aGl0ZQpzdHlsZSBFTkQgZmlsbDojNzc3RUZFLHN0cm9rZTojNEY1NEFBLGNvbG9yOndoaXRlCgkJCSA=)
+
+### Define Funtion to call agentic RAG
+
+```python 
+from llmfy import Message, Role
+
+
+async def call_agentic_rag(question: str):
+    try:
+        res = await workflow.execute(
+            {"messages": [Message(role=Role.USER, content=question)]}
+        )
+
+        messages = res.get("messages", [])
+        content = messages[-1].content if messages else None
+        print(messages)
+        return content
+    except Exception as e:
+        raise e
+```
+
+### Test Call
+
+```python
+response = await call_agentic_rag(question="Apa visi dan misi utama perusahaan?")
+
+```
+Output:
+```sh
+Visi:
+Menjadi perusahaan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk meningkatkan kualitas hidup masyarakat serta menciptakan nilai tambah bagi seluruh pemangku kepentingan.
+
+Misi:
+- Memberikan produk dan layanan berkualitas tinggi yang berfokus pada kebutuhan pelanggan.
+- Mengedepankan inovasi dan teknologi untuk mendukung pertumbuhan berkelanjutan.
+- Menciptakan lingkungan kerja yang profesional, inklusif, dan mendukung pengembangan karyawan.
+- Berkontribusi aktif terhadap pembangunan ekonomi, sosial, dan lingkungan.
+```
 
 ## Conclusion
 
