@@ -11,10 +11,6 @@ tags:
 image: "https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/rag.svg"
 ---
 
-## Executive Summary
-
-Retrieval-Augmented Generation (RAG) has become a cornerstone technology for building intelligent systems that can access and utilize external knowledge. While Traditional RAG follows a linear, straightforward approach, Agentic RAG introduces sophisticated orchestration and dynamic tool selection capabilities. This article explores both architectures, their key differences, and use cases where each excels.
-
 ## What is RAG?
 
 Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.
