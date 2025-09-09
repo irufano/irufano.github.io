@@ -229,3 +229,30 @@ body {
 .note-block .content-code-block {
   @apply mb-2 mt-4 text-base;
 }
+
+.table-header {
+  @apply p-2 bg-slate-200 dark:bg-zinc-800 dark:text-gray-300;
+  padding: 12px 16px;
+  vertical-align: middle;
+  border: none !important;
+}
+
+/* Data row specific styles */
+.data-row {
+  @apply leading-normal;
+  border: none !important;
+}
+
+.data-row td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+/* Enhanced alternating rows */
+.even-row {
+  @apply bg-slate-100 dark:bg-zinc-700 p-2;
+}
+
+.odd-row {
+  @apply bg-white dark:bg-zinc-900 p-2;
+}

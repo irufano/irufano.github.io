@@ -6,6 +6,7 @@ import html from "remark-html";
 import rSlug from "remark-slug";
 import toc from "remark-toc";
 import highlight from "highlight.js";
+import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -35,6 +36,7 @@ export function getPostBySlug(slug) {
   const readingTimeEst = calculateReadingTime(content);
 
   const processedContent = remark()
+    .use(remarkGfm)
     .use(rSlug) // Adds slugs to headings
     .use(toc) // Generates a table of contents
     .use(html, { sanitize: false })
@@ -424,6 +426,56 @@ export function getPostBySlug(slug) {
             </div>
           `;
         }
+      });
+
+      visit(tree, "table", (node) => {
+        const tableData = {
+          headers: [],
+          rows: [],
+        };
+
+        // Extract headers from the first row
+        if (node.children[0] && node.children[0].type === "tableRow") {
+          node.children[0].children.forEach((cell) => {
+            if (cell.children[0] && cell.children[0].value) {
+              tableData.headers.push(cell.children[0].value);
+            }
+          });
+        }
+
+        // Find the first row (header row)
+        const headerRow = node.children[0];
+        if (headerRow && headerRow.type === "tableRow") {
+          headerRow.children.forEach((cell) => {
+            // Add a custom property to mark this as a styled header
+            cell.data = cell.data || {};
+            cell.data.hProperties = cell.data.hProperties || {};
+            cell.data.hProperties.className = "table-header";
+          });
+        }
+
+        // Extract data rows (skip header row)
+        node.children.slice(1).forEach((row, index) => {
+          if (row.type === "tableRow") {
+            const rowData = [];
+
+            // Add className to the row based on index
+            row.data = row.data || {};
+            row.data.hProperties = row.data.hProperties || {};
+            row.data.hProperties.className = `data-row ${
+              index % 2 === 0 ? "even-row" : "odd-row"
+            }`;
+
+            row.children.forEach((cell) => {
+              if (cell.children[0] && cell.children[0].value) {
+                rowData.push(cell.children[0].value);
+              }
+            });
+
+            // Store rowData if needed (this part depends on your use case)
+            // tableData.rows.push(rowData);
+          }
+        });
       });
     })
     .processSync(content);
