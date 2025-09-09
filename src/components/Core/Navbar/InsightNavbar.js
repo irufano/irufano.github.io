@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ThemeToggle from "../../Button/ThemeToggle";
-import IrufanoInsightLogo from "../../Logo/IrufanoInsightLogo";
 import SearchButton from "../../Button/SearchButton";
+import IrufanoDevLogo from "@/components/Logo/IrufanoDevLogo";
 
 export default function InsightNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,8 +80,8 @@ export default function InsightNavbar() {
             </button>
           </div>
           <div className="text-xl font-bold">
-            <Link href="/insight">
-              <IrufanoInsightLogo />
+            <Link href="/">
+              <IrufanoDevLogo />
             </Link>
           </div>
           <div className="hidden md:flex space-x-4 items-center text-md font-medium">
