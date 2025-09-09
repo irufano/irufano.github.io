@@ -8,7 +8,7 @@ tags:
   - RAG
   - Agent
   - AI
-image: "https://github.com/irufano/irufano.github.io/blob/dev/posts/traditional-rag-vs-agentic-rag/rag.svg"
+image: "https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/rag.svg"
 ---
 
 ## Executive Summary
@@ -21,7 +21,7 @@ Retrieval-Augmented Generation combines the power of large language models with 
 
 ## Traditional RAG Architecture
 
-![image](https://github.com/irufano/irufano.github.io/blob/dev/posts/traditional-rag-vs-agentic-rag/traditional-rag.svg)
+![image](https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/traditional-rag.svg)
 
 ### Core Components
 
@@ -76,7 +76,7 @@ The Traditional RAG process follows these sequential steps:
 
 ## Agentic RAG Architecture
 
-![image](https://github.com/irufano/irufano.github.io/blob/dev/posts/traditional-rag-vs-agentic-rag/agentic-rag.svg)
+![image](https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/agentic-rag.svg)
 
 ### Core Innovation: The Aggregator Agent
 
