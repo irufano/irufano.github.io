@@ -17,8 +17,8 @@ export default function Navbar({ solid = false, type = LayoutType.DEV }) {
   const defaultMenuStyle =
     "mr-2 text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark";
 
-  if (type === LayoutType.INSIGHT) {
-    useEffect(() => {
+  useEffect(() => {
+    if (type === LayoutType.INSIGHT) {
       const controlNavbar = () => {
         if (typeof window !== "undefined") {
           if (window.scrollY > lastScrollY) {
@@ -39,10 +39,8 @@ export default function Navbar({ solid = false, type = LayoutType.DEV }) {
           window.removeEventListener("scroll", controlNavbar);
         };
       }
-    }, [lastScrollY]);
-  } else {
-    // dev
-    useEffect(() => {
+    } else {
+      // dev
       const handleScroll = () => {
         const scrollTop = window.scrollY;
         setIsScrolled(scrollTop > 0);
@@ -52,8 +50,8 @@ export default function Navbar({ solid = false, type = LayoutType.DEV }) {
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
-    }, []);
-  }
+    }
+  }, [lastScrollY]);
 
   const devNavbar = () => {
     return (
