@@ -5,6 +5,8 @@ import ToolCard from "@/components/Home/ToolCard";
 import { getPosts } from "@/utils/posts";
 import Image from "next/image";
 import Logo from "../assets/irufano-square-logo.svg";
+import LogoAnimation from "@/components/Animation/LogoAnimation";
+import DiagonalAnimation from "@/components/Animation/DiagonalAnimation";
 
 export async function getStaticProps({ params }) {
   const page = 1; // Start with the first page
@@ -25,21 +27,49 @@ export default function Home({ posts }) {
         {/* First Image */}
         <div className="absolute top-[5%] md:top-[6%] -left-[15%] md:-left-[5%]">
           <div className="relative">
-            <Image src={Logo} alt="-" className="w-40 md:w-72 2xl:w-[20rem] h-auto" priority={true} />
+            <Image
+              src={Logo}
+              alt="-"
+              className="w-40 md:w-72 2xl:w-[20rem] h-auto"
+              priority={true}
+            />
           </div>
         </div>
+
+        <div className="absolute left-[89%] md:left-[40%]">
+          <div className="relative">
+            <DiagonalAnimation />
+          </div>
+        </div>
+
+        {/* Animation Image */}
+        {/* <div className="absolute top-[15%] right-[5%]">
+          <div className="relative">
+            <LogoAnimation />
+          </div>
+        </div> */}
 
         {/* Second Image */}
         <div className="absolute top-[15%] right-[5%]">
           <div className="relative" style={{ filter: "blur(100px)" }}>
-            <Image src={Logo} alt="-" className="w-20 md:w-60 h-auto" priority={true} />
+            <Image
+              src={Logo}
+              alt="-"
+              className="w-20 md:w-60 h-auto"
+              priority={true}
+            />
           </div>
         </div>
 
         {/* Third Image */}
         <div className="absolute top-[20%] right-[40%]">
           <div className="relative" style={{ filter: "blur(100px)" }}>
-            <Image src={Logo} alt="-" className="w-25 md:w-80 h-auto" priority={true} />
+            <Image
+              src={Logo}
+              alt="-"
+              className="w-25 md:w-80 h-auto"
+              priority={true}
+            />
           </div>
         </div>
 
@@ -128,7 +158,12 @@ export default function Home({ posts }) {
                       for sponsor
                     </h2>
                     <div className="justify-center mx-auto w-ful w-6 h-auto mt-4">
-                      <Image src={Logo} alt="-" className=" w-ful w-6 h-auto" priority={true} />
+                      <Image
+                        src={Logo}
+                        alt="-"
+                        className=" w-ful w-6 h-auto"
+                        priority={true}
+                      />
                     </div>
                   </div>
                 </div>
