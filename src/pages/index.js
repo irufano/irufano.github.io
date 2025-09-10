@@ -36,7 +36,7 @@ export default function Home({ posts }) {
           </div>
         </div>
 
-        <div className="absolute left-[89%] md:left-[40%]">
+        <div className="absolute left-[60%] md:left-[40%]">
           <div className="relative">
             <DiagonalAnimation />
           </div>
