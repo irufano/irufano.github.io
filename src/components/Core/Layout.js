@@ -1,6 +1,5 @@
 import { ubuntu } from "@/utils/font";
-import DevNavbar from "./Navbar/DevNavbar";
-import InsightNavbar from "./Navbar/InsightNavbar";
+import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
 export const LayoutType = Object.freeze({
@@ -10,32 +9,11 @@ export const LayoutType = Object.freeze({
 });
 
 export default function Layout({ children, type = LayoutType.DEV }) {
-  switch (type) {
-    case LayoutType.DEV:
-      return (
-        <div className={`${ubuntu} font-ubuntu flex flex-col min-h-screen`}>
-          <DevNavbar />
-          <main className="font-ubuntu flex-grow">{children}</main>
-          <Footer />
-        </div>
-      );
-
-    case LayoutType.INSIGHT:
-      return (
-        <div className={`${ubuntu} font-ubuntu flex flex-col min-h-screen`}>
-          <InsightNavbar />
-          <main className="font-ubuntu flex-grow">{children}</main>
-          <Footer />
-        </div>
-      );
-
-    default:
-      return (
-        <div className={`${ubuntu} font-ubuntu flex flex-col min-h-screen`}>
-          <DevNavbar />
-          <main className="font-ubuntu flex-grow">{children}</main>
-          <Footer />
-        </div>
-      );
-  }
+  return (
+    <div className={`${ubuntu} font-ubuntu flex flex-col min-h-screen`}>
+      <Navbar type={type} />
+      <main className="font-ubuntu flex-grow">{children}</main>
+      <Footer />
+    </div>
+  );
 }
