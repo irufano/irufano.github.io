@@ -25,7 +25,7 @@ export default function Home({ posts }) {
     <Layout>
       <div className="relative w-full h-auto bg-emerald-50 dark:bg-background-dark">
         {/* First Image */}
-        <div className="absolute top-[5%] md:top-[6%] -left-[15%] md:-left-[5%]">
+        {/* <div className="absolute top-[5%] md:top-[6%] -left-[15%] md:-left-[5%]">
           <div className="relative">
             <Image
               src={Logo}
@@ -34,9 +34,9 @@ export default function Home({ posts }) {
               priority={true}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div className="absolute left-[60%] md:left-[40%]">
+        <div className="absolute left-[0%] md:left-[25%]">
           <div className="relative">
             <DiagonalAnimation />
           </div>
@@ -86,10 +86,13 @@ export default function Home({ posts }) {
                     <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
                       Developer Portal
                     </h2>
+                    <div className="ml-4">
+                      <LogoAnimation size={20} />
+                    </div>
                   </div>
                   <p className="mt-3 text-gray-600 dark:text-gray-300">
                     A tech docs, insights about the software development and
-                    also provides several tools for anyone who need it
+                    also provides several tools for anyone who need it{" "}
                   </p>
                 </div>
               </div>

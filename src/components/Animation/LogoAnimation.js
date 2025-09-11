@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Logo from "../../assets/irufano-square-logo.svg";
 import Image from "next/image";
 
-function LogoAnimation() {
+function LogoAnimation({ size = 100 }) {
   const root = useRef(null);
   const scope = useRef(null);
   const [rotations, setRotations] = useState(0);
@@ -56,10 +56,11 @@ function LogoAnimation() {
       <div className="large centered row">
         {/* <img src={logo} className="logo react" alt="React logo" /> */}
         <Image
+          onClick={handleClick}
           src={Logo}
           alt="Logo"
-          width={100}
-          height={100}
+          width={size}
+          height={size}
           className="logo"
         />
       </div>
