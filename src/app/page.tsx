@@ -2,11 +2,12 @@ import Layout from "@/components/Core/Layout";
 import Greeting from "@/components/Home/Greeting";
 import HomeInsightsCard from "@/components/Home/HomeInsightCard";
 import { getPosts } from "@/utils/posts";
-import Image from "next/image";
-import Logo from "../assets/irufano-square-logo.svg";
 import LogoAnimation from "@/components/Animation/LogoAnimation";
 import AnimatedOrbs from "@/components/Animation/AnimatedOrbs";
 import HomeToolCards from "./HomeToolCards";
+import MeteorDefenseGame from "@/components/Home/MeteorDefenseGame";
+import CatchTheBugGame from "@/components/Home/CatchTheBugGame";
+
 
 export default function Home() {
   const { paginatedPosts } = getPosts(1, 5);
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="relative w-full h-auto bg-emerald-50 dark:bg-background-dark">
         <AnimatedOrbs />
 
-        <div className=" relative flex items-center justify-center py-16 md:py-24">
+        <div className=" relative flex items-center justify-center py-16 md:py-20">
           <div className="container mx-auto p-4">
             <div className="md:flex justify-center">
               <div className="inline-block md:hidden w-full">
@@ -58,26 +59,11 @@ export default function Home() {
                 </div>
 
                 {/* Mini Game */}
-                <div
-                  className="bg-blue-200/40 dark:bg-blue-700/30 backdrop-blur-md rounded-lg shadow-lg p-6 w-full mr-0 md:mr-6 mt-4 md:mt-0 flex items-center bg-cover bg-center"
-                  style={{ backgroundImage: `url('/promo-bg.svg')` }}
-                >
-                  <div className="w-full text-center justify-center">
-                    <h2 className="text-4xl font-semibold text-white">
-                      Free space
-                    </h2>
-                    <h2 className="text-2xl font-semibold text-white">
-                      for sponsor
-                    </h2>
-                    <div className="justify-center mx-auto w-ful w-6 h-auto mt-4">
-                      <Image
-                        src={Logo}
-                        alt="-"
-                        className=" w-ful w-6 h-auto"
-                        priority={true}
-                      />
-                    </div>
-                  </div>
+                <div className="space-y-6">
+
+                  <MeteorDefenseGame />
+
+                  <CatchTheBugGame />
                 </div>
               </div>
             </div>

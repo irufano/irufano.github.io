@@ -4,6 +4,7 @@ import IrufanoDevLogo from "@/components/Logo/IrufanoDevLogo";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SearchButton from "../../Button/SearchButton";
 import ThemeToggle from "../../Button/ThemeToggle";
@@ -19,11 +20,17 @@ export default function Navbar({ solid = false, type = LayoutType.DEV }: NavbarP
   const [isScrolled, setIsScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
 
   const activeMenuStyle =
     "mr-2 text-primary dark:text-primary hover:text-text dark:hover:text-text-dark transition-colors duration-200";
   const defaultMenuStyle =
     "mr-2 text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark transition-colors duration-200";
+
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
 
   useEffect(() => {
     if (type === LayoutType.INSIGHT) {
@@ -75,24 +82,24 @@ export default function Navbar({ solid = false, type = LayoutType.DEV }: NavbarP
 
   const desktopMenu = (
     <div className="hidden md:flex space-x-4 items-center text-md font-medium">
-      <Link href="/"><h3 className={type === LayoutType.DEV ? activeMenuStyle : defaultMenuStyle}>Home</h3></Link>
-      <Link href="/tools"><h3 className={type === LayoutType.TOOLS ? activeMenuStyle : defaultMenuStyle}>Tools</h3></Link>
-      <Link href="/insight"><h3 className={type === LayoutType.INSIGHT ? activeMenuStyle : defaultMenuStyle}>Insight</h3></Link>
-      {type === LayoutType.INSIGHT && <SearchButton />}
+      <Link href="/"><h3 className={isActive("/") ? activeMenuStyle : defaultMenuStyle}>Home</h3></Link>
+      <Link href="/tools"><h3 className={isActive("/tools") ? activeMenuStyle : defaultMenuStyle}>Tools</h3></Link>
+      <Link href="/insight"><h3 className={isActive("/insight") ? activeMenuStyle : defaultMenuStyle}>Insight</h3></Link>
+      {isActive("/insight") && <SearchButton />}
       <ThemeToggle />
     </div>
   );
 
   const mobileMenu = isOpen && (
     <div className="md:hidden my-2 space-y-4 justify-center items-start text-center text-md font-medium">
-      {type === LayoutType.INSIGHT && (
+      {isActive("/insight") && (
         <div className="flex w-full justify-center items-center my-3">
           <SearchButton hasText={true} />
         </div>
       )}
-      <Link href="/"><h3 className="block py-2 text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark">Home</h3></Link>
-      <Link href="/tools"><h3 className="block py-2 text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark">Tools</h3></Link>
-      <Link href="/insight"><h3 className="block py-2 text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark">Insight</h3></Link>
+      <Link href="/"><h3 className={cn("block py-2", isActive("/") ? "text-primary dark:text-primary" : "text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark")}>Home</h3></Link>
+      <Link href="/tools"><h3 className={cn("block py-2", isActive("/tools") ? "text-primary dark:text-primary" : "text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark")}>Tools</h3></Link>
+      <Link href="/insight"><h3 className={cn("block py-2", isActive("/insight") ? "text-primary dark:text-primary" : "text-text dark:text-text-dark hover:text-primary dark:hover:text-primary-dark")}>Insight</h3></Link>
     </div>
   );
 
