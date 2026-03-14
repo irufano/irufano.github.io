@@ -1,0 +1,378 @@
+1:"$Sreact.fragment"
+2:I[79520,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js"],""]
+3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+6:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
+b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
+d:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+:HL["https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","style"]
+:HL["https://irufano.github.io/_next/static/media/1bc7fc94203521e3-s.p.888a2ca8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/216579b50e548914-s.p.a1b609f7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/3df2de83712245dd-s.p.b86f99c9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/cd72e39fe5f8e190-s.p.2d85de6e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
+0:{"P":null,"b":"NLBFqrOtm6fs3XTmOCfgE","c":["","insight","post","machine-learning-concepts"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","machine-learning-concepts","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"ubuntu_32893d75-module__euGNZa__variable font-ubuntu","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+e:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+10:T31f8,<h2 id="definition">Definition</h2>
+<p>Machine learning (ML) is a subset of artificial intelligence (AI) that involves developing algorithms that allow computers to learn from and make predictions or decisions <span class="inline-code-block">based on data</span>. Instead of being explicitly programmed to perform tasks, machine learning models <span class="inline-code-block">identify patterns</span> in data and improve their performance as they are exposed to more data over time.</p>
+<h2 id="traditional-programming-vs-ml">Traditional Programming VS ML</h2>
+<h3 id="traditional-programming">Traditional Programming</h3>
+<p>Traditional programming is a manual process—meaning a person (programmer) creates the program. But without anyone programming the logic, one has to manually formulate or code rules.</p>
+
+            <div class="note-block">
+              
+                  <p class="content-block">
+                     <span class="strong-block">Traditional Programming</span><br/>INPUT + PROGRAM = OUTPUT
+                  </p>
+                
+            </div>
+          
+<h3 id="machine-learning">Machine Learning</h3>
+<p>In machine learning, on the other hand, the algorithm automatically formulates the rules from the data.</p>
+
+            <div class="note-block">
+              
+                  <p class="content-block">
+                     <span class="strong-block">Machine Learning</span><br/>INPUT + OUTPUT = PROGRAM (Model)
+                  </p>
+                
+            </div>
+          
+<h2 id="rules-for-using-ml">Rules for Using ML</h2>
+<p>There are 3 rules that are needed when we are going to use machine learning. One is mandatory and the other 2 are optional.</p>
+<h3 id="data">Data</h3>
+<p>Data is mandatory rule. When we use machine learning, ensure we have <span class="inline-code-block">data</span>, specially <span class="inline-code-block">historical data</span> because machine learning is learned from experience, where one of the experiences is historical data. Once we have data we can probably use machine learning.</p>
+<h3 id="pattern-optional">Pattern (Optional)</h3>
+<p>We must know that the problems we face have a <span class="inline-code-block">pattern</span>. One form of machine learning is pattern recognition. Once we know that the problem has pattern we can probably use machine learning, but if the problem has random stuff is can be hard to use machine learning.</p>
+<h3 id="the-problem-cannot-be-derived-mathematically-optional">The problem cannot be derived mathematically (Optional)</h3>
+<p>When we use machine learning it is better the problem <span class="inline-code-block">can&#x27;t be derived mathematically</span>. If the problem can be derived mathematically then actually the problem can be programmed explicitly, example determining odd-even numbers etc. But there are problem that have pattern and can't be derived mathematically, example disease detection, desease detection cannot be derived into mathematic formula.</p>
+<h2 id="machine-learning-type">Machine Learning Type</h2>
+<h3 id="supervised-learning">Supervised Learning</h3>
+<p>In supervised learning, the algorithm is trained on a dataset that contains both input features (data) and corresponding output labels (desired results). So in supervised learning requires <span class="inline-code-block">data</span> and <span class="inline-code-block">labels</span> as input. There are 2 types of supervised learning <span class="inline-code-block">Classification</span> and <span class="inline-code-block">Regression</span>.</p>
+<p>Characteristics of Supervised Learning:</p>
+<ol>
+<li>
+<p><span class="strong-block">Labeled Data</span>: The training data includes input-output pairs. Each example in the dataset comes with a label or outcome. For example:</p>
+<ul>
+<li>Input: Features like height, weight, and age.</li>
+<li>Output: A label like "healthy" or "unhealthy" for a health prediction model.</li>
+</ul>
+</li>
+<li>
+<p><span class="strong-block">Goal</span>: The algorithm tries to minimize the difference between its predicted outputs and the actual outputs by finding the best mapping from inputs to outputs during training.</p>
+</li>
+<li>
+<p><span class="strong-block">Training Process</span>:</p>
+<ul>
+<li>The model is fed with a labeled dataset (both input features and output labels).</li>
+<li>The model makes predictions and compares them to the actual labels.</li>
+<li>Based on this comparison, the model adjusts its internal parameters to improve accuracy.</li>
+<li>This process repeats until the model achieves satisfactory performance on the training data.</li>
+</ul>
+</li>
+</ol>
+<h4 id="classification">Classification</h4>
+
+            <div class="note-block">
+              
+                  <p class="content-block">
+                     F(X) => [0,1]
+                  </p>
+                
+                  <p class="content-block">
+                    <span class="emphasis-block">or</span>
+                  </p>
+                
+                  <p class="content-block">
+                    F(X) => [0,1,2,...]
+                  </p>
+                
+            </div>
+          
+<ul>
+<li>The goal is to assign data points to predefined <span class="inline-code-block">categories</span> or <span class="inline-code-block">classes</span>.</li>
+<li><span class="strong-block">Binary Classification</span>: Two possible classes (e.g., spam vs. non-spam emails).</li>
+<li><span class="strong-block">Multi-class Classification</span>: More than two classes (e.g., classifying types of flowers into species).</li>
+<li><span class="strong-block">Examples</span>:
+<ul>
+<li>Diagnosing diseases as “positive” or “negative”.</li>
+<li>Credit Scoring as "accepted" or "rejected"</li>
+<li>Classifying whether a customer will churn or stay.</li>
+</ul>
+</li>
+</ul>
+<h4 id="regression">Regression</h4>
+
+            <div class="note-block">
+              
+                  <p class="content-block">
+                     F(X) => R
+                  </p>
+                
+            </div>
+          
+<ul>
+<li>The goal is to predict continuous values (<span class="inline-code-block">numerical outcomes</span>).</li>
+<li><span class="strong-block">Examples</span>:
+<ul>
+<li>Predicting house prices based on features like size and location.</li>
+<li>Forecasting stock prices.</li>
+<li>Predicting the temperature at a specific location.</li>
+</ul>
+</li>
+</ul>
+<h4 id="supervised-learning-model-pipeline">Supervised learning model pipeline</h4>
+<p><img src="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png" alt="Supervised learning models"></p>
+<p class="text-sm">Image by: <a class="no-underline" href="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/tutorial/text_analytics/general_concepts.html#supervised-learning-model-fit-x-y">scikit-learn</a></p>
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+<p>Unsupervised learning is a type of machine learning where the model is trained on data that has no labeled outcomes. Unlike supervised learning, where the goal is to map inputs to specific labels, unsupervised learning focuses on uncovering the underlying structure or patterns within the data. The primary objective is to discover hidden relationships or groupings without human intervention or guidance.
+Included in unsupervised learning are clustering, Dimensionality Reduction etc.</p>
+<p>Characteristic of Unsupervised Learning:</p>
+<ol>
+<li><span class="strong-block">No Labels</span>: The data used in unsupervised learning is not labeled. The model works on its own to detect patterns, clusters, or associations without predefined categories or answers.</li>
+<li><span class="strong-block">Exploratory</span>: It’s primarily used for data exploration to find patterns, groupings, or structures in the data.</li>
+<li><span class="strong-block">Unstructured Data</span>: Often applied to unstructured or unlabeled datasets, such as customer purchase data, social media activity, or image datasets.</li>
+</ol>
+<h4 id="clustering">Clustering</h4>
+<ul>
+<li>
+<p>The goal is to <span class="inline-code-block">group data points</span> into clusters such that items in the same group are more similar to each other than to those in other groups.</p>
+</li>
+<li>
+<p><span class="strong-block">Examples</span>:</p>
+<ul>
+<li>Grouping customers based on purchasing behavior to create customer segments for targeted marketing.</li>
+<li>Clustering desease</li>
+</ul>
+</li>
+</ul>
+<h4 id="dimensionality-reduction">Dimensionality Reduction</h4>
+<ul>
+<li>
+<p>The goal is to <span class="inline-code-block">reduce the number of features</span> (or dimensions) in the data while retaining the most important information. This can help visualize high-dimensional data or improve the performance of machine learning models.</p>
+</li>
+<li>
+<p><span class="strong-block">Example</span>: Reducing the number of variables in a gene expression dataset from thousands to a smaller, more manageable set of features.</p>
+</li>
+</ul>
+<h4 id="association">Association</h4>
+<ul>
+<li>
+<p>The goal is to find <span class="inline-code-block">relationships between variables</span> in large datasets. It’s commonly used in market basket analysis to find items that frequently appear together in transactions.</p>
+</li>
+<li>
+<p><span class="strong-block">Example</span>: Identifying that customers who buy bread often buy butter as well.</p>
+</li>
+</ul>
+<h4 id="anomaly-detection">Anomaly Detection</h4>
+<ul>
+<li>
+<p>The goal is to identify <span class="inline-code-block">outliers or unusual data points</span> that do not conform to the expected pattern. This can be critical in fields like fraud detection or predictive maintenance.</p>
+</li>
+<li>
+<p><span class="strong-block">Example</span>: Detecting fraudulent credit card transactions based on deviations from normal spending behavior.</p>
+</li>
+</ul>
+<h4 id="unsupervised-learning-model-pipeline">Unsupervised learning model pipeline</h4>
+<p><img src="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_32.png" alt="Unsupervised learning models"></p>
+<p class="text-sm">Image by: <a class="no-underline" href="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/tutorial/text_analytics/general_concepts.html#unsupervised-learning-model-fit-x">scikit-learn</a></p>
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
+<p>Reinforcement Learning (RL) is a type of machine learning in which an agent learns to make decisions by interacting with an environment in order to <span class="inline-code-block">maximize a reward</span>. Unlike supervised or unsupervised learning, reinforcement learning does not rely on labeled datasets or direct supervision. Instead, the agent <span class="inline-code-block">learns through trial and error</span>, receiving feedback in the form of rewards or penalties for actions it takes.</p>
+<p>Applications of Reinforcement Learning:</p>
+<ul>
+<li>
+<p><span class="strong-block">Game AI</span>: RL has been used to achieve superhuman performance in games like chess (AlphaZero), Go, and video games (e.g., Atari, Dota 2). Algorithms like Deep Q-Networks (DQN) and AlphaGo have demonstrated the power of RL in strategic decision-making.</p>
+</li>
+<li>
+<p><span class="strong-block">Robotics</span>: RL is widely used in robotics for tasks like navigation, manipulation, and locomotion, where robots learn to interact with the physical environment through trial and error.</p>
+</li>
+<li>
+<p><span class="strong-block">Autonomous Vehicles</span>: Self-driving cars use reinforcement learning to make decisions about navigation, lane changing, and collision avoidance in dynamic, unpredictable environments.</p>
+</li>
+<li>
+<p><span class="strong-block">Healthcare</span>: RL</p>
+</li>
+</ul>
+<h4 id="the-reinforcement-learning-process">The Reinforcement Learning Process</h4>
+<ol>
+<li>
+<p><span class="strong-block">Initialization</span>: The agent starts in an initial state and does not know how the environment works.</p>
+</li>
+<li>
+<p><span class="strong-block">Action Selection</span>: The agent selects an action based on its current policy.</p>
+</li>
+<li>
+<p><span class="strong-block">Transition</span>: The action changes the state of the environment.</p>
+</li>
+<li>
+<p><span class="strong-block">Reward</span>: The agent receives feedback (a reward) from the environment.</p>
+</li>
+<li>
+<p><span class="strong-block">Learning</span>: Based on the reward, the agent updates its knowledge (usually the value function or policy) to improve future actions.</p>
+</li>
+<li>
+<p><span class="strong-block">Repeat</span>: The process continues, with the agent learning and adapting its strategy over time to maximize cumulative rewards.</p>
+</li>
+</ol>
+11:T2333,
+## Definition
+
+Machine learning (ML) is a subset of artificial intelligence (AI) that involves developing algorithms that allow computers to learn from and make predictions or decisions `based on data`. Instead of being explicitly programmed to perform tasks, machine learning models `identify patterns` in data and improve their performance as they are exposed to more data over time.
+
+## Traditional Programming VS ML
+
+### Traditional Programming
+
+Traditional programming is a manual process—meaning a person (programmer) creates the program. But without anyone programming the logic, one has to manually formulate or code rules.
+
+> [note]: **Traditional Programming**
+> INPUT + PROGRAM = OUTPUT
+
+### Machine Learning
+In machine learning, on the other hand, the algorithm automatically formulates the rules from the data.
+
+> [note]: **Machine Learning**
+> INPUT + OUTPUT = PROGRAM (Model)
+
+## Rules for Using ML
+
+There are 3 rules that are needed when we are going to use machine learning. One is mandatory and the other 2 are optional.
+
+### Data
+
+Data is mandatory rule. When we use machine learning, ensure we have `data`, specially `historical data` because machine learning is learned from experience, where one of the experiences is historical data. Once we have data we can probably use machine learning.
+
+### Pattern (Optional)
+
+We must know that the problems we face have a `pattern`. One form of machine learning is pattern recognition. Once we know that the problem has pattern we can probably use machine learning, but if the problem has random stuff is can be hard to use machine learning.
+
+### The problem cannot be derived mathematically (Optional)
+
+When we use machine learning it is better the problem `can't be derived mathematically`. If the problem can be derived mathematically then actually the problem can be programmed explicitly, example determining odd-even numbers etc. But there are problem that have pattern and can't be derived mathematically, example disease detection, desease detection cannot be derived into mathematic formula.
+
+
+## Machine Learning Type
+
+### Supervised Learning
+
+In supervised learning, the algorithm is trained on a dataset that contains both input features (data) and corresponding output labels (desired results). So in supervised learning requires `data` and `labels` as input. There are 2 types of supervised learning `Classification` and `Regression`.
+
+Characteristics of Supervised Learning:
+
+1. **Labeled Data**: The training data includes input-output pairs. Each example in the dataset comes with a label or outcome. For example:     
+   - Input: Features like height, weight, and age.
+   - Output: A label like "healthy" or "unhealthy" for a health prediction model.
+
+2. **Goal**: The algorithm tries to minimize the difference between its predicted outputs and the actual outputs by finding the best mapping from inputs to outputs during training.
+
+3. **Training Process**: 
+   - The model is fed with a labeled dataset (both input features and output labels).
+   - The model makes predictions and compares them to the actual labels.
+   - Based on this comparison, the model adjusts its internal parameters to improve accuracy.
+   - This process repeats until the model achieves satisfactory performance on the training data.
+
+#### Classification
+
+> [note]: F(X) => [0,1] 
+> 
+> *or*
+> 
+> F(X) => [0,1,2,...]
+
+- The goal is to assign data points to predefined `categories` or `classes`.
+- **Binary Classification**: Two possible classes (e.g., spam vs. non-spam emails).
+- **Multi-class Classification**: More than two classes (e.g., classifying types of flowers into species).
+- **Examples**:
+  - Diagnosing diseases as “positive” or “negative”.
+  - Credit Scoring as "accepted" or "rejected"
+  - Classifying whether a customer will churn or stay.
+
+#### Regression
+
+> [note]: F(X) => R
+
+- The goal is to predict continuous values (`numerical outcomes`).
+- **Examples**:
+  - Predicting house prices based on features like size and location.
+  - Forecasting stock prices.
+  - Predicting the temperature at a specific location.
+
+#### Supervised learning model pipeline
+
+![Supervised learning models](https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png)
+<p class="text-sm">Image by: <a class="no-underline" href="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/tutorial/text_analytics/general_concepts.html#supervised-learning-model-fit-x-y">scikit-learn</a></p>
+
+### Unsupervised Learning
+
+Unsupervised learning is a type of machine learning where the model is trained on data that has no labeled outcomes. Unlike supervised learning, where the goal is to map inputs to specific labels, unsupervised learning focuses on uncovering the underlying structure or patterns within the data. The primary objective is to discover hidden relationships or groupings without human intervention or guidance.
+Included in unsupervised learning are clustering, Dimensionality Reduction etc.
+
+Characteristic of Unsupervised Learning:
+1. **No Labels**: The data used in unsupervised learning is not labeled. The model works on its own to detect patterns, clusters, or associations without predefined categories or answers.
+2. **Exploratory**: It’s primarily used for data exploration to find patterns, groupings, or structures in the data.
+3. **Unstructured Data**: Often applied to unstructured or unlabeled datasets, such as customer purchase data, social media activity, or image datasets.
+
+#### Clustering
+
+- The goal is to `group data points` into clusters such that items in the same group are more similar to each other than to those in other groups.
+  
+- **Examples**: 
+  - Grouping customers based on purchasing behavior to create customer segments for targeted marketing.
+  - Clustering desease
+
+#### Dimensionality Reduction
+
+- The goal is to `reduce the number of features` (or dimensions) in the data while retaining the most important information. This can help visualize high-dimensional data or improve the performance of machine learning models.
+
+- **Example**: Reducing the number of variables in a gene expression dataset from thousands to a smaller, more manageable set of features.
+  
+#### Association
+
+- The goal is to find `relationships between variables` in large datasets. It’s commonly used in market basket analysis to find items that frequently appear together in transactions.
+
+- **Example**: Identifying that customers who buy bread often buy butter as well.
+
+#### Anomaly Detection
+
+- The goal is to identify `outliers or unusual data points` that do not conform to the expected pattern. This can be critical in fields like fraud detection or predictive maintenance.
+
+- **Example**: Detecting fraudulent credit card transactions based on deviations from normal spending behavior.
+
+#### Unsupervised learning model pipeline
+
+![Unsupervised learning models](https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_32.png)
+<p class="text-sm">Image by: <a class="no-underline" href="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/tutorial/text_analytics/general_concepts.html#unsupervised-learning-model-fit-x">scikit-learn</a></p>
+
+
+### Reinforcement Learning
+
+Reinforcement Learning (RL) is a type of machine learning in which an agent learns to make decisions by interacting with an environment in order to `maximize a reward`. Unlike supervised or unsupervised learning, reinforcement learning does not rely on labeled datasets or direct supervision. Instead, the agent `learns through trial and error`, receiving feedback in the form of rewards or penalties for actions it takes.
+
+Applications of Reinforcement Learning:
+- **Game AI**: RL has been used to achieve superhuman performance in games like chess (AlphaZero), Go, and video games (e.g., Atari, Dota 2). Algorithms like Deep Q-Networks (DQN) and AlphaGo have demonstrated the power of RL in strategic decision-making.
+
+- **Robotics**: RL is widely used in robotics for tasks like navigation, manipulation, and locomotion, where robots learn to interact with the physical environment through trial and error.
+
+- **Autonomous Vehicles**: Self-driving cars use reinforcement learning to make decisions about navigation, lane changing, and collision avoidance in dynamic, unpredictable environments.
+
+- **Healthcare**: RL
+
+#### The Reinforcement Learning Process
+1. **Initialization**: The agent starts in an initial state and does not know how the environment works.
+
+2. **Action Selection**: The agent selects an action based on its current policy.
+
+3. **Transition**: The action changes the state of the environment.
+
+4. **Reward**: The agent receives feedback (a reward) from the environment.
+
+5. **Learning**: Based on the reward, the agent updates its knowledge (usually the value function or policy) to improve future actions.
+
+6. **Repeat**: The process continues, with the agent learning and adapting its strategy over time to maximize cumulative rewards.
+5:["$","$Le",null,{"type":"$undefined","children":["$","$Lf",null,{"post":{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png"},"content":"$10","sections":[{"level":"2","id":"definition","text":"Definition"},{"level":"2","id":"traditional-programming-vs-ml","text":"Traditional Programming VS ML"},{"level":"3","id":"traditional-programming","text":"Traditional Programming"},{"level":"3","id":"machine-learning","text":"Machine Learning"},{"level":"2","id":"rules-for-using-ml","text":"Rules for Using ML"},{"level":"3","id":"data","text":"Data"},{"level":"3","id":"pattern-optional","text":"Pattern (Optional)"},{"level":"3","id":"the-problem-cannot-be-derived-mathematically-optional","text":"The problem cannot be derived mathematically (Optional)"},{"level":"2","id":"machine-learning-type","text":"Machine Learning Type"},{"level":"3","id":"supervised-learning","text":"Supervised Learning"},{"level":"4","id":"classification","text":"Classification"},{"level":"4","id":"regression","text":"Regression"},{"level":"4","id":"supervised-learning-model-pipeline","text":"Supervised learning model pipeline"},{"level":"3","id":"unsupervised-learning","text":"Unsupervised Learning"},{"level":"4","id":"clustering","text":"Clustering"},{"level":"4","id":"dimensionality-reduction","text":"Dimensionality Reduction"},{"level":"4","id":"association","text":"Association"},{"level":"4","id":"anomaly-detection","text":"Anomaly Detection"},{"level":"4","id":"unsupervised-learning-model-pipeline","text":"Unsupervised learning model pipeline"},{"level":"3","id":"reinforcement-learning","text":"Reinforcement Learning"},{"level":"4","id":"the-reinforcement-learning-process","text":"The Reinforcement Learning Process"}],"raw":"$11","readingTime":"7 min read"},"pathname":"/insight/post/machine-learning-concepts"}]}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+c:[["$","title","0",{"children":"Machine Learning Key Concepts"}],["$","meta","1",{"name":"description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","2",{"property":"og:title","content":"Machine Learning Key Concepts"}],["$","meta","3",{"property":"og:description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/machine-learning-concepts"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Machine Learning Key Concepts"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Machine Learning Key Concepts"}],["$","meta","12",{"name":"twitter:description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","13",{"name":"twitter:image","content":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png"}],["$","meta","14",{"name":"twitter:image:width","content":"800"}],["$","meta","15",{"name":"twitter:image:height","content":"600"}],["$","meta","16",{"name":"twitter:image:alt","content":"Machine Learning Key Concepts"}]]

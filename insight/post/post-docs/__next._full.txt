@@ -1,0 +1,921 @@
+1:"$Sreact.fragment"
+2:I[79520,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js"],""]
+3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+6:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
+b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
+d:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+:HL["https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","style"]
+:HL["https://irufano.github.io/_next/static/media/1bc7fc94203521e3-s.p.888a2ca8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/216579b50e548914-s.p.a1b609f7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/3df2de83712245dd-s.p.b86f99c9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/cd72e39fe5f8e190-s.p.2d85de6e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
+0:{"P":null,"b":"NLBFqrOtm6fs3XTmOCfgE","c":["","insight","post","post-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","post-docs","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"ubuntu_32893d75-module__euGNZa__variable font-ubuntu","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+e:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+10:T9efa,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
+<h2 id="meta-data">Meta Data</h2>
+<p>Meta data used in this post are <span class="inline-code-block">title</span>, <span class="inline-code-block">date</span>, <span class="inline-code-block">description</span>, <span class="inline-code-block">author</span> and <span class="inline-code-block">tags</span>. Title at this meta data used for title post.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="6pk84" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="6pk84" class="js">---
+<span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Your Post Title&quot;</span>
+<span class="hljs-attr">date</span>: <span class="hljs-string">&quot;2024-09-15&quot;</span>
+<span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Your post description&quot;</span>
+<span class="hljs-attr">author</span>: <span class="hljs-string">&quot;author&quot;</span>
+<span class="hljs-attr">tags</span>:
+  - your tag
+  - other tag
+---</code></pre>
+          </div>
+          </div>
+        
+<h2 id="paragraph">Paragraph</h2>
+<p>To create paragraph on post same like create paragraph as text.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="iqpqr9" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="iqpqr9" class="md">&lt;!-- first paragraph --&gt;
+Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
+
+&lt;!-- second paragraph --&gt;
+Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt velit est nulla. Irure exercitation excepteur eiusmod mollit ea aute ut qui exercitation aliquip ipsum cupidatat. Sint anim cillum velit magna aliqua officia eu eu reprehenderit tempor aliqua veniam dolore duis. Qui sunt mollit qui exercitation nulla in ullamco fugiat esse cupidatat officia. Eu ipsum enim velit tempor magna ea dolor sint Lorem.</code></pre>
+          </div>
+          </div>
+        
+<h2 id="image">Image</h2>
+<p>To add image on post, you must put image on public directory, then access it on post with</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="6rbq6r" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="6rbq6r" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="section">Section</h2>
+<p>The section will show on the right of the post. The section that will show only <span class="inline-code-block">##</span> and the <span class="inline-code-block">###</span>.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="nir4fe" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="nir4fe" class="md"><span class="hljs-section">## Section 1</span>
+
+Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
+
+<span class="hljs-section">### Section 1.1</span>
+
+Nisi veniam et fugiat nostrud nulla incididunt ut eiusmod eiusmod ex velit sunt Lorem.
+
+<span class="hljs-section">## Section 2</span>
+
+Pariatur magna sit pariatur in sit ex quis nulla nostrud ipsum proident cillum et et.
+
+<span class="hljs-section">## Section 2.1</span>
+Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
+          </div>
+          </div>
+        
+<h2 id="bullet-and-numbering">Bullet and Numbering</h2>
+<p>To create bullet and numbering you can use <span class="inline-code-block">-</span> or <span class="inline-code-block">^[0-9]+$</span> for numbering.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="rmm4k" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="rmm4k" class="md"><span class="hljs-bullet">-</span> bullet 1
+<span class="hljs-bullet">-</span> bullet 2
+<span class="hljs-bullet">-</span> bullet 3
+
+<span class="hljs-bullet">1.</span> number 1
+<span class="hljs-bullet">2.</span> number 2
+<span class="hljs-bullet">3.</span> number 3</code></pre>
+          </div>
+          </div>
+        
+<ul>
+<li>bullet 1</li>
+<li>bullet 2</li>
+<li>bullet 3</li>
+</ul>
+<ol>
+<li>number 1</li>
+<li>number 2</li>
+<li>number 3</li>
+</ol>
+<h2 id="emphasis">Emphasis</h2>
+<p>To create emphasis on post like <span class="emphasis-block">this is emphasis</span>. We can use <span class="inline-code-block">*</span> between word or sentence.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="ik55z" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="ik55z" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
+
+<span class="hljs-emphasis">*Hello*</span>
+
+<span class="hljs-emphasis">*Good Morning*</span></code></pre>
+          </div>
+          </div>
+        
+<h2 id="strong">Strong</h2>
+<p>To create strong text on post like <span class="strong-block">this is strong</span>. We can use <span class="inline-code-block">**</span> between word or sentence.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="d0qgw" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="d0qgw" class="md"><span class="hljs-strong">**This is strong**</span>
+
+<span class="hljs-strong">**Hello**</span>
+
+<span class="hljs-strong">**Good Morning**</span></code></pre>
+          </div>
+          </div>
+        
+<h2 id="code">Code</h2>
+<h3 id="inline-code">Inline Code</h3>
+<p>To create inline code on post like <span class="inline-code-block"><span class="hljs-variable language_">this</span> is inline code</span>. We can use <span class="strong-block">`</span> between word or sentence.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="uh7vh4" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="uh7vh4" class="md"><span class="hljs-code">`This is inline code`</span>
+
+<span class="hljs-code">`Hello`</span>
+
+<span class="hljs-code">`Good Morning`</span></code></pre>
+          </div>
+          </div>
+        
+<h3 id="code-block">Code Block</h3>
+<p>To create code block on post. Follow the example below:</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="731upe" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="731upe" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
+funtion getData () =&gt; {
+    console.log(&quot;Hello world!&quot;);
+}
+```</span>&#x27;
+
+&lt;!-- remove &#x27; --&gt;</code></pre>
+          </div>
+          </div>
+        
+<h2 id="blockquote">Blockquote</h2>
+<h3 id="info">Info</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="80qiba" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="80qiba" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
+<span class="hljs-quote">&gt;
+&gt; this is info blockquote example</span></code></pre>
+          </div>
+          </div>
+        
+<p>output:</p>
+
+              <div class="info-block">
+                <div class="title-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-title-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12" y2="8" />
+                  </svg>
+                  <div class="text-title-block">Info</div>
+                </div>
+                
+                    <p class="content-block">
+                      
+                    </p>
+                  
+                    <p class="content-block">
+                      this is info blockquote example
+                    </p>
+                  
+              </div>
+            
+<h3 id="warning">Warning</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="56l7y4" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="56l7y4" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
+<span class="hljs-quote">&gt;
+&gt; this is warning blockquote example</span></code></pre>
+          </div>
+          </div>
+        
+<p>output:</p>
+
+              <div class="warning-block">
+                <div class="title-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-title-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" /><path d="M12 8v4m0 4h.01" />
+                  </svg>
+                  <div class="text-title-block">Warning</div>
+                </div>
+                
+                    <p class="content-block">
+                      
+                    </p>
+                  
+                    <p class="content-block">
+                      this is warning blockquote example
+                    </p>
+                  
+              </div>
+            
+<h3 id="tip">Tip</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="f2tsjl" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="f2tsjl" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
+<span class="hljs-quote">&gt;
+&gt; this is tip blockquote example</span></code></pre>
+          </div>
+          </div>
+        
+<p>output:</p>
+
+              <div class="tip-block">
+                <div class="title-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-title-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18h6m-1 4h-4a1 1 0 01-1-1v-1h6v1a1 1 0 01-1 1zM12 2a7 7 0 00-7 7c0 2.95 1.5 5.5 4 7v1h6v-1c2.5-1.5 4-4.05 4-7a7 7 0 00-7-7z"/>
+                  </svg>
+                  <div class="text-title-block">Tip</div>
+                </div>
+                
+                    <p class="content-block">
+                      
+                    </p>
+                  
+                    <p class="content-block">
+                      this is tip blockquote example
+                    </p>
+                  
+              </div>
+            
+<h3 id="important">Important</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="lhgn9" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="lhgn9" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
+<span class="hljs-quote">&gt;
+&gt; this is important blockquote example</span></code></pre>
+          </div>
+          </div>
+        
+<p>output:</p>
+
+              <div class="important-block">
+                <div class="title-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-title-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3h18v14H8l-5 5V3z" /><path d="M12 8v4m0 4h.01" />
+                  </svg>
+                  <div class="text-title-block">Important</div>
+                </div>
+                
+                    <p class="content-block">
+                      
+                    </p>
+                  
+                    <p class="content-block">
+                      this is important blockquote example
+                    </p>
+                  
+              </div>
+            
+<h3 id="caution">caution</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="32foy" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="32foy" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
+<span class="hljs-quote">&gt;
+&gt; this is caution blockquote example</span></code></pre>
+          </div>
+          </div>
+        
+<p>output:</p>
+
+              <div class="caution-block">
+                <div class="title-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-title-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" /><path d="M12 8v4m0 4h.01" />
+                  </svg>
+                  <div class="text-title-block">Caution</div>
+                </div>
+                
+                    <p class="content-block">
+                      
+                    </p>
+                  
+                    <p class="content-block">
+                      this is caution blockquote example
+                    </p>
+                  
+              </div>
+            
+<h3 id="note">Note</h3>
+<p>Note block is doesn't have title header.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-post.md</span>
+              <button class="copy-code" data-code-id="8m1dfj" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="8m1dfj" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
+<span class="hljs-quote">&gt;
+&gt; this is note blockquote example</span></code></pre>
+          </div>
+          </div>
+        
+<p>output:</p>
+
+            <div class="note-block">
+              
+                  <p class="content-block">
+                     This is note <span class="emphasis-block">blockquote</span> <span class="inline-code-block">example</span>
+                  </p>
+                
+                  <p class="content-block">
+                    Cillum adipisicing sint cupidatat mollit duis.
+                  </p>
+                
+                  <p class="content-block">
+                    Tempor proident veniam est veniam minim minim consectetur cupidatat Lorem cupidatat adipisicing. Ea ipsum excepteur pariatur non cupidatat amet exercitation enim id fugiat officia nostrud. Velit laboris laboris qui labore dolore fugiat mollit in laborum labore Lorem.
+                  </p>
+                <div class="content-code-block">
+          <div class="code-block">
+          <div class="title-code">
+            <span>your-code-title.js</span>
+              <button class="copy-code" data-code-id="1v1ehl" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="1v1ehl" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
+   <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);
+}</code></pre>
+          </div>
+          </div>
+        </div>
+            </div>
+          
+11:T124b,
+Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
+
+## Meta Data
+
+Meta data used in this post are `title`, `date`, `description`, `author` and `tags`. Title at this meta data used for title post. 
+
+```js title="your-post.md"
+---
+title: "Your Post Title"
+date: "2024-09-15"
+description: "Your post description"
+author: "author"
+tags:
+  - your tag
+  - other tag
+---
+```
+
+## Paragraph
+
+To create paragraph on post same like create paragraph as text.
+
+```md title="your-post.md"
+<!-- first paragraph -->
+Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
+
+<!-- second paragraph -->
+Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt velit est nulla. Irure exercitation excepteur eiusmod mollit ea aute ut qui exercitation aliquip ipsum cupidatat. Sint anim cillum velit magna aliqua officia eu eu reprehenderit tempor aliqua veniam dolore duis. Qui sunt mollit qui exercitation nulla in ullamco fugiat esse cupidatat officia. Eu ipsum enim velit tempor magna ea dolor sint Lorem.
+```
+
+## Image
+
+To add image on post, you must put image on public directory, then access it on post with 
+
+```md title="your-post.md"
+![Alt text for the image](/yourpath_image.png)
+```
+
+## Section
+
+The section will show on the right of the post. The section that will show only `##` and the `###`.
+
+```md title="your-post.md"
+## Section 1
+
+Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
+
+### Section 1.1
+
+Nisi veniam et fugiat nostrud nulla incididunt ut eiusmod eiusmod ex velit sunt Lorem.
+
+## Section 2
+
+Pariatur magna sit pariatur in sit ex quis nulla nostrud ipsum proident cillum et et.
+
+## Section 2.1
+Excepteur dolor dolor pariatur dolore exercitation.
+```
+
+## Bullet and Numbering
+To create bullet and numbering you can use `-` or `^[0-9]+$` for numbering.
+
+```md title="your-post.md"
+- bullet 1
+- bullet 2
+- bullet 3
+
+1. number 1
+2. number 2
+3. number 3
+```
+
+- bullet 1
+- bullet 2
+- bullet 3
+
+1. number 1
+2. number 2
+3. number 3
+
+## Emphasis 
+To create emphasis on post like *this is emphasis*. We can use `*` between word or sentence.
+
+```md title="your-post.md"
+*This is emphasis*
+
+*Hello*
+
+*Good Morning*
+```
+
+## Strong
+To create strong text on post like **this is strong**. We can use `**` between word or sentence.
+
+```md title="your-post.md"
+**This is strong**
+
+**Hello**
+
+**Good Morning**
+```
+
+## Code
+### Inline Code
+To create inline code on post like `this is inline code`. We can use **`** between word or sentence.
+
+```md title="your-post.md"
+`This is inline code`
+
+`Hello`
+
+`Good Morning`
+```
+
+### Code Block
+To create code block on post. Follow the example below:
+
+```markdown title="your-post.md"
+'```js title="your-code-title.js"
+funtion getData () => {
+    console.log("Hello world!");
+}
+```'
+
+<!-- remove ' -->
+```
+
+## Blockquote
+
+### Info
+
+```markdown title="your-post.md"
+> [info]:
+>
+> this is info blockquote example
+```
+output:
+
+> [info]:
+>
+> this is info blockquote example
+
+### Warning
+
+```markdown title="your-post.md"
+> [warning]:
+>
+> this is warning blockquote example
+```
+output:
+
+> [warning]:
+>
+> this is warning blockquote example
+
+### Tip
+
+```markdown title="your-post.md"
+> [tip]:
+>
+> this is tip blockquote example
+```
+output:
+
+> [tip]:
+>
+> this is tip blockquote example
+
+### Important
+
+```markdown title="your-post.md"
+> [important]:
+>
+> this is important blockquote example
+```
+output:
+
+> [important]:
+>
+> this is important blockquote example
+
+### caution
+
+```markdown title="your-post.md"
+> [caution]:
+>
+> this is caution blockquote example
+```
+output:
+
+> [caution]:
+>
+> this is caution blockquote example
+
+### Note
+
+Note block is doesn't have title header.
+
+```markdown title="your-post.md"
+> [note]:
+>
+> this is note blockquote example
+```
+output:
+
+> [note]: This is note *blockquote* `example`
+>
+> Cillum adipisicing sint cupidatat mollit duis.
+>
+> Tempor proident veniam est veniam minim minim consectetur cupidatat Lorem cupidatat adipisicing. Ea ipsum excepteur pariatur non cupidatat amet exercitation enim id fugiat officia nostrud. Velit laboris laboris qui labore dolore fugiat mollit in laborum labore Lorem.
+>
+>
+> ```js title="your-code-title.js"
+> funtion getData () => {
+>    console.log("Hello world!");
+> }
+> ```5:["$","$Le",null,{"type":"$undefined","children":["$","$Lf",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"]},"content":"$10","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"}],"raw":"$11","readingTime":"4 min read"},"pathname":"/insight/post/post-docs"}]}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+c:[["$","title","0",{"children":"Insight Posts Documentation"}],["$","meta","1",{"name":"description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}],["$","meta","2",{"property":"og:title","content":"Insight Posts Documentation"}],["$","meta","3",{"property":"og:description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/post-docs"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","7",{"name":"twitter:title","content":"Insight Posts Documentation"}],["$","meta","8",{"name":"twitter:description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}]]

@@ -1,0 +1,421 @@
+1:"$Sreact.fragment"
+2:I[79520,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js"],""]
+3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+6:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
+b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
+d:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+:HL["https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","style"]
+:HL["https://irufano.github.io/_next/static/media/1bc7fc94203521e3-s.p.888a2ca8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/216579b50e548914-s.p.a1b609f7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/3df2de83712245dd-s.p.b86f99c9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/cd72e39fe5f8e190-s.p.2d85de6e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
+0:{"P":null,"b":"NLBFqrOtm6fs3XTmOCfgE","c":["","insight","post","git-cheatsheets"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","git-cheatsheets","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"ubuntu_32893d75-module__euGNZa__variable font-ubuntu","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+e:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+10:T43aa,<h2 id="list-commit">List commit</h2>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="9oz0bi" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="9oz0bi" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
+
+<span class="hljs-comment"># or use --oneline for simple logs</span>
+git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
+          </div>
+          </div>
+        
+<h2 id="rebase">Rebase</h2>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="c72x6t" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="c72x6t" class="sh">git rebase [branch base]
+
+<span class="hljs-comment"># rebase n commit from head</span>
+git rebase -i HEAD~n
+
+
+<span class="hljs-comment"># rebase the root of commit (the first commit)</span>
+git rebase -i --root</code></pre>
+          </div>
+          </div>
+        
+<h2 id="cherry-pick">Cherry-pick</h2>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="fnawj" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="fnawj" class="sh">git cherry-pick [commit-hash]
+
+<span class="hljs-comment"># or multi commit</span>
+git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
+          </div>
+          </div>
+        
+<h2 id="stash">Stash</h2>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="esl8dn" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="esl8dn" class="sh">git stash
+
+<span class="hljs-comment"># stash include untracked file</span>
+git stash --include-untracked
+
+<span class="hljs-comment"># list stash</span>
+git stash list
+
+<span class="hljs-comment"># pop stash</span>
+git stash pop stash@{n}
+
+<span class="hljs-comment"># apply stash but keep stash log</span>
+git stash apply stash@{n)
+
+<span class="hljs-comment"># remove specific stash</span>
+git stash drop stash@{n}</code></pre>
+          </div>
+          </div>
+        
+<h2 id="rename-branch">Rename Branch</h2>
+<h3 id="local">local</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="ckg606" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="ckg606" class="sh">git branch -m &lt;new_name&gt;
+<span class="hljs-comment"># or</span>
+git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
+          </div>
+          </div>
+        
+<h3 id="remote">remote</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="vw5hcr" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="vw5hcr" class="sh">git branch -m &lt;new_name&gt;
+<span class="hljs-comment"># or</span>
+git branch -m &lt;old_name&gt; &lt;new_name&gt;
+
+<span class="hljs-comment"># Then push the &lt;new_name&gt; local branch and reset the upstream branch</span>
+git push origin -u &lt;new_name&gt;
+
+<span class="hljs-comment"># Then delete the &lt;old_name&gt; remote branch and finish!</span>
+git push origin --delete &lt;old_name&gt;</code></pre>
+          </div>
+          </div>
+        
+<h2 id="tag">Tag</h2>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="at1wt" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="at1wt" class="sh"><span class="hljs-comment"># add tag local</span>
+tag -a [TAGE_NAME] -m <span class="hljs-string">&quot;[TAGE_MESSAGE]&quot;</span>
+
+<span class="hljs-comment"># push tag to remote</span>
+git push origin [TAGE_NAME]
+
+<span class="hljs-comment"># remove tag local</span>
+git tag -d [TAGE_NAME]
+
+<span class="hljs-comment"># remove tag remote</span>
+git push -d origin [TAGE_NAME]
+
+<span class="hljs-comment"># To get the most recent tag</span>
+git describe --tags --abbrev=0
+
+<span class="hljs-comment"># To get the most recent tag, with the number of additional commits on top of the tagged object &amp; more</span>
+git describe --tags 
+
+<span class="hljs-comment"># To get the most recent annotated tag</span>
+git describe --abbrev=0
+</code></pre>
+          </div>
+          </div>
+        
+<h2 id="edit-last-commit-date">Edit last commit date</h2>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span>sh</span>
+              <button class="copy-code" data-code-id="mbdlyr" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+          </div>
+          <div class="pre-code">
+          <pre><code id="mbdlyr" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
+          </div>
+          </div>
+        
+11:T665,
+## List commit
+```sh
+git log -n [number] 
+
+# or use --oneline for simple logs
+git log -n [number] --oneline
+```
+
+## Rebase
+
+```sh
+git rebase [branch base]
+
+# rebase n commit from head
+git rebase -i HEAD~n
+
+
+# rebase the root of commit (the first commit)
+git rebase -i --root
+```
+
+## Cherry-pick
+
+```sh
+git cherry-pick [commit-hash]
+
+# or multi commit
+git cherry-pick [commit-hash] [commit-hash] [commit-hash] 
+```
+
+## Stash
+
+```sh
+git stash
+
+# stash include untracked file
+git stash --include-untracked
+
+# list stash
+git stash list
+
+# pop stash
+git stash pop stash@{n}
+
+# apply stash but keep stash log
+git stash apply stash@{n)
+
+# remove specific stash
+git stash drop stash@{n}
+```
+
+## Rename Branch
+### local
+```sh
+git branch -m <new_name>
+# or
+git branch -m <old_name> <new_name>
+```
+### remote
+```sh
+git branch -m <new_name>
+# or
+git branch -m <old_name> <new_name>
+
+# Then push the <new_name> local branch and reset the upstream branch
+git push origin -u <new_name>
+
+# Then delete the <old_name> remote branch and finish!
+git push origin --delete <old_name>
+```
+
+## Tag
+```sh
+# add tag local
+tag -a [TAGE_NAME] -m "[TAGE_MESSAGE]"
+
+# push tag to remote
+git push origin [TAGE_NAME]
+
+# remove tag local
+git tag -d [TAGE_NAME]
+
+# remove tag remote
+git push -d origin [TAGE_NAME]
+
+# To get the most recent tag
+git describe --tags --abbrev=0
+
+# To get the most recent tag, with the number of additional commits on top of the tagged object & more
+git describe --tags 
+
+# To get the most recent annotated tag
+git describe --abbrev=0
+
+```
+
+## Edit last commit date
+```sh
+git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
+```5:["$","$Le",null,{"type":"$undefined","children":["$","$Lf",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png"},"content":"$10","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$11","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+c:[["$","title","0",{"children":"Git Cheatsheet"}],["$","meta","1",{"name":"description","content":"Git cheatsheet commonly used daily"}],["$","meta","2",{"property":"og:title","content":"Git Cheatsheet"}],["$","meta","3",{"property":"og:description","content":"Git cheatsheet commonly used daily"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/git-cheatsheets"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://git-scm.com/images/logos/2color-lightbg@2x.png"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Git Cheatsheet"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Git Cheatsheet"}],["$","meta","12",{"name":"twitter:description","content":"Git cheatsheet commonly used daily"}],["$","meta","13",{"name":"twitter:image","content":"https://git-scm.com/images/logos/2color-lightbg@2x.png"}],["$","meta","14",{"name":"twitter:image:width","content":"800"}],["$","meta","15",{"name":"twitter:image:height","content":"600"}],["$","meta","16",{"name":"twitter:image:alt","content":"Git Cheatsheet"}]]

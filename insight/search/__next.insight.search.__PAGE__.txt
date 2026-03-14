@@ -1,0 +1,1076 @@
+1:"$Sreact.fragment"
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/6050e303b8bdcecf.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+3:"$Sreact.suspense"
+4:I[1392,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/6050e303b8bdcecf.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+f:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
+5:T3698,
+## What is RAG?
+
+Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.
+
+## Traditional RAG Architecture
+
+![image](https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/traditional-rag.svg)
+
+### Core Components
+
+Traditional RAG follows a straightforward, linear pipeline with four main components:
+
+**1. Knowledge Base**
+- Contains structured or unstructured documents
+- Pre-processed and indexed for efficient retrieval
+- Static knowledge repository
+
+**2. Embedding Model**
+- Converts queries and documents into vector representations
+- Enables semantic similarity matching
+- Typically uses models like BERT, Sentence-BERT, or specialized embedding models
+
+**3. Vector Store**
+- Stores document embeddings for fast retrieval
+- Supports similarity search operations
+- Common implementations include Pinecone, Weaviate, Qdrant, or FAISS
+
+**4. Large Language Model (LLM)**
+- Generates responses based on retrieved context
+- Combines retrieved information with query understanding
+- Examples include GPT-4, Claude, or domain-specific models
+
+### Traditional RAG Workflow
+
+The Traditional RAG process follows these sequential steps:
+
+1. **Query Processing**: User submits a query
+2. **Encoding**: Query is converted to embeddings using the embedding model
+3. **Similarity Search**: Vector store performs semantic search to find relevant chunks
+4. **Context Retrieval**: Most similar documents/chunks are retrieved
+5. **Response Generation**: LLM generates answer using query + retrieved context
+6. **Response Delivery**: Final answer is returned to the user
+
+### Advantages of Traditional RAG
+
+- **Simplicity**: Straightforward architecture that's easy to understand and implement
+- **Predictable Performance**: Linear workflow with consistent response patterns
+- **Lower Latency**: Direct path from query to response without complex decision-making
+- **Cost-Effective**: Minimal computational overhead beyond core retrieval and generation
+- **Debugging Friendly**: Easy to trace issues through the linear pipeline
+
+### Limitations of Traditional RAG
+
+- **Limited Adaptability**: Cannot adjust retrieval strategy based on query complexity
+- **Single Retrieval Pass**: May miss relevant information that requires multiple searches
+- **No Tool Integration**: Cannot leverage external APIs or specialized tools
+- **Context Window Constraints**: Fixed approach to handling large result sets
+- **Query Type Blindness**: Treats all queries identically regardless of their nature
+
+## Agentic RAG Architecture
+
+![image](https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/agentic-rag.svg)
+
+### Core Innovation: The Aggregator Agent
+
+Agentic RAG introduces an intelligent orchestration layer called the **Aggregator Agent** that transforms the rigid pipeline into a flexible, adaptive system.
+
+**Key Capabilities of the Aggregator Agent:**
+- **Dynamic Tool Selection**: Chooses appropriate tools based on query analysis
+- **Multi-Step Reasoning**: Can perform complex, multi-hop information retrieval
+- **Context Awareness**: Adapts strategy based on intermediate results
+- **Tool Orchestration**: Coordinates multiple tools and data sources
+- **Result Synthesis**: Intelligently combines information from various sources
+
+### Enhanced Components
+
+**1. Tool Ecosystem**
+- Multiple specialized vector search tools (Vector Search Tool A, B, etc.)
+- External APIs and data sources
+- Specialized processing tools for different data types
+- Custom tools for domain-specific tasks
+
+**2. Intelligent Routing**
+- Query analysis to determine optimal retrieval strategy
+- Dynamic tool selection based on query characteristics
+- Adaptive context management
+
+**3. Enhanced Vector Search**
+- Multiple vector stores with different specializations
+- Parallel search capabilities across multiple sources
+- Advanced similarity search with metadata filtering
+
+### Agentic RAG Workflow
+
+The Agentic RAG process involves sophisticated decision-making:
+
+1. **Query Analysis**: Aggregator Agent analyzes query complexity and requirements
+2. **Tool Selection**: Agent selects relevant tools from available ecosystem
+3. **Parallel Processing**: Multiple tools process query simultaneously or sequentially
+4. **Result Aggregation**: Agent combines and synthesizes results from multiple sources
+5. **Iterative Refinement**: Agent may perform additional searches based on initial results
+6. **Context Optimization**: Intelligent selection and ranking of retrieved information
+7. **Response Generation**: LLM generates comprehensive response using optimized context
+8. **Quality Assessment**: Agent may validate and refine the final response
+
+### Advantages of Agentic RAG
+
+- **Adaptive Intelligence**: Adjusts retrieval strategy based on query complexity
+- **Multi-Source Integration**: Seamlessly combines information from various sources
+- **Complex Query Handling**: Excels at multi-step reasoning and complex information needs
+- **Tool Extensibility**: Easy to add new tools and capabilities
+- **Context Optimization**: Intelligent management of context windows and information ranking
+- **Quality Assurance**: Built-in mechanisms for result validation and refinement
+
+### Potential Challenges of Agentic RAG
+
+- **Increased Complexity**: More sophisticated architecture requires careful design
+- **Higher Latency**: Decision-making overhead can increase response times
+- **Cost Considerations**: Multiple tool calls and processing steps increase computational costs
+- **Debugging Complexity**: Non-linear workflows can make troubleshooting more challenging
+- **Agent Reliability**: Requires robust agent logic to prevent infinite loops or poor decisions
+
+## Comparative Analysis
+
+### Performance Characteristics
+
+| Aspect | Traditional RAG | Agentic RAG |
+|--------|----------------|-------------|
+| **Query Complexity** | Simple to moderate | Simple to highly complex |
+| **Response Time** | Fast (single pass) | Variable (depends on complexity) |
+| **Accuracy** | Good for straightforward queries | Superior for complex, multi-faceted queries |
+| **Scalability** | High (linear scaling) | Moderate (depends on agent complexity) |
+| **Maintenance** | Low | Moderate to High |
+
+### Use Case Suitability
+
+**Traditional RAG is ideal for:**
+- FAQ systems and simple question answering
+- Document search and retrieval
+- Single-domain knowledge bases
+- Applications requiring consistent low latency
+- Systems with limited computational resources
+- Proof-of-concept and MVP development
+
+**Agentic RAG excels in:**
+- Complex research and analysis tasks
+- Multi-domain knowledge integration
+- Conversational AI requiring context awareness
+- Systems needing external tool integration
+- Enterprise applications with diverse data sources
+- Advanced AI assistants and expert systems
+
+### Implementation Considerations
+
+**Choosing Traditional RAG when:**
+- Query patterns are predictable and straightforward
+- Single knowledge source is sufficient
+- Response time is critical
+- Team has limited ML engineering expertise
+- Budget constraints require cost optimization
+
+**Choosing Agentic RAG when:**
+- Queries involve complex reasoning or multi-step processes
+- Multiple data sources need integration
+- System requires extensibility and tool integration
+- Quality and comprehensiveness outweigh speed concerns
+- Advanced AI capabilities are business differentiators
+
+## Technical Implementation Insights
+
+### Traditional RAG Implementation Stack
+```md title="Traditional RAG Stack"
+Frontend → API Gateway → Query Processor → Embedding Service → 
+Vector Database → LLM Service → Response Formatter → Frontend
+```
+
+### Agentic RAG Implementation Stack
+```md title="Agentic RAG Stack"
+Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
+[Multiple Tools in Parallel] → Result Aggregator → Context Optimizer → 
+LLM Service → Response Validator → Frontend
+```
+
+### Key Technical Considerations
+
+**For Traditional RAG:**
+- Focus on optimizing embedding quality and vector search performance
+- Implement efficient chunk sizing and overlap strategies
+- Optimize context window utilization
+- Ensure robust error handling in the linear pipeline
+
+**For Agentic RAG:**
+- Design flexible agent decision-making logic
+- Implement robust tool registration and management systems
+- Create effective result aggregation and ranking algorithms
+- Build comprehensive monitoring and observability tools
+
+## Implementation Agentic RAG with LLMfy
+
+### Define tools 
+
+```python 
+@Tool()
+def company_info_search(question: str):
+    """Use for general company information."""
+
+    # YOUR SIMILARITY SEARCH LOGIC
+    return context
+
+
+@Tool()
+def legal_info_search(question: str):
+    """Use for legal information."""
+
+    # YOUR SIMILARITY SEARCH LOGIC
+    return context
+```
+
+### Define Agentic RAG
+
+```python
+from llmfy import (
+    LLMfy,
+    START,
+    END,
+    LLMfyPipe,
+    ToolRegistry,
+    WorkflowState,
+    tools_node,
+    BedrockModel,
+    BedrockConfig,
+)
+
+model = "amazon.nova-pro-v1:0"
+
+llm = BedrockModel(
+    model=model,
+    config=BedrockConfig(temperature=0.7),
+)
+
+SYSTEM_PROMPT = """You are an assistant with access to two retrieval tools:
+1) company_info_search — for general company information.
+2) legal_info_search — for legal information.
+
+
+Rules:
+- ALWAYS use the relevant tool(s) before answering. If both are relevant, call both.
+- If the question is outside these knowledge above, say you only cover company/legal.
+- Be concise, specific, and action-oriented. If there are differences across versions/dates, highlight them.
+"""
+
+# Initialize framework
+ai = LLMfy(llm, system_message=SYSTEM_PROMPT)
+
+tools = [amboja_info_search, portrai_info_search]
+
+# Register tool
+ai.register_tool(tools)
+
+# Register to ToolRegistry
+tool_registry = ToolRegistry(tools, llm)
+
+# Workflow
+workflow = LLMfyPipe(
+    {
+        "messages": [],
+    }
+)
+
+
+async def aggregator_agent(state: WorkflowState) -> dict:
+    messages = state.get("messages", [])
+    response = ai.chat(messages)
+    messages.append(response.messages[-1])
+    return {"messages": messages, "system": response.messages[0]}
+
+
+async def node_tools(state: WorkflowState) -> dict:
+    messages = tools_node(
+        messages=state.get("messages", []),
+        registry=tool_registry,
+    )
+    return {"messages": messages}
+
+
+def should_continue(state: WorkflowState) -> str:
+    messages = state.get("messages", [])
+    for msg in messages:
+        print(msg)
+    last_message = messages[-1]
+    if last_message.tool_calls:
+        return "tools"
+    return END
+
+
+# Add nodes
+workflow.add_node("aggregator_agent", aggregator_agent)
+workflow.add_node("tools", node_tools)
+
+# Define workflow structure
+workflow.add_edge(START, "aggregator_agent")
+workflow.add_conditional_edge("aggregator_agent", ["tools", END], should_continue)
+workflow.add_edge("tools", "aggregator_agent")
+
+```
+
+### Check workflow agent diagram in Notebooks
+
+```python
+from IPython.display import Image, display
+
+# Check diagram
+graph_url = workflow.get_diagram_url()
+display(Image(url=graph_url))
+```
+
+example:
+![](https://mermaid.ink/img/CgkJCSBncmFwaCBURAogICAgJSUgTm9kZSBTdHlsZXMKICAgICUlIE5vZGVzCiAgICBTVEFSVChbU1RBUlRdKQogICAgRU5EKFtFTkRdKQogICAgYWdncmVnYXRvcl9hZ2VudChhZ2dyZWdhdG9yX2FnZW50KQogICAgdG9vbHModG9vbHMpCiAgICAlJSBFZGdlcwogICAgU1RBUlQgLS0-IGFnZ3JlZ2F0b3JfYWdlbnQKICAgIGFnZ3JlZ2F0b3JfYWdlbnQgLS4tPnxjb25kaXRpb258IHRvb2xzCiAgICBhZ2dyZWdhdG9yX2FnZW50IC0uLT58Y29uZGl0aW9ufCBFTkQKICAgIHRvb2xzIC0tPiBhZ2dyZWdhdG9yX2FnZW50CnN0eWxlIFNUQVJUIGZpbGw6Izc3N0VGRSxzdHJva2U6IzRGNTRBQSxjb2xvcjp3aGl0ZQpzdHlsZSBFTkQgZmlsbDojNzc3RUZFLHN0cm9rZTojNEY1NEFBLGNvbG9yOndoaXRlCgkJCSA=)
+
+### Define Funtion to call agentic RAG
+
+```python 
+from llmfy import Message, Role
+
+
+async def call_agentic_rag(question: str):
+    try:
+        res = await workflow.execute(
+            {"messages": [Message(role=Role.USER, content=question)]}
+        )
+
+        messages = res.get("messages", [])
+        content = messages[-1].content if messages else None
+        print(messages)
+        return content
+    except Exception as e:
+        raise e
+```
+
+### Test Call
+
+```python
+response = await call_agentic_rag(question="Apa visi dan misi utama perusahaan?")
+
+```
+Output:
+```sh
+Visi:
+Menjadi perusahaan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk meningkatkan kualitas hidup masyarakat serta menciptakan nilai tambah bagi seluruh pemangku kepentingan.
+
+Misi:
+- Memberikan produk dan layanan berkualitas tinggi yang berfokus pada kebutuhan pelanggan.
+- Mengedepankan inovasi dan teknologi untuk mendukung pertumbuhan berkelanjutan.
+- Menciptakan lingkungan kerja yang profesional, inklusif, dan mendukung pengembangan karyawan.
+- Berkontribusi aktif terhadap pembangunan ekonomi, sosial, dan lingkungan.
+```
+
+## Conclusion
+
+Both Traditional and Agentic RAG have their place in the modern AI landscape. Traditional RAG provides a solid foundation for straightforward retrieval tasks with its simplicity, predictability, and cost-effectiveness. Agentic RAG, while more complex, offers unprecedented flexibility and capability for handling sophisticated information needs.
+
+The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
+
+As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
+6:T34b9,
+## AI Chatbot with langgraph
+The world of AI is currently hyped, have you ever thought about creating your own AI chatbot? In this tutorial, we will make one using langgraph.
+
+
+## What is Langgraph
+`LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. LangGraph allows you to define flows that involve cycles, essential for most agentic architectures, differentiating it from DAG-based solutions. As a very low-level framework, it provides fine-grained control over both the flow and state of your application, crucial for creating reliable agents. Additionally, LangGraph includes built-in persistence, enabling advanced human-in-the-loop and memory features.
+
+We'll first create a simple chatbot using LangGraph. This chatbot will respond directly to user messages. Though simple, it will illustrate the core concepts of building with LangGraph. By the end of this section, you will have a built rudimentary chatbot.
+
+Start by creating a StateGraph. A StateGraph object defines the structure of our chatbot as a "state machine". We'll add nodes to represent the llm and functions our chatbot can call and edges to specify how the bot should transition between these functions.
+
+## Required Package
+```sh
+pip install -U langgraph langchain_openai tavily-python dotenv
+```
+
+## Setup Environment
+```python
+import os
+
+from dotenv import load_dotenv
+
+env_file = os.getenv("ENV_FILE", ".env")  # Default to .env if ENV_FILE is not set
+load_dotenv(env_file)
+
+
+def _set_env(var: str):
+    os.environ[var] = os.getenv(var, "None")
+    print(f"{var} set!")
+
+
+_set_env("OPENAI_API_KEY")
+```
+
+## Create a Basic Chatbot
+### Create StateGraph
+Start by creating a StateGraph. A StateGraph object defines the structure of our chatbot as a "state machine". We'll add nodes to represent the llm and functions our chatbot can call and edges to specify how the bot should transition between these functions.
+
+```python
+from typing import Annotated
+
+from typing_extensions import TypedDict
+
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages
+
+
+class State(TypedDict):
+    # Messages have the type "list". The `add_messages` function
+    # in the annotation defines how this state key should be updated
+    # (in this case, it appends messages to the list, rather than overwriting them)
+    messages: Annotated[list, add_messages]
+
+
+graph_builder = StateGraph(State)
+```
+Our graph can now handle two key tasks:
+
+1. Each `node` can receive the current `State` as input and output an update to the state.
+2. Updates to `messages` will be appended to the existing list rather than overwriting it, thanks to the prebuilt `add_messages` function used with the Annotated syntax.
+
+### Add Node
+Next, add a "`chatbot`" node. Nodes represent units of work. They are typically regular python functions.
+
+```python
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(model="gpt-4o-mini")
+
+
+def chatbot(state: State):
+    return {"messages": [llm.invoke(state["messages"])]}
+
+
+# The first argument is the unique node name
+# The second argument is the function or object that will be called whenever
+# the node is used.
+graph_builder.add_node("chatbot", chatbot)
+```
+> [info]:
+>
+> How the chatbot node function takes the current State as input and returns a dictionary containing an updated messages list under the key "messages". This is the basic pattern for all LangGraph node functions.
+
+The `add_messages` function in our `State` will append the llm's response messages to whatever messages are already in the state.
+
+### Add Edge
+Next, add an entry point. This tells our graph where to start its work each time we run it.
+
+```python
+graph_builder.add_edge(START, "chatbot")
+```
+
+Similarly, set a `finish` point. This instructs the graph "**any time this node is run, you can exit.**"
+
+```python
+graph_builder.add_edge("chatbot", END)
+```
+
+### Compile graph
+
+Finally, we'll want to be able to run our graph. To do so, call "`compile()`" on the graph builder. This creates a "`CompiledGraph`" we can use invoke on our state.
+
+```python
+graph = graph_builder.compile()
+```
+
+### Visualize Graph (Optional)
+
+You can visualize the graph using the `get_graph` method and one of the "draw" methods, like `draw_ascii` or `draw_png`. The `draw` methods each require additional dependencies.
+
+```python
+from IPython.display import Image, display
+
+try:
+    display(Image(graph.get_graph().draw_mermaid_png()))
+except Exception:
+    # This requires some extra dependencies and is optional
+    pass
+```
+output:
+![image](data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCADqAGsDASIAAhEBAxEB/8QAHQABAAMBAAMBAQAAAAAAAAAAAAUGBwQCAwgBCf/EAE0QAAEDAwEDBQkKDAQHAAAAAAECAwQABREGBxIhExUxQZQIFiJRVmGB0dMUFyMyNlRVcXSVJTVCUlNzkZKTsrO0YnKD0iRDREaxwfD/xAAaAQEBAAMBAQAAAAAAAAAAAAAAAQIDBAUH/8QAMxEAAgECAgcFCAIDAAAAAAAAAAECAxEEMRIUIVFxkaFBUmHB0RMjMjNTYoGSIkLh8PH/2gAMAwEAAhEDEQA/AP6p0pUFdrtLk3AWi0hIlhIXJmODebiIPRw/KcV+SnoABUrhupXnGLm7IuZMvyGozZcecQ0gdKlqCQPSajzqmyg4N3gA/aUeuuBnZ/ZSsPXCKL3MxhUq6gPrPHPAEbqPqQlI81dw0rZQMczwMfZUeqttqKzbY2H731WX6YgdpR66d9Vl+mIHaUeunerZfoeB2ZHqp3q2X6HgdmR6qe58ehdg76rL9MQO0o9dO+qy/TEDtKPXTvVsv0PA7Mj1U71bL9DwOzI9VPc+PQbB31WX6YgdpR66d9Vl+mIHaUeunerZfoeB2ZHqp3q2X6HgdmR6qe58eg2HTDu0G4EiLMjySOpl1K//AAa66gpmhNOTx8NY7epXU4mMhK0+dKgAQfODXG6iZosF9L8m6WMH4Zp9XKPw0/noV8ZxA6SlRUoDJBOAmmhCeyD27n6/8JZPItNK8W3EPNpcbUlaFAKSpJyCD0EGvKuch65D6IzDjzhwhtJWo+IAZNQGz9lR0xFuDwHuy6jnGQoZ4rcAIHH81O4geZAqauUT3fbpUXOOXaW3nxZBH/uorQUr3XouyrIKXERG2nEqGClxA3FpI8ykkeiuhbKLtvXmXsJ6lKVzkK7rraDp/ZrYxd9SXAW6Cp5EZtQaW6466s4Q2222lS1qODhKQTwPirN9Zd1NpnTE7Z+qMzPudp1VIlNmZHtkxbkdDLbpUQyhhS1L5RsIKMBQG8ojCSam+6FtNou2iIgu9q1LcBHuTEmJJ0lHU9cLdIQFFEptKcnweIOEq+PgpIJrIzO2gu6e2P631bp69XiTp7UM8zWods/Ca4LseTHjyXYjeSlZC2ytCRkb2cDiABs+s+6C0Fs9uceBqG+Ltkh6O3K+EgSVNstLJCFvLS2UsgkEZcKeg+KvfqfbnorR+pkaduV3d58ciNTm4EOBJluuMOLWhLiUstr3k5bVkj4uAVYBBOC7cxqvaBcda22XaNev2q56caRpS12Jl6NFdeejr5bnBaSkJWlwpSWn1BO4DhKiTVw2KafuidrsC9TbJcYTHvb2aB7pnQnGdyQl98usEqSMOJ8AqR0jwT1igLhst7oK1bTNbav001BnwplkujsFlbkCUGn222mlKcU6plLbat5xQDZVvEJChkKBrV6w/ZPIuGi9r+0jT1z09eko1BqBV6t94agrcty2FQmEkKkAbqFhTCk7qsEkpxnNbhQClKUBWNDYgtXWyJwGrRMMaOlOcJYU2h1pIz1JS4EDzIqz1WdJJ90XrVM9OeSeuAZbJGMhplttR8/hhweirNXRX+Y3wvxtt6leYqrvBWjblKlhtS7FNcL0jk0lSobxxvOED/lKxlRHxFZUcpUpSLRStcJ6N09qYKrqjZ7ozagxAk6g0/ZtUMsJUqI7OityUoSvG8UFQOArdTnHTgVAjubdlASU+9vpbdJBI5pYwT1fk+c1ZZOgrW4+4/DVLs7zhJWq2SVsJUScklsHcJJ45Kc9PHia9XeTI6tU34f6zPsq2aFJ5StxXpcbDw0hso0Xs/mPy9M6Us9glPt8k69bYTbC1ozndJSBkZAOKtdVfvJkeVV+/jM+yp3kyPKq/fxmfZU9nT7/AEYst5aKVlmsbddbHqbQsCLqm8GPebu7Cl8q6zvcmmBLfG58GPC32G/Hw3uHWLX3kyPKq/fxmfZU9nT7/Riy3kvqDTtr1XZ5NpvVujXW2SQA9DmNJdacAIUApKgQcEA/WBVJR3N2ylsko2caXSSCMi0sDgRgj4viNT/eTI8qr9/GZ9lTvJkeVV+/jM+yp7On3+jFlvIm0bAdmlgukW5W3QOnIFwiuJeYlRrYyhxpYOQpKgnIIPWKnrtf3JMly02Rbci653XXfjNQUnpW7/ix8VvpUcdCd5Sec6CZkcJt5vU9s8C05OU0lX18luZHm6D11PW62RLRERFhRmokdOSG2UBIyek8Os9Z66e7htT0n0GxHhZrTHsVqi2+KFBiOgISVneUrxqUetROST1kk120pWhtyd3mQUpSoBSlKAUpSgM/2kFI1zsp3iQTqKRu4HSeaLh5x1Z8f1dY0Cs/2kZ7+NlOCnHfDIzvAZ/FFw6M8c/VxxnqzWgUApSlAKUpQClKUApSlAKUpQClKUBnu0oA662T5UlONRyMBQ4q/BFx4Dh09fV0H6q0Ks92l47+tk2SQe+ORjwc5/A9x/Z/9460KgFKUoBSlKAUpSgFKVXL9qiRFn822mG3PuCUJdeL7xaZYQokJ3lBKiVHBwkDoGSU5GdkISqO0S5ljpVI591h8wsfa3vZ0591h8wsfa3vZ10arPeuaFi70qkc+6w+YWPtb3s6c+6w+YWPtb3s6arPeuaFj5R7pru3JmybbVaNPXTZ2685pq5KuMaQ3dRu3Bl2HIYQpILB3D/xGTgnBQpOTxNfZ2kL1I1JpOyXaZb12mXPgsSnoDi99UZa20qU0VYGSkkpzgZx0CsA2x9z+9tr11ovVF7t9mTM03I5QtokOKTNaB30suZa+KFje4fnKHXka/z7rD5hY+1vezpqs965oWLvSqRz7rD5hY+1vezpz7rD5hY+1vezpqs965oWLvSqRz7rD5hY+1vezr9Gr75aQZF5tkHm1HF5+3yXHHGU/nltTY3kjpODkAcAropqtTss/wAoWLtSvFC0uIStCgpKhkKByCK8q4yCqHAOda6sz1Pxx6Pc6PWavlUKB8tdW/r4/wDbt124X+/DzRV2k1SlK3EFKh4+rrTK1XN001L3r1DiNTn4vJrG4y4paW1b2N05LaxgHIxxAyKmKgFK4Z18t9sm2+HLmsRpdwdUzEYdcCVyFpQpakoHSohKVKOOgA1y23V1pu+orzYokvlbrZwwZ0fk1p5EPJKmvCICVZCSfBJxjjigJilK4Zl8t9vuNvgSZrDE64KWiJGccAcfKEFa9xPSrdSCTjoFUHdXBqAA2G5AgEGM7wP+Q131wX/8RXL7M5/Kazh8SKsyb0goq0nZSTkmCwSf9NNS9Q+jvkjZPsLH9NNTFedV+ZLiw8xVCgfLXVv6+P8A27dX2qFA+Wurf18f+3browv9+Hmgu0mqwq5RbhtX276t0xO1Pe9PWXTVtgOxINinqguS3JAdUt9biMLUlHJpQE53c5yOPHdapWudjGjtpFyi3G/2f3TcYzRYbmxpT0V/kiclsuMrQpSM5O6okcTw41sauQyCfs2Vqvuh9TWvvq1HaxC0da0CZbLgY8h9wPS0pcdcQAVkYJxwSoqOQeGK7btaX7bLojZlbosnUcrWcvTfO85Vov5skVLe8GhIfdQ2tS1laTutpSU8VlQxivpOxbO9PaZupuVstqYkw26Pad9DqyBFYKiy2ElRSAnfVxAyc8ScCq3I7nbZ7JtVitytPlMSyRVQYSWpshtSY5OVMrWlwKdbJGShwqB8VY6LBgMQStsFn7me7aku11Tcp782NKl225PQ1rUiFJ+ECmlJ3VqLYypOCQpSegkVal7OhqzbVtj5PV2oNLuW6FaCzMtdyWwEqERwhx79KE7vELyCCrrOa12XsI0LM0bC0quwpRYYMtU6HFZkvNGI8VKUVMuJWFtcVrwEKAAUQBjhXBeu5r2c6hlKk3DT65Dy2WYzq+cZSeXaabS2227h0cqkJSBuryDxJySSZosGQbNNU6k7oa8aUt2or9eNORhoqLfHGrDMVAdnynn3GlPKW3hW4kNJIQPBy7xyMCq7ZWZG1q/bDntQX28vyhP1FaedLdc3oS5bcVLyG30qZUnC1pbG8pOCrBB4cK+mNYbF9Ga7atqLvZEK5tZMeGuE+7DWyyQAWkrYWhXJkJHgZ3eA4UvmxbRWodL2fTsuwsotFnUlduZhuuRVRFJSUgtuNKStPAkHB45Oc00WC6pTupCck4GMk5NcN/8AxFcvszn8prqiRW4MRmMyClllCW0AqKiEgYHE8TwHSa5b/wDiK5fZnP5TXRD4kVZk1o75I2T7Cx/TTUxUPo75I2T7Cx/TTUxXnVfmS4sPMVQoHy11b+vj/wBu3V9qo3yzXG3XqRdrXFFxRLShMmHyobcCkDCXEFR3Tw4FJI6AQeo78NJJyTeat1T8gjrpUJztfvIy69qhe3pztfvIy69qhe3rr0PuX7L1LYm6VCc7X7yMuvaoXt6c7X7yMuvaoXt6aH3L9l6ixN0qp3TW8+zT7RCmaUurUm7SVQ4SOXiK5V1LLj5TkPEJ+DZcVk4Hg46SAZHna/eRl17VC9vTQ+5fsvUWJulQnO1+8jLr2qF7enO1+8jLr2qF7emh9y/ZeosTdcF//EVy+zOfymuPna/eRl17VC9vXi9H1BqSO7bzZHrIxIQpp6ZMkMrU2gjBKEtLXlWDwyQB08cYOUYqLTclbivUWLRo75I2T7Cx/TTUxXqixm4UVmOyndaaQG0J8SQMAV7a8mb0pOW8xFKUrAClKUApSlAUHaKnOttlhxnGoJBzu5x+CZ/mOP2j6+ODfqz/AGkI3tc7KTuqO7qKQchOQPwRcBk8eHT08ekePNaBQClKUApSlAKUpQClKUApSlAKUpQGe7Sika62TZOCdRyMeCDk8z3H9n1+jrrQqoG0cLOuNlW6XABqGRvbgyCOabh8bxDOPTir/QClKUApSlAKUpQClKUApX4pQQkqUQlIGSScACq5J2laSiOqbe1PZ23EnCkGc1lP1je4VshTnU+BN8C2byLJSqr76ujfKqz9tb9dPfV0b5VWftrfrrZq1fuPky6L3FA2obVNERdoOzliRq+wMyLbqKT7racubCVRSLXPbPKArBR4Sgnwh0qAxk8Nigzo10hR5kOQ1LhyG0vMyGFhbbqFDKVJUOBBBBBHAg1/ODuztgVj2lbfNL3/AEpe7WYGpnkRr4+xJbKIS0YBkrwcBKmx6VIPWoZ+69N612f6T07a7HbdS2di3WyK1CjNe7mzuNNoCEDp6kpFNWr9x8mNF7i90qq++ro3yqs/bW/XX6NqmjSflVZh5zObA/mpq1fuPkyaL3FppXHbLxAvUfl7dNjT2P0sZ1Lif2pJFdlaGnF2ZBSlKgFRuo9QQ9LWeRcpylJYZA8FAytaicJQkdaiSAPrqSrGdud0XIv9ltIVhhhlyc4j85ZPJtn0Dlf3h4q7sFh9arxpPLt4IqKfqjUdx1tKW7dXD7kKiWrahZ5BtPVvDocV/iUOnOAkcKjkNpaSEoSEJHQEjAFftK+jwhGlFQgrJGDbYpSqDets9pssu4g2y8TbZbHCzPvEOIHIkVacb4UreCjuZ8IoSoJ454g1J1I01eTsQv1Kzy97bbVZp99jJtF5uTdjDblwlQYyFsstLZS6Hd4rG8ndVxCQVeCTu4wT3X7avbLRc4duhQLnqKdIiidyFmjh1TUc8EurKlJACuOBkqODgVh7ent25AutKpOxXUlw1dst09eLrIMq4S2Ct54tpRvHfUPipAA4AdAq7VshNVIqaye0HhHbMGYmZDccgzUkESYquTc+okdI8xyD1its2Z7RFaoQq2XLcRemG+U3kDdTJbBA5RI6iCUhQ6iQRwOBi1eyDdF2G9Wq6tq3FRJbSlHxtqUEOJ9KFK9OPFXDjsHDF0mmv5LJ+XAzTvsZ9RUpSvnAFYptxgLjars88hRZlRHIu91JWhW+kfWQtZH+Q1tdQesdKRtZWJ23SFFpWQ4w+lOVMup+KsDr8RHWCR116GAxCwuIjUll2/kqPnRa0tIUtaghCRlSlHAA8Zqqe+7oU/8AemnvvVj/AH1crxbpenLkbbdmRFlkkI4/BvpH5Tavyh5ukZwQK4/cMY/9O1+4K+h3c0pU2rP8+ZhaxWffd0L5a6d+9WP99ZZA2SqsuoL0xM2bWjWcW43R2dGvrzsdJbZeXvqQ6HAVkoJVgpCgoY6K3n3FH/QNfuCvdWqdD2tnUeXh63Blb2hLshe1xDEBKGL3EbZtaUuIAe3YAZ3QM+BhY3fCx4+jjUbp3TerdnmoGblC06L8xdLJbocxpE1pl2FIjNqTxKzhSCFnJSScjoPXs1Kjw0bqSbTV+rb3eLBlmy++WnZfs609p3Vt6tGn75FjEvQZtyYStGVqIPx+IPjFWf33dC+WunfvVj/fVocjMuq3ltIWrxqSCa8fcMb5u1+4KzjCcIqEWrLw/wAg47FqW0aojOSLNdYV2jtr5NbsGQh5KVYB3SUkgHBBx56km4C7vcLdbWgVOTZbLACekJ3wVn0IC1fUDXpKmIe4gBLZcUEobQnwlqPQEpHEnzCtg2V7PH7U+L9d2uSnqbLcaIrBMdCulSv8agB/lGR1qrRi8VHCUXOb/l2eL/3MyjvNMpSlfNgKUpQHJdLTBvcNcS4Q2J0VfxmZDYcQfQeFVB7Ylo91RULfJYz+SxcZLafQlLgA9Aq9UrfTxFajspza4Not2ig+8bpH5rP+9pftae8bpH5rP+9pftav1K369ivqy5sXZQfeN0j81n/e0v2tPeN0j81n/e0v2tX6lNexX1Zc2LsoPvG6R+az/vaX7Wv0bDtIA8Yk8jxG7S/a1faU17FfVlzYuyB09oPT+lXC7a7UxGfI3TIIK3iPEXFEqI9NT1KVyTnKo9Kbu/EmYpSlYA//2Q==)
+
+
+### Run The Chatbot
+Now let's run the chatbot!
+
+> [tip]:
+>
+> You can exit the chat loop at any time by typing "`quit`", "`exit`", or "`q`".
+
+```python
+def stream_graph_updates(user_input: str):
+    for event in graph.stream({"messages": [("user", user_input)]}):
+        for value in event.values():
+            print("Assistant:", value["messages"][-1].content)
+
+
+while True:
+    try:
+        user_input = input("User: ")
+        if user_input.lower() in ["quit", "exit", "q"]:
+            print("Goodbye!")
+            break
+
+        stream_graph_updates(user_input)
+    except:
+        # fallback if input() is not available
+        user_input = "Hallo beri aku informasi mengenai langgraph?"
+        print("User: " + user_input)
+        stream_graph_updates(user_input)
+        break
+```
+
+**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.7:T665,
+## List commit
+```sh
+git log -n [number] 
+
+# or use --oneline for simple logs
+git log -n [number] --oneline
+```
+
+## Rebase
+
+```sh
+git rebase [branch base]
+
+# rebase n commit from head
+git rebase -i HEAD~n
+
+
+# rebase the root of commit (the first commit)
+git rebase -i --root
+```
+
+## Cherry-pick
+
+```sh
+git cherry-pick [commit-hash]
+
+# or multi commit
+git cherry-pick [commit-hash] [commit-hash] [commit-hash] 
+```
+
+## Stash
+
+```sh
+git stash
+
+# stash include untracked file
+git stash --include-untracked
+
+# list stash
+git stash list
+
+# pop stash
+git stash pop stash@{n}
+
+# apply stash but keep stash log
+git stash apply stash@{n)
+
+# remove specific stash
+git stash drop stash@{n}
+```
+
+## Rename Branch
+### local
+```sh
+git branch -m <new_name>
+# or
+git branch -m <old_name> <new_name>
+```
+### remote
+```sh
+git branch -m <new_name>
+# or
+git branch -m <old_name> <new_name>
+
+# Then push the <new_name> local branch and reset the upstream branch
+git push origin -u <new_name>
+
+# Then delete the <old_name> remote branch and finish!
+git push origin --delete <old_name>
+```
+
+## Tag
+```sh
+# add tag local
+tag -a [TAGE_NAME] -m "[TAGE_MESSAGE]"
+
+# push tag to remote
+git push origin [TAGE_NAME]
+
+# remove tag local
+git tag -d [TAGE_NAME]
+
+# remove tag remote
+git push -d origin [TAGE_NAME]
+
+# To get the most recent tag
+git describe --tags --abbrev=0
+
+# To get the most recent tag, with the number of additional commits on top of the tagged object & more
+git describe --tags 
+
+# To get the most recent annotated tag
+git describe --abbrev=0
+
+```
+
+## Edit last commit date
+```sh
+git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
+```8:T1edc,
+## Definition
+
+Generative AI refers to a type of artificial intelligence that creates new content, such as images, text, audio, or even video, based on patterns and data it has learned. What makes it a fantastic technology is that it democratizes AI, anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile, all you need is to use your language, state what you want and out comes a suggestion from an AI model. The applications and impact for this is huge, you write or understand reports, write applications and much more, all in seconds.
+
+After decades of research in the AI field, a new model architecture – called Transformer – overcame the limits of RNNs, being able to get much longer sequences of text as input. Transformers are based on the attention mechanism, enabling the model to give different weights to the inputs it receives, ‘paying more attention’ where the most relevant information is concentrated, regardless of their order in the text sequence.
+
+Most of the recent generative AI models – also known as Large Language Models (LLMs), since they work with textual inputs and outputs – are indeed based on this architecture. What’s interesting about these models – trained on a huge amount of unlabeled data from diverse sources like books, articles and websites – is that they can be adapted to a wide variety of tasks and generate grammatically correct text with a semblance of creativity. So, not only did they incredibly enhance the capacity of a machine to ‘understand’ an input text, but they enabled their capacity to generate an original response in human language.
+
+## How do large language models work?
+
+### Tokenization
+
+Large Language Models receive a text as input and generate a text as output. However, being statistical models, they work much better with numbers than text sequences. That’s why every input to the model is processed by a tokenizer, before being used by the core model. A token is a chunk of text – consisting of a variable number of characters, so the tokenizer's main task is splitting the input into an array of tokens. Then, each token is mapped with a token index, which is the integer encoding of the original text chunk.
+
+![image](https://github.com/irufano/generative-ai-for-beginners/raw/main/01-introduction-to-genai/images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+
+### Predicting output tokens
+
+Given n tokens as input (with max n varying from one model to another), the model is able to predict one token as output. This token is then incorporated into the input of the next iteration, in an expanding window pattern, enabling a better user experience of getting one (or multiple) sentence as an answer. This explains why, if you ever played with ChatGPT, you might have noticed that sometimes it looks like it stops in the middle of a sentence.
+
+### Selection process
+
+The output token is chosen by the model according to its probability of occurring after the current text sequence. This is because the model predicts a probability distribution over all possible ‘next tokens’, calculated based on its training. However, not always the token with the highest probability is chosen from the resulting distribution. A degree of randomness is added to this choice, in a way that the model acts in a non-deterministic fashion - we do not get the exact same output for the same input. This degree of randomness is added to simulate the process of creative thinking and it can be tuned using a model parameter called temperature.
+
+## Custom Knowledge Base
+
+To add a knowledge base to an OpenAI-powered chatbot or application, you can use a variety of approaches depending on how dynamic and structured you want your knowledge base to be. Here are some common methods:
+
+###  Embedding Knowledge with Fine-Tuning
+- **Fine-tuning**: You can fine-tune the OpenAI model on your specific knowledge base or domain. This involves training the model on a custom dataset (such as product information, FAQs, internal documents) to improve its responses.
+  - Steps:
+    - Collect data (e.g., text documents, structured data).
+    - Format it into the proper input-output pairs (prompts and completions).
+    - Fine-tune the model using OpenAI's fine-tuning API.
+- **Use case**: Best for cases where knowledge is mostly static and doesn’t change often.
+
+### Use Knowledge Base API and Dynamic Retrieval
+
+- **External APIs**: Integrate the chatbot with a real-time knowledge base, such as a MySQL database, content management system, or external API.
+  - **Method**: Implement a retrieval mechanism that allows the chatbot to fetch answers from your dynamic database based on user queries. For instance, using vector embeddings to match user queries with the most relevant content in the database.
+  - **Tools**: You can use libraries like langchain to facilitate this process, creating a pipeline that pulls data dynamically based on user input.
+- **Use case**: Useful when your knowledge base is large, changes frequently, or needs to handle complex queries.
+
+### Contextual Knowledge with Prompts
+
+- **Long prompts with context**: You can inject specific information about your knowledge base directly into the prompt as context.
+  - **Method**: Before each query, construct a detailed prompt that includes relevant information from your knowledge base, which the model will use to provide context-aware answers.
+  - **Use case**: Best for handling small sets of information or specific queries where the information needed is known beforehand.
+
+### Augmenting with Vector Databases (e.g., Pinecone, FAISS)
+
+- **Vector search**: Store your knowledge base as embeddings in a vector database (like Pinecone, Weaviate, or FAISS). When a user asks a question, convert it to a vector, search for the most relevant knowledge entry, and use the result as part of the answer.
+  - **Method**: Convert text to embeddings using OpenAI or other models, and retrieve the most similar data points in response to a user query.
+  - **Use case:** Perfect for large datasets where similarity search is required to find relevant answers.
+
+### Hybrid Approach with LangChain and FastAPI
+
+- LangChain: LangChain enables building large language model (LLM) applications that can dynamically interact with databases and external systems. It helps set up a chatbot that can fetch data from knowledge bases like databases, APIs, and even web pages.
+  - Steps:
+    1. Store Knowledge: Define a knowledge base, which could be a SQL database, document store, or API.
+    2. Query Execution: Use an LLM with the LangChain framework to query the knowledge base dynamically.
+    3. FastAPI Integration: Combine this with FastAPI for serving the chatbot with dynamic knowledge retrieval.
+
+### Document Retrieval with Plugins or Middleware
+
+- OpenAI Plugins: If you're using OpenAI in an application, consider building or using a plugin or middleware that acts as a bridge to your knowledge base. For example, retrieving documents, querying databases, or even triggering workflows (e.g., customer support tickets) based on the query.
+- Use case: Ideal for more complex enterprise solutions, where OpenAI can function alongside existing systems.
+
+### Hybrid QA Pipelines (LLM + Traditional Search)
+
+- **Combining LLMs with traditional search**: You can combine the capabilities of language models with traditional search mechanisms like Elasticsearch or other keyword-based systems.
+  - **Method**: First, use search engines to retrieve relevant documents, and then pass those documents to OpenAI for processing and summarization.
+  - **Use case**: Works well in applications where quick retrieval from a large corpus of documents is needed, and then those documents are summarized or clarified by the LLM.9:T2333,
+## Definition
+
+Machine learning (ML) is a subset of artificial intelligence (AI) that involves developing algorithms that allow computers to learn from and make predictions or decisions `based on data`. Instead of being explicitly programmed to perform tasks, machine learning models `identify patterns` in data and improve their performance as they are exposed to more data over time.
+
+## Traditional Programming VS ML
+
+### Traditional Programming
+
+Traditional programming is a manual process—meaning a person (programmer) creates the program. But without anyone programming the logic, one has to manually formulate or code rules.
+
+> [note]: **Traditional Programming**
+> INPUT + PROGRAM = OUTPUT
+
+### Machine Learning
+In machine learning, on the other hand, the algorithm automatically formulates the rules from the data.
+
+> [note]: **Machine Learning**
+> INPUT + OUTPUT = PROGRAM (Model)
+
+## Rules for Using ML
+
+There are 3 rules that are needed when we are going to use machine learning. One is mandatory and the other 2 are optional.
+
+### Data
+
+Data is mandatory rule. When we use machine learning, ensure we have `data`, specially `historical data` because machine learning is learned from experience, where one of the experiences is historical data. Once we have data we can probably use machine learning.
+
+### Pattern (Optional)
+
+We must know that the problems we face have a `pattern`. One form of machine learning is pattern recognition. Once we know that the problem has pattern we can probably use machine learning, but if the problem has random stuff is can be hard to use machine learning.
+
+### The problem cannot be derived mathematically (Optional)
+
+When we use machine learning it is better the problem `can't be derived mathematically`. If the problem can be derived mathematically then actually the problem can be programmed explicitly, example determining odd-even numbers etc. But there are problem that have pattern and can't be derived mathematically, example disease detection, desease detection cannot be derived into mathematic formula.
+
+
+## Machine Learning Type
+
+### Supervised Learning
+
+In supervised learning, the algorithm is trained on a dataset that contains both input features (data) and corresponding output labels (desired results). So in supervised learning requires `data` and `labels` as input. There are 2 types of supervised learning `Classification` and `Regression`.
+
+Characteristics of Supervised Learning:
+
+1. **Labeled Data**: The training data includes input-output pairs. Each example in the dataset comes with a label or outcome. For example:     
+   - Input: Features like height, weight, and age.
+   - Output: A label like "healthy" or "unhealthy" for a health prediction model.
+
+2. **Goal**: The algorithm tries to minimize the difference between its predicted outputs and the actual outputs by finding the best mapping from inputs to outputs during training.
+
+3. **Training Process**: 
+   - The model is fed with a labeled dataset (both input features and output labels).
+   - The model makes predictions and compares them to the actual labels.
+   - Based on this comparison, the model adjusts its internal parameters to improve accuracy.
+   - This process repeats until the model achieves satisfactory performance on the training data.
+
+#### Classification
+
+> [note]: F(X) => [0,1] 
+> 
+> *or*
+> 
+> F(X) => [0,1,2,...]
+
+- The goal is to assign data points to predefined `categories` or `classes`.
+- **Binary Classification**: Two possible classes (e.g., spam vs. non-spam emails).
+- **Multi-class Classification**: More than two classes (e.g., classifying types of flowers into species).
+- **Examples**:
+  - Diagnosing diseases as “positive” or “negative”.
+  - Credit Scoring as "accepted" or "rejected"
+  - Classifying whether a customer will churn or stay.
+
+#### Regression
+
+> [note]: F(X) => R
+
+- The goal is to predict continuous values (`numerical outcomes`).
+- **Examples**:
+  - Predicting house prices based on features like size and location.
+  - Forecasting stock prices.
+  - Predicting the temperature at a specific location.
+
+#### Supervised learning model pipeline
+
+![Supervised learning models](https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png)
+<p class="text-sm">Image by: <a class="no-underline" href="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/tutorial/text_analytics/general_concepts.html#supervised-learning-model-fit-x-y">scikit-learn</a></p>
+
+### Unsupervised Learning
+
+Unsupervised learning is a type of machine learning where the model is trained on data that has no labeled outcomes. Unlike supervised learning, where the goal is to map inputs to specific labels, unsupervised learning focuses on uncovering the underlying structure or patterns within the data. The primary objective is to discover hidden relationships or groupings without human intervention or guidance.
+Included in unsupervised learning are clustering, Dimensionality Reduction etc.
+
+Characteristic of Unsupervised Learning:
+1. **No Labels**: The data used in unsupervised learning is not labeled. The model works on its own to detect patterns, clusters, or associations without predefined categories or answers.
+2. **Exploratory**: It’s primarily used for data exploration to find patterns, groupings, or structures in the data.
+3. **Unstructured Data**: Often applied to unstructured or unlabeled datasets, such as customer purchase data, social media activity, or image datasets.
+
+#### Clustering
+
+- The goal is to `group data points` into clusters such that items in the same group are more similar to each other than to those in other groups.
+  
+- **Examples**: 
+  - Grouping customers based on purchasing behavior to create customer segments for targeted marketing.
+  - Clustering desease
+
+#### Dimensionality Reduction
+
+- The goal is to `reduce the number of features` (or dimensions) in the data while retaining the most important information. This can help visualize high-dimensional data or improve the performance of machine learning models.
+
+- **Example**: Reducing the number of variables in a gene expression dataset from thousands to a smaller, more manageable set of features.
+  
+#### Association
+
+- The goal is to find `relationships between variables` in large datasets. It’s commonly used in market basket analysis to find items that frequently appear together in transactions.
+
+- **Example**: Identifying that customers who buy bread often buy butter as well.
+
+#### Anomaly Detection
+
+- The goal is to identify `outliers or unusual data points` that do not conform to the expected pattern. This can be critical in fields like fraud detection or predictive maintenance.
+
+- **Example**: Detecting fraudulent credit card transactions based on deviations from normal spending behavior.
+
+#### Unsupervised learning model pipeline
+
+![Unsupervised learning models](https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_32.png)
+<p class="text-sm">Image by: <a class="no-underline" href="https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/tutorial/text_analytics/general_concepts.html#unsupervised-learning-model-fit-x">scikit-learn</a></p>
+
+
+### Reinforcement Learning
+
+Reinforcement Learning (RL) is a type of machine learning in which an agent learns to make decisions by interacting with an environment in order to `maximize a reward`. Unlike supervised or unsupervised learning, reinforcement learning does not rely on labeled datasets or direct supervision. Instead, the agent `learns through trial and error`, receiving feedback in the form of rewards or penalties for actions it takes.
+
+Applications of Reinforcement Learning:
+- **Game AI**: RL has been used to achieve superhuman performance in games like chess (AlphaZero), Go, and video games (e.g., Atari, Dota 2). Algorithms like Deep Q-Networks (DQN) and AlphaGo have demonstrated the power of RL in strategic decision-making.
+
+- **Robotics**: RL is widely used in robotics for tasks like navigation, manipulation, and locomotion, where robots learn to interact with the physical environment through trial and error.
+
+- **Autonomous Vehicles**: Self-driving cars use reinforcement learning to make decisions about navigation, lane changing, and collision avoidance in dynamic, unpredictable environments.
+
+- **Healthcare**: RL
+
+#### The Reinforcement Learning Process
+1. **Initialization**: The agent starts in an initial state and does not know how the environment works.
+
+2. **Action Selection**: The agent selects an action based on its current policy.
+
+3. **Transition**: The action changes the state of the environment.
+
+4. **Reward**: The agent receives feedback (a reward) from the environment.
+
+5. **Learning**: Based on the reward, the agent updates its knowledge (usually the value function or policy) to improve future actions.
+
+6. **Repeat**: The process continues, with the agent learning and adapting its strategy over time to maximize cumulative rewards.
+a:T124b,
+Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
+
+## Meta Data
+
+Meta data used in this post are `title`, `date`, `description`, `author` and `tags`. Title at this meta data used for title post. 
+
+```js title="your-post.md"
+---
+title: "Your Post Title"
+date: "2024-09-15"
+description: "Your post description"
+author: "author"
+tags:
+  - your tag
+  - other tag
+---
+```
+
+## Paragraph
+
+To create paragraph on post same like create paragraph as text.
+
+```md title="your-post.md"
+<!-- first paragraph -->
+Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
+
+<!-- second paragraph -->
+Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt velit est nulla. Irure exercitation excepteur eiusmod mollit ea aute ut qui exercitation aliquip ipsum cupidatat. Sint anim cillum velit magna aliqua officia eu eu reprehenderit tempor aliqua veniam dolore duis. Qui sunt mollit qui exercitation nulla in ullamco fugiat esse cupidatat officia. Eu ipsum enim velit tempor magna ea dolor sint Lorem.
+```
+
+## Image
+
+To add image on post, you must put image on public directory, then access it on post with 
+
+```md title="your-post.md"
+![Alt text for the image](/yourpath_image.png)
+```
+
+## Section
+
+The section will show on the right of the post. The section that will show only `##` and the `###`.
+
+```md title="your-post.md"
+## Section 1
+
+Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
+
+### Section 1.1
+
+Nisi veniam et fugiat nostrud nulla incididunt ut eiusmod eiusmod ex velit sunt Lorem.
+
+## Section 2
+
+Pariatur magna sit pariatur in sit ex quis nulla nostrud ipsum proident cillum et et.
+
+## Section 2.1
+Excepteur dolor dolor pariatur dolore exercitation.
+```
+
+## Bullet and Numbering
+To create bullet and numbering you can use `-` or `^[0-9]+$` for numbering.
+
+```md title="your-post.md"
+- bullet 1
+- bullet 2
+- bullet 3
+
+1. number 1
+2. number 2
+3. number 3
+```
+
+- bullet 1
+- bullet 2
+- bullet 3
+
+1. number 1
+2. number 2
+3. number 3
+
+## Emphasis 
+To create emphasis on post like *this is emphasis*. We can use `*` between word or sentence.
+
+```md title="your-post.md"
+*This is emphasis*
+
+*Hello*
+
+*Good Morning*
+```
+
+## Strong
+To create strong text on post like **this is strong**. We can use `**` between word or sentence.
+
+```md title="your-post.md"
+**This is strong**
+
+**Hello**
+
+**Good Morning**
+```
+
+## Code
+### Inline Code
+To create inline code on post like `this is inline code`. We can use **`** between word or sentence.
+
+```md title="your-post.md"
+`This is inline code`
+
+`Hello`
+
+`Good Morning`
+```
+
+### Code Block
+To create code block on post. Follow the example below:
+
+```markdown title="your-post.md"
+'```js title="your-code-title.js"
+funtion getData () => {
+    console.log("Hello world!");
+}
+```'
+
+<!-- remove ' -->
+```
+
+## Blockquote
+
+### Info
+
+```markdown title="your-post.md"
+> [info]:
+>
+> this is info blockquote example
+```
+output:
+
+> [info]:
+>
+> this is info blockquote example
+
+### Warning
+
+```markdown title="your-post.md"
+> [warning]:
+>
+> this is warning blockquote example
+```
+output:
+
+> [warning]:
+>
+> this is warning blockquote example
+
+### Tip
+
+```markdown title="your-post.md"
+> [tip]:
+>
+> this is tip blockquote example
+```
+output:
+
+> [tip]:
+>
+> this is tip blockquote example
+
+### Important
+
+```markdown title="your-post.md"
+> [important]:
+>
+> this is important blockquote example
+```
+output:
+
+> [important]:
+>
+> this is important blockquote example
+
+### caution
+
+```markdown title="your-post.md"
+> [caution]:
+>
+> this is caution blockquote example
+```
+output:
+
+> [caution]:
+>
+> this is caution blockquote example
+
+### Note
+
+Note block is doesn't have title header.
+
+```markdown title="your-post.md"
+> [note]:
+>
+> this is note blockquote example
+```
+output:
+
+> [note]: This is note *blockquote* `example`
+>
+> Cillum adipisicing sint cupidatat mollit duis.
+>
+> Tempor proident veniam est veniam minim minim consectetur cupidatat Lorem cupidatat adipisicing. Ea ipsum excepteur pariatur non cupidatat amet exercitation enim id fugiat officia nostrud. Velit laboris laboris qui labore dolore fugiat mollit in laborum labore Lorem.
+>
+>
+> ```js title="your-code-title.js"
+> funtion getData () => {
+>    console.log("Hello world!");
+> }
+> ```0:{"buildId":"NLBFqrOtm6fs3XTmOCfgE","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/rag.svg"},"rawContent":"$5","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://langchain-ai.github.io/langgraph/static/wordmark_dark.svg"},"rawContent":"$6","readingTime":"4 min read"},{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png"},"rawContent":"$7","readingTime":"2 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png"},"rawContent":"$8","readingTime":"7 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png"},"rawContent":"$9","readingTime":"7 min read"},{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"]},"rawContent":"$a","readingTime":"4 min read"}]}]}]}],["$Lb","$Lc","$Ld"],"$Le"]}],"loading":null,"isPartial":false}
+b:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next"}]
+c:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/6050e303b8bdcecf.js","async":true}]
+d:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true}]
+e:["$","$Lf",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
+10:null
