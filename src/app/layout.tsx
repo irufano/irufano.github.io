@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "../styles/globals.css";
 import "highlight.js/styles/tomorrow-night-blue.min.css";
 
-const ubuntu = Ubuntu({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-ubuntu",
-  weight: ["300", "400", "500", "700"],
+  variable: "--font-inter",
 });
 
 const analyticsId = "G-787PK2XJ06";
@@ -68,7 +67,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={`${ubuntu.variable} font-ubuntu`}>
+      <body className={`${inter.variable} font-inter`}>
         <ThemeInitScript />
         {children}
       </body>

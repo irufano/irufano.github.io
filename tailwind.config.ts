@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        ubuntu: ["var(--font-ubuntu)"],
+        inter: ["var(--font-inter)"],
       },
       borderRadius: {
         lg: "0.5rem",

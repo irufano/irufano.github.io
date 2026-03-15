@@ -1,11 +1,10 @@
-import { Ubuntu } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const ubuntuInit = Ubuntu({
+const interInit = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-ubuntu",
-  weight: ["300", "400", "500", "700"],
+  variable: "--font-inter",
 });
 
-export const ubuntu = ubuntuInit.variable;
-export const ubuntuFont = ubuntuInit;
+export const inter = interInit.variable;
+export const interFont = interInit;
