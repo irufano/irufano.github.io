@@ -262,31 +262,70 @@ export function getPostBySlug(slug: string): Post {
           `;
         }
       });
-
+      
+      // Table
       visit(tree as Parameters<typeof visit>[0], "table", (node: Record<string, unknown>) => {
         const children = node.children as Array<Record<string, unknown>>;
-        // Find the first row (header row)
+        const align = (node.align as (string | null)[]) || [];
+
+        const getCellText = (cell: Record<string, unknown>): string => {
+          const cellChildren = cell.children as Array<Record<string, unknown>> | undefined;
+          if (!cellChildren) return "";
+          return cellChildren
+            .map((child) => {
+              if (child.type === "text") return child.value as string;
+              if (child.type === "inlineCode") {
+                const highlighted = highlight.highlightAuto(child.value as string, ["js"]).value;
+                return `<span class="inline-code-block">${highlighted}</span>`;
+              }
+              if (child.type === "strong") {
+                const strongChildren = child.children as Array<Record<string, unknown>> | undefined;
+                return `<span class="strong-block">${strongChildren?.map((c) => c.value).join("") || ""}</span>`;
+              }
+              if (child.type === "emphasis") {
+                const emChildren = child.children as Array<Record<string, unknown>> | undefined;
+                return `<span class="emphasis-block">${emChildren?.map((c) => c.value).join("") || ""}</span>`;
+              }
+              if (child.type === "link") {
+                const linkChildren = child.children as Array<Record<string, unknown>> | undefined;
+                const linkText = linkChildren?.map((c) => c.value).join("") || "";
+                return `<a href="${child.url}" target="_blank" rel="noopener noreferrer">${linkText}</a>`;
+              }
+              return child.value as string || "";
+            })
+            .join("");
+        };
+
+        const getAlignStyle = (index: number): string => {
+          const a = align[index];
+          if (a === "center") return ' style="text-align: center;"';
+          if (a === "right") return ' style="text-align: right;"';
+          return "";
+        };
+
+        // Build header
         const headerRow = children[0];
+        let headerHtml = "";
         if (headerRow && headerRow.type === "tableRow") {
-          (headerRow.children as Array<Record<string, unknown>>).forEach((cell) => {
-            cell.data = cell.data || {};
-            (cell.data as Record<string, unknown>).hProperties =
-              (cell.data as Record<string, unknown>).hProperties || {};
-            ((cell.data as Record<string, unknown>).hProperties as Record<string, unknown>).className = "table-header";
-          });
+          const headerCells = (headerRow.children as Array<Record<string, unknown>>)
+            .map((cell, i) => `<th${getAlignStyle(i)}>${getCellText(cell)}</th>`)
+            .join("");
+          headerHtml = `<thead><tr>${headerCells}</tr></thead>`;
         }
 
-        // Add className to data rows
-        children.slice(1).forEach((row, index) => {
-          if (row.type === "tableRow") {
-            row.data = row.data || {};
-            (row.data as Record<string, unknown>).hProperties =
-              (row.data as Record<string, unknown>).hProperties || {};
-            ((row.data as Record<string, unknown>).hProperties as Record<string, unknown>).className = `data-row ${
-              index % 2 === 0 ? "even-row" : "odd-row"
-            }`;
-          }
+        // Build body rows
+        const bodyRows = children.slice(1).map((row, rowIndex) => {
+          if (row.type !== "tableRow") return "";
+          const rowClass = rowIndex % 2 === 0 ? "even-row" : "odd-row";
+          const cells = (row.children as Array<Record<string, unknown>>)
+            .map((cell, i) => `<td${getAlignStyle(i)}>${getCellText(cell)}</td>`)
+            .join("");
+          return `<tr class="${rowClass}">${cells}</tr>`;
         });
+        const bodyHtml = `<tbody>${bodyRows.join("")}</tbody>`;
+
+        node.type = "html";
+        node.value = `<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table">${headerHtml}${bodyHtml}</table></div></div>`;
       });
     })
     .processSync(content);

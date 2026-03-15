@@ -230,29 +230,59 @@ body {
   @apply mb-2 mt-4 text-base;
 }
 
-.table-header {
-  @apply p-2 bg-slate-200 dark:bg-zinc-800 dark:text-gray-300;
-  padding: 12px 16px;
+/* DATA TABLE */
+.data-table-wrapper {
+  @apply my-6 rounded-lg overflow-hidden border border-slate-200 dark:border-zinc-700;
+}
+
+.data-table-scroll {
+  @apply overflow-x-auto;
+}
+
+.data-table {
+  @apply w-full text-sm leading-normal;
+  border-collapse: collapse;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.data-table thead,
+.data-table tbody,
+.data-table tr,
+.data-table th,
+.data-table td {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.data-table thead tr {
+  @apply bg-slate-200 dark:bg-zinc-800;
+}
+
+.data-table thead th {
+  @apply text-left text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-gray-300;
+  padding: 12px 16px !important;
+  white-space: nowrap;
+}
+
+.data-table tbody tr {
+  @apply border-t border-slate-200 dark:border-zinc-700 transition-colors;
+}
+
+.data-table tbody tr:hover {
+  @apply bg-slate-200/60 dark:bg-zinc-700/60;
+}
+
+.data-table tbody tr.even-row {
+  @apply bg-slate-50 dark:bg-zinc-800/50;
+}
+
+.data-table tbody tr.odd-row {
+  @apply bg-white dark:bg-zinc-900;
+}
+
+.data-table tbody td {
+  @apply text-text/80 dark:text-text-dark/80;
+  padding: 12px 16px !important;
   vertical-align: middle;
-  border: none !important;
-}
-
-/* Data row specific styles */
-.data-row {
-  @apply leading-normal;
-  border: none !important;
-}
-
-.data-row td {
-  padding: 12px 16px;
-  vertical-align: middle;
-}
-
-/* Enhanced alternating rows */
-.even-row {
-  @apply bg-slate-100 dark:bg-zinc-700 p-2;
-}
-
-.odd-row {
-  @apply bg-white dark:bg-zinc-900 p-2;
 }
