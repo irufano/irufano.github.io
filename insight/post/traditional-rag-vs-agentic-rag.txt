@@ -7,17 +7,14 @@
 9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
 b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
 e:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-:HL["https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","style"]
-:HL["https://irufano.github.io/_next/static/media/1bc7fc94203521e3-s.p.888a2ca8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://irufano.github.io/_next/static/media/216579b50e548914-s.p.a1b609f7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://irufano.github.io/_next/static/media/3df2de83712245dd-s.p.b86f99c9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://irufano.github.io/_next/static/media/cd72e39fe5f8e190-s.p.2d85de6e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
-0:{"P":null,"b":"NLBFqrOtm6fs3XTmOCfgE","c":["","insight","post","traditional-rag-vs-agentic-rag"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","traditional-rag-vs-agentic-rag","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0f9d76fd3a349f7b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"ubuntu_32893d75-module__euGNZa__variable font-ubuntu","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],"$Ld"]}],false]],"m":"$undefined","G":["$e",[]],"S":true}
+:HL["https://irufano.github.io/_next/static/chunks/396e691cc68121a2.css","style"]
+:HL["https://irufano.github.io/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","style"]
+0:{"P":null,"b":"4Gz0-kpNLTkZ9F9iBv1bH","c":["","insight","post","traditional-rag-vs-agentic-rag"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","traditional-rag-vs-agentic-rag","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/396e691cc68121a2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"inter_2fe1ab3d-module__-T-KAq__variable font-inter","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],"$Ld"]}],false]],"m":"$undefined","G":["$e",[]],"S":true}
 d:["$","meta",null,{"name":"next-size-adjust","content":""}]
-f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
-10:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
-11:T8d3b,<h2 id="what-is-rag">What is RAG?</h2>
+f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
+10:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
+11:T8d06,<h2 id="what-is-rag">What is RAG?</h2>
 <p>Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.</p>
 <h2 id="traditional-rag-architecture">Traditional RAG Architecture</h2>
 <p><img src="https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/traditional-rag.svg" alt="image"></p>
@@ -136,42 +133,7 @@ f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
 </ul>
 <h2 id="comparative-analysis">Comparative Analysis</h2>
 <h3 id="performance-characteristics">Performance Characteristics</h3>
-<table>
-<thead>
-<tr>
-<th class="table-header">Aspect</th>
-<th class="table-header">Traditional RAG</th>
-<th class="table-header">Agentic RAG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="data-row even-row">
-<td><span class="strong-block">Query Complexity</span></td>
-<td>Simple to moderate</td>
-<td>Simple to highly complex</td>
-</tr>
-<tr class="data-row odd-row">
-<td><span class="strong-block">Response Time</span></td>
-<td>Fast (single pass)</td>
-<td>Variable (depends on complexity)</td>
-</tr>
-<tr class="data-row even-row">
-<td><span class="strong-block">Accuracy</span></td>
-<td>Good for straightforward queries</td>
-<td>Superior for complex, multi-faceted queries</td>
-</tr>
-<tr class="data-row odd-row">
-<td><span class="strong-block">Scalability</span></td>
-<td>High (linear scaling)</td>
-<td>Moderate (depends on agent complexity)</td>
-</tr>
-<tr class="data-row even-row">
-<td><span class="strong-block">Maintenance</span></td>
-<td>Low</td>
-<td>Moderate to High</td>
-</tr>
-</tbody>
-</table>
+<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table"><thead><tr><th>Aspect</th><th>Traditional RAG</th><th>Agentic RAG</th></tr></thead><tbody><tr class="even-row"><td><span class="strong-block">Query Complexity</span></td><td>Simple to moderate</td><td>Simple to highly complex</td></tr><tr class="odd-row"><td><span class="strong-block">Response Time</span></td><td>Fast (single pass)</td><td>Variable (depends on complexity)</td></tr><tr class="even-row"><td><span class="strong-block">Accuracy</span></td><td>Good for straightforward queries</td><td>Superior for complex, multi-faceted queries</td></tr><tr class="odd-row"><td><span class="strong-block">Scalability</span></td><td>High (linear scaling)</td><td>Moderate (depends on agent complexity)</td></tr><tr class="even-row"><td><span class="strong-block">Maintenance</span></td><td>Low</td><td>Moderate to High</td></tr></tbody></table></div></div>
 <h3 id="use-case-suitability">Use Case Suitability</h3>
 <p><span class="strong-block">Traditional RAG is ideal for:</span></p>
 <ul>
@@ -214,7 +176,7 @@ f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
           <div class="code-block">
           <div class="title-code">
             <span>Traditional RAG Stack</span>
-              <button class="copy-code" data-code-id="j7qfcc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ivdd3l" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -235,7 +197,7 @@ f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="j7qfcc" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
+          <pre><code id="ivdd3l" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
 Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           </div>
           </div>
@@ -245,7 +207,7 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>Agentic RAG Stack</span>
-              <button class="copy-code" data-code-id="8t6a8x" aria-label="Copy code">
+              <button class="copy-code" data-code-id="m2fayp" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -266,7 +228,7 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="8t6a8x" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
+          <pre><code id="m2fayp" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
 [Multiple Tools in Parallel] → Result Aggregator → Context Optimizer → 
 LLM Service → Response Validator → Frontend</code></pre>
           </div>
@@ -293,7 +255,7 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="k0lo8i" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3ev0g" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -314,7 +276,7 @@ LLM Service → Response Validator → Frontend</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="k0lo8i" class="python"><span class="hljs-meta">@Tool()</span>
+          <pre><code id="3ev0g" class="python"><span class="hljs-meta">@Tool()</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">company_info_search</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
     <span class="hljs-string">&quot;&quot;&quot;Use for general company information.&quot;&quot;&quot;</span>
 
@@ -336,7 +298,7 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="9a0o4a" aria-label="Copy code">
+              <button class="copy-code" data-code-id="5j0ck" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -357,7 +319,7 @@ LLM Service → Response Validator → Frontend</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="9a0o4a" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
+          <pre><code id="5j0ck" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
     LLMfy,
     START,
     END,
@@ -448,7 +410,7 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="7x9y7l" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pdswf" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -469,7 +431,7 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="7x9y7l" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="pdswf" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 <span class="hljs-comment"># Check diagram</span>
 graph_url = workflow.get_diagram_url()
@@ -484,7 +446,7 @@ display(Image(url=graph_url))</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="pwnpc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p4sljg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -505,7 +467,7 @@ display(Image(url=graph_url))</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="pwnpc" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
+          <pre><code id="p4sljg" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
 
 
 <span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">call_agentic_rag</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
@@ -528,7 +490,7 @@ display(Image(url=graph_url))</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="h9fxmo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="rwc78h" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -549,7 +511,7 @@ display(Image(url=graph_url))</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="h9fxmo" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
+          <pre><code id="rwc78h" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
 </code></pre>
           </div>
           </div>
@@ -559,7 +521,7 @@ display(Image(url=graph_url))</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="bjk8vm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pqb4fn" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -580,7 +542,7 @@ display(Image(url=graph_url))</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="bjk8vm" class="sh">Visi:
+          <pre><code id="pqb4fn" class="sh">Visi:
 Menjadi perusahaan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk meningkatkan kualitas hidup masyarakat serta menciptakan nilai tambah bagi seluruh pemangku kepentingan.
 
 Misi:

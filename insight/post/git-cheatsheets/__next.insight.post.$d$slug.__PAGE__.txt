@@ -1,15 +1,15 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
-3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
 a:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 b:"$Sreact.suspense"
-:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
-4:T43aa,<h2 id="list-commit">List commit</h2>
+:HL["https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","style"]
+4:T43b0,<h2 id="list-commit">List commit</h2>
 
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="9oz0bi" aria-label="Copy code">
+              <button class="copy-code" data-code-id="v9fkzn" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ b:"$Sreact.suspense"
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="9oz0bi" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
+          <pre><code id="v9fkzn" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
 
 <span class="hljs-comment"># or use --oneline for simple logs</span>
 git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
@@ -42,7 +42,7 @@ git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="c72x6t" aria-label="Copy code">
+              <button class="copy-code" data-code-id="doymjd" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="c72x6t" class="sh">git rebase [branch base]
+          <pre><code id="doymjd" class="sh">git rebase [branch base]
 
 <span class="hljs-comment"># rebase n commit from head</span>
 git rebase -i HEAD~n
@@ -79,7 +79,7 @@ git rebase -i --root</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="fnawj" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pkkw0s" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ git rebase -i --root</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="fnawj" class="sh">git cherry-pick [commit-hash]
+          <pre><code id="pkkw0s" class="sh">git cherry-pick [commit-hash]
 
 <span class="hljs-comment"># or multi commit</span>
 git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
@@ -112,7 +112,7 @@ git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="esl8dn" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xso871n" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="esl8dn" class="sh">git stash
+          <pre><code id="xso871n" class="sh">git stash
 
 <span class="hljs-comment"># stash include untracked file</span>
 git stash --include-untracked
@@ -158,7 +158,7 @@ git stash drop stash@{n}</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="ckg606" aria-label="Copy code">
+              <button class="copy-code" data-code-id="wdg4zu" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -179,7 +179,7 @@ git stash drop stash@{n}</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="ckg606" class="sh">git branch -m &lt;new_name&gt;
+          <pre><code id="wdg4zu" class="sh">git branch -m &lt;new_name&gt;
 <span class="hljs-comment"># or</span>
 git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
           </div>
@@ -190,7 +190,7 @@ git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="vw5hcr" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vxsdht" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -211,7 +211,7 @@ git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="vw5hcr" class="sh">git branch -m &lt;new_name&gt;
+          <pre><code id="vxsdht" class="sh">git branch -m &lt;new_name&gt;
 <span class="hljs-comment"># or</span>
 git branch -m &lt;old_name&gt; &lt;new_name&gt;
 
@@ -228,7 +228,7 @@ git push origin --delete &lt;old_name&gt;</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="at1wt" aria-label="Copy code">
+              <button class="copy-code" data-code-id="g0kos8" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -249,7 +249,7 @@ git push origin --delete &lt;old_name&gt;</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="at1wt" class="sh"><span class="hljs-comment"># add tag local</span>
+          <pre><code id="g0kos8" class="sh"><span class="hljs-comment"># add tag local</span>
 tag -a [TAGE_NAME] -m <span class="hljs-string">&quot;[TAGE_MESSAGE]&quot;</span>
 
 <span class="hljs-comment"># push tag to remote</span>
@@ -278,7 +278,7 @@ git describe --abbrev=0
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="mbdlyr" aria-label="Copy code">
+              <button class="copy-code" data-code-id="kro1rk" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -299,7 +299,7 @@ git describe --abbrev=0
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="mbdlyr" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
+          <pre><code id="kro1rk" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
           </div>
           </div>
         
@@ -403,9 +403,9 @@ git describe --abbrev=0
 ## Edit last commit date
 ```sh
 git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
-```0:{"buildId":"NLBFqrOtm6fs3XTmOCfgE","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png"},"content":"$4","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$5","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-6:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next"}]
+```0:{"buildId":"4Gz0-kpNLTkZ9F9iBv1bH","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png"},"content":"$4","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$5","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+6:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","precedence":"next"}]
 7:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true}]
-8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true}]
+8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js","async":true}]
 9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
 c:null

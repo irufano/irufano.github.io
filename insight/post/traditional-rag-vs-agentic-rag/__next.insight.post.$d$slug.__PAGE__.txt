@@ -1,10 +1,10 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
-3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
 a:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 b:"$Sreact.suspense"
-:HL["https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","style"]
-4:T8d3b,<h2 id="what-is-rag">What is RAG?</h2>
+:HL["https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","style"]
+4:T8d06,<h2 id="what-is-rag">What is RAG?</h2>
 <p>Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.</p>
 <h2 id="traditional-rag-architecture">Traditional RAG Architecture</h2>
 <p><img src="https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/traditional-rag.svg" alt="image"></p>
@@ -123,42 +123,7 @@ b:"$Sreact.suspense"
 </ul>
 <h2 id="comparative-analysis">Comparative Analysis</h2>
 <h3 id="performance-characteristics">Performance Characteristics</h3>
-<table>
-<thead>
-<tr>
-<th class="table-header">Aspect</th>
-<th class="table-header">Traditional RAG</th>
-<th class="table-header">Agentic RAG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="data-row even-row">
-<td><span class="strong-block">Query Complexity</span></td>
-<td>Simple to moderate</td>
-<td>Simple to highly complex</td>
-</tr>
-<tr class="data-row odd-row">
-<td><span class="strong-block">Response Time</span></td>
-<td>Fast (single pass)</td>
-<td>Variable (depends on complexity)</td>
-</tr>
-<tr class="data-row even-row">
-<td><span class="strong-block">Accuracy</span></td>
-<td>Good for straightforward queries</td>
-<td>Superior for complex, multi-faceted queries</td>
-</tr>
-<tr class="data-row odd-row">
-<td><span class="strong-block">Scalability</span></td>
-<td>High (linear scaling)</td>
-<td>Moderate (depends on agent complexity)</td>
-</tr>
-<tr class="data-row even-row">
-<td><span class="strong-block">Maintenance</span></td>
-<td>Low</td>
-<td>Moderate to High</td>
-</tr>
-</tbody>
-</table>
+<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table"><thead><tr><th>Aspect</th><th>Traditional RAG</th><th>Agentic RAG</th></tr></thead><tbody><tr class="even-row"><td><span class="strong-block">Query Complexity</span></td><td>Simple to moderate</td><td>Simple to highly complex</td></tr><tr class="odd-row"><td><span class="strong-block">Response Time</span></td><td>Fast (single pass)</td><td>Variable (depends on complexity)</td></tr><tr class="even-row"><td><span class="strong-block">Accuracy</span></td><td>Good for straightforward queries</td><td>Superior for complex, multi-faceted queries</td></tr><tr class="odd-row"><td><span class="strong-block">Scalability</span></td><td>High (linear scaling)</td><td>Moderate (depends on agent complexity)</td></tr><tr class="even-row"><td><span class="strong-block">Maintenance</span></td><td>Low</td><td>Moderate to High</td></tr></tbody></table></div></div>
 <h3 id="use-case-suitability">Use Case Suitability</h3>
 <p><span class="strong-block">Traditional RAG is ideal for:</span></p>
 <ul>
@@ -201,7 +166,7 @@ b:"$Sreact.suspense"
           <div class="code-block">
           <div class="title-code">
             <span>Traditional RAG Stack</span>
-              <button class="copy-code" data-code-id="j7qfcc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ivdd3l" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -222,7 +187,7 @@ b:"$Sreact.suspense"
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="j7qfcc" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
+          <pre><code id="ivdd3l" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
 Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           </div>
           </div>
@@ -232,7 +197,7 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>Agentic RAG Stack</span>
-              <button class="copy-code" data-code-id="8t6a8x" aria-label="Copy code">
+              <button class="copy-code" data-code-id="m2fayp" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -253,7 +218,7 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="8t6a8x" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
+          <pre><code id="m2fayp" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
 [Multiple Tools in Parallel] → Result Aggregator → Context Optimizer → 
 LLM Service → Response Validator → Frontend</code></pre>
           </div>
@@ -280,7 +245,7 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="k0lo8i" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3ev0g" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -301,7 +266,7 @@ LLM Service → Response Validator → Frontend</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="k0lo8i" class="python"><span class="hljs-meta">@Tool()</span>
+          <pre><code id="3ev0g" class="python"><span class="hljs-meta">@Tool()</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">company_info_search</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
     <span class="hljs-string">&quot;&quot;&quot;Use for general company information.&quot;&quot;&quot;</span>
 
@@ -323,7 +288,7 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="9a0o4a" aria-label="Copy code">
+              <button class="copy-code" data-code-id="5j0ck" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -344,7 +309,7 @@ LLM Service → Response Validator → Frontend</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="9a0o4a" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
+          <pre><code id="5j0ck" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
     LLMfy,
     START,
     END,
@@ -435,7 +400,7 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="7x9y7l" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pdswf" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -456,7 +421,7 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="7x9y7l" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="pdswf" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 <span class="hljs-comment"># Check diagram</span>
 graph_url = workflow.get_diagram_url()
@@ -471,7 +436,7 @@ display(Image(url=graph_url))</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="pwnpc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p4sljg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -492,7 +457,7 @@ display(Image(url=graph_url))</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="pwnpc" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
+          <pre><code id="p4sljg" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
 
 
 <span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">call_agentic_rag</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
@@ -515,7 +480,7 @@ display(Image(url=graph_url))</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="h9fxmo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="rwc78h" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -536,7 +501,7 @@ display(Image(url=graph_url))</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="h9fxmo" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
+          <pre><code id="rwc78h" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
 </code></pre>
           </div>
           </div>
@@ -546,7 +511,7 @@ display(Image(url=graph_url))</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="bjk8vm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pqb4fn" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -567,7 +532,7 @@ display(Image(url=graph_url))</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="bjk8vm" class="sh">Visi:
+          <pre><code id="pqb4fn" class="sh">Visi:
 Menjadi perusahaan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk meningkatkan kualitas hidup masyarakat serta menciptakan nilai tambah bagi seluruh pemangku kepentingan.
 
 Misi:
@@ -947,9 +912,9 @@ Both Traditional and Agentic RAG have their place in the modern AI landscape. Tr
 The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
 
 As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
-0:{"buildId":"NLBFqrOtm6fs3XTmOCfgE","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/rag.svg"},"content":"$4","sections":[{"level":"2","id":"what-is-rag","text":"What is RAG?"},{"level":"2","id":"traditional-rag-architecture","text":"Traditional RAG Architecture"},{"level":"3","id":"core-components","text":"Core Components"},{"level":"3","id":"traditional-rag-workflow","text":"Traditional RAG Workflow"},{"level":"3","id":"advantages-of-traditional-rag","text":"Advantages of Traditional RAG"},{"level":"3","id":"limitations-of-traditional-rag","text":"Limitations of Traditional RAG"},{"level":"2","id":"agentic-rag-architecture","text":"Agentic RAG Architecture"},{"level":"3","id":"core-innovation-the-aggregator-agent","text":"Core Innovation: The Aggregator Agent"},{"level":"3","id":"enhanced-components","text":"Enhanced Components"},{"level":"3","id":"agentic-rag-workflow","text":"Agentic RAG Workflow"},{"level":"3","id":"advantages-of-agentic-rag","text":"Advantages of Agentic RAG"},{"level":"3","id":"potential-challenges-of-agentic-rag","text":"Potential Challenges of Agentic RAG"},{"level":"2","id":"comparative-analysis","text":"Comparative Analysis"},{"level":"3","id":"performance-characteristics","text":"Performance Characteristics"},{"level":"3","id":"use-case-suitability","text":"Use Case Suitability"},{"level":"3","id":"implementation-considerations","text":"Implementation Considerations"},{"level":"2","id":"technical-implementation-insights","text":"Technical Implementation Insights"},{"level":"3","id":"traditional-rag-implementation-stack","text":"Traditional RAG Implementation Stack"},{"level":"3","id":"agentic-rag-implementation-stack","text":"Agentic RAG Implementation Stack"},{"level":"3","id":"key-technical-considerations","text":"Key Technical Considerations"},{"level":"2","id":"implementation-agentic-rag-with-llmfy","text":"Implementation Agentic RAG with LLMfy"},{"level":"3","id":"define-tools","text":"Define tools"},{"level":"3","id":"define-agentic-rag","text":"Define Agentic RAG"},{"level":"3","id":"check-workflow-agent-diagram-in-notebooks","text":"Check workflow agent diagram in Notebooks"},{"level":"3","id":"define-funtion-to-call-agentic-rag","text":"Define Funtion to call agentic RAG"},{"level":"3","id":"test-call","text":"Test Call"},{"level":"2","id":"conclusion","text":"Conclusion"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/traditional-rag-vs-agentic-rag"}]}],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-6:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/23c704053b7da0c3.css","precedence":"next"}]
+0:{"buildId":"4Gz0-kpNLTkZ9F9iBv1bH","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/traditional-rag-vs-agentic-rag/rag.svg"},"content":"$4","sections":[{"level":"2","id":"what-is-rag","text":"What is RAG?"},{"level":"2","id":"traditional-rag-architecture","text":"Traditional RAG Architecture"},{"level":"3","id":"core-components","text":"Core Components"},{"level":"3","id":"traditional-rag-workflow","text":"Traditional RAG Workflow"},{"level":"3","id":"advantages-of-traditional-rag","text":"Advantages of Traditional RAG"},{"level":"3","id":"limitations-of-traditional-rag","text":"Limitations of Traditional RAG"},{"level":"2","id":"agentic-rag-architecture","text":"Agentic RAG Architecture"},{"level":"3","id":"core-innovation-the-aggregator-agent","text":"Core Innovation: The Aggregator Agent"},{"level":"3","id":"enhanced-components","text":"Enhanced Components"},{"level":"3","id":"agentic-rag-workflow","text":"Agentic RAG Workflow"},{"level":"3","id":"advantages-of-agentic-rag","text":"Advantages of Agentic RAG"},{"level":"3","id":"potential-challenges-of-agentic-rag","text":"Potential Challenges of Agentic RAG"},{"level":"2","id":"comparative-analysis","text":"Comparative Analysis"},{"level":"3","id":"performance-characteristics","text":"Performance Characteristics"},{"level":"3","id":"use-case-suitability","text":"Use Case Suitability"},{"level":"3","id":"implementation-considerations","text":"Implementation Considerations"},{"level":"2","id":"technical-implementation-insights","text":"Technical Implementation Insights"},{"level":"3","id":"traditional-rag-implementation-stack","text":"Traditional RAG Implementation Stack"},{"level":"3","id":"agentic-rag-implementation-stack","text":"Agentic RAG Implementation Stack"},{"level":"3","id":"key-technical-considerations","text":"Key Technical Considerations"},{"level":"2","id":"implementation-agentic-rag-with-llmfy","text":"Implementation Agentic RAG with LLMfy"},{"level":"3","id":"define-tools","text":"Define tools"},{"level":"3","id":"define-agentic-rag","text":"Define Agentic RAG"},{"level":"3","id":"check-workflow-agent-diagram-in-notebooks","text":"Check workflow agent diagram in Notebooks"},{"level":"3","id":"define-funtion-to-call-agentic-rag","text":"Define Funtion to call agentic RAG"},{"level":"3","id":"test-call","text":"Test Call"},{"level":"2","id":"conclusion","text":"Conclusion"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/traditional-rag-vs-agentic-rag"}]}],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+6:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","precedence":"next"}]
 7:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true}]
-8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/4db96f8f90d7ed7f.js","async":true}]
+8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js","async":true}]
 9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
 c:null
