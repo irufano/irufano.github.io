@@ -29,37 +29,28 @@ export default function PostContent({ post, pathname }: PostContentProps) {
 
   useEffect(() => {
     const calculateOffset = () => {
-      const header = document.querySelector("header");
-      return header ? header.offsetHeight : 0;
+      const navbar = document.querySelector("nav");
+      return navbar ? navbar.offsetHeight : 0;
     };
 
     const handleScroll = throttle(() => {
       const offset = calculateOffset();
-      const sectionOffsets = post.sections.map((section) => {
-        const element = document.getElementById(section.id);
+      const threshold = offset + 32;
+
+      let currentSection: string | null = null;
+      for (let i = post.sections.length - 1; i >= 0; i--) {
+        const element = document.getElementById(post.sections[i].id);
         if (element) {
-          return { id: section.id, offsetTop: element.offsetTop };
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= threshold) {
+            currentSection = post.sections[i].id;
+            break;
+          }
         }
-        return { id: section.id, offsetTop: 0 };
-      });
-
-      const deviceHeight = window.innerHeight;
-      const currentScrollPosition =
-        window.scrollY + offset + deviceHeight * 0.25;
-
-      const currentSection = sectionOffsets.find((section, index) => {
-        const nextSection = sectionOffsets[index + 1];
-        if (nextSection) {
-          return (
-            currentScrollPosition >= section.offsetTop &&
-            currentScrollPosition < nextSection.offsetTop
-          );
-        }
-        return currentScrollPosition >= section.offsetTop;
-      });
+      }
 
       if (currentSection) {
-        setActiveSection(currentSection.id);
+        setActiveSection(currentSection);
       }
     }, 100);
 
@@ -68,6 +59,37 @@ export default function PostContent({ post, pathname }: PostContentProps) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [post.sections]);
+
+  // Handle direct URL with hash (e.g. /post/my-post#section-id)
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    // Wait for content to render
+    const timeout = setTimeout(() => {
+      const element = document.getElementById(hash);
+      if (!element) return;
+      const navbar = document.querySelector("nav");
+      const offset = navbar ? navbar.offsetHeight : 0;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset - 16;
+      window.scrollTo({ top, behavior: "smooth" });
+      setActiveSection(hash);
+    }, 300);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (!element) return;
+    const navbar = document.querySelector("nav");
+    const offset = navbar ? navbar.offsetHeight : 0;
+    const top = element.getBoundingClientRect().top + window.scrollY - offset - 16;
+    window.scrollTo({ top, behavior: "smooth" });
+    window.history.replaceState(null, "", `#${id}`);
+  };
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -134,6 +156,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
                     >
                       <a
                         href={`#${heading?.id}`}
+                        onClick={(e) => scrollToSection(e, heading?.id)}
                         className="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary no-underline"
                       >
                         {heading?.text}
@@ -212,6 +235,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
                   >
                     <a
                       href={`#${heading?.id}`}
+                      onClick={(e) => scrollToSection(e, heading?.id)}
                       className={`text-xs text-gray-500 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary ${
                         activeSection === heading?.id ? "text-primary dark:text-primary" : ""
                       }`}
