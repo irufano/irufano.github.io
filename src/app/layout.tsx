@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import "../styles/globals.css";
 import "highlight.js/styles/tomorrow-night-blue.min.css";
+import { defaultFont } from "@/utils/font";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 const analyticsId = "G-787PK2XJ06";
 
@@ -67,7 +62,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={`${inter.variable} font-inter`}>
+      <body className={`${defaultFont} font-google-sans-flex`}>
         <ThemeInitScript />
         {children}
       </body>

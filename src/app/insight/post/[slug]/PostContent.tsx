@@ -169,7 +169,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
 
           {/* Post Content */}
           <div
-            className="prose prose-lg dark:prose-dark"
+            className="prose prose-lg dark:prose-dark dark:text-[#d9d7d2] text-base md:text-lg"
             dangerouslySetInnerHTML={{ __html: content }}
           />
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { inter } from "@/utils/font";
+import { defaultFont } from "@/utils/font";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import { ReactNode } from "react";
@@ -18,7 +18,7 @@ interface LayoutProps {
 
 export default function Layout({ children, type = LayoutType.DEV }: LayoutProps) {
   return (
-    <div className={`${inter} font-inter flex flex-col min-h-screen`}>
+    <div className={`${defaultFont} font-inter flex flex-col min-h-screen`}>
       <Navbar type={type} />
       <main className="font-inter flex-grow">{children}</main>
       <Footer />
