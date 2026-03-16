@@ -1,17 +1,16 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
-3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
-a:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
-b:"$Sreact.suspense"
-:HL["https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","style"]
-4:T9efe,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/d052c69b7ac5583c.js","https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/d052c69b7ac5583c.js","https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js"],"default"]
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+4:T9ef4,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
 <h2 id="meta-data">Meta Data</h2>
 <p>Meta data used in this post are <span class="inline-code-block">title</span>, <span class="inline-code-block">date</span>, <span class="inline-code-block">description</span>, <span class="inline-code-block">author</span> and <span class="inline-code-block">tags</span>. Title at this meta data used for title post.</p>
 
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="4xui9i" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p3fgz" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -32,7 +31,7 @@ b:"$Sreact.suspense"
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="4xui9i" class="js">---
+          <pre><code id="p3fgz" class="js">---
 <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Your Post Title&quot;</span>
 <span class="hljs-attr">date</span>: <span class="hljs-string">&quot;2024-09-15&quot;</span>
 <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Your post description&quot;</span>
@@ -50,7 +49,7 @@ b:"$Sreact.suspense"
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="r0qffo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mbrev9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -71,7 +70,7 @@ b:"$Sreact.suspense"
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="r0qffo" class="md">&lt;!-- first paragraph --&gt;
+          <pre><code id="mbrev9" class="md">&lt;!-- first paragraph --&gt;
 Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
 
 &lt;!-- second paragraph --&gt;
@@ -85,7 +84,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="38sp8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3boum" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -106,7 +105,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="38sp8" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
+          <pre><code id="3boum" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
           </div>
           </div>
         
@@ -116,7 +115,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="z4nlve" aria-label="Copy code">
+              <button class="copy-code" data-code-id="af89v" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -137,7 +136,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="z4nlve" class="md"><span class="hljs-section">## Section 1</span>
+          <pre><code id="af89v" class="md"><span class="hljs-section">## Section 1</span>
 
 Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
 
@@ -160,7 +159,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="1yyfl8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ddane" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -181,7 +180,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="1yyfl8" class="md"><span class="hljs-bullet">-</span> bullet 1
+          <pre><code id="ddane" class="md"><span class="hljs-bullet">-</span> bullet 1
 <span class="hljs-bullet">-</span> bullet 2
 <span class="hljs-bullet">-</span> bullet 3
 
@@ -207,7 +206,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="vyi81f" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mmzvj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -228,7 +227,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="vyi81f" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
+          <pre><code id="mmzvj" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
 
 <span class="hljs-emphasis">*Hello*</span>
 
@@ -242,7 +241,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="uo2i13" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p7bca4" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -263,7 +262,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="uo2i13" class="md"><span class="hljs-strong">**This is strong**</span>
+          <pre><code id="p7bca4" class="md"><span class="hljs-strong">**This is strong**</span>
 
 <span class="hljs-strong">**Hello**</span>
 
@@ -278,7 +277,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="xwfp8o" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vydp3i" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -299,7 +298,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="xwfp8o" class="md"><span class="hljs-code">`This is inline code`</span>
+          <pre><code id="vydp3i" class="md"><span class="hljs-code">`This is inline code`</span>
 
 <span class="hljs-code">`Hello`</span>
 
@@ -313,7 +312,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="bttx6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vx4vq" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -334,7 +333,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="bttx6" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
+          <pre><code id="vx4vq" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
 funtion getData () =&gt; {
     console.log(&quot;Hello world!&quot;);
 }
@@ -350,7 +349,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="wwyii" aria-label="Copy code">
+              <button class="copy-code" data-code-id="64u4pb" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -371,7 +370,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="wwyii" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
+          <pre><code id="64u4pb" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is info blockquote example</span></code></pre>
           </div>
@@ -402,7 +401,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="63gt8q" aria-label="Copy code">
+              <button class="copy-code" data-code-id="hhvq8" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -423,7 +422,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="63gt8q" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
+          <pre><code id="hhvq8" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is warning blockquote example</span></code></pre>
           </div>
@@ -454,7 +453,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="7dhykf" aria-label="Copy code">
+              <button class="copy-code" data-code-id="8cgi4l" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -475,7 +474,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="7dhykf" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
+          <pre><code id="8cgi4l" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is tip blockquote example</span></code></pre>
           </div>
@@ -506,7 +505,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="0g7d1n" aria-label="Copy code">
+              <button class="copy-code" data-code-id="38e8u" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -527,7 +526,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="0g7d1n" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
+          <pre><code id="38e8u" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is important blockquote example</span></code></pre>
           </div>
@@ -558,7 +557,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="h93rk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="95xeo" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -579,7 +578,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="h93rk" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
+          <pre><code id="95xeo" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is caution blockquote example</span></code></pre>
           </div>
@@ -611,7 +610,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="hq2vck" aria-label="Copy code">
+              <button class="copy-code" data-code-id="4gu5vc" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -632,7 +631,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="hq2vck" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
+          <pre><code id="4gu5vc" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is note blockquote example</span></code></pre>
           </div>
@@ -657,7 +656,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-code-title.js</span>
-              <button class="copy-code" data-code-id="akxfnh" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xx1897" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -678,7 +677,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="akxfnh" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
+          <pre><code id="xx1897" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);
 }</code></pre>
           </div>
@@ -903,9 +902,8 @@ output:
 > funtion getData () => {
 >    console.log("Hello world!");
 > }
-> ```0:{"buildId":"4Gz0-kpNLTkZ9F9iBv1bH","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"]},"content":"$4","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"}],"raw":"$5","readingTime":"4 min read"},"pathname":"/insight/post/post-docs"}]}],["$L6","$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-6:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","precedence":"next"}]
-7:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true}]
-8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js","async":true}]
-9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
-c:null
+> ```0:{"buildId":"DV50TdZMOqvxryVO7Pz1S","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"]},"content":"$4","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"}],"raw":"$5","readingTime":"4 min read"},"pathname":"/insight/post/post-docs"}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/d052c69b7ac5583c.js","async":true}]
+7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js","async":true}]
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

@@ -7,20 +7,21 @@
 9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
 b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
 d:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-:HL["https://irufano.github.io/_next/static/chunks/396e691cc68121a2.css","style"]
-:HL["https://irufano.github.io/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","style"]
-0:{"P":null,"b":"4Gz0-kpNLTkZ9F9iBv1bH","c":["","insight","post","post-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","post-docs","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/396e691cc68121a2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"inter_2fe1ab3d-module__-T-KAq__variable font-inter","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/bf38b1dc1a1a1f02.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
-e:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
-f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/94b14f400de14e8b.js","https://irufano.github.io/_next/static/chunks/8a7e17dbf9cc142c.js"],"default"]
-10:T9efe,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
+:HL["https://irufano.github.io/_next/static/chunks/474746151492198b.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
+:HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"DV50TdZMOqvxryVO7Pz1S","c":["","insight","post","post-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","post-docs","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/474746151492198b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/d052c69b7ac5583c.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+e:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/d052c69b7ac5583c.js","https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js"],"default"]
+f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/d052c69b7ac5583c.js","https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js"],"default"]
+10:T9ef4,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
 <h2 id="meta-data">Meta Data</h2>
 <p>Meta data used in this post are <span class="inline-code-block">title</span>, <span class="inline-code-block">date</span>, <span class="inline-code-block">description</span>, <span class="inline-code-block">author</span> and <span class="inline-code-block">tags</span>. Title at this meta data used for title post.</p>
 
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="4xui9i" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p3fgz" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -41,7 +42,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="4xui9i" class="js">---
+          <pre><code id="p3fgz" class="js">---
 <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Your Post Title&quot;</span>
 <span class="hljs-attr">date</span>: <span class="hljs-string">&quot;2024-09-15&quot;</span>
 <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Your post description&quot;</span>
@@ -59,7 +60,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="r0qffo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mbrev9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -80,7 +81,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="r0qffo" class="md">&lt;!-- first paragraph --&gt;
+          <pre><code id="mbrev9" class="md">&lt;!-- first paragraph --&gt;
 Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
 
 &lt;!-- second paragraph --&gt;
@@ -94,7 +95,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="38sp8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3boum" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -115,7 +116,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="38sp8" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
+          <pre><code id="3boum" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
           </div>
           </div>
         
@@ -125,7 +126,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="z4nlve" aria-label="Copy code">
+              <button class="copy-code" data-code-id="af89v" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -146,7 +147,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="z4nlve" class="md"><span class="hljs-section">## Section 1</span>
+          <pre><code id="af89v" class="md"><span class="hljs-section">## Section 1</span>
 
 Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
 
@@ -169,7 +170,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="1yyfl8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ddane" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -190,7 +191,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="1yyfl8" class="md"><span class="hljs-bullet">-</span> bullet 1
+          <pre><code id="ddane" class="md"><span class="hljs-bullet">-</span> bullet 1
 <span class="hljs-bullet">-</span> bullet 2
 <span class="hljs-bullet">-</span> bullet 3
 
@@ -216,7 +217,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="vyi81f" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mmzvj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -237,7 +238,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="vyi81f" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
+          <pre><code id="mmzvj" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
 
 <span class="hljs-emphasis">*Hello*</span>
 
@@ -251,7 +252,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="uo2i13" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p7bca4" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -272,7 +273,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="uo2i13" class="md"><span class="hljs-strong">**This is strong**</span>
+          <pre><code id="p7bca4" class="md"><span class="hljs-strong">**This is strong**</span>
 
 <span class="hljs-strong">**Hello**</span>
 
@@ -287,7 +288,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="xwfp8o" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vydp3i" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -308,7 +309,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="xwfp8o" class="md"><span class="hljs-code">`This is inline code`</span>
+          <pre><code id="vydp3i" class="md"><span class="hljs-code">`This is inline code`</span>
 
 <span class="hljs-code">`Hello`</span>
 
@@ -322,7 +323,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="bttx6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vx4vq" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -343,7 +344,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="bttx6" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
+          <pre><code id="vx4vq" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
 funtion getData () =&gt; {
     console.log(&quot;Hello world!&quot;);
 }
@@ -359,7 +360,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="wwyii" aria-label="Copy code">
+              <button class="copy-code" data-code-id="64u4pb" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -380,7 +381,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="wwyii" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
+          <pre><code id="64u4pb" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is info blockquote example</span></code></pre>
           </div>
@@ -411,7 +412,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="63gt8q" aria-label="Copy code">
+              <button class="copy-code" data-code-id="hhvq8" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -432,7 +433,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="63gt8q" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
+          <pre><code id="hhvq8" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is warning blockquote example</span></code></pre>
           </div>
@@ -463,7 +464,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="7dhykf" aria-label="Copy code">
+              <button class="copy-code" data-code-id="8cgi4l" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -484,7 +485,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="7dhykf" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
+          <pre><code id="8cgi4l" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is tip blockquote example</span></code></pre>
           </div>
@@ -515,7 +516,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="0g7d1n" aria-label="Copy code">
+              <button class="copy-code" data-code-id="38e8u" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -536,7 +537,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="0g7d1n" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
+          <pre><code id="38e8u" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is important blockquote example</span></code></pre>
           </div>
@@ -567,7 +568,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="h93rk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="95xeo" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -588,7 +589,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="h93rk" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
+          <pre><code id="95xeo" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is caution blockquote example</span></code></pre>
           </div>
@@ -620,7 +621,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-post.md</span>
-              <button class="copy-code" data-code-id="hq2vck" aria-label="Copy code">
+              <button class="copy-code" data-code-id="4gu5vc" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -641,7 +642,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="hq2vck" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
+          <pre><code id="4gu5vc" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is note blockquote example</span></code></pre>
           </div>
@@ -666,7 +667,7 @@ funtion getData () =&gt; {
           <div class="code-block">
           <div class="title-code">
             <span>your-code-title.js</span>
-              <button class="copy-code" data-code-id="akxfnh" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xx1897" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -687,7 +688,7 @@ funtion getData () =&gt; {
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="akxfnh" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
+          <pre><code id="xx1897" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);
 }</code></pre>
           </div>
