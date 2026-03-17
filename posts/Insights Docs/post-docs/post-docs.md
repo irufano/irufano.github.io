@@ -134,6 +134,61 @@ funtion getData () => {
 <!-- remove ' -->
 ```
 
+#### Code Block with Line Numbers
+
+To show line numbers in a code block, add `line-number=true` to the meta:
+
+```markdown title="your-post.md" line-number=true
+'```js title="your-code-title.js" line-number=true
+funtion getData () => {
+    console.log("Hello world!");
+}
+```'
+
+<!-- remove ' -->
+```
+
+You can also specify a starting line number with `line-start=N`:
+
+```markdown title="your-post.md" line-number=true line-start=102
+'```js title="your-code-title.js" line-number=true line-start=10
+funtion getData () => {
+    console.log("Hello world!");
+}
+```'
+
+<!-- remove ' -->
+```
+
+#### Highlight Lines
+
+To highlight specific lines, add `highlight={lines}` to the meta. You can use individual line numbers and ranges:
+
+```markdown title="your-post.md" highlight={1,3-5}
+'```js title="example.js" highlight={1,3-5}
+const a = 1;
+const b = 2;
+const c = 3;
+const d = 4;
+const e = 5;
+```'
+
+<!-- remove ' -->
+```
+
+You can combine highlight with line numbers:
+
+```markdown title="your-post.md" line-number=true line-start=20 highlight={2,4}
+'```js title="example.js" line-number=true highlight={1,4}
+const a = 1;
+const b = 2;
+const c = 3;
+const d = 4;
+```'
+
+<!-- remove ' -->
+```
+
 ## Blockquote
 
 ### Info

@@ -105,14 +105,56 @@ export function getPostBySlug(slug: string): Post {
     .use(() => (tree: unknown) => {
       // code block
       visit(tree as Parameters<typeof visit>[0], "code", (node: Record<string, unknown>) => {
+        const meta = (node.meta as string) || "";
         const language = (node.lang as string) || "";
-        const title = (node.meta as string)?.includes("title=")
-          ? ((node.meta as string) || "").replaceAll(/"|title=/gi, "")
+        const title = meta.includes("title=")
+          ? meta.replaceAll(/"|title=/gi, "").replace(/line-number=\w+/gi, "").replace(/line-start=\d+/gi, "").replace(/highlight=\{[^}]*\}/gi, "").trim()
           : language;
+        const showLineNumbers = /line-number=true/i.test(meta);
+        const lineStartMatch = meta.match(/line-start=(\d+)/i);
+        const lineStart = lineStartMatch ? parseInt(lineStartMatch[1], 10) : 1;
+
+        // Parse highlight lines: highlight="{1,3-5,8}"
+        const highlightMatch = meta.match(/highlight=\{([^}]*)\}/i);
+        const highlightLines = new Set<number>();
+        if (highlightMatch) {
+          highlightMatch[1].split(",").forEach((part) => {
+            const trimmed = part.trim();
+            const rangeMatch = trimmed.match(/^(\d+)-(\d+)$/);
+            if (rangeMatch) {
+              const start = parseInt(rangeMatch[1], 10);
+              const end = parseInt(rangeMatch[2], 10);
+              for (let i = start; i <= end; i++) highlightLines.add(i);
+            } else if (/^\d+$/.test(trimmed)) {
+              highlightLines.add(parseInt(trimmed, 10));
+            }
+          });
+        }
         const highlightedCode = highlight.highlightAuto(node.value as string, [
           language,
         ]).value;
         const codeId = Math.random().toString(36).substring(7);
+
+        const hasHighlight = highlightLines.size > 0;
+        let codeContent: string;
+        if (showLineNumbers || hasHighlight) {
+          // Wrap each line in a span for line numbers and/or highlighting
+          const rawLines = (node.value as string).split("\n");
+          if (rawLines.length > 0 && rawLines[rawLines.length - 1] === "") rawLines.pop();
+          const linesHtml = rawLines
+            .map((line, i) => {
+              const lineNum = i + 1;
+              const highlighted = highlight.highlightAuto(line || " ", [language]).value;
+              const hlClass = highlightLines.has(lineNum) ? " highlight-line" : "";
+              return `<span class="code-line${hlClass}">${highlighted || " "}</span>`;
+            })
+            .join("");
+          const preClass = showLineNumbers ? "has-line-numbers" : "has-highlight";
+          const counterStyle = showLineNumbers ? ` style="counter-reset: line ${lineStart - 1}"` : "";
+          codeContent = `<pre class="${preClass}"><code id="${codeId}" class="${language}"${counterStyle}>${linesHtml}</code></pre>`;
+        } else {
+          codeContent = `<pre><code id="${codeId}" class="${language}">${highlightedCode}</code></pre>`;
+        }
 
         node.type = "html";
         node.value = `
@@ -147,7 +189,7 @@ export function getPostBySlug(slug: string): Post {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="${codeId}" class="${language}">${highlightedCode}</code></pre>
+          ${codeContent}
           </div>
           </div>
         `;

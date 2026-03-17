@@ -95,6 +95,42 @@ body {
   overflow-wrap: break-word;
 }
 
+/* CODE LINES (line numbers & highlight) */
+pre.has-line-numbers,
+pre.has-highlight {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.code-line {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* LINE NUMBERS */
+pre.has-line-numbers .code-line {
+  padding-left: 0.5rem;
+}
+
+pre.has-line-numbers .code-line::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply text-gray-500 select-none inline-block text-right;
+  min-width: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+/* HIGHLIGHT LINE */
+.code-line.highlight-line {
+  @apply bg-emerald-500/15 border-l-4 border-emerald-400;
+  padding-left: calc(1rem - 2px);
+}
+
+pre.has-line-numbers .code-line.highlight-line {
+  padding-left: calc(0.5rem - 2px);
+}
+
 /* INFO BLOCK */
 .info-block {
   @apply bg-blue-100 dark:bg-blue-700/30 text-text/80 dark:text-text-dark p-4 my-4 rounded-e-lg border-l-4 border-blue-300 dark:border-blue-800;

@@ -28,7 +28,7 @@ pip install -U langgraph langchain_openai tavily-python dotenv
 ```
 
 ## Setup Environment
-```python
+```python line-number=true
 import os
 
 from dotenv import load_dotenv
@@ -141,7 +141,7 @@ Now let's run the chatbot!
 >
 > You can exit the chat loop at any time by typing "`quit`", "`exit`", or "`q`".
 
-```python
+```python line-number=true line-start=21
 def stream_graph_updates(user_input: str):
     for event in graph.stream({"messages": [("user", user_input)]}):
         for value in event.values():
