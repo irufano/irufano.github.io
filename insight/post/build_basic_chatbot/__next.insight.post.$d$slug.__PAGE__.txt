@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
-3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/5ffd31629d5cb9e2.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/5ffd31629d5cb9e2.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
 9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 a:"$Sreact.suspense"
-4:T8beb,<h2 id="ai-chatbot-with-langgraph">AI Chatbot with langgraph</h2>
+4:T9d70,<h2 id="ai-chatbot-with-langgraph">AI Chatbot with langgraph</h2>
 <p>The world of AI is currently hyped, have you ever thought about creating your own AI chatbot? In this tutorial, we will make one using langgraph.</p>
 <h2 id="what-is-langgraph">What is Langgraph</h2>
 <p><span class="inline-code-block">LangGraph</span> is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. LangGraph allows you to define flows that involve cycles, essential for most agentic architectures, differentiating it from DAG-based solutions. As a very low-level framework, it provides fine-grained control over both the flow and state of your application, crucial for creating reliable agents. Additionally, LangGraph includes built-in persistence, enabling advanced human-in-the-loop and memory features.</p>
@@ -13,8 +13,14 @@ a:"$Sreact.suspense"
 
           <div class="code-block">
           <div class="title-code">
-            <span>sh</span>
-              <button class="copy-code" data-code-id="e9d8o9" aria-label="Copy code">
+            <span class="title-code-text">sh</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="l10xa" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="l10xa" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -33,9 +39,10 @@ a:"$Sreact.suspense"
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="e9d8o9" class="sh">pip install -U langgraph langchain_openai tavily-python dotenv</code></pre>
+          <pre><code id="l10xa" class="sh">pip install -U langgraph langchain_openai tavily-python dotenv</code></pre>
           </div>
           </div>
         
@@ -43,8 +50,14 @@ a:"$Sreact.suspense"
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="p2xzvg" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="tj7x" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="tj7x" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -63,9 +76,10 @@ a:"$Sreact.suspense"
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="p2xzvg" class="python"><span class="hljs-keyword">import</span> os
+          <pre><code id="tj7x" class="python"><span class="hljs-keyword">import</span> os
 
 <span class="hljs-keyword">from</span> dotenv <span class="hljs-keyword">import</span> load_dotenv
 
@@ -88,8 +102,14 @@ _set_env(<span class="hljs-string">&quot;OPENAI_API_KEY&quot;</span>)</code></pr
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="pt91d0g" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="f05rx" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="f05rx" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -108,9 +128,10 @@ _set_env(<span class="hljs-string">&quot;OPENAI_API_KEY&quot;</span>)</code></pr
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="pt91d0g" class="python"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> Annotated
+          <pre><code id="f05rx" class="python"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> Annotated
 
 <span class="hljs-keyword">from</span> typing_extensions <span class="hljs-keyword">import</span> TypedDict
 
@@ -139,8 +160,14 @@ graph_builder = StateGraph(State)</code></pre>
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="4nkhdr" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="jn0xr" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="jn0xr" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -159,9 +186,10 @@ graph_builder = StateGraph(State)</code></pre>
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="4nkhdr" class="python"><span class="hljs-keyword">from</span> langchain_openai <span class="hljs-keyword">import</span> ChatOpenAI
+          <pre><code id="jn0xr" class="python"><span class="hljs-keyword">from</span> langchain_openai <span class="hljs-keyword">import</span> ChatOpenAI
 
 llm = ChatOpenAI(model=<span class="hljs-string">&quot;gpt-4o-mini&quot;</span>)
 
@@ -202,8 +230,14 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="2rngin" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="uhb36g" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="uhb36g" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -222,9 +256,10 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="2rngin" class="python">graph_builder.add_edge(START, <span class="hljs-string">&quot;chatbot&quot;</span>)</code></pre>
+          <pre><code id="uhb36g" class="python">graph_builder.add_edge(START, <span class="hljs-string">&quot;chatbot&quot;</span>)</code></pre>
           </div>
           </div>
         
@@ -232,8 +267,14 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="zoqt7" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="s69rek" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="s69rek" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -252,9 +293,10 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="zoqt7" class="python">graph_builder.add_edge(<span class="hljs-string">&quot;chatbot&quot;</span>, END)</code></pre>
+          <pre><code id="s69rek" class="python">graph_builder.add_edge(<span class="hljs-string">&quot;chatbot&quot;</span>, END)</code></pre>
           </div>
           </div>
         
@@ -263,8 +305,14 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="d8pjzd" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="ajxi28" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="ajxi28" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -283,9 +331,10 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="d8pjzd" class="python">graph = graph_builder.<span class="hljs-built_in">compile</span>()</code></pre>
+          <pre><code id="ajxi28" class="python">graph = graph_builder.<span class="hljs-built_in">compile</span>()</code></pre>
           </div>
           </div>
         
@@ -294,8 +343,14 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="xdhhgw" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="7ple36" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="7ple36" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -314,9 +369,10 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="xdhhgw" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="7ple36" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 <span class="hljs-keyword">try</span>:
     display(Image(graph.get_graph().draw_mermaid_png()))
@@ -352,8 +408,14 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
 
           <div class="code-block">
           <div class="title-code">
-            <span>python</span>
-              <button class="copy-code" data-code-id="vrxik6" aria-label="Copy code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="d3e1rg" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="d3e1rg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -372,9 +434,10 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
-          <pre><code id="vrxik6" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">stream_graph_updates</span>(<span class="hljs-params">user_input: <span class="hljs-built_in">str</span></span>):
+          <pre><code id="d3e1rg" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">stream_graph_updates</span>(<span class="hljs-params">user_input: <span class="hljs-built_in">str</span></span>):
     <span class="hljs-keyword">for</span> event <span class="hljs-keyword">in</span> graph.stream({<span class="hljs-string">&quot;messages&quot;</span>: [(<span class="hljs-string">&quot;user&quot;</span>, user_input)]}):
         <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> event.values():
             <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Assistant:&quot;</span>, value[<span class="hljs-string">&quot;messages&quot;</span>][-<span class="hljs-number">1</span>].content)
@@ -552,8 +615,8 @@ while True:
         break
 ```
 
-**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.0:{"buildId":"Ho86Ix5eDzV3BaIOt9OVw","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"content":"$4","sections":[{"level":"2","id":"ai-chatbot-with-langgraph","text":"AI Chatbot with langgraph"},{"level":"2","id":"what-is-langgraph","text":"What is Langgraph"},{"level":"2","id":"required-package","text":"Required Package"},{"level":"2","id":"setup-environment","text":"Setup Environment"},{"level":"2","id":"create-a-basic-chatbot","text":"Create a Basic Chatbot"},{"level":"3","id":"create-stategraph","text":"Create StateGraph"},{"level":"3","id":"add-node","text":"Add Node"},{"level":"3","id":"add-edge","text":"Add Edge"},{"level":"3","id":"compile-graph","text":"Compile graph"},{"level":"3","id":"visualize-graph-optional","text":"Visualize Graph (Optional)"},{"level":"3","id":"run-the-chatbot","text":"Run The Chatbot"}],"raw":"$5","readingTime":"4 min read"},"pathname":"/insight/post/build_basic_chatbot"}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
-6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","async":true}]
+**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.0:{"buildId":"AHb1e7l9UfP9TttRVbXVp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"content":"$4","sections":[{"level":"2","id":"ai-chatbot-with-langgraph","text":"AI Chatbot with langgraph"},{"level":"2","id":"what-is-langgraph","text":"What is Langgraph"},{"level":"2","id":"required-package","text":"Required Package"},{"level":"2","id":"setup-environment","text":"Setup Environment"},{"level":"2","id":"create-a-basic-chatbot","text":"Create a Basic Chatbot"},{"level":"3","id":"create-stategraph","text":"Create StateGraph"},{"level":"3","id":"add-node","text":"Add Node"},{"level":"3","id":"add-edge","text":"Add Edge"},{"level":"3","id":"compile-graph","text":"Compile graph"},{"level":"3","id":"visualize-graph-optional","text":"Visualize Graph (Optional)"},{"level":"3","id":"run-the-chatbot","text":"Run The Chatbot"}],"raw":"$5","readingTime":"4 min read"},"pathname":"/insight/post/build_basic_chatbot"}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/5ffd31629d5cb9e2.js","async":true}]
 7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
 b:null
