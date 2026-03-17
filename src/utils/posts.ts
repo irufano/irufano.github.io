@@ -103,7 +103,7 @@ export function getPostBySlug(slug: string): Post {
     .use(toc)
     .use(html, { sanitize: false })
     .use(() => (tree: unknown) => {
-      // code
+      // code block
       visit(tree as Parameters<typeof visit>[0], "code", (node: Record<string, unknown>) => {
         const language = (node.lang as string) || "";
         const title = (node.meta as string)?.includes("title=")
@@ -118,7 +118,13 @@ export function getPostBySlug(slug: string): Post {
         node.value = `
           <div class="code-block">
           <div class="title-code">
-            <span>${title}</span>
+            <span class="title-code-text">${title}</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="${codeId}" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
               <button class="copy-code" data-code-id="${codeId}" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
@@ -138,6 +144,7 @@ export function getPostBySlug(slug: string): Post {
                   </g>
                 </svg>
               </button>
+            </div>
           </div>
           <div class="pre-code">
           <pre><code id="${codeId}" class="${language}">${highlightedCode}</code></pre>

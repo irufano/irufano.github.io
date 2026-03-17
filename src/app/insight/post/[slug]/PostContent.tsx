@@ -95,6 +95,19 @@ export default function PostContent({ post, pathname }: PostContentProps) {
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
+      if (target.closest(".wrap-code")) {
+        const button = target.closest(".wrap-code") as HTMLElement;
+        const codeId = button.getAttribute("data-code-id");
+        if (!codeId) return;
+        const codeBlock = button.closest(".code-block");
+        if (!codeBlock) return;
+        const preCode = codeBlock.querySelector(".pre-code");
+        if (!preCode) return;
+        preCode.classList.toggle("wrapped");
+        button.classList.toggle("active");
+        return;
+      }
+
       if (target.closest(".copy-code")) {
         const button = target.closest(".copy-code") as HTMLElement;
         const codeId = button.getAttribute("data-code-id");

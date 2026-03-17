@@ -58,9 +58,41 @@ body {
   @apply rounded-t-md;
 }
 
-.copy-code {
-  @apply pl-2 rounded-md text-sm cursor-pointer;
+.title-code-text {
+  @apply pr-2;
+}
+
+.code-actions {
+  @apply flex items-center gap-2;
+}
+
+.wrap-code {
+  @apply rounded-md text-sm cursor-pointer;
+  @apply text-gray-400;
+  @apply transition-colors duration-200;
+}
+
+.wrap-code:hover {
+  @apply text-gray-200;
+}
+
+.wrap-code.active {
   @apply text-emerald-500;
+}
+
+.copy-code {
+  @apply rounded-md text-sm cursor-pointer;
+  @apply text-gray-400;
+}
+
+.copy-code:hover {
+  @apply text-gray-200;
+}
+
+.pre-code.wrapped pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* INFO BLOCK */
