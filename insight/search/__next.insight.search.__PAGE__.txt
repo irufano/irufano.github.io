@@ -368,7 +368,7 @@ Both Traditional and Agentic RAG have their place in the modern AI landscape. Tr
 The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
 
 As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
-6:T34b9,
+6:T34e9,
 ## AI Chatbot with langgraph
 The world of AI is currently hyped, have you ever thought about creating your own AI chatbot? In this tutorial, we will make one using langgraph.
 
@@ -386,7 +386,7 @@ pip install -U langgraph langchain_openai tavily-python dotenv
 ```
 
 ## Setup Environment
-```python
+```python line-number=true
 import os
 
 from dotenv import load_dotenv
@@ -499,7 +499,7 @@ Now let's run the chatbot!
 >
 > You can exit the chat loop at any time by typing "`quit`", "`exit`", or "`q`".
 
-```python
+```python line-number=true line-start=21
 def stream_graph_updates(user_input: str):
     for event in graph.stream({"messages": [("user", user_input)]}):
         for value in event.values():
@@ -850,7 +850,7 @@ Applications of Reinforcement Learning:
 5. **Learning**: Based on the reward, the agent updates its knowledge (usually the value function or policy) to improve future actions.
 
 6. **Repeat**: The process continues, with the agent learning and adapting its strategy over time to maximize cumulative rewards.
-a:T124b,
+a:T16e2,
 Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
 
 ## Meta Data
@@ -978,6 +978,61 @@ funtion getData () => {
 <!-- remove ' -->
 ```
 
+#### Code Block with Line Numbers
+
+To show line numbers in a code block, add `line-number=true` to the meta:
+
+```markdown title="your-post.md" line-number=true
+'```js title="your-code-title.js" line-number=true
+funtion getData () => {
+    console.log("Hello world!");
+}
+```'
+
+<!-- remove ' -->
+```
+
+You can also specify a starting line number with `line-start=N`:
+
+```markdown title="your-post.md" line-number=true line-start=102
+'```js title="your-code-title.js" line-number=true line-start=10
+funtion getData () => {
+    console.log("Hello world!");
+}
+```'
+
+<!-- remove ' -->
+```
+
+#### Highlight Lines
+
+To highlight specific lines, add `highlight={lines}` to the meta. You can use individual line numbers and ranges:
+
+```markdown title="your-post.md" highlight={1,3-5}
+'```js title="example.js" highlight={1,3-5}
+const a = 1;
+const b = 2;
+const c = 3;
+const d = 4;
+const e = 5;
+```'
+
+<!-- remove ' -->
+```
+
+You can combine highlight with line numbers:
+
+```markdown title="your-post.md" line-number=true line-start=20 highlight={2,4}
+'```js title="example.js" line-number=true highlight={1,4}
+const a = 1;
+const b = 2;
+const c = 3;
+const d = 4;
+```'
+
+<!-- remove ' -->
+```
+
 ## Blockquote
 
 ### Info
@@ -1067,7 +1122,7 @@ output:
 > funtion getData () => {
 >    console.log("Hello world!");
 > }
-> ```0:{"buildId":"AHb1e7l9UfP9TttRVbXVp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"rawContent":"$5","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"rawContent":"$6","readingTime":"4 min read"},{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png","category":"Git"},"rawContent":"$7","readingTime":"2 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png","category":"Generative AI"},"rawContent":"$8","readingTime":"7 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png","category":"Machine Learning"},"rawContent":"$9","readingTime":"7 min read"},{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$a","readingTime":"4 min read"}]}]}]}],["$Lb","$Lc"],"$Ld"]}],"loading":null,"isPartial":false}
+> ```0:{"buildId":"2fRe-qZnIYsSDlLm7tkCf","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"rawContent":"$5","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"rawContent":"$6","readingTime":"5 min read"},{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png","category":"Git"},"rawContent":"$7","readingTime":"2 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png","category":"Generative AI"},"rawContent":"$8","readingTime":"7 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png","category":"Machine Learning"},"rawContent":"$9","readingTime":"7 min read"},{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$a","readingTime":"5 min read"}]}]}]}],["$Lb","$Lc"],"$Ld"]}],"loading":null,"isPartial":false}
 b:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/6050e303b8bdcecf.js","async":true}]
 c:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true}]
 d:["$","$Le",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
