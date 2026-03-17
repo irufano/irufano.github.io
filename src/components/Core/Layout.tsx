@@ -18,9 +18,9 @@ interface LayoutProps {
 
 export default function Layout({ children, type = LayoutType.DEV }: LayoutProps) {
   return (
-    <div className={`${defaultFont} font-inter flex flex-col min-h-screen`}>
+    <div className={`${defaultFont} font-google-sans-flex flex flex-col min-h-screen`}>
       <Navbar type={type} />
-      <main className="font-inter flex-grow">{children}</main>
+      <main className="font-google-sans-flex flex-grow">{children}</main>
       <Footer />
     </div>
   );

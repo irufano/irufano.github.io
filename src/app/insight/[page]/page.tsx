@@ -49,24 +49,29 @@ export default async function PaginatedInsightPage({
                     style={{ objectFit: "cover" }}
                   />
                 </div>
-                <div className="p-4">
-                  <div className="flex space-x-4 mb-2">
-                    <p className="text-gray-400 dark:text-gray-500 text-xs md:text-sm flex items-center">
-                      <span><Calendar size={14} className="mr-2" /></span>
-                      {post.meta.date}
-                    </p>
-                    <p className="text-gray-400 dark:text-gray-500 text-xs md:text-sm flex items-center">
-                      <span><Clock size={14} className="mr-2" /></span>
-                      {post.readingTime}
-                    </p>
-                  </div>
+              </Link>
+              <div className="p-4">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-2">
+                  <Link href={`/insight/categories/${encodeURIComponent(post.meta.category)}`} className="text-xs md:text-sm font-medium text-primary hover:underline">
+                    {post.meta.category}
+                  </Link>
+                  <p className="text-gray-400 dark:text-gray-500 text-xs md:text-sm flex items-center">
+                    <span><Calendar size={14} className="mr-2" /></span>
+                    {post.meta.date}
+                  </p>
+                  <p className="text-gray-400 dark:text-gray-500 text-xs md:text-sm flex items-center">
+                    <span><Clock size={14} className="mr-2" /></span>
+                    {post.readingTime}
+                  </p>
+                </div>
+                <Link href={`/insight/post/${post.slug}`}>
                   <div className="relative group">
                     <h2 className="line-clamp-2 overflow-hidden text-ellipsis text-xl font-bold text-text dark:text-text-dark">
                       {post.meta.title}
                     </h2>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

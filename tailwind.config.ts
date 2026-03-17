@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["var(--font-inter)"],
+        "google-sans-flex": ["var(--font-google-sans-flex)"],
       },
       borderRadius: {
         lg: "0.5rem",

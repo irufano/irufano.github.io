@@ -8,7 +8,7 @@ tags:
   - Generative AI
   - Langgraph
   - Langchain
-image: "https://langchain-ai.github.io/langgraph/static/wordmark_dark.svg"
+image: "https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg"
 ---
 
 ## AI Chatbot with langgraph

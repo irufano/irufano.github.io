@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { throttle } from "lodash";
 import Link from "next/link";
-import { Calendar, Clock, User } from "lucide-react";
+import { Calendar, Clock, User, Layers } from "lucide-react";
 import Image from "next/image";
 import ExpansionTile from "@/components/Button/ExpansionTile";
 import Comment from "@/components/Posts/Comment";
@@ -23,6 +23,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
   const tags = post.meta?.tags ?? [];
   const readingTime = post.readingTime;
   const author = post.meta?.author;
+  const category = post.meta?.category;
   const thumbnail = post.meta?.image ?? null;
 
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -120,11 +121,17 @@ export default function PostContent({ post, pathname }: PostContentProps) {
     <div className="container mx-auto pt-20 md:pt-24 lg:flex lg:flex-row">
       {/* Article */}
       <div className="mx-auto p-4">
-        <article className="prose prose-lg dark:prose-dark mx-auto">
+        <article className="prose prose-lg dark:prose-dark max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 text-text dark:text-text-heading">
             {title}
           </h1>
           <div className="flex space-x-4 mb-8">
+            <p className="flex items-center mt-2 text-xs md:text-sm text-gray-700 dark:text-gray-300">
+              <span><Layers size={14} className="mr-2 text-primary" /></span>
+              <Link href={`/insight/categories/${encodeURIComponent(post.meta.category)}`} className="text-gray-700 dark:text-gray-300 no-underline hover:underline hover:text-primary">
+                {category}
+              </Link>
+            </p>
             <p className="flex items-center mt-2 text-xs md:text-sm text-gray-700 dark:text-gray-300">
               <span><Calendar size={14} className="mr-2 text-primary" /></span>
               {date}
@@ -192,7 +199,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
 
           {/* Post Content */}
           <div
-            className="prose prose-lg dark:prose-dark dark:text-[#d9d7d2] text-base md:text-lg"
+            className="prose prose-lg dark:prose-dark max-w-3xl dark:text-[#d9d7d2] text-base md:text-lg"
             dangerouslySetInnerHTML={{ __html: content }}
           />
 
@@ -236,9 +243,8 @@ export default function PostContent({ post, pathname }: PostContentProps) {
                     <a
                       href={`#${heading?.id}`}
                       onClick={(e) => scrollToSection(e, heading?.id)}
-                      className={`text-xs text-gray-500 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary ${
-                        activeSection === heading?.id ? "text-primary dark:text-primary" : ""
-                      }`}
+                      className={`text-xs text-gray-500 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary ${activeSection === heading?.id ? "text-primary dark:text-primary" : ""
+                        }`}
                     >
                       {heading?.text}
                     </a>

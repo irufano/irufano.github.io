@@ -14,6 +14,7 @@ export interface PostMeta {
   description: string;
   date: string;
   tags: string[];
+  category: string;
   image?: string | null;
   author?: string;
   [key: string]: unknown;
@@ -43,15 +44,44 @@ export interface PostSummary {
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getPostSlugs(): string[] {
-  return fs.readdirSync(postsDirectory).filter((dir) => {
-    const fullPath = path.join(postsDirectory, dir);
-    return fs.statSync(fullPath).isDirectory();
+interface PostEntry {
+  slug: string;
+  category: string;
+}
+
+function getPostEntries(): PostEntry[] {
+  const categories = fs.readdirSync(postsDirectory).filter((dir) => {
+    return fs.statSync(path.join(postsDirectory, dir)).isDirectory();
   });
+
+  const entries: PostEntry[] = [];
+  for (const category of categories) {
+    const categoryPath = path.join(postsDirectory, category);
+    const slugs = fs.readdirSync(categoryPath).filter((dir) => {
+      return fs.statSync(path.join(categoryPath, dir)).isDirectory();
+    });
+    for (const slug of slugs) {
+      entries.push({ slug, category });
+    }
+  }
+  return entries;
+}
+
+function findPostEntry(slug: string): PostEntry {
+  const entry = getPostEntries().find((e) => e.slug === slug);
+  if (!entry) {
+    throw new Error(`No post found for slug: ${slug}`);
+  }
+  return entry;
+}
+
+export function getPostSlugs(): string[] {
+  return getPostEntries().map((e) => e.slug);
 }
 
 export function getPostBySlug(slug: string): Post {
-  const dirPath = path.join(postsDirectory, slug);
+  const entry = findPostEntry(slug);
+  const dirPath = path.join(postsDirectory, entry.category, slug);
   const files = fs.readdirSync(dirPath);
 
   const markdownFile = files.find((file) => file.endsWith(".md"));
@@ -342,7 +372,7 @@ export function getPostBySlug(slug: string): Post {
 
   return {
     slug: slug,
-    meta: data as PostMeta,
+    meta: { ...data, category: entry.category } as PostMeta,
     content: contentHtml,
     sections: headings,
     raw: content,
@@ -414,6 +444,27 @@ export function getAllPostsByTag(tag: string): PostSummary[] {
     .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
 
   return posts;
+}
+
+export function getAllCategories(): string[] {
+  return fs.readdirSync(postsDirectory).filter((dir) => {
+    return fs.statSync(path.join(postsDirectory, dir)).isDirectory();
+  });
+}
+
+export function getAllPostsByCategory(category: string): PostSummary[] {
+  const entries = getPostEntries().filter((e) => e.category === category);
+  return entries
+    .map((entry) => {
+      const post = getPostBySlug(entry.slug);
+      return {
+        slug: post.slug,
+        meta: post.meta,
+        rawContent: post.raw,
+        readingTime: post.readingTime,
+      };
+    })
+    .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
 }
 
 const calculateReadingTime = (text: string): string => {
