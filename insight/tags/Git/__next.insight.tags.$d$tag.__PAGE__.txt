@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
 3:"$Sreact.suspense"
-4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js"],"default"]
+4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
 6:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 5:T665,
 ## List commit
@@ -103,5 +103,5 @@ git describe --abbrev=0
 ## Edit last commit date
 ```sh
 git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
-```0:{"buildId":"DV50TdZMOqvxryVO7Pz1S","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png"},"rawContent":"$5","readingTime":"2 min read"}],"tag":"Git"}]}]}],[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","async":true}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/3401f95a8daab781.js","async":true}]],["$","$L6",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"loading":null,"isPartial":false}
+```0:{"buildId":"L8slkLGwRcDFUTcX74lja","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png","category":"Git"},"rawContent":"$5","readingTime":"2 min read"}],"tag":"Git"}]}]}],[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","async":true}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true}]],["$","$L6",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"loading":null,"isPartial":false}
 7:null
