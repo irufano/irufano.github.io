@@ -11,10 +11,10 @@ d:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","
 :HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"P":null,"b":"L8slkLGwRcDFUTcX74lja","c":["","insight","post","build_basic_chatbot"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","build_basic_chatbot","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/5d86ec48d702d504.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+0:{"P":null,"b":"Ho86Ix5eDzV3BaIOt9OVw","c":["","insight","post","build_basic_chatbot"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","build_basic_chatbot","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/5d86ec48d702d504.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
 e:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
 f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/ddbdf9a9ee6bf86a.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
-10:T8be5,<h2 id="ai-chatbot-with-langgraph">AI Chatbot with langgraph</h2>
+10:T8beb,<h2 id="ai-chatbot-with-langgraph">AI Chatbot with langgraph</h2>
 <p>The world of AI is currently hyped, have you ever thought about creating your own AI chatbot? In this tutorial, we will make one using langgraph.</p>
 <h2 id="what-is-langgraph">What is Langgraph</h2>
 <p><span class="inline-code-block">LangGraph</span> is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. LangGraph allows you to define flows that involve cycles, essential for most agentic architectures, differentiating it from DAG-based solutions. As a very low-level framework, it provides fine-grained control over both the flow and state of your application, crucial for creating reliable agents. Additionally, LangGraph includes built-in persistence, enabling advanced human-in-the-loop and memory features.</p>
@@ -25,7 +25,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
           <div class="code-block">
           <div class="title-code">
             <span>sh</span>
-              <button class="copy-code" data-code-id="ekcev" aria-label="Copy code">
+              <button class="copy-code" data-code-id="e9d8o9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="ekcev" class="sh">pip install -U langgraph langchain_openai tavily-python dotenv</code></pre>
+          <pre><code id="e9d8o9" class="sh">pip install -U langgraph langchain_openai tavily-python dotenv</code></pre>
           </div>
           </div>
         
@@ -55,7 +55,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="lbtit" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p2xzvg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -76,7 +76,7 @@ f:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="lbtit" class="python"><span class="hljs-keyword">import</span> os
+          <pre><code id="p2xzvg" class="python"><span class="hljs-keyword">import</span> os
 
 <span class="hljs-keyword">from</span> dotenv <span class="hljs-keyword">import</span> load_dotenv
 
@@ -100,7 +100,7 @@ _set_env(<span class="hljs-string">&quot;OPENAI_API_KEY&quot;</span>)</code></pr
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="l3orw" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pt91d0g" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ _set_env(<span class="hljs-string">&quot;OPENAI_API_KEY&quot;</span>)</code></pr
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="l3orw" class="python"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> Annotated
+          <pre><code id="pt91d0g" class="python"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> Annotated
 
 <span class="hljs-keyword">from</span> typing_extensions <span class="hljs-keyword">import</span> TypedDict
 
@@ -151,7 +151,7 @@ graph_builder = StateGraph(State)</code></pre>
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="41m3om" aria-label="Copy code">
+              <button class="copy-code" data-code-id="4nkhdr" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -172,7 +172,7 @@ graph_builder = StateGraph(State)</code></pre>
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="41m3om" class="python"><span class="hljs-keyword">from</span> langchain_openai <span class="hljs-keyword">import</span> ChatOpenAI
+          <pre><code id="4nkhdr" class="python"><span class="hljs-keyword">from</span> langchain_openai <span class="hljs-keyword">import</span> ChatOpenAI
 
 llm = ChatOpenAI(model=<span class="hljs-string">&quot;gpt-4o-mini&quot;</span>)
 
@@ -214,7 +214,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="4lwe6o" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2rngin" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -235,7 +235,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="4lwe6o" class="python">graph_builder.add_edge(START, <span class="hljs-string">&quot;chatbot&quot;</span>)</code></pre>
+          <pre><code id="2rngin" class="python">graph_builder.add_edge(START, <span class="hljs-string">&quot;chatbot&quot;</span>)</code></pre>
           </div>
           </div>
         
@@ -244,7 +244,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="i579a" aria-label="Copy code">
+              <button class="copy-code" data-code-id="zoqt7" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -265,7 +265,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="i579a" class="python">graph_builder.add_edge(<span class="hljs-string">&quot;chatbot&quot;</span>, END)</code></pre>
+          <pre><code id="zoqt7" class="python">graph_builder.add_edge(<span class="hljs-string">&quot;chatbot&quot;</span>, END)</code></pre>
           </div>
           </div>
         
@@ -275,7 +275,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="o4ea2vi" aria-label="Copy code">
+              <button class="copy-code" data-code-id="d8pjzd" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -296,7 +296,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="o4ea2vi" class="python">graph = graph_builder.<span class="hljs-built_in">compile</span>()</code></pre>
+          <pre><code id="d8pjzd" class="python">graph = graph_builder.<span class="hljs-built_in">compile</span>()</code></pre>
           </div>
           </div>
         
@@ -306,7 +306,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="lx283tn" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xdhhgw" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -327,7 +327,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="lx283tn" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="xdhhgw" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 <span class="hljs-keyword">try</span>:
     display(Image(graph.get_graph().draw_mermaid_png()))
@@ -364,7 +364,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
           <div class="code-block">
           <div class="title-code">
             <span>python</span>
-              <button class="copy-code" data-code-id="qy0g3" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vrxik6" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -385,7 +385,7 @@ graph_builder.add_node(<span class="hljs-string">&quot;chatbot&quot;</span>, cha
               </button>
           </div>
           <div class="pre-code">
-          <pre><code id="qy0g3" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">stream_graph_updates</span>(<span class="hljs-params">user_input: <span class="hljs-built_in">str</span></span>):
+          <pre><code id="vrxik6" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">stream_graph_updates</span>(<span class="hljs-params">user_input: <span class="hljs-built_in">str</span></span>):
     <span class="hljs-keyword">for</span> event <span class="hljs-keyword">in</span> graph.stream({<span class="hljs-string">&quot;messages&quot;</span>: [(<span class="hljs-string">&quot;user&quot;</span>, user_input)]}):
         <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> event.values():
             <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Assistant:&quot;</span>, value[<span class="hljs-string">&quot;messages&quot;</span>][-<span class="hljs-number">1</span>].content)
