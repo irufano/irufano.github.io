@@ -1,3 +1,3 @@
-:HL["https://irufano.github.io/_next/static/chunks/0dc0327a0030d7fe.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/22f422e880b364e9.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
-0:{"buildId":"2fRe-qZnIYsSDlLm7tkCf","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"8AUq_mOKM3c-aKa_RsZwf","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
