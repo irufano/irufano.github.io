@@ -1,5 +1,5 @@
 import Layout, { LayoutType } from "@/components/Core/Layout";
-import { getPosts } from "@/utils/posts";
+import { getPosts, categoryToSlug } from "@/utils/posts";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
@@ -52,7 +52,7 @@ export default async function PaginatedInsightPage({
               </Link>
               <div className="p-4">
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-2">
-                  <Link href={`/insight/categories/${encodeURIComponent(post.meta.category)}`} className="text-xs md:text-sm font-medium text-primary hover:underline">
+                  <Link href={`/insight/categories/${categoryToSlug(post.meta.category)}`} className="text-xs md:text-sm font-medium text-primary hover:underline">
                     {post.meta.category}
                   </Link>
                   <p className="text-gray-400 dark:text-gray-500 text-xs md:text-sm flex items-center">

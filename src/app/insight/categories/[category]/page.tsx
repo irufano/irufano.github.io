@@ -1,11 +1,12 @@
 import Layout, { LayoutType } from "@/components/Core/Layout";
-import { getAllCategories, getAllPostsByCategory } from "@/utils/posts";
+import { getAllCategories, getAllPostsByCategory, categoryToSlug, getCategoryBySlug } from "@/utils/posts";
 import CategoryPostsList from "./CategoryPostsList";
 import { Suspense } from "react";
+import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
   const categories = getAllCategories();
-  return categories.map((category) => ({ category: encodeURIComponent(category) }));
+  return categories.map((category) => ({ category: categoryToSlug(category) }));
 }
 
 export default async function CategoryPage({
@@ -13,8 +14,9 @@ export default async function CategoryPage({
 }: {
   params: Promise<{ category: string }>;
 }) {
-  const { category: rawCategory } = await params;
-  const category = decodeURIComponent(rawCategory);
+  const { category: slug } = await params;
+  const category = getCategoryBySlug(slug);
+  if (!category) notFound();
   const posts = getAllPostsByCategory(category);
 
   return (

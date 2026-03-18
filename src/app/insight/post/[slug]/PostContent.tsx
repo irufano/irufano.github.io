@@ -8,6 +8,7 @@ import Image from "next/image";
 import ExpansionTile from "@/components/Button/ExpansionTile";
 import Comment from "@/components/Posts/Comment";
 import type { Post } from "@/utils/posts";
+import { categoryToSlug } from "@/utils/slug";
 
 interface PostContentProps {
   post: Post;
@@ -141,10 +142,10 @@ export default function PostContent({ post, pathname }: PostContentProps) {
           <h1 className="text-4xl font-bold mb-4 text-text dark:text-text-heading">
             {title}
           </h1>
-          <div className="flex space-x-4 mb-8">
+          <div className="flex flex-wrap gap-x-4 mb-8 [&>p]:!mb-1">
             <p className="flex items-center mt-2 text-xs md:text-sm text-gray-700 dark:text-gray-300">
               <span><Layers size={14} className="mr-2 text-primary" /></span>
-              <Link href={`/insight/categories/${encodeURIComponent(post.meta.category)}`} className="text-gray-700 dark:text-gray-300 no-underline hover:underline hover:text-primary">
+              <Link href={`/insight/categories/${categoryToSlug(post.meta.category)}`} className="text-gray-700 dark:text-gray-300 no-underline hover:underline hover:text-primary">
                 {category}
               </Link>
             </p>

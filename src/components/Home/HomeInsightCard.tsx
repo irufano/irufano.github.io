@@ -1,7 +1,7 @@
 import { Calendar, Clock, BookOpen, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { PostSummary } from "@/utils/posts";
+import { PostSummary, categoryToSlug } from "@/utils/posts";
 
 interface HomeInsightsCardProps {
   posts: PostSummary[];
@@ -18,7 +18,7 @@ const HomeInsightsCard = ({
         {posts.map((post) => (
           <li key={post.slug}>
             <div className={cn("hover:bg-gray-50 hover:dark:bg-gray-800 rounded-md p-6", "transition-colors duration-200")}>
-              <Link href={`/insight/categories/${encodeURIComponent(post?.meta?.category ?? "")}`} className="text-xs font-medium text-primary hover:underline mb-1 inline-block">
+              <Link href={`/insight/categories/${categoryToSlug(post?.meta?.category ?? "")}`} className="text-xs font-medium text-primary hover:underline mb-1 inline-block">
                 {post?.meta?.category ?? ""}
               </Link>
               <Link href={`/insight/post/${post.slug}`}>

@@ -270,12 +270,12 @@ export function getPostBySlug(slug: string): Post {
                   const childContent = `
                     <p class="content-block">
                       ${childChildren
-                        .map((item) =>
-                          (item?.value as string)
-                            ?.replace(blockType.keyword, "")
-                            ?.replace(/\n/g, "<br/>")
-                        )
-                        .join("")}
+                      .map((item) =>
+                        (item?.value as string)
+                          ?.replace(blockType.keyword, "")
+                          ?.replace(/\n/g, "<br/>")
+                      )
+                      .join("")}
                     </p>
                   `;
                   contents.push(childContent);
@@ -320,12 +320,12 @@ export function getPostBySlug(slug: string): Post {
                 const childContent = `
                   <p class="content-block">
                     ${childChildren
-                      .map((item) =>
-                        (item?.value as string)
-                          ?.replace(keyword, "")
-                          ?.replace(/\n/g, "<br/>")
-                      )
-                      .join("")}
+                    .map((item) =>
+                      (item?.value as string)
+                        ?.replace(keyword, "")
+                        ?.replace(/\n/g, "<br/>")
+                    )
+                    .join("")}
                   </p>
                 `;
                 contents.push(childContent);
@@ -341,7 +341,7 @@ export function getPostBySlug(slug: string): Post {
           `;
         }
       });
-      
+
       // Table
       visit(tree as Parameters<typeof visit>[0], "table", (node: Record<string, unknown>) => {
         const children = node.children as Array<Record<string, unknown>>;
@@ -493,6 +493,14 @@ export function getAllPostsByTag(tag: string): PostSummary[] {
     .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
 
   return posts;
+}
+
+import { categoryToSlug } from "./slug";
+export { categoryToSlug };
+
+export function getCategoryBySlug(slug: string): string | undefined {
+  const categories = getAllCategories();
+  return categories.find((c) => categoryToSlug(c) === slug);
 }
 
 export function getAllCategories(): string[] {
