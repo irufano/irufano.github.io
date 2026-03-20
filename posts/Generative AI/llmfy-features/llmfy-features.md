@@ -10,7 +10,7 @@ tags:
   - AI
   - OpenAI
   - AWS Bedrock
-image: "https://raw.githubusercontent.com/irufano/llmfy/main/llmfy-banner.png"
+image: "https://raw.githubusercontent.com/irufano/llmfy/refs/heads/main/LLMFY-LOGO.webp"
 ---
 
 ## Introduction
