@@ -752,7 +752,7 @@ export default function MeteorDefenseGame() {
   return (
     <div
       ref={containerRef}
-      className="rounded-lg shadow-lg overflow-hidden w-full cursor-crosshair h-[30rem]"
+      className="rounded-lg shadow-lg overflow-hidden w-full cursor-crosshair h-[38rem]"
     >
       <canvas
         ref={canvasRef}
