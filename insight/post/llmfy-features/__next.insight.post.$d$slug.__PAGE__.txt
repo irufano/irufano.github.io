@@ -1,0 +1,1974 @@
+1:"$Sreact.fragment"
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/bb4335abd39577f1.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/bb4335abd39577f1.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+4:T18994,<h2 id="introduction">Introduction</h2>
+<p><span class="strong-block">LLMfy</span> is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions — all in a single modular package.</p>
+<p><span class="strong-block">Installation:</span></p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">bash</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="vz7648" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="vz7648" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="vz7648" class="bash">pip install llmfy</code></pre>
+          </div>
+          </div>
+        
+<p>Install with optional dependencies:</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">bash</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="brgckj" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="brgckj" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="brgckj" class="bash">pip install llmfy[openai]       <span class="hljs-comment"># OpenAI support</span>
+pip install llmfy[bedrock]      <span class="hljs-comment"># AWS Bedrock support</span>
+pip install llmfy[faiss]        <span class="hljs-comment"># Vector store support</span>
+pip install llmfy[redis]        <span class="hljs-comment"># Redis checkpointer</span>
+pip install llmfy[sql]          <span class="hljs-comment"># SQL checkpointer</span></code></pre>
+          </div>
+          </div>
+        
+<p><span class="strong-block">Requirements:</span> Python >= 3.11</p>
+<h2 id="multi-provider-llm-support">Multi-Provider LLM Support</h2>
+<p>LLMfy provides a unified interface for working with different LLM providers. Currently supported providers are <span class="strong-block">OpenAI</span> and <span class="strong-block">AWS Bedrock</span>.</p>
+<h3 id="openai">OpenAI</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="hvrrm" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="hvrrm" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="hvrrm" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> OpenAIModel, OpenAIConfig, LLMfy, Message, Role
+
+config = OpenAIConfig(temperature=<span class="hljs-number">0.7</span>)
+llm = OpenAIModel(model=<span class="hljs-string">&quot;gpt-4o-mini&quot;</span>, config=config)
+
+ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant.&quot;</span>)
+
+messages = [Message(role=Role.USER, content=<span class="hljs-string">&quot;What is Python?&quot;</span>)]
+response = ai.invoke(messages)
+<span class="hljs-built_in">print</span>(response.result.content)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="aws-bedrock">AWS Bedrock</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="ei3hk8" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="ei3hk8" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="ei3hk8" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> BedrockModel, BedrockConfig, LLMfy, Message, Role
+
+config = BedrockConfig(temperature=<span class="hljs-number">0.7</span>)
+llm = BedrockModel(model=<span class="hljs-string">&quot;amazon.nova-pro-v1:0&quot;</span>, config=config)
+
+ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant.&quot;</span>)
+
+messages = [Message(role=Role.USER, content=<span class="hljs-string">&quot;What is Python?&quot;</span>)]
+response = ai.invoke(messages)
+<span class="hljs-built_in">print</span>(response.result.content)</code></pre>
+          </div>
+          </div>
+        
+<p>Switching providers requires only changing the model and config — the rest of the code stays the same.</p>
+<h2 id="system-message-templating">System Message Templating</h2>
+<p>LLMfy supports dynamic system prompts using <span class="inline-code-block">{{variable}}</span> template placeholders. Variables are injected at invocation time via <span class="inline-code-block">input_variables</span>.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="jnge3" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="jnge3" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="jnge3" class="python">ai = LLMfy(
+    llm,
+    system_message=<span class="hljs-string">&quot;You are a {{role}} expert. Answer about {{topic}}.&quot;</span>,
+    input_variables=[<span class="hljs-string">&quot;role&quot;</span>, <span class="hljs-string">&quot;topic&quot;</span>],
+)
+
+messages = [Message(role=Role.USER, content=<span class="hljs-string">&quot;Explain the basics.&quot;</span>)]
+response = ai.invoke(messages, role=<span class="hljs-string">&quot;Python&quot;</span>, topic=<span class="hljs-string">&quot;decorators&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="multi-turn-conversation">Multi-Turn Conversation</h2>
+<p>Use <span class="inline-code-block">chat()</span> for multi-turn conversations with automatic message history management.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="qwcjos" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="qwcjos" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="qwcjos" class="python">ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant.&quot;</span>)
+
+<span class="hljs-comment"># First turn</span>
+messages = [Message(role=Role.USER, content=<span class="hljs-string">&quot;What is machine learning?&quot;</span>)]
+response = ai.chat(messages)
+<span class="hljs-built_in">print</span>(response.result.content)
+
+<span class="hljs-comment"># Second turn (history is preserved)</span>
+follow_up = [Message(role=Role.USER, content=<span class="hljs-string">&quot;Give me an example.&quot;</span>)]
+response = ai.chat(follow_up)
+<span class="hljs-built_in">print</span>(response.result.content)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="streaming">Streaming</h2>
+<p>All invocation methods have streaming variants for real-time token delivery.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="24w7m9" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="24w7m9" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="24w7m9" class="python"><span class="hljs-comment"># Single turn streaming</span>
+<span class="hljs-keyword">for</span> chunk <span class="hljs-keyword">in</span> ai.invoke_stream(messages):
+    <span class="hljs-built_in">print</span>(chunk, end=<span class="hljs-string">&quot;&quot;</span>, flush=<span class="hljs-literal">True</span>)
+
+<span class="hljs-comment"># Multi-turn streaming</span>
+<span class="hljs-keyword">for</span> chunk <span class="hljs-keyword">in</span> ai.chat_stream(messages):
+    <span class="hljs-built_in">print</span>(chunk, end=<span class="hljs-string">&quot;&quot;</span>, flush=<span class="hljs-literal">True</span>)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="tool-calling-function-calling">Tool Calling (Function Calling)</h2>
+<p>LLMfy provides a <span class="inline-code-block">@Tool()</span> decorator that automatically registers Python functions as callable tools for the LLM.</p>
+<h3 id="define-tools">Define Tools</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="j7xd3" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="j7xd3" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="j7xd3" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Tool
+
+<span class="hljs-meta">@Tool()</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">get_weather</span>(<span class="hljs-params">city: <span class="hljs-built_in">str</span></span>):
+    <span class="hljs-string">&quot;&quot;&quot;Get the current weather for a given city.&quot;&quot;&quot;</span>
+    <span class="hljs-comment"># Your logic here</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;The weather in <span class="hljs-subst">{city}</span> is sunny, 25°C.&quot;</span>
+
+<span class="hljs-meta">@Tool()</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">search_database</span>(<span class="hljs-params">query: <span class="hljs-built_in">str</span>, limit: <span class="hljs-built_in">int</span> = <span class="hljs-number">5</span></span>):
+    <span class="hljs-string">&quot;&quot;&quot;Search the database for relevant records.&quot;&quot;&quot;</span>
+    <span class="hljs-comment"># Your logic here</span>
+    <span class="hljs-keyword">return</span> [{<span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Result&quot;</span>}]</code></pre>
+          </div>
+          </div>
+        
+<h3 id="register-and-use-tools">Register and Use Tools</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="bldo99" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="bldo99" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="bldo99" class="python">ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant with tool access.&quot;</span>)
+
+<span class="hljs-comment"># Register tools</span>
+ai.register_tool([get_weather, search_database])
+
+messages = [Message(role=Role.USER, content=<span class="hljs-string">&quot;What&#x27;s the weather in Tokyo?&quot;</span>)]
+response = ai.invoke_with_tools(messages)
+<span class="hljs-built_in">print</span>(response.result.content)</code></pre>
+          </div>
+          </div>
+        
+<p>The <span class="inline-code-block">@Tool()</span> decorator automatically extracts the function schema (name, description, parameters, types) and formats it for the selected provider (OpenAI or Bedrock).</p>
+<h3 id="toolregistry">ToolRegistry</h3>
+<p>For advanced tool management, use <span class="inline-code-block">ToolRegistry</span> to register tools separately and access them in workflows.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="c1nbsp" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="c1nbsp" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="c1nbsp" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> ToolRegistry
+
+registry = ToolRegistry([get_weather, search_database], llm)
+
+<span class="hljs-comment"># Get tool definitions for API calls</span>
+tool_definitions = registry.get_tools()
+
+<span class="hljs-comment"># Execute a tool by name</span>
+result = registry.execute(<span class="hljs-string">&quot;get_weather&quot;</span>, {<span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Tokyo&quot;</span>})</code></pre>
+          </div>
+          </div>
+        
+<h2 id="multi-modal-content">Multi-Modal Content</h2>
+<p>LLMfy supports multi-modal inputs including text, images, documents, and videos.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="vvqfm" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="vvqfm" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="vvqfm" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role, Content, ContentType
+
+<span class="hljs-comment"># Text + Image message</span>
+message = Message(
+    role=Role.USER,
+    content=[
+        Content(<span class="hljs-built_in">type</span>=ContentType.TEXT, data=<span class="hljs-string">&quot;What&#x27;s in this image?&quot;</span>),
+        Content(<span class="hljs-built_in">type</span>=ContentType.IMAGE, data=<span class="hljs-string">&quot;base64_encoded_image_data&quot;</span>),
+    ],
+)
+
+response = ai.invoke([message])</code></pre>
+          </div>
+          </div>
+        
+<h2 id="flowengine---workflow-orchestration">FlowEngine - Workflow Orchestration</h2>
+<p><span class="inline-code-block">FlowEngine</span> is a state machine for building complex, multi-step LLM workflows with nodes, edges, and conditional routing.</p>
+<h3 id="basic-workflow">Basic Workflow</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="426eba" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="426eba" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="426eba" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> FlowEngine, START, END, WorkflowState
+
+<span class="hljs-comment"># Define workflow with initial state schema</span>
+workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: [], <span class="hljs-string">&quot;result&quot;</span>: <span class="hljs-string">&quot;&quot;</span>})
+
+<span class="hljs-comment"># Define node functions</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">process_input</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">dict</span>:
+    messages = state.get(<span class="hljs-string">&quot;messages&quot;</span>, [])
+    response = ai.invoke(messages)
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&quot;result&quot;</span>: response.result.content}
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">validate_output</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">dict</span>:
+    result = state.get(<span class="hljs-string">&quot;result&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+    <span class="hljs-comment"># validation logic</span>
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&quot;result&quot;</span>: result}
+
+<span class="hljs-comment"># Add nodes</span>
+workflow.add_node(<span class="hljs-string">&quot;process&quot;</span>, process_input)
+workflow.add_node(<span class="hljs-string">&quot;validate&quot;</span>, validate_output)
+
+<span class="hljs-comment"># Define edges</span>
+workflow.add_edge(START, <span class="hljs-string">&quot;process&quot;</span>)
+workflow.add_edge(<span class="hljs-string">&quot;process&quot;</span>, <span class="hljs-string">&quot;validate&quot;</span>)
+workflow.add_edge(<span class="hljs-string">&quot;validate&quot;</span>, END)
+
+<span class="hljs-comment"># Execute</span>
+result = <span class="hljs-keyword">await</span> workflow.invoke({<span class="hljs-string">&quot;messages&quot;</span>: [Message(role=Role.USER, content=<span class="hljs-string">&quot;Hello&quot;</span>)]})</code></pre>
+          </div>
+          </div>
+        
+<h3 id="conditional-routing">Conditional Routing</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="57wdgi" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="57wdgi" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="57wdgi" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">route_decision</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">str</span>:
+    result = state.get(<span class="hljs-string">&quot;result&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;error&quot;</span> <span class="hljs-keyword">in</span> result:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;retry&quot;</span>
+    <span class="hljs-keyword">return</span> END
+
+workflow.add_conditional_edge(<span class="hljs-string">&quot;validate&quot;</span>, [<span class="hljs-string">&quot;retry&quot;</span>, END], route_decision)
+workflow.add_edge(<span class="hljs-string">&quot;retry&quot;</span>, <span class="hljs-string">&quot;process&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="workflow-visualization">Workflow Visualization</h3>
+<p>Generate a visual diagram of your workflow graph.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="h82ej" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="h82ej" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="h82ej" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+
+graph_url = workflow.get_diagram_url()
+display(Image(url=graph_url))</code></pre>
+          </div>
+          </div>
+        
+<h3 id="streaming-in-flowengine">Streaming in FlowEngine</h3>
+<p>Stream results from workflow nodes in real-time.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="7d97re" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="7d97re" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="7d97re" class="python"><span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> stream_response <span class="hljs-keyword">in</span> workflow.invoke_stream(initial_state):
+    <span class="hljs-keyword">if</span> stream_response.<span class="hljs-built_in">type</span> == FlowEngineStreamType.NODE:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Node: <span class="hljs-subst">{stream_response.node_name}</span>&quot;</span>)
+    <span class="hljs-comment"># Handle streaming chunks</span></code></pre>
+          </div>
+          </div>
+        
+<h2 id="checkpointing---state-persistence">Checkpointing - State Persistence</h2>
+<p>FlowEngine supports checkpointing for persisting workflow state across sessions.</p>
+<h3 id="in-memory-checkpointer">In-Memory Checkpointer</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="yc72ch" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="yc72ch" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="yc72ch" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> InMemoryCheckpointer
+
+checkpointer = InMemoryCheckpointer()
+workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []}, checkpointer=checkpointer)
+
+<span class="hljs-comment"># State is automatically saved after each node execution</span>
+result = <span class="hljs-keyword">await</span> workflow.invoke(initial_state, session_id=<span class="hljs-string">&quot;user-123&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="redis-checkpointer">Redis Checkpointer</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="j8x2jp" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="j8x2jp" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="j8x2jp" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> RedisCheckpointer
+
+checkpointer = RedisCheckpointer(host=<span class="hljs-string">&quot;localhost&quot;</span>, port=<span class="hljs-number">6379</span>)
+workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []}, checkpointer=checkpointer)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="sql-checkpointer">SQL Checkpointer</h3>
+<p>Supports PostgreSQL, MySQL, and SQLite with both async and sync drivers.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="hcnmgc" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="hcnmgc" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="hcnmgc" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> SQLCheckpointer
+
+<span class="hljs-comment"># PostgreSQL (async)</span>
+checkpointer = SQLCheckpointer(connection_string=<span class="hljs-string">&quot;postgresql+asyncpg://user:pass@host/db&quot;</span>)
+
+<span class="hljs-comment"># SQLite (sync)</span>
+checkpointer = SQLCheckpointer(connection_string=<span class="hljs-string">&quot;sqlite:///checkpoints.db&quot;</span>)
+
+workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []}, checkpointer=checkpointer)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="vector-store-faiss">Vector Store (FAISS)</h2>
+<p>LLMfy includes a built-in FAISS-based vector store for semantic search and retrieval.</p>
+<h3 id="setup">Setup</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="iwm7wk" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="iwm7wk" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="iwm7wk" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> FAISSVectorStore, OpenAIEmbedding, Document
+
+<span class="hljs-comment"># Initialize embedding model</span>
+embedding = OpenAIEmbedding(model=<span class="hljs-string">&quot;text-embedding-3-small&quot;</span>)
+
+<span class="hljs-comment"># Create vector store</span>
+vector_store = FAISSVectorStore(embedding_client=embedding, dimension=<span class="hljs-number">1536</span>)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="add-documents">Add Documents</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="7xxa4e" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="7xxa4e" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="7xxa4e" class="python">documents = [
+    Document(content=<span class="hljs-string">&quot;Python is a programming language.&quot;</span>, metadata={<span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;wiki&quot;</span>}),
+    Document(content=<span class="hljs-string">&quot;Machine learning uses statistical models.&quot;</span>, metadata={<span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;textbook&quot;</span>}),
+]
+
+vector_store.add_documents(documents)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="search">Search</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="29cgse" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="29cgse" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="29cgse" class="python">results = vector_store.search(query=<span class="hljs-string">&quot;What is Python?&quot;</span>, top_k=<span class="hljs-number">3</span>)
+<span class="hljs-keyword">for</span> doc, score <span class="hljs-keyword">in</span> results:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Score: <span class="hljs-subst">{score:<span class="hljs-number">.4</span>f}</span> | <span class="hljs-subst">{doc.content}</span>&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="persistence">Persistence</h3>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="fy4shq" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="fy4shq" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="fy4shq" class="python"><span class="hljs-comment"># Save index</span>
+vector_store.save_index(<span class="hljs-string">&quot;./my_index&quot;</span>)
+
+<span class="hljs-comment"># Load index</span>
+vector_store.load_index(<span class="hljs-string">&quot;./my_index&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<h3 id="index-types">Index Types</h3>
+<p>FAISSVectorStore supports multiple index types that are automatically selected based on dataset size:</p>
+<ul>
+<li><span class="strong-block">Flat</span> - Exact search, best for small datasets</li>
+<li><span class="strong-block">HNSW</span> - Approximate search with high recall</li>
+<li><span class="strong-block">IVFFlat</span> - Inverted file index for large datasets</li>
+<li><span class="strong-block">IVFPQ</span> - Product quantization for very large datasets</li>
+</ul>
+<h2 id="embeddings">Embeddings</h2>
+<p>LLMfy provides embedding model abstractions for both OpenAI and AWS Bedrock.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="o4vnex" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="o4vnex" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="o4vnex" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> OpenAIEmbedding, BedrockEmbedding
+
+<span class="hljs-comment"># OpenAI</span>
+embedding = OpenAIEmbedding(model=<span class="hljs-string">&quot;text-embedding-3-small&quot;</span>)
+vectors = embedding.embed([<span class="hljs-string">&quot;Hello world&quot;</span>, <span class="hljs-string">&quot;Another text&quot;</span>])
+
+<span class="hljs-comment"># Bedrock</span>
+embedding = BedrockEmbedding(model=<span class="hljs-string">&quot;amazon.titan-embed-text-v2:0&quot;</span>)
+vectors = embedding.embed([<span class="hljs-string">&quot;Hello world&quot;</span>, <span class="hljs-string">&quot;Another text&quot;</span>])</code></pre>
+          </div>
+          </div>
+        
+<h2 id="text-utilities">Text Utilities</h2>
+<h3 id="text-chunking">Text Chunking</h3>
+<p>Split large texts into overlapping chunks for embedding and retrieval.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="0bfyt" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="0bfyt" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="0bfyt" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> chunk_text
+
+chunks = chunk_text(
+    text=<span class="hljs-string">&quot;Your long document text here...&quot;</span>,
+    chunk_size=<span class="hljs-number">500</span>,
+    chunk_overlap=<span class="hljs-number">50</span>,
+)
+<span class="hljs-comment"># Returns list of chunk strings</span></code></pre>
+          </div>
+          </div>
+        
+<h3 id="markdown-chunking">Markdown Chunking</h3>
+<p>Split markdown documents by header levels while preserving structure.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="6bw7h5" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="6bw7h5" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="6bw7h5" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> chunk_markdown_by_header
+
+chunks = chunk_markdown_by_header(
+    markdown_text=<span class="hljs-string">&quot;# Title\n## Section 1\nContent...\n## Section 2\nMore content...&quot;</span>,
+    max_level=<span class="hljs-number">2</span>,
+)
+<span class="hljs-comment"># Returns list of MdChunkResult with header hierarchy and content</span></code></pre>
+          </div>
+          </div>
+        
+<h3 id="text-preprocessing">Text Preprocessing</h3>
+<p>Clean text for optimal embedding quality.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="vyn39r" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="vyn39r" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="vyn39r" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> clean_text_for_embedding
+
+cleaned = clean_text_for_embedding(<span class="hljs-string">&quot;  Some   messy    text  with extra   spaces  &quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="message-trimming">Message Trimming</h2>
+<p>Manage conversation history to fit within token limits.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="y33m2g" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="y33m2g" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="y33m2g" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> trim_messages, safe_trim_messages, count_tokens_approximately
+
+<span class="hljs-comment"># Count approximate tokens</span>
+token_count = count_tokens_approximately(messages)
+
+<span class="hljs-comment"># Trim messages to fit token limit</span>
+trimmed = trim_messages(messages, max_tokens=<span class="hljs-number">4000</span>)
+
+<span class="hljs-comment"># Safe trim (preserves system message and latest user message)</span>
+trimmed = safe_trim_messages(messages, max_tokens=<span class="hljs-number">4000</span>)</code></pre>
+          </div>
+          </div>
+        
+<h2 id="usage-tracking">Usage Tracking</h2>
+<p>Track token usage and estimate costs across requests.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="70txom" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="70txom" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="70txom" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> llmfy_usage_tracker
+
+<span class="hljs-comment"># After invocation, access usage data</span>
+response = ai.invoke(messages)
+
+usage = llmfy_usage_tracker.get()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Input tokens: <span class="hljs-subst">{usage.input_tokens}</span>&quot;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Output tokens: <span class="hljs-subst">{usage.output_tokens}</span>&quot;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Estimated cost: $<span class="hljs-subst">{usage.total_cost:<span class="hljs-number">.6</span>f}</span>&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<p>The tracker supports provider-specific pricing for both OpenAI and Bedrock models.</p>
+<h2 id="exception-handling">Exception Handling</h2>
+<p>LLMfy provides a structured exception hierarchy for granular error handling.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="9b4e0l" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="9b4e0l" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="9b4e0l" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
+    LLMfyException,
+    RateLimitException,
+    AuthenticationException,
+    TimeoutException,
+    ContentFilterException,
+)
+
+<span class="hljs-keyword">try</span>:
+    response = ai.invoke(messages)
+<span class="hljs-keyword">except</span> RateLimitException:
+    <span class="hljs-comment"># Handle rate limiting (retry with backoff)</span>
+    <span class="hljs-keyword">pass</span>
+<span class="hljs-keyword">except</span> AuthenticationException:
+    <span class="hljs-comment"># Handle auth errors</span>
+    <span class="hljs-keyword">pass</span>
+<span class="hljs-keyword">except</span> ContentFilterException:
+    <span class="hljs-comment"># Handle safety filter triggers</span>
+    <span class="hljs-keyword">pass</span>
+<span class="hljs-keyword">except</span> TimeoutException:
+    <span class="hljs-comment"># Handle request timeouts</span>
+    <span class="hljs-keyword">pass</span>
+<span class="hljs-keyword">except</span> LLMfyException <span class="hljs-keyword">as</span> e:
+    <span class="hljs-comment"># Catch-all for any LLMfy error</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Error: <span class="hljs-subst">{e}</span>&quot;</span>)</code></pre>
+          </div>
+          </div>
+        
+<p><span class="strong-block">Available exceptions:</span></p>
+<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table"><thead><tr><th>Exception</th><th>Description</th></tr></thead><tbody><tr class="even-row"><td><span class="inline-code-block">LLMfyException</span></td><td>Base exception for all LLMfy errors</td></tr><tr class="odd-row"><td><span class="inline-code-block">RateLimitException</span></td><td>API rate limit exceeded</td></tr><tr class="even-row"><td><span class="inline-code-block">QuotaExceededException</span></td><td>Usage quota exceeded</td></tr><tr class="odd-row"><td><span class="inline-code-block">TimeoutException</span></td><td>Request timeout</td></tr><tr class="even-row"><td><span class="inline-code-block">InvalidRequestException</span></td><td>Invalid request parameters</td></tr><tr class="odd-row"><td><span class="inline-code-block">AuthenticationException</span></td><td>Authentication failure</td></tr><tr class="even-row"><td><span class="inline-code-block">PermissionDeniedException</span></td><td>Insufficient permissions</td></tr><tr class="odd-row"><td><span class="inline-code-block">ModelNotFoundException</span></td><td>Model not available</td></tr><tr class="even-row"><td><span class="inline-code-block">ServiceUnavailableException</span></td><td>Service temporarily down</td></tr><tr class="odd-row"><td><span class="inline-code-block">ContentFilterException</span></td><td>Safety filter triggered</td></tr><tr class="even-row"><td><span class="inline-code-block">ModelErrorException</span></td><td>Model processing error</td></tr></tbody></table></div></div>
+<h2 id="helper-nodes-for-flowengine">Helper Nodes for FlowEngine</h2>
+<p>LLMfy provides pre-built helper nodes for common workflow patterns.</p>
+<h3 id="tools_node">tools_node</h3>
+<p>Automatically executes tool calls from LLM responses within a workflow.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="uwnalo" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="uwnalo" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="uwnalo" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> tools_node, ToolRegistry
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_tools</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">dict</span>:
+    messages = tools_node(
+        messages=state.get(<span class="hljs-string">&quot;messages&quot;</span>, []),
+        registry=tool_registry,
+    )
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&quot;messages&quot;</span>: messages}</code></pre>
+          </div>
+          </div>
+        
+<h3 id="tools_stream_node">tools_stream_node</h3>
+<p>Streaming variant of <span class="inline-code-block">tools_node</span> for real-time tool execution feedback.</p>
+
+          <div class="code-block">
+          <div class="title-code">
+            <span class="title-code-text">python</span>
+            <div class="code-actions">
+              <button class="wrap-code" data-code-id="359jjc" aria-label="Toggle word wrap">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="copy-code" data-code-id="359jjc" aria-label="Copy code">
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Edit / Copy">
+                    <path
+                      id="Vector"
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="pre-code">
+          <pre><code id="359jjc" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> tools_stream_node
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_tools_stream</span>(<span class="hljs-params">state: WorkflowState</span>):
+    <span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> chunk <span class="hljs-keyword">in</span> tools_stream_node(
+        messages=state.get(<span class="hljs-string">&quot;messages&quot;</span>, []),
+        registry=tool_registry,
+    ):
+        <span class="hljs-keyword">yield</span> chunk</code></pre>
+          </div>
+          </div>
+        
+<h2 id="summary">Summary</h2>
+<p>LLMfy brings together the core building blocks for LLM-powered applications into a single, cohesive framework:</p>
+<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table"><thead><tr><th>Feature</th><th>Description</th></tr></thead><tbody><tr class="even-row"><td><span class="strong-block">Multi-Provider</span></td><td>Unified API for OpenAI and AWS Bedrock</td></tr><tr class="odd-row"><td><span class="strong-block">Tool Calling</span></td><td><span class="inline-code-block">@Tool()</span> decorator with automatic schema extraction</td></tr><tr class="even-row"><td><span class="strong-block">FlowEngine</span></td><td>State machine workflow orchestration</td></tr><tr class="odd-row"><td><span class="strong-block">Checkpointing</span></td><td>In-memory, Redis, and SQL state persistence</td></tr><tr class="even-row"><td><span class="strong-block">Vector Store</span></td><td>FAISS-based semantic search</td></tr><tr class="odd-row"><td><span class="strong-block">Embeddings</span></td><td>OpenAI and Bedrock embedding models</td></tr><tr class="even-row"><td><span class="strong-block">Streaming</span></td><td>Real-time token delivery across all methods</td></tr><tr class="odd-row"><td><span class="strong-block">Multi-Modal</span></td><td>Text, image, document, and video inputs</td></tr><tr class="even-row"><td><span class="strong-block">Text Utilities</span></td><td>Chunking, preprocessing, and message trimming</td></tr><tr class="odd-row"><td><span class="strong-block">Usage Tracking</span></td><td>Token counting and cost estimation</td></tr><tr class="even-row"><td><span class="strong-block">Exception Handling</span></td><td>Structured error hierarchy</td></tr></tbody></table></div></div>
+<p>For more details, visit the <a href="https://llmfy.readthedocs.io">documentation</a> or the <a href="https://github.com/irufano/llmfy">GitHub repository</a>.</p>
+5:T38ac,
+## Introduction
+
+**LLMfy** is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions — all in a single modular package.
+
+**Installation:**
+```bash
+pip install llmfy
+```
+
+Install with optional dependencies:
+```bash
+pip install llmfy[openai]       # OpenAI support
+pip install llmfy[bedrock]      # AWS Bedrock support
+pip install llmfy[faiss]        # Vector store support
+pip install llmfy[redis]        # Redis checkpointer
+pip install llmfy[sql]          # SQL checkpointer
+```
+
+**Requirements:** Python >= 3.11
+
+## Multi-Provider LLM Support
+
+LLMfy provides a unified interface for working with different LLM providers. Currently supported providers are **OpenAI** and **AWS Bedrock**.
+
+### OpenAI
+
+```python
+from llmfy import OpenAIModel, OpenAIConfig, LLMfy, Message, Role
+
+config = OpenAIConfig(temperature=0.7)
+llm = OpenAIModel(model="gpt-4o-mini", config=config)
+
+ai = LLMfy(llm, system_message="You are a helpful assistant.")
+
+messages = [Message(role=Role.USER, content="What is Python?")]
+response = ai.invoke(messages)
+print(response.result.content)
+```
+
+### AWS Bedrock
+
+```python
+from llmfy import BedrockModel, BedrockConfig, LLMfy, Message, Role
+
+config = BedrockConfig(temperature=0.7)
+llm = BedrockModel(model="amazon.nova-pro-v1:0", config=config)
+
+ai = LLMfy(llm, system_message="You are a helpful assistant.")
+
+messages = [Message(role=Role.USER, content="What is Python?")]
+response = ai.invoke(messages)
+print(response.result.content)
+```
+
+Switching providers requires only changing the model and config — the rest of the code stays the same.
+
+## System Message Templating
+
+LLMfy supports dynamic system prompts using `{{variable}}` template placeholders. Variables are injected at invocation time via `input_variables`.
+
+```python
+ai = LLMfy(
+    llm,
+    system_message="You are a {{role}} expert. Answer about {{topic}}.",
+    input_variables=["role", "topic"],
+)
+
+messages = [Message(role=Role.USER, content="Explain the basics.")]
+response = ai.invoke(messages, role="Python", topic="decorators")
+```
+
+## Multi-Turn Conversation
+
+Use `chat()` for multi-turn conversations with automatic message history management.
+
+```python
+ai = LLMfy(llm, system_message="You are a helpful assistant.")
+
+# First turn
+messages = [Message(role=Role.USER, content="What is machine learning?")]
+response = ai.chat(messages)
+print(response.result.content)
+
+# Second turn (history is preserved)
+follow_up = [Message(role=Role.USER, content="Give me an example.")]
+response = ai.chat(follow_up)
+print(response.result.content)
+```
+
+## Streaming
+
+All invocation methods have streaming variants for real-time token delivery.
+
+```python
+# Single turn streaming
+for chunk in ai.invoke_stream(messages):
+    print(chunk, end="", flush=True)
+
+# Multi-turn streaming
+for chunk in ai.chat_stream(messages):
+    print(chunk, end="", flush=True)
+```
+
+## Tool Calling (Function Calling)
+
+LLMfy provides a `@Tool()` decorator that automatically registers Python functions as callable tools for the LLM.
+
+### Define Tools
+
+```python
+from llmfy import Tool
+
+@Tool()
+def get_weather(city: str):
+    """Get the current weather for a given city."""
+    # Your logic here
+    return f"The weather in {city} is sunny, 25°C."
+
+@Tool()
+def search_database(query: str, limit: int = 5):
+    """Search the database for relevant records."""
+    # Your logic here
+    return [{"id": 1, "name": "Result"}]
+```
+
+### Register and Use Tools
+
+```python
+ai = LLMfy(llm, system_message="You are a helpful assistant with tool access.")
+
+# Register tools
+ai.register_tool([get_weather, search_database])
+
+messages = [Message(role=Role.USER, content="What's the weather in Tokyo?")]
+response = ai.invoke_with_tools(messages)
+print(response.result.content)
+```
+
+The `@Tool()` decorator automatically extracts the function schema (name, description, parameters, types) and formats it for the selected provider (OpenAI or Bedrock).
+
+### ToolRegistry
+
+For advanced tool management, use `ToolRegistry` to register tools separately and access them in workflows.
+
+```python
+from llmfy import ToolRegistry
+
+registry = ToolRegistry([get_weather, search_database], llm)
+
+# Get tool definitions for API calls
+tool_definitions = registry.get_tools()
+
+# Execute a tool by name
+result = registry.execute("get_weather", {"city": "Tokyo"})
+```
+
+## Multi-Modal Content
+
+LLMfy supports multi-modal inputs including text, images, documents, and videos.
+
+```python
+from llmfy import Message, Role, Content, ContentType
+
+# Text + Image message
+message = Message(
+    role=Role.USER,
+    content=[
+        Content(type=ContentType.TEXT, data="What's in this image?"),
+        Content(type=ContentType.IMAGE, data="base64_encoded_image_data"),
+    ],
+)
+
+response = ai.invoke([message])
+```
+
+## FlowEngine - Workflow Orchestration
+
+`FlowEngine` is a state machine for building complex, multi-step LLM workflows with nodes, edges, and conditional routing.
+
+### Basic Workflow
+
+```python
+from llmfy import FlowEngine, START, END, WorkflowState
+
+# Define workflow with initial state schema
+workflow = FlowEngine({"messages": [], "result": ""})
+
+# Define node functions
+async def process_input(state: WorkflowState) -> dict:
+    messages = state.get("messages", [])
+    response = ai.invoke(messages)
+    return {"result": response.result.content}
+
+async def validate_output(state: WorkflowState) -> dict:
+    result = state.get("result", "")
+    # validation logic
+    return {"result": result}
+
+# Add nodes
+workflow.add_node("process", process_input)
+workflow.add_node("validate", validate_output)
+
+# Define edges
+workflow.add_edge(START, "process")
+workflow.add_edge("process", "validate")
+workflow.add_edge("validate", END)
+
+# Execute
+result = await workflow.invoke({"messages": [Message(role=Role.USER, content="Hello")]})
+```
+
+### Conditional Routing
+
+```python
+def route_decision(state: WorkflowState) -> str:
+    result = state.get("result", "")
+    if "error" in result:
+        return "retry"
+    return END
+
+workflow.add_conditional_edge("validate", ["retry", END], route_decision)
+workflow.add_edge("retry", "process")
+```
+
+### Workflow Visualization
+
+Generate a visual diagram of your workflow graph.
+
+```python
+from IPython.display import Image, display
+
+graph_url = workflow.get_diagram_url()
+display(Image(url=graph_url))
+```
+
+### Streaming in FlowEngine
+
+Stream results from workflow nodes in real-time.
+
+```python
+async for stream_response in workflow.invoke_stream(initial_state):
+    if stream_response.type == FlowEngineStreamType.NODE:
+        print(f"Node: {stream_response.node_name}")
+    # Handle streaming chunks
+```
+
+## Checkpointing - State Persistence
+
+FlowEngine supports checkpointing for persisting workflow state across sessions.
+
+### In-Memory Checkpointer
+
+```python
+from llmfy import InMemoryCheckpointer
+
+checkpointer = InMemoryCheckpointer()
+workflow = FlowEngine({"messages": []}, checkpointer=checkpointer)
+
+# State is automatically saved after each node execution
+result = await workflow.invoke(initial_state, session_id="user-123")
+```
+
+### Redis Checkpointer
+
+```python
+from llmfy import RedisCheckpointer
+
+checkpointer = RedisCheckpointer(host="localhost", port=6379)
+workflow = FlowEngine({"messages": []}, checkpointer=checkpointer)
+```
+
+### SQL Checkpointer
+
+Supports PostgreSQL, MySQL, and SQLite with both async and sync drivers.
+
+```python
+from llmfy import SQLCheckpointer
+
+# PostgreSQL (async)
+checkpointer = SQLCheckpointer(connection_string="postgresql+asyncpg://user:pass@host/db")
+
+# SQLite (sync)
+checkpointer = SQLCheckpointer(connection_string="sqlite:///checkpoints.db")
+
+workflow = FlowEngine({"messages": []}, checkpointer=checkpointer)
+```
+
+## Vector Store (FAISS)
+
+LLMfy includes a built-in FAISS-based vector store for semantic search and retrieval.
+
+### Setup
+
+```python
+from llmfy import FAISSVectorStore, OpenAIEmbedding, Document
+
+# Initialize embedding model
+embedding = OpenAIEmbedding(model="text-embedding-3-small")
+
+# Create vector store
+vector_store = FAISSVectorStore(embedding_client=embedding, dimension=1536)
+```
+
+### Add Documents
+
+```python
+documents = [
+    Document(content="Python is a programming language.", metadata={"source": "wiki"}),
+    Document(content="Machine learning uses statistical models.", metadata={"source": "textbook"}),
+]
+
+vector_store.add_documents(documents)
+```
+
+### Search
+
+```python
+results = vector_store.search(query="What is Python?", top_k=3)
+for doc, score in results:
+    print(f"Score: {score:.4f} | {doc.content}")
+```
+
+### Persistence
+
+```python
+# Save index
+vector_store.save_index("./my_index")
+
+# Load index
+vector_store.load_index("./my_index")
+```
+
+### Index Types
+
+FAISSVectorStore supports multiple index types that are automatically selected based on dataset size:
+- **Flat** - Exact search, best for small datasets
+- **HNSW** - Approximate search with high recall
+- **IVFFlat** - Inverted file index for large datasets
+- **IVFPQ** - Product quantization for very large datasets
+
+## Embeddings
+
+LLMfy provides embedding model abstractions for both OpenAI and AWS Bedrock.
+
+```python
+from llmfy import OpenAIEmbedding, BedrockEmbedding
+
+# OpenAI
+embedding = OpenAIEmbedding(model="text-embedding-3-small")
+vectors = embedding.embed(["Hello world", "Another text"])
+
+# Bedrock
+embedding = BedrockEmbedding(model="amazon.titan-embed-text-v2:0")
+vectors = embedding.embed(["Hello world", "Another text"])
+```
+
+## Text Utilities
+
+### Text Chunking
+
+Split large texts into overlapping chunks for embedding and retrieval.
+
+```python
+from llmfy import chunk_text
+
+chunks = chunk_text(
+    text="Your long document text here...",
+    chunk_size=500,
+    chunk_overlap=50,
+)
+# Returns list of chunk strings
+```
+
+### Markdown Chunking
+
+Split markdown documents by header levels while preserving structure.
+
+```python
+from llmfy import chunk_markdown_by_header
+
+chunks = chunk_markdown_by_header(
+    markdown_text="# Title\n## Section 1\nContent...\n## Section 2\nMore content...",
+    max_level=2,
+)
+# Returns list of MdChunkResult with header hierarchy and content
+```
+
+### Text Preprocessing
+
+Clean text for optimal embedding quality.
+
+```python
+from llmfy import clean_text_for_embedding
+
+cleaned = clean_text_for_embedding("  Some   messy    text  with extra   spaces  ")
+```
+
+## Message Trimming
+
+Manage conversation history to fit within token limits.
+
+```python
+from llmfy import trim_messages, safe_trim_messages, count_tokens_approximately
+
+# Count approximate tokens
+token_count = count_tokens_approximately(messages)
+
+# Trim messages to fit token limit
+trimmed = trim_messages(messages, max_tokens=4000)
+
+# Safe trim (preserves system message and latest user message)
+trimmed = safe_trim_messages(messages, max_tokens=4000)
+```
+
+## Usage Tracking
+
+Track token usage and estimate costs across requests.
+
+```python
+from llmfy import llmfy_usage_tracker
+
+# After invocation, access usage data
+response = ai.invoke(messages)
+
+usage = llmfy_usage_tracker.get()
+print(f"Input tokens: {usage.input_tokens}")
+print(f"Output tokens: {usage.output_tokens}")
+print(f"Estimated cost: ${usage.total_cost:.6f}")
+```
+
+The tracker supports provider-specific pricing for both OpenAI and Bedrock models.
+
+## Exception Handling
+
+LLMfy provides a structured exception hierarchy for granular error handling.
+
+```python
+from llmfy import (
+    LLMfyException,
+    RateLimitException,
+    AuthenticationException,
+    TimeoutException,
+    ContentFilterException,
+)
+
+try:
+    response = ai.invoke(messages)
+except RateLimitException:
+    # Handle rate limiting (retry with backoff)
+    pass
+except AuthenticationException:
+    # Handle auth errors
+    pass
+except ContentFilterException:
+    # Handle safety filter triggers
+    pass
+except TimeoutException:
+    # Handle request timeouts
+    pass
+except LLMfyException as e:
+    # Catch-all for any LLMfy error
+    print(f"Error: {e}")
+```
+
+**Available exceptions:**
+| Exception | Description |
+|-----------|-------------|
+| `LLMfyException` | Base exception for all LLMfy errors |
+| `RateLimitException` | API rate limit exceeded |
+| `QuotaExceededException` | Usage quota exceeded |
+| `TimeoutException` | Request timeout |
+| `InvalidRequestException` | Invalid request parameters |
+| `AuthenticationException` | Authentication failure |
+| `PermissionDeniedException` | Insufficient permissions |
+| `ModelNotFoundException` | Model not available |
+| `ServiceUnavailableException` | Service temporarily down |
+| `ContentFilterException` | Safety filter triggered |
+| `ModelErrorException` | Model processing error |
+
+## Helper Nodes for FlowEngine
+
+LLMfy provides pre-built helper nodes for common workflow patterns.
+
+### tools_node
+
+Automatically executes tool calls from LLM responses within a workflow.
+
+```python
+from llmfy import tools_node, ToolRegistry
+
+async def handle_tools(state: WorkflowState) -> dict:
+    messages = tools_node(
+        messages=state.get("messages", []),
+        registry=tool_registry,
+    )
+    return {"messages": messages}
+```
+
+### tools_stream_node
+
+Streaming variant of `tools_node` for real-time tool execution feedback.
+
+```python
+from llmfy import tools_stream_node
+
+async def handle_tools_stream(state: WorkflowState):
+    async for chunk in tools_stream_node(
+        messages=state.get("messages", []),
+        registry=tool_registry,
+    ):
+        yield chunk
+```
+
+## Summary
+
+LLMfy brings together the core building blocks for LLM-powered applications into a single, cohesive framework:
+
+| Feature | Description |
+|---------|-------------|
+| **Multi-Provider** | Unified API for OpenAI and AWS Bedrock |
+| **Tool Calling** | `@Tool()` decorator with automatic schema extraction |
+| **FlowEngine** | State machine workflow orchestration |
+| **Checkpointing** | In-memory, Redis, and SQL state persistence |
+| **Vector Store** | FAISS-based semantic search |
+| **Embeddings** | OpenAI and Bedrock embedding models |
+| **Streaming** | Real-time token delivery across all methods |
+| **Multi-Modal** | Text, image, document, and video inputs |
+| **Text Utilities** | Chunking, preprocessing, and message trimming |
+| **Usage Tracking** | Token counting and cost estimation |
+| **Exception Handling** | Structured error hierarchy |
+
+For more details, visit the [documentation](https://llmfy.readthedocs.io) or the [GitHub repository](https://github.com/irufano/llmfy).
+0:{"buildId":"s9O4XJ5zrvcYcR1grhKzQ","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"llmfy-features","meta":{"title":"LLMfy - Technical Features Overview","date":"2026-03-18","description":"A comprehensive technical overview of LLMfy, a Python framework for building LLM-powered applications with multi-provider support, workflow orchestration, vector storage, and more.","author":"irufano","tags":["LLM","Python","Framework","AI","OpenAI","AWS Bedrock"],"image":"https://raw.githubusercontent.com/irufano/llmfy/main/llmfy-banner.png","category":"Generative AI"},"content":"$4","sections":[{"level":"2","id":"introduction","text":"Introduction"},{"level":"2","id":"multi-provider-llm-support","text":"Multi-Provider LLM Support"},{"level":"3","id":"openai","text":"OpenAI"},{"level":"3","id":"aws-bedrock","text":"AWS Bedrock"},{"level":"2","id":"system-message-templating","text":"System Message Templating"},{"level":"2","id":"multi-turn-conversation","text":"Multi-Turn Conversation"},{"level":"2","id":"streaming","text":"Streaming"},{"level":"2","id":"tool-calling-function-calling","text":"Tool Calling (Function Calling)"},{"level":"3","id":"define-tools","text":"Define Tools"},{"level":"3","id":"register-and-use-tools","text":"Register and Use Tools"},{"level":"3","id":"toolregistry","text":"ToolRegistry"},{"level":"2","id":"multi-modal-content","text":"Multi-Modal Content"},{"level":"2","id":"flowengine---workflow-orchestration","text":"FlowEngine - Workflow Orchestration"},{"level":"3","id":"basic-workflow","text":"Basic Workflow"},{"level":"3","id":"conditional-routing","text":"Conditional Routing"},{"level":"3","id":"workflow-visualization","text":"Workflow Visualization"},{"level":"3","id":"streaming-in-flowengine","text":"Streaming in FlowEngine"},{"level":"2","id":"checkpointing---state-persistence","text":"Checkpointing - State Persistence"},{"level":"3","id":"in-memory-checkpointer","text":"In-Memory Checkpointer"},{"level":"3","id":"redis-checkpointer","text":"Redis Checkpointer"},{"level":"3","id":"sql-checkpointer","text":"SQL Checkpointer"},{"level":"2","id":"vector-store-faiss","text":"Vector Store (FAISS)"},{"level":"3","id":"setup","text":"Setup"},{"level":"3","id":"add-documents","text":"Add Documents"},{"level":"3","id":"search","text":"Search"},{"level":"3","id":"persistence","text":"Persistence"},{"level":"3","id":"index-types","text":"Index Types"},{"level":"2","id":"embeddings","text":"Embeddings"},{"level":"2","id":"text-utilities","text":"Text Utilities"},{"level":"3","id":"text-chunking","text":"Text Chunking"},{"level":"3","id":"markdown-chunking","text":"Markdown Chunking"},{"level":"3","id":"text-preprocessing","text":"Text Preprocessing"},{"level":"2","id":"message-trimming","text":"Message Trimming"},{"level":"2","id":"usage-tracking","text":"Usage Tracking"},{"level":"2","id":"exception-handling","text":"Exception Handling"},{"level":"2","id":"helper-nodes-for-flowengine","text":"Helper Nodes for FlowEngine"},{"level":"3","id":"tools_node","text":"tools_node"},{"level":"3","id":"tools_stream_node","text":"tools_stream_node"},{"level":"2","id":"summary","text":"Summary"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/llmfy-features"}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/bb4335abd39577f1.js","async":true}]
+7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true}]
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

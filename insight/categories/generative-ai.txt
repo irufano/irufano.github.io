@@ -7,15 +7,548 @@
 9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
 b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
 e:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-:HL["https://irufano.github.io/_next/static/chunks/22f422e880b364e9.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/25f19b25d7c54b1d.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"P":null,"b":"8AUq_mOKM3c-aKa_RsZwf","c":["","insight","categories","generative-ai"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["categories",{"children":[["category","generative-ai","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/22f422e880b364e9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],"$Ld"]}],false]],"m":"$undefined","G":["$e",[]],"S":true}
+0:{"P":null,"b":"s9O4XJ5zrvcYcR1grhKzQ","c":["","insight","categories","generative-ai"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["categories",{"children":[["category","generative-ai","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/25f19b25d7c54b1d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],"$Ld"]}],false]],"m":"$undefined","G":["$e",[]],"S":true}
 d:["$","meta",null,{"name":"next-size-adjust","content":""}]
 f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
 10:I[90244,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
-11:T36b8,
+11:T38ac,
+## Introduction
+
+**LLMfy** is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions — all in a single modular package.
+
+**Installation:**
+```bash
+pip install llmfy
+```
+
+Install with optional dependencies:
+```bash
+pip install llmfy[openai]       # OpenAI support
+pip install llmfy[bedrock]      # AWS Bedrock support
+pip install llmfy[faiss]        # Vector store support
+pip install llmfy[redis]        # Redis checkpointer
+pip install llmfy[sql]          # SQL checkpointer
+```
+
+**Requirements:** Python >= 3.11
+
+## Multi-Provider LLM Support
+
+LLMfy provides a unified interface for working with different LLM providers. Currently supported providers are **OpenAI** and **AWS Bedrock**.
+
+### OpenAI
+
+```python
+from llmfy import OpenAIModel, OpenAIConfig, LLMfy, Message, Role
+
+config = OpenAIConfig(temperature=0.7)
+llm = OpenAIModel(model="gpt-4o-mini", config=config)
+
+ai = LLMfy(llm, system_message="You are a helpful assistant.")
+
+messages = [Message(role=Role.USER, content="What is Python?")]
+response = ai.invoke(messages)
+print(response.result.content)
+```
+
+### AWS Bedrock
+
+```python
+from llmfy import BedrockModel, BedrockConfig, LLMfy, Message, Role
+
+config = BedrockConfig(temperature=0.7)
+llm = BedrockModel(model="amazon.nova-pro-v1:0", config=config)
+
+ai = LLMfy(llm, system_message="You are a helpful assistant.")
+
+messages = [Message(role=Role.USER, content="What is Python?")]
+response = ai.invoke(messages)
+print(response.result.content)
+```
+
+Switching providers requires only changing the model and config — the rest of the code stays the same.
+
+## System Message Templating
+
+LLMfy supports dynamic system prompts using `{{variable}}` template placeholders. Variables are injected at invocation time via `input_variables`.
+
+```python
+ai = LLMfy(
+    llm,
+    system_message="You are a {{role}} expert. Answer about {{topic}}.",
+    input_variables=["role", "topic"],
+)
+
+messages = [Message(role=Role.USER, content="Explain the basics.")]
+response = ai.invoke(messages, role="Python", topic="decorators")
+```
+
+## Multi-Turn Conversation
+
+Use `chat()` for multi-turn conversations with automatic message history management.
+
+```python
+ai = LLMfy(llm, system_message="You are a helpful assistant.")
+
+# First turn
+messages = [Message(role=Role.USER, content="What is machine learning?")]
+response = ai.chat(messages)
+print(response.result.content)
+
+# Second turn (history is preserved)
+follow_up = [Message(role=Role.USER, content="Give me an example.")]
+response = ai.chat(follow_up)
+print(response.result.content)
+```
+
+## Streaming
+
+All invocation methods have streaming variants for real-time token delivery.
+
+```python
+# Single turn streaming
+for chunk in ai.invoke_stream(messages):
+    print(chunk, end="", flush=True)
+
+# Multi-turn streaming
+for chunk in ai.chat_stream(messages):
+    print(chunk, end="", flush=True)
+```
+
+## Tool Calling (Function Calling)
+
+LLMfy provides a `@Tool()` decorator that automatically registers Python functions as callable tools for the LLM.
+
+### Define Tools
+
+```python
+from llmfy import Tool
+
+@Tool()
+def get_weather(city: str):
+    """Get the current weather for a given city."""
+    # Your logic here
+    return f"The weather in {city} is sunny, 25°C."
+
+@Tool()
+def search_database(query: str, limit: int = 5):
+    """Search the database for relevant records."""
+    # Your logic here
+    return [{"id": 1, "name": "Result"}]
+```
+
+### Register and Use Tools
+
+```python
+ai = LLMfy(llm, system_message="You are a helpful assistant with tool access.")
+
+# Register tools
+ai.register_tool([get_weather, search_database])
+
+messages = [Message(role=Role.USER, content="What's the weather in Tokyo?")]
+response = ai.invoke_with_tools(messages)
+print(response.result.content)
+```
+
+The `@Tool()` decorator automatically extracts the function schema (name, description, parameters, types) and formats it for the selected provider (OpenAI or Bedrock).
+
+### ToolRegistry
+
+For advanced tool management, use `ToolRegistry` to register tools separately and access them in workflows.
+
+```python
+from llmfy import ToolRegistry
+
+registry = ToolRegistry([get_weather, search_database], llm)
+
+# Get tool definitions for API calls
+tool_definitions = registry.get_tools()
+
+# Execute a tool by name
+result = registry.execute("get_weather", {"city": "Tokyo"})
+```
+
+## Multi-Modal Content
+
+LLMfy supports multi-modal inputs including text, images, documents, and videos.
+
+```python
+from llmfy import Message, Role, Content, ContentType
+
+# Text + Image message
+message = Message(
+    role=Role.USER,
+    content=[
+        Content(type=ContentType.TEXT, data="What's in this image?"),
+        Content(type=ContentType.IMAGE, data="base64_encoded_image_data"),
+    ],
+)
+
+response = ai.invoke([message])
+```
+
+## FlowEngine - Workflow Orchestration
+
+`FlowEngine` is a state machine for building complex, multi-step LLM workflows with nodes, edges, and conditional routing.
+
+### Basic Workflow
+
+```python
+from llmfy import FlowEngine, START, END, WorkflowState
+
+# Define workflow with initial state schema
+workflow = FlowEngine({"messages": [], "result": ""})
+
+# Define node functions
+async def process_input(state: WorkflowState) -> dict:
+    messages = state.get("messages", [])
+    response = ai.invoke(messages)
+    return {"result": response.result.content}
+
+async def validate_output(state: WorkflowState) -> dict:
+    result = state.get("result", "")
+    # validation logic
+    return {"result": result}
+
+# Add nodes
+workflow.add_node("process", process_input)
+workflow.add_node("validate", validate_output)
+
+# Define edges
+workflow.add_edge(START, "process")
+workflow.add_edge("process", "validate")
+workflow.add_edge("validate", END)
+
+# Execute
+result = await workflow.invoke({"messages": [Message(role=Role.USER, content="Hello")]})
+```
+
+### Conditional Routing
+
+```python
+def route_decision(state: WorkflowState) -> str:
+    result = state.get("result", "")
+    if "error" in result:
+        return "retry"
+    return END
+
+workflow.add_conditional_edge("validate", ["retry", END], route_decision)
+workflow.add_edge("retry", "process")
+```
+
+### Workflow Visualization
+
+Generate a visual diagram of your workflow graph.
+
+```python
+from IPython.display import Image, display
+
+graph_url = workflow.get_diagram_url()
+display(Image(url=graph_url))
+```
+
+### Streaming in FlowEngine
+
+Stream results from workflow nodes in real-time.
+
+```python
+async for stream_response in workflow.invoke_stream(initial_state):
+    if stream_response.type == FlowEngineStreamType.NODE:
+        print(f"Node: {stream_response.node_name}")
+    # Handle streaming chunks
+```
+
+## Checkpointing - State Persistence
+
+FlowEngine supports checkpointing for persisting workflow state across sessions.
+
+### In-Memory Checkpointer
+
+```python
+from llmfy import InMemoryCheckpointer
+
+checkpointer = InMemoryCheckpointer()
+workflow = FlowEngine({"messages": []}, checkpointer=checkpointer)
+
+# State is automatically saved after each node execution
+result = await workflow.invoke(initial_state, session_id="user-123")
+```
+
+### Redis Checkpointer
+
+```python
+from llmfy import RedisCheckpointer
+
+checkpointer = RedisCheckpointer(host="localhost", port=6379)
+workflow = FlowEngine({"messages": []}, checkpointer=checkpointer)
+```
+
+### SQL Checkpointer
+
+Supports PostgreSQL, MySQL, and SQLite with both async and sync drivers.
+
+```python
+from llmfy import SQLCheckpointer
+
+# PostgreSQL (async)
+checkpointer = SQLCheckpointer(connection_string="postgresql+asyncpg://user:pass@host/db")
+
+# SQLite (sync)
+checkpointer = SQLCheckpointer(connection_string="sqlite:///checkpoints.db")
+
+workflow = FlowEngine({"messages": []}, checkpointer=checkpointer)
+```
+
+## Vector Store (FAISS)
+
+LLMfy includes a built-in FAISS-based vector store for semantic search and retrieval.
+
+### Setup
+
+```python
+from llmfy import FAISSVectorStore, OpenAIEmbedding, Document
+
+# Initialize embedding model
+embedding = OpenAIEmbedding(model="text-embedding-3-small")
+
+# Create vector store
+vector_store = FAISSVectorStore(embedding_client=embedding, dimension=1536)
+```
+
+### Add Documents
+
+```python
+documents = [
+    Document(content="Python is a programming language.", metadata={"source": "wiki"}),
+    Document(content="Machine learning uses statistical models.", metadata={"source": "textbook"}),
+]
+
+vector_store.add_documents(documents)
+```
+
+### Search
+
+```python
+results = vector_store.search(query="What is Python?", top_k=3)
+for doc, score in results:
+    print(f"Score: {score:.4f} | {doc.content}")
+```
+
+### Persistence
+
+```python
+# Save index
+vector_store.save_index("./my_index")
+
+# Load index
+vector_store.load_index("./my_index")
+```
+
+### Index Types
+
+FAISSVectorStore supports multiple index types that are automatically selected based on dataset size:
+- **Flat** - Exact search, best for small datasets
+- **HNSW** - Approximate search with high recall
+- **IVFFlat** - Inverted file index for large datasets
+- **IVFPQ** - Product quantization for very large datasets
+
+## Embeddings
+
+LLMfy provides embedding model abstractions for both OpenAI and AWS Bedrock.
+
+```python
+from llmfy import OpenAIEmbedding, BedrockEmbedding
+
+# OpenAI
+embedding = OpenAIEmbedding(model="text-embedding-3-small")
+vectors = embedding.embed(["Hello world", "Another text"])
+
+# Bedrock
+embedding = BedrockEmbedding(model="amazon.titan-embed-text-v2:0")
+vectors = embedding.embed(["Hello world", "Another text"])
+```
+
+## Text Utilities
+
+### Text Chunking
+
+Split large texts into overlapping chunks for embedding and retrieval.
+
+```python
+from llmfy import chunk_text
+
+chunks = chunk_text(
+    text="Your long document text here...",
+    chunk_size=500,
+    chunk_overlap=50,
+)
+# Returns list of chunk strings
+```
+
+### Markdown Chunking
+
+Split markdown documents by header levels while preserving structure.
+
+```python
+from llmfy import chunk_markdown_by_header
+
+chunks = chunk_markdown_by_header(
+    markdown_text="# Title\n## Section 1\nContent...\n## Section 2\nMore content...",
+    max_level=2,
+)
+# Returns list of MdChunkResult with header hierarchy and content
+```
+
+### Text Preprocessing
+
+Clean text for optimal embedding quality.
+
+```python
+from llmfy import clean_text_for_embedding
+
+cleaned = clean_text_for_embedding("  Some   messy    text  with extra   spaces  ")
+```
+
+## Message Trimming
+
+Manage conversation history to fit within token limits.
+
+```python
+from llmfy import trim_messages, safe_trim_messages, count_tokens_approximately
+
+# Count approximate tokens
+token_count = count_tokens_approximately(messages)
+
+# Trim messages to fit token limit
+trimmed = trim_messages(messages, max_tokens=4000)
+
+# Safe trim (preserves system message and latest user message)
+trimmed = safe_trim_messages(messages, max_tokens=4000)
+```
+
+## Usage Tracking
+
+Track token usage and estimate costs across requests.
+
+```python
+from llmfy import llmfy_usage_tracker
+
+# After invocation, access usage data
+response = ai.invoke(messages)
+
+usage = llmfy_usage_tracker.get()
+print(f"Input tokens: {usage.input_tokens}")
+print(f"Output tokens: {usage.output_tokens}")
+print(f"Estimated cost: ${usage.total_cost:.6f}")
+```
+
+The tracker supports provider-specific pricing for both OpenAI and Bedrock models.
+
+## Exception Handling
+
+LLMfy provides a structured exception hierarchy for granular error handling.
+
+```python
+from llmfy import (
+    LLMfyException,
+    RateLimitException,
+    AuthenticationException,
+    TimeoutException,
+    ContentFilterException,
+)
+
+try:
+    response = ai.invoke(messages)
+except RateLimitException:
+    # Handle rate limiting (retry with backoff)
+    pass
+except AuthenticationException:
+    # Handle auth errors
+    pass
+except ContentFilterException:
+    # Handle safety filter triggers
+    pass
+except TimeoutException:
+    # Handle request timeouts
+    pass
+except LLMfyException as e:
+    # Catch-all for any LLMfy error
+    print(f"Error: {e}")
+```
+
+**Available exceptions:**
+| Exception | Description |
+|-----------|-------------|
+| `LLMfyException` | Base exception for all LLMfy errors |
+| `RateLimitException` | API rate limit exceeded |
+| `QuotaExceededException` | Usage quota exceeded |
+| `TimeoutException` | Request timeout |
+| `InvalidRequestException` | Invalid request parameters |
+| `AuthenticationException` | Authentication failure |
+| `PermissionDeniedException` | Insufficient permissions |
+| `ModelNotFoundException` | Model not available |
+| `ServiceUnavailableException` | Service temporarily down |
+| `ContentFilterException` | Safety filter triggered |
+| `ModelErrorException` | Model processing error |
+
+## Helper Nodes for FlowEngine
+
+LLMfy provides pre-built helper nodes for common workflow patterns.
+
+### tools_node
+
+Automatically executes tool calls from LLM responses within a workflow.
+
+```python
+from llmfy import tools_node, ToolRegistry
+
+async def handle_tools(state: WorkflowState) -> dict:
+    messages = tools_node(
+        messages=state.get("messages", []),
+        registry=tool_registry,
+    )
+    return {"messages": messages}
+```
+
+### tools_stream_node
+
+Streaming variant of `tools_node` for real-time tool execution feedback.
+
+```python
+from llmfy import tools_stream_node
+
+async def handle_tools_stream(state: WorkflowState):
+    async for chunk in tools_stream_node(
+        messages=state.get("messages", []),
+        registry=tool_registry,
+    ):
+        yield chunk
+```
+
+## Summary
+
+LLMfy brings together the core building blocks for LLM-powered applications into a single, cohesive framework:
+
+| Feature | Description |
+|---------|-------------|
+| **Multi-Provider** | Unified API for OpenAI and AWS Bedrock |
+| **Tool Calling** | `@Tool()` decorator with automatic schema extraction |
+| **FlowEngine** | State machine workflow orchestration |
+| **Checkpointing** | In-memory, Redis, and SQL state persistence |
+| **Vector Store** | FAISS-based semantic search |
+| **Embeddings** | OpenAI and Bedrock embedding models |
+| **Streaming** | Real-time token delivery across all methods |
+| **Multi-Modal** | Text, image, document, and video inputs |
+| **Text Utilities** | Chunking, preprocessing, and message trimming |
+| **Usage Tracking** | Token counting and cost estimation |
+| **Exception Handling** | Structured error hierarchy |
+
+For more details, visit the [documentation](https://llmfy.readthedocs.io) or the [GitHub repository](https://github.com/irufano/llmfy).
+12:T36b8,
 ## What is RAG?
 
 Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.
@@ -380,7 +913,7 @@ Both Traditional and Agentic RAG have their place in the modern AI landscape. Tr
 The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
 
 As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
-12:T34e9,
+13:T34e9,
 ## AI Chatbot with langgraph
 The world of AI is currently hyped, have you ever thought about creating your own AI chatbot? In this tutorial, we will make one using langgraph.
 
@@ -534,7 +1067,7 @@ while True:
         break
 ```
 
-**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.13:T1edc,
+**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.14:T1edc,
 ## Definition
 
 Generative AI refers to a type of artificial intelligence that creates new content, such as images, text, audio, or even video, based on patterns and data it has learned. What makes it a fantastic technology is that it democratizes AI, anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile, all you need is to use your language, state what you want and out comes a suggestion from an AI model. The applications and impact for this is huge, you write or understand reports, write applications and much more, all in seconds.
@@ -607,7 +1140,7 @@ To add a knowledge base to an OpenAI-powered chatbot or application, you can use
 
 - **Combining LLMs with traditional search**: You can combine the capabilities of language models with traditional search mechanisms like Elasticsearch or other keyword-based systems.
   - **Method**: First, use search engines to retrieve relevant documents, and then pass those documents to OpenAI for processing and summarization.
-  - **Use case**: Works well in applications where quick retrieval from a large corpus of documents is needed, and then those documents are summarized or clarified by the LLM.5:["$","$Lf",null,{"type":"$undefined","children":["$","$7",null,{"children":["$","$L10",null,{"posts":[{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"rawContent":"$11","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"rawContent":"$12","readingTime":"5 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png","category":"Generative AI"},"rawContent":"$13","readingTime":"7 min read"}],"category":"Generative AI"}]}]}]
+  - **Use case**: Works well in applications where quick retrieval from a large corpus of documents is needed, and then those documents are summarized or clarified by the LLM.5:["$","$Lf",null,{"type":"$undefined","children":["$","$7",null,{"children":["$","$L10",null,{"posts":[{"slug":"llmfy-features","meta":{"title":"LLMfy - Technical Features Overview","date":"2026-03-18","description":"A comprehensive technical overview of LLMfy, a Python framework for building LLM-powered applications with multi-provider support, workflow orchestration, vector storage, and more.","author":"irufano","tags":["LLM","Python","Framework","AI","OpenAI","AWS Bedrock"],"image":"https://raw.githubusercontent.com/irufano/llmfy/main/llmfy-banner.png","category":"Generative AI"},"rawContent":"$11","readingTime":"9 min read"},{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"rawContent":"$12","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"rawContent":"$13","readingTime":"5 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png","category":"Generative AI"},"rawContent":"$14","readingTime":"7 min read"}],"category":"Generative AI"}]}]}]
 a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 8:null
 c:[["$","title","0",{"children":"Irufano Dev - Developer Portal"}],["$","meta","1",{"name":"description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","2",{"property":"og:title","content":"Irufano Dev - Developer Portal"}],["$","meta","3",{"property":"og:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io"}],["$","meta","5",{"property":"og:site_name","content":"irufano Dev"}],["$","meta","6",{"property":"og:locale","content":"en_US"}],["$","meta","7",{"property":"og:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","8",{"property":"og:image:width","content":"800"}],["$","meta","9",{"property":"og:image:height","content":"600"}],["$","meta","10",{"property":"og:image:alt","content":"Irufano Insight"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Irufano Dev - Developer Portal"}],["$","meta","14",{"name":"twitter:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","15",{"name":"twitter:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","16",{"name":"twitter:image:width","content":"800"}],["$","meta","17",{"name":"twitter:image:height","content":"600"}],["$","meta","18",{"name":"twitter:image:alt","content":"Irufano Insight"}]]
