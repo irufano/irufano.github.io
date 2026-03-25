@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { throttle } from "lodash";
 import Link from "next/link";
 import { Calendar, Clock, User, Layers } from "lucide-react";
@@ -28,6 +28,16 @@ export default function PostContent({ post, pathname }: PostContentProps) {
   const thumbnail = post.meta?.image ?? null;
 
   const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const contentHtml = useMemo(
+    () => (
+      <div
+        className="prose prose-lg dark:prose-dark max-w-3xl dark:text-[#d9d7d2] text-base md:text-lg"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    ),
+    [content]
+  );
 
   useEffect(() => {
     const calculateOffset = () => {
@@ -215,10 +225,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
           ) : null}
 
           {/* Post Content */}
-          <div
-            className="prose prose-lg dark:prose-dark max-w-3xl dark:text-[#d9d7d2] text-base md:text-lg"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          {contentHtml}
 
           {/* Tags */}
           <div className="my-8">
