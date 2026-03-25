@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "../styles/globals.css";
-import "highlight.js/styles/tomorrow-night-blue.min.css";
+// import "highlight.js/styles/tomorrow-night-blue.min.css";
+import "highlight.js/styles/atom-one-dark.css";
+
 import { defaultFont } from "@/utils/font";
 
 
