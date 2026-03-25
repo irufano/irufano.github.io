@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { throttle } from "lodash";
 import Link from "next/link";
-import { Calendar, Clock, User, Layers } from "lucide-react";
+import { Calendar, Clock, User, Layers, Search, X, ChevronUp, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import ExpansionTile from "@/components/Button/ExpansionTile";
 import Comment from "@/components/Posts/Comment";
@@ -28,10 +28,196 @@ export default function PostContent({ post, pathname }: PostContentProps) {
   const thumbnail = post.meta?.image ?? null;
 
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [isMac, setIsMac] = useState(false);
+
+  useEffect(() => {
+    setIsMac(/Mac|iPhone/.test(navigator.userAgent));
+  }, []);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [matchCount, setMatchCount] = useState(0);
+  const [currentMatch, setCurrentMatch] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const clearHighlights = useCallback(() => {
+    if (!contentRef.current) return;
+    const marks = contentRef.current.querySelectorAll("mark.search-highlight");
+    marks.forEach((mark) => {
+      const parent = mark.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(mark.textContent || ""), mark);
+        parent.normalize();
+      }
+    });
+  }, []);
+
+  const highlightMatches = useCallback((query: string) => {
+    clearHighlights();
+    if (!contentRef.current || !query.trim()) {
+      setMatchCount(0);
+      setCurrentMatch(0);
+      return;
+    }
+
+    const treeWalker = document.createTreeWalker(
+      contentRef.current,
+      NodeFilter.SHOW_TEXT,
+      null
+    );
+
+    const textNodes: Text[] = [];
+    let node: Node | null;
+    while ((node = treeWalker.nextNode())) {
+      textNodes.push(node as Text);
+    }
+
+    let count = 0;
+    const lowerQuery = query.toLowerCase();
+
+    for (const textNode of textNodes) {
+      const text = textNode.textContent || "";
+      const lowerText = text.toLowerCase();
+      if (!lowerText.includes(lowerQuery)) continue;
+
+      const fragment = document.createDocumentFragment();
+      let lastIndex = 0;
+      let searchIndex = lowerText.indexOf(lowerQuery, lastIndex);
+
+      while (searchIndex !== -1) {
+        if (searchIndex > lastIndex) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex, searchIndex)));
+        }
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.dataset.matchIndex = String(count);
+        mark.textContent = text.slice(searchIndex, searchIndex + query.length);
+        fragment.appendChild(mark);
+        count++;
+        lastIndex = searchIndex + query.length;
+        searchIndex = lowerText.indexOf(lowerQuery, lastIndex);
+      }
+
+      if (lastIndex < text.length) {
+        fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+
+      textNode.parentNode?.replaceChild(fragment, textNode);
+    }
+
+    setMatchCount(count);
+    if (count > 0) {
+      setCurrentMatch(1);
+      scrollToMatch(1);
+    } else {
+      setCurrentMatch(0);
+    }
+  }, [clearHighlights]);
+
+  const scrollToMatch = (index: number) => {
+    if (!contentRef.current) return;
+    const marks = contentRef.current.querySelectorAll("mark.search-highlight");
+    marks.forEach((m) => m.classList.remove("current"));
+    const target = marks[index - 1];
+    if (!target) return;
+    target.classList.add("current");
+    const navbar = document.querySelector("nav");
+    const offset = navbar ? navbar.offsetHeight : 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset - 80;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  const goToNextMatch = () => {
+    if (matchCount === 0) return;
+    const next = currentMatch < matchCount ? currentMatch + 1 : 1;
+    setCurrentMatch(next);
+    scrollToMatch(next);
+  };
+
+  const goToPrevMatch = () => {
+    if (matchCount === 0) return;
+    const prev = currentMatch > 1 ? currentMatch - 1 : matchCount;
+    setCurrentMatch(prev);
+    scrollToMatch(prev);
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    if (value.trim().length >= 2) {
+      highlightMatches(value);
+    } else {
+      clearHighlights();
+      setMatchCount(0);
+      setCurrentMatch(0);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearchQuery("");
+    clearHighlights();
+    setMatchCount(0);
+    setCurrentMatch(0);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "f") {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+      if (e.key === "Escape" && searchQuery) {
+        clearSearch();
+        searchInputRef.current?.blur();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [searchQuery, clearHighlights]);
+
+  const searchBar = (
+    <div className="relative flex items-center mb-3">
+      <Search size={14} className="absolute left-2 text-gray-400" />
+      <input
+        ref={searchInputRef}
+        type="text"
+        value={searchQuery}
+        onChange={(e) => handleSearchChange(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            if (e.shiftKey) goToPrevMatch();
+            else goToNextMatch();
+          }
+        }}
+        placeholder="Search in post..."
+        className="w-full pl-8 pr-20 py-1.5 text-xs rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-1 focus:ring-primary"
+      />
+      {!searchQuery && (
+        <kbd className="absolute right-2 text-[10px] text-gray-400 bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded border border-gray-300 dark:border-gray-600 pointer-events-none">
+          {isMac ? "⌘F" : "Ctrl+F"}
+        </kbd>
+      )}
+      {searchQuery && (
+        <div className="absolute right-1 flex items-center gap-0.5">
+          <span className="text-[10px] text-gray-400 mr-1">
+            {matchCount > 0 ? `${currentMatch}/${matchCount}` : "0"}
+          </span>
+          <button onClick={goToPrevMatch} className="p-0.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" aria-label="Previous match">
+            <ChevronUp size={12} />
+          </button>
+          <button onClick={goToNextMatch} className="p-0.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" aria-label="Next match">
+            <ChevronDown size={12} />
+          </button>
+          <button onClick={clearSearch} className="p-0.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" aria-label="Clear search">
+            <X size={12} />
+          </button>
+        </div>
+      )}
+    </div>
+  );
 
   const contentHtml = useMemo(
     () => (
       <div
+        ref={contentRef}
         className="prose prose-lg dark:prose-dark max-w-3xl dark:text-[#d9d7d2] text-base md:text-lg"
         dangerouslySetInnerHTML={{ __html: content }}
       />
@@ -178,9 +364,10 @@ export default function PostContent({ post, pathname }: PostContentProps) {
             </p>
           </div>
 
-          {/* Display Section Links (mobile) */}
+          {/* Search and Section Links (mobile) */}
           {sections.length > 0 && (
             <div className="block lg:hidden mb-8 lg:mb-0">
+              {searchBar}
               <ExpansionTile title="Contents">
                 <div className="list-none">
                   {post.sections.map((heading) => (
@@ -254,6 +441,9 @@ export default function PostContent({ post, pathname }: PostContentProps) {
       {sections.length > 0 && (
         <aside className="lg:w-1/4 sticky max-h-[80vh] overflow-auto top-24 mb-24 self-start hidden lg:block">
           <div className="p-4 border-l-2 border-l-gray-200 dark:border-l-gray-800">
+            <div className="ml-6 mr-2">
+              {searchBar}
+            </div>
             <nav className="mb-8">
               <h2 className="ml-6 text-base font-semibold mb-2 text-gray-500">
                 Contents

@@ -95,6 +95,16 @@ body {
   overflow-wrap: break-word;
 }
 
+/* SEARCH HIGHLIGHT */
+mark.search-highlight {
+  @apply bg-yellow-200 dark:bg-yellow-700 text-inherit rounded-sm;
+  padding: 0 1px;
+}
+
+mark.search-highlight.current {
+  @apply bg-orange-400 dark:bg-orange-500;
+}
+
 /* CODE LINES (line numbers & highlight) */
 pre.has-line-numbers,
 pre.has-highlight {
