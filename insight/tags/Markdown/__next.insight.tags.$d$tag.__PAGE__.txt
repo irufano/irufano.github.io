@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
 3:"$Sreact.suspense"
-4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js"],"default"]
+4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
 9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 5:T16e2,
 Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
@@ -275,8 +275,8 @@ output:
 > funtion getData () => {
 >    console.log("Hello world!");
 > }
-> ```0:{"buildId":"SFp0pOjmI6v3zMuZJ275v","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$5","readingTime":"5 min read"}],"tag":"Markdown"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+> ```0:{"buildId":"AwbLDHLqzjkYeweQHCHg-","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$5","readingTime":"5 min read"}],"tag":"Markdown"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
 6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","async":true}]
-7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/90bb4d39496d8b65.js","async":true}]
+7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true}]
 8:["$","$L9",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]
 a:null
