@@ -64,7 +64,8 @@ export default function SearchContent({ posts }: SearchContentProps) {
   }
 
   function highlightText(text: string, keyword: string): string {
-    const keywordRegex = new RegExp(keyword, "gi");
+    const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const keywordRegex = new RegExp(escaped, "gi");
     return text.replace(
       keywordRegex,
       (match) => `<span style="background-color: yellow; color: black;">${match}</span>`
