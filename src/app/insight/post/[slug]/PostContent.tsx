@@ -175,7 +175,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
 
   const searchBar = (
     <div className="relative flex items-center mb-3">
-      <Search size={14} className="absolute left-2 text-gray-400" />
+      <Search size={14} className="absolute left-2 text-gray-400 ml-1 lg:ml-0" />
       <input
         ref={searchInputRef}
         type="text"
@@ -188,7 +188,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
           }
         }}
         placeholder="Search in post..."
-        className="w-full pl-8 pr-20 py-1.5 text-xs rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-1 focus:ring-primary"
+        className="w-full pl-8 pr-20 py-3 lg:py-1.5 text-xs rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-1 focus:ring-primary"
       />
       {!searchQuery && (
         <kbd className="absolute right-2 text-[10px] text-gray-400 bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded border border-gray-300 dark:border-gray-600 pointer-events-none">
@@ -206,7 +206,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
           <button onClick={goToNextMatch} className="p-0.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" aria-label="Next match">
             <ChevronDown size={12} />
           </button>
-          <button onClick={clearSearch} className="p-0.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" aria-label="Clear search">
+          <button onClick={clearSearch} className="mr-2 lg:mr-0 p-0.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200" aria-label="Clear search">
             <X size={12} />
           </button>
         </div>

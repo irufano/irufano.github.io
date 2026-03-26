@@ -52,12 +52,12 @@ export default function SearchContent({ posts }: SearchContentProps) {
 
     if (keywordIndex === -1) return "";
 
-    let start = Math.max(0, keywordIndex - Math.floor((36 - keyword.length) / 2));
-    if (start + 36 > cleanedParagraph.length) {
-      start = Math.max(0, cleanedParagraph.length - 36);
+    let start = Math.max(0, keywordIndex - Math.floor((24 - keyword.length) / 2));
+    if (start + 24 > cleanedParagraph.length) {
+      start = Math.max(0, cleanedParagraph.length - 24);
     }
 
-    let substring = cleanedParagraph.substr(start, 36);
+    let substring = cleanedParagraph.substr(start, 24);
     substring = highlightText(substring, keyword);
 
     return `...${substring}...`;
@@ -103,7 +103,7 @@ export default function SearchContent({ posts }: SearchContentProps) {
       )}
 
       {paginatedPosts.length > 0 ? (
-        <ul className="divide-y divide-gray-200 dark:divide-gray-800">
+        <ul className="divide-y divide-gray-200 dark:divide-gray-800 mb-4">
           {paginatedPosts.map((post) => (
             <Link key={post.slug} href={`/insight/post/${post.slug}`}>
               <li className="p-4 hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-md">
@@ -134,7 +134,7 @@ export default function SearchContent({ posts }: SearchContentProps) {
       )}
 
       {totalPages > 1 && (
-        <div className="mt-10 flex justify-between items-center mb-10">
+        <div className="mt-6 flex justify-between items-center mb-10">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
