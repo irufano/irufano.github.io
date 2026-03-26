@@ -9,6 +9,147 @@ import highlight from "highlight.js";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
 
+/**
+ * Maps language identifiers (from code fences) to Devicon class names.
+ * Uses "colored" variant for real brand colors.
+ * Icons that are dark/black by nature (rust, github, nextjs, etc.) stay
+ * uncolored so they remain visible on the dark code-block header.
+ */
+const langIconMap: Record<string, string> = {
+  // Web fundamentals
+  html: "devicon-html5-plain colored",
+  css: "devicon-css3-plain colored",
+  javascript: "devicon-javascript-plain colored",
+  js: "devicon-javascript-plain colored",
+  typescript: "devicon-typescript-plain colored",
+  ts: "devicon-typescript-plain colored",
+  jsx: "devicon-react-original colored",
+  tsx: "devicon-react-original colored",
+
+  // Frontend frameworks
+  react: "devicon-react-original colored",
+  vue: "devicon-vuejs-plain colored",
+  angular: "devicon-angularjs-plain colored",
+  svelte: "devicon-svelte-plain colored",
+  nextjs: "devicon-nextjs-plain", // dark icon — keep white
+  nuxt: "devicon-nuxtjs-plain colored",
+  astro: "devicon-astro-plain", // dark icon — keep white
+  ember: "devicon-ember-original-wordmark colored",
+
+  // CSS frameworks & preprocessors
+  sass: "devicon-sass-original colored",
+  scss: "devicon-sass-original colored",
+  less: "devicon-less-plain-wordmark", // dark icon — keep white
+  tailwind: "devicon-tailwindcss-original colored",
+  bootstrap: "devicon-bootstrap-plain colored",
+
+  // Backend & general-purpose languages
+  python: "devicon-python-plain colored",
+  py: "devicon-python-plain colored",
+  java: "devicon-java-plain colored",
+  kotlin: "devicon-kotlin-plain colored",
+  kt: "devicon-kotlin-plain colored",
+  scala: "devicon-scala-plain colored",
+  go: "devicon-go-original-wordmark colored",
+  golang: "devicon-go-original-wordmark colored",
+  rust: "devicon-rust-original", // dark icon — keep white
+  rs: "devicon-rust-original", // dark icon — keep white
+  ruby: "devicon-ruby-plain colored",
+  rb: "devicon-ruby-plain colored",
+  php: "devicon-php-plain colored",
+  csharp: "devicon-csharp-plain colored",
+  cs: "devicon-csharp-plain colored",
+  c: "devicon-c-plain colored",
+  cpp: "devicon-cplusplus-plain colored",
+  "c++": "devicon-cplusplus-plain colored",
+  objectivec: "devicon-objectivec-plain colored",
+  swift: "devicon-swift-plain colored",
+  dart: "devicon-dart-plain colored",
+  elixir: "devicon-elixir-plain colored",
+  erlang: "devicon-erlang-plain colored",
+  haskell: "devicon-haskell-plain colored",
+  clojure: "devicon-clojure-plain colored",
+  perl: "devicon-perl-plain colored",
+  lua: "devicon-lua-plain colored",
+  r: "devicon-r-plain colored",
+  julia: "devicon-julia-plain colored",
+  groovy: "devicon-groovy-plain colored",
+  zig: "devicon-zig-plain colored",
+  ocaml: "devicon-ocaml-plain colored",
+  fsharp: "devicon-fsharp-plain colored",
+
+  // Mobile
+  flutter: "devicon-flutter-plain colored",
+  android: "devicon-android-plain colored",
+  apple: "devicon-apple-original", // dark icon — keep white
+
+  // Shell & scripting
+  bash: "devicon-bash-plain", // dark icon — keep white
+  sh: "devicon-bash-plain", // dark icon — keep white
+  shell: "devicon-bash-plain", // dark icon — keep white
+  zsh: "devicon-bash-plain", // dark icon — keep white
+  powershell: "devicon-powershell-plain colored",
+
+  // Data & config formats
+  json: "devicon-json-plain colored",
+  yaml: "devicon-yaml-plain", // dark icon — keep white
+  yml: "devicon-yaml-plain", // dark icon — keep white
+  xml: "devicon-xml-plain colored",
+  toml: "devicon-tomcat-line colored",
+  markdown: "devicon-markdown-original", // dark icon — keep white
+  md: "devicon-markdown-original", // dark icon — keep white
+  graphql: "devicon-graphql-plain colored",
+
+  // Databases
+  sql: "devicon-azuresqldatabase-plain colored",
+  mysql: "devicon-mysql-plain colored",
+  postgresql: "devicon-postgresql-plain colored",
+  postgres: "devicon-postgresql-plain colored",
+  mongodb: "devicon-mongodb-plain colored",
+  redis: "devicon-redis-plain colored",
+  sqlite: "devicon-sqlite-plain colored",
+
+  // DevOps & infrastructure
+  docker: "devicon-docker-plain colored",
+  dockerfile: "devicon-docker-plain colored",
+  kubernetes: "devicon-kubernetes-plain colored",
+  terraform: "devicon-terraform-plain colored",
+  nginx: "devicon-nginx-original colored",
+  apache: "devicon-apache-plain colored",
+
+  // Tools & platforms
+  git: "devicon-git-plain colored",
+  github: "devicon-github-original", // dark icon — keep white
+  gitlab: "devicon-gitlab-plain colored",
+  npm: "devicon-npm-original-wordmark colored",
+  webpack: "devicon-webpack-plain colored",
+  vite: "devicon-vitejs-plain colored",
+  gradle: "devicon-gradle-original colored",
+  cmake: "devicon-cmake-plain colored",
+
+  // Cloud
+  aws: "devicon-amazonwebservices-plain-wordmark colored",
+  azure: "devicon-azure-plain colored",
+  gcp: "devicon-googlecloud-plain colored",
+  firebase: "devicon-firebase-plain colored",
+  vercel: "devicon-vercel-original", // dark icon — keep white
+
+  // Other
+  latex: "devicon-latex-original", // dark icon — keep white
+  vim: "devicon-vim-plain colored",
+  wasm: "devicon-wasm-original colored",
+};
+
+function getLangIcon(lang: string): string {
+  const key = lang.toLowerCase().trim();
+  const iconClass = langIconMap[key];
+  if (iconClass) {
+    return `<i class="${iconClass}" title="${lang}"></i>`;
+  }
+  // Fallback: terminal icon for unknown languages
+  return `<svg class="lang-icon-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15l5-5-5-5M13 19h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
 export interface PostMeta {
   title: string;
   description: string;
@@ -156,11 +297,14 @@ export function getPostBySlug(slug: string): Post {
           codeContent = `<pre><code id="${codeId}" class="${language}">${highlightedCode}</code></pre>`;
         }
 
+        const langIcon = getLangIcon(language);
+        const hasCustomTitle = meta.includes("title=");
+
         node.type = "html";
         node.value = `
           <div class="code-block">
           <div class="title-code">
-            <span class="title-code-text">${title}</span>
+            <span class="title-code-text">${langIcon}${hasCustomTitle ? `<span class="title-code-label">${title}</span>` : ""}</span>
             <div class="code-actions">
               <button class="wrap-code" data-code-id="${codeId}" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

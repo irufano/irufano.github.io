@@ -59,7 +59,20 @@ body {
 }
 
 .title-code-text {
-  @apply pr-2;
+  @apply pr-2 flex items-center gap-2;
+}
+
+.title-code-text i {
+  @apply text-base leading-none;
+}
+
+.title-code-text .lang-icon-fallback {
+  @apply w-4 h-4;
+  stroke: currentColor;
+}
+
+.title-code-label {
+  @apply text-sm;
 }
 
 .code-actions {
