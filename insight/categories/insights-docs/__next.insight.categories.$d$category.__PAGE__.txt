@@ -275,7 +275,7 @@ output:
 > funtion getData () => {
 >    console.log("Hello world!");
 > }
-> ```0:{"buildId":"4m_F0-WUfxBOtuqWTH5hH","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$5","readingTime":"5 min read"}],"category":"Insights Docs"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+> ```0:{"buildId":"68IokQyYPMEvdiD_ctP9_","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$5","readingTime":"5 min read"}],"category":"Insights Docs"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
 6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","async":true}]
 7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true}]
 8:["$","$L9",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]
