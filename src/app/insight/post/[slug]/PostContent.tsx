@@ -431,9 +431,9 @@ export default function PostContent({ post, pathname }: PostContentProps) {
           </div>
 
           {/* Comment */}
-          <div className="my-8">
+          {/* <div className="my-8">
             <Comment />
-          </div>
+          </div> */}
         </article>
       </div>
 
