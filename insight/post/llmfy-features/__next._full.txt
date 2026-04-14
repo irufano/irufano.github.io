@@ -10,16 +10,16 @@ d:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-0:{"P":null,"b":"68IokQyYPMEvdiD_ctP9_","c":["","insight","post","llmfy-features"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","llmfy-features","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/80eaca057e22c934.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/7cb15276f0d6fc13.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":["$L9","$La","$Lb","$Lc"]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+0:{"P":null,"b":"dKt9FtNUZcqxofW9BSAi_","c":["","insight","post","llmfy-features"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","llmfy-features","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/80eaca057e22c934.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/e425dafdd21f4273.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":["$L9","$La","$Lb","$Lc"]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
 e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
 10:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
 9:null
 a:["$","$Le",null,{"children":"$Lf"}]
 b:["$","div",null,{"hidden":true,"children":["$","$L10",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$L11"}]}]}]
 c:["$","meta",null,{"name":"next-size-adjust","content":""}]
-12:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/7cb15276f0d6fc13.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-13:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/7cb15276f0d6fc13.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-14:T18fd9,<h2 id="introduction">Introduction</h2>
+12:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/e425dafdd21f4273.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
+13:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/e425dafdd21f4273.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
+14:T18fd3,<h2 id="introduction">Introduction</h2>
 <p><span class="strong-block">LLMfy</span> is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions — all in a single modular package.</p>
 <p><span class="strong-block">Installation:</span></p>
 
@@ -27,12 +27,12 @@ c:["$","meta",null,{"name":"next-size-adjust","content":""}]
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="bash"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="oxiujt" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="5gbgbe" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="oxiujt" aria-label="Copy code">
+              <button class="copy-code" data-code-id="5gbgbe" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -54,7 +54,7 @@ c:["$","meta",null,{"name":"next-size-adjust","content":""}]
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="oxiujt" class="bash">pip install llmfy</code></pre>
+          <pre><code id="5gbgbe" class="bash">pip install llmfy</code></pre>
           </div>
           </div>
         
@@ -64,12 +64,12 @@ c:["$","meta",null,{"name":"next-size-adjust","content":""}]
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="bash"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1gxtai" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="qfus43" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1gxtai" aria-label="Copy code">
+              <button class="copy-code" data-code-id="qfus43" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ c:["$","meta",null,{"name":"next-size-adjust","content":""}]
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1gxtai" class="bash">pip install llmfy[openai]       <span class="hljs-comment"># OpenAI support</span>
+          <pre><code id="qfus43" class="bash">pip install llmfy[openai]       <span class="hljs-comment"># OpenAI support</span>
 pip install llmfy[bedrock]      <span class="hljs-comment"># AWS Bedrock support</span>
 pip install llmfy[faiss]        <span class="hljs-comment"># Vector store support</span>
 pip install llmfy[redis]        <span class="hljs-comment"># Redis checkpointer</span>
@@ -108,12 +108,12 @@ pip install llmfy[sql]          <span class="hljs-comment"># SQL checkpointer</s
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="lwym95" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="f9k7h" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="lwym95" aria-label="Copy code">
+              <button class="copy-code" data-code-id="f9k7h" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -135,7 +135,7 @@ pip install llmfy[sql]          <span class="hljs-comment"># SQL checkpointer</s
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="lwym95" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> OpenAIModel, OpenAIConfig, LLMfy, Message, Role
+          <pre><code id="f9k7h" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> OpenAIModel, OpenAIConfig, LLMfy, Message, Role
 
 config = OpenAIConfig(temperature=<span class="hljs-number">0.7</span>)
 llm = OpenAIModel(model=<span class="hljs-string">&quot;gpt-4o-mini&quot;</span>, config=config)
@@ -154,12 +154,12 @@ response = ai.invoke(messages)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="tu9vor" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="8ua4mm" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="tu9vor" aria-label="Copy code">
+              <button class="copy-code" data-code-id="8ua4mm" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -181,7 +181,7 @@ response = ai.invoke(messages)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="tu9vor" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> BedrockModel, BedrockConfig, LLMfy, Message, Role
+          <pre><code id="8ua4mm" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> BedrockModel, BedrockConfig, LLMfy, Message, Role
 
 config = BedrockConfig(temperature=<span class="hljs-number">0.7</span>)
 llm = BedrockModel(model=<span class="hljs-string">&quot;amazon.nova-pro-v1:0&quot;</span>, config=config)
@@ -202,12 +202,12 @@ response = ai.invoke(messages)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="mja6cl" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="23jv5c" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="mja6cl" aria-label="Copy code">
+              <button class="copy-code" data-code-id="23jv5c" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -229,7 +229,7 @@ response = ai.invoke(messages)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="mja6cl" class="python">ai = LLMfy(
+          <pre><code id="23jv5c" class="python">ai = LLMfy(
     llm,
     system_message=<span class="hljs-string">&quot;You are a {{role}} expert. Answer about {{topic}}.&quot;</span>,
     input_variables=[<span class="hljs-string">&quot;role&quot;</span>, <span class="hljs-string">&quot;topic&quot;</span>],
@@ -247,12 +247,12 @@ response = ai.invoke(messages, role=<span class="hljs-string">&quot;Python&quot;
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="jeydp" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="jlgsk7" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="jeydp" aria-label="Copy code">
+              <button class="copy-code" data-code-id="jlgsk7" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -274,7 +274,7 @@ response = ai.invoke(messages, role=<span class="hljs-string">&quot;Python&quot;
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="jeydp" class="python">ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant.&quot;</span>)
+          <pre><code id="jlgsk7" class="python">ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant.&quot;</span>)
 
 <span class="hljs-comment"># First turn</span>
 messages = [Message(role=Role.USER, content=<span class="hljs-string">&quot;What is machine learning?&quot;</span>)]
@@ -295,12 +295,12 @@ response = ai.chat(follow_up)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="lftys7" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="gox1b" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="lftys7" aria-label="Copy code">
+              <button class="copy-code" data-code-id="gox1b" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -322,7 +322,7 @@ response = ai.chat(follow_up)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="lftys7" class="python"><span class="hljs-comment"># Single turn streaming</span>
+          <pre><code id="gox1b" class="python"><span class="hljs-comment"># Single turn streaming</span>
 <span class="hljs-keyword">for</span> chunk <span class="hljs-keyword">in</span> ai.invoke_stream(messages):
     <span class="hljs-built_in">print</span>(chunk, end=<span class="hljs-string">&quot;&quot;</span>, flush=<span class="hljs-literal">True</span>)
 
@@ -340,12 +340,12 @@ response = ai.chat(follow_up)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="rbu445" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="vxbwid" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="rbu445" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vxbwid" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -367,7 +367,7 @@ response = ai.chat(follow_up)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="rbu445" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Tool
+          <pre><code id="vxbwid" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Tool
 
 <span class="hljs-meta">@Tool()</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_weather</span>(<span class="hljs-params">city: <span class="hljs-built_in">str</span></span>):
@@ -389,12 +389,12 @@ response = ai.chat(follow_up)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1f0rce" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ycdol5" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1f0rce" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ycdol5" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -416,7 +416,7 @@ response = ai.chat(follow_up)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1f0rce" class="python">ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant with tool access.&quot;</span>)
+          <pre><code id="ycdol5" class="python">ai = LLMfy(llm, system_message=<span class="hljs-string">&quot;You are a helpful assistant with tool access.&quot;</span>)
 
 <span class="hljs-comment"># Register tools</span>
 ai.register_tool([get_weather, search_database])
@@ -435,12 +435,12 @@ response = ai.invoke_with_tools(messages)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="mfdy2" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3fqbpe" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="mfdy2" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3fqbpe" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -462,7 +462,7 @@ response = ai.invoke_with_tools(messages)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="mfdy2" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> ToolRegistry
+          <pre><code id="3fqbpe" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> ToolRegistry
 
 registry = ToolRegistry([get_weather, search_database], llm)
 
@@ -481,12 +481,12 @@ result = registry.execute(<span class="hljs-string">&quot;get_weather&quot;</spa
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="74g7x" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="e8cmyf" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="74g7x" aria-label="Copy code">
+              <button class="copy-code" data-code-id="e8cmyf" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -508,7 +508,7 @@ result = registry.execute(<span class="hljs-string">&quot;get_weather&quot;</spa
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="74g7x" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role, Content, ContentType
+          <pre><code id="e8cmyf" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role, Content, ContentType
 
 <span class="hljs-comment"># Text + Image message</span>
 message = Message(
@@ -531,12 +531,12 @@ response = ai.invoke([message])</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="tdc5xu" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2e41g" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="tdc5xu" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2e41g" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -558,7 +558,7 @@ response = ai.invoke([message])</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="tdc5xu" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> FlowEngine, START, END, WorkflowState
+          <pre><code id="2e41g" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> FlowEngine, START, END, WorkflowState
 
 <span class="hljs-comment"># Define workflow with initial state schema</span>
 workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: [], <span class="hljs-string">&quot;result&quot;</span>: <span class="hljs-string">&quot;&quot;</span>})
@@ -594,12 +594,12 @@ result = <span class="hljs-keyword">await</span> workflow.invoke({<span class="h
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="gmrhej" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="p8x5t" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="gmrhej" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p8x5t" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -621,7 +621,7 @@ result = <span class="hljs-keyword">await</span> workflow.invoke({<span class="h
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="gmrhej" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">route_decision</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">str</span>:
+          <pre><code id="p8x5t" class="python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">route_decision</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">str</span>:
     result = state.get(<span class="hljs-string">&quot;result&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
     <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;error&quot;</span> <span class="hljs-keyword">in</span> result:
         <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;retry&quot;</span>
@@ -639,12 +639,12 @@ workflow.add_edge(<span class="hljs-string">&quot;retry&quot;</span>, <span clas
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="66xuk" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="oqmqs" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="66xuk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="oqmqs" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -666,7 +666,7 @@ workflow.add_edge(<span class="hljs-string">&quot;retry&quot;</span>, <span clas
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="66xuk" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="oqmqs" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 graph_url = workflow.get_diagram_url()
 display(Image(url=graph_url))</code></pre>
@@ -680,12 +680,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="b0331" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="pmmav" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="b0331" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pmmav" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -707,7 +707,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="b0331" class="python"><span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> stream_response <span class="hljs-keyword">in</span> workflow.invoke_stream(initial_state):
+          <pre><code id="pmmav" class="python"><span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> stream_response <span class="hljs-keyword">in</span> workflow.invoke_stream(initial_state):
     <span class="hljs-keyword">if</span> stream_response.<span class="hljs-built_in">type</span> == FlowEngineStreamType.NODE:
         <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Node: <span class="hljs-subst">{stream_response.node_name}</span>&quot;</span>)
     <span class="hljs-comment"># Handle streaming chunks</span></code></pre>
@@ -722,12 +722,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="z6cft" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3t8yy" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="z6cft" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3t8yy" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -749,7 +749,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="z6cft" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> InMemoryCheckpointer
+          <pre><code id="3t8yy" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> InMemoryCheckpointer
 
 checkpointer = InMemoryCheckpointer()
 workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []}, checkpointer=checkpointer)
@@ -765,12 +765,12 @@ result = <span class="hljs-keyword">await</span> workflow.invoke(initial_state, 
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ikc6" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="5mpw7a" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ikc6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="5mpw7a" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -792,7 +792,7 @@ result = <span class="hljs-keyword">await</span> workflow.invoke(initial_state, 
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ikc6" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> RedisCheckpointer
+          <pre><code id="5mpw7a" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> RedisCheckpointer
 
 checkpointer = RedisCheckpointer(host=<span class="hljs-string">&quot;localhost&quot;</span>, port=<span class="hljs-number">6379</span>)
 workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []}, checkpointer=checkpointer)</code></pre>
@@ -806,12 +806,12 @@ workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="i8uxg" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="f7dbj" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="i8uxg" aria-label="Copy code">
+              <button class="copy-code" data-code-id="f7dbj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -833,7 +833,7 @@ workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="i8uxg" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> SQLCheckpointer
+          <pre><code id="f7dbj" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> SQLCheckpointer
 
 <span class="hljs-comment"># PostgreSQL (async)</span>
 checkpointer = SQLCheckpointer(connection_string=<span class="hljs-string">&quot;postgresql+asyncpg://user:pass@host/db&quot;</span>)
@@ -853,12 +853,12 @@ workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="5e4bol" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="u3f9ti" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="5e4bol" aria-label="Copy code">
+              <button class="copy-code" data-code-id="u3f9ti" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -880,7 +880,7 @@ workflow = FlowEngine({<span class="hljs-string">&quot;messages&quot;</span>: []
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="5e4bol" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> FAISSVectorStore, OpenAIEmbedding, Document
+          <pre><code id="u3f9ti" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> FAISSVectorStore, OpenAIEmbedding, Document
 
 <span class="hljs-comment"># Initialize embedding model</span>
 embedding = OpenAIEmbedding(model=<span class="hljs-string">&quot;text-embedding-3-small&quot;</span>)
@@ -896,12 +896,12 @@ vector_store = FAISSVectorStore(embedding_client=embedding, dimension=<span clas
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ra483y" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="lnsg1e" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ra483y" aria-label="Copy code">
+              <button class="copy-code" data-code-id="lnsg1e" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -923,7 +923,7 @@ vector_store = FAISSVectorStore(embedding_client=embedding, dimension=<span clas
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ra483y" class="python">documents = [
+          <pre><code id="lnsg1e" class="python">documents = [
     Document(content=<span class="hljs-string">&quot;Python is a programming language.&quot;</span>, metadata={<span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;wiki&quot;</span>}),
     Document(content=<span class="hljs-string">&quot;Machine learning uses statistical models.&quot;</span>, metadata={<span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;textbook&quot;</span>}),
 ]
@@ -938,12 +938,12 @@ vector_store.add_documents(documents)</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="o885rg" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2zq0on" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="o885rg" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2zq0on" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -965,7 +965,7 @@ vector_store.add_documents(documents)</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="o885rg" class="python">results = vector_store.search(query=<span class="hljs-string">&quot;What is Python?&quot;</span>, top_k=<span class="hljs-number">3</span>)
+          <pre><code id="2zq0on" class="python">results = vector_store.search(query=<span class="hljs-string">&quot;What is Python?&quot;</span>, top_k=<span class="hljs-number">3</span>)
 <span class="hljs-keyword">for</span> doc, score <span class="hljs-keyword">in</span> results:
     <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Score: <span class="hljs-subst">{score:<span class="hljs-number">.4</span>f}</span> | <span class="hljs-subst">{doc.content}</span>&quot;</span>)</code></pre>
           </div>
@@ -977,12 +977,12 @@ vector_store.add_documents(documents)</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="0c6qq" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="z0fw5" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="0c6qq" aria-label="Copy code">
+              <button class="copy-code" data-code-id="z0fw5" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1004,7 +1004,7 @@ vector_store.add_documents(documents)</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="0c6qq" class="python"><span class="hljs-comment"># Save index</span>
+          <pre><code id="z0fw5" class="python"><span class="hljs-comment"># Save index</span>
 vector_store.save_index(<span class="hljs-string">&quot;./my_index&quot;</span>)
 
 <span class="hljs-comment"># Load index</span>
@@ -1027,12 +1027,12 @@ vector_store.load_index(<span class="hljs-string">&quot;./my_index&quot;</span>)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1h2sdk" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="7b3wm" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1h2sdk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="7b3wm" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1054,7 +1054,7 @@ vector_store.load_index(<span class="hljs-string">&quot;./my_index&quot;</span>)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1h2sdk" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> OpenAIEmbedding, BedrockEmbedding
+          <pre><code id="7b3wm" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> OpenAIEmbedding, BedrockEmbedding
 
 <span class="hljs-comment"># OpenAI</span>
 embedding = OpenAIEmbedding(model=<span class="hljs-string">&quot;text-embedding-3-small&quot;</span>)
@@ -1074,12 +1074,12 @@ vectors = embedding.embed([<span class="hljs-string">&quot;Hello world&quot;</sp
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="hdbpo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="k1iub" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="hdbpo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="k1iub" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1101,7 +1101,7 @@ vectors = embedding.embed([<span class="hljs-string">&quot;Hello world&quot;</sp
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="hdbpo" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> chunk_text
+          <pre><code id="k1iub" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> chunk_text
 
 chunks = chunk_text(
     text=<span class="hljs-string">&quot;Your long document text here...&quot;</span>,
@@ -1119,12 +1119,12 @@ chunks = chunk_text(
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="qw9xhk" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="p3ur38" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="qw9xhk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p3ur38" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1146,7 +1146,7 @@ chunks = chunk_text(
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="qw9xhk" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> chunk_markdown_by_header
+          <pre><code id="p3ur38" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> chunk_markdown_by_header
 
 chunks = chunk_markdown_by_header(
     markdown_text=<span class="hljs-string">&quot;# Title\n## Section 1\nContent...\n## Section 2\nMore content...&quot;</span>,
@@ -1163,12 +1163,12 @@ chunks = chunk_markdown_by_header(
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="nz45sp" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="g61soa" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="nz45sp" aria-label="Copy code">
+              <button class="copy-code" data-code-id="g61soa" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1190,7 +1190,7 @@ chunks = chunk_markdown_by_header(
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="nz45sp" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> clean_text_for_embedding
+          <pre><code id="g61soa" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> clean_text_for_embedding
 
 cleaned = clean_text_for_embedding(<span class="hljs-string">&quot;  Some   messy    text  with extra   spaces  &quot;</span>)</code></pre>
           </div>
@@ -1203,12 +1203,12 @@ cleaned = clean_text_for_embedding(<span class="hljs-string">&quot;  Some   mess
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="pc7mxo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="49w8u" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="pc7mxo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="49w8u" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1230,7 +1230,7 @@ cleaned = clean_text_for_embedding(<span class="hljs-string">&quot;  Some   mess
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="pc7mxo" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> trim_messages, safe_trim_messages, count_tokens_approximately
+          <pre><code id="49w8u" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> trim_messages, safe_trim_messages, count_tokens_approximately
 
 <span class="hljs-comment"># Count approximate tokens</span>
 token_count = count_tokens_approximately(messages)
@@ -1250,12 +1250,12 @@ trimmed = safe_trim_messages(messages, max_tokens=<span class="hljs-number">4000
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="7kmx9h" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="68i5" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="7kmx9h" aria-label="Copy code">
+              <button class="copy-code" data-code-id="68i5" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1277,7 +1277,7 @@ trimmed = safe_trim_messages(messages, max_tokens=<span class="hljs-number">4000
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="7kmx9h" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> llmfy_usage_tracker
+          <pre><code id="68i5" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> llmfy_usage_tracker
 
 <span class="hljs-comment"># After invocation, access usage data</span>
 response = ai.invoke(messages)
@@ -1297,12 +1297,12 @@ usage = llmfy_usage_tracker.get()
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="t488o5" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="bfoxae" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="t488o5" aria-label="Copy code">
+              <button class="copy-code" data-code-id="bfoxae" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1324,7 +1324,7 @@ usage = llmfy_usage_tracker.get()
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="t488o5" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
+          <pre><code id="bfoxae" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
     LLMfyException,
     RateLimitException,
     AuthenticationException,
@@ -1363,12 +1363,12 @@ usage = llmfy_usage_tracker.get()
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="926uh" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="vq4n2h" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="926uh" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vq4n2h" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1390,7 +1390,7 @@ usage = llmfy_usage_tracker.get()
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="926uh" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> tools_node, ToolRegistry
+          <pre><code id="vq4n2h" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> tools_node, ToolRegistry
 
 <span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_tools</span>(<span class="hljs-params">state: WorkflowState</span>) -&gt; <span class="hljs-built_in">dict</span>:
     messages = tools_node(
@@ -1408,12 +1408,12 @@ usage = llmfy_usage_tracker.get()
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="l74yvr" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="clc494" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="l74yvr" aria-label="Copy code">
+              <button class="copy-code" data-code-id="clc494" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1435,7 +1435,7 @@ usage = llmfy_usage_tracker.get()
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="l74yvr" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> tools_stream_node
+          <pre><code id="clc494" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> tools_stream_node
 
 <span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_tools_stream</span>(<span class="hljs-params">state: WorkflowState</span>):
     <span class="hljs-keyword">async</span> <span class="hljs-keyword">for</span> chunk <span class="hljs-keyword">in</span> tools_stream_node(
