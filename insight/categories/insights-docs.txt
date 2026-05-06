@@ -1,22 +1,24 @@
 1:"$Sreact.fragment"
 2:I[79520,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js"],""]
-3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-6:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
-7:"$Sreact.suspense"
-a:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-:HL["https://irufano.github.io/_next/static/chunks/80eaca057e22c934.css","style"]
+3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
+4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
+8:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
+:HL["https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-0:{"P":null,"b":"dKt9FtNUZcqxofW9BSAi_","c":["","insight","categories","insights-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["categories",{"children":[["category","insights-docs","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/80eaca057e22c934.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L9",false]],"m":"$undefined","G":["$a",[]],"S":true}
-b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
-d:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
-9:["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Le"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-10:I[90244,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-11:T16e2,
+:HL["https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","style",{"crossOrigin":"anonymous"}]
+0:{"P":null,"b":"F0KCAsOoaykOceOmEFRuB","c":["","insight","categories","insights-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["categories",{"children":[["category","insights-docs","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","crossOrigin":"anonymous"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/9ee931146ced6eca.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true,"nonce":"$undefined"}]],"$L6"]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+c:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"ViewportBoundary"]
+e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"MetadataBoundary"]
+6:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+7:["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$Ld"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$Lf"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/9ee931146ced6eca.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+11:I[90244,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/9ee931146ced6eca.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+12:T2dbc,
 Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
 
 ## Meta Data
@@ -288,7 +290,278 @@ output:
 > funtion getData () => {
 >    console.log("Hello world!");
 > }
-> ```5:["$","$Lf",null,{"type":"$undefined","children":["$","$7",null,{"children":["$","$L10",null,{"posts":[{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$11","readingTime":"5 min read"}],"category":"Insights Docs"}]}]}]
-c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-8:null
-e:[["$","title","0",{"children":"Irufano Dev - Developer Portal"}],["$","meta","1",{"name":"description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","2",{"property":"og:title","content":"Irufano Dev - Developer Portal"}],["$","meta","3",{"property":"og:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io"}],["$","meta","5",{"property":"og:site_name","content":"irufano Dev"}],["$","meta","6",{"property":"og:locale","content":"en_US"}],["$","meta","7",{"property":"og:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","8",{"property":"og:image:width","content":"800"}],["$","meta","9",{"property":"og:image:height","content":"600"}],["$","meta","10",{"property":"og:image:alt","content":"Irufano Insight"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Irufano Dev - Developer Portal"}],["$","meta","14",{"name":"twitter:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","15",{"name":"twitter:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","16",{"name":"twitter:image:width","content":"800"}],["$","meta","17",{"name":"twitter:image:height","content":"600"}],["$","meta","18",{"name":"twitter:image:alt","content":"Irufano Insight"}]]
+> ```
+
+## Formula (LaTeX)
+
+Formulas are rendered using [KaTeX](https://katex.org/). You can write both inline and block (display) math using standard LaTeX syntax.
+
+### Inline Formula
+
+Wrap the expression with single `$` to render it inline within a sentence.
+
+```md title="your-post.md"
+The area of a circle is $A = \pi r^2$.
+
+Euler's identity: $e^{i\pi} + 1 = 0$.
+```
+
+output:
+
+The area of a circle is $A = \pi r^2$.
+
+Euler's identity: $e^{i\pi} + 1 = 0$.
+
+### Block Formula
+
+Wrap the expression with double `$$` to render it as a centered display block.
+
+```md title="your-post.md"
+$$
+E = mc^2
+$$
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+$$
+\frac{d}{dx}\left(\int_{a}^{x} f(t)\, dt\right) = f(x)
+$$
+```
+
+output:
+
+$$
+E = mc^2
+$$
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+$$
+\frac{d}{dx}\left(\int_{a}^{x} f(t)\, dt\right) = f(x)
+$$
+
+### Common LaTeX Syntax
+
+| Description | LaTeX | Output |
+|---|---|---|
+| Fraction | `$\frac{a}{b}$` | $\frac{a}{b}$ |
+| Superscript | `$x^{2}$` | $x^{2}$ |
+| Subscript | `$x_{i}$` | $x_{i}$ |
+| Square root | `$\sqrt{x}$` | $\sqrt{x}$ |
+| Summation | `$\sum_{i=1}^{n} x_i$` | $\sum_{i=1}^{n} x_i$ |
+| Product | `$\prod_{i=1}^{n} x_i$` | $\prod_{i=1}^{n} x_i$ |
+| Integral | `$\int_{a}^{b} f(x)\,dx$` | $\int_{a}^{b} f(x)\,dx$ |
+| Greek letters | `$\alpha, \beta, \gamma$` | $\alpha, \beta, \gamma$ |
+| Matrix | `$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$` | $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ |
+
+> [tip]:
+>
+> `$...$` and `$$...$$` patterns inside fenced code blocks or inline code are **never** rendered as math — they are safely ignored during processing.
+
+## Diagram (Mermaid)
+
+Diagrams are rendered using [Mermaid](https://mermaid.js.org/). Use a fenced code block with the language set to `mermaid`.
+
+````md title="your-post.md"
+```mermaid
+<diagram definition here>
+```
+````
+
+### Flowchart
+
+````md title="your-post.md"
+```mermaid
+flowchart TD
+    A([Start]) --> B[Read input]
+    B --> C{Is valid?}
+    C -->|Yes| D[Process data]
+    C -->|No| E[Show error]
+    D --> F([End])
+    E --> F
+```
+````
+
+output:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[Read input]
+    B --> C{Is valid?}
+    C -->|Yes| D[Process data]
+    C -->|No| E[Show error]
+    D --> F([End])
+    E --> F
+```
+
+### Sequence Diagram
+
+````md title="your-post.md"
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    Client->>Server: POST /login
+    Server->>DB: Query user
+    DB-->>Server: User record
+    Server-->>Client: 200 OK + JWT
+```
+````
+
+output:
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    Client->>Server: POST /login
+    Server->>DB: Query user
+    DB-->>Server: User record
+    Server-->>Client: 200 OK + JWT
+```
+
+### Class Diagram
+
+````md title="your-post.md"
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() String
+    }
+    class Dog {
+        +fetch() void
+    }
+    class Cat {
+        +purr() void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+````
+
+output:
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() String
+    }
+    class Dog {
+        +fetch() void
+    }
+    class Cat {
+        +purr() void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+
+### Entity Relationship Diagram
+
+````md title="your-post.md"
+```mermaid
+erDiagram
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST {
+        int id PK
+        string title
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        string body
+        int post_id FK
+    }
+    USER ||--o{ POST : writes
+    POST ||--o{ COMMENT : has
+```
+````
+
+output:
+
+```mermaid
+erDiagram
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST {
+        int id PK
+        string title
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        string body
+        int post_id FK
+    }
+    USER ||--o{ POST : writes
+    POST ||--o{ COMMENT : has
+```
+
+> [tip]:
+>
+> Mermaid diagram source inside fenced code blocks with any other language label (e.g. ` ```md `) is **never** rendered as a diagram — only ` ```mermaid ` triggers rendering.
+
+## Reference Citations
+
+References allow you to cite sources with numbered inline citations that scroll-link to a reference list at the end of the post.
+
+### Inline Citations
+
+In the body of your post, write `[N]` for a single reference or `[N, M]` for multiple citations in one bracket. The numbers are automatically converted to clickable anchor links.
+
+```md title="your-post.md"
+This approach is widely used in adaptive testing [1].
+
+Multiple sources can be cited together [1, 2] or separately [3].
+
+You can cite as many as needed in one bracket [1, 2, 3].
+```
+
+### Reference List
+
+Add a `## References` section **at the end** of your post. Each entry must start with `[N]` at the beginning of a line:
+
+```md title="your-post.md"
+## References
+
+[1] Author, A. (2024). *Book Title*. Publisher.
+
+[2] Author, B., & Author, C. (2023). Article title. *Journal Name, 10*(2), 1–20. https://doi.org/...
+
+[3] Author, D. (2022). Conference paper title. *Proceedings of Conference*, 45–60.
+```
+
+When the post is rendered:
+- `[1]` in the body becomes `[[1]](#ref-1)` — a clickable link
+- `[1] Author...` in the reference list gets an anchor `<a id="ref-1">` so the browser can scroll to it
+- The scroll position is offset-aware and accounts for the fixed navbar height
+
+> [tip]:
+>
+> `[N]` patterns inside fenced code blocks or inline code are **never** converted — they are safely ignored during processing.
+
+> [important]:
+>
+> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.5:["$","$L10",null,{"type":"$undefined","children":["$","$a",null,{"children":["$","$L11",null,{"posts":[{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown","Mermaid"],"category":"Insights Docs"},"rawContent":"$12","readingTime":"9 min read"}],"category":"Insights Docs"}]}]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+f:[["$","title","0",{"children":"Irufano Dev - Developer Portal"}],["$","meta","1",{"name":"description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","2",{"property":"og:title","content":"Irufano Dev - Developer Portal"}],["$","meta","3",{"property":"og:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io"}],["$","meta","5",{"property":"og:site_name","content":"irufano Dev"}],["$","meta","6",{"property":"og:locale","content":"en_US"}],["$","meta","7",{"property":"og:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","8",{"property":"og:image:width","content":"800"}],["$","meta","9",{"property":"og:image:height","content":"600"}],["$","meta","10",{"property":"og:image:alt","content":"Irufano Insight"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Irufano Dev - Developer Portal"}],["$","meta","14",{"name":"twitter:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","15",{"name":"twitter:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","16",{"name":"twitter:image:width","content":"800"}],["$","meta","17",{"name":"twitter:image:height","content":"600"}],["$","meta","18",{"name":"twitter:image:alt","content":"Irufano Insight"}]]

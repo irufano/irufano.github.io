@@ -1,9 +1,709 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/27d91d202d49dd3f.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/14f65d2b30884074.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
 3:"$Sreact.suspense"
-4:I[3150,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/27d91d202d49dd3f.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-11:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
-5:T4f90,
+4:I[3150,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/14f65d2b30884074.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+13:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
+5:T4ab3,
+## Overview
+
+Computerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level. According to Weiss (IACAT), its objective is *"to select, for each examinee, the set of test questions from a pre-calibrated item bank that simultaneously most effectively and efficiently measures that person on the trait"* [1].
+
+Unlike conventional fixed-form tests where all examinees answer the same predetermined questions, CAT dynamically selects items based on the test-taker's estimated ability as they progress through the test [2]. The result is a test that is smarter, shorter, fairer, and more precise [3].
+
+---
+
+## Part 1: The Five Implementation Steps
+
+According to Seo (2017), there are **five steps** for implementing a CAT system [4]:
+
+### Step 1 — Determine Feasibility
+Before building a CAT, the test program must evaluate whether CAT is appropriate:
+- Is there a sufficient volume of test-takers to calibrate items? (Rule of thumb: at least 200–300 per item)
+- Is the construct **unidimensional** (measuring one trait)? IRT-based CAT assumes this
+- Is the item bank large enough? (Recommended: at least 3× the intended test length) [3]
+- Are there sufficient resources to build and maintain the platform?
+  
+> [note]:
+>
+> If the test volume is very small (e.g., fewer than 100 test-takers per year), it may be impossible to build a usable item bank. It is not unusual for a testing program to start with a fixed-form test and later transition to CAT once the item bank is well established [5].
+
+### Step 2 — Establish an Item Bank
+The item bank is the foundation of CAT. It must:
+- Contain a large pool of **pre-calibrated items** with known IRT parameters
+- Cover the full range of the ability scale (very easy to very hard)
+- Be organized with content categories for content balancing
+- Items must be **pilot-tested** on a representative sample before entering the live bank
+
+> [note]:
+>
+> "You can't just write a few items and subjectively rank them as Easy, Medium, or Hard. Instead, you need to write a large number of items and then pilot them on a representative sample of examinees." [3]
+
+### Step 3 — Pretest, Calibrate, and Link Item Parameters
+Each item must be statistically calibrated through:
+- **Pilot testing** on real examinees
+- **IRT calibration** — estimating the $a$ (discrimination), $b$ (difficulty), and $c$ (guessing) parameters
+- **Linking** — placing all items on the same IRT scale so they are comparable
+
+This is done through statistical analysis using actual candidate response data [4].
+
+### Step 4 — Specify the Five CAT Algorithm Components
+The test developer must define all five components of the CAT algorithm (see Part 2 below) [4]:
+1. Item bank structure
+2. Starting item/point
+3. Item selection rule
+4. Scoring procedure
+5. Termination criterion
+
+### Step 5 — Deploy the CAT
+After specifying all components, the CAT is deployed. Ongoing management includes:
+- Content balancing
+- Item analysis and refreshment
+- Standard setting
+- Item exposure monitoring
+- Item bank updates [4]
+
+---
+
+## Part 2: The Five Core Algorithm Components
+
+### Component 1: Item Bank
+
+The item bank is a pool of pre-calibrated items, each with known IRT parameters [4, 5].
+
+Key requirements:
+- **Size:** Typically at least 5–10× the test length to allow adequate item selection and exposure control
+- **Coverage:** Items spanning the full difficulty range ($-3 \leq \theta \leq 3$)
+- **Content balance:** Items organized by content domain/category
+- **Parameters:** Each item has at minimum a difficulty ($b$) parameter; ideally also discrimination ($a$) and guessing ($c$) for the 3PL model
+
+---
+
+### Component 2: Starting Point
+
+The starting point determines where the test begins on the ability scale. There are three common options [1, 3]:
+
+| Option | Description | Use Case |
+|---|---|---|
+| **Fixed value** | Everyone starts at $\hat{\theta}_0 = 0$ (population mean) | Most common for general tests |
+| **Randomized** | Start within a narrow range, e.g., $\hat{\theta}_0 \in [-0.5,\ 0.5]$ | Improves test security and item exposure |
+| **Predicted value** | Based on prior data or external information | When prior ability estimate is available |
+
+> [note]:
+> 
+> "At the initial stages of a CAT, when only a single item or two has been administered, the next item is usually selected by a step rule — if the first item was answered correctly, the examinee's original theta estimate is increased by some amount (e.g., 0.50); if the first item was answered incorrectly, the original theta estimate is decreased by the same amount." [1]
+
+---
+
+### Component 3: Item Selection Rule (Algorithm)
+
+This is the **heart of the CAT**. After each response, the algorithm selects the next best item from the unused items in the bank [5].
+
+The item selection process involves three sub-components [5]:
+
+#### 3a. Item Selection Criterion
+
+The most common methods are `Maximum Fisher Information` and `b-Matching` [5, 6]:
+
+**Maximum Fisher Information (most common)**
+
+Selects the item $i^*$ providing the highest statistical information at the current ability estimate $\hat{\theta}$:
+
+$$i^* = \underset{i \notin \mathcal{U}}{\arg\max}\ I_i(\hat{\theta})$$
+
+Where $I_i(\hat{\theta})$ is the Item Information Function (IIF) evaluated at $\hat{\theta}$, and $\mathcal{U}$ is the set of already-used items.
+
+For the **3-Parameter Logistic (3PL)** model, the IIF is:
+
+$$I_i(\theta) = \frac{a_i^2 \left[P_i(\theta) - c_i\right]^2}{(1 - c_i)^2} \cdot \frac{1 - P_i(\theta)}{P_i(\theta)}$$
+
+Where $P_i(\theta)$ is the probability of a correct response given by the 3PL model:
+
+$$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
+
+**b-Matching (difficulty matching)**
+
+Selects the item whose difficulty $b_i$ is closest to the current theta estimate:
+
+$$i^* = \underset{i \notin \mathcal{U}}{\arg\min}\ |b_i - \hat{\theta}|$$
+
+Simple but effective; does not require full IIF calculation.
+
+**Other criteria:** $a$-stratification, weighted likelihood, Kullback-Leibler information [5].
+
+#### 3b. Content Balancing
+Ensures the test covers required content domains proportionally — not just statistically optimal items. This addresses the concern of educators and subject matter experts who require balanced content coverage [2, 5].
+
+#### 3c. Item Exposure Control
+Prevents certain items from being administered too frequently, which would compromise test security [5]. Common methods:
+- **Randomesque method** — randomly selects from the top-$k$ most informative items
+- **Sympson-Hetter method** — probabilistically suppresses overexposed items
+- **Fade-away method** — gradually reduces exposure of frequently used items
+
+> [note]:
+>
+> "Selecting the right method for each of the 3 components of the item selection process — content balancing, the item selection criterion, and item exposure control — is not straightforward and cannot be considered separately for each of these 3 components because of the unique interactions among them." [5]
+
+---
+
+### Component 4: Scoring Procedure (Theta Estimation)
+
+After each response, the test-taker's ability estimate $\hat{\theta}$ is updated [2, 6].
+
+The scoring algorithm takes all previous responses into account — not just the most recent one. Let $\mathbf{u} = (u_1, u_2, \ldots, u_n)$ denote the vector of responses where $u_j = 1$ if correct and $u_j = 0$ if incorrect.
+
+#### Maximum Likelihood Estimation (MLE)
+
+Finds the $\hat{\theta}$ that maximizes the likelihood of the observed response pattern:
+
+$$\hat{\theta}_{MLE} = \underset{\theta}{\arg\max}\ L(\theta \mid \mathbf{u})$$
+
+The likelihood function is:
+
+$$L(\theta \mid \mathbf{u}) = \prod_{j=1}^{n} P_j(\theta)^{u_j} \left[1 - P_j(\theta)\right]^{1 - u_j}$$
+
+In practice, the log-likelihood is maximized:
+
+$$\ell(\theta) = \sum_{j=1}^{n} \left[ u_j \ln P_j(\theta) + (1 - u_j) \ln(1 - P_j(\theta)) \right]$$
+
+- **Pro:** Unbiased estimate
+- **Con:** Undefined when all responses are correct or all incorrect [1]
+
+#### Bayesian EAP (Expected A Posteriori)
+
+Combines the likelihood with a prior distribution $\pi(\theta)$ (typically standard normal $\mathcal{N}(0, 1)$):
+
+$$\hat{\theta}_{EAP} = \frac{\int_{-\infty}^{\infty} \theta \cdot L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}{\int_{-\infty}^{\infty} L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}$$
+
+- **Pro:** Works even with all-correct or all-incorrect response patterns
+- **Pro:** Provides a natural standard error estimate
+- **Con:** Slightly biased toward the prior mean in early items [6]
+
+#### Bayesian MAP (Maximum A Posteriori)
+
+Takes the mode of the posterior distribution:
+
+$$\hat{\theta}_{MAP} = \underset{\theta}{\arg\max}\ \left[ L(\theta \mid \mathbf{u}) \cdot \pi(\theta) \right]$$
+
+Intermediate between MLE and EAP in terms of bias and variance.
+
+> [note]:
+>
+> "The algorithm then selects the most informative item from the calibrated item bank based on this estimate. After the examinee responds, the ability estimate is updated using maximum likelihood or Bayesian methods, and the cycle continues until a stopping criterion is met." [6]
+
+#### Standard Error of Measurement (SEM)
+
+The precision of the theta estimate is tracked via the **Test Information Function**:
+
+$$\text{TIF}(\theta) = \sum_{j=1}^{n} I_j(\theta)$$
+
+The Standard Error of Measurement is:
+
+$$SE(\hat{\theta}) = \frac{1}{\sqrt{\text{TIF}(\hat{\theta})}} = \frac{1}{\sqrt{\sum_{j=1}^{n} I_j(\hat{\theta})}}$$
+
+The SEM **decreases** as more items are administered. CAT continues until $SE(\hat{\theta})$ falls below a specified threshold.
+
+---
+
+### Component 5: Termination Criterion
+
+The stopping rule decides when to end the test. Common criteria [2, 4, 6]:
+
+| Criterion | Condition | Advantage |
+|---|---|---|
+| **Fixed length** | Stop after $N$ items | Simple, equal testing time |
+| **Fixed precision** | Stop when $SE(\hat{\theta}) < \epsilon$ | Precision-based; adaptive length |
+| **Combined** | Stop when $SE(\hat{\theta}) < \epsilon$ OR $n \geq N_{max}$ | Balances precision and efficiency |
+| **Classification** | Stop when ability is clearly above/below a cut score $\theta_c$ | Used in pass/fail exams (e.g., NCLEX) |
+| **Time limit** | Stop after maximum time $T$ | Practical constraint |
+
+For **classification-based** stopping (e.g., pass/fail), the decision rule is:
+
+$$\text{Decision} = \begin{cases} \text{Pass} & \text{if } \hat{\theta} - z_{\alpha/2} \cdot SE(\hat{\theta}) > \theta_c \\ \text{Fail} & \text{if } \hat{\theta} + z_{\alpha/2} \cdot SE(\hat{\theta}) < \theta_c \\ \text{Continue} & \text{otherwise} \end{cases}$$
+
+Where $\theta_c$ is the passing cut score and $z_{\alpha/2}$ is the critical value at significance level $\alpha$.
+
+> [note]:
+> 
+> "Fixed-length tests administer a predetermined number of items, while precision-based stopping continues until the standard error of measurement falls below a threshold." [6]
+
+> [note]:
+>
+> For high-stakes exams like the NCLEX:
+> "This pattern continues until you run out of time or until the computer identifies your competency level as above or below the passing standard." [7]
+
+---
+
+## Part 3: The Full CAT Runtime Process
+
+Once deployed, the following iterative process runs for each test-taker [2, 33]:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B["1. Set Starting Point<br>theta = 0 or prior estimate<br>Response history = empty"]
+    B --> C["2. Select Next Item<br>From unused items in bank<br>Apply content balancing<br>Apply exposure control<br>Select i-star = argmax I_i"]
+    C --> D["3. Administer Item<br>Present item i-star to test-taker<br>Record response = 0 or 1<br>Add i-star to used set U"]
+    D --> E["4. Update Ability Estimate<br>Update response vector u<br>Recalculate theta via MLE or EAP<br>SE = 1 divided by sqrt of sum I"]
+    E --> F{"5. Termination Criterion Met?<br>SE less than epsilon OR n gte N_max"}
+    F -->|No| C
+    F -->|Yes| G["6. Report Final Score<br>Report theta and SE<br>Apply score transformation"]
+    G --> H([End])
+```
+
+---
+
+## Part 4: IRT Models Used in CAT
+
+CAT is built on Item Response Theory. The three most common models are [10]:
+
+### 1PL — Rasch Model
+Only difficulty $b$ varies between items; discrimination is fixed at $a = 1$ and guessing $c = 0$:
+
+$$P_i(\theta) = \frac{1}{1 + e^{-(\theta - b_i)}}$$
+
+### 2PL Model
+Both difficulty $b$ and discrimination $a$ vary; no guessing ($c = 0$):
+
+$$P_i(\theta) = \frac{1}{1 + e^{-a_i(\theta - b_i)}}$$
+
+### 3PL Model (most common in high-stakes CAT)
+All three parameters vary — discrimination $a_i$, difficulty $b_i$, and guessing $c_i$:
+
+$$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
+
+Where:
+- $\theta \in (-\infty, +\infty)$, typically $[-3, 3]$ — test-taker ability
+- $a_i > 0$ — item discrimination (steepness of the curve)
+- $b_i \in [-3, 3]$ — item difficulty (location of the curve)
+- $c_i \in [0, 1]$ — pseudo-guessing parameter (lower asymptote)
+
+---
+
+## Part 5: Historical Origins
+
+The adaptive testing concept is not new. Its origins can be traced to Alfred Binet's IQ test (1905), which used an adaptive procedure: items were organized by age-difficulty level, and the examiner would probe upward or downward based on each child's responses [1].
+
+The key historical milestones are [1, 8]:
+
+| Year | Event |
+|---|---|
+| 1905 | Binet's adaptive IQ test — first adaptive testing procedure |
+| 1952 | Lord observes that ability scores are test-independent (unlike observed scores) |
+| 1960 | Rasch describes the one-parameter logistic IRT model |
+| 1973 | Weiss proposes the "stradaptive" computer-delivered test |
+| 1980 | Lord publishes the foundational IRT textbook |
+| 1994 | NCLEX (nursing licensure exam) adopts CAT — first large-scale operational use |
+| 2007 | National Registry of Emergency Medical Technicians adopts CAT |
+
+---
+
+## Part 6: Practical Example — How CAT Selects Items
+
+The following example illustrates the item selection process step by step [3]:
+
+> Suppose we have five items in the bank and the starting theta is $\hat{\theta}_0 = 0.0$.
+
+**Round 1:**
+- Compute $I_i(0.0)$ for all items → **Item 4** has highest information
+- Test-taker answers **incorrectly** ($u_1 = 0$)
+- Run MLE/EAP → new estimate: $\hat{\theta}_1 = -2.0$
+- Check termination: $SE(\hat{\theta}_1)$ too large, continue
+
+**Round 2:**
+- Compute $I_i(-2.0)$ for remaining items → **Item 2** has highest information
+- Test-taker answers **correctly** ($u_2 = 1$)
+- Update theta → $\hat{\theta}_2 = -0.8$
+- Check termination: not done yet
+
+**Round 3:**
+- Item 2 and Item 4 already used ($\mathcal{U} = \{2, 4\}$)
+- Next best available at $\hat{\theta}_2 = -0.8$ → **Item 1**
+- Test-taker answers correctly ($u_3 = 1$, item is easy)
+- Update theta → $\hat{\theta}_3 = -0.2$
+- Continue...
+
+This demonstrates how CAT **homes in** on the test-taker's true ability through successive approximation.
+
+---
+
+## Part 7: Advantages and Challenges
+
+### Advantages 
+
+| Advantage | Detail |
+|---|---|
+| **Efficiency** | Typically 50% fewer items needed for same precision |
+| **Equal precision** | $SE(\hat{\theta})$ is controlled uniformly across all ability levels |
+| **Fairness** | Each test-taker gets items appropriate to their level |
+| **Immediate results** | Scoring is done in real-time |
+| **Security** | Unique item sets make sharing answers less useful |
+| **Adaptive length** | Test ends when $SE(\hat{\theta}) < \epsilon$ |
+
+[2, 4, 6]
+
+### Challenges 
+
+| Challenge | Detail |
+|---|---|
+| **Item bank development** | Requires large pilot studies to calibrate $a$, $b$, $c$ parameters |
+| **Cost** | Expensive to build and maintain the platform |
+| **Test-taker experience** | Test-takers may feel discouraged if items seem consistently hard |
+| **Content balance** | Purely statistical selection (argmax $I_i(\hat{\theta})$) may neglect content coverage |
+| **Item exposure** | Items with high $I_i(\theta)$ at common $\theta$ values are overused |
+| **Unidimensionality** | IRT assumes a single latent trait $\theta$; multidimensional constructs are harder |
+
+[2, 4, 5]
+
+> [note]:
+>
+> "A trade-off must be made between the psychological experiences of test-takers and measurement efficiency." [2]
+
+---
+
+## Part 8: Real-World Applications
+
+CAT is used in many high-stakes assessments worldwide [1, 4]:
+
+| Exam | Domain | CAT Since |
+|---|---|---|
+| **NCLEX-RN / NCLEX-PN** | Nursing licensure (USA) | 1994 |
+| **GRE General Test** | Graduate school admissions | 1994 |
+| **GMAT** | Business school admissions | 1997 |
+| **NREMT** | Emergency Medical Technicians | 2007 |
+| **TOEFL iBT** | English language proficiency | adaptive sections |
+| **ASVAB-CAT** | US Military enlistment | adaptive version |
+
+---
+
+## Summary
+
+The CAT process can be summarized in three phases:
+
+**Before the test (Development):**
+1. Determine feasibility
+2. Write and pilot items
+3. Calibrate IRT parameters ($a_i$, $b_i$, $c_i$)
+4. Build and validate the item bank
+5. Define all five algorithm components
+
+**During the test (Runtime loop):**
+1. Set starting point $\hat{\theta}_0$
+2. Select $i^* = \arg\max\ I_i(\hat{\theta})$ from unused items
+3. Administer item, record response $u \in \{0, 1\}$
+4. Update $\hat{\theta}$ using MLE or EAP; compute $SE(\hat{\theta})$
+5. Check stopping rule → repeat or stop
+
+**After the test (Reporting):**
+1. Report final $\hat{\theta}$ and $SE(\hat{\theta})$
+2. Apply score transformation if needed
+3. Log responses for item bank maintenance
+
+---
+
+## References
+
+[1] Weiss, D. J. (n.d.). *Introduction to CAT*. International Association for Computerized Adaptive Testing (IACAT). https://iacat.org/introduction-to-cat/
+
+[2] Kim, J., & Chung, H. (2017). The impacts of computer adaptive testing from a variety of perspectives. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5549015/
+
+[3] Assessment Systems Corporation. (2025). *Computerized Adaptive Testing (CAT): Software, Meaning, Example*. https://assess.com/computerized-adaptive-testing/
+
+[4] Seo, D. G. (2017). Overview and current management of computerized adaptive testing in licensing/certification examinations. *Journal of Educational Evaluation for Health Professions, 14*, 17. https://doi.org/10.3352/jeehp.2017.14.17
+
+[5] Kim, D., & Chung, H. (2018). Components of the item selection algorithm in computerized adaptive testing. *Journal of Educational Evaluation for Health Professions*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5968224/
+
+[6] Cogn-IQ. (2026). *Adaptive Testing in Psychometrics — Definition & Examples*. https://www.cogn-iq.org/learn/theory/adaptive-testing/
+
+[7] UWorld Nursing. (2025). *What Is NCLEX Computerized Adaptive Testing (CAT)?* https://nursing.uworld.com/blog/nclex-computer-adaptive-test/
+
+[8] Janssen, R., & De Boeck, P. (2010). *Computerized adaptive testing: implementation issues*. arXiv. https://arxiv.org/pdf/1012.0042
+
+[9] Wikipedia contributors. (2026). *Computerized adaptive testing*. Wikipedia. https://en.wikipedia.org/wiki/Computerized_adaptive_testing
+
+[10] Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum Associates.
+6:T26cd,
+## What is CAT?
+
+Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**. Unlike traditional fixed tests where everyone gets the same questions, CAT selects the most informative question for each individual at each step [1, 2].
+
+The core idea:
+- If you answer correctly → next question is **harder**
+- If you answer incorrectly → next question is **easier**
+- The test **converges** on your true ability with fewer questions than a fixed test
+
+> "CAT yields a high and equal degree of precision for all candidates, and requires fewer items than a conventional test to reach a given degree of precision." — Eggen & Verschoor (2006) [3]
+
+---
+
+## Core Components
+
+### 1. Item Response Theory (IRT)
+
+IRT is the mathematical foundation of CAT. It models the **probability of a correct response** as a function of the person's ability and the item's properties [4].
+
+The most common model is the **3-Parameter Logistic (3PL) model**:
+
+$$
+P(\theta) = c + (1-c) \cdot \frac{1}{1 + e^{-a(\theta - b)}}
+$$
+
+Where:
+- **θ (theta)** — the person's ability (typically ranges from -3 to +3)
+- **a** — discrimination parameter (how well the item differentiates abilities)
+- **b** — difficulty parameter (the ability level where P = 0.5)
+- **c** — guessing parameter (probability of correct answer by chance)
+
+Simpler models [4]:
+- **1PL (Rasch)** — only difficulty `b`, assumes equal discrimination
+- **2PL** — difficulty `b` + discrimination `a`, no guessing
+- **3PL** — full model with guessing `c`
+
+---
+
+### 2. Item Parameters
+
+Each item in your item bank has parameters that describe its characteristics [4, 5]:
+
+#### Difficulty (b)
+- Ranges typically from **-3 to +3**
+- `b = -2` → very easy item (most people get it right)
+- `b = 0` → medium item (50% chance at average ability)
+- `b = +2` → very hard item (only high ability people get it right)
+
+#### Discrimination (a)
+- Ranges typically from **0 to 3**
+- Higher `a` = better at separating high vs low ability test-takers
+- `a < 0.5` → poor discrimination, item barely helps
+- `a = 1.0` → good discrimination
+- `a > 2.0` → excellent discrimination
+
+#### Guessing (c)
+- Ranges from **0 to 1**
+- For multiple choice with 4 options, `c ≈ 0.25`
+- Accounts for the fact that low-ability test-takers can guess correctly
+
+---
+
+### 3. Item Information Function (IIF)
+
+The **information** an item provides tells us **how useful it is for estimating ability at a given theta level** [4]:
+
+$$
+I(\theta) = \frac{a^2 \left[P(\theta) - c\right]^2}{(1-c)^2 \cdot P(\theta) \cdot (1 - P(\theta))}
+$$
+
+Key insight:
+- An item provides **maximum information** when its difficulty matches the person's ability (`b ≈ θ`)
+- Items that are too easy or too hard provide little information
+- Higher discrimination `a` = more information overall
+
+This is why CAT selects items where **difficulty ≈ current theta** — it's the point of maximum information [5].
+
+---
+
+### 4. Theta Estimation
+
+After each response, the person's ability estimate is updated. The main methods are [4, 6]:
+
+#### Maximum Likelihood Estimation (MLE)
+Finds the theta that maximizes the likelihood of the observed response pattern:
+
+$$
+L(\theta) = \prod P(\theta)^u \cdot (1 - P(\theta))^{1-u}
+$$
+
+Where `u = 1` if correct, `u = 0` if incorrect.
+
+> **Problem:** MLE is undefined if all answers are correct or all incorrect.
+
+#### Bayesian Estimation (EAP/MAP)
+Uses a **prior distribution** (usually normal) combined with the likelihood [6]:
+
+$$
+\theta_{posterior} = \int \theta \cdot L(\theta) \cdot prior(\theta) \, d\theta
+$$
+
+- **EAP (Expected A Posteriori)** — takes the mean of the posterior
+- **MAP (Maximum A Posteriori)** — takes the mode of the posterior
+
+Bayesian methods work even with all-correct or all-incorrect patterns, making them preferred for CAT [3, 6].
+
+#### Simple Approximation
+```r
+if correct:   theta = theta + 0.3
+if incorrect: theta = theta - 0.3
+```
+
+This is a simplified approximation — not true IRT but easy to implement for prototyping.
+
+---
+
+### 5. Item Selection Methods
+
+At each step, CAT must choose the **next best item**. Common methods [2, 5]:
+
+#### Maximum Information (most common)
+Select the item that provides maximum information at current theta:
+
+```r
+# Select item with highest information at current theta
+I <- a^2 * P * (1-P)  # simplified 2PL information
+next_item <- item with max(I)
+```
+
+#### Closest Difficulty (simplified)
+Select item whose difficulty is closest to current theta:
+
+```r
+items$diff <- abs(items$difficulty - theta)
+selected <- items[which.min(items$diff), ]
+```
+
+Simple but effective approximation of maximum information.
+
+#### Other Methods
+
+| Method | Description |
+|---|---|
+| **Random from eligible set** | Adds randomness to prevent item overexposure [2] |
+| **Maximum Fisher information** | Full IRT-based calculation [4] |
+| **Kullback-Leibler information** | Information-theoretic approach [5] |
+
+---
+
+### 6. Stopping Rules
+
+CAT stops when one of these conditions is met [3, 7]:
+
+| Rule | Description |
+|---|---|
+| **Fixed length** | Stop after N items (simplest) |
+| **Standard error** | Stop when SE(θ) < threshold (e.g. SE < 0.3) |
+| **Confidence interval** | Stop when CI is narrow enough |
+| **Time limit** | Stop after time expires |
+| **Item bank exhausted** | No more unused items available |
+
+Standard error of theta:
+
+$$
+SE(\theta) = \frac{1}{\sqrt{\sum I(\theta)}}
+$$
+
+The more items answered, the lower the SE and the more precise the estimate.
+
+> For example, Huda et al. (2024) used SE ≤ 0.01 as the stopping criterion in their CAT implementation for student assessment [7].
+
+---
+
+## Full CAT Process Flow
+
+```
+1. START
+   θ₀ = 0 (or prior mean)
+   SE = ∞
+
+2. ITEM SELECTION
+   Find item i* = argmax I(θ_current)
+   from unused items
+
+3. PRESENT ITEM
+   Show question to test-taker
+   Record response u (1=correct, 0=incorrect)
+
+4. THETA UPDATE
+   Update θ using MLE or Bayesian method
+   based on all responses so far
+
+5. STOPPING CHECK
+   If stopping rule met → go to 6
+   Else → go back to 2
+
+6. REPORT
+   Final θ estimate
+   SE(θ)
+   Confidence interval
+```
+
+---
+
+## Why CAT is Better Than Fixed Tests
+
+| Feature | Fixed Test | CAT |
+|---|---|---|
+| Number of items | Same for everyone (e.g. 50) | Fewer needed (e.g. 20–25) [1] |
+| Precision | Same for all ability levels | Highest where it matters [3] |
+| Test experience | Many items too easy or too hard | Most items appropriately challenging [2] |
+| Item exposure | All items used equally | Risk of overexposure [2] |
+| Security | All items known | Items protected by adaptive selection [1] |
+| Test time | Longer | Shorter (30–50% reduction) [1] |
+
+---
+
+## Interpreting Theta (θ)
+
+Theta follows a standard normal distribution. Here's how to interpret the score [4]:
+
+| Theta Range | Interpretation |
+|---|---|
+| θ > 2.0 | Exceptionally high ability |
+| 1.0 < θ ≤ 2.0 | High ability |
+| -1.0 < θ ≤ 1.0 | Average ability |
+| -2.0 < θ ≤ -1.0 | Below average ability |
+| θ ≤ -2.0 | Very low ability |
+
+Theta can also be converted to a more familiar scale:
+
+$$
+\text{Score} = 500 + (\theta \times 100) \quad \text{// SAT-like scale (mean=500, SD=100)}
+$$
+
+$$
+\text{Score} = 100 + (\theta \times 15) \quad \text{// IQ-like scale (mean=100, SD=15)}
+$$
+
+---
+
+## Summary Table
+
+| Concept | Symbol | What it does |
+|---|---|---|
+| Ability estimate | θ (theta) | Represents person's latent ability [4] |
+| Difficulty | b | Item's difficulty level [4] |
+| Discrimination | a | How well item separates abilities [4] |
+| Guessing | c | Chance of correct answer without knowledge [4] |
+| Item Information | I(θ) | How useful an item is at a given theta [5] |
+| Standard Error | SE(θ) | Precision of the theta estimate [3] |
+| Theta estimation | MLE/EAP | Updates ability after each response [6] |
+| Item selection | argmax I(θ) | Picks most informative next item [2] |
+| Stopping rule | SE < 0.3 or N items | Decides when test is precise enough [3] |
+
+---
+
+## Key Takeaway
+
+> The goal of CAT is always: **estimate theta as accurately as possible using as few items as possible** [1, 3].
+
+CAT achieves this by always asking the question that provides the most information about the person's ability at their current estimated level — making every question count.
+
+---
+
+## References
+
+[1] Davey, T. (2011). *A guide to computer adaptive testing systems*. Council of Chief State School Officers.
+
+[2] van der Linden, W. J., & Glas, C. A. W. (2022). *Computerized Adaptive Testing: Theory and Practice*. Kluwer Academic Publishers.
+
+[3] Eggen, T. J. H. M., & Verschoor, A. J. (2006). Overview and current management of computerized adaptive testing in licensing/certification examinations. *PMC*, NCBI. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5676016/
+
+[4] Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum Associates / Routledge. https://doi.org/10.4324/9780203056615
+
+[5] De Ayala, R. J. (2009). *The Theory and Practice of Item Response Theory*. New York: The Guilford Press.
+
+[6] Magis, D., & Barrada, J. R. (2017). Computerized Adaptive Testing with R: Recent Updates of the Package catR. *Journal of Statistical Software, Code Snippets, 76*(1), 1–18. https://doi.org/10.18637/jss.v076.c01
+
+[7] Huda, A., Firdaus, F., Irfan, D., Hendriyani, Y., Almasri, A., & Sukmawati, M. (2024). Optimizing Educational Assessment: The Practicality of Computer Adaptive Testing (CAT) with an Item Response Theory (IRT) Approach. *JOIV: International Journal on Informatics Visualization, 8*(1), 473–480. https://doi.org/10.62527/joiv.8.1.2217
+
+[8] Magis, D., & Raiche, G. (2012). Random Generation of Response Patterns under Computerized Adaptive Testing with the R Package catR. *Journal of Statistical Software, 48*(8), 1–31. https://doi.org/10.18637/jss.v048.i08
+7:T4f90,
 ## What is SetFit?
 
 SetFit (Sentence Transformer Fine-Tuning) is a framework for **few-shot text classification**.
@@ -706,7 +1406,7 @@ print(probabilities)
 - **transformers<5** — pin this to avoid the `default_logdir` import error
 - **Evaluate before deploying** — always check accuracy on held-out data first
 - **Confusion matrix** — shows exactly where the model fails, so you know what training examples to add
-6:Tca22,
+8:Tca22,
 ## Definition
 
 Decision Tree atau pohon keputusan merupakan algoritma yang menggunakan graph berbentuk seperti pohon yang digunakan sebagai pendukung pengambilan keputusan. Struktur dari Decision Tree sama seperti flowchart, sehingga untuk setiap sub-node akan menggunakan output dari node sebelumnya, dimana sub-node tersebut bertindak sebagai penguji untuk setiap atribut. Decision Tree adalah pengklasifikasi yang dinyatakan sebagai partisi rekursif dari ruang instance. 
@@ -743,7 +1443,7 @@ Adapun algoritma dari Decision Tree adalah sebagai berikut:
 - Ulangi langkah tersebut pada tiap sub-node.
 - Hilangkan sub-node yang tidak meningkatkan akurasi. Hal ini bertujuan untuk mengurangi resiko overfitting
 
-[See the tutorial here](https://www.youtube.com/watch?v=Nnl-omROAsY&t=26s)7:T38ac,
+[See the tutorial here](https://www.youtube.com/watch?v=Nnl-omROAsY&t=26s)9:T38ac,
 ## Introduction
 
 **LLMfy** is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions — all in a single modular package.
@@ -1276,7 +1976,7 @@ LLMfy brings together the core building blocks for LLM-powered applications into
 | **Exception Handling** | Structured error hierarchy |
 
 For more details, visit the [documentation](https://llmfy.readthedocs.io) or the [GitHub repository](https://github.com/irufano/llmfy).
-8:T36b8,
+a:T36b8,
 ## What is RAG?
 
 Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.
@@ -1641,7 +2341,7 @@ Both Traditional and Agentic RAG have their place in the modern AI landscape. Tr
 The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
 
 As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
-9:T34e9,
+b:T34e9,
 ## AI Chatbot with langgraph
 The world of AI is currently hyped, have you ever thought about creating your own AI chatbot? In this tutorial, we will make one using langgraph.
 
@@ -1795,7 +2495,7 @@ while True:
         break
 ```
 
-**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.a:T665,
+**Congratulations!** You've built your first chatbot using LangGraph. This bot can engage in basic conversation by taking user input and generating responses using an LLM. You can inspect a LangSmith Trace for the call above at the provided link.c:T665,
 ## List commit
 ```sh
 git log -n [number] 
@@ -1895,7 +2595,7 @@ git describe --abbrev=0
 ## Edit last commit date
 ```sh
 git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
-```b:T1edc,
+```d:T1edc,
 ## Definition
 
 Generative AI refers to a type of artificial intelligence that creates new content, such as images, text, audio, or even video, based on patterns and data it has learned. What makes it a fantastic technology is that it democratizes AI, anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile, all you need is to use your language, state what you want and out comes a suggestion from an AI model. The applications and impact for this is huge, you write or understand reports, write applications and much more, all in seconds.
@@ -1968,7 +2668,7 @@ To add a knowledge base to an OpenAI-powered chatbot or application, you can use
 
 - **Combining LLMs with traditional search**: You can combine the capabilities of language models with traditional search mechanisms like Elasticsearch or other keyword-based systems.
   - **Method**: First, use search engines to retrieve relevant documents, and then pass those documents to OpenAI for processing and summarization.
-  - **Use case**: Works well in applications where quick retrieval from a large corpus of documents is needed, and then those documents are summarized or clarified by the LLM.c:T2333,
+  - **Use case**: Works well in applications where quick retrieval from a large corpus of documents is needed, and then those documents are summarized or clarified by the LLM.e:T2333,
 ## Definition
 
 Machine learning (ML) is a subset of artificial intelligence (AI) that involves developing algorithms that allow computers to learn from and make predictions or decisions `based on data`. Instead of being explicitly programmed to perform tasks, machine learning models `identify patterns` in data and improve their performance as they are exposed to more data over time.
@@ -2123,7 +2823,7 @@ Applications of Reinforcement Learning:
 5. **Learning**: Based on the reward, the agent updates its knowledge (usually the value function or policy) to improve future actions.
 
 6. **Repeat**: The process continues, with the agent learning and adapting its strategy over time to maximize cumulative rewards.
-d:T16e2,
+f:T2dbc,
 Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
 
 ## Meta Data
@@ -2395,8 +3095,279 @@ output:
 > funtion getData () => {
 >    console.log("Hello world!");
 > }
-> ```0:{"buildId":"dKt9FtNUZcqxofW9BSAi_","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"rawContent":"$5","readingTime":"12 min read"},{"slug":"supervised-decision-tree","meta":{"title":"Decision Tree Classifier Concepts","date":"2026-04-09","description":"Decision Tree atau pohon keputusan merupakan algoritma yang menggunakan graph berbentuk seperti pohon yang digunakan sebagai pendukung pengambilan keputusan.","author":"irufano","tags":["Machine Learning","Decision Tree"],"image":"https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dtc_002.png","category":"Machine Learning"},"rawContent":"$6","readingTime":"2 min read"},{"slug":"llmfy-features","meta":{"title":"LLMfy - Technical Features Overview","date":"2026-03-18","description":"A comprehensive technical overview of LLMfy, a Python framework for building LLM-powered applications with multi-provider support, workflow orchestration, vector storage, and more.","author":"irufano","tags":["LLM","Python","Framework","AI","OpenAI","AWS Bedrock"],"image":"https://raw.githubusercontent.com/irufano/llmfy/refs/heads/main/LLMFY-LOGO.webp","category":"Generative AI"},"rawContent":"$7","readingTime":"9 min read"},{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"rawContent":"$8","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"rawContent":"$9","readingTime":"5 min read"},{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/2color-lightbg@2x.png","category":"Git"},"rawContent":"$a","readingTime":"2 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png","category":"Generative AI"},"rawContent":"$b","readingTime":"7 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png","category":"Machine Learning"},"rawContent":"$c","readingTime":"7 min read"},{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown"],"category":"Insights Docs"},"rawContent":"$d","readingTime":"5 min read"}],"categories":["Generative AI","Git","Insights Docs","Machine Learning","NLP"]}]}]}],["$Le","$Lf"],"$L10"]}],"loading":null,"isPartial":false}
-e:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/27d91d202d49dd3f.js","async":true}]
-f:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true}]
-10:["$","$L11",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
-12:null
+> ```
+
+## Formula (LaTeX)
+
+Formulas are rendered using [KaTeX](https://katex.org/). You can write both inline and block (display) math using standard LaTeX syntax.
+
+### Inline Formula
+
+Wrap the expression with single `$` to render it inline within a sentence.
+
+```md title="your-post.md"
+The area of a circle is $A = \pi r^2$.
+
+Euler's identity: $e^{i\pi} + 1 = 0$.
+```
+
+output:
+
+The area of a circle is $A = \pi r^2$.
+
+Euler's identity: $e^{i\pi} + 1 = 0$.
+
+### Block Formula
+
+Wrap the expression with double `$$` to render it as a centered display block.
+
+```md title="your-post.md"
+$$
+E = mc^2
+$$
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+$$
+\frac{d}{dx}\left(\int_{a}^{x} f(t)\, dt\right) = f(x)
+$$
+```
+
+output:
+
+$$
+E = mc^2
+$$
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+$$
+\frac{d}{dx}\left(\int_{a}^{x} f(t)\, dt\right) = f(x)
+$$
+
+### Common LaTeX Syntax
+
+| Description | LaTeX | Output |
+|---|---|---|
+| Fraction | `$\frac{a}{b}$` | $\frac{a}{b}$ |
+| Superscript | `$x^{2}$` | $x^{2}$ |
+| Subscript | `$x_{i}$` | $x_{i}$ |
+| Square root | `$\sqrt{x}$` | $\sqrt{x}$ |
+| Summation | `$\sum_{i=1}^{n} x_i$` | $\sum_{i=1}^{n} x_i$ |
+| Product | `$\prod_{i=1}^{n} x_i$` | $\prod_{i=1}^{n} x_i$ |
+| Integral | `$\int_{a}^{b} f(x)\,dx$` | $\int_{a}^{b} f(x)\,dx$ |
+| Greek letters | `$\alpha, \beta, \gamma$` | $\alpha, \beta, \gamma$ |
+| Matrix | `$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$` | $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ |
+
+> [tip]:
+>
+> `$...$` and `$$...$$` patterns inside fenced code blocks or inline code are **never** rendered as math — they are safely ignored during processing.
+
+## Diagram (Mermaid)
+
+Diagrams are rendered using [Mermaid](https://mermaid.js.org/). Use a fenced code block with the language set to `mermaid`.
+
+````md title="your-post.md"
+```mermaid
+<diagram definition here>
+```
+````
+
+### Flowchart
+
+````md title="your-post.md"
+```mermaid
+flowchart TD
+    A([Start]) --> B[Read input]
+    B --> C{Is valid?}
+    C -->|Yes| D[Process data]
+    C -->|No| E[Show error]
+    D --> F([End])
+    E --> F
+```
+````
+
+output:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[Read input]
+    B --> C{Is valid?}
+    C -->|Yes| D[Process data]
+    C -->|No| E[Show error]
+    D --> F([End])
+    E --> F
+```
+
+### Sequence Diagram
+
+````md title="your-post.md"
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    Client->>Server: POST /login
+    Server->>DB: Query user
+    DB-->>Server: User record
+    Server-->>Client: 200 OK + JWT
+```
+````
+
+output:
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    Client->>Server: POST /login
+    Server->>DB: Query user
+    DB-->>Server: User record
+    Server-->>Client: 200 OK + JWT
+```
+
+### Class Diagram
+
+````md title="your-post.md"
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() String
+    }
+    class Dog {
+        +fetch() void
+    }
+    class Cat {
+        +purr() void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+````
+
+output:
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() String
+    }
+    class Dog {
+        +fetch() void
+    }
+    class Cat {
+        +purr() void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+
+### Entity Relationship Diagram
+
+````md title="your-post.md"
+```mermaid
+erDiagram
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST {
+        int id PK
+        string title
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        string body
+        int post_id FK
+    }
+    USER ||--o{ POST : writes
+    POST ||--o{ COMMENT : has
+```
+````
+
+output:
+
+```mermaid
+erDiagram
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST {
+        int id PK
+        string title
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        string body
+        int post_id FK
+    }
+    USER ||--o{ POST : writes
+    POST ||--o{ COMMENT : has
+```
+
+> [tip]:
+>
+> Mermaid diagram source inside fenced code blocks with any other language label (e.g. ` ```md `) is **never** rendered as a diagram — only ` ```mermaid ` triggers rendering.
+
+## Reference Citations
+
+References allow you to cite sources with numbered inline citations that scroll-link to a reference list at the end of the post.
+
+### Inline Citations
+
+In the body of your post, write `[N]` for a single reference or `[N, M]` for multiple citations in one bracket. The numbers are automatically converted to clickable anchor links.
+
+```md title="your-post.md"
+This approach is widely used in adaptive testing [1].
+
+Multiple sources can be cited together [1, 2] or separately [3].
+
+You can cite as many as needed in one bracket [1, 2, 3].
+```
+
+### Reference List
+
+Add a `## References` section **at the end** of your post. Each entry must start with `[N]` at the beginning of a line:
+
+```md title="your-post.md"
+## References
+
+[1] Author, A. (2024). *Book Title*. Publisher.
+
+[2] Author, B., & Author, C. (2023). Article title. *Journal Name, 10*(2), 1–20. https://doi.org/...
+
+[3] Author, D. (2022). Conference paper title. *Proceedings of Conference*, 45–60.
+```
+
+When the post is rendered:
+- `[1]` in the body becomes `[[1]](#ref-1)` — a clickable link
+- `[1] Author...` in the reference list gets an anchor `<a id="ref-1">` so the browser can scroll to it
+- The scroll position is offset-aware and accounts for the fixed navbar height
+
+> [tip]:
+>
+> `[N]` patterns inside fenced code blocks or inline code are **never** converted — they are safely ignored during processing.
+
+> [important]:
+>
+> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.0:{"buildId":"F0KCAsOoaykOceOmEFRuB","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"cat-procedure","meta":{"title":"The Actual Procedure and Process of Computer Adaptive Testing (CAT)","date":"2026-05-05","description":"omputerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$5","readingTime":"15 min read"},{"slug":"cat-theory","meta":{"title":"Computer Adaptive Testing (CAT) Theory","date":"2026-05-05","description":"Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$6","readingTime":"9 min read"},{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"rawContent":"$7","readingTime":"12 min read"},{"slug":"supervised-decision-tree","meta":{"title":"Decision Tree Classifier Concepts","date":"2026-04-09","description":"Decision Tree atau pohon keputusan merupakan algoritma yang menggunakan graph berbentuk seperti pohon yang digunakan sebagai pendukung pengambilan keputusan.","author":"irufano","tags":["Machine Learning","Decision Tree"],"image":"https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dtc_002.png","category":"Machine Learning"},"rawContent":"$8","readingTime":"2 min read"},{"slug":"llmfy-features","meta":{"title":"LLMfy - Technical Features Overview","date":"2026-03-18","description":"A comprehensive technical overview of LLMfy, a Python framework for building LLM-powered applications with multi-provider support, workflow orchestration, vector storage, and more.","author":"irufano","tags":["LLM","Python","Framework","AI","OpenAI","AWS Bedrock"],"image":"https://raw.githubusercontent.com/irufano/llmfy/refs/heads/main/LLMFY-LOGO.webp","category":"Generative AI"},"rawContent":"$9","readingTime":"9 min read"},{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"rawContent":"$a","readingTime":"9 min read"},{"slug":"build_basic_chatbot","meta":{"title":"Build a Basic Chatbot","date":"2025-01-13","description":"LangGraph` is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. ","author":"irufano","tags":["AI","Generative AI","Langgraph","Langchain"],"image":"https://raw.githubusercontent.com/langchain-ai/langgraph/main/.github/images/logo-dark.svg","category":"Generative AI"},"rawContent":"$b","readingTime":"5 min read"},{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg","category":"Git"},"rawContent":"$c","readingTime":"2 min read"},{"slug":"gen-ai-concepts","meta":{"title":"Generative AI Key Concepts","date":"2024-09-24","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["AI","Generative AI"],"image":"https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/01-introduction-to-genai/images/AI-diagram.png","category":"Generative AI"},"rawContent":"$d","readingTime":"7 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png","category":"Machine Learning"},"rawContent":"$e","readingTime":"7 min read"},{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown","Mermaid"],"category":"Insights Docs"},"rawContent":"$f","readingTime":"9 min read"}],"categories":["CAT","Generative AI","Git","Insights Docs","Machine Learning","NLP"]}]}]}],["$L10","$L11"],"$L12"]}],"loading":null,"isPartial":false}
+10:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/14f65d2b30884074.js","async":true}]
+11:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true}]
+12:["$","$L13",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]
+14:null

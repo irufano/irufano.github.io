@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/6b6191a0a844f1d8.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
 3:"$Sreact.suspense"
-4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/6b6191a0a844f1d8.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
 5:T4f90,
 ## What is SetFit?
 
@@ -706,8 +706,8 @@ print(probabilities)
 - **transformers<5** — pin this to avoid the `default_logdir` import error
 - **Evaluate before deploying** — always check accuracy on held-out data first
 - **Confusion matrix** — shows exactly where the model fails, so you know what training examples to add
-0:{"buildId":"dKt9FtNUZcqxofW9BSAi_","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"rawContent":"$5","readingTime":"12 min read"}],"tag":"SetFit"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
-6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/f8fe314245e82ae9.js","async":true}]
-7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true}]
+0:{"buildId":"F0KCAsOoaykOceOmEFRuB","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"rawContent":"$5","readingTime":"12 min read"}],"tag":"SetFit"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/6b6191a0a844f1d8.js","async":true}]
+7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true}]
 8:["$","$L9",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]
 a:null

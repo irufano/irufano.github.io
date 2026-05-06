@@ -1,22 +1,24 @@
 1:"$Sreact.fragment"
 2:I[79520,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js"],""]
-3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-6:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
-7:"$Sreact.suspense"
-a:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
-:HL["https://irufano.github.io/_next/static/chunks/80eaca057e22c934.css","style"]
+3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
+4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
+8:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
+:HL["https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-0:{"P":null,"b":"dKt9FtNUZcqxofW9BSAi_","c":["","insight","post","traditional-rag-vs-agentic-rag"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","traditional-rag-vs-agentic-rag","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/80eaca057e22c934.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/e425dafdd21f4273.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L9",false]],"m":"$undefined","G":["$a",[]],"S":true}
-b:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
-d:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
-9:["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Le"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/e425dafdd21f4273.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-10:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/e425dafdd21f4273.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-11:T9eab,<h2 id="what-is-rag">What is RAG?</h2>
+:HL["https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","style",{"crossOrigin":"anonymous"}]
+0:{"P":null,"b":"F0KCAsOoaykOceOmEFRuB","c":["","insight","post","traditional-rag-vs-agentic-rag"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","traditional-rag-vs-agentic-rag","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","crossOrigin":"anonymous"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true,"nonce":"$undefined"}]],"$L6"]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
+9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+c:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"ViewportBoundary"]
+e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"MetadataBoundary"]
+6:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+7:["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$Ld"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$Lf"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+11:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+12:T9eab,<h2 id="what-is-rag">What is RAG?</h2>
 <p>Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.</p>
 <h2 id="traditional-rag-architecture">Traditional RAG Architecture</h2>
 <p><img src="https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/traditional-rag.svg" alt="image"></p>
@@ -179,12 +181,12 @@ f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">Traditional RAG Stack</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="kd04fo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ox2h3o" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="kd04fo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ox2h3o" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -206,7 +208,7 @@ f:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","h
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="kd04fo" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
+          <pre><code id="ox2h3o" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
 Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           </div>
           </div>
@@ -217,12 +219,12 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">Agentic RAG Stack</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="080py" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="oagrwa" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="080py" aria-label="Copy code">
+              <button class="copy-code" data-code-id="oagrwa" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -244,7 +246,7 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="080py" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
+          <pre><code id="oagrwa" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
 [Multiple Tools in Parallel] → Result Aggregator → Context Optimizer → 
 LLM Service → Response Validator → Frontend</code></pre>
           </div>
@@ -272,12 +274,12 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="r5eag" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="5wzm5u" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="r5eag" aria-label="Copy code">
+              <button class="copy-code" data-code-id="5wzm5u" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -299,7 +301,7 @@ LLM Service → Response Validator → Frontend</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="r5eag" class="python"><span class="hljs-meta">@Tool()</span>
+          <pre><code id="5wzm5u" class="python"><span class="hljs-meta">@Tool()</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">company_info_search</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
     <span class="hljs-string">&quot;&quot;&quot;Use for general company information.&quot;&quot;&quot;</span>
 
@@ -322,12 +324,12 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="3hjs6" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="czmb63" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="3hjs6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="czmb63" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -349,7 +351,7 @@ LLM Service → Response Validator → Frontend</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="3hjs6" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
+          <pre><code id="czmb63" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
     LLMfy,
     START,
     END,
@@ -441,12 +443,12 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="x1ougb" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="kbn7df" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="x1ougb" aria-label="Copy code">
+              <button class="copy-code" data-code-id="kbn7df" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -468,7 +470,7 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="x1ougb" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="kbn7df" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 <span class="hljs-comment"># Check diagram</span>
 graph_url = workflow.get_diagram_url()
@@ -484,12 +486,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="llpfuj" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="a8ze" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="llpfuj" aria-label="Copy code">
+              <button class="copy-code" data-code-id="a8ze" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -511,7 +513,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="llpfuj" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
+          <pre><code id="a8ze" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
 
 
 <span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">call_agentic_rag</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
@@ -535,12 +537,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ktxwir" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ir2n6" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ktxwir" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ir2n6" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -562,7 +564,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ktxwir" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
+          <pre><code id="ir2n6" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
 </code></pre>
           </div>
           </div>
@@ -573,12 +575,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ukfn3t" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="8f6q0i" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ukfn3t" aria-label="Copy code">
+              <button class="copy-code" data-code-id="8f6q0i" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -600,7 +602,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ukfn3t" class="sh">Visi:
+          <pre><code id="8f6q0i" class="sh">Visi:
 Menjadi perusahaan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk meningkatkan kualitas hidup masyarakat serta menciptakan nilai tambah bagi seluruh pemangku kepentingan.
 
 Misi:
@@ -615,7 +617,7 @@ Misi:
 <p>Both Traditional and Agentic RAG have their place in the modern AI landscape. Traditional RAG provides a solid foundation for straightforward retrieval tasks with its simplicity, predictability, and cost-effectiveness. Agentic RAG, while more complex, offers unprecedented flexibility and capability for handling sophisticated information needs.</p>
 <p>The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.</p>
 <p>As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.</p>
-12:T36b8,
+13:T36b8,
 ## What is RAG?
 
 Retrieval-Augmented Generation combines the power of large language models with external knowledge retrieval systems. Instead of relying solely on pre-trained knowledge, RAG systems can access up-to-date information from various sources, making them more accurate and current for knowledge-intensive tasks.
@@ -980,7 +982,7 @@ Both Traditional and Agentic RAG have their place in the modern AI landscape. Tr
 The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
 
 As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
-5:["$","$Lf",null,{"type":"$undefined","children":["$","$L10",null,{"post":{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"content":"$11","sections":[{"level":"2","id":"what-is-rag","text":"What is RAG?"},{"level":"2","id":"traditional-rag-architecture","text":"Traditional RAG Architecture"},{"level":"3","id":"core-components","text":"Core Components"},{"level":"3","id":"traditional-rag-workflow","text":"Traditional RAG Workflow"},{"level":"3","id":"advantages-of-traditional-rag","text":"Advantages of Traditional RAG"},{"level":"3","id":"limitations-of-traditional-rag","text":"Limitations of Traditional RAG"},{"level":"2","id":"agentic-rag-architecture","text":"Agentic RAG Architecture"},{"level":"3","id":"core-innovation-the-aggregator-agent","text":"Core Innovation: The Aggregator Agent"},{"level":"3","id":"enhanced-components","text":"Enhanced Components"},{"level":"3","id":"agentic-rag-workflow","text":"Agentic RAG Workflow"},{"level":"3","id":"advantages-of-agentic-rag","text":"Advantages of Agentic RAG"},{"level":"3","id":"potential-challenges-of-agentic-rag","text":"Potential Challenges of Agentic RAG"},{"level":"2","id":"comparative-analysis","text":"Comparative Analysis"},{"level":"3","id":"performance-characteristics","text":"Performance Characteristics"},{"level":"3","id":"use-case-suitability","text":"Use Case Suitability"},{"level":"3","id":"implementation-considerations","text":"Implementation Considerations"},{"level":"2","id":"technical-implementation-insights","text":"Technical Implementation Insights"},{"level":"3","id":"traditional-rag-implementation-stack","text":"Traditional RAG Implementation Stack"},{"level":"3","id":"agentic-rag-implementation-stack","text":"Agentic RAG Implementation Stack"},{"level":"3","id":"key-technical-considerations","text":"Key Technical Considerations"},{"level":"2","id":"implementation-agentic-rag-with-llmfy","text":"Implementation Agentic RAG with LLMfy"},{"level":"3","id":"define-tools","text":"Define tools"},{"level":"3","id":"define-agentic-rag","text":"Define Agentic RAG"},{"level":"3","id":"check-workflow-agent-diagram-in-notebooks","text":"Check workflow agent diagram in Notebooks"},{"level":"3","id":"define-funtion-to-call-agentic-rag","text":"Define Funtion to call agentic RAG"},{"level":"3","id":"test-call","text":"Test Call"},{"level":"2","id":"conclusion","text":"Conclusion"}],"raw":"$12","readingTime":"9 min read"},"pathname":"/insight/post/traditional-rag-vs-agentic-rag"}]}]
-c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-8:null
-e:[["$","title","0",{"children":"Traditional RAG vs Agentic RAG"}],["$","meta","1",{"name":"description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","2",{"property":"og:title","content":"Traditional RAG vs Agentic RAG"}],["$","meta","3",{"property":"og:description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/traditional-rag-vs-agentic-rag"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Traditional RAG vs Agentic RAG"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Traditional RAG vs Agentic RAG"}],["$","meta","12",{"name":"twitter:description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","13",{"name":"twitter:image","content":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg"}],["$","meta","14",{"name":"twitter:image:width","content":"800"}],["$","meta","15",{"name":"twitter:image:height","content":"600"}],["$","meta","16",{"name":"twitter:image:alt","content":"Traditional RAG vs Agentic RAG"}]]
+5:["$","$L10",null,{"type":"$undefined","children":["$","$L11",null,{"post":{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"content":"$12","sections":[{"level":"2","id":"what-is-rag","text":"What is RAG?"},{"level":"2","id":"traditional-rag-architecture","text":"Traditional RAG Architecture"},{"level":"3","id":"core-components","text":"Core Components"},{"level":"3","id":"traditional-rag-workflow","text":"Traditional RAG Workflow"},{"level":"3","id":"advantages-of-traditional-rag","text":"Advantages of Traditional RAG"},{"level":"3","id":"limitations-of-traditional-rag","text":"Limitations of Traditional RAG"},{"level":"2","id":"agentic-rag-architecture","text":"Agentic RAG Architecture"},{"level":"3","id":"core-innovation-the-aggregator-agent","text":"Core Innovation: The Aggregator Agent"},{"level":"3","id":"enhanced-components","text":"Enhanced Components"},{"level":"3","id":"agentic-rag-workflow","text":"Agentic RAG Workflow"},{"level":"3","id":"advantages-of-agentic-rag","text":"Advantages of Agentic RAG"},{"level":"3","id":"potential-challenges-of-agentic-rag","text":"Potential Challenges of Agentic RAG"},{"level":"2","id":"comparative-analysis","text":"Comparative Analysis"},{"level":"3","id":"performance-characteristics","text":"Performance Characteristics"},{"level":"3","id":"use-case-suitability","text":"Use Case Suitability"},{"level":"3","id":"implementation-considerations","text":"Implementation Considerations"},{"level":"2","id":"technical-implementation-insights","text":"Technical Implementation Insights"},{"level":"3","id":"traditional-rag-implementation-stack","text":"Traditional RAG Implementation Stack"},{"level":"3","id":"agentic-rag-implementation-stack","text":"Agentic RAG Implementation Stack"},{"level":"3","id":"key-technical-considerations","text":"Key Technical Considerations"},{"level":"2","id":"implementation-agentic-rag-with-llmfy","text":"Implementation Agentic RAG with LLMfy"},{"level":"3","id":"define-tools","text":"Define tools"},{"level":"3","id":"define-agentic-rag","text":"Define Agentic RAG"},{"level":"3","id":"check-workflow-agent-diagram-in-notebooks","text":"Check workflow agent diagram in Notebooks"},{"level":"3","id":"define-funtion-to-call-agentic-rag","text":"Define Funtion to call agentic RAG"},{"level":"3","id":"test-call","text":"Test Call"},{"level":"2","id":"conclusion","text":"Conclusion"}],"raw":"$13","readingTime":"9 min read"},"pathname":"/insight/post/traditional-rag-vs-agentic-rag"}]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+f:[["$","title","0",{"children":"Traditional RAG vs Agentic RAG"}],["$","meta","1",{"name":"description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","2",{"property":"og:title","content":"Traditional RAG vs Agentic RAG"}],["$","meta","3",{"property":"og:description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/traditional-rag-vs-agentic-rag"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Traditional RAG vs Agentic RAG"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Traditional RAG vs Agentic RAG"}],["$","meta","12",{"name":"twitter:description","content":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data."}],["$","meta","13",{"name":"twitter:image","content":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg"}],["$","meta","14",{"name":"twitter:image:width","content":"800"}],["$","meta","15",{"name":"twitter:image:height","content":"600"}],["$","meta","16",{"name":"twitter:image:alt","content":"Traditional RAG vs Agentic RAG"}]]

@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/9ee931146ced6eca.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
 3:"$Sreact.suspense"
-4:I[90244,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","https://irufano.github.io/_next/static/chunks/a98e929201195770.js"],"default"]
-a:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+4:I[90244,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/9ee931146ced6eca.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+a:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
 5:Tca22,
 ## Definition
 
@@ -195,8 +195,8 @@ Applications of Reinforcement Learning:
 5. **Learning**: Based on the reward, the agent updates its knowledge (usually the value function or policy) to improve future actions.
 
 6. **Repeat**: The process continues, with the agent learning and adapting its strategy over time to maximize cumulative rewards.
-0:{"buildId":"dKt9FtNUZcqxofW9BSAi_","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"supervised-decision-tree","meta":{"title":"Decision Tree Classifier Concepts","date":"2026-04-09","description":"Decision Tree atau pohon keputusan merupakan algoritma yang menggunakan graph berbentuk seperti pohon yang digunakan sebagai pendukung pengambilan keputusan.","author":"irufano","tags":["Machine Learning","Decision Tree"],"image":"https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dtc_002.png","category":"Machine Learning"},"rawContent":"$5","readingTime":"2 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png","category":"Machine Learning"},"rawContent":"$6","readingTime":"7 min read"}],"category":"Machine Learning"}]}]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-7:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/dfb26cf8ede18339.js","async":true}]
-8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/a98e929201195770.js","async":true}]
+0:{"buildId":"F0KCAsOoaykOceOmEFRuB","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"supervised-decision-tree","meta":{"title":"Decision Tree Classifier Concepts","date":"2026-04-09","description":"Decision Tree atau pohon keputusan merupakan algoritma yang menggunakan graph berbentuk seperti pohon yang digunakan sebagai pendukung pengambilan keputusan.","author":"irufano","tags":["Machine Learning","Decision Tree"],"image":"https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dtc_002.png","category":"Machine Learning"},"rawContent":"$5","readingTime":"2 min read"},{"slug":"machine-learning-concepts","meta":{"title":"Machine Learning Key Concepts","date":"2024-09-17","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["Machine Learning"],"image":"https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/_images/plot_ML_flow_chart_12.png","category":"Machine Learning"},"rawContent":"$6","readingTime":"7 min read"}],"category":"Machine Learning"}]}]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+7:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/9ee931146ced6eca.js","async":true}]
+8:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true}]
 9:["$","$La",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
 b:null
