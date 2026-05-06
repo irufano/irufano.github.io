@@ -3,6 +3,7 @@ import Script from "next/script";
 import "../styles/globals.css";
 // import "highlight.js/styles/tomorrow-night-blue.min.css";
 import "../styles/atom-one-dark.css";
+import "katex/dist/katex.min.css";
 
 import { defaultFont } from "@/utils/font";
 
@@ -46,11 +47,6 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
-          crossOrigin="anonymous"
         />
         {process.env.NODE_ENV === "production" && (
           <>

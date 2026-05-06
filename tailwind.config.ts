@@ -98,6 +98,11 @@ const config: Config = {
               color: theme("colors.text.light"),
               fontWeight: "600",
               fontSize: "1.1rem",
+              paddingBottom: "1rem",
+            },
+            h6: {
+              color: theme("colors.text.light"),
+              paddingBottom: "1rem",
             },
             blockquote: {
               borderLeftColor: theme("colors.text.light"),
@@ -122,6 +127,11 @@ const config: Config = {
               color: theme("colors.text.heading"),
               fontWeight: "600",
               fontSize: "1.1rem",
+              paddingBottom: "0.5rem",
+            },
+            h6: {
+              color: theme("colors.text.heading"),
+              paddingBottom: "0.5rem",
             },
             blockquote: {
               borderLeftColor: theme("colors.text.dark"),

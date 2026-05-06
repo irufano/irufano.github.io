@@ -422,6 +422,11 @@ h6:hover .heading-anchor {
   background-color: transparent !important;
 }
 
+/* Tailwind preflight sets svg { display: block } which breaks KaTeX sqrt rendering */
+.katex svg {
+  display: inline;
+}
+
 .mermaid-diagram svg .background,
 .mermaid-diagram svg rect:first-child {
   fill: transparent !important;

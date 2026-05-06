@@ -286,6 +286,16 @@ export default function PostContent({ post, pathname }: PostContentProps) {
     return () => clearTimeout(timeout);
   }, []);
 
+  const sectionIndent = (level: string) => {
+    switch (level) {
+      case "3": return "ml-4";
+      case "4": return "ml-8";
+      case "5": return "ml-12";
+      case "6": return "ml-16";
+      default:  return "";
+    }
+  };
+
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string
@@ -462,13 +472,15 @@ export default function PostContent({ post, pathname }: PostContentProps) {
           {/* Search and Section Links (mobile) */}
           {sections.length > 0 && (
             <div className="block lg:hidden mb-8 lg:mb-0">
-              {searchBar}
+              <div className="sticky top-20 z-10 bg-white dark:bg-gray-900 pb-1">
+                {searchBar}
+              </div>
               <ExpansionTile title="Contents">
                 <div className="list-none">
                   {post.sections.map((heading) => (
                     <div
                       key={heading?.id}
-                      className={`mb-1 ${heading?.level === "3" ? "ml-4" : heading?.level === "4" ? "ml-8" : ""}`}
+                      className={`mb-1 ${sectionIndent(heading?.level)}`}
                     >
                       <a
                         href={`#${heading?.id}`}
@@ -534,12 +546,12 @@ export default function PostContent({ post, pathname }: PostContentProps) {
 
       {/* Section sidebar (desktop) */}
       {sections.length > 0 && (
-        <aside className="lg:w-1/4 sticky max-h-[80vh] overflow-auto top-24 mb-24 self-start hidden lg:block [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-600 [&::-webkit-scrollbar-thumb]:rounded-full">
-          <div className="p-4 border-l-2 border-l-gray-200 dark:border-l-gray-800">
-            <div className="ml-6 mr-2">
+        <aside className="lg:w-[28%] sticky max-h-[80vh] top-24 mb-24 self-start hidden lg:flex lg:flex-col">
+          <div className="px-4 pt-2 border-l-2 border-l-gray-200 dark:border-l-gray-800 flex flex-col min-h-0 flex-1">
+            <div className="mx-6 shrink-0 pb-2">
               {searchBar}
             </div>
-            <nav className="mb-8">
+            <nav className="pr-6 mb-8 overflow-auto flex-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-600 [&::-webkit-scrollbar-thumb]:rounded-full">
               <h2 className="ml-6 text-base font-semibold mb-2 text-gray-500">
                 Contents
               </h2>
@@ -547,7 +559,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
                 {post.sections.map((heading) => (
                   <li
                     key={heading?.id}
-                    className={`mb-[0.3rem] ${heading?.level === "3" ? "ml-4" : heading?.level === "4" ? "ml-8" : ""}`}
+                    className={`mb-[0.3rem] ${sectionIndent(heading?.level)}`}
                   >
                     <a
                       href={`#${heading?.id}`}

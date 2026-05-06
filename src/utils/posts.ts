@@ -261,7 +261,8 @@ export function getPostBySlug(slug: string): Post {
   const { data, content } = matter(fileContents);
 
   const readingTimeEst = calculateReadingTime(content);
-  const mathProcessed = renderReferences(renderMath(content));
+  const { content: mathPlaceholders, store: mathStore } = renderMath(content);
+  const withReferences = renderReferences(mathPlaceholders);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const processedContent = (remark() as any)
@@ -386,35 +387,31 @@ export function getPostBySlug(slug: string): Post {
       visit(tree as Parameters<typeof visit>[0], "emphasis", (node: Record<string, unknown>) => {
         const children = node.children as Array<Record<string, unknown>> | undefined;
         if (children && children.length > 0) {
-          children.forEach((child) => {
-            if (child?.type === "strong" && (child.children as Array<Record<string, unknown>>)?.length > 0) {
-              (child.children as Array<Record<string, unknown>>)?.forEach((child2) => {
-                node.type = "html";
-                node.value = `<span class="emphasis-strong-block">${child2?.value}</span>`;
-              });
-            } else {
-              node.type = "html";
-              node.value = `<span class="emphasis-block">${child?.value}</span>`;
-            }
-          });
+          // ***bold-italic***: single strong child wrapping the whole content
+          if (children.length === 1 && children[0]?.type === "strong") {
+            const inner = (children[0].children as Array<Record<string, unknown>>) ?? [];
+            const content = inner.map((c) => (c.value as string) ?? "").join("");
+            node.type = "html";
+            node.value = `<span class="emphasis-strong-block">${content}</span>`;
+          } else {
+            const content = children.map((c) => (c?.value as string) ?? "").join("");
+            node.type = "html";
+            node.value = `<span class="emphasis-block">${content}</span>`;
+          }
         } else {
           node.type = "html";
-          node.value = `<span class="emphasis-block">${node?.value}</span>`;
+          node.value = `<span class="emphasis-block">${(node?.value as string) ?? ""}</span>`;
         }
       });
 
       // strong
       visit(tree as Parameters<typeof visit>[0], "strong", (node: Record<string, unknown>) => {
         const children = node.children as Array<Record<string, unknown>> | undefined;
-        if (children && children.length > 0) {
-          children.forEach((child) => {
-            node.type = "html";
-            node.value = `<span class="strong-block">${child.value}</span>`;
-          });
-        } else {
-          node.type = "html";
-          node.value = `<span class="strong-block">${node.value}</span>`;
-        }
+        const content = children && children.length > 0
+          ? children.map((child) => (child.value as string) ?? "").join("")
+          : (node.value as string) ?? "";
+        node.type = "html";
+        node.value = `<span class="strong-block">${content}</span>`;
       });
 
       // blockquote
@@ -593,16 +590,23 @@ export function getPostBySlug(slug: string): Post {
         node.value = `<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table">${headerHtml}${bodyHtml}</table></div></div>`;
       });
     })
-    .processSync(mathProcessed);
+    .processSync(withReferences);
 
-  const contentHtml = processedContent.toString();
+  // Restore KaTeX HTML after remark so SVG paths never pass through remark's pipeline
+  const contentHtml = processedContent.toString().replace(
+    /<div class="math-placeholder" data-mid="(\d+)"><\/div>|<span class="math-placeholder" data-mid="(\d+)"><\/span>/g,
+    (_: string, blockIdx: string, inlineIdx: string) => mathStore[parseInt(blockIdx ?? inlineIdx)]
+  );
 
   // Extract headings for sections navigation
   const headings: PostHeading[] = [];
-  const headingRegex = /<h([2-4]) id="(.+?)">(.+?)<\/h[2-4]>/g;
+  const headingRegex = /<h([2-6]) id="(.+?)">([\s\S]+?)<\/h[2-6]>/g;
+  const decodeEntities = (s: string) =>
+    s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
   let match;
   while ((match = headingRegex.exec(contentHtml)) !== null) {
-    headings.push({ level: match[1], id: match[2], text: match[3] });
+    const rawText = decodeEntities(match[3].replace(/<[^>]*>/g, "").trim());
+    headings.push({ level: match[1], id: match[2], text: rawText });
   }
 
   return {
@@ -710,7 +714,9 @@ export function getAllPostsByCategory(category: string): PostSummary[] {
     .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
 }
 
-function renderMath(markdown: string): string {
+function renderMath(markdown: string): { content: string; store: string[] } {
+  const store: string[] = [];
+
   // Protect fenced code blocks and inline code from math replacement
   const saved: string[] = [];
   let result = markdown.replace(
@@ -718,37 +724,39 @@ function renderMath(markdown: string): string {
     (match) => { saved.push(match); return `\x00SAVED${saved.length - 1}\x00`; }
   );
 
-  // Display math: $$...$$
+  // Display math: $$...$$  — store rendered HTML, emit placeholder
   result = result.replace(/\$\$([\s\S]+?)\$\$/g, (_, formula) => {
     try {
       const rendered = katex.renderToString(formula.trim(), {
         displayMode: true,
         throwOnError: false,
         output: "html",
-      }).replace(/\n/g, "");
-      return `\n\n<div class="math-block">${rendered}</div>\n\n`;
+      });
+      store.push(`<div class="math-block">${rendered}</div>`);
     } catch {
-      return `\n\n<div class="math-block">${formula.trim()}</div>\n\n`;
+      store.push(`<div class="math-block">${formula.trim()}</div>`);
     }
+    return `\n\n<div class="math-placeholder" data-mid="${store.length - 1}"></div>\n\n`;
   });
 
-  // Inline math: $...$  (not $$)
+  // Inline math: $...$  (not $$) — store rendered HTML, emit placeholder
   result = result.replace(/(?<!\$)\$(?!\$)([^$\n]+?)(?<!\$)\$(?!\$)/g, (_, formula) => {
     try {
       const rendered = katex.renderToString(formula.trim(), {
         displayMode: false,
         throwOnError: false,
         output: "html",
-      }).replace(/\n/g, "");
-      return `<span class="math-inline">${rendered}</span>`;
+      });
+      store.push(`<span class="math-inline">${rendered}</span>`);
     } catch {
-      return `<span class="math-inline">${formula.trim()}</span>`;
+      store.push(`<span class="math-inline">${formula.trim()}</span>`);
     }
+    return `<span class="math-placeholder" data-mid="${store.length - 1}"></span>`;
   });
 
   // Restore protected blocks
   result = result.replace(/\x00SAVED(\d+)\x00/g, (_, i) => saved[parseInt(i)]);
-  return result;
+  return { content: result, store };
 }
 
 function renderReferences(markdown: string): string {
