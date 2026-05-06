@@ -427,6 +427,24 @@ h6:hover .heading-anchor {
   display: inline;
 }
 
+/* Display (block) math — scrollable on narrow screens, never clips */
+.math-block {
+  @apply my-6 w-full overflow-x-auto;
+  text-align: center;
+}
+
+.math-block .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+/* Inline math — stays inline, wraps gracefully */
+.math-inline {
+  display: inline;
+  white-space: nowrap;
+}
+
 .mermaid-diagram svg .background,
 .mermaid-diagram svg rect:first-child {
   fill: transparent !important;
