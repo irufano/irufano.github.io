@@ -2,28 +2,25 @@
 2:I[79520,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],""]
 3:I[39756,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
 4:I[37457,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
-a:I[68027,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
-:HL["https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","style"]
+6:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+b:I[68027,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.163jt9-.sqsdk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.0.bhltnkrvp5b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-:HL["https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","style",{"crossOrigin":"anonymous"}]
-0:{"P":null,"c":["","insight","post","setfit-tutorial"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","setfit-tutorial","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","crossOrigin":"anonymous"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","async":true,"nonce":"$undefined"}],"$L6"],"$L7"]}],{},null,false,null]},null,false,"$@8"]},null,false,"$@8"]},null,false,"$@8"]},null,false,null],"$L9",false]],"m":"$undefined","G":["$a",["$Lb","$Lc"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"P1R2XveDGBIvJ7tgHIjig"}
-d:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
-e:"$Sreact.suspense"
-11:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
-13:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
-6:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]
-7:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
-10:[]
-8:"$W10"
-9:["$","$1","h",{"children":[null,["$","$L11",null,{"children":"$L12"}],["$","div",null,{"hidden":true,"children":["$","$L13",null,{"children":["$","$e",null,{"name":"Next.Metadata","children":"$L14"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-b:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
-c:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
-15:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
-16:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
-17:T176c0,<h2 id="what-is-setfit">What is SetFit?</h2>
+0:{"P":null,"c":["","insight","post","setfit-tutorial"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","setfit-tutorial","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,null]},null,false,"$@9"]},null,false,"$@9"]},null,false,"$@9"]},null,false,null],"$La",false]],"m":"$undefined","G":["$b",["$Lc","$Ld"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"fHoyXTIsToFMn4n1TvJqR"}
+f:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+11:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+e:[]
+9:"$We"
+a:["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","div",null,{"hidden":true,"children":["$","$L11",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$L12"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+c:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+d:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+13:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+14:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+15:T176bd,<h2 id="what-is-setfit">What is SetFit?</h2>
 <p>SetFit (Sentence Transformer Fine-Tuning) is a framework for <span class="strong-block">few-shot text classification</span>.
 You only need <span class="strong-block">8-16 labeled examples per category</span> to train a high-quality classifier.
 It works well with <span class="strong-block">multilingual data</span> (Bahasa + English).</p>
@@ -35,12 +32,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-tomcat-line colored" title="toml"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="15e9p" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="dyqkib" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="15e9p" aria-label="Copy code">
+              <button class="copy-code" data-code-id="dyqkib" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -62,7 +59,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="15e9p" class="toml"><span class="hljs-section">[project]</span>
+          <pre><code id="dyqkib" class="toml"><span class="hljs-section">[project]</span>
 <span class="hljs-attr">dependencies</span> = [
     <span class="hljs-string">&quot;datasets&gt;=4.8.4&quot;</span>,
     <span class="hljs-string">&quot;setfit&gt;=1.1.3&quot;</span>,
@@ -82,12 +79,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="bash"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="dlw9rl" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="0iwoj" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="dlw9rl" aria-label="Copy code">
+              <button class="copy-code" data-code-id="0iwoj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -109,7 +106,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="dlw9rl" class="bash">uv <span class="hljs-built_in">sync</span></code></pre>
+          <pre><code id="0iwoj" class="bash">uv <span class="hljs-built_in">sync</span></code></pre>
           </div>
           </div>
         
@@ -119,12 +116,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="bash"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="yt11ad" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2djsv" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="yt11ad" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2djsv" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -146,7 +143,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="yt11ad" class="bash">pip install <span class="hljs-string">&quot;setfit&gt;=1.1.3&quot;</span> <span class="hljs-string">&quot;transformers&lt;5&quot;</span> <span class="hljs-string">&quot;datasets&gt;=4.8.4&quot;</span> <span class="hljs-string">&quot;torch&gt;=2.11.0&quot;</span> pandas openpyxl scikit-learn matplotlib</code></pre>
+          <pre><code id="2djsv" class="bash">pip install <span class="hljs-string">&quot;setfit&gt;=1.1.3&quot;</span> <span class="hljs-string">&quot;transformers&lt;5&quot;</span> <span class="hljs-string">&quot;datasets&gt;=4.8.4&quot;</span> <span class="hljs-string">&quot;torch&gt;=2.11.0&quot;</span> pandas openpyxl scikit-learn matplotlib</code></pre>
           </div>
           </div>
         
@@ -172,12 +169,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="9ds7p" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="l5khsr" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="9ds7p" aria-label="Copy code">
+              <button class="copy-code" data-code-id="l5khsr" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -199,7 +196,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="9ds7p" class="python"><span class="hljs-keyword">from</span> sentence_transformers <span class="hljs-keyword">import</span> SentenceTransformer
+          <pre><code id="l5khsr" class="python"><span class="hljs-keyword">from</span> sentence_transformers <span class="hljs-keyword">import</span> SentenceTransformer
 
 <span class="hljs-comment"># Download and save to local folder (run once)</span>
 model = SentenceTransformer(<span class="hljs-string">&quot;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2&quot;</span>)
@@ -213,12 +210,12 @@ model.save(<span class="hljs-string">&quot;./models/paraphrase-multilingual-Mini
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="3tsqel" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3azts" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="3tsqel" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3azts" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -240,7 +237,7 @@ model.save(<span class="hljs-string">&quot;./models/paraphrase-multilingual-Mini
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="3tsqel" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel
+          <pre><code id="3azts" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel
 
 <span class="hljs-comment"># Load from local path instead of HuggingFace Hub</span>
 model_col1 = SetFitModel.from_pretrained(
@@ -258,12 +255,12 @@ model_col1 = SetFitModel.from_pretrained(
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="129ia" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="lgtdns" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="129ia" aria-label="Copy code">
+              <button class="copy-code" data-code-id="lgtdns" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -285,7 +282,7 @@ model_col1 = SetFitModel.from_pretrained(
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="129ia" class="python"><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset
+          <pre><code id="lgtdns" class="python"><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset
 
 <span class="hljs-comment"># Example labeled data for Column 1</span>
 train_data_col1 = Dataset.from_dict({
@@ -326,12 +323,12 @@ col1_labels = {<span class="hljs-number">0</span>: <span class="hljs-string">&qu
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="3rbewo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="pl77l5" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="3rbewo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pl77l5" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -353,7 +350,7 @@ col1_labels = {<span class="hljs-number">0</span>: <span class="hljs-string">&qu
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="3rbewo" class="python">train_data_col2 = Dataset.from_dict({
+          <pre><code id="pl77l5" class="python">train_data_col2 = Dataset.from_dict({
     <span class="hljs-string">&quot;text&quot;</span>: [
         <span class="hljs-comment"># === good no input (label: 0) ===</span>
         <span class="hljs-string">&quot;Bagus&quot;</span>,
@@ -416,12 +413,12 @@ col2_labels = {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="xs0xsa" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="zesqk" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="xs0xsa" aria-label="Copy code">
+              <button class="copy-code" data-code-id="zesqk" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -443,7 +440,7 @@ col2_labels = {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="xs0xsa" class="python"><span class="hljs-comment"># Evaluation data for Column 1</span>
+          <pre><code id="zesqk" class="python"><span class="hljs-comment"># Evaluation data for Column 1</span>
 eval_data_col1 = Dataset.from_dict({
     <span class="hljs-string">&quot;text&quot;</span>: [
         <span class="hljs-comment"># Examples NOT used in training</span>
@@ -483,12 +480,12 @@ eval_data_col2 = Dataset.from_dict({
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="b9qyht" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="mk49ve" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="b9qyht" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mk49ve" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -510,7 +507,7 @@ eval_data_col2 = Dataset.from_dict({
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="b9qyht" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel, Trainer, TrainingArguments
+          <pre><code id="mk49ve" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel, Trainer, TrainingArguments
 
 <span class="hljs-comment"># Load from local path (see Step 2) or from HuggingFace Hub</span>
 BASE_MODEL = <span class="hljs-string">&quot;./models/paraphrase-multilingual-MiniLM-L12-v2&quot;</span>
@@ -547,12 +544,12 @@ model_col1.save_pretrained(<span class="hljs-string">&quot;./models/model_sugges
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="8cnr6" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="uej2w7" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="8cnr6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="uej2w7" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -574,7 +571,7 @@ model_col1.save_pretrained(<span class="hljs-string">&quot;./models/model_sugges
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="8cnr6" class="python">model_col2 = SetFitModel.from_pretrained(BASE_MODEL)
+          <pre><code id="uej2w7" class="python">model_col2 = SetFitModel.from_pretrained(BASE_MODEL)
 
 trainer_col2 = Trainer(
     model=model_col2,
@@ -598,12 +595,12 @@ model_col2.save_pretrained(<span class="hljs-string">&quot;./models/model_feedba
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="jwxkhd" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="x3tpna" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="jwxkhd" aria-label="Copy code">
+              <button class="copy-code" data-code-id="x3tpna" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -625,7 +622,7 @@ model_col2.save_pretrained(<span class="hljs-string">&quot;./models/model_feedba
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="jwxkhd" class="python"><span class="hljs-comment"># Evaluate Column 1</span>
+          <pre><code id="x3tpna" class="python"><span class="hljs-comment"># Evaluate Column 1</span>
 metrics_col1 = trainer_col1.evaluate(eval_data_col1)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Column 1 Accuracy: <span class="hljs-subst">{metrics_col1[<span class="hljs-string">&#x27;accuracy&#x27;</span>]:<span class="hljs-number">.2</span>%}</span>&quot;</span>)
 
@@ -641,12 +638,12 @@ metrics_col2 = trainer_col2.evaluate(eval_data_col2)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="zpkv9" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="nznphr" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="zpkv9" aria-label="Copy code">
+              <button class="copy-code" data-code-id="nznphr" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -668,7 +665,7 @@ metrics_col2 = trainer_col2.evaluate(eval_data_col2)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="zpkv9" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> classification_report
+          <pre><code id="nznphr" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> classification_report
 
 <span class="hljs-comment">#  Column 1 </span>
 preds_col1 = model_col1.predict(eval_data_col1[<span class="hljs-string">&quot;text&quot;</span>])
@@ -698,12 +695,12 @@ preds_col2 = model_col2.predict(eval_data_col2[<span class="hljs-string">&quot;t
           <div class="title-code">
             <span class="title-code-text"><svg class="lang-icon-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15l5-5-5-5M13 19h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ib53no" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="x97l7o" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ib53no" aria-label="Copy code">
+              <button class="copy-code" data-code-id="x97l7o" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -725,7 +722,7 @@ preds_col2 = model_col2.predict(eval_data_col2[<span class="hljs-string">&quot;t
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ib53no" class="">=== Column 1: Suggestion Classification ===
+          <pre><code id="x97l7o" class="">=== Column 1: Suggestion Classification ===
                 precision    recall  f1-score   support
 
 not-suggestion       0.88      0.87      0.88        4
@@ -743,12 +740,12 @@ not-suggestion       0.88      0.87      0.88        4
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ipfegt" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="tgwv5g" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ipfegt" aria-label="Copy code">
+              <button class="copy-code" data-code-id="tgwv5g" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -770,7 +767,7 @@ not-suggestion       0.88      0.87      0.88        4
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ipfegt" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> confusion_matrix, ConfusionMatrixDisplay
+          <pre><code id="tgwv5g" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> confusion_matrix, ConfusionMatrixDisplay
 <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
 
 <span class="hljs-comment">#  Column 1 Confusion Matrix </span>
@@ -803,12 +800,12 @@ plt.show()</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="6hg5na" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="4gl85" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="6hg5na" aria-label="Copy code">
+              <button class="copy-code" data-code-id="4gl85" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -830,7 +827,7 @@ plt.show()</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="6hg5na" class="python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+          <pre><code id="4gl85" class="python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
 
 <span class="hljs-comment"># Load your data</span>
 df = pd.read_excel(<span class="hljs-string">&quot;your_data.xlsx&quot;</span>)  <span class="hljs-comment"># &lt;-- change filename</span>
@@ -878,12 +875,12 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="kee420p" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="qhowiv" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="kee420p" aria-label="Copy code">
+              <button class="copy-code" data-code-id="qhowiv" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -905,7 +902,7 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="kee420p" class="python"><span class="hljs-comment"># Add more examples to training data</span>
+          <pre><code id="qhowiv" class="python"><span class="hljs-comment"># Add more examples to training data</span>
 additional_data = Dataset.from_dict({
     <span class="hljs-string">&quot;text&quot;</span>: [
         <span class="hljs-comment"># Add examples the model misclassified</span>
@@ -927,12 +924,12 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="2kcjt9" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="svmdjb" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="2kcjt9" aria-label="Copy code">
+              <button class="copy-code" data-code-id="svmdjb" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -954,7 +951,7 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="2kcjt9" class="python">args = TrainingArguments(
+          <pre><code id="svmdjb" class="python">args = TrainingArguments(
     batch_size=<span class="hljs-number">8</span>,
     num_epochs=<span class="hljs-number">3</span>,
     num_iterations=<span class="hljs-number">40</span>,  <span class="hljs-comment"># increased from 20</span>
@@ -969,12 +966,12 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="64ajdim" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="0xb15" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="64ajdim" aria-label="Copy code">
+              <button class="copy-code" data-code-id="0xb15" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -996,7 +993,7 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="64ajdim" class="python"><span class="hljs-comment"># Larger model = better accuracy, slower speed</span>
+          <pre><code id="0xb15" class="python"><span class="hljs-comment"># Larger model = better accuracy, slower speed</span>
 model = SetFitModel.from_pretrained(
     <span class="hljs-string">&quot;sentence-transformers/paraphrase-multilingual-mpnet-base-v2&quot;</span>
 )</code></pre>
@@ -1009,12 +1006,12 @@ model = SetFitModel.from_pretrained(
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="p2bvpc" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="tz73d" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="p2bvpc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="tz73d" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1036,7 +1033,7 @@ model = SetFitModel.from_pretrained(
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="p2bvpc" class="python"><span class="hljs-comment"># Sample 50 random rows to manually review</span>
+          <pre><code id="tz73d" class="python"><span class="hljs-comment"># Sample 50 random rows to manually review</span>
 sample = df.sample(<span class="hljs-number">50</span>, random_state=<span class="hljs-number">42</span>)
 sample[
     [col1, <span class="hljs-string">&quot;suggestion_flag&quot;</span>, col2, <span class="hljs-string">&quot;feedback_flag&quot;</span>]
@@ -1050,12 +1047,12 @@ sample[
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="5t64tq" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="b2vya3" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="5t64tq" aria-label="Copy code">
+              <button class="copy-code" data-code-id="b2vya3" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1077,7 +1074,7 @@ sample[
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="5t64tq" class="python"><span class="hljs-string">&quot;&quot;&quot;
+          <pre><code id="b2vya3" class="python"><span class="hljs-string">&quot;&quot;&quot;
 Complete SetFit Classification Pipeline
 For survey feedback analysis (Bahasa + English)
 
@@ -1308,12 +1305,12 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ckyo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="rrk4u4v" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ckyo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="rrk4u4v" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1335,7 +1332,7 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ckyo" class="python"><span class="hljs-comment"># predict gives labels only</span>
+          <pre><code id="rrk4u4v" class="python"><span class="hljs-comment"># predict gives labels only</span>
 predictions = model_col1.predict([<span class="hljs-string">&quot;Tambahkan fitur timer&quot;</span>])
 <span class="hljs-built_in">print</span>(predictions)  <span class="hljs-comment"># [1]</span>
 
@@ -1360,7 +1357,7 @@ probabilities = model_col1.predict_proba([<span class="hljs-string">&quot;Tambah
 <li><span class="strong-block">Evaluate before deploying</span> — always check accuracy on held-out data first</li>
 <li><span class="strong-block">Confusion matrix</span> — shows exactly where the model fails, so you know what training examples to add</li>
 </ul>
-18:T4f90,
+16:T4f90,
 ## What is SetFit?
 
 SetFit (Sentence Transformer Fine-Tuning) is a framework for **few-shot text classification**.
@@ -2063,7 +2060,7 @@ print(probabilities)
 - **transformers<5** — pin this to avoid the `default_logdir` import error
 - **Evaluate before deploying** — always check accuracy on held-out data first
 - **Confusion matrix** — shows exactly where the model fails, so you know what training examples to add
-5:["$","$L15",null,{"type":"$undefined","children":["$","$L16",null,{"post":{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"content":"$17","sections":[{"level":"2","id":"what-is-setfit","text":"What is SetFit?"},{"level":"2","id":"step-1-installation","text":"Step 1: Installation"},{"level":"3","id":"using-uv-recommended","text":"Using uv (recommended)"},{"level":"3","id":"using-pip","text":"Using pip"},{"level":"2","id":"step-2-download-base-model-to-local-optional-but-recommended","text":"Step 2: Download Base Model to Local (Optional but Recommended)"},{"level":"2","id":"step-3-prepare-your-labeled-data","text":"Step 3: Prepare Your Labeled Data"},{"level":"3","id":"column-1-suggestion-classification","text":"Column 1: Suggestion Classification"},{"level":"3","id":"column-2-feedback-classification","text":"Column 2: Feedback Classification"},{"level":"2","id":"step-4-prepare-evaluation-data","text":"Step 4: Prepare Evaluation Data"},{"level":"2","id":"step-5-train-the-models","text":"Step 5: Train the Models"},{"level":"3","id":"train-column-1-model-suggestion-classifier","text":"Train Column 1 Model (Suggestion Classifier)"},{"level":"3","id":"train-column-2-model-feedback-classifier","text":"Train Column 2 Model (Feedback Classifier)"},{"level":"2","id":"step-6-evaluate-the-models","text":"Step 6: Evaluate the Models"},{"level":"3","id":"quick-accuracy-check","text":"Quick Accuracy Check"},{"level":"3","id":"detailed-metrics-precision-recall-f1","text":"Detailed Metrics (Precision, Recall, F1)"},{"level":"3","id":"confusion-matrix","text":"Confusion Matrix"},{"level":"3","id":"what-to-look-at","text":"What to Look At"},{"level":"2","id":"step-7-predict-on-your-full-dataset","text":"Step 7: Predict on Your Full Dataset"},{"level":"2","id":"step-8-improve-accuracy","text":"Step 8: Improve Accuracy"},{"level":"3","id":"1-add-more-training-examples","text":"1. Add more training examples"},{"level":"3","id":"2-increase-training-iterations","text":"2. Increase training iterations"},{"level":"3","id":"3-try-a-larger-base-model","text":"3. Try a larger base model"},{"level":"3","id":"4-review-random-samples-from-predictions","text":"4. Review random samples from predictions"},{"level":"2","id":"full-pipeline-copy-paste-ready","text":"Full Pipeline (Copy-Paste Ready)"},{"level":"2","id":"get-confidence-score","text":"Get Confidence Score"},{"level":"2","id":"key-tips","text":"Key Tips"}],"raw":"$18","readingTime":"12 min read"},"pathname":"/insight/post/setfit-tutorial"}]}]
-12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-f:null
-14:[["$","title","0",{"children":"Text Classification for Survey Data Using SetFit"}],["$","meta","1",{"name":"description","content":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification."}],["$","meta","2",{"property":"og:title","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","3",{"property":"og:description","content":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/setfit-tutorial"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","12",{"name":"twitter:description","content":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification."}],["$","meta","13",{"name":"twitter:image","content":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg"}],["$","meta","14",{"name":"twitter:image:alt","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","15",{"name":"twitter:image:width","content":"800"}],["$","meta","16",{"name":"twitter:image:height","content":"600"}]]
+5:["$","$L13",null,{"type":"$undefined","children":["$","$L14",null,{"post":{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"content":"$15","sections":[{"level":"2","id":"what-is-setfit","text":"What is SetFit?"},{"level":"2","id":"step-1-installation","text":"Step 1: Installation"},{"level":"3","id":"using-uv-recommended","text":"Using uv (recommended)"},{"level":"3","id":"using-pip","text":"Using pip"},{"level":"2","id":"step-2-download-base-model-to-local-optional-but-recommended","text":"Step 2: Download Base Model to Local (Optional but Recommended)"},{"level":"2","id":"step-3-prepare-your-labeled-data","text":"Step 3: Prepare Your Labeled Data"},{"level":"3","id":"column-1-suggestion-classification","text":"Column 1: Suggestion Classification"},{"level":"3","id":"column-2-feedback-classification","text":"Column 2: Feedback Classification"},{"level":"2","id":"step-4-prepare-evaluation-data","text":"Step 4: Prepare Evaluation Data"},{"level":"2","id":"step-5-train-the-models","text":"Step 5: Train the Models"},{"level":"3","id":"train-column-1-model-suggestion-classifier","text":"Train Column 1 Model (Suggestion Classifier)"},{"level":"3","id":"train-column-2-model-feedback-classifier","text":"Train Column 2 Model (Feedback Classifier)"},{"level":"2","id":"step-6-evaluate-the-models","text":"Step 6: Evaluate the Models"},{"level":"3","id":"quick-accuracy-check","text":"Quick Accuracy Check"},{"level":"3","id":"detailed-metrics-precision-recall-f1","text":"Detailed Metrics (Precision, Recall, F1)"},{"level":"3","id":"confusion-matrix","text":"Confusion Matrix"},{"level":"3","id":"what-to-look-at","text":"What to Look At"},{"level":"2","id":"step-7-predict-on-your-full-dataset","text":"Step 7: Predict on Your Full Dataset"},{"level":"2","id":"step-8-improve-accuracy","text":"Step 8: Improve Accuracy"},{"level":"3","id":"1-add-more-training-examples","text":"1. Add more training examples"},{"level":"3","id":"2-increase-training-iterations","text":"2. Increase training iterations"},{"level":"3","id":"3-try-a-larger-base-model","text":"3. Try a larger base model"},{"level":"3","id":"4-review-random-samples-from-predictions","text":"4. Review random samples from predictions"},{"level":"2","id":"full-pipeline-copy-paste-ready","text":"Full Pipeline (Copy-Paste Ready)"},{"level":"2","id":"get-confidence-score","text":"Get Confidence Score"},{"level":"2","id":"key-tips","text":"Key Tips"}],"raw":"$16","readingTime":"12 min read"},"pathname":"/insight/post/setfit-tutorial"}]}]
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+12:[["$","title","0",{"children":"Text Classification for Survey Data Using SetFit"}],["$","meta","1",{"name":"description","content":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification."}],["$","meta","2",{"property":"og:title","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","3",{"property":"og:description","content":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/setfit-tutorial"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","12",{"name":"twitter:description","content":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification."}],["$","meta","13",{"name":"twitter:image","content":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg"}],["$","meta","14",{"name":"twitter:image:alt","content":"Text Classification for Survey Data Using SetFit"}],["$","meta","15",{"name":"twitter:image:width","content":"800"}],["$","meta","16",{"name":"twitter:image:height","content":"600"}]]

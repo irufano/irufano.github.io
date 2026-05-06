@@ -2,39 +2,36 @@
 2:I[79520,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],""]
 3:I[39756,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
 4:I[37457,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
-a:I[68027,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
-:HL["https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","style"]
+6:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+b:I[68027,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.163jt9-.sqsdk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.0.bhltnkrvp5b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-:HL["https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","style",{"crossOrigin":"anonymous"}]
-0:{"P":null,"c":["","insight","post","git-cheatsheets"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","git-cheatsheets","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","crossOrigin":"anonymous"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","async":true,"nonce":"$undefined"}],"$L6"],"$L7"]}],{},null,false,null]},null,false,"$@8"]},null,false,"$@8"]},null,false,"$@8"]},null,false,null],"$L9",false]],"m":"$undefined","G":["$a",["$Lb","$Lc"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"P1R2XveDGBIvJ7tgHIjig"}
-d:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
-e:"$Sreact.suspense"
-11:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
-13:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
-6:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]
-7:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
-10:[]
-8:"$W10"
-9:["$","$1","h",{"children":[null,["$","$L11",null,{"children":"$L12"}],["$","div",null,{"hidden":true,"children":["$","$L13",null,{"children":["$","$e",null,{"name":"Next.Metadata","children":"$L14"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-b:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
-c:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
-15:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
-16:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
-17:T549a,<h2 id="list-commit">List commit</h2>
+0:{"P":null,"c":["","insight","post","git-cheatsheets"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","git-cheatsheets","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,null]},null,false,"$@9"]},null,false,"$@9"]},null,false,"$@9"]},null,false,null],"$La",false]],"m":"$undefined","G":["$b",["$Lc","$Ld"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"fHoyXTIsToFMn4n1TvJqR"}
+f:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+11:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+e:[]
+9:"$We"
+a:["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","div",null,{"hidden":true,"children":["$","$L11",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$L12"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+c:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+d:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+13:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+14:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+15:T549a,<h2 id="list-commit">List commit</h2>
 
           <div class="code-block">
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1dtj8" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="9oh7p9" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1dtj8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="9oh7p9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -56,7 +53,7 @@ c:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/st
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1dtj8" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
+          <pre><code id="9oh7p9" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
 
 <span class="hljs-comment"># or use --oneline for simple logs</span>
 git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
@@ -69,12 +66,12 @@ git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1ccefu" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3uqxl" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1ccefu" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3uqxl" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -96,7 +93,7 @@ git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1ccefu" class="sh">git rebase [branch base]
+          <pre><code id="3uqxl" class="sh">git rebase [branch base]
 
 <span class="hljs-comment"># rebase n commit from head</span>
 git rebase -i HEAD~n
@@ -113,12 +110,12 @@ git rebase -i --root</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="fqcft7" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="n0cb77" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="fqcft7" aria-label="Copy code">
+              <button class="copy-code" data-code-id="n0cb77" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -140,7 +137,7 @@ git rebase -i --root</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="fqcft7" class="sh">git cherry-pick [commit-hash]
+          <pre><code id="n0cb77" class="sh">git cherry-pick [commit-hash]
 
 <span class="hljs-comment"># or multi commit</span>
 git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
@@ -153,12 +150,12 @@ git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="rf9kxo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3vgtas" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="rf9kxo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3vgtas" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -180,7 +177,7 @@ git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="rf9kxo" class="sh">git stash
+          <pre><code id="3vgtas" class="sh">git stash
 
 <span class="hljs-comment"># stash include untracked file</span>
 git stash --include-untracked
@@ -206,12 +203,12 @@ git stash drop stash@{n}</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="t4uovc" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="1mvtvk" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="t4uovc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="1mvtvk" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -233,7 +230,7 @@ git stash drop stash@{n}</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="t4uovc" class="sh">git branch -m &lt;new_name&gt;
+          <pre><code id="1mvtvk" class="sh">git branch -m &lt;new_name&gt;
 <span class="hljs-comment"># or</span>
 git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
           </div>
@@ -245,12 +242,12 @@ git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="e9jjtf" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="xuplc" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="e9jjtf" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xuplc" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -272,7 +269,7 @@ git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="e9jjtf" class="sh">git branch -m &lt;new_name&gt;
+          <pre><code id="xuplc" class="sh">git branch -m &lt;new_name&gt;
 <span class="hljs-comment"># or</span>
 git branch -m &lt;old_name&gt; &lt;new_name&gt;
 
@@ -290,12 +287,12 @@ git push origin --delete &lt;old_name&gt;</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="aofw5" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="id3kg" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="aofw5" aria-label="Copy code">
+              <button class="copy-code" data-code-id="id3kg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -317,7 +314,7 @@ git push origin --delete &lt;old_name&gt;</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="aofw5" class="sh"><span class="hljs-comment"># add tag local</span>
+          <pre><code id="id3kg" class="sh"><span class="hljs-comment"># add tag local</span>
 tag -a [TAGE_NAME] -m <span class="hljs-string">&quot;[TAGE_MESSAGE]&quot;</span>
 
 <span class="hljs-comment"># push tag to remote</span>
@@ -347,12 +344,12 @@ git describe --abbrev=0
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="gtze" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="tf25p" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="gtze" aria-label="Copy code">
+              <button class="copy-code" data-code-id="tf25p" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -374,11 +371,11 @@ git describe --abbrev=0
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="gtze" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
+          <pre><code id="tf25p" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
           </div>
           </div>
         
-18:T665,
+16:T665,
 ## List commit
 ```sh
 git log -n [number] 
@@ -478,7 +475,7 @@ git describe --abbrev=0
 ## Edit last commit date
 ```sh
 git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
-```5:["$","$L15",null,{"type":"$undefined","children":["$","$L16",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg","category":"Git"},"content":"$17","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$18","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}]
-12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-f:null
-14:[["$","title","0",{"children":"Git Cheatsheet"}],["$","meta","1",{"name":"description","content":"Git cheatsheet commonly used daily"}],["$","meta","2",{"property":"og:title","content":"Git Cheatsheet"}],["$","meta","3",{"property":"og:description","content":"Git cheatsheet commonly used daily"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/git-cheatsheets"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Git Cheatsheet"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Git Cheatsheet"}],["$","meta","12",{"name":"twitter:description","content":"Git cheatsheet commonly used daily"}],["$","meta","13",{"name":"twitter:image","content":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg"}],["$","meta","14",{"name":"twitter:image:alt","content":"Git Cheatsheet"}],["$","meta","15",{"name":"twitter:image:width","content":"800"}],["$","meta","16",{"name":"twitter:image:height","content":"600"}]]
+```5:["$","$L13",null,{"type":"$undefined","children":["$","$L14",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg","category":"Git"},"content":"$15","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$16","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}]
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+12:[["$","title","0",{"children":"Git Cheatsheet"}],["$","meta","1",{"name":"description","content":"Git cheatsheet commonly used daily"}],["$","meta","2",{"property":"og:title","content":"Git Cheatsheet"}],["$","meta","3",{"property":"og:description","content":"Git cheatsheet commonly used daily"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/git-cheatsheets"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"property":"og:image","content":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg"}],["$","meta","7",{"property":"og:image:width","content":"800"}],["$","meta","8",{"property":"og:image:height","content":"600"}],["$","meta","9",{"property":"og:image:alt","content":"Git Cheatsheet"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Git Cheatsheet"}],["$","meta","12",{"name":"twitter:description","content":"Git cheatsheet commonly used daily"}],["$","meta","13",{"name":"twitter:image","content":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg"}],["$","meta","14",{"name":"twitter:image:alt","content":"Git Cheatsheet"}],["$","meta","15",{"name":"twitter:image:width","content":"800"}],["$","meta","16",{"name":"twitter:image:height","content":"600"}]]

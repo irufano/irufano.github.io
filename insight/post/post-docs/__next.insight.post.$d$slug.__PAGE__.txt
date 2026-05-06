@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
-3:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
 9:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 a:"$Sreact.suspense"
-4:T1cc3e,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
+4:T1cc4b,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
 <h2 id="meta-data">Meta Data</h2>
 <p>Meta data used in this post are <span class="inline-code-block">title</span>, <span class="inline-code-block">date</span>, <span class="inline-code-block">description</span>, <span class="inline-code-block">author</span> and <span class="inline-code-block">tags</span>. Title at this meta data used for title post.</p>
 
@@ -11,12 +11,12 @@ a:"$Sreact.suspense"
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-javascript-plain colored" title="js"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="sauw3k" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="m37d8n" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="sauw3k" aria-label="Copy code">
+              <button class="copy-code" data-code-id="m37d8n" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ a:"$Sreact.suspense"
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="sauw3k" class="js">---
+          <pre><code id="m37d8n" class="js">---
 <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Your Post Title&quot;</span>
 <span class="hljs-attr">date</span>: <span class="hljs-string">&quot;2024-09-15&quot;</span>
 <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Your post description&quot;</span>
@@ -57,12 +57,12 @@ a:"$Sreact.suspense"
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="lgha3" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="33nyql" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="lgha3" aria-label="Copy code">
+              <button class="copy-code" data-code-id="33nyql" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ a:"$Sreact.suspense"
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="lgha3" class="md">&lt;!-- first paragraph --&gt;
+          <pre><code id="33nyql" class="md">&lt;!-- first paragraph --&gt;
 Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
 
 &lt;!-- second paragraph --&gt;
@@ -99,12 +99,12 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="u1h63" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="tjjp3w" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="u1h63" aria-label="Copy code">
+              <button class="copy-code" data-code-id="tjjp3w" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="u1h63" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
+          <pre><code id="tjjp3w" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
           </div>
           </div>
         
@@ -137,12 +137,12 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ffaa3u" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ibz9a" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ffaa3u" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ibz9a" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -164,7 +164,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ffaa3u" class="md"><span class="hljs-section">## Section 1</span>
+          <pre><code id="ibz9a" class="md"><span class="hljs-section">## Section 1</span>
 
 Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
 
@@ -188,12 +188,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="vxa97t" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="k1qovf" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="vxa97t" aria-label="Copy code">
+              <button class="copy-code" data-code-id="k1qovf" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -215,7 +215,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="vxa97t" class="md"><span class="hljs-bullet">-</span> bullet 1
+          <pre><code id="k1qovf" class="md"><span class="hljs-bullet">-</span> bullet 1
 <span class="hljs-bullet">-</span> bullet 2
 <span class="hljs-bullet">-</span> bullet 3
 
@@ -242,12 +242,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="xfcjd" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="nh6264" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="xfcjd" aria-label="Copy code">
+              <button class="copy-code" data-code-id="nh6264" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -269,7 +269,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="xfcjd" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
+          <pre><code id="nh6264" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
 
 <span class="hljs-emphasis">*Hello*</span>
 
@@ -284,12 +284,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="k02bfq" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="n4v1sh" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="k02bfq" aria-label="Copy code">
+              <button class="copy-code" data-code-id="n4v1sh" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -311,7 +311,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="k02bfq" class="md"><span class="hljs-strong">**This is strong**</span>
+          <pre><code id="n4v1sh" class="md"><span class="hljs-strong">**This is strong**</span>
 
 <span class="hljs-strong">**Hello**</span>
 
@@ -327,12 +327,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ndwdbm" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ikc9gc" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ndwdbm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ikc9gc" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -354,7 +354,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ndwdbm" class="md"><span class="hljs-code">`This is inline code`</span>
+          <pre><code id="ikc9gc" class="md"><span class="hljs-code">`This is inline code`</span>
 
 <span class="hljs-code">`Hello`</span>
 
@@ -369,12 +369,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="exvpl" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ctbzxk" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="exvpl" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ctbzxk" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -396,7 +396,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="exvpl" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
+          <pre><code id="ctbzxk" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
 funtion getData () =&gt; {
     console.log(&quot;Hello world!&quot;);
 }
@@ -413,12 +413,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="tkp25l" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="0ovak5" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="tkp25l" aria-label="Copy code">
+              <button class="copy-code" data-code-id="0ovak5" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -440,7 +440,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-line-numbers"><code id="tkp25l" class="markdown" style="counter-reset: line 0"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-line-numbers"><code id="0ovak5" class="markdown" style="counter-reset: line 0"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -450,12 +450,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="etyrr8" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ortxcr" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="etyrr8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ortxcr" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -477,7 +477,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-line-numbers"><code id="etyrr8" class="markdown" style="counter-reset: line 101"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true line-start=10</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-line-numbers"><code id="ortxcr" class="markdown" style="counter-reset: line 101"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true line-start=10</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -488,12 +488,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="xp7i9u" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2ex3rk" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="xp7i9u" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2ex3rk" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -515,7 +515,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-highlight"><code id="xp7i9u" class="markdown"><span class="code-line highlight-line">&#x27;```js title=&quot;example.js&quot; highlight={1,3-5}</span><span class="code-line">const a = 1;</span><span class="code-line highlight-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line highlight-line">const d = 4;</span><span class="code-line">const e = 5;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-highlight"><code id="2ex3rk" class="markdown"><span class="code-line highlight-line">&#x27;```js title=&quot;example.js&quot; highlight={1,3-5}</span><span class="code-line">const a = 1;</span><span class="code-line highlight-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line highlight-line">const d = 4;</span><span class="code-line">const e = 5;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -525,12 +525,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="0wyy2h" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="svqyfj" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="0wyy2h" aria-label="Copy code">
+              <button class="copy-code" data-code-id="svqyfj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -552,7 +552,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-line-numbers"><code id="0wyy2h" class="markdown" style="counter-reset: line 19"><span class="code-line">&#x27;```js title=&quot;example.js&quot; line-number=true highlight={1,4}</span><span class="code-line highlight-line">const a = 1;</span><span class="code-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line">const d = 4;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-line-numbers"><code id="svqyfj" class="markdown" style="counter-reset: line 19"><span class="code-line">&#x27;```js title=&quot;example.js&quot; line-number=true highlight={1,4}</span><span class="code-line highlight-line">const a = 1;</span><span class="code-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line">const d = 4;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -563,12 +563,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="bezq0k" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="7g3m0b" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="bezq0k" aria-label="Copy code">
+              <button class="copy-code" data-code-id="7g3m0b" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -590,7 +590,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="bezq0k" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
+          <pre><code id="7g3m0b" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is info blockquote example</span></code></pre>
           </div>
@@ -622,12 +622,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="qpslf9" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ltl574" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="qpslf9" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ltl574" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -649,7 +649,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="qpslf9" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
+          <pre><code id="ltl574" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is warning blockquote example</span></code></pre>
           </div>
@@ -681,12 +681,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="2pu6cn" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2hfgys" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="2pu6cn" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2hfgys" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -708,7 +708,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="2pu6cn" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
+          <pre><code id="2hfgys" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is tip blockquote example</span></code></pre>
           </div>
@@ -740,12 +740,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="yt76xm" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3vl4bj" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="yt76xm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3vl4bj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -767,7 +767,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="yt76xm" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
+          <pre><code id="3vl4bj" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is important blockquote example</span></code></pre>
           </div>
@@ -799,12 +799,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="hwydtb" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ww28vp" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="hwydtb" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ww28vp" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -826,7 +826,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="hwydtb" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
+          <pre><code id="ww28vp" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is caution blockquote example</span></code></pre>
           </div>
@@ -859,12 +859,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="kh8f5s" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ryi5v" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="kh8f5s" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ryi5v" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -886,7 +886,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="kh8f5s" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
+          <pre><code id="ryi5v" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is note blockquote example</span></code></pre>
           </div>
@@ -912,12 +912,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-javascript-plain colored" title="js"></i><span class="title-code-label">your-code-title.js</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="x0m3x" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="gnx7bg" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="x0m3x" aria-label="Copy code">
+              <button class="copy-code" data-code-id="gnx7bg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -939,7 +939,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="x0m3x" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
+          <pre><code id="gnx7bg" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);
 }</code></pre>
           </div>
@@ -956,12 +956,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="41ufzq" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="uc533" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="41ufzq" aria-label="Copy code">
+              <button class="copy-code" data-code-id="uc533" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -983,7 +983,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="41ufzq" class="md">The area of a circle is $A = \pi r^2$.
+          <pre><code id="uc533" class="md">The area of a circle is $A = \pi r^2$.
 
 Euler&#x27;s identity: $e^{i\pi} + 1 = 0$.</code></pre>
           </div>
@@ -999,12 +999,12 @@ Euler&#x27;s identity: $e^{i\pi} + 1 = 0$.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="hqcs5d" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="mnr0ss" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="hqcs5d" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mnr0ss" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1026,7 +1026,7 @@ Euler&#x27;s identity: $e^{i\pi} + 1 = 0$.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="hqcs5d" class="md">$$
+          <pre><code id="mnr0ss" class="md">$$
 E = mc^2
 $$
 
@@ -1042,10 +1042,32 @@ $$</code></pre>
         
 <p>output:</p>
 <div class="math-block"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></div>
-<div class="math-block"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.4445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1908em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8492em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.0359em;">π</span></span></span><span style="top:-2.8092em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,-221l0 -0c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47zM834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1908em;"><span></span></span></span></span></span></span></span></span></span></div>
+<div class="math-block"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.4445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1908em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8492em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.0359em;">π</span></span></span><span style="top:-2.8092em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1908em;"><span></span></span></span></span></span></span></span></span></span></div>
 <div class="math-block"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.4445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></div>
 <h3 id="common-latex-syntax">Common LaTeX Syntax</h3>
-<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table"><thead><tr><th>Description</th><th>LaTeX</th><th>Output</th></tr></thead><tbody><tr class="even-row"><td>Fraction</td><td><span class="inline-code-block">$\frac{a}{b}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0404em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></td></tr><tr class="odd-row"><td>Superscript</td><td><span class="inline-code-block">$x^{2}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="even-row"><td>Subscript</td><td><span class="inline-code-block">$x_{i}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="odd-row"><td>Square root</td><td><span class="inline-code-block">$\sqrt{x}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.2397em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8003em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">x</span></span></span><span style="top:-2.7603em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,-221l0 -0c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47zM834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2397em;"><span></span></span></span></span></span></span></span></span></span></td></tr><tr class="even-row"><td>Summation</td><td><span class="inline-code-block">$\sum_{i=1}^{n} x_i$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.104em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8043em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="odd-row"><td>Product</td><td><span class="inline-code-block">$\prod_{i=1}^{n} x_i$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.104em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8043em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="even-row"><td>Integral</td><td><span class="inline-code-block">$\int_{a}^{b} f(x)\,dx$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3998em;vertical-align:-0.3558em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.1945em;position:relative;top:-0.0006em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.044em;"><span style="top:-2.3442em;margin-left:-0.1945em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.2579em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3558em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span></td></tr><tr class="odd-row"><td>Greek letters</td><td><span class="inline-code-block">$\alpha, \beta, \gamma$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0528em;">β</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0556em;">γ</span></span></span></span></span></td></tr><tr class="even-row"><td>Matrix</td><td><span class="inline-code-block">$\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></td></tr></tbody></table></div></div>
+<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table"><thead><tr><th>Description</th><th>LaTeX</th><th>Output</th></tr></thead><tbody><tr class="even-row"><td>Fraction</td><td><span class="inline-code-block">$\frac{a}{b}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0404em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></td></tr><tr class="odd-row"><td>Superscript</td><td><span class="inline-code-block">$x^{2}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="even-row"><td>Subscript</td><td><span class="inline-code-block">$x_{i}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="odd-row"><td>Square root</td><td><span class="inline-code-block">$\sqrt{x}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.2397em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8003em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">x</span></span></span><span style="top:-2.7603em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2397em;"><span></span></span></span></span></span></span></span></span></span></td></tr><tr class="even-row"><td>Summation</td><td><span class="inline-code-block">$\sum_{i=1}^{n} x_i$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.104em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8043em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="odd-row"><td>Product</td><td><span class="inline-code-block">$\prod_{i=1}^{n} x_i$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.104em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8043em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td></tr><tr class="even-row"><td>Integral</td><td><span class="inline-code-block">$\int_{a}^{b} f(x)\,dx$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3998em;vertical-align:-0.3558em;"></span><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.1945em;position:relative;top:-0.0006em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.044em;"><span style="top:-2.3442em;margin-left:-0.1945em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.2579em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3558em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span></td></tr><tr class="odd-row"><td>Greek letters</td><td><span class="inline-code-block">$\alpha, \beta, \gamma$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0528em;">β</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0556em;">γ</span></span></span></span></span></td></tr><tr class="even-row"><td>Matrix</td><td><span class="inline-code-block">$\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}$</span></td><td><span class="math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></td></tr></tbody></table></div></div>
 
               <div class="tip-block">
                 <div class="title-block">
@@ -1072,12 +1094,12 @@ $$</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="td13hl" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="hrgbf" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="td13hl" aria-label="Copy code">
+              <button class="copy-code" data-code-id="hrgbf" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1099,7 +1121,7 @@ $$</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="td13hl" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="hrgbf" class="md"><span class="hljs-code">```mermaid
 &lt;diagram definition here&gt;
 ```</span></code></pre>
           </div>
@@ -1111,12 +1133,12 @@ $$</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1wwxuc" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="la1iho" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1wwxuc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="la1iho" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1138,7 +1160,7 @@ $$</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1wwxuc" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="la1iho" class="md"><span class="hljs-code">```mermaid
 flowchart TD
     A([Start]) --&gt; B[Read input]
     B --&gt; C{Is valid?}
@@ -1158,12 +1180,12 @@ flowchart TD
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ijq2k" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="68an6" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ijq2k" aria-label="Copy code">
+              <button class="copy-code" data-code-id="68an6" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1185,7 +1207,7 @@ flowchart TD
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ijq2k" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="68an6" class="md"><span class="hljs-code">```mermaid
 sequenceDiagram
     participant Client
     participant Server
@@ -1207,12 +1229,12 @@ sequenceDiagram
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ycf32b" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="vi1fz" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ycf32b" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vi1fz" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1234,7 +1256,7 @@ sequenceDiagram
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ycf32b" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="vi1fz" class="md"><span class="hljs-code">```mermaid
 classDiagram
     class Animal {
         +String name
@@ -1261,12 +1283,12 @@ classDiagram
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="b72j6n" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="qp8i5m" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="b72j6n" aria-label="Copy code">
+              <button class="copy-code" data-code-id="qp8i5m" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1288,7 +1310,7 @@ classDiagram
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="b72j6n" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="qp8i5m" class="md"><span class="hljs-code">```mermaid
 erDiagram
     USER {
         int id PK
@@ -1341,12 +1363,12 @@ erDiagram
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="n2o2bb" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="llaz" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="n2o2bb" aria-label="Copy code">
+              <button class="copy-code" data-code-id="llaz" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1368,7 +1390,7 @@ erDiagram
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="n2o2bb" class="md">This approach is widely used in adaptive testing [1].
+          <pre><code id="llaz" class="md">This approach is widely used in adaptive testing [1].
 
 Multiple sources can be cited together [1, 2] or separately [3].
 
@@ -1383,12 +1405,12 @@ You can cite as many as needed in one bracket [1, 2, 3].</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="2xgmdp" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="m3qvy" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="2xgmdp" aria-label="Copy code">
+              <button class="copy-code" data-code-id="m3qvy" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1410,7 +1432,7 @@ You can cite as many as needed in one bracket [1, 2, 3].</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="2xgmdp" class="md"><span class="hljs-section">## References</span>
+          <pre><code id="m3qvy" class="md"><span class="hljs-section">## References</span>
 
 [1] Author, A. (2024). <span class="hljs-emphasis">*Book Title*</span>. Publisher.
 
@@ -2007,8 +2029,8 @@ When the post is rendered:
 
 > [important]:
 >
-> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown","Mermaid"],"category":"Insights Docs"},"content":"$4","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"4","id":"code-block-with-line-numbers","text":"Code Block with Line Numbers"},{"level":"4","id":"highlight-lines","text":"Highlight Lines"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"},{"level":"2","id":"formula-latex","text":"Formula (LaTeX)"},{"level":"3","id":"inline-formula","text":"Inline Formula"},{"level":"3","id":"block-formula","text":"Block Formula"},{"level":"3","id":"common-latex-syntax","text":"Common LaTeX Syntax"},{"level":"2","id":"diagram-mermaid","text":"Diagram (Mermaid)"},{"level":"3","id":"flowchart","text":"Flowchart"},{"level":"3","id":"sequence-diagram","text":"Sequence Diagram"},{"level":"3","id":"class-diagram","text":"Class Diagram"},{"level":"3","id":"entity-relationship-diagram","text":"Entity Relationship Diagram"},{"level":"2","id":"reference-citations","text":"Reference Citations"},{"level":"3","id":"inline-citations","text":"Inline Citations"},{"level":"3","id":"reference-list","text":"Reference List"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/post-docs"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"P1R2XveDGBIvJ7tgHIjig"}
-6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","async":true}]
+> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown","Mermaid"],"category":"Insights Docs"},"content":"$4","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"4","id":"code-block-with-line-numbers","text":"Code Block with Line Numbers"},{"level":"4","id":"highlight-lines","text":"Highlight Lines"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"},{"level":"2","id":"formula-latex","text":"Formula (LaTeX)"},{"level":"3","id":"inline-formula","text":"Inline Formula"},{"level":"3","id":"block-formula","text":"Block Formula"},{"level":"3","id":"common-latex-syntax","text":"Common LaTeX Syntax"},{"level":"2","id":"diagram-mermaid","text":"Diagram (Mermaid)"},{"level":"3","id":"flowchart","text":"Flowchart"},{"level":"3","id":"sequence-diagram","text":"Sequence Diagram"},{"level":"3","id":"class-diagram","text":"Class Diagram"},{"level":"3","id":"entity-relationship-diagram","text":"Entity Relationship Diagram"},{"level":"2","id":"reference-citations","text":"Reference Citations"},{"level":"3","id":"inline-citations","text":"Inline Citations"},{"level":"3","id":"reference-list","text":"Reference List"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/post-docs"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fHoyXTIsToFMn4n1TvJqR"}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","async":true}]
 7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
 b:null
