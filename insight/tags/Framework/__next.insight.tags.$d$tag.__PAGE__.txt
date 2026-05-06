@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/6b6191a0a844f1d8.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
 3:"$Sreact.suspense"
-4:I[93692,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/6b6191a0a844f1d8.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
-9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
+4:I[93692,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+9:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 5:T38ac,
 ## Introduction
 
@@ -536,8 +536,8 @@ LLMfy brings together the core building blocks for LLM-powered applications into
 | **Exception Handling** | Structured error hierarchy |
 
 For more details, visit the [documentation](https://llmfy.readthedocs.io) or the [GitHub repository](https://github.com/irufano/llmfy).
-0:{"buildId":"F0KCAsOoaykOceOmEFRuB","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"llmfy-features","meta":{"title":"LLMfy - Technical Features Overview","date":"2026-03-18","description":"A comprehensive technical overview of LLMfy, a Python framework for building LLM-powered applications with multi-provider support, workflow orchestration, vector storage, and more.","author":"irufano","tags":["LLM","Python","Framework","AI","OpenAI","AWS Bedrock"],"image":"https://raw.githubusercontent.com/irufano/llmfy/refs/heads/main/LLMFY-LOGO.webp","category":"Generative AI"},"rawContent":"$5","readingTime":"9 min read"}],"tag":"Framework"}]}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
-6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/6b6191a0a844f1d8.js","async":true}]
-7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true}]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$3",null,{"children":["$","$L4",null,{"posts":[{"slug":"llmfy-features","meta":{"title":"LLMfy - Technical Features Overview","date":"2026-03-18","description":"A comprehensive technical overview of LLMfy, a Python framework for building LLM-powered applications with multi-provider support, workflow orchestration, vector storage, and more.","author":"irufano","tags":["LLM","Python","Framework","AI","OpenAI","AWS Bedrock"],"image":"https://raw.githubusercontent.com/irufano/llmfy/refs/heads/main/LLMFY-LOGO.webp","category":"Generative AI"},"rawContent":"$5","readingTime":"9 min read"}],"tag":"Framework"}]}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"P1R2XveDGBIvJ7tgHIjig"}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","async":true}]
+7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true}]
 8:["$","$L9",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]
 a:null

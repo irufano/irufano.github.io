@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
-3:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
-9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
+2:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+3:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+9:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 a:"$Sreact.suspense"
-4:T176bd,<h2 id="what-is-setfit">What is SetFit?</h2>
+4:T176c0,<h2 id="what-is-setfit">What is SetFit?</h2>
 <p>SetFit (Sentence Transformer Fine-Tuning) is a framework for <span class="strong-block">few-shot text classification</span>.
 You only need <span class="strong-block">8-16 labeled examples per category</span> to train a high-quality classifier.
 It works well with <span class="strong-block">multilingual data</span> (Bahasa + English).</p>
@@ -15,12 +15,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-tomcat-line colored" title="toml"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ymm0x" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="15e9p" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ymm0x" aria-label="Copy code">
+              <button class="copy-code" data-code-id="15e9p" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ymm0x" class="toml"><span class="hljs-section">[project]</span>
+          <pre><code id="15e9p" class="toml"><span class="hljs-section">[project]</span>
 <span class="hljs-attr">dependencies</span> = [
     <span class="hljs-string">&quot;datasets&gt;=4.8.4&quot;</span>,
     <span class="hljs-string">&quot;setfit&gt;=1.1.3&quot;</span>,
@@ -62,12 +62,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="bash"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="xz4m6" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="dlw9rl" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="xz4m6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="dlw9rl" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -89,7 +89,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="xz4m6" class="bash">uv <span class="hljs-built_in">sync</span></code></pre>
+          <pre><code id="dlw9rl" class="bash">uv <span class="hljs-built_in">sync</span></code></pre>
           </div>
           </div>
         
@@ -99,12 +99,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="bash"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="97ohgl" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="yt11ad" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="97ohgl" aria-label="Copy code">
+              <button class="copy-code" data-code-id="yt11ad" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="97ohgl" class="bash">pip install <span class="hljs-string">&quot;setfit&gt;=1.1.3&quot;</span> <span class="hljs-string">&quot;transformers&lt;5&quot;</span> <span class="hljs-string">&quot;datasets&gt;=4.8.4&quot;</span> <span class="hljs-string">&quot;torch&gt;=2.11.0&quot;</span> pandas openpyxl scikit-learn matplotlib</code></pre>
+          <pre><code id="yt11ad" class="bash">pip install <span class="hljs-string">&quot;setfit&gt;=1.1.3&quot;</span> <span class="hljs-string">&quot;transformers&lt;5&quot;</span> <span class="hljs-string">&quot;datasets&gt;=4.8.4&quot;</span> <span class="hljs-string">&quot;torch&gt;=2.11.0&quot;</span> pandas openpyxl scikit-learn matplotlib</code></pre>
           </div>
           </div>
         
@@ -152,12 +152,12 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="8sqgca" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="9ds7p" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="8sqgca" aria-label="Copy code">
+              <button class="copy-code" data-code-id="9ds7p" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -179,7 +179,7 @@ It works well with <span class="strong-block">multilingual data</span> (Bahasa +
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="8sqgca" class="python"><span class="hljs-keyword">from</span> sentence_transformers <span class="hljs-keyword">import</span> SentenceTransformer
+          <pre><code id="9ds7p" class="python"><span class="hljs-keyword">from</span> sentence_transformers <span class="hljs-keyword">import</span> SentenceTransformer
 
 <span class="hljs-comment"># Download and save to local folder (run once)</span>
 model = SentenceTransformer(<span class="hljs-string">&quot;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2&quot;</span>)
@@ -193,12 +193,12 @@ model.save(<span class="hljs-string">&quot;./models/paraphrase-multilingual-Mini
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="swvh5o" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3tsqel" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="swvh5o" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3tsqel" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -220,7 +220,7 @@ model.save(<span class="hljs-string">&quot;./models/paraphrase-multilingual-Mini
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="swvh5o" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel
+          <pre><code id="3tsqel" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel
 
 <span class="hljs-comment"># Load from local path instead of HuggingFace Hub</span>
 model_col1 = SetFitModel.from_pretrained(
@@ -238,12 +238,12 @@ model_col1 = SetFitModel.from_pretrained(
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="7mzfef" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="129ia" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="7mzfef" aria-label="Copy code">
+              <button class="copy-code" data-code-id="129ia" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -265,7 +265,7 @@ model_col1 = SetFitModel.from_pretrained(
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="7mzfef" class="python"><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset
+          <pre><code id="129ia" class="python"><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset
 
 <span class="hljs-comment"># Example labeled data for Column 1</span>
 train_data_col1 = Dataset.from_dict({
@@ -306,12 +306,12 @@ col1_labels = {<span class="hljs-number">0</span>: <span class="hljs-string">&qu
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="yyu3l" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="3rbewo" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="yyu3l" aria-label="Copy code">
+              <button class="copy-code" data-code-id="3rbewo" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -333,7 +333,7 @@ col1_labels = {<span class="hljs-number">0</span>: <span class="hljs-string">&qu
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="yyu3l" class="python">train_data_col2 = Dataset.from_dict({
+          <pre><code id="3rbewo" class="python">train_data_col2 = Dataset.from_dict({
     <span class="hljs-string">&quot;text&quot;</span>: [
         <span class="hljs-comment"># === good no input (label: 0) ===</span>
         <span class="hljs-string">&quot;Bagus&quot;</span>,
@@ -396,12 +396,12 @@ col2_labels = {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="apgkeu" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="xs0xsa" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="apgkeu" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xs0xsa" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -423,7 +423,7 @@ col2_labels = {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="apgkeu" class="python"><span class="hljs-comment"># Evaluation data for Column 1</span>
+          <pre><code id="xs0xsa" class="python"><span class="hljs-comment"># Evaluation data for Column 1</span>
 eval_data_col1 = Dataset.from_dict({
     <span class="hljs-string">&quot;text&quot;</span>: [
         <span class="hljs-comment"># Examples NOT used in training</span>
@@ -463,12 +463,12 @@ eval_data_col2 = Dataset.from_dict({
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ecrk7i" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="b9qyht" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ecrk7i" aria-label="Copy code">
+              <button class="copy-code" data-code-id="b9qyht" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -490,7 +490,7 @@ eval_data_col2 = Dataset.from_dict({
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ecrk7i" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel, Trainer, TrainingArguments
+          <pre><code id="b9qyht" class="python"><span class="hljs-keyword">from</span> setfit <span class="hljs-keyword">import</span> SetFitModel, Trainer, TrainingArguments
 
 <span class="hljs-comment"># Load from local path (see Step 2) or from HuggingFace Hub</span>
 BASE_MODEL = <span class="hljs-string">&quot;./models/paraphrase-multilingual-MiniLM-L12-v2&quot;</span>
@@ -527,12 +527,12 @@ model_col1.save_pretrained(<span class="hljs-string">&quot;./models/model_sugges
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ycx1o5" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="8cnr6" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ycx1o5" aria-label="Copy code">
+              <button class="copy-code" data-code-id="8cnr6" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -554,7 +554,7 @@ model_col1.save_pretrained(<span class="hljs-string">&quot;./models/model_sugges
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ycx1o5" class="python">model_col2 = SetFitModel.from_pretrained(BASE_MODEL)
+          <pre><code id="8cnr6" class="python">model_col2 = SetFitModel.from_pretrained(BASE_MODEL)
 
 trainer_col2 = Trainer(
     model=model_col2,
@@ -578,12 +578,12 @@ model_col2.save_pretrained(<span class="hljs-string">&quot;./models/model_feedba
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="vj30hb" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="jwxkhd" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="vj30hb" aria-label="Copy code">
+              <button class="copy-code" data-code-id="jwxkhd" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -605,7 +605,7 @@ model_col2.save_pretrained(<span class="hljs-string">&quot;./models/model_feedba
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="vj30hb" class="python"><span class="hljs-comment"># Evaluate Column 1</span>
+          <pre><code id="jwxkhd" class="python"><span class="hljs-comment"># Evaluate Column 1</span>
 metrics_col1 = trainer_col1.evaluate(eval_data_col1)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Column 1 Accuracy: <span class="hljs-subst">{metrics_col1[<span class="hljs-string">&#x27;accuracy&#x27;</span>]:<span class="hljs-number">.2</span>%}</span>&quot;</span>)
 
@@ -621,12 +621,12 @@ metrics_col2 = trainer_col2.evaluate(eval_data_col2)
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="0xxfzm" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="zpkv9" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="0xxfzm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="zpkv9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -648,7 +648,7 @@ metrics_col2 = trainer_col2.evaluate(eval_data_col2)
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="0xxfzm" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> classification_report
+          <pre><code id="zpkv9" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> classification_report
 
 <span class="hljs-comment">#  Column 1 </span>
 preds_col1 = model_col1.predict(eval_data_col1[<span class="hljs-string">&quot;text&quot;</span>])
@@ -678,12 +678,12 @@ preds_col2 = model_col2.predict(eval_data_col2[<span class="hljs-string">&quot;t
           <div class="title-code">
             <span class="title-code-text"><svg class="lang-icon-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15l5-5-5-5M13 19h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="m2p2af" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ib53no" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="m2p2af" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ib53no" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -705,7 +705,7 @@ preds_col2 = model_col2.predict(eval_data_col2[<span class="hljs-string">&quot;t
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="m2p2af" class="">=== Column 1: Suggestion Classification ===
+          <pre><code id="ib53no" class="">=== Column 1: Suggestion Classification ===
                 precision    recall  f1-score   support
 
 not-suggestion       0.88      0.87      0.88        4
@@ -723,12 +723,12 @@ not-suggestion       0.88      0.87      0.88        4
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="i46os" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ipfegt" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="i46os" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ipfegt" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -750,7 +750,7 @@ not-suggestion       0.88      0.87      0.88        4
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="i46os" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> confusion_matrix, ConfusionMatrixDisplay
+          <pre><code id="ipfegt" class="python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> confusion_matrix, ConfusionMatrixDisplay
 <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
 
 <span class="hljs-comment">#  Column 1 Confusion Matrix </span>
@@ -783,12 +783,12 @@ plt.show()</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="c9230n" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="6hg5na" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="c9230n" aria-label="Copy code">
+              <button class="copy-code" data-code-id="6hg5na" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -810,7 +810,7 @@ plt.show()</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="c9230n" class="python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+          <pre><code id="6hg5na" class="python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
 
 <span class="hljs-comment"># Load your data</span>
 df = pd.read_excel(<span class="hljs-string">&quot;your_data.xlsx&quot;</span>)  <span class="hljs-comment"># &lt;-- change filename</span>
@@ -858,12 +858,12 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="adkyyt" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="kee420p" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="adkyyt" aria-label="Copy code">
+              <button class="copy-code" data-code-id="kee420p" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -885,7 +885,7 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="adkyyt" class="python"><span class="hljs-comment"># Add more examples to training data</span>
+          <pre><code id="kee420p" class="python"><span class="hljs-comment"># Add more examples to training data</span>
 additional_data = Dataset.from_dict({
     <span class="hljs-string">&quot;text&quot;</span>: [
         <span class="hljs-comment"># Add examples the model misclassified</span>
@@ -907,12 +907,12 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="rl9vg" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2kcjt9" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="rl9vg" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2kcjt9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -934,7 +934,7 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="rl9vg" class="python">args = TrainingArguments(
+          <pre><code id="2kcjt9" class="python">args = TrainingArguments(
     batch_size=<span class="hljs-number">8</span>,
     num_epochs=<span class="hljs-number">3</span>,
     num_iterations=<span class="hljs-number">40</span>,  <span class="hljs-comment"># increased from 20</span>
@@ -949,12 +949,12 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="5dbps" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="64ajdim" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="5dbps" aria-label="Copy code">
+              <button class="copy-code" data-code-id="64ajdim" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -976,7 +976,7 @@ train_data_col1 = concatenate_datasets([train_data_col1, additional_data])</code
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="5dbps" class="python"><span class="hljs-comment"># Larger model = better accuracy, slower speed</span>
+          <pre><code id="64ajdim" class="python"><span class="hljs-comment"># Larger model = better accuracy, slower speed</span>
 model = SetFitModel.from_pretrained(
     <span class="hljs-string">&quot;sentence-transformers/paraphrase-multilingual-mpnet-base-v2&quot;</span>
 )</code></pre>
@@ -989,12 +989,12 @@ model = SetFitModel.from_pretrained(
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="o66yig" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="p2bvpc" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="o66yig" aria-label="Copy code">
+              <button class="copy-code" data-code-id="p2bvpc" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1016,7 +1016,7 @@ model = SetFitModel.from_pretrained(
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="o66yig" class="python"><span class="hljs-comment"># Sample 50 random rows to manually review</span>
+          <pre><code id="p2bvpc" class="python"><span class="hljs-comment"># Sample 50 random rows to manually review</span>
 sample = df.sample(<span class="hljs-number">50</span>, random_state=<span class="hljs-number">42</span>)
 sample[
     [col1, <span class="hljs-string">&quot;suggestion_flag&quot;</span>, col2, <span class="hljs-string">&quot;feedback_flag&quot;</span>]
@@ -1030,12 +1030,12 @@ sample[
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="d05yn8" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="5t64tq" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="d05yn8" aria-label="Copy code">
+              <button class="copy-code" data-code-id="5t64tq" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1057,7 +1057,7 @@ sample[
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="d05yn8" class="python"><span class="hljs-string">&quot;&quot;&quot;
+          <pre><code id="5t64tq" class="python"><span class="hljs-string">&quot;&quot;&quot;
 Complete SetFit Classification Pipeline
 For survey feedback analysis (Bahasa + English)
 
@@ -1288,12 +1288,12 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="m0z06g" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ckyo" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="m0z06g" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ckyo" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1315,7 +1315,7 @@ df.to_excel(<span class="hljs-string">&quot;results_classified.xlsx&quot;</span>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="m0z06g" class="python"><span class="hljs-comment"># predict gives labels only</span>
+          <pre><code id="ckyo" class="python"><span class="hljs-comment"># predict gives labels only</span>
 predictions = model_col1.predict([<span class="hljs-string">&quot;Tambahkan fitur timer&quot;</span>])
 <span class="hljs-built_in">print</span>(predictions)  <span class="hljs-comment"># [1]</span>
 
@@ -2043,8 +2043,8 @@ print(probabilities)
 - **transformers<5** — pin this to avoid the `default_logdir` import error
 - **Evaluate before deploying** — always check accuracy on held-out data first
 - **Confusion matrix** — shows exactly where the model fails, so you know what training examples to add
-0:{"buildId":"F0KCAsOoaykOceOmEFRuB","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"content":"$4","sections":[{"level":"2","id":"what-is-setfit","text":"What is SetFit?"},{"level":"2","id":"step-1-installation","text":"Step 1: Installation"},{"level":"3","id":"using-uv-recommended","text":"Using uv (recommended)"},{"level":"3","id":"using-pip","text":"Using pip"},{"level":"2","id":"step-2-download-base-model-to-local-optional-but-recommended","text":"Step 2: Download Base Model to Local (Optional but Recommended)"},{"level":"2","id":"step-3-prepare-your-labeled-data","text":"Step 3: Prepare Your Labeled Data"},{"level":"3","id":"column-1-suggestion-classification","text":"Column 1: Suggestion Classification"},{"level":"3","id":"column-2-feedback-classification","text":"Column 2: Feedback Classification"},{"level":"2","id":"step-4-prepare-evaluation-data","text":"Step 4: Prepare Evaluation Data"},{"level":"2","id":"step-5-train-the-models","text":"Step 5: Train the Models"},{"level":"3","id":"train-column-1-model-suggestion-classifier","text":"Train Column 1 Model (Suggestion Classifier)"},{"level":"3","id":"train-column-2-model-feedback-classifier","text":"Train Column 2 Model (Feedback Classifier)"},{"level":"2","id":"step-6-evaluate-the-models","text":"Step 6: Evaluate the Models"},{"level":"3","id":"quick-accuracy-check","text":"Quick Accuracy Check"},{"level":"3","id":"detailed-metrics-precision-recall-f1","text":"Detailed Metrics (Precision, Recall, F1)"},{"level":"3","id":"confusion-matrix","text":"Confusion Matrix"},{"level":"3","id":"what-to-look-at","text":"What to Look At"},{"level":"2","id":"step-7-predict-on-your-full-dataset","text":"Step 7: Predict on Your Full Dataset"},{"level":"2","id":"step-8-improve-accuracy","text":"Step 8: Improve Accuracy"},{"level":"3","id":"1-add-more-training-examples","text":"1. Add more training examples"},{"level":"3","id":"2-increase-training-iterations","text":"2. Increase training iterations"},{"level":"3","id":"3-try-a-larger-base-model","text":"3. Try a larger base model"},{"level":"3","id":"4-review-random-samples-from-predictions","text":"4. Review random samples from predictions"},{"level":"2","id":"full-pipeline-copy-paste-ready","text":"Full Pipeline (Copy-Paste Ready)"},{"level":"2","id":"get-confidence-score","text":"Get Confidence Score"},{"level":"2","id":"key-tips","text":"Key Tips"}],"raw":"$5","readingTime":"12 min read"},"pathname":"/insight/post/setfit-tutorial"}]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
-6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","async":true}]
-7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true}]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"setfit-tutorial","meta":{"title":"Text Classification for Survey Data Using SetFit","date":"2026-04-10","description":"SetFit (Sentence Transformer Fine-Tuning) is a framework for few-shot text classification.","author":"irufano","tags":["NLP","SetFit"],"image":"https://huggingface.co/front/assets/huggingface_logo-noborder.svg","category":"NLP"},"content":"$4","sections":[{"level":"2","id":"what-is-setfit","text":"What is SetFit?"},{"level":"2","id":"step-1-installation","text":"Step 1: Installation"},{"level":"3","id":"using-uv-recommended","text":"Using uv (recommended)"},{"level":"3","id":"using-pip","text":"Using pip"},{"level":"2","id":"step-2-download-base-model-to-local-optional-but-recommended","text":"Step 2: Download Base Model to Local (Optional but Recommended)"},{"level":"2","id":"step-3-prepare-your-labeled-data","text":"Step 3: Prepare Your Labeled Data"},{"level":"3","id":"column-1-suggestion-classification","text":"Column 1: Suggestion Classification"},{"level":"3","id":"column-2-feedback-classification","text":"Column 2: Feedback Classification"},{"level":"2","id":"step-4-prepare-evaluation-data","text":"Step 4: Prepare Evaluation Data"},{"level":"2","id":"step-5-train-the-models","text":"Step 5: Train the Models"},{"level":"3","id":"train-column-1-model-suggestion-classifier","text":"Train Column 1 Model (Suggestion Classifier)"},{"level":"3","id":"train-column-2-model-feedback-classifier","text":"Train Column 2 Model (Feedback Classifier)"},{"level":"2","id":"step-6-evaluate-the-models","text":"Step 6: Evaluate the Models"},{"level":"3","id":"quick-accuracy-check","text":"Quick Accuracy Check"},{"level":"3","id":"detailed-metrics-precision-recall-f1","text":"Detailed Metrics (Precision, Recall, F1)"},{"level":"3","id":"confusion-matrix","text":"Confusion Matrix"},{"level":"3","id":"what-to-look-at","text":"What to Look At"},{"level":"2","id":"step-7-predict-on-your-full-dataset","text":"Step 7: Predict on Your Full Dataset"},{"level":"2","id":"step-8-improve-accuracy","text":"Step 8: Improve Accuracy"},{"level":"3","id":"1-add-more-training-examples","text":"1. Add more training examples"},{"level":"3","id":"2-increase-training-iterations","text":"2. Increase training iterations"},{"level":"3","id":"3-try-a-larger-base-model","text":"3. Try a larger base model"},{"level":"3","id":"4-review-random-samples-from-predictions","text":"4. Review random samples from predictions"},{"level":"2","id":"full-pipeline-copy-paste-ready","text":"Full Pipeline (Copy-Paste Ready)"},{"level":"2","id":"get-confidence-score","text":"Get Confidence Score"},{"level":"2","id":"key-tips","text":"Key Tips"}],"raw":"$5","readingTime":"12 min read"},"pathname":"/insight/post/setfit-tutorial"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"P1R2XveDGBIvJ7tgHIjig"}
+6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","async":true}]
+7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
 b:null

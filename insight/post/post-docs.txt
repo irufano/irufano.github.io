@@ -1,24 +1,28 @@
 1:"$Sreact.fragment"
-2:I[79520,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js"],""]
-3:I[39756,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
-4:I[37457,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
-8:I[68027,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"default"]
-:HL["https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","style"]
-:HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
-:HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.911aee48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.ab421717.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:I[79520,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],""]
+3:I[39756,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[37457,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+9:I[68027,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","style"]
+:HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.163jt9-.sqsdk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.0.bhltnkrvp5b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","style",{"crossOrigin":"anonymous"}]
-0:{"P":null,"b":"F0KCAsOoaykOceOmEFRuB","c":["","insight","post","post-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","post-docs","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","crossOrigin":"anonymous"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js","async":true,"nonce":"$undefined"}]],"$L6"]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L7",false]],"m":"$undefined","G":["$8",[]],"S":true}
-9:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
-a:"$Sreact.suspense"
-c:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"ViewportBoundary"]
-e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","https://irufano.github.io/_next/static/chunks/a2dfb6fc5208ab9b.js"],"MetadataBoundary"]
-6:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
-7:["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$Ld"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$Lf"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-10:I[1747,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
-11:I[5608,["https://irufano.github.io/_next/static/chunks/744355e03808d4c7.js","https://irufano.github.io/_next/static/chunks/2aa98bdd3e820fa4.js","https://irufano.github.io/_next/static/chunks/33c0348b066511fb.js"],"default"]
-12:T1cc3e,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
+0:{"P":null,"c":["","insight","post","post-docs"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["post",{"children":[["slug","post-docs","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","crossOrigin":"anonymous"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]],"$L6"]}],{},null,false,null]},null,false,"$@7"]},null,false,"$@7"]},null,false,"$@7"]},null,false,null],"$L8",false]],"m":"$undefined","G":["$9",["$La","$Lb"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"P1R2XveDGBIvJ7tgHIjig"}
+c:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+12:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+6:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+f:[]
+7:"$Wf"
+8:["$","$1","h",{"children":[null,["$","$L10",null,{"children":"$L11"}],["$","div",null,{"hidden":true,"children":["$","$L12",null,{"children":["$","$d",null,{"name":"Next.Metadata","children":"$L13"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+a:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+b:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+14:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+15:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0k_s5zfc894e_.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
+16:T1cc3e,<p>Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:</p>
 <h2 id="meta-data">Meta Data</h2>
 <p>Meta data used in this post are <span class="inline-code-block">title</span>, <span class="inline-code-block">date</span>, <span class="inline-code-block">description</span>, <span class="inline-code-block">author</span> and <span class="inline-code-block">tags</span>. Title at this meta data used for title post.</p>
 
@@ -26,12 +30,12 @@ e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-javascript-plain colored" title="js"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="gf3w5k" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="sauw3k" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="gf3w5k" aria-label="Copy code">
+              <button class="copy-code" data-code-id="sauw3k" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -53,7 +57,7 @@ e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="gf3w5k" class="js">---
+          <pre><code id="sauw3k" class="js">---
 <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Your Post Title&quot;</span>
 <span class="hljs-attr">date</span>: <span class="hljs-string">&quot;2024-09-15&quot;</span>
 <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;Your post description&quot;</span>
@@ -72,12 +76,12 @@ e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="wkkjws" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="lgha3" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="wkkjws" aria-label="Copy code">
+              <button class="copy-code" data-code-id="lgha3" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -99,7 +103,7 @@ e:I[97367,["https://irufano.github.io/_next/static/chunks/ff1a16fafef87110.js","
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="wkkjws" class="md">&lt;!-- first paragraph --&gt;
+          <pre><code id="lgha3" class="md">&lt;!-- first paragraph --&gt;
 Commodo eu in adipisicing id eu elit nisi exercitation ipsum mollit cupidatat consequat non. Aute elit nulla sit ipsum pariatur do do esse culpa laboris. Officia est non reprehenderit adipisicing officia deserunt consectetur aute exercitation magna laboris ipsum ut. Veniam reprehenderit Lorem commodo et adipisicing dolor Lorem commodo do incididunt. Id tempor culpa laborum eiusmod est veniam. Officia fugiat mollit dolor adipisicing tempor voluptate proident qui.
 
 &lt;!-- second paragraph --&gt;
@@ -114,12 +118,12 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="maeeto" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="u1h63" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="maeeto" aria-label="Copy code">
+              <button class="copy-code" data-code-id="u1h63" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -141,7 +145,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="maeeto" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
+          <pre><code id="u1h63" class="md">![<span class="hljs-string">Alt text for the image</span>](<span class="hljs-link">/yourpath_image.png</span>)</code></pre>
           </div>
           </div>
         
@@ -152,12 +156,12 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="9j368m" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ffaa3u" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="9j368m" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ffaa3u" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -179,7 +183,7 @@ Laboris nulla et amet fugiat. Sit amet ad quis in consequat esse incididunt veli
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="9j368m" class="md"><span class="hljs-section">## Section 1</span>
+          <pre><code id="ffaa3u" class="md"><span class="hljs-section">## Section 1</span>
 
 Eiusmod sint laborum nostrud aliquip excepteur reprehenderit id in aliqua.
 
@@ -203,12 +207,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="lbime7" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="vxa97t" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="lbime7" aria-label="Copy code">
+              <button class="copy-code" data-code-id="vxa97t" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -230,7 +234,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="lbime7" class="md"><span class="hljs-bullet">-</span> bullet 1
+          <pre><code id="vxa97t" class="md"><span class="hljs-bullet">-</span> bullet 1
 <span class="hljs-bullet">-</span> bullet 2
 <span class="hljs-bullet">-</span> bullet 3
 
@@ -257,12 +261,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="w3w81w" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="xfcjd" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="w3w81w" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xfcjd" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -284,7 +288,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="w3w81w" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
+          <pre><code id="xfcjd" class="md"><span class="hljs-emphasis">*This is emphasis*</span>
 
 <span class="hljs-emphasis">*Hello*</span>
 
@@ -299,12 +303,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="l3msd" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="k02bfq" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="l3msd" aria-label="Copy code">
+              <button class="copy-code" data-code-id="k02bfq" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -326,7 +330,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="l3msd" class="md"><span class="hljs-strong">**This is strong**</span>
+          <pre><code id="k02bfq" class="md"><span class="hljs-strong">**This is strong**</span>
 
 <span class="hljs-strong">**Hello**</span>
 
@@ -342,12 +346,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="nxoha" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ndwdbm" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="nxoha" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ndwdbm" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -369,7 +373,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="nxoha" class="md"><span class="hljs-code">`This is inline code`</span>
+          <pre><code id="ndwdbm" class="md"><span class="hljs-code">`This is inline code`</span>
 
 <span class="hljs-code">`Hello`</span>
 
@@ -384,12 +388,12 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="gt8pl6" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="exvpl" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="gt8pl6" aria-label="Copy code">
+              <button class="copy-code" data-code-id="exvpl" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -411,7 +415,7 @@ Excepteur dolor dolor pariatur dolore exercitation.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="gt8pl6" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
+          <pre><code id="exvpl" class="markdown">&#x27;<span class="hljs-code">```js title=&quot;your-code-title.js&quot;
 funtion getData () =&gt; {
     console.log(&quot;Hello world!&quot;);
 }
@@ -428,12 +432,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="8opo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="tkp25l" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="8opo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="tkp25l" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -455,7 +459,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-line-numbers"><code id="8opo" class="markdown" style="counter-reset: line 0"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-line-numbers"><code id="tkp25l" class="markdown" style="counter-reset: line 0"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -465,12 +469,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="6zbn5o" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="etyrr8" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="6zbn5o" aria-label="Copy code">
+              <button class="copy-code" data-code-id="etyrr8" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -492,7 +496,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-line-numbers"><code id="6zbn5o" class="markdown" style="counter-reset: line 101"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true line-start=10</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-line-numbers"><code id="etyrr8" class="markdown" style="counter-reset: line 101"><span class="code-line">&#x27;```js title=&quot;your-code-title.js&quot; line-number=true line-start=10</span><span class="code-line">funtion getData () =&gt; {</span><span class="code-line">    console.log(&quot;Hello world!&quot;);</span><span class="code-line">}</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -503,12 +507,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="96ra83" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="xp7i9u" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="96ra83" aria-label="Copy code">
+              <button class="copy-code" data-code-id="xp7i9u" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -530,7 +534,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-highlight"><code id="96ra83" class="markdown"><span class="code-line highlight-line">&#x27;```js title=&quot;example.js&quot; highlight={1,3-5}</span><span class="code-line">const a = 1;</span><span class="code-line highlight-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line highlight-line">const d = 4;</span><span class="code-line">const e = 5;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-highlight"><code id="xp7i9u" class="markdown"><span class="code-line highlight-line">&#x27;```js title=&quot;example.js&quot; highlight={1,3-5}</span><span class="code-line">const a = 1;</span><span class="code-line highlight-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line highlight-line">const d = 4;</span><span class="code-line">const e = 5;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -540,12 +544,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="lhiv4" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="0wyy2h" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="lhiv4" aria-label="Copy code">
+              <button class="copy-code" data-code-id="0wyy2h" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -567,7 +571,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre class="has-line-numbers"><code id="lhiv4" class="markdown" style="counter-reset: line 19"><span class="code-line">&#x27;```js title=&quot;example.js&quot; line-number=true highlight={1,4}</span><span class="code-line highlight-line">const a = 1;</span><span class="code-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line">const d = 4;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
+          <pre class="has-line-numbers"><code id="0wyy2h" class="markdown" style="counter-reset: line 19"><span class="code-line">&#x27;```js title=&quot;example.js&quot; line-number=true highlight={1,4}</span><span class="code-line highlight-line">const a = 1;</span><span class="code-line">const b = 2;</span><span class="code-line highlight-line">const c = 3;</span><span class="code-line">const d = 4;</span><span class="code-line">```&#x27;</span><span class="code-line"> </span><span class="code-line">&lt;!-- remove &#x27; --&gt;</span></code></pre>
           </div>
           </div>
         
@@ -578,12 +582,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="xgt44n" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="bezq0k" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="xgt44n" aria-label="Copy code">
+              <button class="copy-code" data-code-id="bezq0k" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -605,7 +609,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="xgt44n" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
+          <pre><code id="bezq0k" class="markdown"><span class="hljs-quote">&gt; [info]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is info blockquote example</span></code></pre>
           </div>
@@ -637,12 +641,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ihndmk" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="qpslf9" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ihndmk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="qpslf9" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -664,7 +668,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ihndmk" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
+          <pre><code id="qpslf9" class="markdown"><span class="hljs-quote">&gt; [warning]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is warning blockquote example</span></code></pre>
           </div>
@@ -696,12 +700,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="vbyvy9" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2pu6cn" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="vbyvy9" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2pu6cn" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -723,7 +727,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="vbyvy9" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
+          <pre><code id="2pu6cn" class="markdown"><span class="hljs-quote">&gt; [tip]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is tip blockquote example</span></code></pre>
           </div>
@@ -755,12 +759,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="nu6acr" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="yt76xm" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="nu6acr" aria-label="Copy code">
+              <button class="copy-code" data-code-id="yt76xm" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -782,7 +786,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="nu6acr" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
+          <pre><code id="yt76xm" class="markdown"><span class="hljs-quote">&gt; [important]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is important blockquote example</span></code></pre>
           </div>
@@ -814,12 +818,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="v6bhq" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="hwydtb" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="v6bhq" aria-label="Copy code">
+              <button class="copy-code" data-code-id="hwydtb" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -841,7 +845,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="v6bhq" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
+          <pre><code id="hwydtb" class="markdown"><span class="hljs-quote">&gt; [caution]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is caution blockquote example</span></code></pre>
           </div>
@@ -874,12 +878,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="markdown"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="wmvono" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="kh8f5s" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="wmvono" aria-label="Copy code">
+              <button class="copy-code" data-code-id="kh8f5s" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -901,7 +905,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="wmvono" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
+          <pre><code id="kh8f5s" class="markdown"><span class="hljs-quote">&gt; [note]:</span>
 <span class="hljs-quote">&gt;
 &gt; this is note blockquote example</span></code></pre>
           </div>
@@ -927,12 +931,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-javascript-plain colored" title="js"></i><span class="title-code-label">your-code-title.js</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="9v780wo" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="x0m3x" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="9v780wo" aria-label="Copy code">
+              <button class="copy-code" data-code-id="x0m3x" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -954,7 +958,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="9v780wo" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
+          <pre><code id="x0m3x" class="js">funtion <span class="hljs-title function_">getData</span> () =&gt; {
    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);
 }</code></pre>
           </div>
@@ -971,12 +975,12 @@ funtion getData () =&gt; {
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="oontud" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="41ufzq" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="oontud" aria-label="Copy code">
+              <button class="copy-code" data-code-id="41ufzq" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -998,7 +1002,7 @@ funtion getData () =&gt; {
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="oontud" class="md">The area of a circle is $A = \pi r^2$.
+          <pre><code id="41ufzq" class="md">The area of a circle is $A = \pi r^2$.
 
 Euler&#x27;s identity: $e^{i\pi} + 1 = 0$.</code></pre>
           </div>
@@ -1014,12 +1018,12 @@ Euler&#x27;s identity: $e^{i\pi} + 1 = 0$.</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="sg4xoh" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="hqcs5d" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="sg4xoh" aria-label="Copy code">
+              <button class="copy-code" data-code-id="hqcs5d" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1041,7 +1045,7 @@ Euler&#x27;s identity: $e^{i\pi} + 1 = 0$.</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="sg4xoh" class="md">$$
+          <pre><code id="hqcs5d" class="md">$$
 E = mc^2
 $$
 
@@ -1087,12 +1091,12 @@ $$</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="7qw2bh" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="td13hl" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="7qw2bh" aria-label="Copy code">
+              <button class="copy-code" data-code-id="td13hl" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1114,7 +1118,7 @@ $$</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="7qw2bh" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="td13hl" class="md"><span class="hljs-code">```mermaid
 &lt;diagram definition here&gt;
 ```</span></code></pre>
           </div>
@@ -1126,12 +1130,12 @@ $$</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="yucrxd" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="1wwxuc" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="yucrxd" aria-label="Copy code">
+              <button class="copy-code" data-code-id="1wwxuc" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1153,7 +1157,7 @@ $$</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="yucrxd" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="1wwxuc" class="md"><span class="hljs-code">```mermaid
 flowchart TD
     A([Start]) --&gt; B[Read input]
     B --&gt; C{Is valid?}
@@ -1173,12 +1177,12 @@ flowchart TD
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="t10tjs" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ijq2k" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="t10tjs" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ijq2k" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1200,7 +1204,7 @@ flowchart TD
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="t10tjs" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="ijq2k" class="md"><span class="hljs-code">```mermaid
 sequenceDiagram
     participant Client
     participant Server
@@ -1222,12 +1226,12 @@ sequenceDiagram
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="jf1ihj" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ycf32b" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="jf1ihj" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ycf32b" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1249,7 +1253,7 @@ sequenceDiagram
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="jf1ihj" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="ycf32b" class="md"><span class="hljs-code">```mermaid
 classDiagram
     class Animal {
         +String name
@@ -1276,12 +1280,12 @@ classDiagram
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="5l0r7l" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="b72j6n" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="5l0r7l" aria-label="Copy code">
+              <button class="copy-code" data-code-id="b72j6n" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1303,7 +1307,7 @@ classDiagram
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="5l0r7l" class="md"><span class="hljs-code">```mermaid
+          <pre><code id="b72j6n" class="md"><span class="hljs-code">```mermaid
 erDiagram
     USER {
         int id PK
@@ -1356,12 +1360,12 @@ erDiagram
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="rpbnmn" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="n2o2bb" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="rpbnmn" aria-label="Copy code">
+              <button class="copy-code" data-code-id="n2o2bb" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1383,7 +1387,7 @@ erDiagram
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="rpbnmn" class="md">This approach is widely used in adaptive testing [1].
+          <pre><code id="n2o2bb" class="md">This approach is widely used in adaptive testing [1].
 
 Multiple sources can be cited together [1, 2] or separately [3].
 
@@ -1398,12 +1402,12 @@ You can cite as many as needed in one bracket [1, 2, 3].</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">your-post.md</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="q8l3s" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="2xgmdp" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="q8l3s" aria-label="Copy code">
+              <button class="copy-code" data-code-id="2xgmdp" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -1425,7 +1429,7 @@ You can cite as many as needed in one bracket [1, 2, 3].</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="q8l3s" class="md"><span class="hljs-section">## References</span>
+          <pre><code id="2xgmdp" class="md"><span class="hljs-section">## References</span>
 
 [1] Author, A. (2024). <span class="hljs-emphasis">*Book Title*</span>. Publisher.
 
@@ -1479,7 +1483,7 @@ You can cite as many as needed in one bracket [1, 2, 3].</code></pre>
                   
               </div>
             
-13:T2dbc,
+17:T2dbc,
 Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
 
 ## Meta Data
@@ -2022,7 +2026,7 @@ When the post is rendered:
 
 > [important]:
 >
-> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.5:["$","$L10",null,{"type":"$undefined","children":["$","$L11",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown","Mermaid"],"category":"Insights Docs"},"content":"$12","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"4","id":"code-block-with-line-numbers","text":"Code Block with Line Numbers"},{"level":"4","id":"highlight-lines","text":"Highlight Lines"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"},{"level":"2","id":"formula-latex","text":"Formula (LaTeX)"},{"level":"3","id":"inline-formula","text":"Inline Formula"},{"level":"3","id":"block-formula","text":"Block Formula"},{"level":"3","id":"common-latex-syntax","text":"Common LaTeX Syntax"},{"level":"2","id":"diagram-mermaid","text":"Diagram (Mermaid)"},{"level":"3","id":"flowchart","text":"Flowchart"},{"level":"3","id":"sequence-diagram","text":"Sequence Diagram"},{"level":"3","id":"class-diagram","text":"Class Diagram"},{"level":"3","id":"entity-relationship-diagram","text":"Entity Relationship Diagram"},{"level":"2","id":"reference-citations","text":"Reference Citations"},{"level":"3","id":"inline-citations","text":"Inline Citations"},{"level":"3","id":"reference-list","text":"Reference List"}],"raw":"$13","readingTime":"9 min read"},"pathname":"/insight/post/post-docs"}]}]
-d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-b:null
-f:[["$","title","0",{"children":"Insight Posts Documentation"}],["$","meta","1",{"name":"description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}],["$","meta","2",{"property":"og:title","content":"Insight Posts Documentation"}],["$","meta","3",{"property":"og:description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/post-docs"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","7",{"name":"twitter:title","content":"Insight Posts Documentation"}],["$","meta","8",{"name":"twitter:description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}]]
+> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.5:["$","$L14",null,{"type":"$undefined","children":["$","$L15",null,{"post":{"slug":"post-docs","meta":{"title":"Insight Posts Documentation","date":"2024-09-15","description":"Documentation about insight post creation with markdown include meta data, section, paragraph etc.","author":"irufano","tags":["Markdown","Mermaid"],"category":"Insights Docs"},"content":"$16","sections":[{"level":"2","id":"meta-data","text":"Meta Data"},{"level":"2","id":"paragraph","text":"Paragraph"},{"level":"2","id":"image","text":"Image"},{"level":"2","id":"section","text":"Section"},{"level":"2","id":"bullet-and-numbering","text":"Bullet and Numbering"},{"level":"2","id":"emphasis","text":"Emphasis"},{"level":"2","id":"strong","text":"Strong"},{"level":"2","id":"code","text":"Code"},{"level":"3","id":"inline-code","text":"Inline Code"},{"level":"3","id":"code-block","text":"Code Block"},{"level":"4","id":"code-block-with-line-numbers","text":"Code Block with Line Numbers"},{"level":"4","id":"highlight-lines","text":"Highlight Lines"},{"level":"2","id":"blockquote","text":"Blockquote"},{"level":"3","id":"info","text":"Info"},{"level":"3","id":"warning","text":"Warning"},{"level":"3","id":"tip","text":"Tip"},{"level":"3","id":"important","text":"Important"},{"level":"3","id":"caution","text":"caution"},{"level":"3","id":"note","text":"Note"},{"level":"2","id":"formula-latex","text":"Formula (LaTeX)"},{"level":"3","id":"inline-formula","text":"Inline Formula"},{"level":"3","id":"block-formula","text":"Block Formula"},{"level":"3","id":"common-latex-syntax","text":"Common LaTeX Syntax"},{"level":"2","id":"diagram-mermaid","text":"Diagram (Mermaid)"},{"level":"3","id":"flowchart","text":"Flowchart"},{"level":"3","id":"sequence-diagram","text":"Sequence Diagram"},{"level":"3","id":"class-diagram","text":"Class Diagram"},{"level":"3","id":"entity-relationship-diagram","text":"Entity Relationship Diagram"},{"level":"2","id":"reference-citations","text":"Reference Citations"},{"level":"3","id":"inline-citations","text":"Inline Citations"},{"level":"3","id":"reference-list","text":"Reference List"}],"raw":"$17","readingTime":"9 min read"},"pathname":"/insight/post/post-docs"}]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:null
+13:[["$","title","0",{"children":"Insight Posts Documentation"}],["$","meta","1",{"name":"description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}],["$","meta","2",{"property":"og:title","content":"Insight Posts Documentation"}],["$","meta","3",{"property":"og:description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io/insight/post/post-docs"}],["$","meta","5",{"property":"og:site_name","content":"Irufano Insight"}],["$","meta","6",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","7",{"name":"twitter:title","content":"Insight Posts Documentation"}],["$","meta","8",{"name":"twitter:description","content":"Documentation about insight post creation with markdown include meta data, section, paragraph etc."}]]

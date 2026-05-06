@@ -1,5 +1,5 @@
-:HL["https://irufano.github.io/_next/static/chunks/6ccc955a6b80c942.css","style"]
-:HL["https://irufano.github.io/_next/static/chunks/c6310c36317e3c53.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/03i~42.~o2-7y.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","style"]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css","style",{"crossOrigin":"anonymous"}]
-0:{"buildId":"F0KCAsOoaykOceOmEFRuB","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"P1R2XveDGBIvJ7tgHIjig"}
