@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: path.resolve("."),
+  },
   output: "export",
   assetPrefix:
     process.env.NODE_ENV === "production"

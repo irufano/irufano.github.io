@@ -7,6 +7,7 @@ import rSlug from "remark-slug";
 import toc from "remark-toc";
 import highlight from "highlight.js";
 import remarkGfm from "remark-gfm";
+import katex from "katex";
 import { visit } from "unist-util-visit";
 
 /**
@@ -150,6 +151,30 @@ function getLangIcon(lang: string): string {
   return `<svg class="lang-icon-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15l5-5-5-5M13 19h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 }
 
+function renderBlockquoteChild(item: Record<string, unknown>): string {
+  if (!item) return "";
+  const type = item.type as string;
+  if (type === "link") {
+    const linkChildren = item.children as Array<Record<string, unknown>> | undefined;
+    const linkText = linkChildren?.map(renderBlockquoteChild).join("") ?? "";
+    const href = (item.url as string) ?? "#";
+    return `<a href="${href}">${linkText}</a>`;
+  }
+  if (type === "strong") {
+    const strongChildren = item.children as Array<Record<string, unknown>> | undefined;
+    return `<span class="strong-block">${strongChildren?.map(renderBlockquoteChild).join("") ?? ""}</span>`;
+  }
+  if (type === "emphasis") {
+    const emChildren = item.children as Array<Record<string, unknown>> | undefined;
+    return `<span class="emphasis-block">${emChildren?.map(renderBlockquoteChild).join("") ?? ""}</span>`;
+  }
+  if (type === "inlineCode") {
+    const highlighted = highlight.highlightAuto(item.value as string, ["js"]).value;
+    return `<span class="inline-code-block">${highlighted}</span>`;
+  }
+  return (item.value as string) ?? "";
+}
+
 export interface PostMeta {
   title: string;
   description: string;
@@ -236,6 +261,7 @@ export function getPostBySlug(slug: string): Post {
   const { data, content } = matter(fileContents);
 
   const readingTimeEst = calculateReadingTime(content);
+  const mathProcessed = renderReferences(renderMath(content));
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const processedContent = (remark() as any)
@@ -248,6 +274,14 @@ export function getPostBySlug(slug: string): Post {
       visit(tree as Parameters<typeof visit>[0], "code", (node: Record<string, unknown>) => {
         const meta = (node.meta as string) || "";
         const language = (node.lang as string) || "";
+
+        if (language.toLowerCase() === "mermaid") {
+          const rawSource = (node.value as string).trim();
+          const encodedSource = encodeURIComponent(rawSource);
+          node.type = "html";
+          node.value = `<div class="mermaid-diagram" data-mermaid-source="${encodedSource}"><pre class="mermaid"></pre></div>`;
+          return;
+        }
         const title = meta.includes("title=")
           ? meta.replaceAll(/"|title=/gi, "").replace(/line-number=\w+/gi, "").replace(/line-start=\d+/gi, "").replace(/highlight=\{[^}]*\}/gi, "").trim()
           : language;
@@ -414,11 +448,15 @@ export function getPostBySlug(slug: string): Post {
                   const childContent = `
                     <p class="content-block">
                       ${childChildren
-                      .map((item) =>
-                        (item?.value as string)
-                          ?.replace(blockType.keyword, "")
-                          ?.replace(/\n/g, "<br/>")
-                      )
+                      .map((item) => {
+                        if (!item) return "";
+                        if ((item.type as string) === "text") {
+                          return ((item.value as string) ?? "")
+                            .replace(blockType.keyword, "")
+                            .replace(/\n/g, "<br/>");
+                        }
+                        return renderBlockquoteChild(item);
+                      })
                       .join("")}
                     </p>
                   `;
@@ -464,11 +502,15 @@ export function getPostBySlug(slug: string): Post {
                 const childContent = `
                   <p class="content-block">
                     ${childChildren
-                    .map((item) =>
-                      (item?.value as string)
-                        ?.replace(keyword, "")
-                        ?.replace(/\n/g, "<br/>")
-                    )
+                    .map((item) => {
+                      if (!item) return "";
+                      if ((item.type as string) === "text") {
+                        return ((item.value as string) ?? "")
+                          .replace(keyword, "")
+                          .replace(/\n/g, "<br/>");
+                      }
+                      return renderBlockquoteChild(item);
+                    })
                     .join("")}
                   </p>
                 `;
@@ -551,7 +593,7 @@ export function getPostBySlug(slug: string): Post {
         node.value = `<div class="data-table-wrapper"><div class="data-table-scroll"><table class="data-table">${headerHtml}${bodyHtml}</table></div></div>`;
       });
     })
-    .processSync(content);
+    .processSync(mathProcessed);
 
   const contentHtml = processedContent.toString();
 
@@ -666,6 +708,86 @@ export function getAllPostsByCategory(category: string): PostSummary[] {
       };
     })
     .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
+}
+
+function renderMath(markdown: string): string {
+  // Protect fenced code blocks and inline code from math replacement
+  const saved: string[] = [];
+  let result = markdown.replace(
+    /```[\s\S]*?```|`[^`\n]+`/g,
+    (match) => { saved.push(match); return `\x00SAVED${saved.length - 1}\x00`; }
+  );
+
+  // Display math: $$...$$
+  result = result.replace(/\$\$([\s\S]+?)\$\$/g, (_, formula) => {
+    try {
+      const rendered = katex.renderToString(formula.trim(), {
+        displayMode: true,
+        throwOnError: false,
+        output: "html",
+      }).replace(/\n/g, "");
+      return `\n\n<div class="math-block">${rendered}</div>\n\n`;
+    } catch {
+      return `\n\n<div class="math-block">${formula.trim()}</div>\n\n`;
+    }
+  });
+
+  // Inline math: $...$  (not $$)
+  result = result.replace(/(?<!\$)\$(?!\$)([^$\n]+?)(?<!\$)\$(?!\$)/g, (_, formula) => {
+    try {
+      const rendered = katex.renderToString(formula.trim(), {
+        displayMode: false,
+        throwOnError: false,
+        output: "html",
+      }).replace(/\n/g, "");
+      return `<span class="math-inline">${rendered}</span>`;
+    } catch {
+      return `<span class="math-inline">${formula.trim()}</span>`;
+    }
+  });
+
+  // Restore protected blocks
+  result = result.replace(/\x00SAVED(\d+)\x00/g, (_, i) => saved[parseInt(i)]);
+  return result;
+}
+
+function renderReferences(markdown: string): string {
+  // Protect code blocks
+  const saved: string[] = [];
+  let result = markdown.replace(
+    /```[\s\S]*?```|`[^`\n]+`/g,
+    (match) => { saved.push(match); return `\x00REFGUARD${saved.length - 1}\x00`; }
+  );
+
+  // Split at ## References heading
+  const refMatch = result.match(/^## References\n/m);
+  if (refMatch && refMatch.index !== undefined) {
+    const splitIdx = refMatch.index + refMatch[0].length;
+    const body = result.slice(0, splitIdx);
+    const refs = result.slice(splitIdx);
+
+    // Convert [N] and [N, M] citations in body to anchor links
+    const bodyLinked = body.replace(
+      /\[(\d+(?:,\s*\d+)*)\]/g,
+      (_, nums) =>
+        nums.split(",").map((n: string) => {
+          const num = n.trim();
+          return `[[${num}]](#ref-${num})`;
+        }).join("")
+    );
+
+    // Add id anchors to reference list items at line start
+    const refsAnchored = refs.replace(
+      /^(\[(\d+)\])/gm,
+      (_, bracket, num) => `<a id="ref-${num}"></a>${bracket}`
+    );
+
+    result = bodyLinked + refsAnchored;
+  }
+
+  // Restore code blocks
+  result = result.replace(/\x00REFGUARD(\d+)\x00/g, (_, i) => saved[parseInt(i)]);
+  return result;
 }
 
 const calculateReadingTime = (text: string): string => {

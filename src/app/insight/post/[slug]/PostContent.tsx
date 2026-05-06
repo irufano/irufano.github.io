@@ -16,6 +16,17 @@ interface PostContentProps {
 }
 
 export default function PostContent({ post, pathname }: PostContentProps) {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
   const title = post.meta?.title;
   const description = post.meta?.description;
   const date = post.meta?.date;
@@ -290,6 +301,60 @@ export default function PostContent({ post, pathname }: PostContentProps) {
   };
 
   useEffect(() => {
+    if (!contentRef.current) return;
+    const wrappers = Array.from(
+      contentRef.current.querySelectorAll<HTMLElement>(".mermaid-diagram[data-mermaid-source]")
+    );
+    if (wrappers.length === 0) return;
+    import("mermaid").then(({ default: mermaid }) => {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: isDark ? "dark" : "default",
+        securityLevel: "loose",
+      });
+      // Restore pre elements inside async callback using textContent (safe for any diagram source)
+      wrappers.forEach(wrapper => {
+        wrapper.innerHTML = "";
+        const pre = document.createElement("pre");
+        pre.className = "mermaid";
+        pre.textContent = decodeURIComponent(wrapper.getAttribute("data-mermaid-source") ?? "");
+        wrapper.appendChild(pre);
+      });
+      const blocks = wrappers
+        .map(w => w.querySelector<HTMLElement>("pre.mermaid"))
+        .filter((el): el is HTMLElement => el !== null);
+      if (blocks.length > 0) {
+        mermaid.run({ nodes: blocks }).then(() => {
+          // Strip the inline background style mermaid sets on the SVG element
+          wrappers.forEach(wrapper => {
+            wrapper.querySelectorAll<SVGElement>("svg").forEach(svg => {
+              svg.style.background = "transparent";
+              svg.style.backgroundColor = "transparent";
+            });
+          });
+        });
+      }
+    });
+  }, [content, isDark]);
+
+  useEffect(() => {
+    if (!contentRef.current) return;
+    const headings = contentRef.current.querySelectorAll<HTMLElement>(
+      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+    );
+    headings.forEach((heading) => {
+      if (heading.querySelector(".heading-anchor")) return;
+      const id = heading.getAttribute("id")!;
+      const anchor = document.createElement("a");
+      anchor.href = `#${id}`;
+      anchor.className = "heading-anchor";
+      anchor.setAttribute("aria-label", `Link to: ${heading.textContent?.trim()}`);
+      anchor.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="0.7em" height="0.7em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+      heading.appendChild(anchor);
+    });
+  }, [content]);
+
+  useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (target.closest(".wrap-code")) {
@@ -302,6 +367,36 @@ export default function PostContent({ post, pathname }: PostContentProps) {
         if (!preCode) return;
         preCode.classList.toggle("wrapped");
         button.classList.toggle("active");
+        return;
+      }
+
+      const headingAnchor = target.closest(".heading-anchor") as HTMLAnchorElement | null;
+      if (headingAnchor) {
+        e.preventDefault();
+        const id = headingAnchor.getAttribute("href")?.slice(1);
+        if (!id) return;
+        const element = document.getElementById(id);
+        if (!element) return;
+        const navbar = document.querySelector("nav");
+        const offset = navbar ? navbar.offsetHeight : 0;
+        const top = element.getBoundingClientRect().top + window.scrollY - offset - 16;
+        window.scrollTo({ top, behavior: "smooth" });
+        window.history.replaceState(null, "", `#${id}`);
+        return;
+      }
+
+      const refLink = target.closest('a[href^="#ref-"]') as HTMLAnchorElement | null;
+      if (refLink) {
+        e.preventDefault();
+        const id = refLink.getAttribute("href")?.slice(1);
+        if (!id) return;
+        const element = document.getElementById(id);
+        if (!element) return;
+        const navbar = document.querySelector("nav");
+        const offset = navbar ? navbar.offsetHeight : 0;
+        const top = element.getBoundingClientRect().top + window.scrollY - offset - 16;
+        window.scrollTo({ top, behavior: "smooth" });
+        window.history.replaceState(null, "", `#${id}`);
         return;
       }
 
@@ -439,7 +534,7 @@ export default function PostContent({ post, pathname }: PostContentProps) {
 
       {/* Section sidebar (desktop) */}
       {sections.length > 0 && (
-        <aside className="lg:w-1/4 sticky max-h-[80vh] overflow-auto top-24 mb-24 self-start hidden lg:block">
+        <aside className="lg:w-1/4 sticky max-h-[80vh] overflow-auto top-24 mb-24 self-start hidden lg:block [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-600 [&::-webkit-scrollbar-thumb]:rounded-full">
           <div className="p-4 border-l-2 border-l-gray-200 dark:border-l-gray-800">
             <div className="ml-6 mr-2">
               {searchBar}

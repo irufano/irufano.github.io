@@ -377,3 +377,52 @@ pre.has-line-numbers .code-line.highlight-line {
   padding: 12px 16px !important;
   vertical-align: middle;
 }
+
+/* Heading anchor links */
+.heading-anchor {
+  opacity: 0;
+  margin-left: 0.4rem;
+  color: #9ca3af;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease, color 0.15s ease;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+h1:hover .heading-anchor,
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor,
+h5:hover .heading-anchor,
+h6:hover .heading-anchor {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: #0CD79A;
+}
+
+.mermaid-diagram {
+  @apply my-6 flex justify-center overflow-x-auto;
+  @apply rounded-lg border border-gray-200 dark:border-gray-700 p-4;
+  @apply bg-white dark:bg-gray-900;
+}
+
+.mermaid-diagram pre {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mermaid-diagram svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.mermaid-diagram svg .background,
+.mermaid-diagram svg rect:first-child {
+  fill: transparent !important;
+}

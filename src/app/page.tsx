@@ -2,11 +2,9 @@ import Layout from "@/components/Core/Layout";
 import Greeting from "@/components/Home/Greeting";
 import HomeInsightsCard from "@/components/Home/HomeInsightCard";
 import { getPosts } from "@/utils/posts";
-import LogoAnimation from "@/components/Animation/LogoAnimation";
-import AnimatedOrbs from "@/components/Animation/AnimatedOrbs";
 import HomeToolCards from "./HomeToolCards";
-import MeteorDefenseGame from "@/components/Home/MeteorDefenseGame";
-import CatchTheBugGame from "@/components/Home/CatchTheBugGame";
+import { LogoAnimation, AnimatedOrbs } from "@/components/Animation/AnimationClientWidgets";
+import { MeteorDefenseGame, CatchTheBugGame } from "@/components/Home/HomeClientWidgets";
 
 
 export default function Home() {

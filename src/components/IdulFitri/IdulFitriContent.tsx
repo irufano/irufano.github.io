@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import EidMazeGame from "./EidMazeGame";
+import dynamic from "next/dynamic";
+
+const EidMazeGame = dynamic(() => import("./EidMazeGame"), { ssr: false });
 
 // 8-bit starfield background
 function PixelStars() {

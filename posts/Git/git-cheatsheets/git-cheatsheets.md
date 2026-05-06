@@ -6,7 +6,7 @@ author: "irufano"
 tags:
   - Git
   - Cheatheets
-image: "https://git-scm.com/images/logos/2color-lightbg@2x.png"
+image: "https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg"
 ---
 
 ## List commit

@@ -5,6 +5,7 @@ description: "Documentation about insight post creation with markdown include me
 author: "irufano"
 tags:
   - Markdown
+  - Mermaid
 ---
 
 Documentation about insight post creation with markdown. Use markdown for post, below the complete documentation:
@@ -279,3 +280,274 @@ output:
 >    console.log("Hello world!");
 > }
 > ```
+
+## Formula (LaTeX)
+
+Formulas are rendered using [KaTeX](https://katex.org/). You can write both inline and block (display) math using standard LaTeX syntax.
+
+### Inline Formula
+
+Wrap the expression with single `$` to render it inline within a sentence.
+
+```md title="your-post.md"
+The area of a circle is $A = \pi r^2$.
+
+Euler's identity: $e^{i\pi} + 1 = 0$.
+```
+
+output:
+
+The area of a circle is $A = \pi r^2$.
+
+Euler's identity: $e^{i\pi} + 1 = 0$.
+
+### Block Formula
+
+Wrap the expression with double `$$` to render it as a centered display block.
+
+```md title="your-post.md"
+$$
+E = mc^2
+$$
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+$$
+\frac{d}{dx}\left(\int_{a}^{x} f(t)\, dt\right) = f(x)
+$$
+```
+
+output:
+
+$$
+E = mc^2
+$$
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+$$
+\frac{d}{dx}\left(\int_{a}^{x} f(t)\, dt\right) = f(x)
+$$
+
+### Common LaTeX Syntax
+
+| Description | LaTeX | Output |
+|---|---|---|
+| Fraction | `$\frac{a}{b}$` | $\frac{a}{b}$ |
+| Superscript | `$x^{2}$` | $x^{2}$ |
+| Subscript | `$x_{i}$` | $x_{i}$ |
+| Square root | `$\sqrt{x}$` | $\sqrt{x}$ |
+| Summation | `$\sum_{i=1}^{n} x_i$` | $\sum_{i=1}^{n} x_i$ |
+| Product | `$\prod_{i=1}^{n} x_i$` | $\prod_{i=1}^{n} x_i$ |
+| Integral | `$\int_{a}^{b} f(x)\,dx$` | $\int_{a}^{b} f(x)\,dx$ |
+| Greek letters | `$\alpha, \beta, \gamma$` | $\alpha, \beta, \gamma$ |
+| Matrix | `$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$` | $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ |
+
+> [tip]:
+>
+> `$...$` and `$$...$$` patterns inside fenced code blocks or inline code are **never** rendered as math — they are safely ignored during processing.
+
+## Diagram (Mermaid)
+
+Diagrams are rendered using [Mermaid](https://mermaid.js.org/). Use a fenced code block with the language set to `mermaid`.
+
+````md title="your-post.md"
+```mermaid
+<diagram definition here>
+```
+````
+
+### Flowchart
+
+````md title="your-post.md"
+```mermaid
+flowchart TD
+    A([Start]) --> B[Read input]
+    B --> C{Is valid?}
+    C -->|Yes| D[Process data]
+    C -->|No| E[Show error]
+    D --> F([End])
+    E --> F
+```
+````
+
+output:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[Read input]
+    B --> C{Is valid?}
+    C -->|Yes| D[Process data]
+    C -->|No| E[Show error]
+    D --> F([End])
+    E --> F
+```
+
+### Sequence Diagram
+
+````md title="your-post.md"
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    Client->>Server: POST /login
+    Server->>DB: Query user
+    DB-->>Server: User record
+    Server-->>Client: 200 OK + JWT
+```
+````
+
+output:
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    Client->>Server: POST /login
+    Server->>DB: Query user
+    DB-->>Server: User record
+    Server-->>Client: 200 OK + JWT
+```
+
+### Class Diagram
+
+````md title="your-post.md"
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() String
+    }
+    class Dog {
+        +fetch() void
+    }
+    class Cat {
+        +purr() void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+````
+
+output:
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +speak() String
+    }
+    class Dog {
+        +fetch() void
+    }
+    class Cat {
+        +purr() void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+
+### Entity Relationship Diagram
+
+````md title="your-post.md"
+```mermaid
+erDiagram
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST {
+        int id PK
+        string title
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        string body
+        int post_id FK
+    }
+    USER ||--o{ POST : writes
+    POST ||--o{ COMMENT : has
+```
+````
+
+output:
+
+```mermaid
+erDiagram
+    USER {
+        int id PK
+        string name
+        string email
+    }
+    POST {
+        int id PK
+        string title
+        int user_id FK
+    }
+    COMMENT {
+        int id PK
+        string body
+        int post_id FK
+    }
+    USER ||--o{ POST : writes
+    POST ||--o{ COMMENT : has
+```
+
+> [tip]:
+>
+> Mermaid diagram source inside fenced code blocks with any other language label (e.g. ` ```md `) is **never** rendered as a diagram — only ` ```mermaid ` triggers rendering.
+
+## Reference Citations
+
+References allow you to cite sources with numbered inline citations that scroll-link to a reference list at the end of the post.
+
+### Inline Citations
+
+In the body of your post, write `[N]` for a single reference or `[N, M]` for multiple citations in one bracket. The numbers are automatically converted to clickable anchor links.
+
+```md title="your-post.md"
+This approach is widely used in adaptive testing [1].
+
+Multiple sources can be cited together [1, 2] or separately [3].
+
+You can cite as many as needed in one bracket [1, 2, 3].
+```
+
+### Reference List
+
+Add a `## References` section **at the end** of your post. Each entry must start with `[N]` at the beginning of a line:
+
+```md title="your-post.md"
+## References
+
+[1] Author, A. (2024). *Book Title*. Publisher.
+
+[2] Author, B., & Author, C. (2023). Article title. *Journal Name, 10*(2), 1–20. https://doi.org/...
+
+[3] Author, D. (2022). Conference paper title. *Proceedings of Conference*, 45–60.
+```
+
+When the post is rendered:
+- `[1]` in the body becomes `[[1]](#ref-1)` — a clickable link
+- `[1] Author...` in the reference list gets an anchor `<a id="ref-1">` so the browser can scroll to it
+- The scroll position is offset-aware and accounts for the fixed navbar height
+
+> [tip]:
+>
+> `[N]` patterns inside fenced code blocks or inline code are **never** converted — they are safely ignored during processing.
+
+> [important]:
+>
+> The `## References` heading **must** be at the end of the post and spelled exactly as `## References`. Any `[N]` citations in the body are only processed when this heading is present.
