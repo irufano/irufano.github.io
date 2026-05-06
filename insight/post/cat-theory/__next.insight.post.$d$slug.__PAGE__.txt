@@ -3,7 +3,7 @@
 3:I[5608,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
 9:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 a:"$Sreact.suspense"
-4:Tb315,<h2 id="what-is-cat">What is CAT?</h2>
+4:Tb312,<h2 id="what-is-cat">What is CAT?</h2>
 <p>Computer Adaptive Testing is a method of administering tests where <span class="strong-block">the difficulty of each question adapts in real-time based on the test-taker's ability</span>. Unlike traditional fixed tests where everyone gets the same questions, CAT selects the most informative question for each individual at each step <a href="#ref-1">[1]</a><a href="#ref-2">[2]</a>.</p>
 <p>The core idea:</p>
 <ul>
@@ -92,12 +92,12 @@ a:"$Sreact.suspense"
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-r-plain colored" title="r"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="qw3jgt" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="hkhgsr" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="qw3jgt" aria-label="Copy code">
+              <button class="copy-code" data-code-id="hkhgsr" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -119,7 +119,7 @@ a:"$Sreact.suspense"
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="qw3jgt" class="r">if correct:   theta = theta + 0.3
+          <pre><code id="hkhgsr" class="r">if correct:   theta = theta + 0.3
 if incorrect: theta = theta - 0.3</code></pre>
           </div>
           </div>
@@ -135,12 +135,12 @@ if incorrect: theta = theta - 0.3</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-r-plain colored" title="r"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="7ddd32" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="jz355" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="7ddd32" aria-label="Copy code">
+              <button class="copy-code" data-code-id="jz355" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -162,7 +162,7 @@ if incorrect: theta = theta - 0.3</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="7ddd32" class="r"><span class="hljs-comment"># Select item with highest information at current theta</span>
+          <pre><code id="jz355" class="r"><span class="hljs-comment"># Select item with highest information at current theta</span>
 I <span class="hljs-operator">&lt;-</span> a<span class="hljs-operator">^</span><span class="hljs-number">2</span> <span class="hljs-operator">*</span> P <span class="hljs-operator">*</span> <span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">-</span>P<span class="hljs-punctuation">)</span>  <span class="hljs-comment"># simplified 2PL information</span>
 next_item <span class="hljs-operator">&lt;-</span> item with <span class="hljs-built_in">max</span><span class="hljs-punctuation">(</span>I<span class="hljs-punctuation">)</span></code></pre>
           </div>
@@ -175,12 +175,12 @@ next_item <span class="hljs-operator">&lt;-</span> item with <span class="hljs-b
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-r-plain colored" title="r"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ny375i" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ju380b" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ny375i" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ju380b" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -202,7 +202,7 @@ next_item <span class="hljs-operator">&lt;-</span> item with <span class="hljs-b
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ny375i" class="r">items<span class="hljs-operator">$</span>diff <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">abs</span><span class="hljs-punctuation">(</span>items<span class="hljs-operator">$</span>difficulty <span class="hljs-operator">-</span> theta<span class="hljs-punctuation">)</span>
+          <pre><code id="ju380b" class="r">items<span class="hljs-operator">$</span>diff <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">abs</span><span class="hljs-punctuation">(</span>items<span class="hljs-operator">$</span>difficulty <span class="hljs-operator">-</span> theta<span class="hljs-punctuation">)</span>
 selected <span class="hljs-operator">&lt;-</span> items<span class="hljs-punctuation">[</span>which.min<span class="hljs-punctuation">(</span>items<span class="hljs-operator">$</span>diff<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">]</span></code></pre>
           </div>
           </div>
@@ -237,12 +237,12 @@ M1001 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
           <div class="title-code">
             <span class="title-code-text"><svg class="lang-icon-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15l5-5-5-5M13 19h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="ns21xm" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="90cr8f" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="ns21xm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="90cr8f" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -264,7 +264,7 @@ M1001 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="ns21xm" class="">1. START
+          <pre><code id="90cr8f" class="">1. START
    θ₀ = 0 (or prior mean)
    SE = ∞
 
@@ -603,7 +603,7 @@ CAT achieves this by always asking the question that provides the most informati
 [7] Huda, A., Firdaus, F., Irfan, D., Hendriyani, Y., Almasri, A., & Sukmawati, M. (2024). Optimizing Educational Assessment: The Practicality of Computer Adaptive Testing (CAT) with an Item Response Theory (IRT) Approach. *JOIV: International Journal on Informatics Visualization, 8*(1), 473–480. https://doi.org/10.62527/joiv.8.1.2217
 
 [8] Magis, D., & Raiche, G. (2012). Random Generation of Response Patterns under Computerized Adaptive Testing with the R Package catR. *Journal of Statistical Software, 48*(8), 1–31. https://doi.org/10.18637/jss.v048.i08
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"cat-theory","meta":{"title":"Computer Adaptive Testing (CAT) Theory","date":"2026-05-05","description":"Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"content":"$4","sections":[{"level":"2","id":"what-is-cat","text":"What is CAT?"},{"level":"2","id":"core-components","text":"Core Components"},{"level":"3","id":"1-item-response-theory-irt","text":"1. Item Response Theory (IRT)"},{"level":"3","id":"2-item-parameters","text":"2. Item Parameters"},{"level":"4","id":"difficulty-b","text":"Difficulty (b)"},{"level":"4","id":"discrimination-a","text":"Discrimination (a)"},{"level":"4","id":"guessing-c","text":"Guessing (c)"},{"level":"3","id":"3-item-information-function-iif","text":"3. Item Information Function (IIF)"},{"level":"3","id":"4-theta-estimation","text":"4. Theta Estimation"},{"level":"4","id":"maximum-likelihood-estimation-mle","text":"Maximum Likelihood Estimation (MLE)"},{"level":"4","id":"bayesian-estimation-eapmap","text":"Bayesian Estimation (EAP/MAP)"},{"level":"4","id":"simple-approximation","text":"Simple Approximation"},{"level":"3","id":"5-item-selection-methods","text":"5. Item Selection Methods"},{"level":"4","id":"maximum-information-most-common","text":"Maximum Information (most common)"},{"level":"4","id":"closest-difficulty-simplified","text":"Closest Difficulty (simplified)"},{"level":"4","id":"other-methods","text":"Other Methods"},{"level":"3","id":"6-stopping-rules","text":"6. Stopping Rules"},{"level":"2","id":"full-cat-process-flow","text":"Full CAT Process Flow"},{"level":"2","id":"why-cat-is-better-than-fixed-tests","text":"Why CAT is Better Than Fixed Tests"},{"level":"2","id":"interpreting-theta-θ","text":"Interpreting Theta (θ)"},{"level":"2","id":"summary-table","text":"Summary Table"},{"level":"2","id":"key-takeaway","text":"Key Takeaway"},{"level":"2","id":"references","text":"References"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/cat-theory"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fHoyXTIsToFMn4n1TvJqR"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"cat-theory","meta":{"title":"Computer Adaptive Testing (CAT) Theory","date":"2026-05-05","description":"Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"content":"$4","sections":[{"level":"2","id":"what-is-cat","text":"What is CAT?"},{"level":"2","id":"core-components","text":"Core Components"},{"level":"3","id":"1-item-response-theory-irt","text":"1. Item Response Theory (IRT)"},{"level":"3","id":"2-item-parameters","text":"2. Item Parameters"},{"level":"4","id":"difficulty-b","text":"Difficulty (b)"},{"level":"4","id":"discrimination-a","text":"Discrimination (a)"},{"level":"4","id":"guessing-c","text":"Guessing (c)"},{"level":"3","id":"3-item-information-function-iif","text":"3. Item Information Function (IIF)"},{"level":"3","id":"4-theta-estimation","text":"4. Theta Estimation"},{"level":"4","id":"maximum-likelihood-estimation-mle","text":"Maximum Likelihood Estimation (MLE)"},{"level":"4","id":"bayesian-estimation-eapmap","text":"Bayesian Estimation (EAP/MAP)"},{"level":"4","id":"simple-approximation","text":"Simple Approximation"},{"level":"3","id":"5-item-selection-methods","text":"5. Item Selection Methods"},{"level":"4","id":"maximum-information-most-common","text":"Maximum Information (most common)"},{"level":"4","id":"closest-difficulty-simplified","text":"Closest Difficulty (simplified)"},{"level":"4","id":"other-methods","text":"Other Methods"},{"level":"3","id":"6-stopping-rules","text":"6. Stopping Rules"},{"level":"2","id":"full-cat-process-flow","text":"Full CAT Process Flow"},{"level":"2","id":"why-cat-is-better-than-fixed-tests","text":"Why CAT is Better Than Fixed Tests"},{"level":"2","id":"interpreting-theta-θ","text":"Interpreting Theta (θ)"},{"level":"2","id":"summary-table","text":"Summary Table"},{"level":"2","id":"key-takeaway","text":"Key Takeaway"},{"level":"2","id":"references","text":"References"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/cat-theory"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Fb9HUF-bP3bk54zq-6Fyf"}
 6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","async":true}]
 7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]

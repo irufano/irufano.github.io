@@ -1,6 +1,6 @@
-:HL["https://irufano.github.io/_next/static/chunks/0j0yz6fon49tb.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/10bbmu9t_ajtf.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.163jt9-.sqsdk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.0.bhltnkrvp5b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"insight","param":null,"prefetchHints":0,"slots":{"children":{"name":"tags","param":null,"prefetchHints":0,"slots":{"children":{"name":"tag","param":{"type":"d","key":"AWS%20Bedrock","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"fHoyXTIsToFMn4n1TvJqR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"insight","param":null,"prefetchHints":0,"slots":{"children":{"name":"tags","param":null,"prefetchHints":0,"slots":{"children":{"name":"tag","param":{"type":"d","key":"AWS%20Bedrock","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"Fb9HUF-bP3bk54zq-6Fyf"}

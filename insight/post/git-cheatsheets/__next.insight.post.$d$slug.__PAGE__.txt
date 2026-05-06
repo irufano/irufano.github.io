@@ -9,12 +9,12 @@ a:"$Sreact.suspense"
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="9oh7p9" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="fthc8j" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="9oh7p9" aria-label="Copy code">
+              <button class="copy-code" data-code-id="fthc8j" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ a:"$Sreact.suspense"
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="9oh7p9" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
+          <pre><code id="fthc8j" class="sh">git <span class="hljs-built_in">log</span> -n [number] 
 
 <span class="hljs-comment"># or use --oneline for simple logs</span>
 git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
@@ -49,12 +49,12 @@ git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="3uqxl" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="c92975" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="3uqxl" aria-label="Copy code">
+              <button class="copy-code" data-code-id="c92975" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -76,7 +76,7 @@ git <span class="hljs-built_in">log</span> -n [number] --oneline</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="3uqxl" class="sh">git rebase [branch base]
+          <pre><code id="c92975" class="sh">git rebase [branch base]
 
 <span class="hljs-comment"># rebase n commit from head</span>
 git rebase -i HEAD~n
@@ -93,12 +93,12 @@ git rebase -i --root</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="n0cb77" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="7dak2" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="n0cb77" aria-label="Copy code">
+              <button class="copy-code" data-code-id="7dak2" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -120,7 +120,7 @@ git rebase -i --root</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="n0cb77" class="sh">git cherry-pick [commit-hash]
+          <pre><code id="7dak2" class="sh">git cherry-pick [commit-hash]
 
 <span class="hljs-comment"># or multi commit</span>
 git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
@@ -133,12 +133,12 @@ git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="3vgtas" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="kyhlmj" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="3vgtas" aria-label="Copy code">
+              <button class="copy-code" data-code-id="kyhlmj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -160,7 +160,7 @@ git cherry-pick [commit-hash] [commit-hash] [commit-hash] </code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="3vgtas" class="sh">git stash
+          <pre><code id="kyhlmj" class="sh">git stash
 
 <span class="hljs-comment"># stash include untracked file</span>
 git stash --include-untracked
@@ -186,12 +186,12 @@ git stash drop stash@{n}</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="1mvtvk" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="eokcx" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="1mvtvk" aria-label="Copy code">
+              <button class="copy-code" data-code-id="eokcx" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -213,7 +213,7 @@ git stash drop stash@{n}</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="1mvtvk" class="sh">git branch -m &lt;new_name&gt;
+          <pre><code id="eokcx" class="sh">git branch -m &lt;new_name&gt;
 <span class="hljs-comment"># or</span>
 git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
           </div>
@@ -225,12 +225,12 @@ git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="xuplc" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="sdx1" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="xuplc" aria-label="Copy code">
+              <button class="copy-code" data-code-id="sdx1" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -252,7 +252,7 @@ git branch -m &lt;old_name&gt; &lt;new_name&gt;</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="xuplc" class="sh">git branch -m &lt;new_name&gt;
+          <pre><code id="sdx1" class="sh">git branch -m &lt;new_name&gt;
 <span class="hljs-comment"># or</span>
 git branch -m &lt;old_name&gt; &lt;new_name&gt;
 
@@ -270,12 +270,12 @@ git push origin --delete &lt;old_name&gt;</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="id3kg" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="4g2geg" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="id3kg" aria-label="Copy code">
+              <button class="copy-code" data-code-id="4g2geg" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -297,7 +297,7 @@ git push origin --delete &lt;old_name&gt;</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="id3kg" class="sh"><span class="hljs-comment"># add tag local</span>
+          <pre><code id="4g2geg" class="sh"><span class="hljs-comment"># add tag local</span>
 tag -a [TAGE_NAME] -m <span class="hljs-string">&quot;[TAGE_MESSAGE]&quot;</span>
 
 <span class="hljs-comment"># push tag to remote</span>
@@ -327,12 +327,12 @@ git describe --abbrev=0
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="tf25p" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="pwbey3" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="tf25p" aria-label="Copy code">
+              <button class="copy-code" data-code-id="pwbey3" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -354,7 +354,7 @@ git describe --abbrev=0
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="tf25p" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
+          <pre><code id="pwbey3" class="sh">git commit --amend --no-edit --<span class="hljs-built_in">date</span> <span class="hljs-string">&quot;12/30/2024 10:19:19 +0700&quot;</span> </code></pre>
           </div>
           </div>
         
@@ -458,7 +458,7 @@ git describe --abbrev=0
 ## Edit last commit date
 ```sh
 git commit --amend --no-edit --date "12/30/2024 10:19:19 +0700" 
-```0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg","category":"Git"},"content":"$4","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$5","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fHoyXTIsToFMn4n1TvJqR"}
+```0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"git-cheatsheets","meta":{"title":"Git Cheatsheet","date":"2024-11-01","description":"Git cheatsheet commonly used daily","author":"irufano","tags":["Git","Cheatheets"],"image":"https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg","category":"Git"},"content":"$4","sections":[{"level":"2","id":"list-commit","text":"List commit"},{"level":"2","id":"rebase","text":"Rebase"},{"level":"2","id":"cherry-pick","text":"Cherry-pick"},{"level":"2","id":"stash","text":"Stash"},{"level":"2","id":"rename-branch","text":"Rename Branch"},{"level":"3","id":"local","text":"local"},{"level":"3","id":"remote","text":"remote"},{"level":"2","id":"tag","text":"Tag"},{"level":"2","id":"edit-last-commit-date","text":"Edit last commit date"}],"raw":"$5","readingTime":"2 min read"},"pathname":"/insight/post/git-cheatsheets"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Fb9HUF-bP3bk54zq-6Fyf"}
 6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","async":true}]
 7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]

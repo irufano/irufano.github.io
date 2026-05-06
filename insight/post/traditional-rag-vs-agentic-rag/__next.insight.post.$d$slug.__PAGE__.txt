@@ -166,12 +166,12 @@ a:"$Sreact.suspense"
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">Traditional RAG Stack</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="bftclh" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="atk0n" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="bftclh" aria-label="Copy code">
+              <button class="copy-code" data-code-id="atk0n" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -193,7 +193,7 @@ a:"$Sreact.suspense"
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="bftclh" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
+          <pre><code id="atk0n" class="md">Frontend → API Gateway → Query Processor → Embedding Service → 
 Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           </div>
           </div>
@@ -204,12 +204,12 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-markdown-original" title="md"></i><span class="title-code-label">Agentic RAG Stack</span></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="m4apm" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="ih9nlj" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="m4apm" aria-label="Copy code">
+              <button class="copy-code" data-code-id="ih9nlj" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -231,7 +231,7 @@ Vector Database → LLM Service → Response Formatter → Frontend</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="m4apm" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
+          <pre><code id="ih9nlj" class="md">Frontend → API Gateway → Agent Orchestrator → Tool Selector → 
 [Multiple Tools in Parallel] → Result Aggregator → Context Optimizer → 
 LLM Service → Response Validator → Frontend</code></pre>
           </div>
@@ -259,12 +259,12 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="sg90u7" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="fbk7xe" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="sg90u7" aria-label="Copy code">
+              <button class="copy-code" data-code-id="fbk7xe" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -286,7 +286,7 @@ LLM Service → Response Validator → Frontend</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="sg90u7" class="python"><span class="hljs-meta">@Tool()</span>
+          <pre><code id="fbk7xe" class="python"><span class="hljs-meta">@Tool()</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">company_info_search</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
     <span class="hljs-string">&quot;&quot;&quot;Use for general company information.&quot;&quot;&quot;</span>
 
@@ -309,12 +309,12 @@ LLM Service → Response Validator → Frontend</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="n62bpj" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="en7vz" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="n62bpj" aria-label="Copy code">
+              <button class="copy-code" data-code-id="en7vz" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -336,7 +336,7 @@ LLM Service → Response Validator → Frontend</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="n62bpj" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
+          <pre><code id="en7vz" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> (
     LLMfy,
     START,
     END,
@@ -428,12 +428,12 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="vwiht" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="mpbmil" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="vwiht" aria-label="Copy code">
+              <button class="copy-code" data-code-id="mpbmil" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -455,7 +455,7 @@ workflow.add_edge(<span class="hljs-string">&quot;tools&quot;</span>, <span clas
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="vwiht" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
+          <pre><code id="mpbmil" class="python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, display
 
 <span class="hljs-comment"># Check diagram</span>
 graph_url = workflow.get_diagram_url()
@@ -471,12 +471,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="kkv9pd" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="7o9wow" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="kkv9pd" aria-label="Copy code">
+              <button class="copy-code" data-code-id="7o9wow" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -498,7 +498,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="kkv9pd" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
+          <pre><code id="7o9wow" class="python"><span class="hljs-keyword">from</span> llmfy <span class="hljs-keyword">import</span> Message, Role
 
 
 <span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">call_agentic_rag</span>(<span class="hljs-params">question: <span class="hljs-built_in">str</span></span>):
@@ -522,12 +522,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-python-plain colored" title="python"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="6dkiys" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="oho02i" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="6dkiys" aria-label="Copy code">
+              <button class="copy-code" data-code-id="oho02i" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -549,7 +549,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="6dkiys" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
+          <pre><code id="oho02i" class="python">response = <span class="hljs-keyword">await</span> call_agentic_rag(question=<span class="hljs-string">&quot;Apa visi dan misi utama perusahaan?&quot;</span>)
 </code></pre>
           </div>
           </div>
@@ -560,12 +560,12 @@ display(Image(url=graph_url))</code></pre>
           <div class="title-code">
             <span class="title-code-text"><i class="devicon-bash-plain" title="sh"></i></span>
             <div class="code-actions">
-              <button class="wrap-code" data-code-id="bnkc25" aria-label="Toggle word wrap">
+              <button class="wrap-code" data-code-id="211wwp" aria-label="Toggle word wrap">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 6h18M3 12h15a3 3 0 1 1 0 6h-4m0 0 2-2m-2 2 2 2M3 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <button class="copy-code" data-code-id="bnkc25" aria-label="Copy code">
+              <button class="copy-code" data-code-id="211wwp" aria-label="Copy code">
                 <svg
                   class="h-6 w-6"
                   viewBox="0 0 24 24"
@@ -587,7 +587,7 @@ display(Image(url=graph_url))</code></pre>
             </div>
           </div>
           <div class="pre-code">
-          <pre><code id="bnkc25" class="sh">Visi:
+          <pre><code id="211wwp" class="sh">Visi:
 Menjadi perusahaan terdepan yang memberikan solusi inovatif dan berkelanjutan untuk meningkatkan kualitas hidup masyarakat serta menciptakan nilai tambah bagi seluruh pemangku kepentingan.
 
 Misi:
@@ -967,7 +967,7 @@ Both Traditional and Agentic RAG have their place in the modern AI landscape. Tr
 The choice between these approaches should be driven by specific use case requirements, technical constraints, and organizational capabilities. Many successful implementations will likely employ hybrid approaches, using traditional RAG for routine queries while leveraging agentic capabilities for complex scenarios.
 
 As the field continues to evolve, understanding both paradigms will be crucial for building effective, scalable AI systems that can truly augment human intelligence and decision-making capabilities.
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"content":"$4","sections":[{"level":"2","id":"what-is-rag","text":"What is RAG?"},{"level":"2","id":"traditional-rag-architecture","text":"Traditional RAG Architecture"},{"level":"3","id":"core-components","text":"Core Components"},{"level":"3","id":"traditional-rag-workflow","text":"Traditional RAG Workflow"},{"level":"3","id":"advantages-of-traditional-rag","text":"Advantages of Traditional RAG"},{"level":"3","id":"limitations-of-traditional-rag","text":"Limitations of Traditional RAG"},{"level":"2","id":"agentic-rag-architecture","text":"Agentic RAG Architecture"},{"level":"3","id":"core-innovation-the-aggregator-agent","text":"Core Innovation: The Aggregator Agent"},{"level":"3","id":"enhanced-components","text":"Enhanced Components"},{"level":"3","id":"agentic-rag-workflow","text":"Agentic RAG Workflow"},{"level":"3","id":"advantages-of-agentic-rag","text":"Advantages of Agentic RAG"},{"level":"3","id":"potential-challenges-of-agentic-rag","text":"Potential Challenges of Agentic RAG"},{"level":"2","id":"comparative-analysis","text":"Comparative Analysis"},{"level":"3","id":"performance-characteristics","text":"Performance Characteristics"},{"level":"3","id":"use-case-suitability","text":"Use Case Suitability"},{"level":"3","id":"implementation-considerations","text":"Implementation Considerations"},{"level":"2","id":"technical-implementation-insights","text":"Technical Implementation Insights"},{"level":"3","id":"traditional-rag-implementation-stack","text":"Traditional RAG Implementation Stack"},{"level":"3","id":"agentic-rag-implementation-stack","text":"Agentic RAG Implementation Stack"},{"level":"3","id":"key-technical-considerations","text":"Key Technical Considerations"},{"level":"2","id":"implementation-agentic-rag-with-llmfy","text":"Implementation Agentic RAG with LLMfy"},{"level":"3","id":"define-tools","text":"Define tools"},{"level":"3","id":"define-agentic-rag","text":"Define Agentic RAG"},{"level":"3","id":"check-workflow-agent-diagram-in-notebooks","text":"Check workflow agent diagram in Notebooks"},{"level":"3","id":"define-funtion-to-call-agentic-rag","text":"Define Funtion to call agentic RAG"},{"level":"3","id":"test-call","text":"Test Call"},{"level":"2","id":"conclusion","text":"Conclusion"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/traditional-rag-vs-agentic-rag"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fHoyXTIsToFMn4n1TvJqR"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","$L3",null,{"post":{"slug":"traditional-rag-vs-agentic-rag","meta":{"title":"Traditional RAG vs Agentic RAG","date":"2025-09-09","description":"Machine learning is a subset of AI that involves developing algorithms that allow computers to learn from & make predictions or decisions based on data.","author":"irufano","tags":["LLM","RAG","Agent","AI"],"image":"https://raw.githubusercontent.com/irufano/irufano.github.io/refs/heads/dev/posts/Generative%20AI/traditional-rag-vs-agentic-rag/rag.svg","category":"Generative AI"},"content":"$4","sections":[{"level":"2","id":"what-is-rag","text":"What is RAG?"},{"level":"2","id":"traditional-rag-architecture","text":"Traditional RAG Architecture"},{"level":"3","id":"core-components","text":"Core Components"},{"level":"3","id":"traditional-rag-workflow","text":"Traditional RAG Workflow"},{"level":"3","id":"advantages-of-traditional-rag","text":"Advantages of Traditional RAG"},{"level":"3","id":"limitations-of-traditional-rag","text":"Limitations of Traditional RAG"},{"level":"2","id":"agentic-rag-architecture","text":"Agentic RAG Architecture"},{"level":"3","id":"core-innovation-the-aggregator-agent","text":"Core Innovation: The Aggregator Agent"},{"level":"3","id":"enhanced-components","text":"Enhanced Components"},{"level":"3","id":"agentic-rag-workflow","text":"Agentic RAG Workflow"},{"level":"3","id":"advantages-of-agentic-rag","text":"Advantages of Agentic RAG"},{"level":"3","id":"potential-challenges-of-agentic-rag","text":"Potential Challenges of Agentic RAG"},{"level":"2","id":"comparative-analysis","text":"Comparative Analysis"},{"level":"3","id":"performance-characteristics","text":"Performance Characteristics"},{"level":"3","id":"use-case-suitability","text":"Use Case Suitability"},{"level":"3","id":"implementation-considerations","text":"Implementation Considerations"},{"level":"2","id":"technical-implementation-insights","text":"Technical Implementation Insights"},{"level":"3","id":"traditional-rag-implementation-stack","text":"Traditional RAG Implementation Stack"},{"level":"3","id":"agentic-rag-implementation-stack","text":"Agentic RAG Implementation Stack"},{"level":"3","id":"key-technical-considerations","text":"Key Technical Considerations"},{"level":"2","id":"implementation-agentic-rag-with-llmfy","text":"Implementation Agentic RAG with LLMfy"},{"level":"3","id":"define-tools","text":"Define tools"},{"level":"3","id":"define-agentic-rag","text":"Define Agentic RAG"},{"level":"3","id":"check-workflow-agent-diagram-in-notebooks","text":"Check workflow agent diagram in Notebooks"},{"level":"3","id":"define-funtion-to-call-agentic-rag","text":"Define Funtion to call agentic RAG"},{"level":"3","id":"test-call","text":"Test Call"},{"level":"2","id":"conclusion","text":"Conclusion"}],"raw":"$5","readingTime":"9 min read"},"pathname":"/insight/post/traditional-rag-vs-agentic-rag"}]}],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Fb9HUF-bP3bk54zq-6Fyf"}
 6:["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/0p7jjac~hyi.o.js","async":true}]
 7:["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true}]
 8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
