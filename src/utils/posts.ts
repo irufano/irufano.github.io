@@ -774,13 +774,13 @@ function renderReferences(markdown: string): string {
     const body = result.slice(0, splitIdx);
     const refs = result.slice(splitIdx);
 
-    // Convert [N] and [N, M] citations in body to anchor links
+    // Convert [N] and [N, M] citations in body to superscript anchor links
     const bodyLinked = body.replace(
       /\[(\d+(?:,\s*\d+)*)\]/g,
       (_, nums) =>
         nums.split(",").map((n: string) => {
           const num = n.trim();
-          return `[[${num}]](#ref-${num})`;
+          return `<sup><a href="#ref-${num}" class="ref-link">[${num}]</a></sup>`;
         }).join("")
     );
 

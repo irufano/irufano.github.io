@@ -15,6 +15,16 @@ interface PostContentProps {
   pathname: string;
 }
 
+function formatMermaidError(error: unknown) {
+  if (error instanceof Error) return error.message;
+  if (typeof error === "string") return error;
+  try {
+    return JSON.stringify(error);
+  } catch {
+    return String(error);
+  }
+}
+
 export default function PostContent({ post, pathname }: PostContentProps) {
   const [isDark, setIsDark] = useState(false);
 
@@ -310,6 +320,141 @@ export default function PostContent({ post, pathname }: PostContentProps) {
     window.history.replaceState(null, "", `#${id}`);
   };
 
+  const setupMermaidPanZoom = useCallback((wrapper: HTMLElement) => {
+    const svg = wrapper.querySelector<SVGElement>("svg");
+    if (!svg) return;
+
+    const viewport = document.createElement("div");
+    viewport.className = "mermaid-viewport mermaid-locked";
+    const canvas = document.createElement("div");
+    canvas.className = "mermaid-canvas";
+
+    svg.parentNode?.removeChild(svg);
+    canvas.appendChild(svg);
+    viewport.appendChild(canvas);
+    wrapper.appendChild(viewport);
+
+    let scale = 1;
+    let tx = 0, ty = 0;
+    let locked = true;
+
+    const applyTransform = () => {
+      canvas.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    };
+
+    viewport.addEventListener("wheel", (e) => {
+      if (locked) return;
+      e.preventDefault();
+      scale = Math.min(Math.max(scale * (e.deltaY < 0 ? 1.15 : 1 / 1.15), 0.2), 8);
+      applyTransform();
+    }, { passive: false });
+
+    const active = new Map<number, { x: number; y: number }>();
+    let startTx = 0, startTy = 0, startX = 0, startY = 0;
+
+    viewport.addEventListener("pointerdown", (e) => {
+      if (locked) return;
+      active.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      viewport.setPointerCapture(e.pointerId);
+      if (active.size === 1) {
+        startX = e.clientX; startY = e.clientY;
+        startTx = tx; startTy = ty;
+        viewport.style.cursor = "grabbing";
+      }
+    });
+
+    viewport.addEventListener("pointermove", (e) => {
+      if (locked || !active.has(e.pointerId)) return;
+      const prev = new Map(active);
+      active.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (active.size === 1) {
+        tx = startTx + e.clientX - startX;
+        ty = startTy + e.clientY - startY;
+        applyTransform();
+      } else if (active.size === 2) {
+        const [pa, pb] = [...prev.values()];
+        const [ca, cb] = [...active.values()];
+        const prevDist = Math.hypot(pb.x - pa.x, pb.y - pa.y);
+        const currDist = Math.hypot(cb.x - ca.x, cb.y - ca.y);
+        if (prevDist > 0) {
+          scale = Math.min(Math.max(scale * (currDist / prevDist), 0.2), 8);
+          applyTransform();
+        }
+      }
+    });
+
+    const onEnd = (e: PointerEvent) => {
+      active.delete(e.pointerId);
+      if (locked) return;
+      if (active.size === 0) {
+        viewport.style.cursor = "grab";
+      } else if (active.size === 1) {
+        const [p] = active.values();
+        startX = p.x; startY = p.y;
+        startTx = tx; startTy = ty;
+      }
+    };
+    viewport.addEventListener("pointerup", onEnd);
+    viewport.addEventListener("pointercancel", onEnd);
+
+    const controls = document.createElement("div");
+    controls.className = "mermaid-controls";
+
+    const makeBtn = (text: string, title: string, fn: () => void, cls = "") => {
+      const b = document.createElement("button");
+      b.textContent = text;
+      b.title = title;
+      b.className = `mermaid-ctrl-btn${cls ? " " + cls : ""}`;
+      b.addEventListener("click", (e) => { e.stopPropagation(); fn(); });
+      return b;
+    };
+
+    const zoomInBtn  = makeBtn("+", "Zoom in",   () => { scale = Math.min(scale * 1.2, 8); applyTransform(); }, "mermaid-zoom-ctrl");
+    const zoomOutBtn = makeBtn("−", "Zoom out",  () => { scale = Math.max(scale / 1.2, 0.2); applyTransform(); }, "mermaid-zoom-ctrl");
+    const resetBtn   = makeBtn("↺", "Reset view", () => { scale = 1; tx = 0; ty = 0; applyTransform(); }, "mermaid-zoom-ctrl");
+
+    // Start hidden (locked state)
+    [zoomInBtn, zoomOutBtn, resetBtn].forEach(b => { b.style.display = "none"; });
+
+    const lockBtn = makeBtn("🔒", "Unlock to interact", () => {
+      locked = !locked;
+      if (locked) {
+        lockBtn.textContent = "🔒";
+        lockBtn.title = "Unlock to interact";
+        viewport.classList.add("mermaid-locked");
+        viewport.style.cursor = "";
+        viewport.style.touchAction = "";
+        active.clear();
+        [zoomInBtn, zoomOutBtn, resetBtn].forEach(b => { b.style.display = "none"; });
+      } else {
+        lockBtn.textContent = "🔓";
+        lockBtn.title = "Lock diagram";
+        viewport.classList.remove("mermaid-locked");
+        viewport.style.cursor = "grab";
+        viewport.style.touchAction = "none";
+        [zoomInBtn, zoomOutBtn, resetBtn].forEach(b => { b.style.display = ""; });
+      }
+    });
+
+    controls.append(lockBtn, zoomInBtn, zoomOutBtn, resetBtn);
+    wrapper.appendChild(controls);
+  }, []);
+
+  const showMermaidError = useCallback((wrapper: HTMLElement, error: unknown) => {
+    const source = decodeURIComponent(wrapper.getAttribute("data-mermaid-source") ?? "");
+    wrapper.innerHTML = "";
+
+    const errorBox = document.createElement("div");
+    errorBox.className = "mermaid-error";
+    errorBox.textContent = `Mermaid diagram could not be rendered: ${formatMermaidError(error)}`;
+
+    const pre = document.createElement("pre");
+    pre.className = "mermaid-source-fallback";
+    pre.textContent = source;
+
+    wrapper.append(errorBox, pre);
+  }, []);
+
   useEffect(() => {
     if (!contentRef.current) return;
     const wrappers = Array.from(
@@ -335,17 +480,21 @@ export default function PostContent({ post, pathname }: PostContentProps) {
         .filter((el): el is HTMLElement => el !== null);
       if (blocks.length > 0) {
         mermaid.run({ nodes: blocks }).then(() => {
-          // Strip the inline background style mermaid sets on the SVG element
           wrappers.forEach(wrapper => {
             wrapper.querySelectorAll<SVGElement>("svg").forEach(svg => {
               svg.style.background = "transparent";
               svg.style.backgroundColor = "transparent";
             });
+            setupMermaidPanZoom(wrapper);
           });
+        }).catch((error: unknown) => {
+          wrappers.forEach(wrapper => showMermaidError(wrapper, error));
         });
       }
+    }).catch((error: unknown) => {
+      wrappers.forEach(wrapper => showMermaidError(wrapper, error));
     });
-  }, [content, isDark]);
+  }, [content, isDark, showMermaidError, setupMermaidPanZoom]);
 
   useEffect(() => {
     if (!contentRef.current) return;

@@ -1,6 +1,6 @@
 ---
 title: "Building a CAT Test with Guessing Parameter (3PL IRT) in Concerto Platform"
-date: "2026-06-05"
+date: "2026-05-06"
 description: "Concerto Platform is open-source online adaptive testing platform."
 author: "irufano"
 tags:

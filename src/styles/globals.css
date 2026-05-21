@@ -378,6 +378,16 @@ pre.has-line-numbers .code-line.highlight-line {
   vertical-align: middle;
 }
 
+/* Inline reference citation links */
+.ref-link {
+  @apply text-emerald-500 dark:text-primary no-underline font-semibold;
+  font-size: 0.75em;
+}
+
+.ref-link:hover {
+  @apply underline;
+}
+
 /* Heading anchor links */
 .heading-anchor {
   opacity: 0;
@@ -403,9 +413,58 @@ h6:hover .heading-anchor {
 }
 
 .mermaid-diagram {
-  @apply my-6 flex justify-center overflow-x-auto;
+  @apply my-6 relative;
   @apply rounded-lg border border-gray-200 dark:border-gray-700 p-4;
   @apply bg-white dark:bg-gray-900;
+}
+
+.mermaid-viewport {
+  width: 100%;
+  overflow: hidden;
+  cursor: default;
+  user-select: none;
+  min-height: 80px;
+}
+
+.mermaid-canvas {
+  width: 100%;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.mermaid-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.mermaid-ctrl-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  @apply border border-gray-300 dark:border-gray-600;
+  @apply bg-white dark:bg-gray-800;
+  @apply text-gray-600 dark:text-gray-300;
+  @apply hover:bg-gray-100 dark:hover:bg-gray-700;
+  transition: background-color 0.15s;
+}
+
+/* Lock button subtle indicator when locked */
+.mermaid-locked ~ .mermaid-controls .mermaid-ctrl-btn:first-child {
+  @apply opacity-60;
+}
+
+.mermaid-diagram:has(.mermaid-error) {
+  @apply block;
 }
 
 .mermaid-diagram pre {
@@ -414,9 +473,18 @@ h6:hover .heading-anchor {
   margin: 0 !important;
 }
 
+.mermaid-diagram .mermaid-error {
+  @apply mb-3 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700 dark:border-red-900/60 dark:bg-red-950/30 dark:text-red-300;
+}
+
+.mermaid-diagram .mermaid-source-fallback {
+  @apply overflow-x-auto text-left text-sm text-gray-700 dark:text-gray-300;
+  white-space: pre;
+}
+
 .mermaid-diagram svg {
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: none !important;
   height: auto !important;
   background: transparent !important;
   background-color: transparent !important;

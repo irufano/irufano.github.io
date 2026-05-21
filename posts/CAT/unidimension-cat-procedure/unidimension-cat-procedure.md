@@ -1,6 +1,6 @@
 ---
-title: "The Actual Procedure and Process of Computer Adaptive Testing (CAT)"
-date: "2026-05-05"
+title: "The Actual Procedure and Process of Unidimension Computer Adaptive Testing (CAT)"
+date: "2026-05-07"
 description: "omputerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level"
 author: "irufano"
 tags:
@@ -237,6 +237,67 @@ Where $\theta_c$ is the passing cut score and $z_{\alpha/2}$ is the critical val
 > For high-stakes exams like the NCLEX:
 > "This pattern continues until you run out of time or until the computer identifies your competency level as above or below the passing standard." [7]
 
+#### What the Literature Actually Says About CAT Stopping Criteria
+
+The Authoritative Source — van der Linden & Glas (2000) [11]. The most cited CAT textbook defines three legitimate stopping rules:
+
+##### Rule 1 — Fixed Length
+
+$$stop when n=N$$
+
+Simple, equal test length for all. Does not guarantee equal precision.
+
+##### Rule 2 — Fixed Precision (SE-based)
+
+$$stop when SE(\hat{\theta})<\epsilon$$
+
+Guarantees equal measurement precision. Test length varies by person.
+
+##### Rule 3 — Classification / Sequential Probability Ratio Test (SPRT)
+
+$$stop when ability is clearly above or below a cut score θ_c​$$
+
+
+#### Used in pass/fail exams like NCLEX
+
+> [note]:
+> 
+> "The fixed-precision rule is preferred when the goal is to produce scores of equal reliability across all test-takers." — van der Linden & Glas (2000) [11]
+
+---
+
+#### Seo (2017) on Combined Rules [4]
+
+> [note]:
+>
+> "In practice, a combination of stopping rules is recommended — a precision-based primary rule with a maximum item count as a safety cap to prevent excessively long tests."
+
+The standard combined rule is:
+
+$$stop when SE(\hat{\theta})<\epsilon\quad OR\quad n≥N_{max}​$$
+
+Bank exhaustion is NOT listed as a standard stopping criterion in any major CAT reference. It is an emergency fallback for implementation purposes only.
+
+---
+
+#### Weiss (IACAT) [1]
+
+"The test terminates when a specified level of measurement precision has been achieved, typically when the standard error of the ability estimate falls below a predetermined value."
+
+No mention of bank exhaustion as a stopping criterion.
+
+---
+
+#### The Correct Stopping Rule Hierarchy
+
+Based on the literature [11, 1, 4], the proper priority order is:
+```
+Priority 1 (primary)  :   SE(θ̂) < ε          → STOP — precision achieved
+Priority 2 (safety)   :   n ≥ N_max          → STOP — too many items
+Priority 3 (emergency):   bank exhausted     → STOP WITH WARNING — bank limitation
+```
+The first rule that fires wins. Bank exhaustion should always come last and always produce a warning.
+
 ---
 
 ## Part 3: The Full CAT Runtime Process
@@ -426,3 +487,5 @@ The CAT process can be summarized in three phases:
 [9] Wikipedia contributors. (2026). *Computerized adaptive testing*. Wikipedia. https://en.wikipedia.org/wiki/Computerized_adaptive_testing
 
 [10] Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum Associates.
+
+[11] van der Linden, W. J., & Glas, C. A. W. (2000). Computerized Adaptive Testing: Theory and Practice. Kluwer Academic Publishers.
