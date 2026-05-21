@@ -5,22 +5,966 @@
 6:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 b:I[68027,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
-:HL["https://irufano.github.io/_next/static/chunks/10bbmu9t_ajtf.css","style"]
+:HL["https://irufano.github.io/_next/static/chunks/12o0x2x~fiel9.css","style"]
 :HL["https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","style"]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin-s.p.163jt9-.sqsdk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://irufano.github.io/_next/static/media/GoogleSansFlex_latin_ext-s.p.0.bhltnkrvp5b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css","style"]
-0:{"P":null,"c":["","insight","tags","CAT"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["tags",{"children":[["tag","CAT","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/10bbmu9t_ajtf.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,null]},null,false,"$@9"]},null,false,"$@9"]},null,false,"$@9"]},null,false,null],"$La",false]],"m":"$undefined","G":["$b",["$Lc","$Ld"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"Fb9HUF-bP3bk54zq-6Fyf"}
+0:{"P":null,"c":["","insight","tags","CAT"],"q":"","i":false,"f":[[["",{"children":["insight",{"children":["tags",{"children":[["tag","CAT","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/12o0x2x~fiel9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"}],[["$","$L2",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-787PK2XJ06"}],["$","$L2",null,{"id":"google-analytics","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-787PK2XJ06');\n                "}}]]]}],["$","body",null,{"className":"fontinit_21d44747-module__RW-kqG__variable font-google-sans-flex","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n          (function() {\n            try {\n              if (localStorage.getItem('theme') === 'light') {\n                document.documentElement.classList.remove('dark');\n              } else {\n                document.documentElement.classList.add('dark');\n              }\n            } catch(e) {}\n          })();\n        "}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,null]},null,false,"$@9"]},null,false,"$@9"]},null,false,"$@9"]},null,false,null],"$La",false]],"m":"$undefined","G":["$b",["$Lc","$Ld"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"G_dZWX6u6RUzbToiwq64C"}
 f:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
 11:I[97367,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
 e:[]
 9:"$We"
 a:["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","div",null,{"hidden":true,"children":["$","$L11",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$L12"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-c:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/10bbmu9t_ajtf.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+c:["$","link","0",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/12o0x2x~fiel9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
 d:["$","link","1",{"rel":"stylesheet","href":"https://irufano.github.io/_next/static/chunks/0a18guh9b7v_s.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
 13:I[1747,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
 14:I[93692,["https://irufano.github.io/_next/static/chunks/04eklj-7j4aqp.js","https://irufano.github.io/_next/static/chunks/0n4z.7yu76je-.js","https://irufano.github.io/_next/static/chunks/00e-m8g01re4c.js","https://irufano.github.io/_next/static/chunks/156cqvtv.tz0c.js"],"default"]
-15:T20140,
+15:T591b,
+> **Abstract:** Multidimensional Computer Adaptive Testing (MCAT) extends the classical unidimensional CAT framework to simultaneously estimate multiple latent traits. This document details the theoretical foundations, algorithmic procedures, item selection strategies, ability estimation methods, and stopping rules that govern the MCAT process, with reference to seminal and contemporary literature.
+
+---
+
+## 1. Theoretical Background
+
+Multidimensional Computer Adaptive Testing (MCAT) is a psychometric framework that generalizes unidimensional CAT (UCAT) to settings where examinees possess a **vector of latent traits** rather than a single ability [1][2]. The fundamental motivation is that most cognitive, psychological, and educational constructs are inherently multifaceted; a single scalar cannot adequately characterize proficiency in, for example, mathematics (algebra, geometry, statistics) or language ability (reading, grammar, vocabulary) [3].
+
+MCAT was formalized extensively by Reckase [4] through the development of **Multidimensional Item Response Theory (MIRT)**, which provides the probabilistic measurement model underlying all MCAT procedures. The adaptive component ensures that items administered to an examinee are optimally informative given the current estimate of the **ability vector** $\boldsymbol{\theta}$ [1][5].
+
+---
+
+## 2. Item Response Theory in Multiple Dimensions
+
+### 2.1 The Latent Trait Vector
+
+In MCAT, each examinee is characterized by a $K$-dimensional ability vector:
+
+$$\boldsymbol{\theta} = (\theta_1, \theta_2, \ldots, \theta_K)^{\top} \in \mathbb{R}^K$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\boldsymbol{\theta}$ | Latent trait (ability) vector |
+| $\theta_k$ | Latent ability on dimension $k$ |
+| $K$ | Total number of dimensions (latent traits) |
+
+### 2.2 Multidimensional Item Response Model
+
+The most widely used model in MCAT is the **Multidimensional Two-Parameter Logistic (M2PL)** model [4][6]:
+
+$$P(X_{ij} = 1 \mid \boldsymbol{\theta}_j, \mathbf{a}_i, d_i) = \frac{\exp(\mathbf{a}_i^{\top} \boldsymbol{\theta}_j + d_i)}{1 + \exp(\mathbf{a}_i^{\top} \boldsymbol{\theta}_j + d_i)}$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $X_{ij}$ | Binary response of examinee $j$ to item $i$ (1 = correct, 0 = incorrect) |
+| $\boldsymbol{\theta}_j$ | Ability vector of examinee $j$ |
+| $\mathbf{a}_i = (a_{i1}, a_{i2}, \ldots, a_{iK})^{\top}$ | Discrimination parameter vector for item $i$ on each dimension |
+| $d_i$ | Scalar intercept (difficulty) parameter for item $i$ |
+| $\mathbf{a}_i^{\top} \boldsymbol{\theta}_j$ | Dot product: $\sum_{k=1}^{K} a_{ik} \theta_{jk}$ |
+
+For the **Multidimensional Three-Parameter Logistic (M3PL)** model with guessing [4][7]:
+
+$$P(X_{ij} = 1 \mid \boldsymbol{\theta}_j) = c_i + (1 - c_i) \cdot \frac{\exp(\mathbf{a}_i^{\top} \boldsymbol{\theta}_j + d_i)}{1 + \exp(\mathbf{a}_i^{\top} \boldsymbol{\theta}_j + d_i)}$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $c_i$ | Pseudo-guessing parameter for item $i$ ($0 \leq c_i < 1$) |
+
+### 2.3 Item Information in Multiple Dimensions
+
+The **Fisher Information Matrix (FIM)** for item $i$ given ability $\boldsymbol{\theta}$ is a $K \times K$ matrix [1][8]:
+
+$$\mathbf{I}_i(\boldsymbol{\theta}) = \frac{[P'_i(\boldsymbol{\theta})]^2}{P_i(\boldsymbol{\theta})\, Q_i(\boldsymbol{\theta})} \cdot \mathbf{a}_i \mathbf{a}_i^{\top}$$
+
+where:
+
+$$P'_i(\boldsymbol{\theta}) = \frac{\partial P_i(\boldsymbol{\theta})}{\partial (\mathbf{a}_i^{\top} \boldsymbol{\theta})} = P_i(\boldsymbol{\theta})\, Q_i(\boldsymbol{\theta})$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\mathbf{I}_i(\boldsymbol{\theta})$ | $K \times K$ Fisher Information Matrix for item $i$ |
+| $P_i(\boldsymbol{\theta})$ | Probability of correct response to item $i$ |
+| $Q_i(\boldsymbol{\theta}) = 1 - P_i(\boldsymbol{\theta})$ | Probability of incorrect response |
+| $P'_i(\boldsymbol{\theta})$ | Derivative of $P_i$ with respect to the linear predictor |
+| $\mathbf{a}_i \mathbf{a}_i^{\top}$ | Outer product of the discrimination vector (rank-1 matrix) |
+
+The **cumulative FIM** after administering $n$ items is:
+
+$$\mathbf{I}_{(n)}(\boldsymbol{\theta}) = \sum_{i=1}^{n} \mathbf{I}_i(\boldsymbol{\theta})$$
+
+---
+
+## 3. The MCAT Process Overview
+
+The following diagram illustrates the complete MCAT procedure from initialization to termination:
+
+```mermaid
+flowchart TD
+    A([Start: Examinee Begins Test]) --> B[Initialize Ability Estimate\n θ̂ = θ₀, e.g., 0-vector]
+    B --> C[Select Starting Items\nfrom Item Bank]
+    C --> D{Item Bank\nAvailable?}
+    D -- No --> Z([Error: Insufficient Items])
+    D -- Yes --> E[Select Optimal Item\nusing Selection Criterion]
+    E --> F[Administer Item to Examinee]
+    F --> G["Record Response\nXᵢ ∈ {0, 1}"]
+    G --> H[Update Ability Estimate\nθ̂ via MLE / MAP / EAP]
+    H --> I[Update Fisher\nInformation Matrix I_n]
+    I --> J{Stopping Rule\nSatisfied?}
+    J -- No --> K{Exposure &\nContent Constraints Met?}
+    K -- Yes --> E
+    K -- No --> L[Apply Constrained\nItem Selection]
+    L --> E
+    J -- Yes --> M[Final Ability Estimate\nθ̂_final with SE]
+    M --> N[Generate Score Report]
+    N --> O([End: Test Complete])
+
+    style A fill:#2d6a4f,color:#fff
+    style O fill:#2d6a4f,color:#fff
+    style Z fill:#b5192b,color:#fff
+    style J fill:#1d3557,color:#fff
+    style K fill:#1d3557,color:#fff
+```
+
+---
+
+## 4. Step-by-Step Procedure
+
+### Step 1: Initialization
+
+Before any item is administered, the system establishes:
+
+- **Prior ability distribution:** $\boldsymbol{\theta}_0 \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$, typically $\boldsymbol{\mu}_0 = \mathbf{0}$, $\boldsymbol{\Sigma}_0 = \mathbf{I}_K$ (identity matrix) [2][9]
+- **Item bank:** A calibrated pool $\mathcal{B}$ of $M$ items with known MIRT parameters $\{\mathbf{a}_i, d_i, c_i\}$
+- **Starting ability estimate:** $\hat{\boldsymbol{\theta}}^{(0)} = \boldsymbol{\mu}_0$
+
+### Step 2: Item Selection
+
+At step $n$, the item $i^*$ is selected from the remaining bank $\mathcal{B}_n = \mathcal{B} \setminus \{i_1, \ldots, i_{n-1}\}$ using a selection criterion $\mathcal{S}$:
+
+$$i^* = \underset{i \in \mathcal{B}_n}{\arg\max} \; \mathcal{S}\left(\mathbf{I}_i(\hat{\boldsymbol{\theta}}^{(n-1)})\right)$$
+
+Common criteria are detailed in [Section 6](#6-item-selection-criteria).
+
+### Step 3: Item Administration
+
+Item $i^*$ is presented to the examinee who provides response $x_{i^*} \in \{0, 1\}$ (for dichotomous items) or $x_{i^*} \in \{0, 1, \ldots, m_i\}$ (polytomous items).
+
+### Step 4: Ability Re-estimation
+
+The ability vector is updated using accumulated response vector $\mathbf{x}^{(n)} = (x_{i_1}, \ldots, x_{i_n})^{\top}$.
+
+**Log-likelihood function** [1][6]:
+
+$$\ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) = \sum_{t=1}^{n} \left[ x_{i_t} \ln P_{i_t}(\boldsymbol{\theta}) + (1 - x_{i_t}) \ln Q_{i_t}(\boldsymbol{\theta}) \right]$$
+
+Details of estimation methods are in [Section 5](#5-ability-estimation-methods).
+
+### Step 5: Update Information Matrix
+
+$$\mathbf{I}_{(n)}(\hat{\boldsymbol{\theta}}^{(n)}) = \sum_{t=1}^{n} \mathbf{I}_{i_t}(\hat{\boldsymbol{\theta}}^{(n)})$$
+
+### Step 6: Check Stopping Rule
+
+Evaluate whether stopping criteria are satisfied (see [Section 7](#7-stopping-rules)). If yes → proceed to scoring; if no → return to Step 2.
+
+### Step 7: Score Reporting
+
+Provide the final estimate $\hat{\boldsymbol{\theta}}_{\text{final}}$ along with the **standard error vector**:
+
+$$\text{SE}(\hat{\boldsymbol{\theta}}) = \sqrt{\text{diag}\left[\mathbf{I}_{(n)}^{-1}(\hat{\boldsymbol{\theta}})\right]}$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\text{SE}(\hat{\boldsymbol{\theta}})$ | Vector of standard errors for each dimension estimate |
+| $\text{diag}[\cdot]$ | Diagonal extraction operator |
+| $\mathbf{I}_{(n)}^{-1}$ | Inverse of the cumulative FIM (posterior covariance approximation) |
+
+---
+
+## 5. Ability Estimation Methods
+
+### 5.1 Maximum Likelihood Estimation (MLE)
+
+MLE finds $\hat{\boldsymbol{\theta}}$ by maximizing the log-likelihood [1][10]:
+
+$$\hat{\boldsymbol{\theta}}_{\text{MLE}} = \underset{\boldsymbol{\theta}}{\arg\max} \; \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)})$$
+
+The **score function** (gradient):
+
+$$\mathbf{s}(\boldsymbol{\theta}) = \nabla_{\boldsymbol{\theta}} \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) = \sum_{t=1}^{n} \frac{x_{i_t} - P_{i_t}(\boldsymbol{\theta})}{P_{i_t}(\boldsymbol{\theta}) Q_{i_t}(\boldsymbol{\theta})} \cdot P'_{i_t}(\boldsymbol{\theta}) \cdot \mathbf{a}_{i_t}$$
+
+Solved via Newton-Raphson iteration [10]:
+
+$$\hat{\boldsymbol{\theta}}^{(r+1)} = \hat{\boldsymbol{\theta}}^{(r)} + \left[\mathbf{I}_{(n)}(\hat{\boldsymbol{\theta}}^{(r)})\right]^{-1} \mathbf{s}(\hat{\boldsymbol{\theta}}^{(r)})$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $r$ | Iteration index in Newton-Raphson |
+| $\mathbf{s}(\boldsymbol{\theta})$ | Score function (gradient of log-likelihood) |
+
+> ⚠️ **Limitation:** MLE is undefined when all responses are correct or all incorrect (degenerate response patterns) [2].
+
+### 5.2 Maximum A Posteriori (MAP) Estimation
+
+MAP incorporates a prior distribution $g(\boldsymbol{\theta})$ (typically multivariate normal) [2][9]:
+
+$$\hat{\boldsymbol{\theta}}_{\text{MAP}} = \underset{\boldsymbol{\theta}}{\arg\max} \left[ \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) + \ln g(\boldsymbol{\theta}) \right]$$
+
+With a multivariate normal prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$:
+
+$$\ln g(\boldsymbol{\theta}) = -\frac{1}{2}(\boldsymbol{\theta} - \boldsymbol{\mu}_0)^{\top} \boldsymbol{\Sigma}_0^{-1} (\boldsymbol{\theta} - \boldsymbol{\mu}_0) + \text{const}$$
+
+The modified Newton-Raphson step becomes:
+
+$$\hat{\boldsymbol{\theta}}^{(r+1)}_{\text{MAP}} = \hat{\boldsymbol{\theta}}^{(r)} + \left[\mathbf{I}_{(n)}(\hat{\boldsymbol{\theta}}^{(r)}) + \boldsymbol{\Sigma}_0^{-1}\right]^{-1} \left[\mathbf{s}(\hat{\boldsymbol{\theta}}^{(r)}) - \boldsymbol{\Sigma}_0^{-1}(\hat{\boldsymbol{\theta}}^{(r)} - \boldsymbol{\mu}_0)\right]$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $g(\boldsymbol{\theta})$ | Prior density of ability vector |
+| $\boldsymbol{\mu}_0$ | Prior mean vector (often $\mathbf{0}$) |
+| $\boldsymbol{\Sigma}_0$ | Prior covariance matrix |
+| $\boldsymbol{\Sigma}_0^{-1}$ | Precision matrix of the prior |
+
+### 5.3 Expected A Posteriori (EAP) Estimation
+
+EAP computes the **posterior mean** [9][11]:
+
+$$\hat{\boldsymbol{\theta}}_{\text{EAP}} = \mathbb{E}[\boldsymbol{\theta} \mid \mathbf{x}^{(n)}] = \frac{\int \boldsymbol{\theta} \cdot L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}) \cdot g(\boldsymbol{\theta}) \, d\boldsymbol{\theta}}{\int L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}) \cdot g(\boldsymbol{\theta}) \, d\boldsymbol{\theta}}$$
+
+where the likelihood:
+
+$$L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}) = \prod_{t=1}^{n} P_{i_t}(\boldsymbol{\theta})^{x_{i_t}} Q_{i_t}(\boldsymbol{\theta})^{1 - x_{i_t}}$$
+
+In practice, EAP is computed via **Gauss-Hermite quadrature** or **Monte Carlo integration** over a grid of quadrature points $\{\boldsymbol{\theta}^{(q)}, w^{(q)}\}$ [9]:
+
+$$\hat{\boldsymbol{\theta}}_{\text{EAP}} \approx \frac{\sum_{q} \boldsymbol{\theta}^{(q)} \cdot L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}^{(q)}) \cdot g(\boldsymbol{\theta}^{(q)}) \cdot w^{(q)}}{\sum_{q} L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}^{(q)}) \cdot g(\boldsymbol{\theta}^{(q)}) \cdot w^{(q)}}$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\boldsymbol{\theta}^{(q)}$ | $q$-th quadrature point in the $K$-dimensional grid |
+| $w^{(q)}$ | Quadrature weight for point $q$ |
+| $L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta})$ | Likelihood of observed responses given $\boldsymbol{\theta}$ |
+
+---
+
+## 6. Item Selection Criteria
+
+### 6.1 Maximum Determinant (D-optimality)
+
+Select the item that maximizes the determinant of the updated FIM [1][8][12]:
+
+$$i^* = \underset{i \in \mathcal{B}_n}{\arg\max} \; \det\left[\mathbf{I}_{(n-1)}(\hat{\boldsymbol{\theta}}) + \mathbf{I}_i(\hat{\boldsymbol{\theta}})\right]$$
+
+**Interpretation:** Maximizes the volume of the confidence ellipsoid's reciprocal — reduces overall estimation uncertainty across all dimensions simultaneously.
+
+### 6.2 Minimum Trace of Posterior Covariance (T-optimality / A-optimality)
+
+$$i^* = \underset{i \in \mathcal{B}_n}{\arg\min} \; \text{tr}\left[\left(\mathbf{I}_{(n-1)}(\hat{\boldsymbol{\theta}}) + \mathbf{I}_i(\hat{\boldsymbol{\theta}})\right)^{-1}\right]$$
+
+**Interpretation:** Minimizes the sum of posterior variances across all $K$ dimensions [5][13].
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\text{tr}[\cdot]$ | Matrix trace operator (sum of diagonal elements) |
+| $\det[\cdot]$ | Matrix determinant |
+
+### 6.3 Kullback-Leibler Information (KL-criterion)
+
+Maximizes the expected Kullback-Leibler divergence between item response distributions at the current estimate and neighboring ability values [14]:
+
+$$\text{KL}_i(\hat{\boldsymbol{\theta}}) = \int_{\mathcal{V}} \sum_{x=0}^{1} P(X_i = x \mid \hat{\boldsymbol{\theta}}) \ln \frac{P(X_i = x \mid \hat{\boldsymbol{\theta}})}{P(X_i = x \mid \boldsymbol{\theta})} \, d\boldsymbol{\theta}$$
+
+$$i^* = \underset{i \in \mathcal{B}_n}{\arg\max} \; \text{KL}_i(\hat{\boldsymbol{\theta}})$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\mathcal{V}$ | Neighborhood region around $\hat{\boldsymbol{\theta}}$ |
+| $\text{KL}_i(\hat{\boldsymbol{\theta}})$ | KL information for item $i$ at current ability estimate |
+
+### 6.4 Mutual Information Criterion
+
+Selects items that maximize the mutual information between the item response and the ability vector [15]:
+
+$$i^* = \underset{i \in \mathcal{B}_n}{\arg\max} \; \mathbb{I}(X_i ; \boldsymbol{\theta} \mid \mathbf{x}^{(n-1)})$$
+
+### Summary Comparison
+
+```mermaid
+graph LR
+    A[Item Selection Criteria] --> B[D-optimality\n det of FIM]
+    A --> C[A-optimality\n trace of FIM⁻¹]
+    A --> D[KL-criterion\n information gain]
+    A --> E[Mutual Information\n Bayesian criterion]
+    B --> F[Best for joint\n precision]
+    C --> G[Best for average\n dimension precision]
+    D --> H[Best for local\n discrimination]
+    E --> I[Best for fully\n Bayesian settings]
+```
+
+---
+
+## 7. Stopping Rules
+
+### 7.1 Fixed Test Length
+
+The simplest rule: terminate after exactly $N_{\max}$ items [1]:
+
+$$\text{Stop if } n = N_{\max}$$
+
+### 7.2 Standard Error Threshold
+
+Terminate when the standard error for **all** dimensions falls below a threshold $\epsilon$ [2][5]:
+
+$$\text{Stop if } \max_{k \in \{1,\ldots,K\}} \text{SE}(\hat{\theta}_k) \leq \epsilon$$
+
+Or alternatively for the joint criterion using the posterior covariance matrix:
+
+$$\text{Stop if } \text{tr}\left[\mathbf{I}_{(n)}^{-1}(\hat{\boldsymbol{\theta}})\right] \leq \epsilon^2_{\text{joint}}$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\epsilon$ | Standard error threshold (e.g., 0.30 on the logit scale) |
+| $\epsilon^2_{\text{joint}}$ | Joint variance threshold for all dimensions |
+
+### 7.3 Change in Ability Estimate
+
+Terminate when successive ability estimates converge [16]:
+
+$$\text{Stop if } \left\| \hat{\boldsymbol{\theta}}^{(n)} - \hat{\boldsymbol{\theta}}^{(n-1)} \right\|_2 \leq \delta$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\|\cdot\|_2$ | Euclidean (L2) norm |
+| $\delta$ | Convergence threshold (e.g., 0.01) |
+
+### 7.4 Minimum-Maximum Length Rule (Hybrid)
+
+Combines fixed and SE-based rules for practical testing [2][5]:
+
+$$\text{Stop if } n \geq N_{\min} \text{ AND } \left(\max_k \text{SE}(\hat{\theta}_k) \leq \epsilon \text{ OR } n = N_{\max}\right)$$
+
+```mermaid
+flowchart LR
+    A[After each item n] --> B{n ≥ N_min?}
+    B -- No --> F[Continue]
+    B -- Yes --> C{SE ≤ ε\nfor all k?}
+    C -- Yes --> D([Stop: Precision Met])
+    C -- No --> E{n = N_max?}
+    E -- Yes --> G([Stop: Max Length])
+    E -- No --> F
+```
+
+---
+
+## 8. Item Exposure Control
+
+Uncontrolled item selection leads to overexposure of highly informative items, compromising item security. Several methods address this [17][18]:
+
+### 8.1 Sympson-Hetter Method (Randomization)
+
+Each item $i$ is selected with probability $r_i$, where $r_i$ is tuned so that the exposure rate $\varrho_i \leq \varrho_{\max}$ [17]:
+
+$$r_i = \min\left(1, \frac{\varrho_{\max}}{\varrho_i^{*}}\right)$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $\varrho_i$ | Observed exposure rate of item $i$ |
+| $\varrho_{\max}$ | Maximum allowable exposure rate (e.g., 0.20) |
+| $\varrho_i^{*}$ | Unconditional selection probability of item $i$ |
+| $r_i$ | Randomization parameter for item $i$ |
+
+### 8.2 Maximum Priority Index (MPI)
+
+Uses a priority index $\text{PI}_i$ combining information and exposure [18]:
+
+$$\text{PI}_i = w_1 \cdot \mathcal{S}(\mathbf{I}_i(\hat{\boldsymbol{\theta}})) - w_2 \cdot \varrho_i$$
+
+$$i^* = \underset{i \in \mathcal{B}_n}{\arg\max} \; \text{PI}_i$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $w_1, w_2$ | Weights balancing information gain vs. exposure penalization |
+| $\mathcal{S}(\cdot)$ | Item selection criterion value (e.g., determinant) |
+
+---
+
+## 9. Content Balancing
+
+Real-world tests require that items cover specified content areas $\mathcal{C} = \{c_1, c_2, \ldots, c_J\}$ proportionally [19]. The **constrained CAT** problem is:
+
+$$i^* = \underset{i \in \mathcal{B}_n \cap \mathcal{C}_j^{\text{eligible}}}{\arg\max} \; \mathcal{S}\left(\mathbf{I}_i(\hat{\boldsymbol{\theta}})\right)$$
+
+where $\mathcal{C}_j^{\text{eligible}}$ is the set of items from content area $c_j$ that can still be administered to meet the target distribution $\boldsymbol{\pi} = (\pi_1, \ldots, \pi_J)^{\top}$ [19][20].
+
+The **Shadow Test** approach [20] solves a 0-1 integer programming problem at each step to select a full-length "shadow test" that satisfies all constraints, then administers only the optimal next item from it:
+
+$$\text{Maximize} \quad \sum_{i \in \mathcal{B}} s_i \cdot \mathcal{S}(\mathbf{I}_i(\hat{\boldsymbol{\theta}}))$$
+$$\text{subject to} \quad \sum_{i \in \mathcal{C}_j} s_i = n_j, \quad j = 1, \ldots, J$$
+$$s_i \in \{0, 1\}, \quad \sum_{i} s_i = N_{\max}$$
+
+**Variable Notes:**
+| Symbol | Description |
+|--------|-------------|
+| $s_i$ | Binary decision variable (1 if item $i$ included in shadow test) |
+| $n_j$ | Required number of items from content area $j$ |
+| $\pi_j$ | Target proportion for content area $j$ |
+
+---
+
+## 10. Comparison: Unidimensional vs. Multidimensional CAT
+
+| Feature | Unidimensional CAT | Multidimensional CAT |
+|---------|-------------------|---------------------|
+| **Latent space** | Scalar $\theta \in \mathbb{R}$ | Vector $\boldsymbol{\theta} \in \mathbb{R}^K$ |
+| **Item information** | Scalar $I_i(\theta)$ | Matrix $\mathbf{I}_i(\boldsymbol{\theta}) \in \mathbb{R}^{K \times K}$ |
+| **Estimation** | MLE/MAP (1D optimization) | MLE/MAP (K-D optimization) |
+| **Item selection** | Maximize $I_i(\hat{\theta})$ | Maximize $\det / \text{tr}^{-1}$ of FIM |
+| **Stopping rule** | $\text{SE}(\hat{\theta}) \leq \epsilon$ | $\max_k \text{SE}(\hat{\theta}_k) \leq \epsilon$ |
+| **Computational cost** | Low | Higher (matrix operations) |
+| **Score report** | Single score + SE | Score profile + SE vector |
+| **Between-dimension correlation** | Not applicable | $\text{Corr}(\theta_j, \theta_k)$ estimated |
+
+---
+
+## References
+
+[1] Segall, D. O. (1996). Multidimensional adaptive testing. *Psychometrika*, 61(2), 331–354.
+
+[2] Reckase, M. D., & Segall, D. O. (2009). Multidimensional adaptive testing. In W. J. van der Linden & C. A. W. Glas (Eds.), *Elements of Adaptive Testing* (pp. 203–217). Springer.
+
+[3] van der Linden, W. J., & Hambleton, R. K. (Eds.). (1997). *Handbook of Modern Item Response Theory*. Springer.
+
+[4] Reckase, M. D. (2009). *Multidimensional Item Response Theory*. Springer.
+
+[5] Mulder, J., & van der Linden, W. J. (2009). Multidimensional adaptive testing with Kullback-Leibler information item selection. In W. J. van der Linden & C. A. W. Glas (Eds.), *Elements of Adaptive Testing* (pp. 77–101). Springer.
+
+[6] McKinley, R. L., & Reckase, M. D. (1983). An extension of the two-parameter logistic model to the multidimensional latent space. *ETS Research Report*. Educational Testing Service.
+
+[7] Reckase, M. D. (1985). The difficulty of test items that measure more than one ability. *Applied Psychological Measurement*, 9(4), 401–412.
+
+[8] Berger, M. P. F. (1992). Sequential sampling designs for the two-parameter item response theory model. *Psychometrika*, 57(4), 521–538.
+
+[9] Bock, R. D., & Mislevy, R. J. (1982). Adaptive EAP estimation of ability in a microcomputer environment. *Applied Psychological Measurement*, 6(4), 431–444.
+
+[10] Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum.
+
+[11] Mislevy, R. J. (1986). Bayes modal estimation in item response models. *Psychometrika*, 51(2), 177–195.
+
+[12] Silvey, S. D. (1980). *Optimal Design*. Chapman and Hall.
+
+[13] van der Linden, W. J. (1999). Multidimensional adaptive testing with a minimum error-variance criterion. *Journal of Educational and Behavioral Statistics*, 24(4), 398–412.
+
+[14] Chang, H.-H., & Ying, Z. (1996). A global information approach to computerized adaptive testing. *Applied Psychological Measurement*, 20(3), 213–229.
+
+[15] Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory* (2nd ed.). Wiley.
+
+[16] Weiss, D. J. (1982). Improving measurement quality and efficiency with adaptive testing. *Applied Psychological Measurement*, 6(4), 473–492.
+
+[17] Sympson, J. B., & Hetter, R. D. (1985). *Controlling item-exposure rates in computerized adaptive testing*. Proceedings of the 27th Annual Meeting of the Military Testing Association.
+
+[18] Leung, C. K., Chang, H.-H., & Hau, K.-T. (2002). Item selection in computerized adaptive testing: Improving the a-stratified design with the Sympson-Hetter algorithm. *Applied Psychological Measurement*, 26(4), 376–392.
+
+[19] Stocking, M. L., & Swanson, L. (1993). A method for severely constrained item selection in adaptive testing. *Applied Psychological Measurement*, 17(3), 277–292.
+
+[20] van der Linden, W. J. (2005). *Linear Models for Optimal Test Design*. Springer.
+
+---
+
+*Document prepared with reference to foundational MIRT and MCAT literature. All mathematical notation follows standard psychometric conventions. LaTeX formulas are rendered in Markdown-compatible environments (e.g., Obsidian, Jupyter, Pandoc with MathJax/KaTeX).*
+16:T535b,
+## Overview
+
+Computerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level. According to Weiss (IACAT), its objective is *"to select, for each examinee, the set of test questions from a pre-calibrated item bank that simultaneously most effectively and efficiently measures that person on the trait"* [1].
+
+Unlike conventional fixed-form tests where all examinees answer the same predetermined questions, CAT dynamically selects items based on the test-taker's estimated ability as they progress through the test [2]. The result is a test that is smarter, shorter, fairer, and more precise [3].
+
+---
+
+## Part 1: The Five Implementation Steps
+
+According to Seo (2017), there are **five steps** for implementing a CAT system [4]:
+
+### Step 1 — Determine Feasibility
+Before building a CAT, the test program must evaluate whether CAT is appropriate:
+- Is there a sufficient volume of test-takers to calibrate items? (Rule of thumb: at least 200–300 per item)
+- Is the construct **unidimensional** (measuring one trait)? IRT-based CAT assumes this
+- Is the item bank large enough? (Recommended: at least 3× the intended test length) [3]
+- Are there sufficient resources to build and maintain the platform?
+  
+> [note]:
+>
+> If the test volume is very small (e.g., fewer than 100 test-takers per year), it may be impossible to build a usable item bank. It is not unusual for a testing program to start with a fixed-form test and later transition to CAT once the item bank is well established [5].
+
+### Step 2 — Establish an Item Bank
+The item bank is the foundation of CAT. It must:
+- Contain a large pool of **pre-calibrated items** with known IRT parameters
+- Cover the full range of the ability scale (very easy to very hard)
+- Be organized with content categories for content balancing
+- Items must be **pilot-tested** on a representative sample before entering the live bank
+
+> [note]:
+>
+> "You can't just write a few items and subjectively rank them as Easy, Medium, or Hard. Instead, you need to write a large number of items and then pilot them on a representative sample of examinees." [3]
+
+### Step 3 — Pretest, Calibrate, and Link Item Parameters
+Each item must be statistically calibrated through:
+- **Pilot testing** on real examinees
+- **IRT calibration** — estimating the $a$ (discrimination), $b$ (difficulty), and $c$ (guessing) parameters
+- **Linking** — placing all items on the same IRT scale so they are comparable
+
+This is done through statistical analysis using actual candidate response data [4].
+
+### Step 4 — Specify the Five CAT Algorithm Components
+The test developer must define all five components of the CAT algorithm (see Part 2 below) [4]:
+1. Item bank structure
+2. Starting item/point
+3. Item selection rule
+4. Scoring procedure
+5. Termination criterion
+
+### Step 5 — Deploy the CAT
+After specifying all components, the CAT is deployed. Ongoing management includes:
+- Content balancing
+- Item analysis and refreshment
+- Standard setting
+- Item exposure monitoring
+- Item bank updates [4]
+
+---
+
+## Part 2: The Five Core Algorithm Components
+
+### Component 1: Item Bank
+
+The item bank is a pool of pre-calibrated items, each with known IRT parameters [4, 5].
+
+Key requirements:
+- **Size:** Typically at least 5–10× the test length to allow adequate item selection and exposure control
+- **Coverage:** Items spanning the full difficulty range ($-3 \leq \theta \leq 3$)
+- **Content balance:** Items organized by content domain/category
+- **Parameters:** Each item has at minimum a difficulty ($b$) parameter; ideally also discrimination ($a$) and guessing ($c$) for the 3PL model
+
+---
+
+### Component 2: Starting Point
+
+The starting point determines where the test begins on the ability scale. There are three common options [1, 3]:
+
+| Option | Description | Use Case |
+|---|---|---|
+| **Fixed value** | Everyone starts at $\hat{\theta}_0 = 0$ (population mean) | Most common for general tests |
+| **Randomized** | Start within a narrow range, e.g., $\hat{\theta}_0 \in [-0.5,\ 0.5]$ | Improves test security and item exposure |
+| **Predicted value** | Based on prior data or external information | When prior ability estimate is available |
+
+> [note]:
+> 
+> "At the initial stages of a CAT, when only a single item or two has been administered, the next item is usually selected by a step rule — if the first item was answered correctly, the examinee's original theta estimate is increased by some amount (e.g., 0.50); if the first item was answered incorrectly, the original theta estimate is decreased by the same amount." [1]
+
+---
+
+### Component 3: Item Selection Rule (Algorithm)
+
+This is the **heart of the CAT**. After each response, the algorithm selects the next best item from the unused items in the bank [5].
+
+The item selection process involves three sub-components [5]:
+
+#### 3a. Item Selection Criterion
+
+The most common methods are `Maximum Fisher Information` and `b-Matching` [5, 6]:
+
+**Maximum Fisher Information (most common)**
+
+Selects the item $i^*$ providing the highest statistical information at the current ability estimate $\hat{\theta}$:
+
+$$i^* = \underset{i \notin \mathcal{U}}{\arg\max}\ I_i(\hat{\theta})$$
+
+Where $I_i(\hat{\theta})$ is the Item Information Function (IIF) evaluated at $\hat{\theta}$, and $\mathcal{U}$ is the set of already-used items.
+
+For the **3-Parameter Logistic (3PL)** model, the IIF is:
+
+$$I_i(\theta) = \frac{a_i^2 \left[P_i(\theta) - c_i\right]^2}{(1 - c_i)^2} \cdot \frac{1 - P_i(\theta)}{P_i(\theta)}$$
+
+Where $P_i(\theta)$ is the probability of a correct response given by the 3PL model:
+
+$$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
+
+**b-Matching (difficulty matching)**
+
+Selects the item whose difficulty $b_i$ is closest to the current theta estimate:
+
+$$i^* = \underset{i \notin \mathcal{U}}{\arg\min}\ |b_i - \hat{\theta}|$$
+
+Simple but effective; does not require full IIF calculation.
+
+**Other criteria:** $a$-stratification, weighted likelihood, Kullback-Leibler information [5].
+
+#### 3b. Content Balancing
+Ensures the test covers required content domains proportionally — not just statistically optimal items. This addresses the concern of educators and subject matter experts who require balanced content coverage [2, 5].
+
+#### 3c. Item Exposure Control
+Prevents certain items from being administered too frequently, which would compromise test security [5]. Common methods:
+- **Randomesque method** — randomly selects from the top-$k$ most informative items
+- **Sympson-Hetter method** — probabilistically suppresses overexposed items
+- **Fade-away method** — gradually reduces exposure of frequently used items
+
+> [note]:
+>
+> "Selecting the right method for each of the 3 components of the item selection process — content balancing, the item selection criterion, and item exposure control — is not straightforward and cannot be considered separately for each of these 3 components because of the unique interactions among them." [5]
+
+---
+
+### Component 4: Scoring Procedure (Theta Estimation)
+
+After each response, the test-taker's ability estimate $\hat{\theta}$ is updated [2, 6].
+
+The scoring algorithm takes all previous responses into account — not just the most recent one. Let $\mathbf{u} = (u_1, u_2, \ldots, u_n)$ denote the vector of responses where $u_j = 1$ if correct and $u_j = 0$ if incorrect.
+
+#### Maximum Likelihood Estimation (MLE)
+
+Finds the $\hat{\theta}$ that maximizes the likelihood of the observed response pattern:
+
+$$\hat{\theta}_{MLE} = \underset{\theta}{\arg\max}\ L(\theta \mid \mathbf{u})$$
+
+The likelihood function is:
+
+$$L(\theta \mid \mathbf{u}) = \prod_{j=1}^{n} P_j(\theta)^{u_j} \left[1 - P_j(\theta)\right]^{1 - u_j}$$
+
+In practice, the log-likelihood is maximized:
+
+$$\ell(\theta) = \sum_{j=1}^{n} \left[ u_j \ln P_j(\theta) + (1 - u_j) \ln(1 - P_j(\theta)) \right]$$
+
+- **Pro:** Unbiased estimate
+- **Con:** Undefined when all responses are correct or all incorrect [1]
+
+#### Bayesian EAP (Expected A Posteriori)
+
+Combines the likelihood with a prior distribution $\pi(\theta)$ (typically standard normal $\mathcal{N}(0, 1)$):
+
+$$\hat{\theta}_{EAP} = \frac{\int_{-\infty}^{\infty} \theta \cdot L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}{\int_{-\infty}^{\infty} L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}$$
+
+- **Pro:** Works even with all-correct or all-incorrect response patterns
+- **Pro:** Provides a natural standard error estimate
+- **Con:** Slightly biased toward the prior mean in early items [6]
+
+#### Bayesian MAP (Maximum A Posteriori)
+
+Takes the mode of the posterior distribution:
+
+$$\hat{\theta}_{MAP} = \underset{\theta}{\arg\max}\ \left[ L(\theta \mid \mathbf{u}) \cdot \pi(\theta) \right]$$
+
+Intermediate between MLE and EAP in terms of bias and variance.
+
+> [note]:
+>
+> "The algorithm then selects the most informative item from the calibrated item bank based on this estimate. After the examinee responds, the ability estimate is updated using maximum likelihood or Bayesian methods, and the cycle continues until a stopping criterion is met." [6]
+
+#### Standard Error of Measurement (SEM)
+
+The precision of the theta estimate is tracked via the **Test Information Function**:
+
+$$\text{TIF}(\theta) = \sum_{j=1}^{n} I_j(\theta)$$
+
+The Standard Error of Measurement is:
+
+$$SE(\hat{\theta}) = \frac{1}{\sqrt{\text{TIF}(\hat{\theta})}} = \frac{1}{\sqrt{\sum_{j=1}^{n} I_j(\hat{\theta})}}$$
+
+The SEM **decreases** as more items are administered. CAT continues until $SE(\hat{\theta})$ falls below a specified threshold.
+
+---
+
+### Component 5: Termination Criterion
+
+The stopping rule decides when to end the test. Common criteria [2, 4, 6]:
+
+| Criterion | Condition | Advantage |
+|---|---|---|
+| **Fixed length** | Stop after $N$ items | Simple, equal testing time |
+| **Fixed precision** | Stop when $SE(\hat{\theta}) < \epsilon$ | Precision-based; adaptive length |
+| **Combined** | Stop when $SE(\hat{\theta}) < \epsilon$ OR $n \geq N_{max}$ | Balances precision and efficiency |
+| **Classification** | Stop when ability is clearly above/below a cut score $\theta_c$ | Used in pass/fail exams (e.g., NCLEX) |
+| **Time limit** | Stop after maximum time $T$ | Practical constraint |
+
+For **classification-based** stopping (e.g., pass/fail), the decision rule is:
+
+$$\text{Decision} = \begin{cases} \text{Pass} & \text{if } \hat{\theta} - z_{\alpha/2} \cdot SE(\hat{\theta}) > \theta_c \\ \text{Fail} & \text{if } \hat{\theta} + z_{\alpha/2} \cdot SE(\hat{\theta}) < \theta_c \\ \text{Continue} & \text{otherwise} \end{cases}$$
+
+Where $\theta_c$ is the passing cut score and $z_{\alpha/2}$ is the critical value at significance level $\alpha$.
+
+> [note]:
+> 
+> "Fixed-length tests administer a predetermined number of items, while precision-based stopping continues until the standard error of measurement falls below a threshold." [6]
+
+> [note]:
+>
+> For high-stakes exams like the NCLEX:
+> "This pattern continues until you run out of time or until the computer identifies your competency level as above or below the passing standard." [7]
+
+#### What the Literature Actually Says About CAT Stopping Criteria
+
+The Authoritative Source — van der Linden & Glas (2000) [11]. The most cited CAT textbook defines three legitimate stopping rules:
+
+##### Rule 1 — Fixed Length
+
+$$stop when n=N$$
+
+Simple, equal test length for all. Does not guarantee equal precision.
+
+##### Rule 2 — Fixed Precision (SE-based)
+
+$$stop when SE(\hat{\theta})<\epsilon$$
+
+Guarantees equal measurement precision. Test length varies by person.
+
+##### Rule 3 — Classification / Sequential Probability Ratio Test (SPRT)
+
+$$stop when ability is clearly above or below a cut score θ_c​$$
+
+
+#### Used in pass/fail exams like NCLEX
+
+> [note]:
+> 
+> "The fixed-precision rule is preferred when the goal is to produce scores of equal reliability across all test-takers." — van der Linden & Glas (2000) [11]
+
+---
+
+#### Seo (2017) on Combined Rules [4]
+
+> [note]:
+>
+> "In practice, a combination of stopping rules is recommended — a precision-based primary rule with a maximum item count as a safety cap to prevent excessively long tests."
+
+The standard combined rule is:
+
+$$stop when SE(\hat{\theta})<\epsilon\quad OR\quad n≥N_{max}​$$
+
+Bank exhaustion is NOT listed as a standard stopping criterion in any major CAT reference. It is an emergency fallback for implementation purposes only.
+
+---
+
+#### Weiss (IACAT) [1]
+
+"The test terminates when a specified level of measurement precision has been achieved, typically when the standard error of the ability estimate falls below a predetermined value."
+
+No mention of bank exhaustion as a stopping criterion.
+
+---
+
+#### The Correct Stopping Rule Hierarchy
+
+Based on the literature [11, 1, 4], the proper priority order is:
+```
+Priority 1 (primary)  :   SE(θ̂) < ε          → STOP — precision achieved
+Priority 2 (safety)   :   n ≥ N_max          → STOP — too many items
+Priority 3 (emergency):   bank exhausted     → STOP WITH WARNING — bank limitation
+```
+The first rule that fires wins. Bank exhaustion should always come last and always produce a warning.
+
+---
+
+## Part 3: The Full CAT Runtime Process
+
+Once deployed, the following iterative process runs for each test-taker [2, 33]:
+
+```mermaid
+flowchart TD
+    A([Start]) --> B["1. Set Starting Point<br>theta = 0 or prior estimate<br>Response history = empty"]
+    B --> C["2. Select Next Item<br>From unused items in bank<br>Apply content balancing<br>Apply exposure control<br>Select i-star = argmax I_i"]
+    C --> D["3. Administer Item<br>Present item i-star to test-taker<br>Record response = 0 or 1<br>Add i-star to used set U"]
+    D --> E["4. Update Ability Estimate<br>Update response vector u<br>Recalculate theta via MLE or EAP<br>SE = 1 divided by sqrt of sum I"]
+    E --> F{"5. Termination Criterion Met?<br>SE less than epsilon OR n gte N_max"}
+    F -->|No| C
+    F -->|Yes| G["6. Report Final Score<br>Report theta and SE<br>Apply score transformation"]
+    G --> H([End])
+```
+
+---
+
+## Part 4: IRT Models Used in CAT
+
+CAT is built on Item Response Theory. The three most common models are [10]:
+
+### 1PL — Rasch Model
+Only difficulty $b$ varies between items; discrimination is fixed at $a = 1$ and guessing $c = 0$:
+
+$$P_i(\theta) = \frac{1}{1 + e^{-(\theta - b_i)}}$$
+
+### 2PL Model
+Both difficulty $b$ and discrimination $a$ vary; no guessing ($c = 0$):
+
+$$P_i(\theta) = \frac{1}{1 + e^{-a_i(\theta - b_i)}}$$
+
+### 3PL Model (most common in high-stakes CAT)
+All three parameters vary — discrimination $a_i$, difficulty $b_i$, and guessing $c_i$:
+
+$$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
+
+Where:
+- $\theta \in (-\infty, +\infty)$, typically $[-3, 3]$ — test-taker ability
+- $a_i > 0$ — item discrimination (steepness of the curve)
+- $b_i \in [-3, 3]$ — item difficulty (location of the curve)
+- $c_i \in [0, 1]$ — pseudo-guessing parameter (lower asymptote)
+
+---
+
+## Part 5: Historical Origins
+
+The adaptive testing concept is not new. Its origins can be traced to Alfred Binet's IQ test (1905), which used an adaptive procedure: items were organized by age-difficulty level, and the examiner would probe upward or downward based on each child's responses [1].
+
+The key historical milestones are [1, 8]:
+
+| Year | Event |
+|---|---|
+| 1905 | Binet's adaptive IQ test — first adaptive testing procedure |
+| 1952 | Lord observes that ability scores are test-independent (unlike observed scores) |
+| 1960 | Rasch describes the one-parameter logistic IRT model |
+| 1973 | Weiss proposes the "stradaptive" computer-delivered test |
+| 1980 | Lord publishes the foundational IRT textbook |
+| 1994 | NCLEX (nursing licensure exam) adopts CAT — first large-scale operational use |
+| 2007 | National Registry of Emergency Medical Technicians adopts CAT |
+
+---
+
+## Part 6: Practical Example — How CAT Selects Items
+
+The following example illustrates the item selection process step by step [3]:
+
+> Suppose we have five items in the bank and the starting theta is $\hat{\theta}_0 = 0.0$.
+
+**Round 1:**
+- Compute $I_i(0.0)$ for all items → **Item 4** has highest information
+- Test-taker answers **incorrectly** ($u_1 = 0$)
+- Run MLE/EAP → new estimate: $\hat{\theta}_1 = -2.0$
+- Check termination: $SE(\hat{\theta}_1)$ too large, continue
+
+**Round 2:**
+- Compute $I_i(-2.0)$ for remaining items → **Item 2** has highest information
+- Test-taker answers **correctly** ($u_2 = 1$)
+- Update theta → $\hat{\theta}_2 = -0.8$
+- Check termination: not done yet
+
+**Round 3:**
+- Item 2 and Item 4 already used ($\mathcal{U} = \{2, 4\}$)
+- Next best available at $\hat{\theta}_2 = -0.8$ → **Item 1**
+- Test-taker answers correctly ($u_3 = 1$, item is easy)
+- Update theta → $\hat{\theta}_3 = -0.2$
+- Continue...
+
+This demonstrates how CAT **homes in** on the test-taker's true ability through successive approximation.
+
+---
+
+## Part 7: Advantages and Challenges
+
+### Advantages 
+
+| Advantage | Detail |
+|---|---|
+| **Efficiency** | Typically 50% fewer items needed for same precision |
+| **Equal precision** | $SE(\hat{\theta})$ is controlled uniformly across all ability levels |
+| **Fairness** | Each test-taker gets items appropriate to their level |
+| **Immediate results** | Scoring is done in real-time |
+| **Security** | Unique item sets make sharing answers less useful |
+| **Adaptive length** | Test ends when $SE(\hat{\theta}) < \epsilon$ |
+
+[2, 4, 6]
+
+### Challenges 
+
+| Challenge | Detail |
+|---|---|
+| **Item bank development** | Requires large pilot studies to calibrate $a$, $b$, $c$ parameters |
+| **Cost** | Expensive to build and maintain the platform |
+| **Test-taker experience** | Test-takers may feel discouraged if items seem consistently hard |
+| **Content balance** | Purely statistical selection (argmax $I_i(\hat{\theta})$) may neglect content coverage |
+| **Item exposure** | Items with high $I_i(\theta)$ at common $\theta$ values are overused |
+| **Unidimensionality** | IRT assumes a single latent trait $\theta$; multidimensional constructs are harder |
+
+[2, 4, 5]
+
+> [note]:
+>
+> "A trade-off must be made between the psychological experiences of test-takers and measurement efficiency." [2]
+
+---
+
+## Part 8: Real-World Applications
+
+CAT is used in many high-stakes assessments worldwide [1, 4]:
+
+| Exam | Domain | CAT Since |
+|---|---|---|
+| **NCLEX-RN / NCLEX-PN** | Nursing licensure (USA) | 1994 |
+| **GRE General Test** | Graduate school admissions | 1994 |
+| **GMAT** | Business school admissions | 1997 |
+| **NREMT** | Emergency Medical Technicians | 2007 |
+| **TOEFL iBT** | English language proficiency | adaptive sections |
+| **ASVAB-CAT** | US Military enlistment | adaptive version |
+
+---
+
+## Summary
+
+The CAT process can be summarized in three phases:
+
+**Before the test (Development):**
+1. Determine feasibility
+2. Write and pilot items
+3. Calibrate IRT parameters ($a_i$, $b_i$, $c_i$)
+4. Build and validate the item bank
+5. Define all five algorithm components
+
+**During the test (Runtime loop):**
+1. Set starting point $\hat{\theta}_0$
+2. Select $i^* = \arg\max\ I_i(\hat{\theta})$ from unused items
+3. Administer item, record response $u \in \{0, 1\}$
+4. Update $\hat{\theta}$ using MLE or EAP; compute $SE(\hat{\theta})$
+5. Check stopping rule → repeat or stop
+
+**After the test (Reporting):**
+1. Report final $\hat{\theta}$ and $SE(\hat{\theta})$
+2. Apply score transformation if needed
+3. Log responses for item bank maintenance
+
+---
+
+## References
+
+[1] Weiss, D. J. (n.d.). *Introduction to CAT*. International Association for Computerized Adaptive Testing (IACAT). https://iacat.org/introduction-to-cat/
+
+[2] Kim, J., & Chung, H. (2017). The impacts of computer adaptive testing from a variety of perspectives. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5549015/
+
+[3] Assessment Systems Corporation. (2025). *Computerized Adaptive Testing (CAT): Software, Meaning, Example*. https://assess.com/computerized-adaptive-testing/
+
+[4] Seo, D. G. (2017). Overview and current management of computerized adaptive testing in licensing/certification examinations. *Journal of Educational Evaluation for Health Professions, 14*, 17. https://doi.org/10.3352/jeehp.2017.14.17
+
+[5] Kim, D., & Chung, H. (2018). Components of the item selection algorithm in computerized adaptive testing. *Journal of Educational Evaluation for Health Professions*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5968224/
+
+[6] Cogn-IQ. (2026). *Adaptive Testing in Psychometrics — Definition & Examples*. https://www.cogn-iq.org/learn/theory/adaptive-testing/
+
+[7] UWorld Nursing. (2025). *What Is NCLEX Computerized Adaptive Testing (CAT)?* https://nursing.uworld.com/blog/nclex-computer-adaptive-test/
+
+[8] Janssen, R., & De Boeck, P. (2010). *Computerized adaptive testing: implementation issues*. arXiv. https://arxiv.org/pdf/1012.0042
+
+[9] Wikipedia contributors. (2026). *Computerized adaptive testing*. Wikipedia. https://en.wikipedia.org/wiki/Computerized_adaptive_testing
+
+[10] Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum Associates.
+
+[11] van der Linden, W. J., & Glas, C. A. W. (2000). Computerized Adaptive Testing: Theory and Practice. Kluwer Academic Publishers.
+17:T20140,
 ## Prerequisites
 
 Before starting this tutorial, make sure you have:
@@ -3570,424 +4514,7 @@ The key improvement over Newton-Raphson is that EAP is **robust** — it never f
 | SE-based stopping rule | [11] van der Linden & Glas (2000), [13] Seo (2017) |
 | catR R package | [16] Magis & Barrada (2017), [17] Magis & Raiche (2012) |
 | Concerto implementation | [20] Concerto Wiki, [21] GitHub repository |
-16:T4ab3,
-## Overview
-
-Computerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level. According to Weiss (IACAT), its objective is *"to select, for each examinee, the set of test questions from a pre-calibrated item bank that simultaneously most effectively and efficiently measures that person on the trait"* [1].
-
-Unlike conventional fixed-form tests where all examinees answer the same predetermined questions, CAT dynamically selects items based on the test-taker's estimated ability as they progress through the test [2]. The result is a test that is smarter, shorter, fairer, and more precise [3].
-
----
-
-## Part 1: The Five Implementation Steps
-
-According to Seo (2017), there are **five steps** for implementing a CAT system [4]:
-
-### Step 1 — Determine Feasibility
-Before building a CAT, the test program must evaluate whether CAT is appropriate:
-- Is there a sufficient volume of test-takers to calibrate items? (Rule of thumb: at least 200–300 per item)
-- Is the construct **unidimensional** (measuring one trait)? IRT-based CAT assumes this
-- Is the item bank large enough? (Recommended: at least 3× the intended test length) [3]
-- Are there sufficient resources to build and maintain the platform?
-  
-> [note]:
->
-> If the test volume is very small (e.g., fewer than 100 test-takers per year), it may be impossible to build a usable item bank. It is not unusual for a testing program to start with a fixed-form test and later transition to CAT once the item bank is well established [5].
-
-### Step 2 — Establish an Item Bank
-The item bank is the foundation of CAT. It must:
-- Contain a large pool of **pre-calibrated items** with known IRT parameters
-- Cover the full range of the ability scale (very easy to very hard)
-- Be organized with content categories for content balancing
-- Items must be **pilot-tested** on a representative sample before entering the live bank
-
-> [note]:
->
-> "You can't just write a few items and subjectively rank them as Easy, Medium, or Hard. Instead, you need to write a large number of items and then pilot them on a representative sample of examinees." [3]
-
-### Step 3 — Pretest, Calibrate, and Link Item Parameters
-Each item must be statistically calibrated through:
-- **Pilot testing** on real examinees
-- **IRT calibration** — estimating the $a$ (discrimination), $b$ (difficulty), and $c$ (guessing) parameters
-- **Linking** — placing all items on the same IRT scale so they are comparable
-
-This is done through statistical analysis using actual candidate response data [4].
-
-### Step 4 — Specify the Five CAT Algorithm Components
-The test developer must define all five components of the CAT algorithm (see Part 2 below) [4]:
-1. Item bank structure
-2. Starting item/point
-3. Item selection rule
-4. Scoring procedure
-5. Termination criterion
-
-### Step 5 — Deploy the CAT
-After specifying all components, the CAT is deployed. Ongoing management includes:
-- Content balancing
-- Item analysis and refreshment
-- Standard setting
-- Item exposure monitoring
-- Item bank updates [4]
-
----
-
-## Part 2: The Five Core Algorithm Components
-
-### Component 1: Item Bank
-
-The item bank is a pool of pre-calibrated items, each with known IRT parameters [4, 5].
-
-Key requirements:
-- **Size:** Typically at least 5–10× the test length to allow adequate item selection and exposure control
-- **Coverage:** Items spanning the full difficulty range ($-3 \leq \theta \leq 3$)
-- **Content balance:** Items organized by content domain/category
-- **Parameters:** Each item has at minimum a difficulty ($b$) parameter; ideally also discrimination ($a$) and guessing ($c$) for the 3PL model
-
----
-
-### Component 2: Starting Point
-
-The starting point determines where the test begins on the ability scale. There are three common options [1, 3]:
-
-| Option | Description | Use Case |
-|---|---|---|
-| **Fixed value** | Everyone starts at $\hat{\theta}_0 = 0$ (population mean) | Most common for general tests |
-| **Randomized** | Start within a narrow range, e.g., $\hat{\theta}_0 \in [-0.5,\ 0.5]$ | Improves test security and item exposure |
-| **Predicted value** | Based on prior data or external information | When prior ability estimate is available |
-
-> [note]:
-> 
-> "At the initial stages of a CAT, when only a single item or two has been administered, the next item is usually selected by a step rule — if the first item was answered correctly, the examinee's original theta estimate is increased by some amount (e.g., 0.50); if the first item was answered incorrectly, the original theta estimate is decreased by the same amount." [1]
-
----
-
-### Component 3: Item Selection Rule (Algorithm)
-
-This is the **heart of the CAT**. After each response, the algorithm selects the next best item from the unused items in the bank [5].
-
-The item selection process involves three sub-components [5]:
-
-#### 3a. Item Selection Criterion
-
-The most common methods are `Maximum Fisher Information` and `b-Matching` [5, 6]:
-
-**Maximum Fisher Information (most common)**
-
-Selects the item $i^*$ providing the highest statistical information at the current ability estimate $\hat{\theta}$:
-
-$$i^* = \underset{i \notin \mathcal{U}}{\arg\max}\ I_i(\hat{\theta})$$
-
-Where $I_i(\hat{\theta})$ is the Item Information Function (IIF) evaluated at $\hat{\theta}$, and $\mathcal{U}$ is the set of already-used items.
-
-For the **3-Parameter Logistic (3PL)** model, the IIF is:
-
-$$I_i(\theta) = \frac{a_i^2 \left[P_i(\theta) - c_i\right]^2}{(1 - c_i)^2} \cdot \frac{1 - P_i(\theta)}{P_i(\theta)}$$
-
-Where $P_i(\theta)$ is the probability of a correct response given by the 3PL model:
-
-$$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
-
-**b-Matching (difficulty matching)**
-
-Selects the item whose difficulty $b_i$ is closest to the current theta estimate:
-
-$$i^* = \underset{i \notin \mathcal{U}}{\arg\min}\ |b_i - \hat{\theta}|$$
-
-Simple but effective; does not require full IIF calculation.
-
-**Other criteria:** $a$-stratification, weighted likelihood, Kullback-Leibler information [5].
-
-#### 3b. Content Balancing
-Ensures the test covers required content domains proportionally — not just statistically optimal items. This addresses the concern of educators and subject matter experts who require balanced content coverage [2, 5].
-
-#### 3c. Item Exposure Control
-Prevents certain items from being administered too frequently, which would compromise test security [5]. Common methods:
-- **Randomesque method** — randomly selects from the top-$k$ most informative items
-- **Sympson-Hetter method** — probabilistically suppresses overexposed items
-- **Fade-away method** — gradually reduces exposure of frequently used items
-
-> [note]:
->
-> "Selecting the right method for each of the 3 components of the item selection process — content balancing, the item selection criterion, and item exposure control — is not straightforward and cannot be considered separately for each of these 3 components because of the unique interactions among them." [5]
-
----
-
-### Component 4: Scoring Procedure (Theta Estimation)
-
-After each response, the test-taker's ability estimate $\hat{\theta}$ is updated [2, 6].
-
-The scoring algorithm takes all previous responses into account — not just the most recent one. Let $\mathbf{u} = (u_1, u_2, \ldots, u_n)$ denote the vector of responses where $u_j = 1$ if correct and $u_j = 0$ if incorrect.
-
-#### Maximum Likelihood Estimation (MLE)
-
-Finds the $\hat{\theta}$ that maximizes the likelihood of the observed response pattern:
-
-$$\hat{\theta}_{MLE} = \underset{\theta}{\arg\max}\ L(\theta \mid \mathbf{u})$$
-
-The likelihood function is:
-
-$$L(\theta \mid \mathbf{u}) = \prod_{j=1}^{n} P_j(\theta)^{u_j} \left[1 - P_j(\theta)\right]^{1 - u_j}$$
-
-In practice, the log-likelihood is maximized:
-
-$$\ell(\theta) = \sum_{j=1}^{n} \left[ u_j \ln P_j(\theta) + (1 - u_j) \ln(1 - P_j(\theta)) \right]$$
-
-- **Pro:** Unbiased estimate
-- **Con:** Undefined when all responses are correct or all incorrect [1]
-
-#### Bayesian EAP (Expected A Posteriori)
-
-Combines the likelihood with a prior distribution $\pi(\theta)$ (typically standard normal $\mathcal{N}(0, 1)$):
-
-$$\hat{\theta}_{EAP} = \frac{\int_{-\infty}^{\infty} \theta \cdot L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}{\int_{-\infty}^{\infty} L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}$$
-
-- **Pro:** Works even with all-correct or all-incorrect response patterns
-- **Pro:** Provides a natural standard error estimate
-- **Con:** Slightly biased toward the prior mean in early items [6]
-
-#### Bayesian MAP (Maximum A Posteriori)
-
-Takes the mode of the posterior distribution:
-
-$$\hat{\theta}_{MAP} = \underset{\theta}{\arg\max}\ \left[ L(\theta \mid \mathbf{u}) \cdot \pi(\theta) \right]$$
-
-Intermediate between MLE and EAP in terms of bias and variance.
-
-> [note]:
->
-> "The algorithm then selects the most informative item from the calibrated item bank based on this estimate. After the examinee responds, the ability estimate is updated using maximum likelihood or Bayesian methods, and the cycle continues until a stopping criterion is met." [6]
-
-#### Standard Error of Measurement (SEM)
-
-The precision of the theta estimate is tracked via the **Test Information Function**:
-
-$$\text{TIF}(\theta) = \sum_{j=1}^{n} I_j(\theta)$$
-
-The Standard Error of Measurement is:
-
-$$SE(\hat{\theta}) = \frac{1}{\sqrt{\text{TIF}(\hat{\theta})}} = \frac{1}{\sqrt{\sum_{j=1}^{n} I_j(\hat{\theta})}}$$
-
-The SEM **decreases** as more items are administered. CAT continues until $SE(\hat{\theta})$ falls below a specified threshold.
-
----
-
-### Component 5: Termination Criterion
-
-The stopping rule decides when to end the test. Common criteria [2, 4, 6]:
-
-| Criterion | Condition | Advantage |
-|---|---|---|
-| **Fixed length** | Stop after $N$ items | Simple, equal testing time |
-| **Fixed precision** | Stop when $SE(\hat{\theta}) < \epsilon$ | Precision-based; adaptive length |
-| **Combined** | Stop when $SE(\hat{\theta}) < \epsilon$ OR $n \geq N_{max}$ | Balances precision and efficiency |
-| **Classification** | Stop when ability is clearly above/below a cut score $\theta_c$ | Used in pass/fail exams (e.g., NCLEX) |
-| **Time limit** | Stop after maximum time $T$ | Practical constraint |
-
-For **classification-based** stopping (e.g., pass/fail), the decision rule is:
-
-$$\text{Decision} = \begin{cases} \text{Pass} & \text{if } \hat{\theta} - z_{\alpha/2} \cdot SE(\hat{\theta}) > \theta_c \\ \text{Fail} & \text{if } \hat{\theta} + z_{\alpha/2} \cdot SE(\hat{\theta}) < \theta_c \\ \text{Continue} & \text{otherwise} \end{cases}$$
-
-Where $\theta_c$ is the passing cut score and $z_{\alpha/2}$ is the critical value at significance level $\alpha$.
-
-> [note]:
-> 
-> "Fixed-length tests administer a predetermined number of items, while precision-based stopping continues until the standard error of measurement falls below a threshold." [6]
-
-> [note]:
->
-> For high-stakes exams like the NCLEX:
-> "This pattern continues until you run out of time or until the computer identifies your competency level as above or below the passing standard." [7]
-
----
-
-## Part 3: The Full CAT Runtime Process
-
-Once deployed, the following iterative process runs for each test-taker [2, 33]:
-
-```mermaid
-flowchart TD
-    A([Start]) --> B["1. Set Starting Point<br>theta = 0 or prior estimate<br>Response history = empty"]
-    B --> C["2. Select Next Item<br>From unused items in bank<br>Apply content balancing<br>Apply exposure control<br>Select i-star = argmax I_i"]
-    C --> D["3. Administer Item<br>Present item i-star to test-taker<br>Record response = 0 or 1<br>Add i-star to used set U"]
-    D --> E["4. Update Ability Estimate<br>Update response vector u<br>Recalculate theta via MLE or EAP<br>SE = 1 divided by sqrt of sum I"]
-    E --> F{"5. Termination Criterion Met?<br>SE less than epsilon OR n gte N_max"}
-    F -->|No| C
-    F -->|Yes| G["6. Report Final Score<br>Report theta and SE<br>Apply score transformation"]
-    G --> H([End])
-```
-
----
-
-## Part 4: IRT Models Used in CAT
-
-CAT is built on Item Response Theory. The three most common models are [10]:
-
-### 1PL — Rasch Model
-Only difficulty $b$ varies between items; discrimination is fixed at $a = 1$ and guessing $c = 0$:
-
-$$P_i(\theta) = \frac{1}{1 + e^{-(\theta - b_i)}}$$
-
-### 2PL Model
-Both difficulty $b$ and discrimination $a$ vary; no guessing ($c = 0$):
-
-$$P_i(\theta) = \frac{1}{1 + e^{-a_i(\theta - b_i)}}$$
-
-### 3PL Model (most common in high-stakes CAT)
-All three parameters vary — discrimination $a_i$, difficulty $b_i$, and guessing $c_i$:
-
-$$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
-
-Where:
-- $\theta \in (-\infty, +\infty)$, typically $[-3, 3]$ — test-taker ability
-- $a_i > 0$ — item discrimination (steepness of the curve)
-- $b_i \in [-3, 3]$ — item difficulty (location of the curve)
-- $c_i \in [0, 1]$ — pseudo-guessing parameter (lower asymptote)
-
----
-
-## Part 5: Historical Origins
-
-The adaptive testing concept is not new. Its origins can be traced to Alfred Binet's IQ test (1905), which used an adaptive procedure: items were organized by age-difficulty level, and the examiner would probe upward or downward based on each child's responses [1].
-
-The key historical milestones are [1, 8]:
-
-| Year | Event |
-|---|---|
-| 1905 | Binet's adaptive IQ test — first adaptive testing procedure |
-| 1952 | Lord observes that ability scores are test-independent (unlike observed scores) |
-| 1960 | Rasch describes the one-parameter logistic IRT model |
-| 1973 | Weiss proposes the "stradaptive" computer-delivered test |
-| 1980 | Lord publishes the foundational IRT textbook |
-| 1994 | NCLEX (nursing licensure exam) adopts CAT — first large-scale operational use |
-| 2007 | National Registry of Emergency Medical Technicians adopts CAT |
-
----
-
-## Part 6: Practical Example — How CAT Selects Items
-
-The following example illustrates the item selection process step by step [3]:
-
-> Suppose we have five items in the bank and the starting theta is $\hat{\theta}_0 = 0.0$.
-
-**Round 1:**
-- Compute $I_i(0.0)$ for all items → **Item 4** has highest information
-- Test-taker answers **incorrectly** ($u_1 = 0$)
-- Run MLE/EAP → new estimate: $\hat{\theta}_1 = -2.0$
-- Check termination: $SE(\hat{\theta}_1)$ too large, continue
-
-**Round 2:**
-- Compute $I_i(-2.0)$ for remaining items → **Item 2** has highest information
-- Test-taker answers **correctly** ($u_2 = 1$)
-- Update theta → $\hat{\theta}_2 = -0.8$
-- Check termination: not done yet
-
-**Round 3:**
-- Item 2 and Item 4 already used ($\mathcal{U} = \{2, 4\}$)
-- Next best available at $\hat{\theta}_2 = -0.8$ → **Item 1**
-- Test-taker answers correctly ($u_3 = 1$, item is easy)
-- Update theta → $\hat{\theta}_3 = -0.2$
-- Continue...
-
-This demonstrates how CAT **homes in** on the test-taker's true ability through successive approximation.
-
----
-
-## Part 7: Advantages and Challenges
-
-### Advantages 
-
-| Advantage | Detail |
-|---|---|
-| **Efficiency** | Typically 50% fewer items needed for same precision |
-| **Equal precision** | $SE(\hat{\theta})$ is controlled uniformly across all ability levels |
-| **Fairness** | Each test-taker gets items appropriate to their level |
-| **Immediate results** | Scoring is done in real-time |
-| **Security** | Unique item sets make sharing answers less useful |
-| **Adaptive length** | Test ends when $SE(\hat{\theta}) < \epsilon$ |
-
-[2, 4, 6]
-
-### Challenges 
-
-| Challenge | Detail |
-|---|---|
-| **Item bank development** | Requires large pilot studies to calibrate $a$, $b$, $c$ parameters |
-| **Cost** | Expensive to build and maintain the platform |
-| **Test-taker experience** | Test-takers may feel discouraged if items seem consistently hard |
-| **Content balance** | Purely statistical selection (argmax $I_i(\hat{\theta})$) may neglect content coverage |
-| **Item exposure** | Items with high $I_i(\theta)$ at common $\theta$ values are overused |
-| **Unidimensionality** | IRT assumes a single latent trait $\theta$; multidimensional constructs are harder |
-
-[2, 4, 5]
-
-> [note]:
->
-> "A trade-off must be made between the psychological experiences of test-takers and measurement efficiency." [2]
-
----
-
-## Part 8: Real-World Applications
-
-CAT is used in many high-stakes assessments worldwide [1, 4]:
-
-| Exam | Domain | CAT Since |
-|---|---|---|
-| **NCLEX-RN / NCLEX-PN** | Nursing licensure (USA) | 1994 |
-| **GRE General Test** | Graduate school admissions | 1994 |
-| **GMAT** | Business school admissions | 1997 |
-| **NREMT** | Emergency Medical Technicians | 2007 |
-| **TOEFL iBT** | English language proficiency | adaptive sections |
-| **ASVAB-CAT** | US Military enlistment | adaptive version |
-
----
-
-## Summary
-
-The CAT process can be summarized in three phases:
-
-**Before the test (Development):**
-1. Determine feasibility
-2. Write and pilot items
-3. Calibrate IRT parameters ($a_i$, $b_i$, $c_i$)
-4. Build and validate the item bank
-5. Define all five algorithm components
-
-**During the test (Runtime loop):**
-1. Set starting point $\hat{\theta}_0$
-2. Select $i^* = \arg\max\ I_i(\hat{\theta})$ from unused items
-3. Administer item, record response $u \in \{0, 1\}$
-4. Update $\hat{\theta}$ using MLE or EAP; compute $SE(\hat{\theta})$
-5. Check stopping rule → repeat or stop
-
-**After the test (Reporting):**
-1. Report final $\hat{\theta}$ and $SE(\hat{\theta})$
-2. Apply score transformation if needed
-3. Log responses for item bank maintenance
-
----
-
-## References
-
-[1] Weiss, D. J. (n.d.). *Introduction to CAT*. International Association for Computerized Adaptive Testing (IACAT). https://iacat.org/introduction-to-cat/
-
-[2] Kim, J., & Chung, H. (2017). The impacts of computer adaptive testing from a variety of perspectives. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5549015/
-
-[3] Assessment Systems Corporation. (2025). *Computerized Adaptive Testing (CAT): Software, Meaning, Example*. https://assess.com/computerized-adaptive-testing/
-
-[4] Seo, D. G. (2017). Overview and current management of computerized adaptive testing in licensing/certification examinations. *Journal of Educational Evaluation for Health Professions, 14*, 17. https://doi.org/10.3352/jeehp.2017.14.17
-
-[5] Kim, D., & Chung, H. (2018). Components of the item selection algorithm in computerized adaptive testing. *Journal of Educational Evaluation for Health Professions*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5968224/
-
-[6] Cogn-IQ. (2026). *Adaptive Testing in Psychometrics — Definition & Examples*. https://www.cogn-iq.org/learn/theory/adaptive-testing/
-
-[7] UWorld Nursing. (2025). *What Is NCLEX Computerized Adaptive Testing (CAT)?* https://nursing.uworld.com/blog/nclex-computer-adaptive-test/
-
-[8] Janssen, R., & De Boeck, P. (2010). *Computerized adaptive testing: implementation issues*. arXiv. https://arxiv.org/pdf/1012.0042
-
-[9] Wikipedia contributors. (2026). *Computerized adaptive testing*. Wikipedia. https://en.wikipedia.org/wiki/Computerized_adaptive_testing
-
-[10] Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum Associates.
-17:T26cd,
+18:T26cd,
 ## What is CAT?
 
 Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**. Unlike traditional fixed tests where everyone gets the same questions, CAT selects the most informative question for each individual at each step [1, 2].
@@ -4270,7 +4797,7 @@ CAT achieves this by always asking the question that provides the most informati
 [7] Huda, A., Firdaus, F., Irfan, D., Hendriyani, Y., Almasri, A., & Sukmawati, M. (2024). Optimizing Educational Assessment: The Practicality of Computer Adaptive Testing (CAT) with an Item Response Theory (IRT) Approach. *JOIV: International Journal on Informatics Visualization, 8*(1), 473–480. https://doi.org/10.62527/joiv.8.1.2217
 
 [8] Magis, D., & Raiche, G. (2012). Random Generation of Response Patterns under Computerized Adaptive Testing with the R Package catR. *Journal of Statistical Software, 48*(8), 1–31. https://doi.org/10.18637/jss.v048.i08
-5:["$","$L13",null,{"type":"$undefined","children":["$","$7",null,{"children":["$","$L14",null,{"posts":[{"slug":"cat-concerto-platform-build","meta":{"title":"Building a CAT Test with Guessing Parameter (3PL IRT) in Concerto Platform","date":"2026-06-05","description":"Concerto Platform is open-source online adaptive testing platform.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$15","readingTime":"94 min read"},{"slug":"cat-procedure","meta":{"title":"The Actual Procedure and Process of Computer Adaptive Testing (CAT)","date":"2026-05-05","description":"omputerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$16","readingTime":"15 min read"},{"slug":"cat-theory","meta":{"title":"Computer Adaptive Testing (CAT) Theory","date":"2026-05-05","description":"Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$17","readingTime":"9 min read"}],"tag":"CAT"}]}]}]
+5:["$","$L13",null,{"type":"$undefined","children":["$","$7",null,{"children":["$","$L14",null,{"posts":[{"slug":"multidimension-cat-procedure","meta":{"title":"Multidimensional Computer Adaptive Testing (MCAT): Procedure and Process","date":"2026-05-20","description":"Multidimensional Computer Adaptive Testing (MCAT) extends the classical unidimensional CAT framework to simultaneously estimate multiple latent traits. This document details the theoretical foundations, algorithmic procedures, item selection strategies, ability estimation methods, and stopping rules that govern the MCAT process, with reference to seminal and contemporary literature.","author":"irufano","tags":["AI","CAT","MCAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$15","readingTime":"14 min read"},{"slug":"unidimension-cat-procedure","meta":{"title":"The Actual Procedure and Process of Unidimension Computer Adaptive Testing (CAT)","date":"2026-05-07","description":"omputerized Adaptive Testing (CAT) is a form of computer-based testing that adapts in real-time to each test-taker's ability level","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$16","readingTime":"16 min read"},{"slug":"cat-concerto-platform-build","meta":{"title":"Building a CAT Test with Guessing Parameter (3PL IRT) in Concerto Platform","date":"2026-05-06","description":"Concerto Platform is open-source online adaptive testing platform.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$17","readingTime":"94 min read"},{"slug":"cat-theory","meta":{"title":"Computer Adaptive Testing (CAT) Theory","date":"2026-05-05","description":"Computer Adaptive Testing is a method of administering tests where **the difficulty of each question adapts in real-time based on the test-taker's ability**.","author":"irufano","tags":["AI","CAT","Adaptive Test"],"image":"https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png","category":"CAT"},"rawContent":"$18","readingTime":"9 min read"}],"tag":"CAT"}]}]}]
 10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 8:null
 12:[["$","title","0",{"children":"Irufano Dev - Developer Portal"}],["$","meta","1",{"name":"description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","2",{"property":"og:title","content":"Irufano Dev - Developer Portal"}],["$","meta","3",{"property":"og:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","4",{"property":"og:url","content":"https://irufano.github.io"}],["$","meta","5",{"property":"og:site_name","content":"irufano Dev"}],["$","meta","6",{"property":"og:locale","content":"en_US"}],["$","meta","7",{"property":"og:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","8",{"property":"og:image:width","content":"800"}],["$","meta","9",{"property":"og:image:height","content":"600"}],["$","meta","10",{"property":"og:image:alt","content":"Irufano Insight"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Irufano Dev - Developer Portal"}],["$","meta","14",{"name":"twitter:description","content":"A tech docs, insights about the software development and also provides several tools for anyone who need it"}],["$","meta","15",{"name":"twitter:image","content":"https://irufano.github.io/images/insight-default.svg"}],["$","meta","16",{"name":"twitter:image:alt","content":"Irufano Insight"}],["$","meta","17",{"name":"twitter:image:width","content":"800"}],["$","meta","18",{"name":"twitter:image:height","content":"600"}]]
