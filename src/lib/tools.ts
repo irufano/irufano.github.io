@@ -12,11 +12,22 @@ import Hash from 'lucide-svelte/icons/hash';
 import Palette from 'lucide-svelte/icons/palette';
 import Image from 'lucide-svelte/icons/image';
 import Table from 'lucide-svelte/icons/table';
+import Type from 'lucide-svelte/icons/type';
+import FileCode from 'lucide-svelte/icons/file-code';
+import Shield from 'lucide-svelte/icons/shield';
+import Sparkles from 'lucide-svelte/icons/sparkles';
 import type { ComponentType, SvelteComponent } from 'svelte';
 
 export const TOOL_CATEGORIES = ['Text', 'Code & Data', 'Encoding & Security', 'Design & Random'] as const;
 
 export type ToolCategory = (typeof TOOL_CATEGORIES)[number];
+
+export const CATEGORY_ICONS: Record<ToolCategory, ComponentType<SvelteComponent>> = {
+	Text: Type,
+	'Code & Data': FileCode,
+	'Encoding & Security': Shield,
+	'Design & Random': Sparkles
+};
 
 export type Tool = {
 	slug: string;

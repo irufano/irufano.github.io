@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import Logo from './Logo.svelte';
 	import LogoMark from './LogoMark.svelte';
-	import { TOOLS, groupToolsByCategory } from '$lib/tools';
+	import { TOOLS, groupToolsByCategory, CATEGORY_ICONS } from '$lib/tools';
 	import Wrench from 'lucide-svelte/icons/wrench';
 	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
@@ -18,59 +17,108 @@
 		onnavigate?: () => void;
 		oncollapse?: () => void;
 	} = $props();
+
+	let tooltipText = $state<string | null>(null);
+	let tooltipPos = $state({ top: 0, left: 0 });
+
+	function showTooltip(e: { currentTarget: EventTarget | null }, text: string) {
+		if (!collapsed) return;
+		const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+		tooltipPos = { top: rect.top + rect.height / 2, left: rect.right + 8 };
+		tooltipText = text;
+	}
+
+	function hideTooltip() {
+		tooltipText = null;
+	}
 </script>
 
 {#snippet sidebarContent(isCollapsed: boolean)}
 	<a
 		href="/"
-		class="flex items-center border-b border-border px-4 py-4 {isCollapsed ? 'justify-center' : ''}"
+		class="flex items-center w-min border-border mx-4 my-4 {isCollapsed ? 'justify-center' : ''}"
 	>
-		{#if isCollapsed}
-			<LogoMark size={16} />
-		{:else}
-			<Logo markSize={16} textSize={20} />
-		{/if}
+		<LogoMark size={20} />
+		<span
+			class="overflow-hidden whitespace-nowrap font-mono text-xl font-bold leading-none text-fg transition-all duration-200 {isCollapsed
+				? 'ml-0 max-w-0 opacity-0'
+				: 'ml-1.5 max-w-32 opacity-100'}"
+		>
+			irufano
+		</span>
 	</a>
-	<nav class="flex flex-1 flex-col gap-1 overflow-y-auto p-3 font-mono text-sm">
+	<div class="border-b border-border"></div>
+	<nav class="sidebar-scroll flex flex-1 flex-col gap-1 overflow-y-auto p-3 font-mono text-sm">
 		<a
 			href="/tools"
 			onclick={onnavigate}
+			onmouseenter={(e) => showTooltip(e, 'All Tools')}
+			onmouseleave={hideTooltip}
 			title="All Tools"
-			class="flex items-center gap-2 rounded-none px-3 py-2 font-semibold transition {isCollapsed
+			class="flex items-center rounded-none px-3 py-2 font-semibold transition {isCollapsed
 				? 'justify-center'
 				: ''} {page.url.pathname === '/tools'
 				? 'bg-accent/10 text-accent'
 				: 'text-fg-muted hover:bg-bg-alt hover:text-fg'}"
 		>
 			<Wrench class="h-4 w-4 shrink-0" />
-			{#if !isCollapsed}
+			<span
+				class="overflow-hidden whitespace-nowrap transition-all duration-200 {isCollapsed
+					? 'ml-0 max-w-0 opacity-0'
+					: 'ml-2 max-w-40 opacity-100'}"
+			>
 				All Tools
-			{/if}
+			</span>
 		</a>
 
 		{#each groupToolsByCategory(TOOLS) as group (group.category)}
-			{#if !isCollapsed}
-				<p class="px-2 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-fg-muted">
+			{@const CategoryIcon = CATEGORY_ICONS[group.category]}
+			<div
+				class="relative flex items-center px-3 pb-1 pt-6 {isCollapsed ? 'justify-center' : ''}"
+			>
+				<p
+					class="overflow-hidden whitespace-nowrap text-xs font-semibold uppercase tracking-wide text-fg transition-all duration-200 {isCollapsed
+						? 'max-w-0 opacity-0'
+						: 'max-w-40 opacity-100'}"
+				>
 					{group.category}
 				</p>
-			{/if}
+				<div
+					role="img"
+					aria-label={group.category}
+					title={group.category}
+					onmouseenter={(e) => showTooltip(e, group.category)}
+					onmouseleave={hideTooltip}
+					class="flex shrink-0 items-center justify-center overflow-hidden rounded-none text-accent/40 transition-all duration-200 {isCollapsed
+						? 'h-4 w-4 p-0 opacity-100'
+						: 'h-0 w-0 p-0 opacity-0'}"
+				>
+					<CategoryIcon class="h-3.5 w-3.5 shrink-0" />
+				</div>
+			</div>
 			{#each group.tools as tool (tool.slug)}
 				{@const href = `/tools/${tool.slug}`}
 				{@const Icon = tool.icon}
 				<a
 					{href}
 					onclick={onnavigate}
+					onmouseenter={(e) => showTooltip(e, tool.label)}
+					onmouseleave={hideTooltip}
 					title={tool.label}
-					class="flex items-center gap-2 rounded-none px-3 py-2 transition {isCollapsed
+					class="flex items-center rounded-none px-3 py-2 transition {isCollapsed
 						? 'justify-center'
 						: ''} {page.url.pathname === href
 						? 'bg-accent/10 text-accent'
 						: 'text-fg-muted hover:bg-bg-alt hover:text-fg'}"
 				>
 					<Icon class="h-4 w-4 shrink-0" />
-					{#if !isCollapsed}
+					<span
+						class="overflow-hidden whitespace-nowrap transition-all duration-200 {isCollapsed
+							? 'ml-0 max-w-0 opacity-0'
+							: 'ml-2 max-w-40 opacity-100'}"
+					>
 						{tool.label}
-					{/if}
+					</span>
 				</a>
 			{/each}
 		{/each}
@@ -87,7 +135,7 @@
 	<button
 		aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
 		onclick={oncollapse}
-		class="z-50 absolute -right-3 top-4 cursor-pointer hidden h-5 w-5 items-center justify-center rounded-none border border-border bg-bg text-fg-muted transition hover:border-accent hover:text-fg lg:flex"
+		class="z-50 absolute -right-2.5 top-4 cursor-pointer hidden h-5 w-5 items-center justify-center rounded-none border border-border bg-bg text-fg-muted transition hover:border-accent hover:text-fg lg:flex"
 	>
 		{#if collapsed}
 			<ChevronRight class="h-3.5 w-3.5" />
@@ -96,6 +144,15 @@
 		{/if}
 	</button>
 </aside>
+
+{#if tooltipText}
+	<div
+		class="pointer-events-none fixed z-60 -translate-y-1/2 whitespace-nowrap rounded-none border border-border bg-bg px-2 py-1 text-xs text-fg shadow-md"
+		style="top: {tooltipPos.top}px; left: {tooltipPos.left}px;"
+	>
+		{tooltipText}
+	</div>
+{/if}
 
 {#if open}
 	<div class="fixed inset-0 z-50 lg:hidden">
@@ -109,3 +166,26 @@
 		</aside>
 	</div>
 {/if}
+
+<style>
+	.sidebar-scroll {
+		scrollbar-color: transparent transparent;
+	}
+
+	.sidebar-scroll:hover,
+	.sidebar-scroll:focus-within {
+		scrollbar-color: var(--color-border) transparent;
+	}
+
+	.sidebar-scroll::-webkit-scrollbar-thumb {
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+	.sidebar-scroll:hover::-webkit-scrollbar-thumb,
+	.sidebar-scroll:focus-within::-webkit-scrollbar-thumb {
+		background-color: var(--color-border);
+		border-color: var(--color-bg);
+	}
+</style>
+
