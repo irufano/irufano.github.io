@@ -1,0 +1,273 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-sans:
+    "Google Sans Flex", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  /* default theme: terminal (dark) */
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #111111;
+  --color-fg: #d4d4d4;
+  --color-fg-muted: #8a8a8a;
+  --color-border: #262626;
+  --color-accent: #4ade80;
+  --color-accent-fg: #052e12;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* ---------- scrollbars ---------- */
+/* themed to the active palette; scrollbar-gutter reserves the track's space
+   up front so its appearance never shifts layout width. */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 999px;
+  border: 2px solid var(--color-bg);
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-fg-muted);
+}
+
+/* ---------- dark themes ---------- */
+
+:root[data-theme="catppuccin"] {
+  color-scheme: dark;
+  --color-bg: #1e1e2e;
+  --color-bg-alt: #181825;
+  --color-fg: #cdd6f4;
+  --color-fg-muted: #a6adc8;
+  --color-border: #313244;
+  --color-accent: #cba6f7;
+  --color-accent-fg: #1e1e2e;
+}
+
+:root[data-theme="terminal"] {
+  color-scheme: dark;
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #111111;
+  --color-fg: #d4d4d4;
+  --color-fg-muted: #8a8a8a;
+  --color-border: #262626;
+  --color-accent: #4ade80;
+  --color-accent-fg: #052e12;
+}
+
+:root[data-theme="tokyo-night"] {
+  color-scheme: dark;
+  --color-bg: #1a1b26;
+  --color-bg-alt: #16161e;
+  --color-fg: #c0caf5;
+  --color-fg-muted: #565f89;
+  --color-border: #292e42;
+  --color-accent: #7aa2f7;
+  --color-accent-fg: #16161e;
+}
+
+:root[data-theme="dracula"] {
+  color-scheme: dark;
+  --color-bg: #282a36;
+  --color-bg-alt: #21222c;
+  --color-fg: #f8f8f2;
+  --color-fg-muted: #6272a4;
+  --color-border: #44475a;
+  --color-accent: #bd93f9;
+  --color-accent-fg: #1e1f29;
+}
+
+:root[data-theme="nord"] {
+  color-scheme: dark;
+  --color-bg: #2e3440;
+  --color-bg-alt: #272c36;
+  --color-fg: #e5e9f0;
+  --color-fg-muted: #9aa5ba;
+  --color-border: #3b4252;
+  --color-accent: #88c0d0;
+  --color-accent-fg: #1b1f27;
+}
+
+:root[data-theme="gruvbox"] {
+  color-scheme: dark;
+  --color-bg: #282828;
+  --color-bg-alt: #1d2021;
+  --color-fg: #ebdbb2;
+  --color-fg-muted: #a89984;
+  --color-border: #3c3836;
+  --color-accent: #fe8019;
+  --color-accent-fg: #1d2021;
+}
+
+:root[data-theme="one-dark"] {
+  color-scheme: dark;
+  --color-bg: #282c34;
+  --color-bg-alt: #21252b;
+  --color-fg: #abb2bf;
+  --color-fg-muted: #5c6370;
+  --color-border: #3a3f4b;
+  --color-accent: #61afef;
+  --color-accent-fg: #1b1d23;
+}
+
+:root[data-theme="solarized"] {
+  color-scheme: dark;
+  --color-bg: #002b36;
+  --color-bg-alt: #073642;
+  --color-fg: #839496;
+  --color-fg-muted: #586e75;
+  --color-border: #0a3b47;
+  --color-accent: #268bd2;
+  --color-accent-fg: #002b36;
+}
+
+:root[data-theme="kanagawa"] {
+  color-scheme: dark;
+  --color-bg: #1f1f28;
+  --color-bg-alt: #16161d;
+  --color-fg: #dcd7ba;
+  --color-fg-muted: #727169;
+  --color-border: #2a2a37;
+  --color-accent: #7e9cd8;
+  --color-accent-fg: #1f1f28;
+}
+
+:root[data-theme="rose-pine"] {
+  color-scheme: dark;
+  --color-bg: #191724;
+  --color-bg-alt: #1f1d2e;
+  --color-fg: #e0def4;
+  --color-fg-muted: #6e6a86;
+  --color-border: #26233a;
+  --color-accent: #c4a7e7;
+  --color-accent-fg: #191724;
+}
+
+:root[data-theme="vesper"] {
+  color-scheme: dark;
+  --color-bg: #101010;
+  --color-bg-alt: #171717;
+  --color-fg: #ffffff;
+  --color-fg-muted: #8a8a8a;
+  --color-border: #262626;
+  --color-accent: #ffc799;
+  --color-accent-fg: #101010;
+}
+
+/* ---------- light themes ---------- */
+
+:root[data-theme="catppuccin-latte"] {
+  color-scheme: light;
+  --color-bg: #eff1f5;
+  --color-bg-alt: #e6e9ef;
+  --color-fg: #4c4f69;
+  --color-fg-muted: #6c6f85;
+  --color-border: #ccd0da;
+  --color-accent: #8839ef;
+  --color-accent-fg: #eff1f5;
+}
+
+:root[data-theme="terminal-light"] {
+  color-scheme: light;
+  --color-bg: #fafafa;
+  --color-bg-alt: #f0f0f0;
+  --color-fg: #171717;
+  --color-fg-muted: #737373;
+  --color-border: #e5e5e5;
+  --color-accent: #16a34a;
+  --color-accent-fg: #fafafa;
+}
+
+:root[data-theme="tokyo-day"] {
+  color-scheme: light;
+  --color-bg: #e1e2e7;
+  --color-bg-alt: #d5d6db;
+  --color-fg: #343b58;
+  --color-fg-muted: #6172b0;
+  --color-border: #c4c8da;
+  --color-accent: #34548a;
+  --color-accent-fg: #e1e2e7;
+}
+
+:root[data-theme="gruvbox-light"] {
+  color-scheme: light;
+  --color-bg: #fbf1c7;
+  --color-bg-alt: #f2e5bc;
+  --color-fg: #3c3836;
+  --color-fg-muted: #7c6f64;
+  --color-border: #ebdbb2;
+  --color-accent: #af3a03;
+  --color-accent-fg: #fbf1c7;
+}
+
+:root[data-theme="one-light"] {
+  color-scheme: light;
+  --color-bg: #fafafa;
+  --color-bg-alt: #f0f0f0;
+  --color-fg: #383a42;
+  --color-fg-muted: #a0a1a7;
+  --color-border: #e5e5e6;
+  --color-accent: #4078f2;
+  --color-accent-fg: #fafafa;
+}
+
+:root[data-theme="solarized-light"] {
+  color-scheme: light;
+  --color-bg: #fdf6e3;
+  --color-bg-alt: #eee8d5;
+  --color-fg: #657b83;
+  --color-fg-muted: #93a1a1;
+  --color-border: #e4ddc8;
+  --color-accent: #268bd2;
+  --color-accent-fg: #fdf6e3;
+}
+
+:root[data-theme="kanagawa-lotus"] {
+  color-scheme: light;
+  --color-bg: #f4ecd8;
+  --color-bg-alt: #eaddb7;
+  --color-fg: #43436c;
+  --color-fg-muted: #8a8980;
+  --color-border: #ddd0aa;
+  --color-accent: #4d699b;
+  --color-accent-fg: #f4ecd8;
+}
+
+:root[data-theme="rose-pine-dawn"] {
+  color-scheme: light;
+  --color-bg: #faf4ed;
+  --color-bg-alt: #fffaf3;
+  --color-fg: #575279;
+  --color-fg-muted: #797593;
+  --color-border: #f2e9e1;
+  --color-accent: #907aa9;
+  --color-accent-fg: #575279;
+}

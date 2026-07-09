@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://irufano.github.io
-
-# Sitemaps
-Sitemap: https://irufano.github.io/sitemap.xml

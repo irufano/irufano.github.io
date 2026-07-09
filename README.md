@@ -1,175 +1,190 @@
-![Deploy to GitHub Pages](https://github.com/irufano/irufano.github.io/actions/workflows/deploy.yml/badge.svg)
+# irufano
 
-# irufano.github.io
+**The developer's knowledge hub** — a personal site combining a technical blog with a set of small, client-side developer tools. Built with Svelte 5, SvelteKit, Tailwind CSS 4, and Bun, and fully prerendered for static hosting on GitHub Pages.
 
-Personal portfolio and blog site built with Next.js, statically exported and deployed to GitHub Pages.
+## What's here
 
-## Tech Stack
+- **Posts** (`/posts`) — developer notes and docs written as Markdown files under `posts/<Category>/<slug>/`, organized automatically into categories and tags. The rendering pipeline (`src/lib/server/markdown/`) supports GitHub-flavored Markdown, syntax-highlighted code blocks (Shiki), math via KaTeX, Mermaid diagrams, callouts, and a generated table of contents.
+- **Tools** (`/tools`) — a collection of self-contained, client-side utilities (JSON formatter, Base64/AES/hash/JWT tools, regex tester, color converter, Markdown table/tree generators, and more), grouped into categories and listed in `src/lib/tools.ts`.
+- **Theme picker** — a dark/light theme switcher with a dozen-plus palettes (Catppuccin, Dracula, Nord, Tokyo Night, Gruvbox, One Dark/Light, Solarized, Kanagawa, Rosé Pine, Vesper, Terminal), kept in sync with the Shiki code-highlighting theme (`src/lib/theme.svelte.ts`).
 
-| Technology | Version | Purpose |
-|---|---|---|
-| Next.js | 16.1.x | React framework (App Router, static export) |
-| React | 19.1.x | UI library |
-| TypeScript | 5.x | Type safety |
-| Tailwind CSS | 3.x | Utility-first CSS |
-| Remark | 15.x | Markdown processing |
-| highlight.js | 11.x | Code syntax highlighting |
-| next-themes | 0.4.x | Dark/light mode |
-| anime.js | 3.x | Animations |
+See [CLAUDE.md](./CLAUDE.md) for a deeper architectural walkthrough.
 
-## Security
+## Creating a project
 
-This project runs on Next.js 16.1.x with patched React 19.1.x, which addresses the critical unauthenticated Remote Code Execution (RCE) vulnerabilities:
+This project was originally scaffolded with [`sv`](https://github.com/sveltejs/cli):
 
-- **CVE-2025-55182** — RCE via React Server Components
-- **CVE-2025-66478** — Related RCE vector
-
-While static exports are not directly affected, the patched versions ensure security if the deployment model changes in the future.
-
-## Project Structure
-
-```
-├── posts/                          # Blog post content (Markdown)
-│   └── <slug>/
-│       └── <post>.md               # Post with frontmatter
-├── public/                         # Static assets
-│   ├── images/                     # Post and site images
-│   └── icons/                      # Favicon and app icons
-├── src/
-│   ├── app/                        # App Router pages
-│   │   ├── layout.tsx              # Root layout (fonts, theme, analytics)
-│   │   ├── page.tsx                # Home page
-│   │   └── insight/
-│   │       ├── page.tsx            # Blog listing (page 1)
-│   │       ├── [page]/page.tsx     # Paginated blog listing
-│   │       ├── post/[slug]/        # Individual post pages
-│   │       │   ├── page.tsx        # Server component (data fetching, SEO)
-│   │       │   └── PostContent.tsx # Client component (scroll spy, copy code)
-│   │       ├── tags/
-│   │       │   ├── page.tsx        # All tags listing
-│   │       │   └── [tag]/          # Posts filtered by tag
-│   │       └── search/
-│   │           ├── page.tsx        # Search page (server wrapper)
-│   │           └── SearchContent.tsx # Client search component
-│   ├── components/
-│   │   ├── Core/                   # Layout, Navbar, Footer
-│   │   ├── Button/                 # ThemeToggle, SearchButton, ExpansionTile
-│   │   ├── Animation/              # DiagonalAnimation, LogoAnimation
-│   │   ├── Home/                   # Greeting, HomeInsightCard, ToolCard
-│   │   ├── Posts/                  # Comment
-│   │   └── Logo/                   # SVG logo components
-│   ├── utils/
-│   │   ├── posts.ts                # Markdown parsing, post retrieval, pagination
-│   │   ├── font.ts                 # Ubuntu font configuration
-│   │   └── highlight.ts            # highlight.js initialization
-│   └── styles/
-│       └── globals.css             # Global styles + Tailwind imports
-├── next.config.ts                  # Next.js config (static export)
-├── tailwind.config.ts              # Tailwind theme customization
-├── tsconfig.json                   # TypeScript configuration
-└── .github/workflows/deploy.yml    # GitHub Actions deployment
+```sh
+bun x sv@0.16.2 create --template minimal --types ts --install bun .
 ```
 
-## Getting Started
+## Developing
 
-### Prerequisites
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-- Node.js >= 20.9.0 (22.x LTS recommended)
-- npm
+```sh
+bun run dev
 
-### Install
-
-```bash
-npm install --legacy-peer-deps
+# or start the server and open the app in a new browser tab
+bun run dev -- --open
 ```
 
-> `--legacy-peer-deps` is required because `feather-icons-react` has not yet updated its peer dependency to support React 19.
+## Building
 
-### Development
+To create a production version of your app:
 
-```bash
-npm run dev
+```sh
+bun run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+You can preview the production build with `npm run preview`.
 
-### Build
+## Adding a new post
 
-```bash
-npm run build
+Posts are plain Markdown files at the repo root under `posts/`, one directory per post:
+
+```
+posts/<Category>/<post-slug>/<anything>.md
 ```
 
-This generates a static export in the `out/` directory.
+- `<Category>` becomes the post's category, exactly as written (e.g. `Git`, `Machine Learning`). It's slugified automatically for URLs — no separate category config to update.
+- `<post-slug>` (the directory name, not the filename) becomes the post's URL slug. The `.md` filename itself doesn't matter, but stick to one Markdown file per directory.
 
-### Lint
+### 1. Create the file
 
-```bash
-npm run lint
+```sh
+mkdir -p "posts/Git/my-new-post"
 ```
 
-## Deployment
+```md
+---
+title: "My New Post"
+date: "2026-07-09"
+description: "One or two sentences describing the post."
+author: "irufano"
+tags:
+  - Git
+image: "https://example.com/cover.png"
+---
 
-The site is automatically deployed to GitHub Pages via GitHub Actions on every push to the `dev` branch.
-
-**Workflow:** `.github/workflows/deploy.yml`
-
-1. Checks out the repository
-2. Sets up Node.js 22
-3. Installs dependencies with `--legacy-peer-deps`
-4. Runs `npm run build` (generates `out/` directory)
-5. Creates `.nojekyll` file to prevent Jekyll processing
-6. Deploys `out/` to GitHub Pages using `JamesIves/github-pages-deploy-action@v4`
-
-## Blog Posts
-
-### Adding a New Post
-
-1. Create a directory under `posts/` with your desired slug:
-   ```
-   posts/my-new-post/
-   ```
-
-2. Add a Markdown file inside with frontmatter:
-   ```markdown
-   ---
-   title: "My New Post"
-   description: "A brief description"
-   date: "2026-03-14"
-   tags: ["javascript", "tutorial"]
-   image: "/images/posts/my-new-post/cover.jpg"
-   author: "irufano"
-   ---
-
-   Your content here...
-   ```
-
-### Markdown Features
-
-- **Code blocks** with syntax highlighting and copy button
-- **Inline code** with auto-highlighting
-- **Custom blockquotes**: `[info]:`, `[warning]:`, `[caution]:`, `[tip]:`, `[important]:`, `[note]:`
-- **GFM tables** with styled headers and alternating rows
-- **Bold** and *italic* with custom styling
-
-### Blockquote Example
-
-```markdown
-> [tip]: This is a helpful tip that will render with a styled container and icon.
+Post content starts here.
 ```
 
-## Configuration
+Frontmatter fields (see `src/lib/server/posts.ts`):
 
-| File | Purpose |
-|---|---|
-| `next.config.ts` | Static export, asset prefix, image optimization |
-| `tailwind.config.ts` | Theme colors, fonts, typography plugin |
-| `tsconfig.json` | TypeScript strict mode, path aliases |
-| `next-sitemap.config.js` | Sitemap generation |
+| Field         | Required | Notes                                      |
+| ------------- | -------- | ------------------------------------------- |
+| `title`       | yes      | Falls back to the directory name if omitted |
+| `date`        | yes      | Used for sort order on the posts list       |
+| `description` | yes      | Shown on post cards and in `<meta>` tags    |
+| `author`      | yes      |                                              |
+| `tags`        | yes      | Array; each tag becomes a `/posts/tag/...` page |
+| `image`       | no       | Cover image URL                             |
 
-### Environment
+### 2. Use the supported Markdown features
 
-Google Analytics is configured via the `GA_TRACKING_ID` constant in `src/app/layout.tsx`. Analytics scripts only load in production.
+The rendering pipeline (`src/lib/server/markdown/`) supports:
 
-## License
+- GitHub-flavored Markdown (tables, task lists, strikethrough, etc.)
+- Syntax-highlighted code blocks via Shiki — ` ```ts `, ` ```bash `, etc.
+- Math via KaTeX — inline `$E = mc^2$` and block `$$ ... $$`
+- Mermaid diagrams — ` ```mermaid ` fenced blocks
+- Callouts — GitHub-style `> [!NOTE]` / `> [!TIP]` / `> [!WARNING]` / `> [!CAUTION]` / `> [!IMPORTANT]`, or this project's own `[info]: ...` marker
 
-MIT
+### 3. Preview and verify
+
+```sh
+bun run dev
+```
+
+Visit `http://localhost:5173/posts/<category-slug>/<post-slug>` to check rendering.
+
+Before pushing, run `bun run build` at least once — the whole site prerenders, so any relative link in your post content that points to a file that doesn't exist (e.g. `[link](./missing.md)`) will crash the build rather than just 404 at runtime. Use absolute URLs for anything outside the post itself.
+
+## Configuring SEO
+
+SEO for the whole site is centered on one file: `src/lib/seo.ts`.
+
+```ts
+export const SITE_URL = 'https://irufano.github.io';
+export const SITE_NAME = 'irufano';
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+```
+
+- **`SITE_URL`** — used to build every canonical link and `og:url`/Open Graph value, and to generate `sitemap.xml`. This is the one thing you must update if you ever deploy under a different domain or as a project page (see [Deploying as a project page instead](#deploying-as-a-project-page-instead)).
+- **`DEFAULT_OG_IMAGE`** — the fallback social-share image (`static/og-image.png`, 1200×630) used on any page that doesn't have its own image (posts can override it via the `image` frontmatter field).
+
+### Per-page tags
+
+Every route sets its own tags in a `<svelte:head>` block: `<title>`, `<meta name="description">`, `<link rel="canonical">`, Open Graph (`og:*`), and Twitter Card (`twitter:*`) tags. When adding a new route, copy the pattern from an existing one (e.g. `src/routes/tools/json-formatter/+page.svelte`) rather than inventing a new shape.
+
+The post detail page (`src/routes/(site)/posts/[category]/[slug]/+page.svelte`) goes further: it sets `og:type="article"`, `article:published_time`, `article:author`, `article:tag`, and emits `BlogPosting` JSON-LD structured data built from the post's frontmatter. Because SvelteKit reuses that page component when navigating between posts, all of this is computed with `$derived`/`$derived.by`, not plain `const` — otherwise the tags would go stale after a client-side navigation to a different post.
+
+### Sitemap and robots.txt
+
+`sitemap.xml` isn't a static file — it's generated at build time by `src/routes/sitemap.xml/+server.ts`, which reads `getAllPosts()`, `getAllTags()`, and `TOOLS` and prerenders one `<url>` entry per post, tag, and tool, plus the static routes (`/`, `/posts`, `/tools`). New posts and tools are picked up automatically; don't add a `static/sitemap.xml` file, it would conflict with this route.
+
+`static/robots.txt` allows all crawling and points to `${SITE_URL}/sitemap.xml`. If you change `SITE_URL`, update the `Sitemap:` line here too — it's the one place the URL isn't read from `src/lib/seo.ts`.
+
+### Verifying
+
+```sh
+bun run build
+```
+
+Then check `build/sitemap.xml` for the expected URLs, and view-source (or `grep`) a page under `build/` for `<link rel="canonical">`, `og:*`, and `application/ld+json` to confirm the tags rendered as expected.
+
+## Deploying to GitHub Pages
+
+This project is pre-configured with `@sveltejs/adapter-static` and prerenders the whole site, so it can be hosted directly on GitHub Pages — no extra build tooling required.
+
+### 1. Push the repo to GitHub
+
+If this folder isn't a git repo yet:
+
+```sh
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+Create an empty repository on GitHub named **`irufano.github.io`** (this is a user-page repo, served from the domain root — no base path needed), then add it as the remote and push your work branch:
+
+```sh
+git remote add origin https://github.com/irufano/irufano.github.io.git
+git branch -M dev
+git push -u origin dev
+```
+
+### 2. Enable GitHub Pages
+
+In the repo on GitHub, go to **Settings → Pages** and set **Source** to **Deploy from a branch**, then pick the **`public`** branch (created automatically by the workflow the first time it runs — see below).
+
+### 3. Let the workflow deploy it
+
+The workflow in `.github/workflows/deploy.yml` triggers automatically on every push to `dev`. It:
+
+1. Installs dependencies with Bun.
+2. Runs `bun run build`, which prerenders the whole site into `build/`.
+3. Pushes the contents of `build/` to the **`public`** branch (via `peaceiris/actions-gh-pages`), overwriting its history each time.
+
+You can watch progress under the repo's **Actions** tab. Once the workflow finishes, the site is live at `https://irufano.github.io/`.
+
+To trigger a deploy without pushing new commits, use the **Run workflow** button on the `Deploy to GitHub Pages` workflow (it's also wired to `workflow_dispatch`).
+
+Day-to-day development happens on `dev`; `public` is a generated, build-only branch — never commit to it directly, since the next deploy force-pushes over it.
+
+### Deploying as a project page instead
+
+If you deploy under a different username/repo (a project page, e.g. `github.com/<user>/<repo>` served at `https://<user>.github.io/<repo>/` instead of the domain root), update:
+
+- `paths.base` in `vite.config.ts` — set it to `/<repo-name>`, matching your repo.
+- `SITE_URL` in `src/lib/seo.ts` — the single source of truth for canonical URLs, Open Graph/Twitter tags, and the sitemap (`src/routes/sitemap.xml/+server.ts`).
+- The hardcoded `https://irufano.github.io/sitemap.xml` URL in `static/robots.txt`.
+
+### Troubleshooting
+
+- **Build fails with a 404 during prerendering** (e.g. `Error: 404 /some/path (linked from ...)`) — since the whole site prerenders, SvelteKit's crawler follows every internal link reachable from a route, including links inside Markdown post content under `posts/`. Fix or remove the broken link; don't suppress it unless you're sure the target is intentionally missing.
+- **Site deploys but assets 404 / page looks unstyled** — make sure `static/.nojekyll` exists and ends up in `build/`. GitHub Pages runs Jekyll by default, which ignores `_app/`-style underscore-prefixed folders that SvelteKit's client assets live in.
+- **Workflow doesn't run** — confirm you pushed to `dev` (the trigger branch); pushes to other branches won't fire it.
+- **Pages shows a 404 / isn't picking up new deploys** — confirm **Settings → Pages → Source** is **Deploy from a branch → `public`**, not **GitHub Actions**.
