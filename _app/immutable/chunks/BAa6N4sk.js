@@ -1,0 +1,1 @@
+var e=`https://irufano.github.io`,t=`${e}/og-image.png`;export{e as n,t};

@@ -1,0 +1,17 @@
+{
+	"name": "irufano",
+	"short_name": "irufano",
+	"description": "Developer notes, tutorials, and docs, plus a growing collection of client-side dev tools.",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#0a0a0a",
+	"theme_color": "#4ade80",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}

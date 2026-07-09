@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Finsight\u002F[page]","\u002Finsight\u002Fcategories\u002F[category]","\u002Finsight\u002Fpost\u002F[slug]","\u002Finsight\u002Ftags\u002F[tag]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

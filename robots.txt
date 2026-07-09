@@ -1,9 +1,5 @@
-# *
+# allow crawling everything by default
 User-agent: *
-Allow: /
+Disallow:
 
-# Host
-Host: https://irufano.github.io
-
-# Sitemaps
 Sitemap: https://irufano.github.io/sitemap.xml
