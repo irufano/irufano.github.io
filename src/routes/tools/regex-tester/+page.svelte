@@ -233,9 +233,9 @@
         id="regex-test-string"
         bind:value={testString}
         placeholder="Paste text to test against your pattern..."
-        rows="10"
+        rows="12"
         spellcheck="false"
-        class="mt-2 w-full resize-y rounded-none border border-border bg-bg-alt p-4 font-mono text-sm text-fg placeholder:text-fg-muted focus:border-accent focus:outline-none"
+        class="mt-0 w-full resize-y rounded-none border border-border bg-bg-alt p-4 font-mono text-sm text-fg placeholder:text-fg-muted focus:border-accent focus:outline-none"
       ></textarea>
     </div>
 

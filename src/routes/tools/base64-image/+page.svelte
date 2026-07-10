@@ -13,6 +13,11 @@
 	import Upload from 'lucide-svelte/icons/upload';
 	import Download from 'lucide-svelte/icons/download';
 	import ImageOff from 'lucide-svelte/icons/image-off';
+	import Maximize2 from 'lucide-svelte/icons/maximize-2';
+	import X from 'lucide-svelte/icons/x';
+	import ZoomIn from 'lucide-svelte/icons/zoom-in';
+	import ZoomOut from 'lucide-svelte/icons/zoom-out';
+	import RotateCcw from 'lucide-svelte/icons/rotate-ccw';
 	import {
 		base64ImageState,
 		IMAGE_MIME_OPTIONS,
@@ -191,6 +196,103 @@
 		a.download = `image.${downloadExt}`;
 		a.click();
 	}
+
+	// --- Fullscreen preview ---
+	const MIN_ZOOM = 0.5;
+	const MAX_ZOOM = 5;
+
+	let showPreviewModal = $state(false);
+	let zoom = $state(1);
+	let panX = $state(0);
+	let panY = $state(0);
+	let isDragging = $state(false);
+	let dragStartX = 0;
+	let dragStartY = 0;
+	let panStartX = 0;
+	let panStartY = 0;
+
+	function openPreviewModal() {
+		if (decodeStatus !== 'valid') return;
+		zoom = 1;
+		panX = 0;
+		panY = 0;
+		showPreviewModal = true;
+	}
+
+	function closePreviewModal() {
+		showPreviewModal = false;
+	}
+
+	function setZoom(next: number) {
+		zoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, next));
+		if (zoom <= 1) {
+			panX = 0;
+			panY = 0;
+		}
+	}
+
+	function zoomIn() {
+		setZoom(zoom + 0.25);
+	}
+
+	function zoomOut() {
+		setZoom(zoom - 0.25);
+	}
+
+	function resetZoom() {
+		zoom = 1;
+		panX = 0;
+		panY = 0;
+	}
+
+	function handlePreviewWheel(e: WheelEvent) {
+		e.preventDefault();
+		setZoom(zoom + (e.deltaY > 0 ? -0.1 : 0.1));
+	}
+
+	function onPreviewPointerDown(e: PointerEvent) {
+		if (zoom <= 1) return;
+		isDragging = true;
+		dragStartX = e.clientX;
+		dragStartY = e.clientY;
+		panStartX = panX;
+		panStartY = panY;
+		(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+	}
+
+	function onPreviewPointerMove(e: PointerEvent) {
+		if (!isDragging) return;
+		panX = panStartX + (e.clientX - dragStartX);
+		panY = panStartY + (e.clientY - dragStartY);
+	}
+
+	function onPreviewPointerUp() {
+		isDragging = false;
+	}
+
+	function onWindowKeydown(e: KeyboardEvent) {
+		if (showPreviewModal && e.key === 'Escape') closePreviewModal();
+	}
+
+	$effect(() => {
+		if (!showPreviewModal) return;
+		const previousOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = previousOverflow;
+		};
+	});
+
+	// the modal needs to escape the section's normal document flow so it
+	// can cover the full viewport regardless of where it's mounted
+	function portal(node: HTMLElement) {
+		document.body.appendChild(node);
+		return {
+			destroy() {
+				node.remove();
+			}
+		};
+	}
 </script>
 
 <svelte:head>
@@ -209,6 +311,8 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
 </svelte:head>
+
+<svelte:window onkeydown={onWindowKeydown} />
 
 <section class="w-full px-4 py-10 sm:px-6">
 	<h1 class="font-mono text-2xl font-extrabold text-fg sm:text-3xl">Base64 Image Converter</h1>
@@ -430,14 +534,24 @@
 			<div>
 				<div class="flex items-center justify-between gap-2">
 					<p class="font-mono text-xs uppercase tracking-wide text-fg-muted">Preview</p>
-					<button
-						onclick={downloadDecoded}
-						disabled={decodeStatus !== 'valid'}
-						class="flex cursor-pointer items-center gap-1.5 rounded-none border border-border px-2.5 py-1.5 text-xs text-fg-muted transition hover:border-accent/50 hover:text-fg disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:text-fg-muted"
-					>
-						<Download class="h-3.5 w-3.5" />
-						Download
-					</button>
+					<div class="flex items-center gap-1">
+						<button
+							onclick={openPreviewModal}
+							disabled={decodeStatus !== 'valid'}
+							class="flex cursor-pointer items-center gap-1.5 rounded-none border border-border px-2.5 py-1.5 text-xs text-fg-muted transition hover:border-accent/50 hover:text-fg disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:text-fg-muted"
+						>
+							<Maximize2 class="h-3.5 w-3.5" />
+							Fullscreen
+						</button>
+						<button
+							onclick={downloadDecoded}
+							disabled={decodeStatus !== 'valid'}
+							class="flex cursor-pointer items-center gap-1.5 rounded-none border border-border px-2.5 py-1.5 text-xs text-fg-muted transition hover:border-accent/50 hover:text-fg disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:text-fg-muted"
+						>
+							<Download class="h-3.5 w-3.5" />
+							Download
+						</button>
+					</div>
 				</div>
 
 				<div class="mt-2 flex h-64 w-full items-center justify-center border border-border bg-bg-alt p-4">
@@ -457,3 +571,74 @@
 		</div>
 	{/if}
 </section>
+
+{#if showPreviewModal}
+	<div
+		use:portal
+		class="fixed inset-0 z-100 flex flex-col bg-black/70 backdrop-blur-[2px]"
+		role="dialog"
+		aria-modal="true"
+		aria-label="Fullscreen image preview"
+		tabindex="-1"
+	>
+		<div class="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-bg px-4 py-3 sm:px-6">
+			<p class="font-mono text-xs uppercase tracking-wide text-fg-muted">Preview</p>
+			<div class="flex items-center gap-2">
+				<button
+					onclick={zoomOut}
+					disabled={zoom <= MIN_ZOOM}
+					title="Zoom out"
+					class="cursor-pointer border border-border p-1.5 text-fg-muted transition hover:border-accent/50 hover:text-fg disabled:cursor-not-allowed disabled:opacity-40"
+				>
+					<ZoomOut class="h-4 w-4" />
+				</button>
+				<p class="w-12 text-center font-mono text-xs text-fg-muted">{Math.round(zoom * 100)}%</p>
+				<button
+					onclick={zoomIn}
+					disabled={zoom >= MAX_ZOOM}
+					title="Zoom in"
+					class="cursor-pointer border border-border p-1.5 text-fg-muted transition hover:border-accent/50 hover:text-fg disabled:cursor-not-allowed disabled:opacity-40"
+				>
+					<ZoomIn class="h-4 w-4" />
+				</button>
+				<button
+					onclick={resetZoom}
+					disabled={zoom === 1 && panX === 0 && panY === 0}
+					title="Reset zoom"
+					class="cursor-pointer border border-border p-1.5 text-fg-muted transition hover:border-accent/50 hover:text-fg disabled:cursor-not-allowed disabled:opacity-40"
+				>
+					<RotateCcw class="h-4 w-4" />
+				</button>
+				<button
+					onclick={closePreviewModal}
+					title="Close"
+					class="cursor-pointer border border-border p-1.5 text-fg-muted transition hover:border-accent/50 hover:text-fg"
+				>
+					<X class="h-4 w-4" />
+				</button>
+			</div>
+		</div>
+
+		<div
+			role="presentation"
+			class={`flex flex-1 items-center justify-center overflow-hidden p-4 sm:p-6 ${
+				zoom > 1 ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : ''
+			}`}
+			onwheel={handlePreviewWheel}
+			onpointerdown={onPreviewPointerDown}
+			onpointermove={onPreviewPointerMove}
+			onpointerup={onPreviewPointerUp}
+			onpointerleave={onPreviewPointerUp}
+		>
+			<img
+				src={decodedDataUrl}
+				alt="Decoded fullscreen preview"
+				draggable="false"
+				style={`transform: translate(${panX}px, ${panY}px) scale(${zoom}); transition: ${
+					isDragging ? 'none' : 'transform 0.1s ease-out'
+				};`}
+				class="max-h-full max-w-full object-contain select-none"
+			/>
+		</div>
+	</div>
+{/if}

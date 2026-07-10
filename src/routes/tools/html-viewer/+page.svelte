@@ -272,7 +272,7 @@
 			{@render deviceToggle()}
 		{/if}
 
-		<div class="ml-auto flex items-center gap-1">
+		<div class="ml-auto flex flex-wrap items-center gap-1">
 			{#if viewMode !== 'code'}
 				<button
 					onclick={openModal}
@@ -350,7 +350,7 @@
 					placeholder="Type or paste your HTML here..."
 					rows="20"
 					spellcheck="false"
-					class="mt-2 w-full resize-y rounded-none border border-border bg-bg-alt p-4 font-mono text-sm text-fg placeholder:text-fg-muted focus:border-accent focus:outline-none"
+					class="mt-0	 w-full resize-y rounded-none border border-border bg-bg-alt p-4 font-mono text-sm text-fg placeholder:text-fg-muted focus:border-accent focus:outline-none"
 				></textarea>
 			</div>
 		{/if}
