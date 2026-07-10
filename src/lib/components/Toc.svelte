@@ -27,29 +27,66 @@
 	$effect(() => {
 		if (!items.length) return;
 		const headingEls = items
-			.map((item) => document.getElementById(item.id))
-			.filter((el): el is HTMLElement => !!el);
+			.map((item) => ({ id: item.id, el: document.getElementById(item.id) }))
+			.filter((h): h is { id: string; el: HTMLElement } => !!h.el);
 		if (!headingEls.length) return;
 
-		const intersecting = new Set<string>();
-		const observer = new IntersectionObserver(
-			(observed) => {
-				for (const entry of observed) {
-					if (entry.isIntersecting) {
-						intersecting.add(entry.target.id);
-					} else {
-						intersecting.delete(entry.target.id);
-					}
+		// An IntersectionObserver only fires when isIntersecting *changes*, so a
+		// heading whose enter and exit both happen between two observer ticks
+		// (e.g. adjacent headings scrolled past quickly) never reports at all and
+		// gets skipped. Instead, recompute directly from live positions: the
+		// active item is the last heading (in document order) that has already
+		// scrolled up to/past the offset line.
+		const updateActive = () => {
+			let current = headingEls[0].id;
+			for (const { id, el } of headingEls) {
+				if (el.getBoundingClientRect().top <= TOC_ACTIVE_OFFSET + 1) {
+					current = id;
+				} else {
+					break;
 				}
-				// entries arrive in whichever order the browser detected the change, not
-				// document order, so pick the topmost intersecting heading ourselves
-				const active = items.find((item) => intersecting.has(item.id));
-				if (active) activeId = active.id;
-			},
-			{ rootMargin: `-${TOC_ACTIVE_OFFSET}px 0px -70% 0px`, threshold: 0 }
-		);
-		headingEls.forEach((el) => observer.observe(el));
-		return () => observer.disconnect();
+			}
+			activeId = current;
+		};
+
+		let ticking = false;
+		const onScroll = () => {
+			if (ticking) return;
+			ticking = true;
+			requestAnimationFrame(() => {
+				updateActive();
+				ticking = false;
+			});
+		};
+
+		const container = headingEls[0].el.closest<HTMLElement>('.overflow-y-auto');
+		const scrollTarget: HTMLElement | Window = container ?? window;
+
+		updateActive();
+		scrollTarget.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', onScroll);
+		return () => {
+			scrollTarget.removeEventListener('scroll', onScroll);
+			window.removeEventListener('resize', onScroll);
+		};
+	});
+
+	$effect(() => {
+		if (!listEl || !activeId) return;
+		const activeEl = listEl.querySelector<HTMLElement>(`a[href="#${CSS.escape(activeId)}"]`);
+		if (!activeEl) return;
+
+		// Scroll listEl's own scrollTop directly rather than scrollIntoView:
+		// listEl sits inside the same outer .overflow-y-auto section the article
+		// scrolls within, so scrollIntoView's ancestor-walking would also nudge
+		// that shared container and fight with scrollToHeading's animation there.
+		const listRect = listEl.getBoundingClientRect();
+		const elRect = activeEl.getBoundingClientRect();
+		if (elRect.top < listRect.top) {
+			listEl.scrollTop -= listRect.top - elRect.top;
+		} else if (elRect.bottom > listRect.bottom) {
+			listEl.scrollTop += elRect.bottom - listRect.bottom;
+		}
 	});
 
 	function handleClick(event: MouseEvent, id: string) {
