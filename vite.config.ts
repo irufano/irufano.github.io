@@ -14,7 +14,12 @@ export default defineConfig({
 
 			// Static adapter: this repo is irufano/irufano.github.io, a user-page repo that
 			// GitHub Pages serves from the domain root, so no base path is needed.
-			adapter: adapter()
+			// `fallback: '404.html'` emits a build/404.html containing the app shell, which
+			// GitHub Pages serves (as a real 404) for any unmatched path — letting the
+			// hydrated app render +error.svelte instead of GitHub's generic 404 page.
+			adapter: adapter({
+				fallback: '404.html'
+			})
 		})
 	]
 });
