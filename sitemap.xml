@@ -16,6 +16,18 @@
 		<priority>0.8</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/posts/cat/ability-estimation-mcat</loc>
+		<lastmod>2026-07-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://irufano.github.io/posts/cat/item-selection-criteria-mcat</loc>
+		<lastmod>2026-07-13</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/posts/cat/multidimension-cat-procedure</loc>
 		<lastmod>2026-05-20</lastmod>
 		<changefreq>monthly</changefreq>
