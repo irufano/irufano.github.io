@@ -3,7 +3,9 @@ import { toString } from 'mdast-util-to-string';
 import type { Plugin } from 'unified';
 import type { Root, Paragraph, Text, PhrasingContent, Heading } from 'mdast';
 
-const CITATION_RE = /\[(\d+(?:\s*,\s*\d+)*)\]/g;
+const BRACKET_RE = /\[([^[\]]+)\]/g;
+const PURE_NUMBER_LIST_RE = /^\d+(?:\s*,\s*\d+)*$/;
+const ANNOTATED_RE = /^(\d+)\s*,/;
 
 /** Reads a leading "[N]" off a paragraph's first child, unwrapping `**[N]**`/`*[N]*` too. */
 function leadingRefNumber(node: PhrasingContent | undefined): string | undefined {
@@ -28,7 +30,7 @@ export const remarkReferences: Plugin<[], Root> = function remarkReferences() {
 			if (
 				node.type === 'heading' &&
 				(node as Heading).depth === 2 &&
-				toString(node).trim() === 'References'
+				(toString(node).trim() === 'References' || toString(node).trim() === 'Referensi')
 			) {
 				refHeadingIndex = i;
 			}
@@ -63,33 +65,54 @@ export const remarkReferences: Plugin<[], Root> = function remarkReferences() {
 			if (parent.type === 'paragraph' && definitionParagraphs.has(parent as Paragraph)) return;
 
 			const text = node as Text;
-			CITATION_RE.lastIndex = 0;
-			if (!CITATION_RE.test(text.value)) return;
-			CITATION_RE.lastIndex = 0;
+			if (!/\[\d/.test(text.value)) return;
+			BRACKET_RE.lastIndex = 0;
 
 			const newNodes: PhrasingContent[] = [];
 			let lastIndex = 0;
 			let m: RegExpExecArray | null;
 			let changed = false;
-			while ((m = CITATION_RE.exec(text.value))) {
-				const numbers = m[1].split(',').map((n) => n.trim());
-				// only treat it as a citation if every number resolves to a real
-				// reference — avoids false positives like "responses = [0, 1, 1]"
-				if (!numbers.every((num) => definedNumbers.has(num))) continue;
+			while ((m = BRACKET_RE.exec(text.value))) {
+				const content = m[1];
+
+				// Pure number list, e.g. "[1]" / "[1, 2]" — one link per number.
+				// Only treated as a citation if every number resolves to a real
+				// reference — avoids false positives like "responses = [0, 1, 1]".
+				if (PURE_NUMBER_LIST_RE.test(content)) {
+					const numbers = content.split(',').map((n) => n.trim());
+					if (!numbers.every((num) => definedNumbers.has(num))) continue;
+					changed = true;
+
+					if (m.index > lastIndex) {
+						newNodes.push({ type: 'text', value: text.value.slice(lastIndex, m.index) });
+					}
+					numbers.forEach((num, idx) => {
+						newNodes.push({
+							type: 'link',
+							url: `#ref-${num}`,
+							children: [{ type: 'text', value: `[${num}]` }]
+						});
+						if (idx < numbers.length - 1) {
+							newNodes.push({ type: 'text', value: ', ' });
+						}
+					});
+					lastIndex = m.index + m[0].length;
+					continue;
+				}
+
+				// Annotated single citation, e.g. "[1, p.276: \"...\"]" — the whole
+				// bracket becomes one link to the leading reference number.
+				const annotated = ANNOTATED_RE.exec(content);
+				if (!annotated || !definedNumbers.has(annotated[1])) continue;
 				changed = true;
 
 				if (m.index > lastIndex) {
 					newNodes.push({ type: 'text', value: text.value.slice(lastIndex, m.index) });
 				}
-				numbers.forEach((num, idx) => {
-					newNodes.push({
-						type: 'link',
-						url: `#ref-${num}`,
-						children: [{ type: 'text', value: `[${num}]` }]
-					});
-					if (idx < numbers.length - 1) {
-						newNodes.push({ type: 'text', value: ', ' });
-					}
+				newNodes.push({
+					type: 'link',
+					url: `#ref-${annotated[1]}`,
+					children: [{ type: 'text', value: m[0] }]
 				});
 				lastIndex = m.index + m[0].length;
 			}

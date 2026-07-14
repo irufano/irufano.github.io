@@ -65,9 +65,9 @@
 .prose :where(th) {
 	font-family: var(--font-mono);
 	font-size: 0.72rem;
-	text-transform: uppercase;
+	font-weight: bold;
 	letter-spacing: 0.04em;
-	color: var(--color-fg-muted);
+	color: color-mix(in srgb, var(--color-fg) 85%, transparent);
 	white-space: nowrap;
 }
 
@@ -316,6 +316,12 @@
 	overflow-y: hidden;
 	padding: 0.25em 0;
 }
+/* Single-line `$$...$$` promoted by remark-promote-display-math — kept
+   left-aligned so it stays visually distinct from a real multi-line `$$`
+   block, which stays centered above. */
+.math-display-left .katex-display {
+	justify-content: flex-start;
+}
 
 /* ---------- table of contents ---------- */
 
@@ -360,6 +366,9 @@
 }
 .toc-link.depth-3 {
 	padding-left: 1.5rem;
+}
+.toc-link.depth-4 {
+	padding-left: 2.25rem;
 }
 
 /* ---------- in-post search ---------- */

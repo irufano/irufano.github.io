@@ -118,7 +118,9 @@
 					<a
 						href={`#${item.id}`}
 						onclick={(event) => handleClick(event, item.id)}
-						class="toc-link  {item.depth === 3 ? 'depth-3' : ''} {activeId === item.id
+						class="toc-link {item.depth === 3 ? 'depth-3' : ''} {item.depth === 4
+							? 'depth-4'
+							: ''} {activeId === item.id
 							? 'active'
 							: ''}"
 					>
