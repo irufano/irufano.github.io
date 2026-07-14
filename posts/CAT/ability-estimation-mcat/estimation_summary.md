@@ -73,6 +73,89 @@ $$p(\theta \mid \mathbf{u}) = \frac{p(\mathbf{u} \mid \theta) \cdot p(\theta)}{p
 
 ---
 
+### Ringkasan: Bayesian dalam Tiga Konsep
+
+Dalam pendekatan Bayesian, terdapat tiga konsep penting yang menjadi fondasi semua metode estimasi:
+
+| Konsep | Definisi | Peran |
+|---|---|---|
+| **Prior** | Keyakinan awal tentang kemampuan peserta **sebelum** mengerjakan soal | Pengetahuan tentang populasi secara umum |
+| **Likelihood** | Probabilitas peserta memberikan respons tertentu **jika** memiliki kemampuan tertentu | Bukti dari data yang terobservasi (respons peserta) |
+| **Posterior** | Keyakinan yang telah diperbarui **setelah** melihat respons peserta | Kombinasi prior + likelihood (Bayesian update) |
+
+---
+
+### Contoh Numerik Sederhana
+
+**Setup:** Misalkan kemampuan peserta ($\theta$) hanya mungkin berada pada tiga nilai diskrit: Rendah, Sedang, atau Tinggi.
+
+#### Step 1: Prior (sebelum ada data)
+
+Sebelum peserta mengerjakan soal, kita belum tahu kemampuannya. Asumsi awal (prior) hampir merata:
+
+| Kemampuan ($\theta$) | Prior $\pi(\theta)$ | Interpretasi |
+|---|---|---|
+| **Rendah** | 0.33 | Peluang peserta rendah = 33% |
+| **Sedang** | 0.33 | Peluang peserta sedang = 33% |
+| **Tinggi** | 0.34 | Peluang peserta tinggi = 34% |
+
+Distribusi hampir seragam karena belum ada informasi dari peserta.
+
+---
+
+#### Step 2: Likelihood (dari satu respons)
+
+Sekarang peserta menjawab **satu soal yang SULIT dengan BENAR**.
+
+Kemudian kita tanya: *"Jika peserta punya kemampuan X, seberapa besar peluang dia bisa jawab soal sulit ini dengan benar?"*
+
+| Kemampuan | Likelihood $L(\text{benar soal sulit} \mid \theta)$ | Interpretasi |
+|---|---|---|
+| **Rendah** | 0.1 | Jika rendah, peluang benar soal sulit hanya 10% |
+| **Sedang** | 0.4 | Jika sedang, peluang benar soal sulit 40% |
+| **Tinggi** | 0.85 | Jika tinggi, peluang benar soal sulit 85% |
+
+**Observasi:** Peserta **bisa** benar soal sulit di semua kemampuan level, tapi **paling cocok** dengan kemampuan tinggi.
+
+---
+
+#### Step 3: Posterior (setelah melihat respons)
+
+Sekarang kita gabungkan prior + likelihood menggunakan formula Bayes:
+
+$$p(\theta \mid \text{benar soal sulit}) \propto L \times \pi$$
+
+| Kemampuan | Prior | Likelihood | Prior × Likelihood | Posterior (dinormalisasi) |
+|---|---|---|---|---|
+| **Rendah** | 0.33 | 0.1 | 0.033 | 0.05 |
+| **Sedang** | 0.33 | 0.4 | 0.132 | 0.30 |
+| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.65** |
+| **Sum** | | | 0.454 | 1.00 |
+
+**Interpretasi:** Berdasarkan jawaban benar untuk soal sulit tersebut:
+- Peluang Rendah turun drastis: 33% → 5%
+- Peluang Sedang sedikit meningkat: 33% → 30%
+- Peluang Tinggi meningkat signifikan: 34% → **65%**
+
+**Kesimpulan:** Setelah satu respons, kita sekarang **65% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
+
+---
+
+### Pola Umum Bayesian Update
+
+```
+Posterior ∝ Prior × Likelihood
+
+Artinya: Belief terbaru = (Keyakinan awal) × (Dukungan dari data)
+```
+
+**Intuisi:**
+- Jika prior kuat tapi likelihood lemah → posterior condong ke prior
+- Jika prior lemah tapi likelihood kuat → posterior condong ke likelihood
+- Jika prior dan likelihood seimbang → posterior adalah compromise
+
+---
+
 ## Model & Notasi Dasar (dipakai oleh ketiga metode)
 
 Model respons item M3PL/M2PL [1, Eq.1, p.275]:
