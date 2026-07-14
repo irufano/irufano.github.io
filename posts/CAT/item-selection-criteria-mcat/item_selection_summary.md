@@ -328,7 +328,7 @@ menargetkan arah yang paling menambah determinan — bukan rata-rata varians (ba
 
 ### 2.1 Teori
 
-A-optimality [1, Eq.16, §4.1.2, p.±282–284] didefinisikan sebagai kriteria yang **"minimize the sum
+A-optimality [1, Eq.16, #4.1.2, p.±282–284] didefinisikan sebagai kriteria yang **"minimize the sum
 of the (asymptotic) sampling variances of the MLEs of the abilities"**, ekuivalen dengan
 meminimalkan trace dari invers FIM:
 
@@ -538,7 +538,7 @@ round awal tetap murni bergantung pada urutan array item di kedua metode.
 - Perhitungan invers matriks lebih mahal secara komputasi dibanding determinan (D-optimal) atau
   integral tertutup (KL-information), dan berisiko numerically unstable saat matriks nyaris
   singular.
-- Menurut [1, §4.1] hasil A-optimal dan D-optimal pada MCAT umumnya **"largely similar"** tapi
+- Menurut [1, #4.1] hasil A-optimal dan D-optimal pada MCAT umumnya **"largely similar"** tapi
   tidak identik — jadi manfaat tambahannya di atas D-optimal marginal pada kebanyakan skenario,
   kecuali saat ketimpangan antar-dimensi besar.
 
@@ -921,7 +921,7 @@ https://doi.org/10.1007/s11336-008-9097-5 — Full text gratis (PubMed Central, 
 https://pmc.ncbi.nlm.nih.gov/articles/PMC2813188/ (mirror PDF jurnal dengan nomor halaman asli:
 https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A3BFF7744EDCE563819C31270D9C7E7D/S0033312300021608a.pdf/multidimensional-adaptive-testing-with-optimal-design-criteria-for-item-selection.pdf).
 Sumber utama untuk: model M3PL (Eq.1, p.275), struktur FIM & sifat rank-1 (Eq.4–5, p.276–278),
-kriteria D-optimal (Eq.8&13, p.277&280–282), dan kriteria A-optimal (Eq.16, §4.1.2, p.±282–284).
+kriteria D-optimal (Eq.8&13, p.277&280–282), dan kriteria A-optimal (Eq.16, #4.1.2, p.±282–284).
 
 **[2]** Baker, F. B. (2001). *The Basics of Item Response Theory* (2nd ed.). ERIC Clearinghouse on
 Assessment and Evaluation, University of Maryland. Full text gratis (ERIC ED458219):
@@ -935,7 +935,7 @@ pada dokumen ini.
 testing. *Journal of Educational Evaluation for Health Professions*, 15, Article 7.
 https://doi.org/10.3352/jeehp.2018.15.7 — Open access (CC-BY). PDF:
 https://www.jeehp.org/upload/pdf/jeehp-15-7.pdf (mirror: https://pmc.ncbi.nlm.nih.gov/articles/PMC5968224/).
-Sumber rumus KL pointwise (Eq.9) dan KL information global (Eq.10), §"Kullback-Leibler information
+Sumber rumus KL pointwise (Eq.9) dan KL information global (Eq.10), #"Kullback-Leibler information
 criterion", p.6 — termasuk penjelasan $\delta=C/\sqrt{m}$ dan sitasi ke Chang & Ying (1996) [7].
 
 **[4]** St. John, R. C., & Draper, N. R. (1975). D-Optimality for Regression Designs: A Review.
