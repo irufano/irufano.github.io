@@ -1,1 +1,0 @@
-import"./DhTwdvT0.js";function e(e){return e?new Date(e).toLocaleDateString(`en-US`,{year:`numeric`,month:`short`,day:`numeric`}):``}function t(e){return e.toLowerCase().trim().replace(/[^a-z0-9]+/g,`-`).replace(/(^-+|-+$)/g,``)}export{e as n,t};
