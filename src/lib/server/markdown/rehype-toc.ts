@@ -1,11 +1,13 @@
 import { visit } from 'unist-util-visit';
 import { toString } from 'hast-util-to-string';
+import { toHtml } from 'hast-util-to-html';
 import type { Plugin } from 'unified';
 import type { Root, Element } from 'hast';
 
 export interface TocItem {
 	id: string;
 	text: string;
+	html: string;
 	depth: 2 | 3 | 4;
 }
 
@@ -20,7 +22,8 @@ export const rehypeToc: Plugin<[], Root> = function rehypeToc() {
 			if (!depth) return;
 			const id = typeof node.properties?.id === 'string' ? node.properties.id : undefined;
 			if (!id) return;
-			toc.push({ id, text: toString(node), depth });
+			const html = toHtml({ type: 'root', children: node.children ?? [] });
+			toc.push({ id, text: toString(node), html, depth });
 		});
 		file.data.toc = toc;
 	};

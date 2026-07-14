@@ -124,7 +124,11 @@
 							? 'active'
 							: ''}"
 					>
-						{item.text}
+						{#if item.html}
+							{@html item.html}
+						{:else}
+							{item.text}
+						{/if}
 					</a>
 				</li>
 			{/each}
