@@ -125,19 +125,19 @@ Sekarang kita gabungkan prior + likelihood menggunakan formula Bayes:
 
 $$p(\theta \mid \text{benar soal sulit}) \propto L \times \pi$$
 
-| Kemampuan | Prior | Likelihood | Prior × Likelihood | Posterior (dinormalisasi) |
+| Kemampuan | Prior | Likelihood | Prior × Likelihood | Posterior (dinormalisasi) $\frac{\text{Likelihood} \times \text{Prior}}{\text{sum(Prior × Likelihood)}}$ |
 |---|---|---|---|---|
-| **Rendah** | 0.33 | 0.1 | 0.033 | 0.05 |
-| **Sedang** | 0.33 | 0.4 | 0.132 | 0.30 |
-| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.65** |
+| **Rendah** | 0.33 | 0.1 | 0.033 | 0.07 |
+| **Sedang** | 0.33 | 0.4 | 0.132 | 0.29 |
+| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.63** |
 | **Sum** | | | 0.454 | 1.00 |
 
 **Interpretasi:** Berdasarkan jawaban benar untuk soal sulit tersebut:
-- Peluang Rendah turun drastis: 33% → 5%
-- Peluang Sedang sedikit meningkat: 33% → 30%
-- Peluang Tinggi meningkat signifikan: 34% → **65%**
+- Peluang Rendah turun drastis: 33% → 7%
+- Peluang Sedang sedikit meningkat: 33% → 29%
+- Peluang Tinggi meningkat signifikan: 34% → **63%**
 
-**Kesimpulan:** Setelah satu respons, kita sekarang **65% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
+**Kesimpulan:** Setelah satu respons, kita sekarang **63% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
 
 ---
 
