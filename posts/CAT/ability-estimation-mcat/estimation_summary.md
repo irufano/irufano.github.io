@@ -129,15 +129,15 @@ $$p(\theta \mid \text{benar soal sulit}) \propto L \times \pi$$
 |---|---|---|---|---|
 | **Rendah** | 0.33 | 0.1 | 0.033 | 0.07 |
 | **Sedang** | 0.33 | 0.4 | 0.132 | 0.29 |
-| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.63** |
+| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.64** |
 | **Sum** | | | 0.454 | 1.00 |
 
 **Interpretasi:** Berdasarkan jawaban benar untuk soal sulit tersebut:
 - Peluang Rendah turun drastis: 33% → 7%
 - Peluang Sedang sedikit meningkat: 33% → 29%
-- Peluang Tinggi meningkat signifikan: 34% → **63%**
+- Peluang Tinggi meningkat signifikan: 34% → **64%**
 
-**Kesimpulan:** Setelah satu respons, kita sekarang **63% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
+**Kesimpulan:** Setelah satu respons, kita sekarang **64% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
 
 ---
 
