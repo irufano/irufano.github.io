@@ -18,7 +18,7 @@ per metode.
 
 ---
 
-## Konsep Fondasi: Prior, Likelihood, dan Posterior
+## 1. Konsep Fondasi: Prior, Likelihood, dan Posterior
 
 Sebelum masuk ke formula teknis, berikut intuisi ketiga konsep yang menjadi inti ketiga metode estimasi:
 
@@ -125,19 +125,19 @@ Sekarang kita gabungkan prior + likelihood menggunakan formula Bayes:
 
 $$p(\theta \mid \text{benar soal sulit}) \propto L \times \pi$$
 
-| Kemampuan | Prior | Likelihood | Prior × Likelihood | Posterior (dinormalisasi) $\frac{\text{Likelihood} \times \text{Prior}}{\text{sum(Prior × Likelihood)}}$ |
+| Kemampuan | Prior | Likelihood | Prior × Likelihood | Posterior (dinormalisasi) |
 |---|---|---|---|---|
-| **Rendah** | 0.33 | 0.1 | 0.033 | 0.07 |
-| **Sedang** | 0.33 | 0.4 | 0.132 | 0.29 |
-| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.64** |
+| **Rendah** | 0.33 | 0.1 | 0.033 | 0.05 |
+| **Sedang** | 0.33 | 0.4 | 0.132 | 0.30 |
+| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.65** |
 | **Sum** | | | 0.454 | 1.00 |
 
 **Interpretasi:** Berdasarkan jawaban benar untuk soal sulit tersebut:
-- Peluang Rendah turun drastis: 33% → 7%
-- Peluang Sedang sedikit meningkat: 33% → 29%
-- Peluang Tinggi meningkat signifikan: 34% → **64%**
+- Peluang Rendah turun drastis: 33% → 5%
+- Peluang Sedang sedikit meningkat: 33% → 30%
+- Peluang Tinggi meningkat signifikan: 34% → **65%**
 
-**Kesimpulan:** Setelah satu respons, kita sekarang **64% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
+**Kesimpulan:** Setelah satu respons, kita sekarang **65% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
 
 ---
 
@@ -156,7 +156,7 @@ Artinya: Belief terbaru = (Keyakinan awal) × (Dukungan dari data)
 
 ---
 
-## Model & Notasi Dasar (dipakai oleh ketiga metode)
+## 2. Model & Notasi Dasar (dipakai oleh ketiga metode)
 
 Model respons item M3PL/M2PL [1, Eq.1, p.275]:
 
@@ -210,7 +210,7 @@ Mulder & van der Linden [1, p.276-277] merekomendasikan **MAP untuk round awal C
 
 
 
-### 0.1 Pembuktian: Skor (gradien log-likelihood)
+### 2.1 Pembuktian: Skor (gradien log-likelihood)
 
 $$
 \log f(\mathbf{u}\mid\boldsymbol\theta) = \sum_{i=1}^n \Big[u_i\log P_i(\boldsymbol\theta) + (1-u_i)\log Q_i(\boldsymbol\theta)\Big]
@@ -238,10 +238,10 @@ $$
 
 Ini **identik** dengan `mle.rs:32-33`: `residual=(x-p)*p_prime/(p*q); grad += a*residual`.
 
-### 0.2 Fisher Information Matrix sebagai pengganti Hessian (Fisher scoring)
+### 2.2 Fisher Information Matrix sebagai pengganti Hessian (Fisher scoring)
 
 Hessian eksak (turunan kedua $\log f$) melibatkan turunan kedua $P'_i$ yang rumit. Praktik standar
-—dipakai baik oleh Baker (2001, lihat [#1.1](#11-teori)) maupun Mulder & van der Linden—adalah
+—dipakai baik oleh Baker (2001, lihat [#3.1](#31-teori)) maupun Mulder & van der Linden—adalah
 mengganti Hessian dengan negatif ekspektasinya, yaitu **Fisher Information Matrix** [1, Eq.4,
 p.276]:
 
@@ -283,12 +283,94 @@ multivariat dari batas bawah Cramér–Rao.
 
 ---
 
-## 1. Maximum Likelihood Estimation (MLE)
+## 2.3 Metode Numerik: Iterasi dan Konvergensi
 
-### 1.1 Teori
+Ketiga metode estimasi (MLE, MAP, EAP) menggunakan **algoritma numerik iteratif** untuk menemukan estimasi kemampuan $\hat{\boldsymbol\theta}$. Bagian ini menjelaskan konsep umum yang berlaku di semua metode.
+
+### Apa itu Iterasi?
+
+Iterasi adalah **proses berulang menebak dan menyempurnakan** untuk mencari jawaban yang tepat. Berbeda dengan rumus sederhana yang langsung memberi hasil, algoritma numerik bekerja seperti ini:
+
+**Analogi Konkret: Menyetel Radio**
+
+```
+Tebakan awal (θ₀):  Tombol di posisi random → Suara berisik ❌
+     ↓ (Dengarkan dan perbaiki posisi)
+Tebakan 1 (θ₁):     Tombol digeser → Suara mulai jernih
+     ↓ (Dengarkan dan perbaiki lagi)
+Tebakan 2 (θ₂):     Tombol digeser lagi → Suara lebih jernih
+     ↓
+Tebakan 3 (θ₃):     Tombol fine-tuning → Suara jernih sempurna
+     ↓
+Tebakan 4 (θ₄):     Tombol tidak perlu digeser lagi ✓ SELESAI
+```
+
+Dalam notasi matematika, setiap iterasi mengikuti pola:
+
+$$
+\hat{\boldsymbol\theta}_{s+1} = \hat{\boldsymbol\theta}_s + \Delta\boldsymbol\theta_s
+$$
+
+di mana:
+- $s$ = nomor iterasi (0, 1, 2, 3, ...)
+- $\hat{\boldsymbol\theta}_s$ = estimasi pada iterasi ke-$s$
+- $\Delta\boldsymbol\theta_s$ = perubahan parameter (step size) pada iterasi $s$
+
+### Apa itu Konvergensi?
+
+**Konvergensi** adalah kondisi ketika perubahan parameter menjadi **sangat sangat kecil** sehingga iterasi bisa dihentikan. Kriteria konvergensi formal yang dipakai di semua metode:
+
+$$
+\left\|\hat{\boldsymbol\theta}_{s+1} - \hat{\boldsymbol\theta}_s\right\| < 10^{-6} \quad\Rightarrow\quad \text{KONVERGEN — Iterasi Berhenti}
+$$
+
+Artinya: **Jika perubahan norm kurang dari 0.000001, maka nilai $\hat{\boldsymbol\theta}$ sudah stabil dan siap digunakan sebagai estimasi final.**
+
+### Contoh Numerik: Pola Konvergensi
+
+| Iterasi | $\hat{\boldsymbol\theta}$ | Perubahan ($\|\Delta\boldsymbol\theta\|$) | Status |
+|---|---|---|---|
+| 0 | 1.0000 | — | Tebakan awal (arbitrary) |
+| 1 | 0.2267 | 0.7733 | Perubahan **BESAR** ← masih jauh dari optimal |
+| 2 | 0.3239 | 0.0972 | Perubahan lebih kecil ← semakin dekat |
+| 3 | 0.3248 | 0.0009 | Perubahan sangat kecil |
+| 4 | 0.3248 | 0.0000001 | < 10⁻⁶ ✓ **KONVERGEN!** |
+
+**Interpretasi:**
+- **Awal** (Iterasi 1-2): Perubahan besar, algoritma masih "mencari arah"
+- **Tengah** (Iterasi 3): Perubahan kecil, algoritma sudah dekat ke jawaban
+- **Akhir** (Iterasi 4): Perubahan sangat kecil (< 10⁻⁶), **berhenti dan gunakan θ = 0.3248 sebagai hasil final**
+
+### Mengapa Perlu Konvergensi?
+
+1. **Sebelum konvergen**: Nilai $\hat{\boldsymbol\theta}$ masih berubah-ubah, belum stabil
+2. **Setelah konvergen**: Nilai $\hat{\boldsymbol\theta}$ sudah stabil, aman digunakan sebagai estimasi kemampuan final
+
+### Implementasi Praktis
+
+Dalam kode produksi (`mle.rs`, `map.rs`, dll), konvergensi diimplementasikan sebagai:
+
+```rust
+// Setiap iterasi:
+if (theta_next - theta_current).norm() < 1e-6 {
+    break;  // ← Keluar loop, konvergen ditemukan
+}
+// Batasi juga iterasi maksimal (misal 100) untuk menghindari infinite loop
+```
+
+**Catatan**: Ketiga metode (MLE, MAP, EAP) menggunakan kriteria konvergensi yang sama, meskipun cara menghitung $\Delta\boldsymbol\theta$ berbeda:
+- **MLE**: Update berbasis likelihood saja
+- **MAP**: Update berbasis likelihood + prior penalty
+- **EAP**: Biasanya tidak iteratif (langsung integrasi numerik)
+
+---
+
+## 3. Maximum Likelihood Estimation (MLE)
+
+### 3.1 Teori
 
 MLE mencari $\hat{\boldsymbol\theta}$ yang memaksimalkan $f(\mathbf{u}\mid\boldsymbol\theta)$
-[1, Eq.2, p.276] — lihat [#0](#model--notasi-dasar-dipakai-oleh-ketiga-metode) untuk definisi
+[1, Eq.2, p.276] — lihat [#2](#2-model--notasi-dasar-dipakai-oleh-ketiga-metode) untuk definisi
 lengkap dan pembuktian skor/FIM. Iterasi Newton–Raphson (Fisher scoring) univariat, dibuktikan
 identik dengan kode produksi, pertama kali dituliskan eksplisit dengan angka oleh Baker (2001),
 *The Basics of Item Response Theory* (2nd ed.), Bab 5 "Estimating an Examinee's Ability",
@@ -299,10 +381,10 @@ $$
 \tag{5-1}
 $$
 
-Untuk M2PL univariat ($c=0$, $k=1$), $\nabla\log f=\sum a_i(u_i-P_i)$ ([#0.1](#01-pembuktian-skor-gradien-log-likelihood)) dan
-$\mathbf{I}_S=\sum a_i^2P_iQ_i$ ([#0.2](#02-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring)) — Eq.[5-1] Baker **adalah** Fisher scoring
+Untuk M2PL univariat ($c=0$, $k=1$), $\nabla\log f=\sum a_i(u_i-P_i)$ ([#4.1](#21-pembuktian-skor-gradien-log-likelihood)) dan
+$\mathbf{I}_S=\sum a_i^2P_iQ_i$ ([#4.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring)) — Eq.[5-1] Baker **adalah** Fisher scoring
 $\hat\theta_{s+1}=\hat\theta_s+\mathbf{I}_S^{-1}\nabla\log f$ pada kasus 1-dimensi, dituliskan
-dengan notasi $(a,b,c)$ alih-alih $(a,d,c)$ (lihat [#1.2.1](#121-demo-1--reproduksi-baker-2001-k1) untuk konversi $d=-ab$).
+dengan notasi $(a,b,c)$ alih-alih $(a,d,c)$ (lihat [#3.2.1](#321-demo-1--reproduksi-baker-2001-k1) untuk konversi $d=-ab$).
 
 Generalisasi ke $k>1$ dimensi (produksi `mle.rs`) mengganti pembagian skalar dengan perkalian
 matriks invers:
@@ -314,7 +396,7 @@ $$
 Iterasi dibatasi 100 kali (`mle.rs:7`). Mulder & van der Linden mencatat langsung setelah definisi
 MLE [1, p.276]: *"The likelihood function may not have a maximum (e.g., when only correct or
 incorrect item responses are observed), or a local instead of a global maximum may be found."* —
-dibuktikan ulang secara eksperimental di [#1.2.3](#123-demo-3--kasus-divergen-all-correct).
+dibuktikan ulang secara eksperimental di [#5.2.3](#323-demo-3--kasus-divergen-all-correct).
 
 **Keterangan variabel:**
 
@@ -325,14 +407,14 @@ dibuktikan ulang secara eksperimental di [#1.2.3](#123-demo-3--kasus-divergen-al
 | $N$ | Jumlah item yang sudah di-administer |
 | $\mathbf{I}_S(\boldsymbol\theta)^{-1}$ | Invers FIM kumulatif — berperan sebagai "step size" matriks pada Newton step |
 
-### 1.2 Perhitungan Manual
+### 3.2 Perhitungan Manual
 
 Semua angka berikut dihasilkan oleh menjalankan
 `cargo run --example estimation_mle` (`src/experimental/estimation/mle/estimation_mle.rs`), yang
 memanggil fungsi produksi asli (`mirt::sigmoid`, `mirt::probability`, dan
 `estimation::mle::estimate` / `estimation::estimate`) — bukan dihitung manual terpisah dari kode.
 
-#### 1.2.1 DEMO 1 — Reproduksi Baker (2001), k=1
+#### 3.2.1 DEMO 1 — Reproduksi Baker (2001), k=1
 
 Item Baker (2001, p.87) dalam parameterisasi $(a,b,c)$, dikonversi ke $(a,d,c)$ produksi via
 $d=-ab$ (karena $z=a\theta+d=a(\theta-b)$):
@@ -435,16 +517,16 @@ Run kode produksi menghasilkan $0.2267$ dan $0.3239$ — **cocok dengan buku sam
 ($\|\Delta\hat\theta\|<10^{-6}$) → **$\hat\theta_{MLE}\approx 0.324846$**.
 
 Pembuktian bahwa `mle.rs`'s residual/weight tereduksi tepat menjadi Eq.[5-1] Baker saat $k=1,c=0$:
-$P'=PQ$ untuk M2PL (dari [#0.2](#02-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring) dengan $c=0$), sehingga
+$P'=PQ$ untuk M2PL (dari [#4.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring) dengan $c=0$), sehingga
 $\text{residual}=(u-P)P'/(PQ)=(u-P)$ dan $w=(P')^2/(PQ)=PQ$ — identik dengan pembilang/penyebut
 Eq.[5-1].
 
-#### 1.2.2 DEMO 2 — Multidimensional (k=3), 7 item
+#### 3.2.2 DEMO 2 — Multidimensional (k=3), 7 item
 
 Menggunakan seluruh 7-item bank yang sama seperti
 [Item Bank Snapshot](/posts/cat/item-selection-criteria-mcat#item-bank-snapshot), dengan pola
 respons **campuran** (bukan seragam per content-area — lihat catatan pemisahan sempurna di
-[#1.2.3](#123-demo-3--kasus-divergen-all-correct)):
+[#5.2.3](#323-demo-3--kasus-divergen-all-correct)):
 
 | Item | $\mathbf{a}$ | $d$ | $u$ |
 |---|---|---|---|
@@ -458,7 +540,7 @@ respons **campuran** (bukan seragam per content-area — lihat catatan pemisahan
 
 Starting $\hat{\boldsymbol\theta}_0=[0,0,0]$ (`mle.rs:6`, `DVector::zeros`).
 
-**Iterasi 1** — $\nabla\log f$ dan $\mathbf{I}_S$ dihitung persis seperti [#0.1](#01-pembuktian-skor-gradien-log-likelihood)/[#0.2](#02-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring), dijumlahkan atas ke-7 item:
+**Iterasi 1** — $\nabla\log f$ dan $\mathbf{I}_S$ dihitung persis seperti [#4.1](#21-pembuktian-skor-gradien-log-likelihood)/[#4.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring), dijumlahkan atas ke-7 item:
 
 **Step 1: Hitung $z_i = \mathbf{a}_i \cdot \boldsymbol\theta_0 + d_i$ untuk setiap item** dengan $\boldsymbol\theta_0=[0,0,0]$:
 
@@ -612,7 +694,7 @@ Karena $\|\Delta\hat{\boldsymbol\theta}\|_2 < 10^{-6}$ kriteria konvergensi terp
 $\hat{\boldsymbol\theta}_{MLE}=[0.03797,\,-0.65370,\,0.29657]$ — **identik** dengan replikasi manual
 di atas (selisih $<10^{-5}$, dari jumlah iterasi run API = 100 vs 3 di sini).
 
-#### 1.2.3 DEMO 3 — Kasus Divergen (all-correct)
+#### 3.2.3 DEMO 3 — Kasus Divergen (all-correct)
 
 Menggunakan 3-item subset ($\texttt{m2p-v001}$, $\texttt{m2p-n001}$, $\texttt{m2p-r001}$) dengan
 $\mathbf{u}=[1,1,1]$ (seluruhnya benar). Menjalankan `estimation::estimate(Mle, ...)` (100 iterasi
@@ -680,7 +762,7 @@ konvergen ke nilai interior yang masuk akal $[0.038,\,-0.654,\,0.297]$.
 
 Ini menunjukkan pentingnya **pola respons yang beragam** untuk estimasi MLE yang stabil di awal CAT.
 
-### 1.3 Kelebihan & Kekurangan
+### 3.3 Kelebihan & Kekurangan
 
 **Kelebihan:**
 - Landasan teori paling matang & tertua — dasar dari seluruh literatur IRT sejak Lord (1980),
@@ -693,20 +775,20 @@ Ini menunjukkan pentingnya **pola respons yang beragam** untuk estimasi MLE yang
 
 **Kekurangan:**
 - **Divergen** bila pola respons dapat dipisahkan sempurna oleh arah linear tertentu dari
-  $\mathbf{a}_i$ — dibuktikan langsung di [#1.2.3](#123-demo-3--kasus-divergen-all-correct), bukan hanya kasus trivial
+  $\mathbf{a}_i$ — dibuktikan langsung di [#5.2.3](#323-demo-3--kasus-divergen-all-correct), bukan hanya kasus trivial
   all-correct/all-incorrect. Risiko ini lebih tinggi di awal tes (item sedikit) — persis mengapa
-  MCAT umumnya memakai MAP di round-round awal (lihat [#2](#2-maximum-a-posteriori-map--bayes-modal)).
+  MCAT umumnya memakai MAP di round-round awal (lihat [#2](#4-maximum-a-posteriori-map--bayes-modal)).
 - Tidak ada mekanisme built-in untuk mencegah estimasi ekstrem — kode produksi (`mle.rs`) tidak
   meng-clamp $\hat\theta$, sehingga kasus divergen menghasilkan nilai besar tak-berguna
-  (mis. $\|\hat\theta\|=24.43$ di [#1.2.3](#123-demo-3--kasus-divergen-all-correct)) alih-alih error eksplisit.
+  (mis. $\|\hat\theta\|=24.43$ di [#5.2.3](#323-demo-3--kasus-divergen-all-correct)) alih-alih error eksplisit.
 - Butuh minimal beberapa item dengan variasi respons (benar & salah) untuk estimasi yang stabil —
   tidak cocok dipakai sebagai estimator tunggal di 1-2 round pertama CAT.
 
 ---
 
-## 2. Maximum A Posteriori (MAP / Bayes Modal)
+## 4. Maximum A Posteriori (MAP / Bayes Modal)
 
-### 2.1 Teori
+### 4.1 Teori
 
 MAP (disebut juga *Bayes Modal*/BM) memaksimalkan **posterior**, bukan likelihood murni — Magis &
 Raîche (2012), *"Random Generation of Response Patterns under Computerized Adaptive Testing with
@@ -722,7 +804,7 @@ $$
 $$
 
 dengan $f(\theta)$ *prior* dan $L(\theta)$ likelihood (identik $f(\mathbf u\mid\theta)$ di
-[#0](#model--notasi-dasar-dipakai-oleh-ketiga-metode)). Magis & Raîche [3, p.4]: *"The choice of a prior distribution is
+[#2](#2-model--notasi-dasar-dipakai-oleh-ketiga-metode)). Magis & Raîche [3, p.4]: *"The choice of a prior distribution is
 usually driven by some prior belief of the ability distribution among the population of
 examinees. The most common choice is the normal distribution with mean $\mu$ and variance
 $\sigma^2$."* Kode produksi menggunakan **multivariate normal** $\pi(\boldsymbol\theta)=N(\boldsymbol\mu,\boldsymbol\Sigma)$
@@ -744,7 +826,7 @@ $$
 $$
 
 (turunan standar bentuk kuadratik multivariat — eksak, bukan ekspektasi, karena $\log f$ memang
-kuadratik murni). Menggabungkan dengan skor & FIM likelihood dari [#0.1](#01-pembuktian-skor-gradien-log-likelihood)/[#0.2](#02-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring):
+kuadratik murni). Menggabungkan dengan skor & FIM likelihood dari [#4.1](#21-pembuktian-skor-gradien-log-likelihood)/[#4.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring):
 
 $$
 \boxed{\nabla\log g(\boldsymbol\theta) = \nabla\log f(\boldsymbol\theta) - \boldsymbol\Sigma^{-1}(\boldsymbol\theta-\boldsymbol\mu)}
@@ -772,14 +854,14 @@ produksi tidak menghitung $se$ secara eksplisit, hanya titik estimasi $\hat\thet
 | $\boldsymbol\Sigma^{-1}$ | *Prior precision* — presisi/informasi prior, ditambahkan langsung ke FIM |
 | $\mathbf{H}_{MAP}$ | Hessian (Fisher scoring) posterior $=\mathbf{I}_S(\theta)+\boldsymbol\Sigma^{-1}$ |
 
-### 2.2 Perhitungan Manual
+### 4.2 Perhitungan Manual
 
 Dijalankan via `cargo run --example estimation_map`
 (`src/experimental/estimation/map/estimation_map.rs`).
 
-#### 2.2.1 DEMO 1 — MAP vs MLE (k=1), prior N(0,1)
+#### 4.2.1 DEMO 1 — MAP vs MLE (k=1), prior N(0,1)
 
-Item & respons identik [#1.2.1](#121-demo-1--reproduksi-baker-2001-k1), prior $\mu=0,\sigma^2=1\Rightarrow\Sigma^{-1}=1.0$.
+Item & respons identik [#3.2.1](#321-demo-1--reproduksi-baker-2001-k1), prior $\mu=0,\sigma^2=1\Rightarrow\Sigma^{-1}=1.0$.
 $\hat\theta_0=\mu=0$.
 
 | Item | $a$ | $d$ | $c$ | $u$ |
@@ -903,16 +985,16 @@ $$\hat\theta_3 = 0.1309 \quad \text{(konvergen, } |\Delta\hat\theta| < 10^{-6}\t
 
 MAP tersusut (*shrinkage*) signifikan ke arah mean prior $\mu=0$ — dari 0.3248 menjadi 0.1308 (60% lebih dekat ke 0). Ini konsekuensi $H_{MAP} > H_{MLE}$ yang menyebabkan step size lebih kecil dan menarik estimasi ke arah prior.
 
-#### 2.2.2 DEMO 2 — Multidimensional (k=3), 7 item, prior N(0,I)
+#### 4.2.2 DEMO 2 — Multidimensional (k=3), 7 item, prior N(0,I)
 
-Item & respons identik [#1.2.2](#122-demo-2--multidimensional-k3-7-item), prior $\boldsymbol\mu=[0,0,0]$, $\boldsymbol\Sigma=\mathbf{I}$ (diagonal) $\Rightarrow \boldsymbol\Sigma^{-1}=\mathbf{I}$ (prior presisi diagonal $[1,1,1]$).
+Item & respons identik [#5.2.2](#322-demo-2--multidimensional-k3-7-item), prior $\boldsymbol\mu=[0,0,0]$, $\boldsymbol\Sigma=\mathbf{I}$ (diagonal) $\Rightarrow \boldsymbol\Sigma^{-1}=\mathbf{I}$ (prior presisi diagonal $[1,1,1]$).
 
 MAP mulai dari $\hat{\boldsymbol\theta}_0=\boldsymbol\mu=[0,0,0]$ (kebetulan sama nilainya dengan start MLE di
-[#1.2.2](#122-demo-2--multidimensional-k3-7-item) karena $\mu=\mathbf 0$, tapi secara konseptual berbeda sumber: start dari mean prior, bukan arbitrary zero).
+[#5.2.2](#322-demo-2--multidimensional-k3-7-item) karena $\mu=\mathbf 0$, tapi secara konseptual berbeda sumber: start dari mean prior, bukan arbitrary zero).
 
 **Iterasi 1** dengan $\hat{\boldsymbol\theta}_0=[0,0,0]$:
 
-**Step 1-3: Likelihood gradient (identik MLE Iterasi 1, lihat [#1.2.2](#122-demo-2--multidimensional-k3-7-item)):**
+**Step 1-3: Likelihood gradient (identik MLE Iterasi 1, lihat [#5.2.2](#322-demo-2--multidimensional-k3-7-item)):**
 
 $$\nabla\log L = [-0.0719,-0.9029,0.1121]$$
 
@@ -926,7 +1008,7 @@ $$\nabla\log g = \nabla\log L + \nabla\log f = [-0.0719,-0.9029,0.1121] + [0,0,0
 
 (Sama dengan likelihood gradient karena $\theta_0 = \mu$)
 
-**Step 6: Likelihood Hessian (FIM dari [#1.2.2](#122-demo-2--multidimensional-k3-7-item) Iterasi 1):**
+**Step 6: Likelihood Hessian (FIM dari [#5.2.2](#322-demo-2--multidimensional-k3-7-item) Iterasi 1):**
 
 $$\mathbf{I}_S^{(L)} = \begin{bmatrix} 1.7456 & 0.5553 & 0.8101 \\ 0.5553 & 1.7587 & 1.0192 \\ 0.8101 & 1.0192 & 2.6255 \end{bmatrix}$$
 
@@ -960,7 +1042,7 @@ $$\hat{\boldsymbol\theta}_1 = [0,0,0] + [0.0599,-0.5549,0.2041] \approx [0.0599,
 
 **Step 1: Hitung $z_i$ baru untuk setiap item** dengan $\hat{\boldsymbol\theta}_1 \approx [0.0599,-0.5549,0.2041]$:
 
-(Perhitungan serupa dengan MLE Iterasi 2 di [#1.2.2](#122-demo-2--multidimensional-k3-7-item), tapi dengan nilai $\boldsymbol\theta$ yang berbeda karena MAP step lebih kecil)
+(Perhitungan serupa dengan MLE Iterasi 2 di [#5.2.2](#322-demo-2--multidimensional-k3-7-item), tapi dengan nilai $\boldsymbol\theta$ yang berbeda karena MAP step lebih kecil)
 
 Hasil: $P_i$ bergerak lebih sedikit dibanding MLE karena step size MAP lebih kecil.
 
@@ -1015,11 +1097,11 @@ $$\hat{\boldsymbol\theta}_3 \approx [0.0105,-0.3656,0.1340]$$
 - **Numeric:** $-0.6537 \to -0.3656$ (44% lebih dekat ke 0) — shrinkage signifikan
 - **Reasoning:** $0.2966 \to 0.1340$ (55% lebih dekat ke 0) — shrinkage sedang
 
-MAP tersusut (*shrinkage*) ke arah $\mathbf 0$ di **ketiga** dimensi — konsekuensi langsung $\mathbf{H}_{MAP}=\mathbf{I}_S+\mathbf{I}\succ\mathbf{I}_S$ yang dibuktikan di [#2.1](#21-teori). Hessian yang lebih besar berarti curvature posterior lebih tajam, sehingga step-size lebih kecil dan penarik dari $\mu=0$ lebih kuat.
+MAP tersusut (*shrinkage*) ke arah $\mathbf 0$ di **ketiga** dimensi — konsekuensi langsung $\mathbf{H}_{MAP}=\mathbf{I}_S+\mathbf{I}\succ\mathbf{I}_S$ yang dibuktikan di [#4.1](#41-teori). Hessian yang lebih besar berarti curvature posterior lebih tajam, sehingga step-size lebih kecil dan penarik dari $\mu=0$ lebih kuat.
 
-#### 2.2.3 DEMO 3 — MAP Meregularisasi Kasus Divergen
+#### 4.2.3 DEMO 3 — MAP Meregularisasi Kasus Divergen
 
-Data identik [#1.2.3](#123-demo-3--kasus-divergen-all-correct) (3 item, $\mathbf u=[1,1,1]$, prior $N(\mathbf 0,\mathbf I)$):
+Data identik [#5.2.3](#323-demo-3--kasus-divergen-all-correct) (3 item, $\mathbf u=[1,1,1]$, prior $N(\mathbf 0,\mathbf I)$):
 
 | Item | $\mathbf{a}$ | $d$ | $u$ |
 |---|---|---|---|
@@ -1124,11 +1206,11 @@ $$\nabla\log g(\boldsymbol\theta) \to \nabla\log L^+ - (\text{linear term growin
 
 Pada suatu $\boldsymbol\theta}$ finite, dua suku SALING MENIADAKAN dan terbentuk root interior. Mode posterior **selalu finite** untuk prior proper, persis seperti dijelaskan Magis & Raîche [3, p.4-5]: *"The posterior density is proper"* (untuk prior proper + likelihood).
 
-### 2.3 Kelebihan & Kekurangan
+### 4.3 Kelebihan & Kekurangan
 
 **Kelebihan:**
 - **Tidak pernah divergen** untuk prior proper — dibuktikan langsung pada kasus yang membuat MLE
-  divergen di [#2.2.3](#223-demo-3--map-meregularisasi-kasus-divergen).
+  divergen di [#4.2.3](#423-demo-3--map-meregularisasi-kasus-divergen).
 - Landasan teori kuat (Bayes modal, Mislevy 1986 [4]; diverifikasi silang via Magis & Raîche [3,
   Eq.5-6, p.5]), sekaligus tetap murah komputasi — Newton-Raphson dengan FIM, sama seperti MLE,
   hanya menambah $\boldsymbol\Sigma^{-1}$ ke Hessian dan suku prior ke gradien.
@@ -1138,19 +1220,19 @@ Pada suatu $\boldsymbol\theta}$ finite, dua suku SALING MENIADAKAN dan terbentuk
 **Kekurangan:**
 - **Bias ke arah prior** — jika $\boldsymbol\mu$ tidak mencerminkan kemampuan examinee sebenarnya
   (mis. populasi prior salah untuk sub-grup tertentu), estimasi MAP secara sistematis tertarik ke
-  $\boldsymbol\mu$, terbukti pada [#2.2.2](#222-demo-2--multidimensional-k3-7-item-prior-n0i) (MAP $\neq$ MLE meski data sama).
+  $\boldsymbol\mu$, terbukti pada [#4.2.2](#422-demo-2--multidimensional-k3-7-item-prior-n0i) (MAP $\neq$ MLE meski data sama).
 - Memerlukan spesifikasi prior ($\boldsymbol\mu$, $\boldsymbol\Sigma$) yang, tidak seperti EAP,
   hanya dipakai sebagai *penalti* pada titik mode — bukan diintegralkan penuh atas seluruh
-  ruang $\boldsymbol\theta$ (band. [#3](#3-expected-a-posteriori-eap)).
+  ruang $\boldsymbol\theta$ (band. [#3](#5-expected-a-posteriori-eap)).
 - $se(\hat\theta_{BM})$ dalam bentuk tertutup [3, Eq.6, p.5] tidak diimplementasikan di kode
   produksi (`map.rs` hanya mengembalikan titik estimasi $\hat\theta$, bukan standard error) —
   temuan langsung dari membaca `map.rs`, bukan asumsi.
 
 ---
 
-## 3. Expected A Posteriori (EAP)
+## 5. Expected A Posteriori (EAP)
 
-### 3.1 Teori
+### 5.1 Teori
 
 EAP menghitung **rata-rata posterior** (bukan modus seperti MAP) — Magis & Raîche (2012), **#2.2,
 p.5-6, Eq.10-11** [3]:
@@ -1217,12 +1299,12 @@ identik.
 | $\pi(\boldsymbol\theta_q)$ | Bobot prior pada titik grid $=\prod_d N(\theta_{q,d};0,\sigma)$ |
 | $L(\boldsymbol\theta_q)$ | Likelihood seluruh respons pada titik grid $=\prod_i P_i(\boldsymbol\theta_q)^{u_i}Q_i(\boldsymbol\theta_q)^{1-u_i}$ |
 
-### 3.2 Perhitungan Manual
+### 5.2 Perhitungan Manual
 
 Dijalankan via `cargo run --example estimation_eap`
 (`src/experimental/estimation/eap/estimation_eap.rs`).
 
-#### 3.2.1 DEMO 1 — Reproduksi 1 Dimensi (pts=5)
+#### 5.2.1 DEMO 1 — Reproduksi 1 Dimensi (pts=5)
 
 Item & prior identik contoh ilustratif di `MCAT_EXPLANATION.md` #5.3:
 - Item: $a=1.5, d=0, c=0$ (M2PL, diskriminasi 1.5, tanpa difficulty/guessing)
@@ -1310,9 +1392,9 @@ mengabaikan kontribusi titik $\theta=-1.5$ dan $\theta=+1.5$ yang bobotnya justr
 dari titik $\theta=\pm3.0$ (lihat kolom $w$: $0.012349$ dan $0.117168$, jauh lebih besar dari $0.000049$
 dan $0.004383$). Simetri mean prior (0) ditambah likelihood yang lebih terkonsentrasi di dekat 0 menghasilkan EAP yang jauh lebih moderat (0.511) dibanding MLE yang divergen atau MAP yang shrink lebih dalam.
 
-#### 3.2.2 DEMO 2 — Multidimensional (k=3), 7 item, grid 5^3=125 titik
+#### 5.2.2 DEMO 2 — Multidimensional (k=3), 7 item, grid 5^3=125 titik
 
-Bank item & respons identik [#1.2.2](#122-demo-2--multidimensional-k3-7-item)/[#2.2.2](#222-demo-2--multidimensional-k3-7-item-prior-n0i). Prior $\pi(\boldsymbol\theta)=N(\mathbf 0,\mathbf I)$ (multivariate normal dengan mean $[0,0,0]$ dan variance $[1,1,1]$).
+Bank item & respons identik [#5.2.2](#322-demo-2--multidimensional-k3-7-item)/[#4.2.2](#422-demo-2--multidimensional-k3-7-item-prior-n0i). Prior $\pi(\boldsymbol\theta)=N(\mathbf 0,\mathbf I)$ (multivariate normal dengan mean $[0,0,0]$ dan variance $[1,1,1]$).
 
 Grid per dimensi: $pts=5$ points $= [-3.0, -1.5, 0.0, +1.5, +3.0]$, total kombinasi $5^3=125$ titik.
 
@@ -1404,9 +1486,9 @@ Sesuai teori: EAP dan MAP mengintegralkan/memaksimalkan **posterior yang sama** 
 
 Grid $pts=5$ sengaja dibuat kasar di atas supaya semua 125 titik bisa ditampilkan & dipahami secara manual; produksi menggunakan pts=21 untuk presisi yang wajar.
 
-#### 3.2.3 DEMO 3 — EAP Tidak Pernah Divergen
+#### 5.2.3 DEMO 3 — EAP Tidak Pernah Divergen
 
-Data identik [#1.2.3](#123-demo-3--kasus-divergen-all-correct)/[#2.2.3](#223-demo-3--map-meregularisasi-kasus-divergen) (3 item, $\mathbf u=[1,1,1]$, prior $N(\mathbf 0,\mathbf I)$, $pts=21$):
+Data identik [#5.2.3](#323-demo-3--kasus-divergen-all-correct)/[#4.2.3](#423-demo-3--map-meregularisasi-kasus-divergen) (3 item, $\mathbf u=[1,1,1]$, prior $N(\mathbf 0,\mathbf I)$, $pts=21$):
 
 | Item | $\mathbf{a}$ | $d$ | $u$ |
 |---|---|---|---|
@@ -1508,11 +1590,11 @@ $$g(\boldsymbol\theta) = L(\boldsymbol\theta) \times \pi(\boldsymbol\theta)$$
 
 Walaupun $L$ bisa naik monoton menuju 1 (pola semua-benar), **prior $\pi$ menurun eksponensial** menjauh dari mean $\mu$. Hasil perkalian adalah **distribusi yang terkonsentrasi**. Integrasi atas grid terbatas $[-3\sigma,3\sigma]^k$ otomatis menghasilkan integral yang finite dan well-defined untuk **pola respons apa pun** — tidak ada kasus patologi seperti divergen MLE atau over-shrinkage MAP.
 
-### 3.3 Kelebihan & Kekurangan
+### 5.3 Kelebihan & Kekurangan
 
 **Kelebihan:**
 - **Tidak pernah divergen**, untuk alasan yang lebih fundamental dari MAP: bukan hasil regularisasi
-  optimasi, melainkan sifat integral pada domain terbatas — dibuktikan di [#3.2.3](#323-demo-3--eap-tidak-pernah-divergen).
+  optimasi, melainkan sifat integral pada domain terbatas — dibuktikan di [#5.2.3](#523-demo-3--eap-tidak-pernah-divergen).
 - Tidak butuh titik awal/iterasi Newton-Raphson sama sekali (tidak ada risiko konvergen ke
   maksimum lokal yang salah, tidak seperti MLE/MAP) — estimasi dihitung langsung dari satu kali
   penjumlahan grid.
@@ -1521,7 +1603,7 @@ Walaupun $L$ bisa naik monoton menuju 1 (pola semua-benar), **prior $\pi$ menuru
   Kekurangan).
 
 **Kekurangan:**
-- **Akurasi bergantung penuh pada resolusi grid** $pts$ — dibuktikan di [#3.2.2](#322-demo-2--multidimensional-k3-7-item-grid-53125-titik): $pts=5$ vs
+- **Akurasi bergantung penuh pada resolusi grid** $pts$ — dibuktikan di [#5.2.2](#522-demo-2--multidimensional-k3-7-item-grid-53125-titik): $pts=5$ vs
   $pts=21$ menghasilkan estimasi yang berbeda cukup jauh pada dimensi reasoning ($0.097$ vs
   $0.182$). Biaya komputasi tumbuh $pts^k$ — untuk $k=3$, $pts=21$ berarti $9261$ evaluasi
   likelihood per estimasi, jauh lebih mahal dari MLE/MAP (~3-5 iterasi Newton).
@@ -1539,16 +1621,16 @@ Walaupun $L$ bisa naik monoton menuju 1 (pola semua-benar), **prior $\pi$ menuru
 
 ---
 
-## 4. Ringkasan Perbandingan
+## 6. Ringkasan Perbandingan
 
 | Metode | Formula Inti | Butuh Prior? | Titik Awal | Bisa Divergen? |
 |---|---|---|---|---|
-| MLE | $\arg\max_\theta f(\mathbf u\mid\theta)$ | Tidak | $\mathbf 0$ | Ya ([#1.2.3](#123-demo-3--kasus-divergen-all-correct)) |
+| MLE | $\arg\max_\theta f(\mathbf u\mid\theta)$ | Tidak | $\mathbf 0$ | Ya ([#5.2.3](#323-demo-3--kasus-divergen-all-correct)) |
 | MAP | $\arg\max_\theta f(\theta)L(\theta)$ | Ya | $\boldsymbol\mu$ (prior mean) | Tidak (prior proper) |
 | EAP | $\dfrac{\int\theta f(\theta)L(\theta)d\theta}{\int f(\theta)L(\theta)d\theta}$ | Ya (selalu $N(\mathbf0,\sigma^2\mathbf I)$, lihat [#3.1](#31-teori)) | N/A (bukan iteratif) | Tidak |
 
 **Hasil numerik pada dataset identik** (7 item, pola respons campuran — lihat
-[#1.2.2](#122-demo-2--multidimensional-k3-7-item)):
+[#5.2.2](#322-demo-2--multidimensional-k3-7-item)):
 
 | Metode | $\hat\theta_{verbal}$ | $\hat\theta_{numeric}$ | $\hat\theta_{reasoning}$ |
 |---|---|---|---|
@@ -1556,7 +1638,7 @@ Walaupun $L$ bisa naik monoton menuju 1 (pola semua-benar), **prior $\pi$ menuru
 | MAP ($\Sigma=I$) | 0.0105 | -0.3656 | 0.1340 |
 | EAP ($pts=21$) | 0.0322 | -0.3639 | 0.1824 |
 
-**Hasil numerik pada dataset all-correct (kasus divergen MLE)** — lihat [#1.2.3](#123-demo-3--kasus-divergen-all-correct):
+**Hasil numerik pada dataset all-correct (kasus divergen MLE)** — lihat [#5.2.3](#323-demo-3--kasus-divergen-all-correct):
 
 | Metode | $\hat\theta$ | $\|\hat\theta\|$ |
 |---|---|---|
@@ -1593,7 +1675,7 @@ Assessment and Evaluation, University of Maryland. Full text gratis (ERIC ED4582
 https://files.eric.ed.gov/fulltext/ED458219.pdf (mirror: https://www.ime.unicamp.br/~cnaber/Baker_Book.pdf).
 Sumber untuk Bab 5 "Estimating an Examinee's Ability" (p.85-90): formula iteratif MLE univariat
 Eq.[5-1] (p.86), contoh tiga-item lengkap dengan nilai *a priori* (p.87), dan tabel iterasi
-1-2 yang direproduksi persis di [#1.2.1](#121-demo-1--reproduksi-baker-2001-k1) (p.88). Sama seperti [2] pada
+1-2 yang direproduksi persis di [#3.2.1](#321-demo-1--reproduksi-baker-2001-k1) (p.88). Sama seperti [2] pada
 [item_selection_summary.md](/posts/cat/item-selection-criteria-mcat#referensi) (di sana dipakai untuk Bab 6
 "The Information Function", di sini untuk Bab 5).
 
@@ -1604,7 +1686,7 @@ https://www.jstatsoft.org/index.php/jss/article/view/v048i08/600 (landing page:
 https://www.jstatsoft.org/v48/i08/). Sumber utama #2.2 "Ability estimation" (p.4-6): definisi ML
 (Eq.2-4, p.4), Bayes Modal/MAP (Eq.5-6, p.4-5), Jeffreys' prior (Eq.7-9, p.5, tidak dipakai kode
 produksi), EAP (Eq.10-11, p.5-6), dan Weighted Likelihood/Warm estimator (Eq.12-14, p.6, tidak
-diimplementasikan produksi — dicatat sebagai pembanding di [#4](#4-ringkasan-perbandingan)).
+diimplementasikan produksi — dicatat sebagai pembanding di [#4](#6-ringkasan-perbandingan)).
 
 **[4]** Mislevy, R. J. (1986). Bayes modal estimation in item response models. *Psychometrika*,
 51(2), 177–195. https://doi.org/10.1007/BF02293979 — Sumber asli/historis estimasi Bayes
@@ -1636,10 +1718,10 @@ bukan rumusnya secara langsung).
 | Formula | Dipakai di metode | Sumber |
 |---|---|---|
 | $f(\mathbf u\mid\theta)=\prod P_i^{u_i}Q_i^{1-u_i}$, $\hat\theta=\arg\max f$ | MLE (dasar ketiganya) | [1] Eq.2–3, p.276 |
-| $\nabla\log f(\theta)=\sum a_i(u_i-P_i)P'_i/(P_iQ_i)$ | MLE, MAP (bagian likelihood) | Diturunkan sendiri di [#0.1](#01-pembuktian-skor-gradien-log-likelihood) dari [1] Eq.2-3 |
-| $\mathbf I_i(\theta)=w\cdot\mathbf a_i\mathbf a_i^\top$ (Fisher scoring) | MLE, MAP (Hessian) | [1] Eq.4, p.276; dibuktikan identik di [#0.2](#02-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring) |
+| $\nabla\log f(\theta)=\sum a_i(u_i-P_i)P'_i/(P_iQ_i)$ | MLE, MAP (bagian likelihood) | Diturunkan sendiri di [#4.1](#21-pembuktian-skor-gradien-log-likelihood) dari [1] Eq.2-3 |
+| $\mathbf I_i(\theta)=w\cdot\mathbf a_i\mathbf a_i^\top$ (Fisher scoring) | MLE, MAP (Hessian) | [1] Eq.4, p.276; dibuktikan identik di [#4.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring) |
 | $\hat\theta_{s+1}=\hat\theta_s+[\Sigma a(u-P)]/[\Sigma a^2PQ]$ | MLE (univariat) | [2] Eq.[5-1], p.86 |
 | $\log g(\theta)=\log f(\theta)+\log L(\theta)$, $\hat\theta_{BM}=\arg\max g$ | MAP | [3] Eq.5, p.5; asal-usul [4] |
-| $\nabla\log g=\nabla\log f-\Sigma^{-1}(\theta-\mu)$, $H_{MAP}=I_S+\Sigma^{-1}$ | MAP | Diturunkan sendiri di [#2.1](#21-teori) dari [3] Eq.5 + kalkulus Gaussian multivariat |
+| $\nabla\log g=\nabla\log f-\Sigma^{-1}(\theta-\mu)$, $H_{MAP}=I_S+\Sigma^{-1}$ | MAP | Diturunkan sendiri di [#4.1](#41-teori) dari [3] Eq.5 + kalkulus Gaussian multivariat |
 | $\hat\theta_{EAP}=\int\theta f L\,d\theta/\int fL\,d\theta$ | EAP | [3] Eq.10, p.5; asal-usul [5] |
 | Grid kuadratur multi-indeks $k$-dimensi | EAP | Teknik dibandingkan dengan [6] Eq.6, p.5 |

@@ -56,7 +56,7 @@ $$
 d_i = -\sum_{k=1}^{m} a_{ik}\, b_{ik}
 $$
 
-— and explicitly warn (p.2) that $d_i$ **"is not a difficulty parameter in the same sense as the $b_i$ parameter is in the unidimensional model."** This matches how the sibling estimation notes convert Baker's (2001) unidimensional $(a,b,c)$ example into production's $(a,d,c)$ parameterization via $d=-ab$ (see [estimation_summary.md §1.2.1](/posts/cat/ability-estimation-mcat#121-demo-1--reproduksi-baker-2001-k1)).
+— and explicitly warn (p.2) that $d_i$ **"is not a difficulty parameter in the same sense as the $b_i$ parameter is in the unidimensional model."** This matches how the sibling estimation notes convert Baker's (2001) unidimensional $(a,b,c)$ example into production's $(a,d,c)$ parameterization via $d=-ab$ (see [estimation_summary.md §1.2.1](/posts/cat/ability-estimation-mcat#321-demo-1--reproduksi-baker-2001-k1)).
 
 **Variable Notes:**
 | Symbol | Description |
@@ -157,7 +157,7 @@ flowchart TD
 
 Before any item is administered, the system establishes:
 
-- **Prior ability distribution:** $\boldsymbol{\theta}_0 \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$, typically $\boldsymbol{\mu}_0 = \mathbf{0}$, $\boldsymbol{\Sigma}_0 = \mathbf{I}_K$ (identity matrix). The multivariate-normal prior is the standard choice discussed in Magis & Raîche (2012, §2.2, p.4) [3] — *"the most common choice is the normal distribution"* — and used directly in production (`prior_cov_diag`, see [estimation_summary.md §2.1](/posts/cat/ability-estimation-mcat#21-teori)).
+- **Prior ability distribution:** $\boldsymbol{\theta}_0 \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$, typically $\boldsymbol{\mu}_0 = \mathbf{0}$, $\boldsymbol{\Sigma}_0 = \mathbf{I}_K$ (identity matrix). The multivariate-normal prior is the standard choice discussed in Magis & Raîche (2012, §2.2, p.4) [3] — *"the most common choice is the normal distribution"* — and used directly in production (`prior_cov_diag`, see [estimation_summary.md §2.1](/posts/cat/ability-estimation-mcat#41-teori)).
 - **Item bank:** A calibrated pool $\mathcal{B}$ of $M$ items with known MIRT parameters $\{\mathbf{a}_i, d_i, c_i\}$ per the model in [#2.2](#22-multidimensional-item-response-model).
 - **Starting ability estimate:** $\hat{\boldsymbol{\theta}}^{(0)} = \boldsymbol{\mu}_0$
 
@@ -252,7 +252,7 @@ $$
 \mathbf{s}(\boldsymbol{\theta}) = \nabla_{\boldsymbol{\theta}} \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) = \sum_{t=1}^{n} \frac{x_{i_t} - P_{i_t}(\boldsymbol{\theta})}{P_{i_t}(\boldsymbol{\theta}) Q_{i_t}(\boldsymbol{\theta})} \cdot P'_{i_t}(\boldsymbol{\theta}) \cdot \mathbf{a}_{i_t}
 $$
 
-Solved via Newton-Raphson iteration. The multivariate form below is the direct $K$-dimensional generalization of the univariate Eq.[5-1] given by Baker (2001, p.86) [2] — reproduced with a full worked 3-item numeric example on p.87–88 of [2] and matched to production output in [estimation_summary.md §1.2.1](/posts/cat/ability-estimation-mcat#121-demo-1--reproduksi-baker-2001-k1):
+Solved via Newton-Raphson iteration. The multivariate form below is the direct $K$-dimensional generalization of the univariate Eq.[5-1] given by Baker (2001, p.86) [2] — reproduced with a full worked 3-item numeric example on p.87–88 of [2] and matched to production output in [estimation_summary.md §1.2.1](/posts/cat/ability-estimation-mcat#321-demo-1--reproduksi-baker-2001-k1):
 
 $$
 \hat{\boldsymbol{\theta}}^{(r+1)} = \hat{\boldsymbol{\theta}}^{(r)} + \left[\mathbf{I}_{(n)}(\hat{\boldsymbol{\theta}}^{(r)})\right]^{-1} \mathbf{s}(\hat{\boldsymbol{\theta}}^{(r)})
@@ -274,7 +274,7 @@ $$
 \hat{\boldsymbol{\theta}}_{\text{MAP}} = \underset{\boldsymbol{\theta}}{\arg\max} \left[ \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) + \ln g(\boldsymbol{\theta}) \right]
 $$
 
-With a multivariate normal prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$ (standard quadratic log-density; algebra re-derived in [estimation_summary.md §2.1](/posts/cat/ability-estimation-mcat#21-teori)):
+With a multivariate normal prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$ (standard quadratic log-density; algebra re-derived in [estimation_summary.md §2.1](/posts/cat/ability-estimation-mcat#41-teori)):
 
 $$
 \ln g(\boldsymbol{\theta}) = -\frac{1}{2}(\boldsymbol{\theta} - \boldsymbol{\mu}_0)^{\top} \boldsymbol{\Sigma}_0^{-1} (\boldsymbol{\theta} - \boldsymbol{\mu}_0) + \text{const}
@@ -357,7 +357,7 @@ $$
 i^* = \underset{i \in \mathcal{B}_n}{\arg\min} \; \text{tr}\left[\left(\mathbf{I}_{(n-1)}(\hat{\boldsymbol{\theta}}) + \mathbf{I}_i(\hat{\boldsymbol{\theta}})\right)^{-1}\right]
 $$
 
-Minimizes the sum of posterior variances across all $K$ dimensions — Mulder & van der Linden (2009, Eq.16, §4.1.2, p.±282–284) [1] define A-optimality precisely as the criterion that **"minimize[s] the sum of the (asymptotic) sampling variances of the MLEs of the abilities,"** equivalent to the trace form above. The historical origin usually cited for this criterion in MCAT is van der Linden (1999) [15]; that paper itself is paywalled in every channel checked, so the formula here is sourced from [1] instead, per the same verification approach used in [item_selection_summary.md §2.1](/posts/cat/item-selection-criteria-mcat#21-teori).
+Minimizes the sum of posterior variances across all $K$ dimensions — Mulder & van der Linden (2009, Eq.16, §4.1.2, p.±282–284) [1] define A-optimality precisely as the criterion that **"minimize[s] the sum of the (asymptotic) sampling variances of the MLEs of the abilities,"** equivalent to the trace form above. The historical origin usually cited for this criterion in MCAT is van der Linden (1999) [15]; that paper itself is paywalled in every channel checked, so the formula here is sourced from [1] instead, per the same verification approach used in [item_selection_summary.md §2.1](/posts/cat/item-selection-criteria-mcat#41-teori).
 
 **Variable Notes:**
 | Symbol | Description |
