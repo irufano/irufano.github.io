@@ -18,6 +18,7 @@ import { remarkPromoteDisplayMath } from './remark-promote-display-math';
 import { rehypeCallouts } from './rehype-callouts';
 import { rehypeWrapTables } from './rehype-wrap-tables';
 import { rehypeToc, type TocItem } from './rehype-toc';
+import { rehypeHeadingLinks } from './rehype-heading-links';
 
 export type { TocItem };
 
@@ -40,6 +41,7 @@ const processor = unified()
 	.use(rehypeCallouts)
 	.use(rehypeWrapTables)
 	.use(rehypeToc)
+	.use(rehypeHeadingLinks)
 	.use(rehypeStringify);
 
 export async function renderMarkdown(markdown: string): Promise<RenderedMarkdown> {

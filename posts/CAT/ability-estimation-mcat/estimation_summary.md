@@ -384,7 +384,7 @@ $$
 $$
 
 Untuk M2PL univariat ($c=0$, $k=1$), $\nabla\log f=\sum a_i(u_i-P_i)$ ([#4.1](#21-pembuktian-skor-gradien-log-likelihood)) dan
-$\mathbf{I}_S=\sum a_i^2P_iQ_i$ ([#4.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring)) — Eq.[5-1] Baker **adalah** Fisher scoring
+$\mathbf{I}_S=\sum a_i^2P_iQ_i$ — Eq.[5-1] Baker **adalah** Fisher scoring
 $\hat\theta_{s+1}=\hat\theta_s+\mathbf{I}_S^{-1}\nabla\log f$ pada kasus 1-dimensi, dituliskan
 dengan notasi $(a,b,c)$ alih-alih $(a,d,c)$ (lihat [#3.2.1](#321-demo-1--reproduksi-baker-2001-k1) untuk konversi $d=-ab$).
 
@@ -812,7 +812,7 @@ Ini menunjukkan pentingnya **pola respons yang beragam** untuk estimasi MLE yang
 - **Divergen** bila pola respons dapat dipisahkan sempurna oleh arah linear tertentu dari
   $\mathbf{a}_i$ — dibuktikan langsung di [#3.2.3](#323-demo-3--kasus-divergen-all-correct), bukan hanya kasus trivial
   all-correct/all-incorrect. Risiko ini lebih tinggi di awal tes (item sedikit) — persis mengapa
-  MCAT umumnya memakai MAP di round-round awal (lihat [#2](#4-maximum-a-posteriori-map--bayes-modal)).
+  MCAT umumnya memakai MAP di round-round awal.
 - Tidak ada mekanisme built-in untuk mencegah estimasi ekstrem, sehingga kasus divergen menghasilkan nilai besar tak-berguna (mis. $\|\hat\theta\|=24.43$ di [#3.2.3](#323-demo-3--kasus-divergen-all-correct)).
 - Butuh minimal beberapa item dengan variasi respons (benar & salah) untuk estimasi yang stabil —
   tidak cocok dipakai sebagai estimator tunggal di 1-2 round pertama CAT.

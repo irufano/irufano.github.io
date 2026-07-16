@@ -11,7 +11,7 @@ tags:
 image: "https://www.assessmentworkshop.com/wp-content/uploads/2022/04/CAT-Infographic.png"
 ---
 
-> **Abstract:** Multidimensional Computer Adaptive Testing (MCAT) extends the classical unidimensional CAT framework to simultaneously estimate multiple latent traits. This document details the theoretical foundations, algorithmic procedures, item selection strategies, ability estimation methods, and stopping rules that govern the MCAT process. **Verification note:** every formula below was checked against a freely-downloadable source (open-access journal, ERIC, institutional repository, or an author's self-archived copy — never a paywalled PDF taken on faith). Where only a paywalled primary source exists, this is stated explicitly and the formula is instead verified through a free source that reproduces it verbatim, per the citation-mapping table in [References](#references). Two sibling documents in this repository go further for the subset of formulas they cover — they re-derive the algebra by hand and cross-check the result against the actual production Rust code: [estimation_summary.md](/posts/cat/ability-estimation-mcat) (MLE/MAP/EAP) and [item_selection_summary.md](/posts/cat/item-selection-criteria-mcat) (D-optimal/A-optimal/KL-information). This document cross-links to both wherever the topic overlaps, and corrects two errors found in the original draft (a mis-attributed MPI formula in [#8.2](#82-maximum-priority-index-mpi), and a KL-criterion formula that did not match any accessible source, fixed in [#6.3](#63-kullback-leibler-information-kl-criterion)).
+> **Abstract:** Multidimensional Computer Adaptive Testing (MCAT) extends the classical unidimensional CAT framework to simultaneously estimate multiple latent traits. This document details the theoretical foundations, algorithmic procedures, item selection strategies, ability estimation methods, and stopping rules that govern the MCAT process. **Verification note:** every formula below was checked against a freely-downloadable source (open-access journal, ERIC, institutional repository, or an author's self-archived copy — never a paywalled PDF taken on faith). Where only a paywalled primary source exists, this is stated explicitly and the formula is instead verified through a free source that reproduces it verbatim, per the citation-mapping table in [References](#references). Two sibling documents in this repository go further for the subset of formulas they cover — they re-derive the algebra by hand and cross-check the result against the actual production Rust code: estimation_summary.md (MLE/MAP/EAP) and item_selection_summary.md (D-optimal/A-optimal/KL-information). This document cross-links to both wherever the topic overlaps, and corrects two errors found in the original draft (a mis-attributed MPI formula in [#8.2](#82-maximum-priority-index-mpi), and a KL-criterion formula that did not match any accessible source, fixed in [#6.3](#63-kullback-leibler-information-kl-criterion)).
 
 ---
 
@@ -56,7 +56,7 @@ $$
 d_i = -\sum_{k=1}^{m} a_{ik}\, b_{ik}
 $$
 
-— and explicitly warn (p.2) that $d_i$ **"is not a difficulty parameter in the same sense as the $b_i$ parameter is in the unidimensional model."** This matches how the sibling estimation notes convert Baker's (2001) unidimensional $(a,b,c)$ example into production's $(a,d,c)$ parameterization via $d=-ab$ (see [estimation_summary.md §1.2.1](/posts/cat/ability-estimation-mcat#321-demo-1--reproduksi-baker-2001-k1)).
+— and explicitly warn (p.2) that $d_i$ **"is not a difficulty parameter in the same sense as the $b_i$ parameter is in the unidimensional model."** This matches how the sibling estimation notes convert Baker's (2001) unidimensional $(a,b,c)$ example into production's $(a,d,c)$ parameterization via $d=-ab$ (see estimation_summary.md §1.2.1).
 
 **Variable Notes:**
 | Symbol | Description |
@@ -67,7 +67,7 @@ $$
 | $d_i$ | Scalar intercept for item $i$ — **not** a unidimensional-style difficulty; $d_i=-\sum_k a_{ik}b_{ik}$ [4, Eq.3, p.1] |
 | $\mathbf{a}_i^{\top} \boldsymbol{\theta}_j$ | Dot product: $\sum_{k=1}^{K} a_{ik} \theta_{jk}$ — the *linear predictor* once $d_i$ is added |
 
-For the **Multidimensional Three-Parameter Logistic (M3PL)** model with guessing — verified via Mulder & van der Linden (2009, Eq.1, p.275) [1], which is the same equation used in [item_selection_summary.md §0](/posts/cat/item-selection-criteria-mcat#model--notasi-dasar-dipakai-oleh-ketiga-metode):
+For the **Multidimensional Three-Parameter Logistic (M3PL)** model with guessing — verified via Mulder & van der Linden (2009, Eq.1, p.275) [1], which is the same equation used in item_selection_summary.md §0:
 
 $$
 P(X_{ij} = 1 \mid \boldsymbol{\theta}_j) = c_i + (1 - c_i) \cdot \frac{\exp(\mathbf{a}_i^{\top} \boldsymbol{\theta}_j + d_i)}{1 + \exp(\mathbf{a}_i^{\top} \boldsymbol{\theta}_j + d_i)}
@@ -94,7 +94,7 @@ $$
 P'_i(\boldsymbol{\theta}) = \frac{\partial P_i(\boldsymbol{\theta})}{\partial (\mathbf{a}_i^{\top} \boldsymbol{\theta})}
 $$
 
-For the M2PL case ($c_i=0$) this reduces to $w_i = P_i(\boldsymbol\theta)Q_i(\boldsymbol\theta)$, i.e. $\mathbf I_i(\boldsymbol\theta)=P_iQ_i\,\mathbf a_i\mathbf a_i^\top$ — the algebraic reduction is carried out in full in [item_selection_summary.md §0](/posts/cat/item-selection-criteria-mcat#model--notasi-dasar-dipakai-oleh-ketiga-metode) and cross-checked against Baker (2001, Eq.6-3/6-5, p.109/111) [2], which is free on ERIC. Mulder & van der Linden (2009, p.276) [1] additionally state explicitly that **"the matrix has rank one"** for any $\boldsymbol\theta$ — a fact with direct consequences for the degenerate early rounds of D-optimal and A-optimal item selection discussed in [#6.1](#61-maximum-determinant-d-optimality)/[#6.2](#62-minimum-trace-of-posterior-covariance-a-optimality).
+For the M2PL case ($c_i=0$) this reduces to $w_i = P_i(\boldsymbol\theta)Q_i(\boldsymbol\theta)$, i.e. $\mathbf I_i(\boldsymbol\theta)=P_iQ_i\,\mathbf a_i\mathbf a_i^\top$ — the algebraic reduction is carried out in full in item_selection_summary.md §0 and cross-checked against Baker (2001, Eq.6-3/6-5, p.109/111) [2], which is free on ERIC. Mulder & van der Linden (2009, p.276) [1] additionally state explicitly that **"the matrix has rank one"** for any $\boldsymbol\theta$ — a fact with direct consequences for the degenerate early rounds of D-optimal and A-optimal item selection discussed in [#6.1](#61-maximum-determinant-d-optimality)/[#6.2](#62-minimum-trace-of-posterior-covariance-a-optimality).
 
 > **Historical cross-check:** McKinley & Reckase (1983, Eq.28–29, p.8) [4] independently give a *scalar* "directional information" for the 2-dimensional case, $I(\theta,\phi)=P Q(a_1\cos\phi + a_2\sin\phi)^2$, i.e. the quadratic form $\mathbf v(\phi)^\top \mathbf I_i(\boldsymbol\theta)\,\mathbf v(\phi)$ with $\mathbf v(\phi)=(\cos\phi,\sin\phi)^\top$ evaluated at a fixed direction $\phi$. This confirms the matrix form above is a direct generalization of the earliest (1983) published multidimensional information formula, not a later reinterpretation.
 
@@ -114,7 +114,7 @@ $$
 \mathbf{I}_{(n)}(\boldsymbol{\theta}) = \sum_{i=1}^{n} \mathbf{I}_i(\boldsymbol{\theta})
 $$
 
-This additivity, combined with the rank-1 property above, is why $\mathbf I_{(n)}$ needs at least $K$ items along linearly-independent discrimination directions before it becomes invertible — worked through numerically in [item_selection_summary.md §1.2.1](/posts/cat/item-selection-criteria-mcat#121-case-degenerate) and [§2.2.1](/posts/cat/item-selection-criteria-mcat#221-case-degenerate).
+This additivity, combined with the rank-1 property above, is why $\mathbf I_{(n)}$ needs at least $K$ items along linearly-independent discrimination directions before it becomes invertible — worked through numerically in item_selection_summary.md §1.2.1 and §2.2.1.
 
 ---
 
@@ -157,7 +157,7 @@ flowchart TD
 
 Before any item is administered, the system establishes:
 
-- **Prior ability distribution:** $\boldsymbol{\theta}_0 \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$, typically $\boldsymbol{\mu}_0 = \mathbf{0}$, $\boldsymbol{\Sigma}_0 = \mathbf{I}_K$ (identity matrix). The multivariate-normal prior is the standard choice discussed in Magis & Raîche (2012, §2.2, p.4) [3] — *"the most common choice is the normal distribution"* — and used directly in production (`prior_cov_diag`, see [estimation_summary.md §2.1](/posts/cat/ability-estimation-mcat#41-teori)).
+- **Prior ability distribution:** $\boldsymbol{\theta}_0 \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$, typically $\boldsymbol{\mu}_0 = \mathbf{0}$, $\boldsymbol{\Sigma}_0 = \mathbf{I}_K$ (identity matrix). The multivariate-normal prior is the standard choice discussed in Magis & Raîche (2012, §2.2, p.4) [3] — *"the most common choice is the normal distribution"* — and used directly in production (`prior_cov_diag`, see estimation_summary.md #4.1).
 - **Item bank:** A calibrated pool $\mathcal{B}$ of $M$ items with known MIRT parameters $\{\mathbf{a}_i, d_i, c_i\}$ per the model in [#2.2](#22-multidimensional-item-response-model).
 - **Starting ability estimate:** $\hat{\boldsymbol{\theta}}^{(0)} = \boldsymbol{\mu}_0$
 
@@ -189,7 +189,7 @@ Item $i^*$ is presented to the examinee who provides response $x_{i^*} \in \{0, 
 
 The ability vector is updated using accumulated response vector $\mathbf{x}^{(n)} = (x_{i_1}, \ldots, x_{i_n})^{\top}$.
 
-**Log-likelihood function**, identical to the $f(\mathbf u\mid\boldsymbol\theta)$ likelihood in Mulder & van der Linden (2009, Eq.2–3, p.276) [1] once logged — the same identity re-derived from first principles (and matched to production `mle.rs`) in [estimation_summary.md §0](/posts/cat/ability-estimation-mcat#model--notasi-dasar-dipakai-oleh-ketiga-metode):
+**Log-likelihood function**, identical to the $f(\mathbf u\mid\boldsymbol\theta)$ likelihood in Mulder & van der Linden (2009, Eq.2–3, p.276) [1] once logged — the same identity re-derived from first principles (and matched to production `mle.rs`) in estimation_summary.md:
 
 $$
 \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) = \sum_{t=1}^{n} \left[ x_{i_t} \ln P_{i_t}(\boldsymbol{\theta}) + (1 - x_{i_t}) \ln Q_{i_t}(\boldsymbol{\theta}) \right]
@@ -219,7 +219,7 @@ Evaluate whether stopping criteria are satisfied (see [#7](#7-stopping-rules)). 
 
 ### Step 7: Score Reporting
 
-Provide the final estimate $\hat{\boldsymbol{\theta}}_{\text{final}}$ along with the **standard error vector**. This is a direct corollary of the asymptotic-normality result $\hat{\boldsymbol\theta}\sim\mathcal N\!\big(\boldsymbol\theta_0,\mathbf I_{(n)}^{-1}(\boldsymbol\theta_0)\big)$ given in Mulder & van der Linden (2009, Eq.7, p.277) [1] — the multivariate generalization of the Cramér–Rao lower bound (also stated in [estimation_summary.md §0.2](/posts/cat/ability-estimation-mcat#02-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring)):
+Provide the final estimate $\hat{\boldsymbol{\theta}}_{\text{final}}$ along with the **standard error vector**. This is a direct corollary of the asymptotic-normality result $\hat{\boldsymbol\theta}\sim\mathcal N\!\big(\boldsymbol\theta_0,\mathbf I_{(n)}^{-1}(\boldsymbol\theta_0)\big)$ given in Mulder & van der Linden (2009, Eq.7, p.277) [1] — the multivariate generalization of the Cramér–Rao lower bound (also stated in estimation_summary.md):
 
 $$
 \text{SE}(\hat{\boldsymbol{\theta}}) = \sqrt{\text{diag}\left[\mathbf{I}_{(n)}^{-1}(\hat{\boldsymbol{\theta}})\right]}
@@ -236,7 +236,7 @@ $$
 
 ## 5. Ability Estimation Methods
 
-> This section summarizes the three estimators. For full algebraic derivation (score function, Hessian, MAP shrinkage proof, EAP quadrature) and numerical reproduction against the actual production code (`mle.rs`, `map.rs`, `eap.rs`), see [estimation_summary.md](/posts/cat/ability-estimation-mcat) — the formulas below are the exact ones verified there.
+> This section summarizes the three estimators. For full algebraic derivation (score function, Hessian, MAP shrinkage proof, EAP quadrature) and numerical reproduction against the actual production code (`mle.rs`, `map.rs`, `eap.rs`), see estimation_summary.md — the formulas below are the exact ones verified there.
 
 ### 5.1 Maximum Likelihood Estimation (MLE)
 
@@ -246,13 +246,13 @@ $$
 \hat{\boldsymbol{\theta}}_{\text{MLE}} = \underset{\boldsymbol{\theta}}{\arg\max} \; \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)})
 $$
 
-The **score function** (gradient), re-derived algebraically from [#4 Step 4](#step-4-ability-re-estimation) in [estimation_summary.md §0.1](/posts/cat/ability-estimation-mcat#01-pembuktian-skor-gradien-log-likelihood):
+The **score function** (gradient), re-derived algebraically from [#4 Step 4](#step-4-ability-re-estimation) in estimation_summary.md:
 
 $$
 \mathbf{s}(\boldsymbol{\theta}) = \nabla_{\boldsymbol{\theta}} \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) = \sum_{t=1}^{n} \frac{x_{i_t} - P_{i_t}(\boldsymbol{\theta})}{P_{i_t}(\boldsymbol{\theta}) Q_{i_t}(\boldsymbol{\theta})} \cdot P'_{i_t}(\boldsymbol{\theta}) \cdot \mathbf{a}_{i_t}
 $$
 
-Solved via Newton-Raphson iteration. The multivariate form below is the direct $K$-dimensional generalization of the univariate Eq.[5-1] given by Baker (2001, p.86) [2] — reproduced with a full worked 3-item numeric example on p.87–88 of [2] and matched to production output in [estimation_summary.md §1.2.1](/posts/cat/ability-estimation-mcat#321-demo-1--reproduksi-baker-2001-k1):
+Solved via Newton-Raphson iteration. The multivariate form below is the direct $K$-dimensional generalization of the univariate Eq.[5-1] given by Baker (2001, p.86) [2] — reproduced with a full worked 3-item numeric example on p.87–88 of [2] and matched to production output in estimation_summary.md §1.2.1:
 
 $$
 \hat{\boldsymbol{\theta}}^{(r+1)} = \hat{\boldsymbol{\theta}}^{(r)} + \left[\mathbf{I}_{(n)}(\hat{\boldsymbol{\theta}}^{(r)})\right]^{-1} \mathbf{s}(\hat{\boldsymbol{\theta}}^{(r)})
@@ -264,7 +264,7 @@ $$
 | $r$ | Iteration index in Newton-Raphson |
 | $\mathbf{s}(\boldsymbol{\theta})$ | Score function (gradient of log-likelihood) |
 
-> ⚠️ **Limitation:** MLE is undefined/divergent when the response pattern is (quasi-)perfectly separable by some linear direction of the $\mathbf a_i$'s — not only in the trivial all-correct/all-incorrect case. Mulder & van der Linden (2009, p.276) [1] note directly: *"The likelihood function may not have a maximum ... or a local instead of a global maximum may be found."* This is reproduced experimentally (production code diverging to $\|\hat\theta\|\approx24$) in [estimation_summary.md §1.2.3](/posts/cat/ability-estimation-mcat#123-demo-3--kasus-divergen-all-correct).
+> ⚠️ **Limitation:** MLE is undefined/divergent when the response pattern is (quasi-)perfectly separable by some linear direction of the $\mathbf a_i$'s — not only in the trivial all-correct/all-incorrect case. Mulder & van der Linden (2009, p.276) [1] note directly: *"The likelihood function may not have a maximum ... or a local instead of a global maximum may be found."* This is reproduced experimentally (production code diverging to $\|\hat\theta\|\approx24$) in estimation_summary.md.
 
 ### 5.2 Maximum A Posteriori (MAP) Estimation
 
@@ -274,7 +274,7 @@ $$
 \hat{\boldsymbol{\theta}}_{\text{MAP}} = \underset{\boldsymbol{\theta}}{\arg\max} \left[ \ell(\boldsymbol{\theta} \mid \mathbf{x}^{(n)}) + \ln g(\boldsymbol{\theta}) \right]
 $$
 
-With a multivariate normal prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$ (standard quadratic log-density; algebra re-derived in [estimation_summary.md §2.1](/posts/cat/ability-estimation-mcat#41-teori)):
+With a multivariate normal prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{\mu}_0, \boldsymbol{\Sigma}_0)$ (standard quadratic log-density; algebra re-derived in estimation_summary.md #4.1):
 
 $$
 \ln g(\boldsymbol{\theta}) = -\frac{1}{2}(\boldsymbol{\theta} - \boldsymbol{\mu}_0)^{\top} \boldsymbol{\Sigma}_0^{-1} (\boldsymbol{\theta} - \boldsymbol{\mu}_0) + \text{const}
@@ -286,7 +286,7 @@ $$
 \hat{\boldsymbol{\theta}}^{(r+1)}_{\text{MAP}} = \hat{\boldsymbol{\theta}}^{(r)} + \left[\mathbf{I}_{(n)}(\hat{\boldsymbol{\theta}}^{(r)}) + \boldsymbol{\Sigma}_0^{-1}\right]^{-1} \left[\mathbf{s}(\hat{\boldsymbol{\theta}}^{(r)}) - \boldsymbol{\Sigma}_0^{-1}(\hat{\boldsymbol{\theta}}^{(r)} - \boldsymbol{\mu}_0)\right]
 $$
 
-Because $\boldsymbol\Sigma_0^{-1}\succeq0$ is always added to $\mathbf I_{(n)}(\boldsymbol\theta)\succeq0$, MAP information is always $\geq$ MLE information — which is why MAP shrinks toward $\boldsymbol\mu_0$ and never diverges for a proper prior, demonstrated numerically in [estimation_summary.md §2.2.3](/posts/cat/ability-estimation-mcat#223-demo-3--map-meregularisasi-kasus-divergen).
+Because $\boldsymbol\Sigma_0^{-1}\succeq0$ is always added to $\mathbf I_{(n)}(\boldsymbol\theta)\succeq0$, MAP information is always $\geq$ MLE information — which is why MAP shrinks toward $\boldsymbol\mu_0$ and never diverges for a proper prior, demonstrated numerically in estimation_summary.md §2.2.3.
 
 **Variable Notes:**
 | Symbol | Description |
@@ -316,7 +316,7 @@ $$
 \hat{\boldsymbol{\theta}}_{\text{EAP}} \approx \frac{\sum_{q} \boldsymbol{\theta}^{(q)} \cdot L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}^{(q)}) \cdot g(\boldsymbol{\theta}^{(q)}) \cdot w^{(q)}}{\sum_{q} L(\mathbf{x}^{(n)} \mid \boldsymbol{\theta}^{(q)}) \cdot g(\boldsymbol{\theta}^{(q)}) \cdot w^{(q)}}
 $$
 
-Bock & Mislevy (1982, p.433) [5] note that classical Gauss-Hermite quadrature is not strictly optimal here since *"this class does not include the likelihood functions in adaptive testing"* — they instead recommend evenly-spaced points across $\pm3$ to $\pm4$ standard deviations, which is exactly the grid construction used in production (`eap.rs`) and reproduced numerically in [estimation_summary.md §3.2.1](/posts/cat/ability-estimation-mcat#321-demo-1--reproduksi-1-dimensi-pts5).
+Bock & Mislevy (1982, p.433) [5] note that classical Gauss-Hermite quadrature is not strictly optimal here since *"this class does not include the likelihood functions in adaptive testing"* — they instead recommend evenly-spaced points across $\pm3$ to $\pm4$ standard deviations, which is exactly the grid construction used in production (`eap.rs`) and reproduced numerically in estimation_summary.md §3.2.1.
 
 **Variable Notes:**
 | Symbol | Description |
@@ -329,7 +329,7 @@ Bock & Mislevy (1982, p.433) [5] note that classical Gauss-Hermite quadrature is
 
 ## 6. Item Selection Criteria
 
-> This section summarizes the criteria. For full step-by-step numeric worked examples (per-item FIM, determinant/trace computation, degenerate-round analysis) against a shared 7-item bank, see [item_selection_summary.md](/posts/cat/item-selection-criteria-mcat) — the formulas below match it exactly.
+> This section summarizes the criteria. For full step-by-step numeric worked examples (per-item FIM, determinant/trace computation, degenerate-round analysis) against a shared 7-item bank, see item_selection_summary.md — the formulas below match it exactly.
 
 ### 6.1 Maximum Determinant (D-optimality)
 
@@ -349,7 +349,7 @@ $$
 | $\mathbf{I}_{(n-1)}(\hat{\boldsymbol{\theta}})$ | Cumulative FIM from items already administered, from [#2.3](#23-item-information-in-multiple-dimensions) |
 | $\mathbf{I}_i(\hat{\boldsymbol{\theta}})$ | FIM of the candidate item $i$ |
 
-**Interpretation:** maximizing the determinant minimizes the volume of the confidence ellipsoid of $\hat{\boldsymbol\theta}$ [1, p.277]. Because every single-item $\mathbf I_i(\boldsymbol\theta)$ is rank 1 [1, p.276], $\det$ is exactly $0$ until the cumulative FIM has accumulated rank $\geq2$ — this degenerate behavior in rounds 1–2 (with the resulting item selected purely by array order, not by any score) is demonstrated numerically in [item_selection_summary.md §1.2.1](/posts/cat/item-selection-criteria-mcat#121-case-degenerate).
+**Interpretation:** maximizing the determinant minimizes the volume of the confidence ellipsoid of $\hat{\boldsymbol\theta}$ [1, p.277]. Because every single-item $\mathbf I_i(\boldsymbol\theta)$ is rank 1 [1, p.276], $\det$ is exactly $0$ until the cumulative FIM has accumulated rank $\geq2$ — this degenerate behavior in rounds 1–2 (with the resulting item selected purely by array order, not by any score) is demonstrated numerically in item_selection_summary.md §1.2.1.
 
 ### 6.2 Minimum Trace of Posterior Covariance (A-optimality)
 
@@ -357,7 +357,7 @@ $$
 i^* = \underset{i \in \mathcal{B}_n}{\arg\min} \; \text{tr}\left[\left(\mathbf{I}_{(n-1)}(\hat{\boldsymbol{\theta}}) + \mathbf{I}_i(\hat{\boldsymbol{\theta}})\right)^{-1}\right]
 $$
 
-Minimizes the sum of posterior variances across all $K$ dimensions — Mulder & van der Linden (2009, Eq.16, §4.1.2, p.±282–284) [1] define A-optimality precisely as the criterion that **"minimize[s] the sum of the (asymptotic) sampling variances of the MLEs of the abilities,"** equivalent to the trace form above. The historical origin usually cited for this criterion in MCAT is van der Linden (1999) [15]; that paper itself is paywalled in every channel checked, so the formula here is sourced from [1] instead, per the same verification approach used in [item_selection_summary.md §2.1](/posts/cat/item-selection-criteria-mcat#41-teori).
+Minimizes the sum of posterior variances across all $K$ dimensions — Mulder & van der Linden (2009, Eq.16, §4.1.2, p.±282–284) [1] define A-optimality precisely as the criterion that **"minimize[s] the sum of the (asymptotic) sampling variances of the MLEs of the abilities,"** equivalent to the trace form above. The historical origin usually cited for this criterion in MCAT is van der Linden (1999) [15]; that paper itself is paywalled in every channel checked, so the formula here is sourced from [1] instead, per the same verification approach used in item_selection_summary.md #4.1.
 
 **Variable Notes:**
 | Symbol | Description |
@@ -365,11 +365,11 @@ Minimizes the sum of posterior variances across all $K$ dimensions — Mulder & 
 | $\text{tr}[\cdot]$ | Matrix trace operator (sum of diagonal elements) |
 | $\det[\cdot]$ | Matrix determinant (see [#6.1](#61-maximum-determinant-d-optimality)) |
 
-Because A-optimality requires the *entire* cumulative FIM to be invertible (full rank $K$, not merely rank $\geq2$ as for D-optimal), its degenerate period extends one round longer than D-optimal's — through round $K$ rather than round $2$; worked out in [item_selection_summary.md §2.2.1](/posts/cat/item-selection-criteria-mcat#221-case-degenerate).
+Because A-optimality requires the *entire* cumulative FIM to be invertible (full rank $K$, not merely rank $\geq2$ as for D-optimal), its degenerate period extends one round longer than D-optimal's — through round $K$ rather than round $2$; worked out in item_selection_summary.md §2.2.1.
 
 ### 6.3 Kullback-Leibler Information (KL-criterion)
 
-> **Correction:** the original draft of this section wrote the KL criterion as a literal multidimensional volume integral, $\int_{\mathcal V}\sum_x P\ln(P/P)\,d\boldsymbol\theta$, over a neighborhood $\mathcal V\subset\mathbb R^K$. No accessible source — Chang & Ying (1996) [10] (unidimensional origin), Han (2018) [11], or Sorrel et al. (2020) [12] (both free, both reproducing the formula verbatim) — defines it that way. All three instead integrate a **one-dimensional** interval around the current estimate. The corrected formula below matches [item_selection_summary.md §3.1](/posts/cat/item-selection-criteria-mcat#31-teori) exactly.
+> **Correction:** the original draft of this section wrote the KL criterion as a literal multidimensional volume integral, $\int_{\mathcal V}\sum_x P\ln(P/P)\,d\boldsymbol\theta$, over a neighborhood $\mathcal V\subset\mathbb R^K$. No accessible source — Chang & Ying (1996) [10] (unidimensional origin), Han (2018) [11], or Sorrel et al. (2020) [12] (both free, both reproducing the formula verbatim) — defines it that way. All three instead integrate a **one-dimensional** interval around the current estimate. The corrected formula below matches item_selection_summary.md §3.1 exactly.
 
 The pointwise KL divergence between two Bernoulli response distributions at $\theta$ and $\hat\theta$ [11, Eq.9, p.6][12, Eq.4, p.3]:
 
@@ -387,13 +387,13 @@ $$
 i^* = \underset{i \in \mathcal{B}_n}{\arg\max} \; \bar K_i(\hat\theta)
 $$
 
-Because the compensatory M2PL/M3PL model in [#2.2](#22-multidimensional-item-response-model) makes $P_i(\boldsymbol\theta)$ depend on $\boldsymbol\theta$ only through the scalar linear predictor $z=\mathbf a_i^\top\boldsymbol\theta+d_i$, the multidimensional-to-scalar reduction below is **exact, not an approximation** — proven in [item_selection_summary.md §3.1](/posts/cat/item-selection-criteria-mcat#31-teori):
+Because the compensatory M2PL/M3PL model in [#2.2](#22-multidimensional-item-response-model) makes $P_i(\boldsymbol\theta)$ depend on $\boldsymbol\theta$ only through the scalar linear predictor $z=\mathbf a_i^\top\boldsymbol\theta+d_i$, the multidimensional-to-scalar reduction below is **exact, not an approximation** — proven in item_selection_summary.md §3.1:
 
 $$
 K_i(\boldsymbol\theta \,\Vert\, \hat{\boldsymbol\theta}) = K_i(z \,\Vert\, \hat z)
 $$
 
-so the integral is evaluated in one-dimensional $z$-space regardless of $K$. Unlike D-optimal/A-optimal, this score never depends on $\mathbf I_{(n-1)}$, so it is never degenerate — usable from round 1 (see [item_selection_summary.md §3.2](/posts/cat/item-selection-criteria-mcat#32-perhitungan-manual-per-item--tidak-ada-kasus-degenerate)).
+so the integral is evaluated in one-dimensional $z$-space regardless of $K$. Unlike D-optimal/A-optimal, this score never depends on $\mathbf I_{(n-1)}$, so it is never degenerate — usable from round 1 (see item_selection_summary.md §3.2).
 
 **Variable Notes:**
 | Symbol | Description |
@@ -491,7 +491,7 @@ $$
 | $\|\cdot\|_2$ | Euclidean (L2) norm |
 | $\delta$ | Convergence threshold (e.g., 0.01) — **not** the same $\delta$ as the KL integration half-width in [#6.3](#63-kullback-leibler-information-kl-criterion) |
 
-> **Citation correction:** the original draft attributed this rule to Weiss (1982) [16]. No source checked (including [16] itself) documents this as a *stopping* rule specifically — it is, however, exactly the Newton-Raphson convergence check ($\|\Delta\hat{\boldsymbol\theta}\|<10^{-6}$) already used internally by the production MLE/MAP estimators (`mle.rs`, `map.rs`; see [estimation_summary.md §1.1](/posts/cat/ability-estimation-mcat#11-teori)). It is presented here as a standard numerical-convergence heuristic borrowed from that context, not as a literature-sourced CAT stopping rule.
+> **Citation correction:** the original draft attributed this rule to Weiss (1982) [16]. No source checked (including [16] itself) documents this as a *stopping* rule specifically — it is, however, exactly the Newton-Raphson convergence check ($\|\Delta\hat{\boldsymbol\theta}\|<10^{-6}$) already used internally by the production MLE/MAP estimators (`mle.rs`, `map.rs`; see estimation_summary.md §1.1). It is presented here as a standard numerical-convergence heuristic borrowed from that context, not as a literature-sourced CAT stopping rule.
 
 ### 7.4 Minimum-Maximum Length Rule (Hybrid)
 
@@ -652,7 +652,7 @@ $$
 
 ## References
 
-Each entry states, plainly, whether a free download was found for *this document's* research pass, and — when it was not — which free secondary source was used instead to verify the formula attributed to it. This mirrors the citation style of [item_selection_summary.md](/posts/cat/item-selection-criteria-mcat#referensi) and [estimation_summary.md](/posts/cat/ability-estimation-mcat#referensi), which this document cross-links throughout.
+Each entry states, plainly, whether a free download was found for *this document's* research pass, and — when it was not — which free secondary source was used instead to verify the formula attributed to it. This mirrors the citation style of item_selection_summary.md and estimation_summary.md, which this document cross-links throughout.
 
 **[1]** Mulder, J., & van der Linden, W. J. (2009). Multidimensional Adaptive Testing with Optimal Design Criteria for Item Selection. *Psychometrika*, 74(2), 273–296. https://doi.org/10.1007/s11336-008-9097-5 — **Free** (PubMed Central, open access): https://pmc.ncbi.nlm.nih.gov/articles/PMC2813188/. Primary source for: M2PL/M3PL model ([#2.2](#22-multidimensional-item-response-model), Eq.1, p.275), Fisher Information Matrix and its rank-1 property ([#2.3](#23-item-information-in-multiple-dimensions), Eq.4, p.276), MLE/log-likelihood ([#4 Step 4](#step-4-ability-re-estimation), [#5.1](#51-maximum-likelihood-estimation-mle), Eq.2–3, p.276), cumulative-FIM additivity and asymptotic normality ([#2.3](#23-item-information-in-multiple-dimensions), [#4 Step 7](#step-7-score-reporting), Eq.6–7, p.277), D-optimality ([#6.1](#61-maximum-determinant-d-optimality), Eq.8&13, p.277&280–282), A-optimality ([#6.2](#62-minimum-trace-of-posterior-covariance-a-optimality), Eq.16, p.±282–284).
 

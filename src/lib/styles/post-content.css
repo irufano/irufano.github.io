@@ -43,6 +43,28 @@
 	text-underline-offset: 3px;
 }
 
+/* ---------- heading anchor links ---------- */
+
+.prose :where(h1, h2, h3, h4, h5, h6) {
+	scroll-margin-top: 1.5rem;
+}
+
+.prose .heading-anchor {
+	margin-left: 0.4em;
+	color: var(--color-fg-muted);
+	text-decoration: none;
+	font-weight: 400;
+	opacity: 0;
+	transition: opacity 0.15s;
+}
+.prose :where(h1, h2, h3, h4, h5, h6):hover .heading-anchor,
+.prose .heading-anchor:focus-visible {
+	opacity: 1;
+}
+.prose .heading-anchor:hover {
+	color: var(--color-accent);
+}
+
 .prose .table-wrapper {
 	margin: 1.5em 0;
 	overflow-x: auto;

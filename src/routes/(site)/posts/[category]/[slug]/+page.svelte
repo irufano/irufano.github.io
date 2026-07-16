@@ -194,6 +194,28 @@
   });
 
   function handleArticleClick(event: MouseEvent) {
+    const anchor = (event.target as HTMLElement).closest<HTMLAnchorElement>(
+      ".heading-anchor",
+    );
+    if (anchor) {
+      if (
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+      const id = decodeURIComponent(anchor.hash.slice(1));
+      const target = document.getElementById(id);
+      if (!target) return;
+      event.preventDefault();
+      history.pushState(null, "", `#${id}`);
+      scrollToHeading(target, "smooth");
+      return;
+    }
+
     const btn = (event.target as HTMLElement).closest<HTMLButtonElement>(
       ".copy-code-btn",
     );
