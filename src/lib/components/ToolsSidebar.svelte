@@ -3,8 +3,8 @@
 	import LogoMark from './LogoMark.svelte';
 	import { TOOLS, groupToolsByCategory, CATEGORY_ICONS } from '$lib/tools';
 	import Wrench from 'lucide-svelte/icons/wrench';
-	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
-	import ChevronRight from 'lucide-svelte/icons/chevron-right';
+	import PanelLeftClose from 'lucide-svelte/icons/panel-left-close';
+	import PanelLeftOpen from 'lucide-svelte/icons/panel-left-open';
 
 	let {
 		open = false,
@@ -33,20 +33,39 @@
 	}
 </script>
 
-{#snippet sidebarContent(isCollapsed: boolean)}
-	<a
-		href="/"
-		class="flex items-center w-min border-border mx-4 my-4 {isCollapsed ? 'justify-center' : ''}"
-	>
-		<LogoMark size={20} />
-		<span
-			class="overflow-hidden whitespace-nowrap font-mono text-xl font-bold leading-none text-fg transition-all duration-200 {isCollapsed
-				? 'ml-0 max-w-0 opacity-0'
-				: 'ml-1.5 max-w-32 opacity-100'}"
+{#snippet sidebarContent(isCollapsed: boolean, showToggle: boolean)}
+	<div class="group relative flex items-center justify-between mx-4 my-4">
+		<a
+			href="/"
+			class="flex items-center w-min border-border ml-0.5 {isCollapsed
+				? 'transition-opacity duration-150 group-hover:opacity-0'
+				: ''}"
 		>
-			irufano
-		</span>
-	</a>
+			<LogoMark size={20} />
+			<span
+				class="overflow-hidden whitespace-nowrap font-mono text-xl font-bold leading-none text-fg transition-all duration-200 {isCollapsed
+					? 'ml-0 max-w-0 opacity-0'
+					: 'ml-1.5 max-w-32 opacity-100'}"
+			>
+				irufano
+			</span>
+		</a>
+		{#if showToggle}
+			<button
+				aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+				onclick={oncollapse}
+				class="z-10 flex h-5 w-5 shrink-0 cursor-pointer items-center justify-center rounded-none border-border bg-bg text-fg-muted transition hover:border-accent hover:text-fg {isCollapsed
+					? 'absolute inset-0 m-auto opacity-0 group-hover:opacity-100'
+					: ''}"
+			>
+				{#if isCollapsed}
+					<PanelLeftOpen class="h-6 w-6" />
+				{:else}
+					<PanelLeftClose class="h-6 w-6" />
+				{/if}
+			</button>
+		{/if}
+	</div>
 	<div class="border-b border-border"></div>
 	<nav class="sidebar-scroll flex flex-1 flex-col gap-1 overflow-y-auto p-3 font-mono text-sm">
 		<a
@@ -55,9 +74,8 @@
 			onmouseenter={(e) => showTooltip(e, 'All Tools')}
 			onmouseleave={hideTooltip}
 			title="All Tools"
-			class="flex items-center rounded-none px-3 py-2 font-semibold transition {isCollapsed
-				? 'justify-center'
-				: ''} {page.url.pathname === '/tools'
+			class="flex items-center rounded-none px-3 py-2 font-semibold transition {page.url.pathname ===
+			'/tools'
 				? 'bg-accent/10 text-accent'
 				: 'text-fg-muted hover:bg-bg-alt hover:text-fg'}"
 		>
@@ -73,9 +91,7 @@
 
 		{#each groupToolsByCategory(TOOLS) as group (group.category)}
 			{@const CategoryIcon = CATEGORY_ICONS[group.category]}
-			<div
-				class="relative flex items-center px-3 pb-1 pt-6 {isCollapsed ? 'justify-center' : ''}"
-			>
+			<div class="relative flex items-center px-3 pb-1 pt-5">
 				<p
 					class="overflow-hidden whitespace-nowrap text-xs font-semibold uppercase tracking-wide text-fg transition-all duration-200 {isCollapsed
 						? 'max-w-0 opacity-0'
@@ -89,9 +105,9 @@
 					title={group.category}
 					onmouseenter={(e) => showTooltip(e, group.category)}
 					onmouseleave={hideTooltip}
-					class="flex shrink-0 items-center justify-center overflow-hidden rounded-none text-accent/40 transition-all duration-200 {isCollapsed
-						? 'h-4 w-4 p-0 opacity-100'
-						: 'h-0 w-0 p-0 opacity-0'}"
+					class="absolute left-3 flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-none text-accent/40 transition-opacity duration-200 {isCollapsed
+						? 'opacity-100'
+						: 'pointer-events-none opacity-0'}"
 				>
 					<CategoryIcon class="h-3.5 w-3.5 shrink-0" />
 				</div>
@@ -105,9 +121,7 @@
 					onmouseenter={(e) => showTooltip(e, tool.label)}
 					onmouseleave={hideTooltip}
 					title={tool.label}
-					class="flex items-center rounded-none px-3 py-2 transition {isCollapsed
-						? 'justify-center'
-						: ''} {page.url.pathname === href
+					class="flex items-center rounded-none px-3 py-2 transition {page.url.pathname === href
 						? 'bg-accent/10 text-accent'
 						: 'text-fg-muted hover:bg-bg-alt hover:text-fg'}"
 				>
@@ -130,19 +144,7 @@
 		? 'w-16'
 		: 'w-64'}"
 >
-	{@render sidebarContent(collapsed)}
-
-	<button
-		aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-		onclick={oncollapse}
-		class="z-50 absolute -right-2.5 top-4 cursor-pointer hidden h-5 w-5 items-center justify-center rounded-none border border-border bg-bg text-fg-muted transition hover:border-accent hover:text-fg lg:flex"
-	>
-		{#if collapsed}
-			<ChevronRight class="h-3.5 w-3.5" />
-		{:else}
-			<ChevronLeft class="h-3.5 w-3.5" />
-		{/if}
-	</button>
+	{@render sidebarContent(collapsed, true)}
 </aside>
 
 {#if tooltipText}
@@ -162,7 +164,7 @@
 			onclick={onnavigate}
 		></button>
 		<aside class="relative flex h-full w-64 flex-col border-r border-border bg-bg">
-			{@render sidebarContent(false)}
+			{@render sidebarContent(false, false)}
 		</aside>
 	</div>
 {/if}

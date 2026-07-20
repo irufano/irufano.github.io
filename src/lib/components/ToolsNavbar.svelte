@@ -19,7 +19,7 @@
 
 <header class="border-b border-border bg-bg/80 px-4 py-3 backdrop-blur sm:px-6">
 	<div class="flex w-full items-center justify-between gap-2">
-		<div class="flex min-w-0 items-center gap-3 ml-2">
+		<div class="flex min-w-0 items-center gap-3">
 			<button
 				aria-label="Toggle tools menu"
 				onclick={onmenu}
