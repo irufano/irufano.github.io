@@ -1,8 +1,25 @@
-<script lang="ts">
-	import type { TocItem } from '$lib/markdown';
-	import { TOC_ACTIVE_OFFSET, scrollToHeading } from '$lib/utils/scroll';
+<script module lang="ts">
+	export interface MdTocItem {
+		id: string;
+		text: string;
+		html: string;
+		depth: 2 | 3 | 4 | 5 | 6;
+	}
+</script>
 
-	let { items }: { items: TocItem[] } = $props();
+<script lang="ts">
+	import { scrollToHeading } from '$lib/utils/scroll';
+
+	let { items, containerEl }: { items: MdTocItem[]; containerEl: HTMLElement | undefined } =
+		$props();
+
+	// How far (px) below the container's own top edge a heading must scroll
+	// before it counts as "active". Unlike the blog post's Toc.svelte, this
+	// container is a small scrollable box embedded mid-page rather than the
+	// page's own scroll region, so the threshold is anchored to the
+	// container's own bounding rect instead of a viewport-relative constant.
+	const ACTIVE_OFFSET = 8;
+
 	let activeId = $state<string | null>(null);
 	let listEl: HTMLElement | undefined = $state();
 	let isScrolling = $state(false);
@@ -25,22 +42,21 @@
 	});
 
 	$effect(() => {
-		if (!items.length) return;
+		if (!items.length || !containerEl) return;
+		const container = containerEl;
 		const headingEls = items
-			.map((item) => ({ id: item.id, el: document.getElementById(item.id) }))
+			.map((item) => ({
+				id: item.id,
+				el: container.querySelector<HTMLElement>(`#${CSS.escape(item.id)}`)
+			}))
 			.filter((h): h is { id: string; el: HTMLElement } => !!h.el);
 		if (!headingEls.length) return;
 
-		// An IntersectionObserver only fires when isIntersecting *changes*, so a
-		// heading whose enter and exit both happen between two observer ticks
-		// (e.g. adjacent headings scrolled past quickly) never reports at all and
-		// gets skipped. Instead, recompute directly from live positions: the
-		// active item is the last heading (in document order) that has already
-		// scrolled up to/past the offset line.
 		const updateActive = () => {
+			const threshold = container.getBoundingClientRect().top + ACTIVE_OFFSET;
 			let current = headingEls[0].id;
 			for (const { id, el } of headingEls) {
-				if (el.getBoundingClientRect().top <= TOC_ACTIVE_OFFSET + 1) {
+				if (el.getBoundingClientRect().top <= threshold) {
 					current = id;
 				} else {
 					break;
@@ -59,14 +75,11 @@
 			});
 		};
 
-		const container = headingEls[0].el.closest<HTMLElement>('.overflow-y-auto');
-		const scrollTarget: HTMLElement | Window = container ?? window;
-
 		updateActive();
-		scrollTarget.addEventListener('scroll', onScroll, { passive: true });
+		container.addEventListener('scroll', onScroll, { passive: true });
 		window.addEventListener('resize', onScroll);
 		return () => {
-			scrollTarget.removeEventListener('scroll', onScroll);
+			container.removeEventListener('scroll', onScroll);
 			window.removeEventListener('resize', onScroll);
 		};
 	});
@@ -76,10 +89,6 @@
 		const activeEl = listEl.querySelector<HTMLElement>(`a[href="#${CSS.escape(activeId)}"]`);
 		if (!activeEl) return;
 
-		// Scroll listEl's own scrollTop directly rather than scrollIntoView:
-		// listEl sits inside the same outer .overflow-y-auto section the article
-		// scrolls within, so scrollIntoView's ancestor-walking would also nudge
-		// that shared container and fight with scrollToHeading's animation there.
 		const listRect = listEl.getBoundingClientRect();
 		const elRect = activeEl.getBoundingClientRect();
 		if (elRect.top < listRect.top) {
@@ -93,21 +102,18 @@
 		if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
 			return;
 		}
-		const target = document.getElementById(id);
+		const target = containerEl?.querySelector<HTMLElement>(`#${CSS.escape(id)}`);
 		if (!target) return;
 
 		event.preventDefault();
-		history.pushState(null, '', `#${id}`);
 		scrollToHeading(target, 'smooth');
-		// activeId is left to the IntersectionObserver — it flips once the
-		// heading actually arrives at the scrollspy threshold, not on click
 	}
 </script>
 
 {#if items.length}
 	<nav aria-label="Table of contents" class="flex min-h-0 flex-col text-sm">
 		<p class="mb-2 shrink-0 font-mono text-xs font-semibold uppercase tracking-wide text-fg-muted">
-			On this page
+			On this md
 		</p>
 		<ul
 			bind:this={listEl}
@@ -120,9 +126,9 @@
 						onclick={(event) => handleClick(event, item.id)}
 						class="toc-link {item.depth === 3 ? 'depth-3' : ''} {item.depth === 4
 							? 'depth-4'
-							: ''} {activeId === item.id
-							? 'active'
-							: ''}"
+							: ''} {item.depth === 5 ? 'depth-5' : ''} {item.depth === 6
+							? 'depth-6'
+							: ''} {activeId === item.id ? 'active' : ''}"
 					>
 						{#if item.html}
 							{@html item.html}

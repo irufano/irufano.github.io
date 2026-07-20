@@ -392,6 +392,12 @@
 .toc-link.depth-4 {
 	padding-left: 2.25rem;
 }
+.toc-link.depth-5 {
+	padding-left: 3rem;
+}
+.toc-link.depth-6 {
+	padding-left: 3.75rem;
+}
 
 /* ---------- in-post search ---------- */
 

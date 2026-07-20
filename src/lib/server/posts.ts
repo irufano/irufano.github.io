@@ -1,6 +1,6 @@
 import matter from 'gray-matter';
 import { slugify } from '$lib/utils/slug';
-import { renderMarkdown, type TocItem } from './markdown';
+import { renderMarkdown, type TocItem } from '$lib/markdown';
 
 export interface PostFrontmatter {
 	title: string;

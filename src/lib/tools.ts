@@ -3,6 +3,7 @@ import Lock from 'lucide-svelte/icons/lock';
 import FolderTree from 'lucide-svelte/icons/folder-tree';
 import Dices from 'lucide-svelte/icons/dices';
 import CodeXml from 'lucide-svelte/icons/code-xml';
+import FileText from 'lucide-svelte/icons/file-text';
 import PenLine from 'lucide-svelte/icons/pen-line';
 import Braces from 'lucide-svelte/icons/braces';
 import Binary from 'lucide-svelte/icons/binary';
@@ -78,6 +79,14 @@ export const TOOLS: Tool[] = [
 		label: 'HTML Viewer',
 		description: 'Write or paste HTML and see a live preview, or build a page from scratch.',
 		icon: CodeXml,
+		category: 'Code & Data'
+	},
+	{
+		slug: 'md-viewer',
+		label: 'Markdown Viewer',
+		description:
+			'Write or paste Markdown and see it rendered live, with math, code highlighting, callouts, tables, and diagrams.',
+		icon: FileText,
 		category: 'Code & Data'
 	},
 	{
