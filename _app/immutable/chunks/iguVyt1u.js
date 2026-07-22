@@ -1,0 +1,1 @@
+function e(e,t=`smooth`){let n=e.closest(`.overflow-y-auto`);if(!n){e.scrollIntoView({behavior:t,block:`start`});return}let r=e.getBoundingClientRect().top-n.getBoundingClientRect().top+n.scrollTop;n.scrollTo({top:r,behavior:t})}export{e as t};

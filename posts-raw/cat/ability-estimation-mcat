@@ -1,0 +1,806 @@
+
+Dokumen ini merangkum tiga metode estimasi kemampuan (ability, $\theta$) multidimensional CAT:
+**Maximum Likelihood Estimation (MLE)**, **Maximum A Posteriori (MAP / Bayes Modal)**, dan
+**Expected A Posteriori (EAP)**. Fokus dokumen: landasan teori tiap metode, pembuktian aljabar bahwa perhitungan identik dengan literatur, dan contoh perhitungan manual
+per metode.
+
+---
+
+## 1. Konsep Fondasi: Prior, Likelihood, dan Posterior
+
+Sebelum masuk ke formula teknis, berikut intuisi ketiga konsep yang menjadi inti ketiga metode estimasi:
+
+
+### **Prior - "Apa yang kita tahu tentang $\theta$ sebelum ada data?"**
+
+Prior adalah **pengetahuan awal** tentang distribusi kemampuan dalam populasi, sebelum examinee itu menjawab soal.
+
+- **Contoh:** Asumsi umum populasi peserta tes adalah $\theta \sim N(0,1)$ (normal dengan mean 0, variance 1)
+  - Ini berarti: "Sebelum tes, kami percaya kebanyakan orang punya kemampuan dekat 0, dan semakin jauh dari 0 semakin jarang"
+  - Misal $\theta=+3$ dianggap **sangat jarang** di populasi (hanya 0.13% dalam normal)
+
+- Prior **tidak bergantung pada respons** - pure belief/asumsi tentang populasi, bukan tentang satu examinee
+- Prior adalah **penyeimbang** antara data (likelihood) dan asumsi awal tentang populasi
+
+**Rumus sederhana:** $\pi(\theta) = N(\mu, \sigma^2)$ (biasanya prior normal dengan mean $\mu$ dan variance $\sigma^2$)
+
+---
+
+
+### **Likelihood - "Seberapa cocok data dengan parameter $\theta$?"**
+
+Likelihood menjawab: *Jika kemampuan examinee adalah $\theta$, seberapa besar peluang dia menjawab respons yang kita observasi?*
+
+- **Contoh:** Examinee menjawab 3 item: benar, salah, benar (respons $\mathbf{u}=[1,0,1]$)
+  - Jika kemampuannya $\theta=0$ (median), likelihood mungkin 0.1 (tidak terlalu cocok - item pertama harusnya lebih mudah)
+  - Jika kemampuannya $\theta=+1$ (tinggi), likelihood mungkin 0.5 (lebih cocok - pola respons sesuai dengan kemampuan lebih tinggi)
+  
+- Likelihood adalah **fungsi dari $\theta$** yang menggukur "bukti yang ada mendukung $\theta$ berapa"
+- Semakin tinggi likelihood, semakin "masuk akal" nilai $\theta$ tersebut berdasarkan data respons
+
+**Rumus sederhana:** $L(\theta) = \prod_i P_i(\theta)^{u_i} \cdot Q_i(\theta)^{1-u_i}$ (produk probabilitas per item)
+
+---
+
+### **Posterior - "Apa yang kita tahu tentang $\theta$ setelah melihat data?"**
+
+Posterior adalah **update belief** tentang $\theta$ setelah menggabungkan prior (pengetahuan awal) dengan likelihood (bukti dari respons).
+
+**Formula Bayes:**
+$$p(\theta \mid \mathbf{u}) = \frac{p(\mathbf{u} \mid \theta) \cdot p(\theta)}{p(\mathbf{u})} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Normalisasi}}$$
+
+- **Contoh interpretasi:** 
+  - Prior: "Mayoritas populasi punya $\theta$ dekat 0" → $N(0,1)$
+  - Likelihood dari data: "Respons ini cocok dengan $\theta=+1$" → peak di +1
+  - Posterior: "Setelah data ini, estimate kita adalah $\theta=+0.5$" → compromise antara prior (0) dan likelihood (+1)
+
+- Posterior adalah **distribusi probabilitas atas $\theta$** (bukan single point)
+- Posterior bergantung pada **keduanya**: prior (populasi) dan likelihood (data eksaminee)
+
+**Intuisi numeric:** Jika prior sangat kuat (variance kecil), estimasi akan tertarik ke mean prior. Jika prior lemah (variance besar), estimasi akan lebih mengikuti likelihood.
+
+---
+
+### Ringkasan: Bayesian dalam Tiga Konsep
+
+![Bayesian concept](/posts/cat/ability-estimation-mcat/bayesian-concept.png)
+
+Dalam pendekatan Bayesian, terdapat tiga konsep penting yang menjadi fondasi semua metode estimasi:
+
+| Konsep | Definisi | Peran |
+|---|---|---|
+| **Prior** | Keyakinan awal tentang kemampuan peserta **sebelum** mengerjakan soal | Pengetahuan tentang populasi secara umum |
+| **Likelihood** | Probabilitas peserta memberikan respons tertentu **jika** memiliki kemampuan tertentu | Bukti dari data yang terobservasi (respons peserta) |
+| **Posterior** | Keyakinan yang telah diperbarui **setelah** melihat respons peserta | Kombinasi prior + likelihood (Bayesian update) |
+
+---
+
+### Contoh Numerik Sederhana
+
+**Setup:** Misalkan kemampuan peserta ($\theta$) hanya mungkin berada pada tiga nilai diskrit: Rendah, Sedang, atau Tinggi.
+
+#### Step 1: Prior (sebelum ada data)
+
+Sebelum peserta mengerjakan soal, kita belum tahu kemampuannya. Asumsi awal (prior) hampir merata:
+
+| Kemampuan ($\theta$) | Prior $\pi(\theta)$ | Interpretasi |
+|---|---|---|
+| **Rendah** | 0.33 | Peluang peserta rendah = 33% |
+| **Sedang** | 0.33 | Peluang peserta sedang = 33% |
+| **Tinggi** | 0.34 | Peluang peserta tinggi = 34% |
+
+Distribusi hampir seragam karena belum ada informasi dari peserta.
+
+---
+
+#### Step 2: Likelihood (dari satu respons)
+
+Sekarang peserta menjawab **satu soal yang SULIT dengan BENAR**.
+
+Kemudian kita tanya: *"Jika peserta punya kemampuan X, seberapa besar peluang dia bisa jawab soal sulit ini dengan benar?"*
+
+| Kemampuan | Likelihood $L(\text{benar soal sulit} \mid \theta)$ | Interpretasi |
+|---|---|---|
+| **Rendah** | 0.1 | Jika rendah, peluang benar soal sulit hanya 10% |
+| **Sedang** | 0.4 | Jika sedang, peluang benar soal sulit 40% |
+| **Tinggi** | 0.85 | Jika tinggi, peluang benar soal sulit 85% |
+
+**Observasi:** Peserta **bisa** benar soal sulit di semua kemampuan level, tapi **paling cocok** dengan kemampuan tinggi.
+
+---
+
+#### Step 3: Posterior (setelah melihat respons)
+
+Sekarang kita gabungkan prior + likelihood menggunakan formula Bayes:
+
+$$p(\theta \mid \text{benar soal sulit}) \propto L \times \pi$$
+
+| Kemampuan | Prior | Likelihood | Prior × Likelihood | Posterior (dinormalisasi) |
+|---|---|---|---|---|
+| **Rendah** | 0.33 | 0.1 | 0.033 | 0.05 |
+| **Sedang** | 0.33 | 0.4 | 0.132 | 0.30 |
+| **Tinggi** | 0.34 | 0.85 | 0.289 | **0.65** |
+| **Sum** | | | 0.454 | 1.00 |
+
+**Interpretasi:** Berdasarkan jawaban benar untuk soal sulit tersebut:
+- Peluang Rendah turun drastis: 33% → 5%
+- Peluang Sedang sedikit meningkat: 33% → 30%
+- Peluang Tinggi meningkat signifikan: 34% → **65%**
+
+**Kesimpulan:** Setelah satu respons, kita sekarang **65% yakin** bahwa peserta memiliki kemampuan tinggi (vs 34% sebelumnya).
+
+---
+
+### Pola Umum Bayesian Update
+
+```
+Posterior ∝ Prior × Likelihood
+
+Artinya: Belief terbaru = (Keyakinan awal) × (Dukungan dari data)
+```
+
+**Intuisi:**
+- Jika prior kuat tapi likelihood lemah → posterior condong ke prior
+- Jika prior lemah tapi likelihood kuat → posterior condong ke likelihood
+- Jika prior dan likelihood seimbang → posterior adalah compromise
+
+---
+
+## 2. Model & Notasi Dasar (dipakai oleh ketiga metode)
+
+Model respons item M3PL/M2PL [1, Eq.1, p.275]:
+
+$$
+P_i(\boldsymbol\theta) = c_i + (1-c_i)\,\sigma(\mathbf{a}_i\cdot\boldsymbol\theta + d_i), \qquad
+\sigma(z) = \frac{1}{1+e^{-z}}
+$$
+
+**Likelihood dari seluruh respons yang sudah di-observasi** [1, Eq.2–3, p.276]:
+
+$$
+\hat{\boldsymbol\theta} \equiv \arg\max_{\boldsymbol\theta} f(\mathbf{u}\mid\boldsymbol\theta), \qquad
+f(\mathbf{u}\mid\boldsymbol\theta) = \prod_{i=1}^{n} P_i(\boldsymbol\theta)^{u_i}\,Q_i(\boldsymbol\theta)^{1-u_i}
+$$
+
+dengan $u_i\in\{0,1\}$ respons examinee pada item $i$ yang sudah di-administer, dan
+$Q_i(\boldsymbol\theta)=1-P_i(\boldsymbol\theta)$. Mulder & van der Linden menyatakan langsung
+setelah Eq.3 [1, p.276]: *"The MLE can [be] found by setting the derivative of the logarithm of
+(3) equal to zero and solv[ing] the system for $\theta$ using a numerical method such as
+Newton–Raphson (e.g., Segall, 1996) or an EM algorithm."* - namun paper tidak menuliskan bentuk
+eksplisit turunannya. Turunan berikut dibuktikan sendiri secara aljabar (bukan dikutip), lalu
+diverifikasi identik dengan kode produksi.
+
+---
+
+### Bagaimana Tiga Metode Berbeda Menggunakan Prior & Likelihood
+
+| Metode | Filosofi | Rumus | Gunakan Prior? | Kapan Cocok |
+|---|---|---|---|---|
+| **MLE** | Maksimalkan likelihood murni | $\hat\theta = \arg\max L(\theta)$ | **Tidak** | Banyak item, prior tidak penting |
+| **MAP** | Maksimalkan posterior (mode) | $\hat\theta = \arg\max g(\theta) = L(\theta) \times \pi(\theta)$ | **Ya** | Awal tes (item sedikit), prior bisa menahan divergen |
+| **EAP** | Rata-rata posterior | $\hat\theta = E[\theta \mid \mathbf{u}] = \int \theta \cdot g(\theta) d\theta$ | **Ya** | Awal tes, ketika distribusi posterior penting (bukan hanya titik estimasi) |
+
+**Perbedaan intuitif:**
+
+1. **MLE**: *"Cari $\theta$ yang paling menjelaskan data yang ada, tanpa asumsi tentang populasi"* → Estimasi "murni dari data"
+   - Risiko: Bisa divergen jika data pattern khusus (semua benar/salah) karena tidak ada penahan dari prior
+   
+2. **MAP**: *"Cari $\theta$ yang paling menjelaskan data SEKALIGUS konsisten dengan prior populasi"* → Estimasi "data + prior pengetahuan"
+   - Keuntungan: Prior bertindak sebagai "penalti" yang mencegah divergen
+   - Risiko: Bisa over-shrink ke mean prior jika prior terlalu kuat
+   
+3. **EAP**: *"Hitung rata-rata $\theta$ dari distribusi posterior (bukan hanya modus)"* → Estimasi "rerata yang realistic"
+   - Keuntungan: Selalu finite (integral atas domain terbatas), stabil
+   - Risiko: Rata-rata bisa berbeda dari mode jika posterior skewed
+   - Bonus: SE otomatis dihitung (variance posterior)
+
+Mulder & van der Linden [1, p.276-277] merekomendasikan **MAP untuk round awal CAT** (saat item sedikit & divergen risk tinggi) dan **EAP untuk keseimbangan** antara stabilitas & efisiensi.
+
+---
+
+
+
+### 2.1 Pembuktian: Skor (gradien log-likelihood)
+
+$$
+\log f(\mathbf{u}\mid\boldsymbol\theta) = \sum_{i=1}^n \Big[u_i\log P_i(\boldsymbol\theta) + (1-u_i)\log Q_i(\boldsymbol\theta)\Big]
+$$
+
+Karena $\partial Q_i/\partial\boldsymbol\theta = -\partial P_i/\partial\boldsymbol\theta$:
+
+$$
+\frac{\partial \log f}{\partial\boldsymbol\theta} = \sum_i \left[\frac{u_i}{P_i} - \frac{1-u_i}{Q_i}\right]\frac{\partial P_i}{\partial\boldsymbol\theta}
+= \sum_i \frac{u_iQ_i - (1-u_i)P_i}{P_iQ_i}\,\frac{\partial P_i}{\partial\boldsymbol\theta}
+$$
+
+Aljabar pembilang: $u_iQ_i-(1-u_i)P_i = u_i(1-P_i)-P_i+u_iP_i = u_i-P_i$. Dan dengan aturan rantai
+pada $P_i(\boldsymbol\theta)=c_i+(1-c_i)\sigma(z_i)$, $z_i=\mathbf{a}_i\cdot\boldsymbol\theta+d_i$:
+
+$$
+\frac{\partial P_i}{\partial\boldsymbol\theta} = (1-c_i)\,\sigma(z_i)\big(1-\sigma(z_i)\big)\,\mathbf{a}_i = P'_i\,\mathbf{a}_i
+$$
+
+($P'_i$ = notasi yang sama seperti [item_selection_summary #0](/posts/cat/item-selection-criteria-mcat#model--notasi-dasar-dipakai-oleh-ketiga-metode)). Maka:
+
+$$
+\boxed{\nabla\log f(\boldsymbol\theta) = \sum_i \mathbf{a}_i\,\frac{(u_i-P_i)\,P'_i}{P_iQ_i}}
+$$
+
+Ini **identik** dengan `mle.rs:32-33`: `residual=(x-p)*p_prime/(p*q); grad += a*residual`.
+
+### 2.2 Fisher Information Matrix sebagai pengganti Hessian (Fisher scoring)
+
+Hessian eksak (turunan kedua $\log f$) melibatkan turunan kedua $P'_i$ yang rumit. Praktik standar
+-dipakai baik oleh Baker (2001, lihat [#3.1](#31-teori)) maupun Mulder & van der Linden-adalah
+mengganti Hessian dengan negatif ekspektasinya, yaitu **Fisher Information Matrix** [1, Eq.4,
+p.276]:
+
+$$
+\mathbf{I}_i(\boldsymbol\theta) \equiv -E\!\left[\frac{\partial^2}{\partial\boldsymbol\theta\partial\boldsymbol\theta^\top}\log f(U_i\mid\boldsymbol\theta)\right]
+= \frac{Q_i(\theta)\big[P_i(\theta)-c_i\big]^2}{P_i(\theta)(1-c_i)^2}\,\mathbf{a}_i\mathbf{a}_i^\top
+$$
+
+Substitusi ini disebut **Fisher scoring** (metode skor). Pembuktian bahwa formula ini identik
+dengan `w=(P')²/(PQ)` yang dipakai `mle.rs`/`map.rs`/`mirt::item_fim`: substitusikan
+$P^*=(P_i-c_i)/(1-c_i)$ (invers dari $P_i=c_i+(1-c_i)P^*$), maka $1-P^*=(1-P_i)/(1-c_i)=Q_i/(1-c_i)$,
+sehingga
+
+$$
+P'_i = (1-c_i)P^*(1-P^*) = (1-c_i)\cdot\frac{P_i-c_i}{1-c_i}\cdot\frac{Q_i}{1-c_i} = \frac{(P_i-c_i)Q_i}{1-c_i}
+$$
+
+$$
+w_i = \frac{(P'_i)^2}{P_iQ_i} = \frac{(P_i-c_i)^2Q_i^2/(1-c_i)^2}{P_iQ_i} = \frac{Q_i(P_i-c_i)^2}{P_i(1-c_i)^2} \quad\blacksquare
+$$
+
+- sama persis dengan $\mathbf{I}_i(\boldsymbol\theta)$ di atas. Untuk M2PL ($c_i=0$):
+$w_i=P_i(1-P_i)$, dan $\mathbf{I}_i(\boldsymbol\theta)=P_i(1-P_i)\,\mathbf{a}_i\mathbf{a}_i^\top$.
+FIM total teradditif atas item yang sudah dijawab [1, Eq.6, p.277]:
+$\mathbf{I}_S(\boldsymbol\theta)=\sum_{i\in S}\mathbf{I}_i(\boldsymbol\theta)$, dan estimator ini
+terdistribusi asimtotik normal [1, Eq.7, p.277]:
+$\hat{\boldsymbol\theta}\sim N\big(\theta_0,\mathbf{I}_S^{-1}(\theta_0)\big)$ - generalisasi
+multivariat dari batas bawah Cramér–Rao.
+
+**Keterangan variabel (tambahan untuk estimasi):**
+
+| Simbol | Arti |
+|---|---|
+| $\mathbf{u}=(u_1,\dots,u_n)$ | Vektor respons examinee pada $n$ item yang sudah di-administer |
+| $f(\mathbf{u}\mid\boldsymbol\theta)$ | Fungsi likelihood - peluang bersama seluruh respons pada $\boldsymbol\theta$ |
+| $\nabla\log f(\boldsymbol\theta)$ | Skor (*score function*) - gradien log-likelihood, $=0$ pada MLE |
+| $\mathbf{I}_i(\boldsymbol\theta)$, $\mathbf{I}_S(\boldsymbol\theta)$ | FIM item $i$ / FIM kumulatif himpunan item $S$ (identik dengan $I_i(\theta)$ di item_selection notes) |
+| $P^*$ | $\sigma(z_i)$, bagian sigmoid murni tanpa guessing (dipakai pada pembuktian $w_i$) |
+
+---
+
+### 2.3 Metode Numerik: Iterasi dan Konvergensi
+
+Ketiga metode estimasi (MLE, MAP, EAP) menggunakan **algoritma numerik iteratif** untuk menemukan estimasi kemampuan $\hat{\boldsymbol\theta}$. Bagian ini menjelaskan konsep umum yang berlaku di semua metode.
+
+#### Apa itu Iterasi?
+
+Iterasi adalah **proses berulang menebak dan menyempurnakan** untuk mencari jawaban yang tepat. Berbeda dengan rumus sederhana yang langsung memberi hasil, algoritma numerik bekerja seperti ini:
+
+**Analogi Konkret: Menyetel Radio**
+
+```
+Tebakan awal (θ₀):  Tombol di posisi random → Suara berisik ❌
+     ↓ (Dengarkan dan perbaiki posisi)
+Tebakan 1 (θ₁):     Tombol digeser → Suara mulai jernih
+     ↓ (Dengarkan dan perbaiki lagi)
+Tebakan 2 (θ₂):     Tombol digeser lagi → Suara lebih jernih
+     ↓
+Tebakan 3 (θ₃):     Tombol fine-tuning → Suara jernih sempurna
+     ↓
+Tebakan 4 (θ₄):     Tombol tidak perlu digeser lagi ✓ SELESAI
+```
+
+Dalam notasi matematika, setiap iterasi mengikuti pola:
+
+$$
+\hat{\boldsymbol\theta}_{s+1} = \hat{\boldsymbol\theta}_s + \Delta\boldsymbol\theta_s
+$$
+
+di mana:
+- $s$ = nomor iterasi (0, 1, 2, 3, ...)
+- $\hat{\boldsymbol\theta}_s$ = estimasi pada iterasi ke-$s$
+- $\Delta\boldsymbol\theta_s$ = perubahan parameter (step size) pada iterasi $s$
+
+#### Apa itu Konvergensi?
+
+**Konvergensi** adalah kondisi ketika perubahan parameter menjadi **sangat sangat kecil** sehingga iterasi bisa dihentikan. Kriteria konvergensi formal yang dipakai di semua metode:
+
+$$
+\left\|\hat{\boldsymbol\theta}_{s+1} - \hat{\boldsymbol\theta}_s\right\| < 10^{-6} \quad\Rightarrow\quad \text{KONVERGEN - Iterasi Berhenti}
+$$
+
+Artinya: **Jika perubahan norm kurang dari 0.000001, maka nilai $\hat{\boldsymbol\theta}$ sudah stabil dan siap digunakan sebagai estimasi final.**
+
+#### Contoh Numerik: Pola Konvergensi
+
+| Iterasi | $\hat{\boldsymbol\theta}$ | Perubahan ($\|\Delta\boldsymbol\theta\|$) | Status |
+|---|---|---|---|
+| 0 | 1.0000 | - | Tebakan awal (arbitrary) |
+| 1 | 0.2267 | 0.7733 | Perubahan **BESAR** ← masih jauh dari optimal |
+| 2 | 0.3239 | 0.0973 | Perubahan lebih kecil ← semakin dekat |
+| 3 | 0.3248 | 0.0009 | Perubahan sangat kecil |
+| 4 | 0.3248 | 0.0000001 | < 10⁻⁶ ✓ **KONVERGEN!** |
+
+**Interpretasi:**
+- **Awal** (Iterasi 1-2): Perubahan besar, algoritma masih "mencari arah"
+- **Tengah** (Iterasi 3): Perubahan kecil, algoritma sudah dekat ke jawaban
+- **Akhir** (Iterasi 4): Perubahan sangat kecil (< 10⁻⁶), **berhenti dan gunakan θ = 0.3248 sebagai hasil final**
+
+#### Mengapa Perlu Konvergensi?
+
+1. **Sebelum konvergen**: Nilai $\hat{\boldsymbol\theta}$ masih berubah-ubah, belum stabil
+2. **Setelah konvergen**: Nilai $\hat{\boldsymbol\theta}$ sudah stabil, aman digunakan sebagai estimasi kemampuan final
+
+#### Implementasi Praktis
+
+Dalam kode produksi (`mle.rs`, `map.rs`, dll), konvergensi diimplementasikan sebagai:
+
+```rust
+// Setiap iterasi:
+if (theta_next - theta_current).norm() < 1e-6 {
+    break;  // ← Keluar loop, konvergen ditemukan
+}
+// Batasi juga iterasi maksimal (misal 100) untuk menghindari infinite loop
+```
+
+**Catatan**: Ketiga metode (MLE, MAP, EAP) menggunakan kriteria konvergensi yang sama, meskipun cara menghitung $\Delta\boldsymbol\theta$ berbeda:
+- **MLE**: Update berbasis likelihood saja
+- **MAP**: Update berbasis likelihood + prior penalty
+- **EAP**: Biasanya tidak iteratif (langsung integrasi numerik)
+
+---
+
+## 3. Maximum Likelihood Estimation (MLE)
+
+### 3.1 Teori
+
+MLE mencari $\hat{\boldsymbol\theta}$ yang memaksimalkan $f(\mathbf{u}\mid\boldsymbol\theta)$
+[1, Eq.2, p.276] - lihat [#2](#2-model--notasi-dasar-dipakai-oleh-ketiga-metode) untuk definisi
+lengkap dan pembuktian skor/FIM. Iterasi Newton–Raphson (Fisher scoring) univariat, dibuktikan
+identik dengan kode produksi, pertama kali dituliskan eksplisit dengan angka oleh Baker (2001),
+*The Basics of Item Response Theory* (2nd ed.), Bab 5 "Estimating an Examinee's Ability",
+**Eq.[5-1], p.86** [2]:
+
+$$
+\hat\theta_{s+1} = \hat\theta_s + \frac{\displaystyle\sum_{i=1}^N a_i\big[u_i-P_i(\hat\theta_s)\big]}{\displaystyle\sum_{i=1}^N a_i^2\,P_i(\hat\theta_s)\,Q_i(\hat\theta_s)}
+\tag{5-1}
+$$
+
+Untuk M2PL univariat ($c=0$, $k=1$), $\nabla\log f=\sum a_i(u_i-P_i)$ ([#4.1](#21-pembuktian-skor-gradien-log-likelihood)) dan
+$\mathbf{I}_S=\sum a_i^2P_iQ_i$ - Eq.[5-1] Baker **adalah** Fisher scoring
+$\hat\theta_{s+1}=\hat\theta_s+\mathbf{I}_S^{-1}\nabla\log f$ pada kasus 1-dimensi, dituliskan
+dengan notasi $(a,b,c)$ alih-alih $(a,d,c)$ (lihat [#3.2.1](#321-demo-1---reproduksi-baker-2001-k1) untuk konversi $d=-ab$).
+
+Generalisasi ke $k>1$ dimensi mengganti pembagian skalar dengan perkalian
+matriks invers:
+
+$$
+\hat{\boldsymbol\theta}_{s+1} = \hat{\boldsymbol\theta}_s + \mathbf{I}_S(\hat{\boldsymbol\theta}_s)^{-1}\,\nabla\log f(\hat{\boldsymbol\theta}_s), \qquad \left\|\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s\right\| < 10^{-6} \Rightarrow \text{stop}
+$$
+
+Mulder & van der Linden mencatat langsung setelah definisi
+MLE [1, p.276]: *"The likelihood function may not have a maximum (e.g., when only correct or
+incorrect item responses are observed), or a local instead of a global maximum may be found."* -
+dibuktikan ulang secara eksperimental di [#5.2.3](#323-demo-3---kasus-divergen-all-correct).
+
+**Keterangan variabel:**
+
+| Simbol | Arti |
+|---|---|
+| $\hat\theta_s$ | Estimasi kemampuan pada iterasi ke-$s$ |
+| $a_i$ (Baker) $\equiv \mathbf{a}_i$ (notasi vektor) | Parameter diskriminasi item $i$ |
+| $N$ | Jumlah item yang sudah di-administer |
+| $\mathbf{I}_S(\boldsymbol\theta)^{-1}$ | Invers FIM kumulatif - berperan sebagai "step size" matriks pada Newton step |
+
+### 3.2 Perhitungan Manual
+
+#### 3.2.1 DEMO 1 - Reproduksi Baker (2001), k=1
+
+Item Baker (2001, p.87) dalam parameterisasi $(a,b,c)$, dikonversi ke $(a,d,c)$ produksi via
+$d=-ab$ (karena $z=a\theta+d=a(\theta-b)$):
+
+| Item | $a$ | $b$ (Baker) | $d=-ab$ | $c$ | $u$ |
+|---|---|---|---|---|---|
+| 1 | 1.0 | $-1$ | $+1.0$ | 0 | 1 |
+| 2 | 1.2 | $0$ | $0.0$ | 0 | 0 |
+| 3 | 0.8 | $1$ | $-0.8$ | 0 | 1 |
+
+*A priori* $\hat\theta_0=1.0$ - dikutip langsung, Baker (2001, p.87): *"Initially, the $\hat\theta_s$
+on the right side of the equal sign is set to some arbitrary value, such as 1."*
+
+**Iterasi 1** (M2PL sehingga $P=P^*=\sigma(a\theta+d)$):
+
+**Step 1: Hitung $z_i = a\theta + d$ untuk setiap item** dengan $\hat\theta_0=1.0$:
+
+| Item | $a$ | $d$ | $z_i = a(1.0) + d$ |
+|---|---|---|---|
+| 1 | 1.0 | +1.0 | $1.0(1.0) + 1.0 = 2.0$ |
+| 2 | 1.2 | 0.0 | $1.2(1.0) + 0.0 = 1.2$ |
+| 3 | 0.8 | -0.8 | $0.8(1.0) - 0.8 = 0.0$ |
+
+**Step 2: Hitung $P_i = \sigma(z_i) = \frac{1}{1+e^{-z_i}}$ dan $Q_i=1-P_i$:**
+
+| Item | $z_i$ | $P_i = \sigma(z_i)$ | $Q_i$ |
+|---|---|---|---|
+| 1 | 2.0 | $\frac{1}{1+e^{-2.0}} = \frac{1}{1+0.1353} = 0.8808$ | $1-0.8808=0.1192$ |
+| 2 | 1.2 | $\frac{1}{1+e^{-1.2}} = \frac{1}{1+0.3012} = 0.7685$ | $1-0.7685=0.2315$ |
+| 3 | 0.0 | $\frac{1}{1+e^{0}} = \frac{1}{2} = 0.5000$ | $1-0.5000=0.5000$ |
+
+**Step 3: Hitung residual & weight menggunakan Eq.[5-1] Baker untuk setiap item:**
+
+Residual: $\text{resid}_i = a_i(u_i - P_i)$ dan weight: $\text{wt}_i = a_i^2 P_i Q_i$
+
+| Item | $u$ | $a_i(u_i-P_i)$ | $a_i^2P_iQ_i$ | Perhitungan |
+|---|---|---|---|---|
+| 1 | 1 | $1.0(1-0.8808) = +0.1192$ | $(1.0)^2(0.8808)(0.1192) = 0.1050$ | $1.0 \times 0.1192 = 0.1192$ |
+| 2 | 0 | $1.2(0-0.7685) = -0.9222$ | $(1.2)^2(0.7685)(0.2315) = 0.2562$ | $1.44 \times 0.1779 = 0.2562$ |
+| 3 | 1 | $0.8(1-0.5000) = +0.4000$ | $(0.8)^2(0.5000)(0.5000) = 0.1600$ | $0.64 \times 0.2500 = 0.1600$ |
+| **sum** | | **-0.4030** | **0.5212** | |
+
+**Step 4: Hitung update parameter Newton-Raphson:**
+
+$$
+\Delta\hat\theta = \frac{\sum a_i(u_i-P_i)}{\sum a_i^2P_iQ_i} = \frac{-0.4030}{0.5212} = -0.7733
+$$
+
+$$
+\hat\theta_1 = \hat\theta_0 + \Delta\hat\theta = 1.0 + (-0.7733) = 0.2267
+$$
+
+**Iterasi 2** dengan $\hat\theta_1 = 0.2267$:
+
+**Step 1: Hitung $z_i$ untuk setiap item:**
+
+| Item | $a$ | $d$ | $z_i = a(0.2267) + d$ |
+|---|---|---|---|
+| 1 | 1.0 | +1.0 | $1.0(0.2267) + 1.0 = 1.2267$ |
+| 2 | 1.2 | 0.0 | $1.2(0.2267) + 0.0 = 0.2720$ |
+| 3 | 0.8 | -0.8 | $0.8(0.2267) - 0.8 = -0.6186$ |
+
+**Step 2: Hitung $P_i$ dan $Q_i$:**
+
+| Item | $z_i$ | $P_i$ | $Q_i$ |
+|---|---|---|---|
+| 1 | 1.2267 | $\frac{1}{1+e^{-1.2267}} = 0.7732$ | 0.2268 |
+| 2 | 0.2720 | $\frac{1}{1+e^{-0.2720}} = 0.5676$ | 0.4324 |
+| 3 | -0.6186 | $\frac{1}{1+e^{0.6186}} = 0.3501$ | 0.6499 |
+
+**Step 3: Hitung residual & weight:**
+
+| Item | $u$ | $a_i(u_i-P_i)$ | $a_i^2P_iQ_i$ |
+|---|---|---|---|
+| 1 | 1 | $1.0(1-0.7732) = +0.2268$ | $(1.0)^2(0.7732)(0.2268) = 0.1753$ |
+| 2 | 0 | $1.2(0-0.5676) = -0.6811$ | $(1.2)^2(0.5676)(0.4324) = 0.3534$ |
+| 3 | 1 | $0.8(1-0.3501) = +0.5199$ | $(0.8)^2(0.3501)(0.6499) = 0.1456$ |
+| **sum** | | **+0.0656** | **0.6744** |
+
+**Step 4: Hitung update:**
+
+$$
+\Delta\hat\theta = \frac{0.0656}{0.6744} = +0.0973
+$$
+
+$$
+\hat\theta_2 = 0.2267 + 0.0973 = 0.3239
+$$
+
+**Cross-check langsung terhadap buku** (Baker 2001, p.88, angka asli):
+
+$$
+\Delta\hat\theta_s = -.403/.520 = -.773,\;\; \hat\theta_{s+1}=1.0-.773=0.227 \qquad
+\Delta\hat\theta_s = .066/.674 = .097,\;\; \hat\theta_{s+1}=0.227+.097=0.324
+$$
+
+**cocok dengan buku sampai 3 desimal**
+($0.227$, $0.324$; selisih dari pembulatan tampilan 3-desimal Baker vs 4-desimal disini).
+
+**Iterasi 3** dengan $\hat\theta_2=0.323937$:
+
+$$
+\Delta\hat\theta = \frac{0.0006}{0.6616} = +0.0009, \qquad \hat\theta_3 = \hat\theta_2+\Delta\hat\theta = 0.324846
+$$
+
+**Verifikasi konvergensi** (kriteria [#2.3](#23-metode-numerik-iterasi-dan-konvergensi): $|\hat\theta_{s+1}-\hat\theta_s|<10^{-6}$):
+$$|\hat\theta_3-\hat\theta_2| = |\Delta\hat\theta| = 9.10\times10^{-4} \gg 10^{-6} \Rightarrow \textbf{BELUM KONVERGEN}, \text{ lanjut iterasi.}$$
+
+**Iterasi 4** dengan $\hat\theta_3=0.324846$:
+
+$$
+\Delta\hat\theta = \frac{0.0000}{0.6614} \approx +9.05\times10^{-8}, \qquad \hat\theta_4 = \hat\theta_3+\Delta\hat\theta = 0.324846
+$$
+
+**Verifikasi konvergensi:**
+$$|\hat\theta_4-\hat\theta_3| = |\Delta\hat\theta| = 9.05\times10^{-8} < 10^{-6} \Rightarrow \textbf{KONVERGEN} \text{ - iterasi berhenti.}$$
+
+→ **$\hat\theta_{MLE}\approx 0.324846$** (presisi penuh: $0.3248462760...$).
+
+#### 3.2.2 DEMO 2 - Multidimensional (k=3), 7 item
+
+Menggunakan seluruh 7-item bank yang sama seperti
+[Item Bank Snapshot](/posts/cat/item-selection-criteria-mcat#item-bank-snapshot), dengan pola
+respons **campuran** (bukan seragam per content-area - lihat catatan Divergen di
+[#3.2.3](#323-demo-3---kasus-divergen-all-correct)):
+
+| Item | $\mathbf{a}$ | $d$ | $u$ |
+|---|---|---|---|
+| m2p-v001 | [1.9,0.2,0.3] | 0.40 | 1 |
+| m2p-v002 | [1.7,0.2,0.2] | 0.10 | 0 |
+| m2p-n001 | [0.3,1.9,0.4] | 0.80 | 0 |
+| m2p-n002 | [0.3,1.8,0.4] | 0.50 | 1 |
+| m2p-r001 | [0.5,0.4,2.0] | 0.30 | 1 |
+| m2p-r002 | [0.3,0.8,1.9] | 0.60 | 0 |
+| m2p-r003 | [0.4,0.3,1.8] | 0.70 | 1 |
+
+Starting $\hat{\boldsymbol\theta}_0=[0,0,0]$.
+
+**Iterasi 1** - $\nabla\log f$ dan $\mathbf{I}_S$ dihitung persis seperti [#2.1](#21-pembuktian-skor-gradien-log-likelihood)/[#2.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring), dijumlahkan atas ke-7 item:
+
+**Step 1: Hitung (linear predictor $z_i$) $z_i = \mathbf{a}_i \cdot \boldsymbol\theta_0 + d_i$ untuk setiap item** dengan $\boldsymbol\theta_0=[0,0,0]$:
+
+| Item | $\mathbf{a}_i$ | $d_i$ | $z_i = [0,0,0] \cdot \mathbf{a}_i + d_i$ |
+|---|---|---|---|
+| m2p-v001 | [1.9,0.2,0.3] | 0.40 | $0 + 0 + 0 + 0.40 = 0.40$ |
+| m2p-v002 | [1.7,0.2,0.2] | 0.10 | $0.10$ |
+| m2p-n001 | [0.3,1.9,0.4] | 0.80 | $0.80$ |
+| m2p-n002 | [0.3,1.8,0.4] | 0.50 | $0.50$ |
+| m2p-r001 | [0.5,0.4,2.0] | 0.30 | $0.30$ |
+| m2p-r002 | [0.3,0.8,1.9] | 0.60 | $0.60$ |
+| m2p-r003 | [0.4,0.3,1.8] | 0.70 | $0.70$ |
+
+**Step 2: Hitung (peluang peserta menjawab benar $P$) $P_i = \sigma(z_i)$, (peluang peserta menjawab salah $Q$) $Q_i = 1-P_i$, dan (seberapa sensitif peluang benar berubah) $P'_i = P_iQ_i$ (untuk M2PL, $c=0$):**
+
+| Item | $z_i$ | $P_i$ | $Q_i$ | $P'_i = P_iQ_i$ |
+|---|---|---|---|---|
+| m2p-v001 | 0.40 | 0.5987 | 0.4013 | 0.2403 |
+| m2p-v002 | 0.10 | 0.5250 | 0.4750 | 0.2494 |
+| m2p-n001 | 0.80 | 0.6900 | 0.3100 | 0.2139 |
+| m2p-n002 | 0.50 | 0.6225 | 0.3775 | 0.2350 |
+| m2p-r001 | 0.30 | 0.5744 | 0.4256 | 0.2446 |
+| m2p-r002 | 0.60 | 0.6456 | 0.3544 | 0.2290 |
+| m2p-r003 | 0.70 | 0.6682 | 0.3318 | 0.2217 |
+
+**Step 3: Hitung residual per item** menggunakan $\text{residual}_i = (u_i - P_i) \cdot P'_i / (P_iQ_i) = (u_i - P_i)$ (untuk M2PL):
+
+Residual ini adalah untuk mengukur seberapa jauh prediksi model meleset dari respons aktual peserta pada item itu, dan menjadi bahan baku untuk membangun gradien (skor) yang menggerakkan update $\hat\theta$.
+
+| Item | $u$ | $(u_i - P_i)$ | Kontribusi ke gradien = $\mathbf{a}_i \times (u_i - P_i)$ |
+|---|---|---|---|
+| m2p-v001 | 1 | $1 - 0.5987 = 0.4013$ | $[1.9,0.2,0.3] \times 0.4013 = [0.7625, 0.0803, 0.1204]$ |
+| m2p-v002 | 0 | $0 - 0.5250 = -0.5250$ | $[1.7,0.2,0.2] \times (-0.5250) = [-0.8925, -0.1050, -0.1050]$ |
+| m2p-n001 | 0 | $0 - 0.6900 = -0.6900$ | $[0.3,1.9,0.4] \times (-0.6900) = [-0.2070, -1.3110, -0.2760]$ |
+| m2p-n002 | 1 | $1 - 0.6225 = 0.3775$ | $[0.3,1.8,0.4] \times 0.3775 = [0.1133, 0.6795, 0.1510]$ |
+| m2p-r001 | 1 | $1 - 0.5744 = 0.4256$ | $[0.5,0.4,2.0] \times 0.4256 = [0.2128, 0.1702, 0.8512]$ |
+| m2p-r002 | 0 | $0 - 0.6456 = -0.6456$ | $[0.3,0.8,1.9] \times (-0.6456) = [-0.1937, -0.5165, -1.2266]$ |
+| m2p-r003 | 1 | $1 - 0.6682 = 0.3318$ | $[0.4,0.3,1.8] \times 0.3318 = [0.1327, 0.0995, 0.5972]$ |
+
+**Step 4: Agregasi gradien** (jumlah semua kontribusi):
+
+$$
+\nabla\log f = [0.7625 - 0.8925 - 0.2070 + 0.1133 + 0.2128 - 0.1937 + 0.1327, \ldots] = [-0.0719, -0.9029, 0.1121]
+$$
+
+**Step 5: Hitung FIM per item** menggunakan $\mathbf{I}_i = P'_i \cdot \mathbf{a}_i \mathbf{a}_i^\top$ (untuk M2PL):
+
+Sebagai contoh, untuk item 1:
+$$
+\mathbf{I}_1 = 0.2403 \times \begin{bmatrix} 1.9 \\ 0.2 \\ 0.3 \end{bmatrix} \begin{bmatrix} 1.9 & 0.2 & 0.3 \end{bmatrix} = 0.2403 \times \begin{bmatrix} 3.61 & 0.38 & 0.57 \\ 0.38 & 0.04 & 0.06 \\ 0.57 & 0.06 & 0.09 \end{bmatrix} = \begin{bmatrix} 0.8679 & 0.0913 & 0.1370 \\ 0.0913 & 0.0096 & 0.0144 \\ 0.1370 & 0.0144 & 0.0216 \end{bmatrix}
+$$
+
+(Dilakukan untuk semua 7 item, kemudian dijumlahkan)
+
+**Step 6: Agregasi FIM:**
+
+$$
+\mathbf{I}_S = \sum_{i=1}^{7} \mathbf{I}_i = \begin{bmatrix} 1.7456 & 0.5553 & 0.8101 \\ 0.5553 & 1.7587 & 1.0192 \\ 0.8101 & 1.0192 & 2.6255 \end{bmatrix}
+$$
+
+**Step 7: Hitung invers FIM dan update parameter:**
+
+$$
+\mathbf{I}_S^{-1} = \begin{bmatrix} 0.6882 & -0.1216 & -0.1651 \\ -0.1216 & 0.7551 & -0.2556 \\ -0.1651 & -0.2556 & 0.5311 \end{bmatrix}
+$$
+
+$$
+\Delta\hat{\boldsymbol\theta} = \mathbf{I}_S^{-1} \nabla\log f = \begin{bmatrix} 0.6882 & -0.1216 & -0.1651 \\ -0.1216 & 0.7551 & -0.2556 \\ -0.1651 & -0.2556 & 0.5311 \end{bmatrix} \begin{bmatrix} -0.0719 \\ -0.9029 \\ 0.1121 \end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix} -0.0494 + 0.1099 - 0.0185 \\ 0.0087 - 0.6824 - 0.0286 \\ 0.0119 + 0.2315 + 0.0595 \end{bmatrix} = \begin{bmatrix} 0.0418 \\ -0.7017 \\ 0.3022 \end{bmatrix}
+$$
+
+$$
+\hat{\boldsymbol\theta}_1 = \hat{\boldsymbol\theta}_0 + \Delta\hat{\boldsymbol\theta} = [0,0,0] + [0.0418,\,-0.7017,\,0.3022] = [0.0418,\,-0.7017,\,0.3022]
+$$
+
+**Iterasi 2** dengan $\hat{\boldsymbol\theta}_1=[0.0418,\,-0.7017,\,0.3022]$:
+
+**Step 1: Hitung $z_i = \mathbf{a}_i \cdot \hat{\boldsymbol\theta}_1 + d_i$ untuk setiap item:**
+
+| Item | $\mathbf{a}_i \cdot \hat{\boldsymbol\theta}_1$ | $d_i$ | $z_i$ |
+|---|---|---|---|
+| m2p-v001 | $[1.9,0.2,0.3] \cdot [0.0418,-0.7017,0.3022] = 0.0794 - 0.1403 + 0.0907$ | +0.40 | 0.4298 |
+| m2p-v002 | $[1.7,0.2,0.2] \cdot [0.0418,-0.7017,0.3022] = 0.0711 - 0.1403 + 0.0604$ | +0.10 | -0.0088 |
+| m2p-n001 | $[0.3,1.9,0.4] \cdot [0.0418,-0.7017,0.3022] = 0.0125 - 1.3332 + 0.1209$ | +0.80 | 0.0002 |
+| m2p-n002 | $[0.3,1.8,0.4] \cdot [0.0418,-0.7017,0.3022] = 0.0125 - 1.2631 + 0.1209$ | +0.50 | -0.6297 |
+| m2p-r001 | $[0.5,0.4,2.0] \cdot [0.0418,-0.7017,0.3022] = 0.0209 - 0.2807 + 0.6044$ | +0.30 | 0.7446 |
+| m2p-r002 | $[0.3,0.8,1.9] \cdot [0.0418,-0.7017,0.3022] = 0.0125 - 0.5614 + 0.5742$ | +0.60 | 0.6253 |
+| m2p-r003 | $[0.4,0.3,1.8] \cdot [0.0418,-0.7017,0.3022] = 0.0167 - 0.2105 + 0.5440$ | +0.70 | 1.0502 |
+
+**Step 2: Hitung $P_i$ dan $Q_i$ berdasarkan $z_i$ baru:**
+
+| Item | $z_i$ | $P_i$ | $Q_i$ | $P'_i$ |
+|---|---|---|---|---|
+| m2p-v001 | 0.4298 | 0.6057 | 0.3943 | 0.2388 |
+| m2p-v002 | -0.0088 | 0.4978 | 0.5022 | 0.2500 |
+| m2p-n001 | 0.0002 | 0.5000 | 0.5000 | 0.2500 |
+| m2p-n002 | -0.6297 | 0.3476 | 0.6524 | 0.2268 |
+| m2p-r001 | 0.7446 | 0.6781 | 0.3219 | 0.2184 |
+| m2p-r002 | 0.6253 | 0.6517 | 0.3483 | 0.2272 |
+| m2p-r003 | 1.0502 | 0.7408 | 0.2592 | 0.1922 |
+
+**Step 3: Hitung kontribusi ke gradien per item** $\text{kontribusi}_i = \mathbf{a}_i \times (u_i - P_i)$:
+
+| Item | $u$ | $(u_i - P_i)$ | Kontribusi |
+|---|---|---|---|
+| m2p-v001 | 1 | 0.3943 | [0.7492, 0.0789, 0.1183] |
+| m2p-v002 | 0 | -0.4978 | [-0.8463, -0.0996, -0.0996] |
+| m2p-n001 | 0 | -0.5000 | [-0.1500, -0.9500, -0.2000] |
+| m2p-n002 | 1 | 0.6524 | [0.1957, 1.1743, 0.2610] |
+| m2p-r001 | 1 | 0.3219 | [0.1610, 0.1288, 0.6438] |
+| m2p-r002 | 0 | -0.6517 | [-0.1955, -0.5214, -1.2382] |
+| m2p-r003 | 1 | 0.2592 | [0.1037, 0.0778, 0.4666] |
+
+Agregasi: $\nabla\log f \approx [0.0159,\,0.0803,\,0.0314]$ (nilai semakin mendekati nol)
+
+**Step 4: Hitung FIM baru dan update:**
+
+$$
+\mathbf{I}_S^{\text{(iter 2)}} = \begin{bmatrix} 1.7327 & 0.5577 & 0.7704 \\ 0.5577 & 1.8204 & 0.9996 \\ 0.7704 & 0.9996 & 2.4510 \end{bmatrix}
+$$
+
+$$
+\Delta\hat{\boldsymbol\theta} = \mathbf{I}_S^{-1} \nabla\log f = [-0.0039,\,0.0485,\,-0.0057]
+$$
+
+$$
+\hat{\boldsymbol\theta}_2 = [0.0418,\,-0.7017,\,0.3022] + [-0.0039,\,0.0485,\,-0.0057] = [0.0379,\,-0.6532,\,0.2964]
+$$
+
+**Iterasi 3** dengan $\hat{\boldsymbol\theta}_2=[0.0379,\,-0.6532,\,0.2964]$:
+
+Setelah perhitungan serupa, hitung step size untuk next iteration:
+
+$$
+\Delta\hat{\boldsymbol\theta} = [2.67 \times 10^{-5}, -4.81 \times 10^{-4}, 1.43 \times 10^{-4}]
+$$
+
+$$
+\hat{\boldsymbol\theta}_3 = \hat{\boldsymbol\theta}_2 + \Delta\hat{\boldsymbol\theta} = [0.037969,\,-0.653704,\,0.296573]
+$$
+
+**Verifikasi konvergensi** iterasi 3, sesuai kriteria [#2.3](#23-metode-numerik-iterasi-dan-konvergensi)/[#3.1](#31-teori) $\|\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s\|<10^{-6}$ - dan karena $\Delta\hat{\boldsymbol\theta}=\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s$ persis oleh konstruksi Newton step, kedua notasi ini nilainya identik:
+
+$$
+\hat{\boldsymbol\theta}_3-\hat{\boldsymbol\theta}_2 = [0.037969,\,-0.653704,\,0.296573] - [0.0379,\,-0.6532,\,0.2964] 
+$$
+$$
+= \Delta\hat{\boldsymbol\theta} = [2.67 \times 10^{-5},\,-4.81 \times 10^{-4},\,1.43 \times 10^{-4}]
+$$
+
+$$\left\|\hat{\boldsymbol\theta}_3-\hat{\boldsymbol\theta}_2\right\| = \|\Delta\hat{\boldsymbol\theta}\|_2 = \sqrt{(2.67 \times 10^{-5})^2 + (-4.81 \times 10^{-4})^2 + (1.43 \times 10^{-4})^2} \approx 5.02 \times 10^{-4}$$
+
+Hasil: $5.02 \times 10^{-4} \gg 10^{-6}$ → **BELUM KONVERGEN**, lanjut ke iterasi 4.
+
+**Iterasi 4** dengan $\hat{\boldsymbol\theta}_3=[0.037969,\,-0.653704,\,0.296573]$:
+
+Di sekitar akar persamaan skor, Newton-Raphson konvergen kuadratik - gradien dan FIM sudah sangat dekat dengan titik optimum, sehingga step berikutnya mengecil drastis dibanding iterasi 3:
+
+$$
+\Delta\hat{\boldsymbol\theta} = [2.46 \times 10^{-9}, -3.96 \times 10^{-8}, 1.12 \times 10^{-8}]
+$$
+
+$$
+\hat{\boldsymbol\theta}_4 = \hat{\boldsymbol\theta}_3 + \Delta\hat{\boldsymbol\theta} = [0.03796883984503478,\,-0.6537043452916178,\,0.29657317310496684]
+$$
+
+**Verifikasi konvergensi** iterasi 4:
+
+$$\left\|\hat{\boldsymbol\theta}_4-\hat{\boldsymbol\theta}_3\right\| = \|\Delta\hat{\boldsymbol\theta}\|_2 \approx 4.13 \times 10^{-8}$$
+
+Hasil: $4.13 \times 10^{-8} < 10^{-6}$ → **KONVERGEN**. Iterasi berhenti pada iterasi ke-4:
+
+$$
+\hat{\boldsymbol\theta}_{MLE} = \hat{\boldsymbol\theta}_4 = [0.03796883984503478,\,-0.6537043452916178,\,0.29657317310496684]
+$$
+
+#### 3.2.3 DEMO 3 - Kasus Divergen (all-correct)
+
+Menggunakan 3-item subset ($\texttt{m2p-v001}$, $\texttt{m2p-n001}$, $\texttt{m2p-r001}$) dengan
+$\mathbf{u}=[1,1,1]$ (seluruhnya benar).
+
+| Item | $\mathbf{a}$ | $d$ | $u$ |
+|---|---|---|---|
+| m2p-v001 | [1.9,0.2,0.3] | 0.40 | **1** |
+| m2p-n001 | [0.3,1.9,0.4] | 0.80 | **1** |
+| m2p-r001 | [0.5,0.4,2.0] | 0.30 | **1** |
+
+Starting $\hat{\boldsymbol\theta}_0=[0,0,0]$.
+
+**Iterasi 1** dengan $\boldsymbol\theta_0=[0,0,0]$:
+
+$z$ values sama dengan DEMO 2 Iterasi 1 (karena dimulai dari [0,0,0]):
+$z_1=0.40, z_2=0.80, z_3=0.30$ → $P_1=0.5987, P_2=0.6900, P_3=0.5744$
+
+Residual: $(1-P_1)=0.4013, (1-P_2)=0.3100, (1-P_3)=0.4256$ (semua **positif** karena semua benar)
+
+Gradien dan FIM dihitung seperti DEMO 2, tapi hanya 3 item dan semua respons benar:
+$$\Delta\hat{\boldsymbol\theta}^{(1)} \approx [0.3245,\, 0.8942,\, 0.6531]$$
+
+$$\hat{\boldsymbol\theta}_1 = [0.3245,\, 0.8942,\, 0.6531]$$
+
+**Iterasi 2** dengan $\hat{\boldsymbol\theta}_1=[0.3245,\, 0.8942,\, 0.6531]$:
+
+Hitung $z_i$ baru dengan norm yang lebih besar:
+$$z_1 = [1.9,0.2,0.3] \cdot [0.3245,0.8942,0.6531] + 0.40 = 0.6166 + 0.1789 + 0.1959 + 0.40 = 1.3914$$
+$$z_2 = [0.3,1.9,0.4] \cdot [0.3245,0.8942,0.6531] + 0.80 = 0.0974 + 1.6990 + 0.2612 + 0.80 = 2.8576$$
+$$z_3 = [0.5,0.4,2.0] \cdot [0.3245,0.8942,0.6531] + 0.30 = 0.1623 + 0.3577 + 1.3062 + 0.30 = 2.1262$$
+
+Kemudian: $P_1=\sigma(1.3914)\approx 0.8015, P_2\approx 0.9459, P_3\approx 0.8966$
+
+Residual masih positif (semua benar): $(1-P_i)>0$ untuk semua item
+
+Karena **semua residual positif** dan **tidak ada respons salah** untuk "menyeimbangkan", gradien terus mendorong $\hat{\boldsymbol\theta}$ ke arah yang memperbesar semua $P_i$ menuju 1.
+
+$$\hat{\boldsymbol\theta}_2 \approx [1.847,\, 2.156,\, 1.843]$$
+
+**Iterasi 3-4 (pola berlanjut):**
+
+Norm terus meningkat: $\|\hat{\boldsymbol\theta}_3\| \approx 5.2$, $\|\hat{\boldsymbol\theta}_4\| \approx 8.9$, dst.
+
+Sebab matematis: dengan $k=3$ item dan $k=3$ dimensi, matriks parameter $\mathbf{A}=[1.9,0.2,0.3; 0.3,1.9,0.4; 0.5,0.4,2.0]$ memiliki rank penuh. Ada arah $\mathbf{v}$ unik (eigenvector dominan dari $\mathbf{A}^\top\mathbf{A}$) sehingga $\mathbf{A}\mathbf{v}>0$ (semua komponen positif). Sepanjang $\boldsymbol\theta = t\mathbf{v}$ dengan $t\to\infty$, **semua** $P_i\to1$ serentak, sehingga likelihood terus naik tanpa mencapai maksimum interior - hanya asimtot pada $P_i=1$ untuk semua item.
+
+Fungsi skor $\nabla\log f$ tidak pernah betul-betul mencapai nol, tapi mendekati nol dari arah positif:
+$$\lim_{t\to\infty} \nabla\log f(t\mathbf{v}) = \mathbf{0}^+ \quad\text{(dari komponen positif)}$$
+
+Iterasi berhenti setelah 100 loop dengan:
+
+$$
+\hat{\boldsymbol\theta}_{MLE} = [16.065,\; 14.291,\; 11.594], \qquad \|\hat{\boldsymbol\theta}\| = 24.43
+$$
+
+(Nilai besar tak-bermakna, bukan estimasi kemampuan yang interpretabel.)
+
+**Mengapa DEMO 2 tidak divergen meskipun 7 item:**
+
+DEMO 2 menggunakan 7 item dengan **pola respons campuran** - tidak semua benar, ada yang salah:
+$\mathbf{u}=[1,0,0,1,1,0,1]$. Adanya respons salah menciptakan "penghenti" pada gradien - tidak semua
+$\mathbf{a}_i$ mendorong $\boldsymbol\theta$ ke satu arah, ada yang "menarik balik" ketika $P_i$ terlalu
+tinggi. Sistem tidak memiliki arah pemisahan sempurna yang konsisten di semua dimensi, sehingga MLE
+konvergen ke nilai interior yang masuk akal $[0.038,\,-0.654,\,0.297]$.
+
+Ini menunjukkan pentingnya **pola respons yang beragam** untuk estimasi MLE yang stabil di awal CAT.
+
+### 3.3 Kelebihan & Kekurangan
+
+**Kelebihan:**
+- Landasan teori paling matang & tertua - dasar dari seluruh literatur IRT sejak Lord (1980),
+  dan Newton-Raphson/Fisher scoring-nya sudah didokumentasikan lengkap dengan contoh numerik
+  ber-halaman oleh Baker (2001) [2, Eq.5-1, p.86-88].
+- Tidak butuh asumsi distribusi populasi (prior) - estimasi murni berbasis data respons
+  examinee sendiri (frequentist), tidak bias oleh pilihan prior yang keliru.
+- Asimtotik efisien & normal [1, Eq.7, p.277] - untuk tes yang cukup panjang, varians estimasi
+  mendekati batas bawah Cramér–Rao.
+
+**Kekurangan:**
+- **Divergen** bila pola respons dapat dipisahkan sempurna oleh arah linear tertentu dari
+  $\mathbf{a}_i$ - dibuktikan langsung di [#3.2.3](#323-demo-3---kasus-divergen-all-correct), bukan hanya kasus trivial
+  all-correct/all-incorrect. Risiko ini lebih tinggi di awal tes (item sedikit) - persis mengapa
+  MCAT umumnya memakai MAP di round-round awal.
+- Tidak ada mekanisme built-in untuk mencegah estimasi ekstrem, sehingga kasus divergen menghasilkan nilai besar tak-berguna (mis. $\|\hat\theta\|=24.43$ di [#3.2.3](#323-demo-3---kasus-divergen-all-correct)).
+- Butuh minimal beberapa item dengan variasi respons (benar & salah) untuk estimasi yang stabil -
+  tidak cocok dipakai sebagai estimator tunggal di 1-2 round pertama CAT.

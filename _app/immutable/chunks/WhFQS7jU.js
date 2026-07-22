@@ -1,0 +1,1 @@
+function e(e){return e?new Date(e).toLocaleDateString(`en-US`,{year:`numeric`,month:`short`,day:`numeric`}):``}export{e as t};
