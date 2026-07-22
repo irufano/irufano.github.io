@@ -6,7 +6,7 @@
 	let { children } = $props();
 
 	// the post detail page renders its own Footer inside its scrollable article
-	// section, so it appears at the true end of the article — other pages keep
+	// section, so it appears at the true end of the article - other pages keep
 	// the footer pinned via the shell below
 	let isPostPage = $derived(page.route.id === '/(site)/posts/[category]/[slug]');
 </script>

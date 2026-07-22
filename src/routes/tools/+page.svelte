@@ -3,7 +3,7 @@
   import { SITE_URL, DEFAULT_OG_IMAGE } from "$lib/seo";
   import Search from "lucide-svelte/icons/search";
 
-  const title = "Tools — irufano";
+  const title = "Tools - irufano";
   const description = "A collection of small developer tools and utilities.";
 
   let query = $state("");

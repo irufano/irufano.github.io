@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Character Counter — Tools — irufano';
+	const title = 'Character Counter - Tools - irufano';
 	const description = 'Count characters, words, sentences, lines, and paragraphs in your text.';
 	const canonicalUrl = `${SITE_URL}/tools/character-counter`;
 
@@ -58,7 +58,7 @@
 		try {
 			text = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 

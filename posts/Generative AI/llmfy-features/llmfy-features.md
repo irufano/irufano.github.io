@@ -15,7 +15,7 @@ image: "https://raw.githubusercontent.com/irufano/llmfy/refs/heads/main/LLMFY-LO
 
 ## Introduction
 
-**LLMfy** is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions — all in a single modular package.
+**LLMfy** is a Python framework designed to streamline the development of applications powered by large language models. It provides unified abstractions across multiple LLM providers, workflow orchestration, vector storage, tool calling, and utility functions - all in a single modular package.
 
 **Installation:**
 ```bash
@@ -67,7 +67,7 @@ response = ai.invoke(messages)
 print(response.result.content)
 ```
 
-Switching providers requires only changing the model and config — the rest of the code stays the same.
+Switching providers requires only changing the model and config - the rest of the code stays the same.
 
 ## System Message Templating
 

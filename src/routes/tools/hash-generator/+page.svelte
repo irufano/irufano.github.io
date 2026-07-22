@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Hash Generator — Tools — irufano';
+	const title = 'Hash Generator - Tools - irufano';
 	const description = 'Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.';
 	const canonicalUrl = `${SITE_URL}/tools/hash-generator`;
 
@@ -68,7 +68,7 @@
 		try {
 			input = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 

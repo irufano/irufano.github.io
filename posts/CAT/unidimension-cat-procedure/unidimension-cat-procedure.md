@@ -22,7 +22,7 @@ Unlike conventional fixed-form tests where all examinees answer the same predete
 
 According to Seo (2017), there are **five steps** for implementing a CAT system [4]:
 
-### Step 1 — Determine Feasibility
+### Step 1 - Determine Feasibility
 Before building a CAT, the test program must evaluate whether CAT is appropriate:
 - Is there a sufficient volume of test-takers to calibrate items? (Rule of thumb: at least 200–300 per item)
 - Is the construct **unidimensional** (measuring one trait)? IRT-based CAT assumes this
@@ -33,7 +33,7 @@ Before building a CAT, the test program must evaluate whether CAT is appropriate
 >
 > If the test volume is very small (e.g., fewer than 100 test-takers per year), it may be impossible to build a usable item bank. It is not unusual for a testing program to start with a fixed-form test and later transition to CAT once the item bank is well established [5].
 
-### Step 2 — Establish an Item Bank
+### Step 2 - Establish an Item Bank
 The item bank is the foundation of CAT. It must:
 - Contain a large pool of **pre-calibrated items** with known IRT parameters
 - Cover the full range of the ability scale (very easy to very hard)
@@ -44,15 +44,15 @@ The item bank is the foundation of CAT. It must:
 >
 > "You can't just write a few items and subjectively rank them as Easy, Medium, or Hard. Instead, you need to write a large number of items and then pilot them on a representative sample of examinees." [3]
 
-### Step 3 — Pretest, Calibrate, and Link Item Parameters
+### Step 3 - Pretest, Calibrate, and Link Item Parameters
 Each item must be statistically calibrated through:
 - **Pilot testing** on real examinees
-- **IRT calibration** — estimating the $a$ (discrimination), $b$ (difficulty), and $c$ (guessing) parameters
-- **Linking** — placing all items on the same IRT scale so they are comparable
+- **IRT calibration** - estimating the $a$ (discrimination), $b$ (difficulty), and $c$ (guessing) parameters
+- **Linking** - placing all items on the same IRT scale so they are comparable
 
 This is done through statistical analysis using actual candidate response data [4].
 
-### Step 4 — Specify the Five CAT Algorithm Components
+### Step 4 - Specify the Five CAT Algorithm Components
 The test developer must define all five components of the CAT algorithm (see Part 2 below) [4]:
 1. Item bank structure
 2. Starting item/point
@@ -60,7 +60,7 @@ The test developer must define all five components of the CAT algorithm (see Par
 4. Scoring procedure
 5. Termination criterion
 
-### Step 5 — Deploy the CAT
+### Step 5 - Deploy the CAT
 After specifying all components, the CAT is deployed. Ongoing management includes:
 - Content balancing
 - Item analysis and refreshment
@@ -96,7 +96,7 @@ The starting point determines where the test begins on the ability scale. There 
 
 > [note]:
 > 
-> "At the initial stages of a CAT, when only a single item or two has been administered, the next item is usually selected by a step rule — if the first item was answered correctly, the examinee's original theta estimate is increased by some amount (e.g., 0.50); if the first item was answered incorrectly, the original theta estimate is decreased by the same amount." [1]
+> "At the initial stages of a CAT, when only a single item or two has been administered, the next item is usually selected by a step rule - if the first item was answered correctly, the examinee's original theta estimate is increased by some amount (e.g., 0.50); if the first item was answered incorrectly, the original theta estimate is decreased by the same amount." [1]
 
 ---
 
@@ -137,17 +137,17 @@ Simple but effective; does not require full IIF calculation.
 **Other criteria:** $a$-stratification, weighted likelihood, Kullback-Leibler information [5].
 
 #### 3b. Content Balancing
-Ensures the test covers required content domains proportionally — not just statistically optimal items. This addresses the concern of educators and subject matter experts who require balanced content coverage [2, 5].
+Ensures the test covers required content domains proportionally - not just statistically optimal items. This addresses the concern of educators and subject matter experts who require balanced content coverage [2, 5].
 
 #### 3c. Item Exposure Control
 Prevents certain items from being administered too frequently, which would compromise test security [5]. Common methods:
-- **Randomesque method** — randomly selects from the top-$k$ most informative items
-- **Sympson-Hetter method** — probabilistically suppresses overexposed items
-- **Fade-away method** — gradually reduces exposure of frequently used items
+- **Randomesque method** - randomly selects from the top-$k$ most informative items
+- **Sympson-Hetter method** - probabilistically suppresses overexposed items
+- **Fade-away method** - gradually reduces exposure of frequently used items
 
 > [note]:
 >
-> "Selecting the right method for each of the 3 components of the item selection process — content balancing, the item selection criterion, and item exposure control — is not straightforward and cannot be considered separately for each of these 3 components because of the unique interactions among them." [5]
+> "Selecting the right method for each of the 3 components of the item selection process - content balancing, the item selection criterion, and item exposure control - is not straightforward and cannot be considered separately for each of these 3 components because of the unique interactions among them." [5]
 
 ---
 
@@ -155,7 +155,7 @@ Prevents certain items from being administered too frequently, which would compr
 
 After each response, the test-taker's ability estimate $\hat{\theta}$ is updated [2, 6].
 
-The scoring algorithm takes all previous responses into account — not just the most recent one. Let $\mathbf{u} = (u_1, u_2, \ldots, u_n)$ denote the vector of responses where $u_j = 1$ if correct and $u_j = 0$ if incorrect.
+The scoring algorithm takes all previous responses into account - not just the most recent one. Let $\mathbf{u} = (u_1, u_2, \ldots, u_n)$ denote the vector of responses where $u_j = 1$ if correct and $u_j = 0$ if incorrect.
 
 #### Maximum Likelihood Estimation (MLE)
 
@@ -239,21 +239,21 @@ Where $\theta_c$ is the passing cut score and $z_{\alpha/2}$ is the critical val
 
 #### What the Literature Actually Says About CAT Stopping Criteria
 
-The Authoritative Source — van der Linden & Glas (2000) [11]. The most cited CAT textbook defines three legitimate stopping rules:
+The Authoritative Source - van der Linden & Glas (2000) [11]. The most cited CAT textbook defines three legitimate stopping rules:
 
-##### Rule 1 — Fixed Length
+##### Rule 1 - Fixed Length
 
 $$stop when n=N$$
 
 Simple, equal test length for all. Does not guarantee equal precision.
 
-##### Rule 2 — Fixed Precision (SE-based)
+##### Rule 2 - Fixed Precision (SE-based)
 
 $$stop when SE(\hat{\theta})<\epsilon$$
 
 Guarantees equal measurement precision. Test length varies by person.
 
-##### Rule 3 — Classification / Sequential Probability Ratio Test (SPRT)
+##### Rule 3 - Classification / Sequential Probability Ratio Test (SPRT)
 
 $$stop when ability is clearly above or below a cut score θ_c​$$
 
@@ -262,7 +262,7 @@ $$stop when ability is clearly above or below a cut score θ_c​$$
 
 > [note]:
 > 
-> "The fixed-precision rule is preferred when the goal is to produce scores of equal reliability across all test-takers." — van der Linden & Glas (2000) [11]
+> "The fixed-precision rule is preferred when the goal is to produce scores of equal reliability across all test-takers." - van der Linden & Glas (2000) [11]
 
 ---
 
@@ -270,7 +270,7 @@ $$stop when ability is clearly above or below a cut score θ_c​$$
 
 > [note]:
 >
-> "In practice, a combination of stopping rules is recommended — a precision-based primary rule with a maximum item count as a safety cap to prevent excessively long tests."
+> "In practice, a combination of stopping rules is recommended - a precision-based primary rule with a maximum item count as a safety cap to prevent excessively long tests."
 
 The standard combined rule is:
 
@@ -292,9 +292,9 @@ No mention of bank exhaustion as a stopping criterion.
 
 Based on the literature [11, 1, 4], the proper priority order is:
 ```
-Priority 1 (primary)  :   SE(θ̂) < ε          → STOP — precision achieved
-Priority 2 (safety)   :   n ≥ N_max          → STOP — too many items
-Priority 3 (emergency):   bank exhausted     → STOP WITH WARNING — bank limitation
+Priority 1 (primary)  :   SE(θ̂) < ε          → STOP - precision achieved
+Priority 2 (safety)   :   n ≥ N_max          → STOP - too many items
+Priority 3 (emergency):   bank exhausted     → STOP WITH WARNING - bank limitation
 ```
 The first rule that fires wins. Bank exhaustion should always come last and always produce a warning.
 
@@ -322,7 +322,7 @@ flowchart TD
 
 CAT is built on Item Response Theory. The three most common models are [10]:
 
-### 1PL — Rasch Model
+### 1PL - Rasch Model
 Only difficulty $b$ varies between items; discrimination is fixed at $a = 1$ and guessing $c = 0$:
 
 $$P_i(\theta) = \frac{1}{1 + e^{-(\theta - b_i)}}$$
@@ -333,15 +333,15 @@ Both difficulty $b$ and discrimination $a$ vary; no guessing ($c = 0$):
 $$P_i(\theta) = \frac{1}{1 + e^{-a_i(\theta - b_i)}}$$
 
 ### 3PL Model (most common in high-stakes CAT)
-All three parameters vary — discrimination $a_i$, difficulty $b_i$, and guessing $c_i$:
+All three parameters vary - discrimination $a_i$, difficulty $b_i$, and guessing $c_i$:
 
 $$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
 
 Where:
-- $\theta \in (-\infty, +\infty)$, typically $[-3, 3]$ — test-taker ability
-- $a_i > 0$ — item discrimination (steepness of the curve)
-- $b_i \in [-3, 3]$ — item difficulty (location of the curve)
-- $c_i \in [0, 1]$ — pseudo-guessing parameter (lower asymptote)
+- $\theta \in (-\infty, +\infty)$, typically $[-3, 3]$ - test-taker ability
+- $a_i > 0$ - item discrimination (steepness of the curve)
+- $b_i \in [-3, 3]$ - item difficulty (location of the curve)
+- $c_i \in [0, 1]$ - pseudo-guessing parameter (lower asymptote)
 
 ---
 
@@ -353,17 +353,17 @@ The key historical milestones are [1, 8]:
 
 | Year | Event |
 |---|---|
-| 1905 | Binet's adaptive IQ test — first adaptive testing procedure |
+| 1905 | Binet's adaptive IQ test - first adaptive testing procedure |
 | 1952 | Lord observes that ability scores are test-independent (unlike observed scores) |
 | 1960 | Rasch describes the one-parameter logistic IRT model |
 | 1973 | Weiss proposes the "stradaptive" computer-delivered test |
 | 1980 | Lord publishes the foundational IRT textbook |
-| 1994 | NCLEX (nursing licensure exam) adopts CAT — first large-scale operational use |
+| 1994 | NCLEX (nursing licensure exam) adopts CAT - first large-scale operational use |
 | 2007 | National Registry of Emergency Medical Technicians adopts CAT |
 
 ---
 
-## Part 6: Practical Example — How CAT Selects Items
+## Part 6: Practical Example - How CAT Selects Items
 
 The following example illustrates the item selection process step by step [3]:
 
@@ -478,7 +478,7 @@ The CAT process can be summarized in three phases:
 
 [5] Kim, D., & Chung, H. (2018). Components of the item selection algorithm in computerized adaptive testing. *Journal of Educational Evaluation for Health Professions*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5968224/
 
-[6] Cogn-IQ. (2026). *Adaptive Testing in Psychometrics — Definition & Examples*. https://www.cogn-iq.org/learn/theory/adaptive-testing/
+[6] Cogn-IQ. (2026). *Adaptive Testing in Psychometrics - Definition & Examples*. https://www.cogn-iq.org/learn/theory/adaptive-testing/
 
 [7] UWorld Nursing. (2025). *What Is NCLEX Computerized Adaptive Testing (CAT)?* https://nursing.uworld.com/blog/nclex-computer-adaptive-test/
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'AES Encryption — Tools — irufano';
+	const title = 'AES Encryption - Tools - irufano';
 	const description =
 		'Encrypt and decrypt text with AES-GCM using a passphrase, right in your browser.';
 	const canonicalUrl = `${SITE_URL}/tools/aes-encryption`;
@@ -169,7 +169,7 @@
 		try {
 			inputText = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -200,7 +200,7 @@
 <section class="w-full px-4 py-10 sm:px-6">
 	<h1 class="font-mono text-2xl font-extrabold text-fg sm:text-3xl">AES Encryption</h1>
 	<p class="mt-2 text-sm text-fg-muted">
-		Encrypt and decrypt text with AES-256-GCM. Everything runs locally in your browser — nothing is
+		Encrypt and decrypt text with AES-256-GCM. Everything runs locally in your browser - nothing is
 		sent anywhere.
 	</p>
 
@@ -409,7 +409,7 @@
 			Uses AES-GCM (authenticated encryption) with a key derived from your passphrase via PBKDF2
 			(SHA-256). A random salt and IV are generated per encryption and stored alongside the
 			ciphertext, so the same input never produces the same output twice. All computation happens
-			in your browser via the Web Crypto API — your passphrase and text are never transmitted.
+			in your browser via the Web Crypto API - your passphrase and text are never transmitted.
 		</span>
 	</div>
 </section>

@@ -23,7 +23,7 @@ per metode.
 Sebelum masuk ke formula teknis, berikut intuisi ketiga konsep yang menjadi inti ketiga metode estimasi:
 
 
-### **Prior — "Apa yang kita tahu tentang $\theta$ sebelum ada data?"**
+### **Prior - "Apa yang kita tahu tentang $\theta$ sebelum ada data?"**
 
 Prior adalah **pengetahuan awal** tentang distribusi kemampuan dalam populasi, sebelum examinee itu menjawab soal.
 
@@ -31,7 +31,7 @@ Prior adalah **pengetahuan awal** tentang distribusi kemampuan dalam populasi, s
   - Ini berarti: "Sebelum tes, kami percaya kebanyakan orang punya kemampuan dekat 0, dan semakin jauh dari 0 semakin jarang"
   - Misal $\theta=+3$ dianggap **sangat jarang** di populasi (hanya 0.13% dalam normal)
 
-- Prior **tidak bergantung pada respons** — pure belief/asumsi tentang populasi, bukan tentang satu examinee
+- Prior **tidak bergantung pada respons** - pure belief/asumsi tentang populasi, bukan tentang satu examinee
 - Prior adalah **penyeimbang** antara data (likelihood) dan asumsi awal tentang populasi
 
 **Rumus sederhana:** $\pi(\theta) = N(\mu, \sigma^2)$ (biasanya prior normal dengan mean $\mu$ dan variance $\sigma^2$)
@@ -39,13 +39,13 @@ Prior adalah **pengetahuan awal** tentang distribusi kemampuan dalam populasi, s
 ---
 
 
-### **Likelihood — "Seberapa cocok data dengan parameter $\theta$?"**
+### **Likelihood - "Seberapa cocok data dengan parameter $\theta$?"**
 
 Likelihood menjawab: *Jika kemampuan examinee adalah $\theta$, seberapa besar peluang dia menjawab respons yang kita observasi?*
 
 - **Contoh:** Examinee menjawab 3 item: benar, salah, benar (respons $\mathbf{u}=[1,0,1]$)
-  - Jika kemampuannya $\theta=0$ (median), likelihood mungkin 0.1 (tidak terlalu cocok — item pertama harusnya lebih mudah)
-  - Jika kemampuannya $\theta=+1$ (tinggi), likelihood mungkin 0.5 (lebih cocok — pola respons sesuai dengan kemampuan lebih tinggi)
+  - Jika kemampuannya $\theta=0$ (median), likelihood mungkin 0.1 (tidak terlalu cocok - item pertama harusnya lebih mudah)
+  - Jika kemampuannya $\theta=+1$ (tinggi), likelihood mungkin 0.5 (lebih cocok - pola respons sesuai dengan kemampuan lebih tinggi)
   
 - Likelihood adalah **fungsi dari $\theta$** yang menggukur "bukti yang ada mendukung $\theta$ berapa"
 - Semakin tinggi likelihood, semakin "masuk akal" nilai $\theta$ tersebut berdasarkan data respons
@@ -54,7 +54,7 @@ Likelihood menjawab: *Jika kemampuan examinee adalah $\theta$, seberapa besar pe
 
 ---
 
-### **Posterior — "Apa yang kita tahu tentang $\theta$ setelah melihat data?"**
+### **Posterior - "Apa yang kita tahu tentang $\theta$ setelah melihat data?"**
 
 Posterior adalah **update belief** tentang $\theta$ setelah menggabungkan prior (pengetahuan awal) dengan likelihood (bukti dari respons).
 
@@ -178,7 +178,7 @@ dengan $u_i\in\{0,1\}$ respons examinee pada item $i$ yang sudah di-administer, 
 $Q_i(\boldsymbol\theta)=1-P_i(\boldsymbol\theta)$. Mulder & van der Linden menyatakan langsung
 setelah Eq.3 [1, p.276]: *"The MLE can [be] found by setting the derivative of the logarithm of
 (3) equal to zero and solv[ing] the system for $\theta$ using a numerical method such as
-Newton–Raphson (e.g., Segall, 1996) or an EM algorithm."* — namun paper tidak menuliskan bentuk
+Newton–Raphson (e.g., Segall, 1996) or an EM algorithm."* - namun paper tidak menuliskan bentuk
 eksplisit turunannya. Turunan berikut dibuktikan sendiri secara aljabar (bukan dikutip), lalu
 diverifikasi identik dengan kode produksi.
 
@@ -243,7 +243,7 @@ Ini **identik** dengan `mle.rs:32-33`: `residual=(x-p)*p_prime/(p*q); grad += a*
 ### 2.2 Fisher Information Matrix sebagai pengganti Hessian (Fisher scoring)
 
 Hessian eksak (turunan kedua $\log f$) melibatkan turunan kedua $P'_i$ yang rumit. Praktik standar
-—dipakai baik oleh Baker (2001, lihat [#3.1](#31-teori)) maupun Mulder & van der Linden—adalah
+-dipakai baik oleh Baker (2001, lihat [#3.1](#31-teori)) maupun Mulder & van der Linden-adalah
 mengganti Hessian dengan negatif ekspektasinya, yaitu **Fisher Information Matrix** [1, Eq.4,
 p.276]:
 
@@ -265,12 +265,12 @@ $$
 w_i = \frac{(P'_i)^2}{P_iQ_i} = \frac{(P_i-c_i)^2Q_i^2/(1-c_i)^2}{P_iQ_i} = \frac{Q_i(P_i-c_i)^2}{P_i(1-c_i)^2} \quad\blacksquare
 $$
 
-— sama persis dengan $\mathbf{I}_i(\boldsymbol\theta)$ di atas. Untuk M2PL ($c_i=0$):
+- sama persis dengan $\mathbf{I}_i(\boldsymbol\theta)$ di atas. Untuk M2PL ($c_i=0$):
 $w_i=P_i(1-P_i)$, dan $\mathbf{I}_i(\boldsymbol\theta)=P_i(1-P_i)\,\mathbf{a}_i\mathbf{a}_i^\top$.
 FIM total teradditif atas item yang sudah dijawab [1, Eq.6, p.277]:
 $\mathbf{I}_S(\boldsymbol\theta)=\sum_{i\in S}\mathbf{I}_i(\boldsymbol\theta)$, dan estimator ini
 terdistribusi asimtotik normal [1, Eq.7, p.277]:
-$\hat{\boldsymbol\theta}\sim N\big(\theta_0,\mathbf{I}_S^{-1}(\theta_0)\big)$ — generalisasi
+$\hat{\boldsymbol\theta}\sim N\big(\theta_0,\mathbf{I}_S^{-1}(\theta_0)\big)$ - generalisasi
 multivariat dari batas bawah Cramér–Rao.
 
 **Keterangan variabel (tambahan untuk estimasi):**
@@ -278,8 +278,8 @@ multivariat dari batas bawah Cramér–Rao.
 | Simbol | Arti |
 |---|---|
 | $\mathbf{u}=(u_1,\dots,u_n)$ | Vektor respons examinee pada $n$ item yang sudah di-administer |
-| $f(\mathbf{u}\mid\boldsymbol\theta)$ | Fungsi likelihood — peluang bersama seluruh respons pada $\boldsymbol\theta$ |
-| $\nabla\log f(\boldsymbol\theta)$ | Skor (*score function*) — gradien log-likelihood, $=0$ pada MLE |
+| $f(\mathbf{u}\mid\boldsymbol\theta)$ | Fungsi likelihood - peluang bersama seluruh respons pada $\boldsymbol\theta$ |
+| $\nabla\log f(\boldsymbol\theta)$ | Skor (*score function*) - gradien log-likelihood, $=0$ pada MLE |
 | $\mathbf{I}_i(\boldsymbol\theta)$, $\mathbf{I}_S(\boldsymbol\theta)$ | FIM item $i$ / FIM kumulatif himpunan item $S$ (identik dengan $I_i(\theta)$ di item_selection notes) |
 | $P^*$ | $\sigma(z_i)$, bagian sigmoid murni tanpa guessing (dipakai pada pembuktian $w_i$) |
 
@@ -323,7 +323,7 @@ di mana:
 **Konvergensi** adalah kondisi ketika perubahan parameter menjadi **sangat sangat kecil** sehingga iterasi bisa dihentikan. Kriteria konvergensi formal yang dipakai di semua metode:
 
 $$
-\left\|\hat{\boldsymbol\theta}_{s+1} - \hat{\boldsymbol\theta}_s\right\| < 10^{-6} \quad\Rightarrow\quad \text{KONVERGEN — Iterasi Berhenti}
+\left\|\hat{\boldsymbol\theta}_{s+1} - \hat{\boldsymbol\theta}_s\right\| < 10^{-6} \quad\Rightarrow\quad \text{KONVERGEN - Iterasi Berhenti}
 $$
 
 Artinya: **Jika perubahan norm kurang dari 0.000001, maka nilai $\hat{\boldsymbol\theta}$ sudah stabil dan siap digunakan sebagai estimasi final.**
@@ -332,7 +332,7 @@ Artinya: **Jika perubahan norm kurang dari 0.000001, maka nilai $\hat{\boldsymbo
 
 | Iterasi | $\hat{\boldsymbol\theta}$ | Perubahan ($\|\Delta\boldsymbol\theta\|$) | Status |
 |---|---|---|---|
-| 0 | 1.0000 | — | Tebakan awal (arbitrary) |
+| 0 | 1.0000 | - | Tebakan awal (arbitrary) |
 | 1 | 0.2267 | 0.7733 | Perubahan **BESAR** ← masih jauh dari optimal |
 | 2 | 0.3239 | 0.0973 | Perubahan lebih kecil ← semakin dekat |
 | 3 | 0.3248 | 0.0009 | Perubahan sangat kecil |
@@ -372,7 +372,7 @@ if (theta_next - theta_current).norm() < 1e-6 {
 ### 3.1 Teori
 
 MLE mencari $\hat{\boldsymbol\theta}$ yang memaksimalkan $f(\mathbf{u}\mid\boldsymbol\theta)$
-[1, Eq.2, p.276] — lihat [#2](#2-model--notasi-dasar-dipakai-oleh-ketiga-metode) untuk definisi
+[1, Eq.2, p.276] - lihat [#2](#2-model--notasi-dasar-dipakai-oleh-ketiga-metode) untuk definisi
 lengkap dan pembuktian skor/FIM. Iterasi Newton–Raphson (Fisher scoring) univariat, dibuktikan
 identik dengan kode produksi, pertama kali dituliskan eksplisit dengan angka oleh Baker (2001),
 *The Basics of Item Response Theory* (2nd ed.), Bab 5 "Estimating an Examinee's Ability",
@@ -384,9 +384,9 @@ $$
 $$
 
 Untuk M2PL univariat ($c=0$, $k=1$), $\nabla\log f=\sum a_i(u_i-P_i)$ ([#4.1](#21-pembuktian-skor-gradien-log-likelihood)) dan
-$\mathbf{I}_S=\sum a_i^2P_iQ_i$ — Eq.[5-1] Baker **adalah** Fisher scoring
+$\mathbf{I}_S=\sum a_i^2P_iQ_i$ - Eq.[5-1] Baker **adalah** Fisher scoring
 $\hat\theta_{s+1}=\hat\theta_s+\mathbf{I}_S^{-1}\nabla\log f$ pada kasus 1-dimensi, dituliskan
-dengan notasi $(a,b,c)$ alih-alih $(a,d,c)$ (lihat [#3.2.1](#321-demo-1--reproduksi-baker-2001-k1) untuk konversi $d=-ab$).
+dengan notasi $(a,b,c)$ alih-alih $(a,d,c)$ (lihat [#3.2.1](#321-demo-1---reproduksi-baker-2001-k1) untuk konversi $d=-ab$).
 
 Generalisasi ke $k>1$ dimensi mengganti pembagian skalar dengan perkalian
 matriks invers:
@@ -397,8 +397,8 @@ $$
 
 Mulder & van der Linden mencatat langsung setelah definisi
 MLE [1, p.276]: *"The likelihood function may not have a maximum (e.g., when only correct or
-incorrect item responses are observed), or a local instead of a global maximum may be found."* —
-dibuktikan ulang secara eksperimental di [#5.2.3](#323-demo-3--kasus-divergen-all-correct).
+incorrect item responses are observed), or a local instead of a global maximum may be found."* -
+dibuktikan ulang secara eksperimental di [#5.2.3](#323-demo-3---kasus-divergen-all-correct).
 
 **Keterangan variabel:**
 
@@ -407,11 +407,11 @@ dibuktikan ulang secara eksperimental di [#5.2.3](#323-demo-3--kasus-divergen-al
 | $\hat\theta_s$ | Estimasi kemampuan pada iterasi ke-$s$ |
 | $a_i$ (Baker) $\equiv \mathbf{a}_i$ (notasi vektor) | Parameter diskriminasi item $i$ |
 | $N$ | Jumlah item yang sudah di-administer |
-| $\mathbf{I}_S(\boldsymbol\theta)^{-1}$ | Invers FIM kumulatif — berperan sebagai "step size" matriks pada Newton step |
+| $\mathbf{I}_S(\boldsymbol\theta)^{-1}$ | Invers FIM kumulatif - berperan sebagai "step size" matriks pada Newton step |
 
 ### 3.2 Perhitungan Manual
 
-#### 3.2.1 DEMO 1 — Reproduksi Baker (2001), k=1
+#### 3.2.1 DEMO 1 - Reproduksi Baker (2001), k=1
 
 Item Baker (2001, p.87) dalam parameterisasi $(a,b,c)$, dikonversi ke $(a,d,c)$ produksi via
 $d=-ab$ (karena $z=a\theta+d=a(\theta-b)$):
@@ -422,7 +422,7 @@ $d=-ab$ (karena $z=a\theta+d=a(\theta-b)$):
 | 2 | 1.2 | $0$ | $0.0$ | 0 | 0 |
 | 3 | 0.8 | $1$ | $-0.8$ | 0 | 1 |
 
-*A priori* $\hat\theta_0=1.0$ — dikutip langsung, Baker (2001, p.87): *"Initially, the $\hat\theta_s$
+*A priori* $\hat\theta_0=1.0$ - dikutip langsung, Baker (2001, p.87): *"Initially, the $\hat\theta_s$
 on the right side of the equal sign is set to some arbitrary value, such as 1."*
 
 **Iterasi 1** (M2PL sehingga $P=P^*=\sigma(a\theta+d)$):
@@ -527,16 +527,16 @@ $$
 $$
 
 **Verifikasi konvergensi:**
-$$|\hat\theta_4-\hat\theta_3| = |\Delta\hat\theta| = 9.05\times10^{-8} < 10^{-6} \Rightarrow \textbf{KONVERGEN} \text{ — iterasi berhenti.}$$
+$$|\hat\theta_4-\hat\theta_3| = |\Delta\hat\theta| = 9.05\times10^{-8} < 10^{-6} \Rightarrow \textbf{KONVERGEN} \text{ - iterasi berhenti.}$$
 
 → **$\hat\theta_{MLE}\approx 0.324846$** (presisi penuh: $0.3248462760...$).
 
-#### 3.2.2 DEMO 2 — Multidimensional (k=3), 7 item
+#### 3.2.2 DEMO 2 - Multidimensional (k=3), 7 item
 
 Menggunakan seluruh 7-item bank yang sama seperti
 [Item Bank Snapshot](/posts/cat/item-selection-criteria-mcat#item-bank-snapshot), dengan pola
-respons **campuran** (bukan seragam per content-area — lihat catatan Divergen di
-[#3.2.3](#323-demo-3--kasus-divergen-all-correct)):
+respons **campuran** (bukan seragam per content-area - lihat catatan Divergen di
+[#3.2.3](#323-demo-3---kasus-divergen-all-correct)):
 
 | Item | $\mathbf{a}$ | $d$ | $u$ |
 |---|---|---|---|
@@ -550,7 +550,7 @@ respons **campuran** (bukan seragam per content-area — lihat catatan Divergen 
 
 Starting $\hat{\boldsymbol\theta}_0=[0,0,0]$.
 
-**Iterasi 1** — $\nabla\log f$ dan $\mathbf{I}_S$ dihitung persis seperti [#2.1](#21-pembuktian-skor-gradien-log-likelihood)/[#2.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring), dijumlahkan atas ke-7 item:
+**Iterasi 1** - $\nabla\log f$ dan $\mathbf{I}_S$ dihitung persis seperti [#2.1](#21-pembuktian-skor-gradien-log-likelihood)/[#2.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring), dijumlahkan atas ke-7 item:
 
 **Step 1: Hitung (linear predictor $z_i$) $z_i = \mathbf{a}_i \cdot \boldsymbol\theta_0 + d_i$ untuk setiap item** dengan $\boldsymbol\theta_0=[0,0,0]$:
 
@@ -695,7 +695,7 @@ $$
 \hat{\boldsymbol\theta}_3 = \hat{\boldsymbol\theta}_2 + \Delta\hat{\boldsymbol\theta} = [0.037969,\,-0.653704,\,0.296573]
 $$
 
-**Verifikasi konvergensi** iterasi 3, sesuai kriteria [#2.3](#23-metode-numerik-iterasi-dan-konvergensi)/[#3.1](#31-teori) $\|\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s\|<10^{-6}$ — dan karena $\Delta\hat{\boldsymbol\theta}=\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s$ persis oleh konstruksi Newton step, kedua notasi ini nilainya identik:
+**Verifikasi konvergensi** iterasi 3, sesuai kriteria [#2.3](#23-metode-numerik-iterasi-dan-konvergensi)/[#3.1](#31-teori) $\|\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s\|<10^{-6}$ - dan karena $\Delta\hat{\boldsymbol\theta}=\hat{\boldsymbol\theta}_{s+1}-\hat{\boldsymbol\theta}_s$ persis oleh konstruksi Newton step, kedua notasi ini nilainya identik:
 
 $$
 \hat{\boldsymbol\theta}_3-\hat{\boldsymbol\theta}_2 = [0.037969,\,-0.653704,\,0.296573] - [0.0379,\,-0.6532,\,0.2964] 
@@ -710,7 +710,7 @@ Hasil: $5.02 \times 10^{-4} \gg 10^{-6}$ → **BELUM KONVERGEN**, lanjut ke iter
 
 **Iterasi 4** dengan $\hat{\boldsymbol\theta}_3=[0.037969,\,-0.653704,\,0.296573]$:
 
-Di sekitar akar persamaan skor, Newton-Raphson konvergen kuadratik — gradien dan FIM sudah sangat dekat dengan titik optimum, sehingga step berikutnya mengecil drastis dibanding iterasi 3:
+Di sekitar akar persamaan skor, Newton-Raphson konvergen kuadratik - gradien dan FIM sudah sangat dekat dengan titik optimum, sehingga step berikutnya mengecil drastis dibanding iterasi 3:
 
 $$
 \Delta\hat{\boldsymbol\theta} = [2.46 \times 10^{-9}, -3.96 \times 10^{-8}, 1.12 \times 10^{-8}]
@@ -730,7 +730,7 @@ $$
 \hat{\boldsymbol\theta}_{MLE} = \hat{\boldsymbol\theta}_4 = [0.03796883984503478,\,-0.6537043452916178,\,0.29657317310496684]
 $$
 
-#### 3.2.3 DEMO 3 — Kasus Divergen (all-correct)
+#### 3.2.3 DEMO 3 - Kasus Divergen (all-correct)
 
 Menggunakan 3-item subset ($\texttt{m2p-v001}$, $\texttt{m2p-n001}$, $\texttt{m2p-r001}$) dengan
 $\mathbf{u}=[1,1,1]$ (seluruhnya benar).
@@ -774,7 +774,7 @@ $$\hat{\boldsymbol\theta}_2 \approx [1.847,\, 2.156,\, 1.843]$$
 
 Norm terus meningkat: $\|\hat{\boldsymbol\theta}_3\| \approx 5.2$, $\|\hat{\boldsymbol\theta}_4\| \approx 8.9$, dst.
 
-Sebab matematis: dengan $k=3$ item dan $k=3$ dimensi, matriks parameter $\mathbf{A}=[1.9,0.2,0.3; 0.3,1.9,0.4; 0.5,0.4,2.0]$ memiliki rank penuh. Ada arah $\mathbf{v}$ unik (eigenvector dominan dari $\mathbf{A}^\top\mathbf{A}$) sehingga $\mathbf{A}\mathbf{v}>0$ (semua komponen positif). Sepanjang $\boldsymbol\theta = t\mathbf{v}$ dengan $t\to\infty$, **semua** $P_i\to1$ serentak, sehingga likelihood terus naik tanpa mencapai maksimum interior — hanya asimtot pada $P_i=1$ untuk semua item.
+Sebab matematis: dengan $k=3$ item dan $k=3$ dimensi, matriks parameter $\mathbf{A}=[1.9,0.2,0.3; 0.3,1.9,0.4; 0.5,0.4,2.0]$ memiliki rank penuh. Ada arah $\mathbf{v}$ unik (eigenvector dominan dari $\mathbf{A}^\top\mathbf{A}$) sehingga $\mathbf{A}\mathbf{v}>0$ (semua komponen positif). Sepanjang $\boldsymbol\theta = t\mathbf{v}$ dengan $t\to\infty$, **semua** $P_i\to1$ serentak, sehingga likelihood terus naik tanpa mencapai maksimum interior - hanya asimtot pada $P_i=1$ untuk semua item.
 
 Fungsi skor $\nabla\log f$ tidak pernah betul-betul mencapai nol, tapi mendekati nol dari arah positif:
 $$\lim_{t\to\infty} \nabla\log f(t\mathbf{v}) = \mathbf{0}^+ \quad\text{(dari komponen positif)}$$
@@ -789,8 +789,8 @@ $$
 
 **Mengapa DEMO 2 tidak divergen meskipun 7 item:**
 
-DEMO 2 menggunakan 7 item dengan **pola respons campuran** — tidak semua benar, ada yang salah:
-$\mathbf{u}=[1,0,0,1,1,0,1]$. Adanya respons salah menciptakan "penghenti" pada gradien — tidak semua
+DEMO 2 menggunakan 7 item dengan **pola respons campuran** - tidak semua benar, ada yang salah:
+$\mathbf{u}=[1,0,0,1,1,0,1]$. Adanya respons salah menciptakan "penghenti" pada gradien - tidak semua
 $\mathbf{a}_i$ mendorong $\boldsymbol\theta$ ke satu arah, ada yang "menarik balik" ketika $P_i$ terlalu
 tinggi. Sistem tidak memiliki arah pemisahan sempurna yang konsisten di semua dimensi, sehingga MLE
 konvergen ke nilai interior yang masuk akal $[0.038,\,-0.654,\,0.297]$.
@@ -800,19 +800,19 @@ Ini menunjukkan pentingnya **pola respons yang beragam** untuk estimasi MLE yang
 ### 3.3 Kelebihan & Kekurangan
 
 **Kelebihan:**
-- Landasan teori paling matang & tertua — dasar dari seluruh literatur IRT sejak Lord (1980),
+- Landasan teori paling matang & tertua - dasar dari seluruh literatur IRT sejak Lord (1980),
   dan Newton-Raphson/Fisher scoring-nya sudah didokumentasikan lengkap dengan contoh numerik
   ber-halaman oleh Baker (2001) [2, Eq.5-1, p.86-88].
-- Tidak butuh asumsi distribusi populasi (prior) — estimasi murni berbasis data respons
+- Tidak butuh asumsi distribusi populasi (prior) - estimasi murni berbasis data respons
   examinee sendiri (frequentist), tidak bias oleh pilihan prior yang keliru.
-- Asimtotik efisien & normal [1, Eq.7, p.277] — untuk tes yang cukup panjang, varians estimasi
+- Asimtotik efisien & normal [1, Eq.7, p.277] - untuk tes yang cukup panjang, varians estimasi
   mendekati batas bawah Cramér–Rao.
 
 **Kekurangan:**
 - **Divergen** bila pola respons dapat dipisahkan sempurna oleh arah linear tertentu dari
-  $\mathbf{a}_i$ — dibuktikan langsung di [#3.2.3](#323-demo-3--kasus-divergen-all-correct), bukan hanya kasus trivial
-  all-correct/all-incorrect. Risiko ini lebih tinggi di awal tes (item sedikit) — persis mengapa
+  $\mathbf{a}_i$ - dibuktikan langsung di [#3.2.3](#323-demo-3---kasus-divergen-all-correct), bukan hanya kasus trivial
+  all-correct/all-incorrect. Risiko ini lebih tinggi di awal tes (item sedikit) - persis mengapa
   MCAT umumnya memakai MAP di round-round awal.
-- Tidak ada mekanisme built-in untuk mencegah estimasi ekstrem, sehingga kasus divergen menghasilkan nilai besar tak-berguna (mis. $\|\hat\theta\|=24.43$ di [#3.2.3](#323-demo-3--kasus-divergen-all-correct)).
-- Butuh minimal beberapa item dengan variasi respons (benar & salah) untuk estimasi yang stabil —
+- Tidak ada mekanisme built-in untuk mencegah estimasi ekstrem, sehingga kasus divergen menghasilkan nilai besar tak-berguna (mis. $\|\hat\theta\|=24.43$ di [#3.2.3](#323-demo-3---kasus-divergen-all-correct)).
+- Butuh minimal beberapa item dengan variasi respons (benar & salah) untuk estimasi yang stabil -
   tidak cocok dipakai sebagai estimator tunggal di 1-2 round pertama CAT.

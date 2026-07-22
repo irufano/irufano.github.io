@@ -13,7 +13,7 @@
 
   let { data }: { data: PageData } = $props();
 
-  const pageTitle = $derived(`${data.post.title} — irufano`);
+  const pageTitle = $derived(`${data.post.title} - irufano`);
   const canonicalUrl = $derived(`${SITE_URL}/posts/${data.post.categorySlug}/${data.post.slug}`);
   const ogImage = $derived(data.post.image ?? DEFAULT_OG_IMAGE);
   const publishedDate = $derived(new Date(data.post.date).toISOString());
@@ -185,7 +185,7 @@
 
   $effect(() => {
     // the article scrolls inside its own overflow container, so the browser's
-    // native scroll-to-fragment on load/reload never reaches it — do it manually
+    // native scroll-to-fragment on load/reload never reaches it - do it manually
     if (!articleEl || !window.location.hash) return;
     const target = document.getElementById(
       decodeURIComponent(window.location.hash.slice(1)),

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'JWT Decoder — Tools — irufano';
+	const title = 'JWT Decoder - Tools - irufano';
 	const description = "Decode a JWT's header and payload and inspect its claims.";
 	const canonicalUrl = `${SITE_URL}/tools/jwt-decoder`;
 
@@ -53,7 +53,7 @@
 			const payload = JSON.parse(base64UrlDecode(parts[1]));
 			return { ok: true, header, payload, signature: parts[2] };
 		} catch {
-			return { ok: false, error: "Could not decode this token — check that it's a valid JWT." };
+			return { ok: false, error: "Could not decode this token - check that it's a valid JWT." };
 		}
 	});
 
@@ -112,7 +112,7 @@
 		try {
 			token = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -145,7 +145,7 @@
 <section class="w-full px-4 py-10 sm:px-6">
 	<h1 class="font-mono text-2xl font-extrabold text-fg sm:text-3xl">JWT Decoder</h1>
 	<p class="mt-2 text-sm text-fg-muted">
-		Paste a JWT to inspect its header, payload, and claims. This only decodes — it never verifies
+		Paste a JWT to inspect its header, payload, and claims. This only decodes - it never verifies
 		the signature.
 	</p>
 
@@ -271,7 +271,7 @@
 			</p>
 			<p class="mt-2 flex items-start gap-1.5 text-xs text-fg-muted">
 				<ShieldCheck class="mt-0.5 h-3.5 w-3.5 shrink-0" />
-				Not verified — this tool decodes the token but doesn't check the signature against a secret
+				Not verified - this tool decodes the token but doesn't check the signature against a secret
 				or public key.
 			</p>
 		</div>

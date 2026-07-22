@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'JSON Formatter — Tools — irufano';
+	const title = 'JSON Formatter - Tools - irufano';
 	const description = 'Format, validate, and minify JSON with instant error feedback.';
 	const canonicalUrl = `${SITE_URL}/tools/json-formatter`;
 
@@ -79,7 +79,7 @@
 		try {
 			input = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 

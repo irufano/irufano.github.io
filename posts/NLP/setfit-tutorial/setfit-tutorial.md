@@ -701,13 +701,13 @@ print(probabilities)
 
 ## Key Tips
 
-- **Use REAL examples** from your data — the tutorial examples are just placeholders
-- **More examples = better accuracy** — 8 per class is minimum, 16-20 is better
-- **Pick clear examples** — avoid ambiguous cases for training data
-- **Empty/blank responses** — always handle with `.fillna("")` before predicting
-- **Training time** — usually 2-5 minutes on CPU for small training sets
-- **Prediction speed** — ~100-500 rows/second depending on hardware
-- **Local models** — download once, load from local path to avoid re-downloading
-- **transformers<5** — pin this to avoid the `default_logdir` import error
-- **Evaluate before deploying** — always check accuracy on held-out data first
-- **Confusion matrix** — shows exactly where the model fails, so you know what training examples to add
+- **Use REAL examples** from your data - the tutorial examples are just placeholders
+- **More examples = better accuracy** - 8 per class is minimum, 16-20 is better
+- **Pick clear examples** - avoid ambiguous cases for training data
+- **Empty/blank responses** - always handle with `.fillna("")` before predicting
+- **Training time** - usually 2-5 minutes on CPU for small training sets
+- **Prediction speed** - ~100-500 rows/second depending on hardware
+- **Local models** - download once, load from local path to avoid re-downloading
+- **transformers<5** - pin this to avoid the `default_logdir` import error
+- **Evaluate before deploying** - always check accuracy on held-out data first
+- **Confusion matrix** - shows exactly where the model fails, so you know what training examples to add

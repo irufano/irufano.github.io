@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Color Converter — Tools — irufano';
+	const title = 'Color Converter - Tools - irufano';
 	const description =
 		'Convert colors between HEX, RGB, and HSL, with a live preview and contrast ratio.';
 	const canonicalUrl = `${SITE_URL}/tools/color-converter`;
@@ -131,7 +131,7 @@
 <section class="w-full px-4 py-10 sm:px-6">
 	<h1 class="font-mono text-2xl font-extrabold text-fg sm:text-3xl">Color Converter</h1>
 	<p class="mt-2 text-sm text-fg-muted">
-		Convert between HEX, RGB, and HSL — edit any field and the others update instantly.
+		Convert between HEX, RGB, and HSL - edit any field and the others update instantly.
 	</p>
 
 	<div class="mt-8 grid grid-cols-2 gap-3 sm:max-w-xs">

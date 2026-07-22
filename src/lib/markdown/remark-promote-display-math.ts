@@ -11,7 +11,7 @@ import type { Math } from 'mdast-util-math';
  * wrapper and renders left-aligned like ordinary text. Since `$$` is only
  * ever used in these posts to mean "this is its own equation," promote any
  * paragraph whose sole content is a `$$`-delimited inline-math node to real
- * display math, matching what multi-line `$$\n...\n$$` already produces —
+ * display math, matching what multi-line `$$\n...\n$$` already produces -
  * except left-aligned (via the `math-display-left` wrapper class) rather
  * than centered, so single-line `$$...$$` stays visually distinct from a
  * genuine multi-line `$$` block.

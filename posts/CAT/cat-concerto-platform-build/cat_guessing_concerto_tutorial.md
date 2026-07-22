@@ -19,7 +19,7 @@ Before starting this tutorial, make sure you have:
 
 ---
 
-## Concerto Platform — Known Rules (From Experience)
+## Concerto Platform - Known Rules (From Experience)
 
 Before building, understand these important rules discovered through testing:
 
@@ -44,14 +44,14 @@ The **3-Parameter Logistic (3PL)** model extends basic IRT by adding a **guessin
 $$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
 
 Where:
-- $\theta$ **(theta)** — test-taker's ability estimate (starts at 0)
-- $a$ — discrimination: how well the item separates ability levels
-- $b$ — difficulty: the ability level at which $P = 0.5$ (ignoring guessing)
-- $c$ — guessing: minimum probability of correct answer (e.g. 0.25 for 4-choice MCQ)
+- $\theta$ **(theta)** - test-taker's ability estimate (starts at 0)
+- $a$ - discrimination: how well the item separates ability levels
+- $b$ - difficulty: the ability level at which $P = 0.5$ (ignoring guessing)
+- $c$ - guessing: minimum probability of correct answer (e.g. 0.25 for 4-choice MCQ)
 
 ### Why does guessing matter?
 
-Without guessing (2PL), if theta is very low, $P(\text{correct}) \rightarrow 0$. But in reality, a test-taker can still guess correctly — especially on multiple choice. The guessing parameter $c$ sets a **floor** on the probability [2]:
+Without guessing (2PL), if theta is very low, $P(\text{correct}) \rightarrow 0$. But in reality, a test-taker can still guess correctly - especially on multiple choice. The guessing parameter $c$ sets a **floor** on the probability [2]:
 
 $$\lim_{\theta \to -\infty} P_i(\theta) = c_i = 0.25 \quad \text{(for 4-choice MCQ)}$$
 
@@ -67,7 +67,7 @@ Items with **high discrimination ($a$)** and **difficulty near current theta ($b
 
 ## Concept: Bayesian EAP Theta Estimation
 
-This tutorial uses **Bayesian Expected A Posteriori (EAP)** estimation — the most robust method for CAT theta estimation [8, 10].
+This tutorial uses **Bayesian Expected A Posteriori (EAP)** estimation - the most robust method for CAT theta estimation [8, 10].
 
 ### Why Bayesian EAP instead of Newton-Raphson?
 
@@ -83,13 +83,13 @@ EAP combines the **likelihood** of the observed responses with a **prior distrib
 $$\hat{\theta}_{EAP} = \frac{\int_{-\infty}^{\infty} \theta \cdot L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}{\int_{-\infty}^{\infty} L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}$$
 
 Where:
-- $L(\theta \mid \mathbf{u}) = \prod_{j=1}^{n} P_j(\theta)^{u_j} [1-P_j(\theta)]^{1-u_j}$ — likelihood of all responses
-- $\pi(\theta) = \mathcal{N}(0, 1)$ — standard normal prior (most people have average ability)
-- $\mathbf{u} = (u_1, \ldots, u_n)$ — vector of responses (1=correct, 0=incorrect)
+- $L(\theta \mid \mathbf{u}) = \prod_{j=1}^{n} P_j(\theta)^{u_j} [1-P_j(\theta)]^{1-u_j}$ - likelihood of all responses
+- $\pi(\theta) = \mathcal{N}(0, 1)$ - standard normal prior (most people have average ability)
+- $\mathbf{u} = (u_1, \ldots, u_n)$ - vector of responses (1=correct, 0=incorrect)
 
 ### Numerical Approximation (used in our R code)
 
-The integral is approximated using **Gauss-Hermite quadrature** — evaluating the integrand at a grid of $K$ theta points $\{\theta_k\}$ with weights $\{w_k\}$ [6, 8]:
+The integral is approximated using **Gauss-Hermite quadrature** - evaluating the integrand at a grid of $K$ theta points $\{\theta_k\}$ with weights $\{w_k\}$ [6, 8]:
 
 $$\hat{\theta}_{EAP} \approx \frac{\sum_{k=1}^{K} \theta_k \cdot L(\theta_k \mid \mathbf{u}) \cdot \pi(\theta_k)}{\sum_{k=1}^{K} L(\theta_k \mid \mathbf{u}) \cdot \pi(\theta_k)}$$
 
@@ -180,14 +180,14 @@ The item bank stores all test questions along with their IRT parameters. The **3
 
 ---
 
-## Node 1: `eval - init` — Initialize Variables
+## Node 1: `eval - init` - Initialize Variables
 
 ### Concept
 This node sets all starting values before the test begins. For Bayesian EAP, we also initialize:
-- `responses` — a vector tracking all responses (1=correct, 0=incorrect) across items
-- `items_a`, `items_b`, `items_c` — vectors tracking IRT parameters of answered items
-- `se_theta` — the standard error of the theta estimate
-- `theta = 0` — prior mean (start at average ability) [12]
+- `responses` - a vector tracking all responses (1=correct, 0=incorrect) across items
+- `items_a`, `items_b`, `items_c` - vectors tracking IRT parameters of answered items
+- `se_theta` - the standard error of the theta estimate
+- `theta = 0` - prior mean (start at average ability) [12]
 
 The response history vectors are essential for EAP because it needs **all previous responses and item parameters** to compute the posterior, not just the most recent one [8].
 
@@ -214,11 +214,11 @@ max_items <- 10     # fixed-length stopping rule
 # Prevents the same item from being shown twice
 used_items <- c()
 
-# ── Response history — required for Bayesian EAP ─────────────────────────────
+# ── Response history - required for Bayesian EAP ─────────────────────────────
 # responses: 1 = correct, 0 = incorrect, one entry per answered item
 responses <- c()
 
-# IRT parameter history — one entry per answered item (same order as responses)
+# IRT parameter history - one entry per answered item (same order as responses)
 items_a   <- c()   # discrimination parameters of answered items
 items_b   <- c()   # difficulty parameters of answered items
 items_c   <- c()   # guessing parameters of answered items
@@ -270,13 +270,13 @@ Drag from `test start` **out** → `eval - init` **in**
 
 ### Details
 
-The `eval - init` node runs **exactly once** — at the very beginning of the test, immediately after `test start`. Its sole purpose is to **initialize every variable** that will be used throughout the entire CAT session.
+The `eval - init` node runs **exactly once** - at the very beginning of the test, immediately after `test start`. Its sole purpose is to **initialize every variable** that will be used throughout the entire CAT session.
 
 It is the simplest node in the flow but also the most foundational: if any variable is missing or wrongly typed here, every subsequent node will fail.
 
 | Property | Value |
 |---|---|
-| **Runs** | Once only — at test start |
+| **Runs** | Once only - at test start |
 | **Position in flow** | `test start` → `eval - init` → `eval - select item` |
 | **Purpose** | Initialize all session variables with correct types and starting values |
 | **Outputs** | All variables needed by every other node |
@@ -302,11 +302,11 @@ max_items <- 10     # fixed-length stopping rule
 # Prevents the same item from being shown twice
 used_items <- numeric(0)
 
-# ── Response history — required for Bayesian EAP ─────────────────────────────
+# ── Response history - required for Bayesian EAP ─────────────────────────────
 # responses: 1 = correct, 0 = incorrect, one entry per answered item
 responses <- numeric(0)
 
-# IRT parameter history — one entry per answered item (same order as responses)
+# IRT parameter history - one entry per answered item (same order as responses)
 items_a   <- numeric(0)   # discrimination parameters of answered items
 items_b   <- numeric(0)   # difficulty parameters of answered items
 items_c   <- numeric(0)   # guessing parameters of answered items
@@ -334,14 +334,14 @@ test_complete <- FALSE
 ##### `theta <- 0`
 
 **What it is:**
-The current ability estimate $\hat{\theta}$ — the CAT's best guess of the test-taker's true latent ability on the IRT scale.
+The current ability estimate $\hat{\theta}$ - the CAT's best guess of the test-taker's true latent ability on the IRT scale.
 
 ```r
 theta <- 0
 ```
 
 **Why start at 0:**
-In IRT, the ability scale is standardized so that the **population mean is 0** and the standard deviation is 1. Starting at $\hat{\theta}_0 = 0$ means we begin with the assumption that the test-taker has average ability — the most neutral and statistically justified starting point before any evidence is collected.
+In IRT, the ability scale is standardized so that the **population mean is 0** and the standard deviation is 1. Starting at $\hat{\theta}_0 = 0$ means we begin with the assumption that the test-taker has average ability - the most neutral and statistically justified starting point before any evidence is collected.
 
 This is the **prior mean** of the Bayesian EAP estimation. The standard normal prior $\pi(\theta) = \mathcal{N}(0, 1)$ used in `eval - score` is centered at 0, so starting theta at 0 is consistent with the prior.
 
@@ -349,17 +349,17 @@ This is the **prior mean** of the Bayesian EAP estimation. The standard normal p
 
 | Starting theta | Effect |
 |---|---|
-| $\hat{\theta}_0 = 0$ | Neutral — most appropriate for unknown test-takers |
-| $\hat{\theta}_0 = -1$ | First item will be easier than necessary — wastes 1 item |
-| $\hat{\theta}_0 = +2$ | First item will be too hard — may discourage test-taker |
+| $\hat{\theta}_0 = 0$ | Neutral - most appropriate for unknown test-takers |
+| $\hat{\theta}_0 = -1$ | First item will be easier than necessary - wastes 1 item |
+| $\hat{\theta}_0 = +2$ | First item will be too hard - may discourage test-taker |
 | $\hat{\theta}_0 = \text{prior score}$ | Efficient if we have prior information (e.g., previous test) |
 
 **How theta evolves:**
 ```
 Start:    theta = 0.0000  (prior mean, no data)
-After Q1: theta = 0.3821  (answered correctly — ability estimate rises)
-After Q2: theta = 0.1504  (answered incorrectly — estimate falls)
-After Q3: theta = 0.2813  (answered correctly — rises again)
+After Q1: theta = 0.3821  (answered correctly - ability estimate rises)
+After Q2: theta = 0.1504  (answered incorrectly - estimate falls)
+After Q3: theta = 0.2813  (answered correctly - rises again)
 ...
 After Q10: theta = 0.4217  (converged estimate)
 ```
@@ -371,7 +371,7 @@ The EAP algorithm in `eval - score` updates this value after every response.
 ##### `se_theta <- 999`
 
 **What it is:**
-The Standard Error of the theta estimate — a measure of how precisely we know the test-taker's ability:
+The Standard Error of the theta estimate - a measure of how precisely we know the test-taker's ability:
 
 ```r
 se_theta <- 999
@@ -385,13 +385,13 @@ Before any items are answered ($n = 0$), the true SE is mathematically infinite:
 
 $$SE = \frac{1}{\sqrt{0}} = \frac{1}{0} = \infty$$
 
-We cannot use `Inf` directly because Concerto may corrupt infinite values during flow variable serialization. `999` is a **sentinel value** — a deliberately large finite number that means "infinitely uncertain":
+We cannot use `Inf` directly because Concerto may corrupt infinite values during flow variable serialization. `999` is a **sentinel value** - a deliberately large finite number that means "infinitely uncertain":
 
 | Value | Problem |
 |---|---|
 | `Inf` | May not serialize correctly through Concerto flow pointers |
 | `NA` | Causes arithmetic errors in CI calculation: `0 ± 1.96 * NA` → `NA` |
-| `0` | Implies perfect precision — dangerously wrong |
+| `0` | Implies perfect precision - dangerously wrong |
 | `999` | ✅ Safely serializable, obviously not a real SE, makes all stopping rules evaluate correctly |
 
 **Why it matters for the stopping rule:**
@@ -415,14 +415,14 @@ If `se_theta` were `0`:
 
 | After item | Typical SE | Interpretation |
 |---|---|---|
-| 0 (init) | **999** | Sentinel — no data |
+| 0 (init) | **999** | Sentinel - no data |
 | 1 | ~0.89 | Very uncertain |
 | 3 | ~0.62 | Improving |
 | 5 | ~0.48 | Acceptable |
 | 7 | ~0.38 | Good |
 | 10 | ~0.31 | High precision |
 
-SE is a real EAP-computed value from item 1 onward — `999` exists only for the single moment before the first item is shown.
+SE is a real EAP-computed value from item 1 onward - `999` exists only for the single moment before the first item is shown.
 
 ---
 
@@ -461,7 +461,7 @@ answered <- as.numeric(answered) + 1
 ##### `max_items <- 10`
 
 **What it is:**
-The **fixed-length stopping rule** threshold — the maximum number of items the test will administer.
+The **fixed-length stopping rule** threshold - the maximum number of items the test will administer.
 
 ```r
 max_items <- 10
@@ -520,7 +520,7 @@ used_items <- numeric(0)
 | `NULL` | NULL | `c(NULL, 5)` → `5` but Concerto may serialize NULL differently |
 | `numeric(0)` | **numeric** | ✅ Explicitly numeric, empty vector of correct type |
 
-Using `numeric(0)` ensures that when we later do `c(used_items, current_id)` where `current_id` is an integer, the result is always a numeric vector — never a character or list.
+Using `numeric(0)` ensures that when we later do `c(used_items, current_id)` where `current_id` is an integer, the result is always a numeric vector - never a character or list.
 
 **How it is used in `eval - select item`:**
 
@@ -546,7 +546,7 @@ On the first call: `length(numeric(0)) = 0` → condition is `FALSE` → filter 
 ##### `responses <- numeric(0)`
 
 **What it is:**
-A vector storing the **binary response history** — one entry per answered item:
+A vector storing the **binary response history** - one entry per answered item:
 - `1` = correct
 - `0` = incorrect
 
@@ -560,10 +560,10 @@ This is the $\mathbf{u} = (u_1, u_2, \ldots, u_n)$ vector in the EAP likelihood 
 $$L(\theta_k \mid \mathbf{u}) = \prod_{j=1}^{n} P_j(\theta_k)^{u_j} [1-P_j(\theta_k)]^{1-u_j}$$
 
 **Why this is critical for Bayesian EAP:**
-Unlike Newton-Raphson (which uses only the most recent item), EAP recomputes theta from scratch after every item using **all previous responses**. Without this vector, EAP cannot function — it needs the complete response history to compute the likelihood.
+Unlike Newton-Raphson (which uses only the most recent item), EAP recomputes theta from scratch after every item using **all previous responses**. Without this vector, EAP cannot function - it needs the complete response history to compute the likelihood.
 
 **Why `numeric(0)` not `c()`:**
-Same reasoning as `used_items` — explicit numeric type prevents type errors when arithmetic is performed on elements in the EAP loop.
+Same reasoning as `used_items` - explicit numeric type prevents type errors when arithmetic is performed on elements in the EAP loop.
 
 **Progression across the test:**
 
@@ -609,7 +609,7 @@ Storing them as separate parallel numeric vectors (rather than a data frame or l
 **Why `numeric(0)` not `c()`:**
 The EAP code does arithmetic on these vectors (`1 - items_c[j]`, `-items_a[j] * ...`). Initializing as `numeric(0)` guarantees they are numeric before any elements are appended.
 
-**Parallel structure — they must always have the same length:**
+**Parallel structure - they must always have the same length:**
 
 ```r
 # After 3 items (responses = c(0, 1, 1)):
@@ -658,7 +658,7 @@ These variables must exist as flow variables from the very first node. If they w
 paste0("SELECT * FROM item_bank_3pl WHERE id = ", current_id)
 ```
 
-An ID of `0` produces valid (if harmless) SQL: `WHERE id = 0`. This will return zero rows — safely handled. By contrast, `numeric(0)` would produce `WHERE id = ` (incomplete SQL — an error).
+An ID of `0` produces valid (if harmless) SQL: `WHERE id = 0`. This will return zero rows - safely handled. By contrast, `numeric(0)` would produce `WHERE id = ` (incomplete SQL - an error).
 
 **Flow of display variables:**
 
@@ -762,17 +762,17 @@ if node routes based on test_complete
 loop back to eval - select item (which now has updated values from eval - score)
 ```
 
-If any variable is missing from `eval - init`, the first time the loop returns to `eval - select item`, that variable will be `NULL` — causing either a silent error or a crash.
+If any variable is missing from `eval - init`, the first time the loop returns to `eval - select item`, that variable will be `NULL` - causing either a silent error or a crash.
 
 ---
 
-#### Type Choices — Why They Matter
+#### Type Choices - Why They Matter
 
 | Variable | Type | Why this type |
 |---|---|---|
 | `theta` | `numeric` (double) | IRT computations require decimal precision |
 | `se_theta` | `numeric` (double) | SE is always a decimal; 999 is sentinel for ∞ |
-| `answered` | `numeric` (integer-like) | Counter — arithmetic `+1` must work |
+| `answered` | `numeric` (integer-like) | Counter - arithmetic `+1` must work |
 | `max_items` | `numeric` (integer-like) | Comparison `>= max_items` must work |
 | `used_items` | `numeric(0)` (empty numeric) | `%in%` comparison with integer IDs |
 | `responses` | `numeric(0)` (empty numeric) | Arithmetic in EAP loop: `u_j * log(P_j)` |
@@ -789,15 +789,15 @@ If any variable is missing from `eval - init`, the first time the loop returns t
 
 `eval - init` is the **configuration and initialization hub** of the entire CAT session. Its design principles are:
 
-1. **Initialize everything** — every variable used anywhere in the flow must be created here with the correct type
-2. **Use safe types** — `numeric(0)` for empty vectors, `FALSE` for logicals, `0` for numeric counters
-3. **Use sentinel values** — `se_theta = 999` for "not yet computed" infinity
-4. **Centralize configuration** — `max_items = 10` here means one place to change test length
-5. **Export everything** — every variable needs an output port with Flow variable pointer (↑)
+1. **Initialize everything** - every variable used anywhere in the flow must be created here with the correct type
+2. **Use safe types** - `numeric(0)` for empty vectors, `FALSE` for logicals, `0` for numeric counters
+3. **Use sentinel values** - `se_theta = 999` for "not yet computed" infinity
+4. **Centralize configuration** - `max_items = 10` here means one place to change test length
+5. **Export everything** - every variable needs an output port with Flow variable pointer (↑)
 
 ---
 
-## Node 2: `eval - select item` — CAT Item Selection (3PL Maximum Information)
+## Node 2: `eval - select item` - CAT Item Selection (3PL Maximum Information)
 
 ### Concept
 Selects the next item using the **Maximum Information** criterion based on the 3PL model [3, 11, 14].
@@ -894,7 +894,7 @@ Drag from `eval - init` **out** → `eval - select item` **in**
 
 ### Details
 
-The `eval - select item` node runs **at the start of every CAT loop iteration** — once before each question is shown. It is the implementation of the **CAT item selection algorithm**: given the current ability estimate $\hat{\theta}$, it selects the most informative unused item from the bank.
+The `eval - select item` node runs **at the start of every CAT loop iteration** - once before each question is shown. It is the implementation of the **CAT item selection algorithm**: given the current ability estimate $\hat{\theta}$, it selects the most informative unused item from the bank.
 
 It performs four sequential tasks:
 
@@ -919,7 +919,7 @@ Queries the entire `item_bank_3pl` table and returns all rows as an R data frame
 
 ##### Why `SELECT *`
 
-We need all columns — question text, options, correct answer, and IRT parameters — so `SELECT *` retrieves everything in one call. A more targeted query like `SELECT id, discrimination, difficulty, guessing` would be faster for large banks, but for typical CAT banks of 50–200 items the difference is negligible.
+We need all columns - question text, options, correct answer, and IRT parameters - so `SELECT *` retrieves everything in one call. A more targeted query like `SELECT id, discrimination, difficulty, guessing` would be faster for large banks, but for typical CAT banks of 50–200 items the difference is negligible.
 
 ##### What `items` looks like after this line
 
@@ -957,7 +957,7 @@ Where $\mathcal{U}$ is the set of already-used item IDs.
 
 ##### `length(used_items) > 0`
 
-Checks whether any items have already been administered. On the **very first question**, `used_items` was initialized as `numeric(0)` (an empty vector) in `eval - init`, so `length(numeric(0)) = 0` and the filter block is **skipped entirely** — all items remain available.
+Checks whether any items have already been administered. On the **very first question**, `used_items` was initialized as `numeric(0)` (an empty vector) in `eval - init`, so `length(numeric(0)) = 0` and the filter block is **skipped entirely** - all items remain available.
 
 From question 2 onward, `used_items` grows by one ID per answered item, so the filter runs.
 
@@ -988,7 +988,7 @@ Items 3, 5, and 7 were already used → `TRUE`.
 
 ##### `!items$id %in% used_items`
 
-The `!` operator flips all logical values — keeping items that are **not** in `used_items`:
+The `!` operator flips all logical values - keeping items that are **not** in `used_items`:
 
 ```r
 !c(FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE)
@@ -999,7 +999,7 @@ Items 1, 2, 4, 6, 8, 9, 10 remain → these are the candidates for selection.
 
 ##### `items[..., ]`
 
-Subsets the data frame — keeping only rows where the logical vector is `TRUE`:
+Subsets the data frame - keeping only rows where the logical vector is `TRUE`:
 
 ```r
 items <- items[c(TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE), ]
@@ -1058,7 +1058,7 @@ Pulls the three IRT parameter columns into standalone vectors `a`, `b`, `c`.
 
 **Why create separate vectors?**
 
-R is **vectorized** — arithmetic operations on vectors are applied element-wise across all elements simultaneously, without explicit loops:
+R is **vectorized** - arithmetic operations on vectors are applied element-wise across all elements simultaneously, without explicit loops:
 
 ```r
 a <- c(0.8, 1.0, 1.2, 1.5, 1.8)   # 5 items
@@ -1072,9 +1072,9 @@ P <- c + (1 - c) / (1 + exp(-a * (theta - b)))
 ```
 
 This is equivalent to running a for-loop over all items but is:
-- **Faster** — implemented in compiled C internally
-- **Cleaner** — no loop boilerplate
-- **Less error-prone** — no index management
+- **Faster** - implemented in compiled C internally
+- **Cleaner** - no loop boilerplate
+- **Less error-prone** - no index management
 
 ---
 
@@ -1091,10 +1091,10 @@ This implements the **3-Parameter Logistic (3PL) Item Characteristic Curve**:
 $$P_i(\theta) = c_i + \frac{1 - c_i}{1 + e^{-a_i(\theta - b_i)}}$$
 
 Where:
-- $\theta$ — current ability estimate (scalar, same for all items)
-- $a_i$ — discrimination parameter of item $i$
-- $b_i$ — difficulty parameter of item $i$
-- $c_i$ — guessing parameter of item $i$
+- $\theta$ - current ability estimate (scalar, same for all items)
+- $a_i$ - discrimination parameter of item $i$
+- $b_i$ - difficulty parameter of item $i$
+- $c_i$ - guessing parameter of item $i$
 
 ##### Breaking down the formula component by component
 
@@ -1102,14 +1102,14 @@ Where:
 |---|---|---|
 | $\theta - b_i$ | `theta - b` | Distance between ability and difficulty |
 | $-a_i(\theta-b_i)$ | `-a * (theta - b)` | Scaled, negated distance |
-| $e^{-a_i(\theta-b_i)}$ | `exp(-a * (theta - b))` | Exponential — always positive |
-| $\frac{1}{1+e^{...}}$ | `1 / (1 + exp(...))` | Logistic function — maps $\mathbb{R} \to (0,1)$ |
+| $e^{-a_i(\theta-b_i)}$ | `exp(-a * (theta - b))` | Exponential - always positive |
+| $\frac{1}{1+e^{...}}$ | `1 / (1 + exp(...))` | Logistic function - maps $\mathbb{R} \to (0,1)$ |
 | $\frac{1-c_i}{1+e^{...}}$ | `(1-c) / (1+exp(...))` | Scaled by $(1-c_i)$ to fit in $[0, 1-c_i]$ |
-| $c_i + \ldots$ | `c + ...` | Shifts up by $c_i$ — sets the lower asymptote |
+| $c_i + \ldots$ | `c + ...` | Shifts up by $c_i$ - sets the lower asymptote |
 
 ##### Role of each parameter
 
-###### Difficulty $b_i$ — where on the theta scale P = 0.5 + c/2
+###### Difficulty $b_i$ - where on the theta scale P = 0.5 + c/2
 
 The difficulty parameter **shifts the curve left or right** along the theta axis. At $\theta = b_i$ (ignoring guessing, $c=0$):
 
@@ -1128,9 +1128,9 @@ P                           P
    b=-2.0                               b=+2.0
 ```
 
-###### Discrimination $a_i$ — steepness of the curve
+###### Discrimination $a_i$ - steepness of the curve
 
-Higher $a_i$ means the curve rises more steeply — the item more sharply separates test-takers above vs below the difficulty level:
+Higher $a_i$ means the curve rises more steeply - the item more sharply separates test-takers above vs below the difficulty level:
 
 ```
 High a (steep):     Low a (shallow):
@@ -1142,7 +1142,7 @@ P                   P
       θ=b            θ=b
 ```
 
-###### Guessing $c_i$ — lower asymptote
+###### Guessing $c_i$ - lower asymptote
 
 Sets the floor on $P_i(\theta)$. Even at $\theta \to -\infty$, $P_i \to c_i$:
 
@@ -1184,22 +1184,22 @@ The Item Information Function measures **how much statistical information** item
 
 $$I_i(\theta) = \frac{a_i^2 \left[P_i(\theta) - c_i\right]^2}{(1 - c_i)^2} \cdot \frac{1 - P_i(\theta)}{P_i(\theta)}$$
 
-##### Why two lines? — Probability clamping
+##### Why two lines? - Probability clamping
 
 ```r
 P_safe <- pmax(pmin(P, 0.9999), 0.0001)
 ```
 
-The IIF formula has $P_i(\theta)$ in the **denominator** — division by $P_i$ becomes a problem when $P_i \approx 0$, and $(1 - P_i)/P_i \to \infty$. Similarly, the $(P_i - c_i)$ term is invalid if $P_i < c_i$ due to floating point errors.
+The IIF formula has $P_i(\theta)$ in the **denominator** - division by $P_i$ becomes a problem when $P_i \approx 0$, and $(1 - P_i)/P_i \to \infty$. Similarly, the $(P_i - c_i)$ term is invalid if $P_i < c_i$ due to floating point errors.
 
-**`pmin(P, 0.9999)`** — element-wise minimum: caps each $P_i$ at 0.9999:
+**`pmin(P, 0.9999)`** - element-wise minimum: caps each $P_i$ at 0.9999:
 
 ```r
 pmin(c(0.9999, 1.0000, 0.8), 0.9999)
 # → c(0.9999, 0.9999, 0.8)
 ```
 
-**`pmax(..., 0.0001)`** — element-wise maximum: floors each result at 0.0001:
+**`pmax(..., 0.0001)`** - element-wise maximum: floors each result at 0.0001:
 
 ```r
 pmax(c(0.0001, 0.0000, 0.5), 0.0001)
@@ -1212,7 +1212,7 @@ Note: `pmax`/`pmin` (lowercase p) operate **element-wise on vectors**, unlike `m
 
 $$I_i(\theta) = \underbrace{a_i^2}_{\text{discrimination²}} \cdot \underbrace{\frac{(P_i - c_i)^2}{(1-c_i)^2}}_{\text{guessing correction}} \cdot \underbrace{\frac{1-P_i}{P_i}}_{\text{uncertainty term}}$$
 
-###### Component 1: $a_i^2$ — Discrimination squared
+###### Component 1: $a_i^2$ - Discrimination squared
 
 
 
@@ -1230,7 +1230,7 @@ a^2
 | 1.5 | 2.25 | 2.25× |
 | 2.0 | 4.00 | 4× |
 
-###### Component 2: $\frac{(P_i - c_i)^2}{(1-c_i)^2}$ — Guessing correction
+###### Component 2: $\frac{(P_i - c_i)^2}{(1-c_i)^2}$ - Guessing correction
 
 This term scales down the information to account for the guessing floor. It equals $\left(\frac{P_i - c_i}{1-c_i}\right)^2$, which is the **proportion of the probability above the guessing floor** relative to the maximum possible.
 
@@ -1243,20 +1243,20 @@ This term scales down the information to account for the guessing floor. It equa
 
 $$\frac{(P_i - c_i)^2}{(1-c_i)^2} \approx \frac{(0.5 - c_i/2)^2}{(1-c_i)^2} = \frac{0.25(1-c_i)^2}{(1-c_i)^2} = 0.25$$
 
-So the guessing parameter reduces peak information by factor $(1-c_i)^2$. For $c=0.25$: reduction factor = $(0.75)^2 = 0.5625$ — guessing cuts peak information nearly in half.
+So the guessing parameter reduces peak information by factor $(1-c_i)^2$. For $c=0.25$: reduction factor = $(0.75)^2 = 0.5625$ - guessing cuts peak information nearly in half.
 
-###### Component 3: $\frac{1-P_i}{P_i}$ — Uncertainty term
+###### Component 3: $\frac{1-P_i}{P_i}$ - Uncertainty term
 
 
 This term is maximized when $P_i = 0.5$ and approaches 0 at both extremes:
 
 | $P_i$ | $\frac{1-P_i}{P_i}$ | Interpretation |
 |---|---|---|
-| 0.25 (guessing floor) | 3.00 | All uncertainty is guessing — not true ability |
+| 0.25 (guessing floor) | 3.00 | All uncertainty is guessing - not true ability |
 | 0.5 | 1.00 | Maximum genuine uncertainty |
-| 0.75 | 0.33 | Mostly correct — less to learn |
-| 0.99 | 0.01 | Near-certain — item too easy |
-| 0.01 | 99.0 | But clamped — item too hard |
+| 0.75 | 0.33 | Mostly correct - less to learn |
+| 0.99 | 0.01 | Near-certain - item too easy |
+| 0.01 | 99.0 | But clamped - item too hard |
 
 ```r
 (1 - P_safe) / P_safe
@@ -1266,7 +1266,7 @@ This term is maximized when $P_i = 0.5$ and approaches 0 at both extremes:
 
 ##### Where is information maximized?
 
-Information $I_i(\theta)$ is maximized where $b_i \approx \hat{\theta}$ — items work best when difficulty matches ability:
+Information $I_i(\theta)$ is maximized where $b_i \approx \hat{\theta}$ - items work best when difficulty matches ability:
 
 ```
 I(θ)
@@ -1327,7 +1327,7 @@ $$i^* = \underset{i \notin \mathcal{U}}{\arg\max}\ I_i(\hat{\theta})$$
 
 ##### `items[5, ]`
 
-Selects the entire row for item 5 — all columns (question, options, parameters):
+Selects the entire row for item 5 - all columns (question, options, parameters):
 
 ```r
 selected <- items[5, ]
@@ -1468,7 +1468,7 @@ For our 10-item demonstration CAT, Maximum Information is appropriate. For opera
 
 ---
 
-## Node 3: `showPage - question` — Display Question
+## Node 3: `showPage - question` - Display Question
 
 ### Concept
 Presents the selected item to the test-taker. We use `showPage` (not `form`) because it reliably receives flow variables via Flow variable pointers.
@@ -1596,18 +1596,18 @@ Drag from `eval - select item` **out** → `showPage - question` **in**
 
 ---
 
-## Node 4: `eval - score` — Score Response + Bayesian EAP Theta Estimation
+## Node 4: `eval - score` - Score Response + Bayesian EAP Theta Estimation
 
 ### Concept
 
 This is the most important node. It performs three tasks after each response:
 
-**Task 1 — Score the response**
+**Task 1 - Score the response**
 
 Compare the submitted answer to `correct_answer`:
 $$u_n = \begin{cases} 1 & \text{if answer is correct} \\ 0 & \text{if answer is incorrect} \end{cases}$$
 
-**Task 2 — Update theta using Bayesian EAP**
+**Task 2 - Update theta using Bayesian EAP**
 
 EAP treats theta estimation as a Bayesian inference problem [8]. After collecting $n$ responses $\mathbf{u} = (u_1, \ldots, u_n)$:
 
@@ -1635,16 +1635,16 @@ $$\hat{\theta}_{EAP} = \frac{\sum_{k=1}^{K} \theta_k \cdot w_k}{\sum_{k=1}^{K} w
 
 $$SE_{EAP} = \sqrt{\frac{\sum_{k=1}^{K} (\theta_k - \hat{\theta}_{EAP})^2 \cdot w_k}{\sum_{k=1}^{K} w_k}}$$
 
-**Task 3 — Check stopping rule**
+**Task 3 - Check stopping rule**
 
 $$\text{test\_complete} = (n \geq N_{\max})$$
 
 ### Why EAP is Better for CAT
 
-- **Works for all response patterns** — including all-correct or all-incorrect (Newton-Raphson fails here) [8, 9]
-- **Provides SE** — we know how precise our estimate is at each step [8]
-- **Stable** — bounded by the prior; never diverges to ±∞ [10]
-- **Uses all response history** — not just the last item [8]
+- **Works for all response patterns** - including all-correct or all-incorrect (Newton-Raphson fails here) [8, 9]
+- **Provides SE** - we know how precise our estimate is at each step [8]
+- **Stable** - bounded by the prior; never diverges to ±∞ [10]
+- **Uses all response history** - not just the last item [8]
 
 ### Steps
 
@@ -1733,7 +1733,7 @@ weights <- likelihood * prior
 weights_sum      <- sum(weights)
 weights_norm     <- weights / weights_sum
 
-# Step 2g: EAP estimate — posterior mean
+# Step 2g: EAP estimate - posterior mean
 theta <- sum(theta_grid * weights_norm)
 
 # Step 2h: Posterior standard error
@@ -1805,9 +1805,9 @@ The `eval - score` node runs **after every submitted answer** in the CAT loop. I
 
 | Task | Description |
 |---|---|
-| **Task 1** | Score the response — determine if the answer is correct |
+| **Task 1** | Score the response - determine if the answer is correct |
 | **Task 2** | Update theta using Bayesian EAP estimation |
-| **Task 3** | Check the stopping rule — decide if the test is done |
+| **Task 3** | Check the stopping rule - decide if the test is done |
 
 ---
 
@@ -1849,7 +1849,7 @@ answered      <- as.numeric(answered) + 1
 
 | Item | `is_correct` | `total_correct` | `answered` |
 |---|---|---|---|
-| Start | — | 0 | 0 |
+| Start | - | 0 | 0 |
 | Item 1 (wrong) | 0 | 0 | 1 |
 | Item 2 (right) | 1 | 1 | 2 |
 | Item 3 (right) | 1 | 2 | 3 |
@@ -1892,7 +1892,7 @@ as.numeric(1.4)                  # → 1.4     explicitly numeric
 **Example result for item id=6:**
 
 ```r
-a_new <- 1.400   # high discrimination — good at separating abilities
+a_new <- 1.400   # high discrimination - good at separating abilities
 b_new <- 0.500   # slightly above average difficulty
 c_new <- 0.250   # 4-choice MCQ guessing floor
 ```
@@ -1938,19 +1938,19 @@ as.numeric(c("0.8", "1.5", "1.2"))
 # → c(0.8, 1.5, 1.2)   ✅ numeric, ready for math
 ```
 
-**Combined effect — handles all cases:**
+**Combined effect - handles all cases:**
 
 ```r
-# Case 1: already numeric vector — unchanged
+# Case 1: already numeric vector - unchanged
 as.numeric(unlist(c(0.8, 1.5, 1.2)))   # → c(0.8, 1.5, 1.2)
 
-# Case 2: list of strings — fixed
+# Case 2: list of strings - fixed
 as.numeric(unlist(list("0.8","1.5")))   # → c(0.8, 1.5)
 
-# Case 3: single string — fixed
+# Case 3: single string - fixed
 as.numeric(unlist("0.8, 1.5"))          # → NA (needs further handling)
 
-# Case 4: NULL — becomes empty numeric
+# Case 4: NULL - becomes empty numeric
 as.numeric(unlist(NULL))                # → numeric(0)
 ```
 
@@ -1973,7 +1973,7 @@ as.numeric("")        # → NA
 as.numeric(NULL)      # → numeric(0)  (empty, no NA)
 ```
 
-**`!is.na(x)`** creates a logical mask — `TRUE` where values are valid:
+**`!is.na(x)`** creates a logical mask - `TRUE` where values are valid:
 
 ```r
 x <- c(0.8, NA, 1.5, NA, 1.2)
@@ -1996,7 +1996,7 @@ items_c   <- c(items_c,   c_new)
 **What it does:** Grows each history vector by one entry per answered item.
 
 **Why these vectors are essential for EAP:**
-EAP recomputes theta from scratch after every item using the **full response history** — not just the most recent response. This is fundamentally different from Newton-Raphson which uses only the current item.
+EAP recomputes theta from scratch after every item using the **full response history** - not just the most recent response. This is fundamentally different from Newton-Raphson which uses only the current item.
 
 **Example after 3 items:**
 
@@ -2015,7 +2015,7 @@ n_answered <- length(responses)
 
 **Why use `length(responses)` instead of `answered`?**
 
-`n_answered` is derived from the actual vector length — it is always correct. The `answered` variable arrives via flow variable pointer and may have been corrupted during serialization. Using `length(responses)` as ground truth is safer.
+`n_answered` is derived from the actual vector length - it is always correct. The `answered` variable arrives via flow variable pointer and may have been corrupted during serialization. Using `length(responses)` as ground truth is safer.
 
 ```r
 # If answered was corrupted to "3" (string):
@@ -2035,7 +2035,7 @@ EAP is a Bayesian estimation method. It treats $\theta$ as a random variable wit
 
 $$p(\theta \mid \mathbf{u}) = \frac{L(\theta \mid \mathbf{u}) \cdot \pi(\theta)}{\int L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}$$
 
-**EAP estimate** — posterior mean:
+**EAP estimate** - posterior mean:
 
 $$\hat{\theta}_{EAP} = \int \theta \cdot p(\theta \mid \mathbf{u})\ d\theta = \frac{\int \theta \cdot L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}{\int L(\theta \mid \mathbf{u}) \cdot \pi(\theta)\ d\theta}$$
 
@@ -2053,7 +2053,7 @@ theta_grid <- seq(-4, 4, length.out = K)
 log_lik    <- numeric(K)
 ```
 
-The continuous integral is approximated using **discrete quadrature** — evaluating the integrand at $K$ fixed points:
+The continuous integral is approximated using **discrete quadrature** - evaluating the integrand at $K$ fixed points:
 
 $$\int f(\theta)\ d\theta \approx \sum_{k=1}^{K} f(\theta_k) \cdot \Delta\theta$$
 
@@ -2067,8 +2067,8 @@ $$\int f(\theta)\ d\theta \approx \sum_{k=1}^{K} f(\theta_k) \cdot \Delta\theta$
 
 | Parameter | Value | Reason |
 |---|---|---|
-| Lower bound | $-4$ | $\Phi(-4) = 0.00003$ — negligible prior mass beyond this |
-| Upper bound | $+4$ | $\Phi(4) = 0.99997$ — symmetric |
+| Lower bound | $-4$ | $\Phi(-4) = 0.00003$ - negligible prior mass beyond this |
+| Upper bound | $+4$ | $\Phi(4) = 0.99997$ - symmetric |
 | $K = 41$ | 41 points | Standard in IRT software; matches Baker & Kim (2004) |
 | `numeric(K)` | 41 zeros | Pre-allocates the log-likelihood vector |
 
@@ -2102,11 +2102,11 @@ for (k in seq_len(K)) {
 }
 ```
 
-###### Outer loop — over grid points
+###### Outer loop - over grid points
 
 For each $\theta_k$ in the grid, computes how likely the observed response pattern is if the test-taker's true ability were $\theta_k$.
 
-###### Inner loop — over answered items
+###### Inner loop - over answered items
 
 For each item $j$, computes its log-likelihood contribution at $\theta_k$:
 
@@ -2130,11 +2130,11 @@ $$P_j(\theta_k) = c_j + \frac{1 - c_j}{1 + e^{-a_j(\theta_k - b_j)}}$$
 
 | $\theta_k$ | $P_j(\theta_k)$ | Interpretation |
 |---|---|---|
-| $-4.0$ | $\approx 0.250$ | Very low ability — can only guess |
-| $-1.0$ | $0.306$ | Below average — slightly above guessing |
-| $0.5$ | $0.625$ | At difficulty — 50% above guessing floor |
-| $2.0$ | $0.903$ | High ability — very likely correct |
-| $4.0$ | $\approx 0.999$ | Exceptional — virtually certain |
+| $-4.0$ | $\approx 0.250$ | Very low ability - can only guess |
+| $-1.0$ | $0.306$ | Below average - slightly above guessing |
+| $0.5$ | $0.625$ | At difficulty - 50% above guessing floor |
+| $2.0$ | $0.903$ | High ability - very likely correct |
+| $4.0$ | $\approx 0.999$ | Exceptional - virtually certain |
 
 ###### Probability Clamping
 
@@ -2174,11 +2174,11 @@ $$L \approx 0.6^{40} \approx 1.3 \times 10^{-9}$$
 
 R's floating point minimum is $\approx 5 \times 10^{-324}$. Products of many small numbers **underflow to zero**, making all grid points look equally likely and destroying the estimate.
 
-**Log transforms products into sums** — numerically stable regardless of test length:
+**Log transforms products into sums** - numerically stable regardless of test length:
 
 $$\log L(\theta_k) = \sum_{j=1}^{n} [u_j \log P_j + (1-u_j)\log(1-P_j)]$$
 
-**Concrete example** — 3 items, responses = [0, 1, 1], at $\theta_k = 0$:
+**Concrete example** - 3 items, responses = [0, 1, 1], at $\theta_k = 0$:
 
 | Item $j$ | $a_j$ | $b_j$ | $c_j$ | $u_j$ | $P_j(0)$ | Contribution |
 |---|---|---|---|---|---|---|
@@ -2201,14 +2201,14 @@ likelihood       <- exp(log_lik_centered)
 
 **Why subtract `max(log_lik)` before `exp()` ?**
 
-After 10 items, `log_lik` values might range from -30 to -100. `exp(-100)` $\approx 3.7 \times 10^{-44}$ — very small but still representable. However the **relative differences** between grid points are what matter for EAP, not the absolute magnitudes.
+After 10 items, `log_lik` values might range from -30 to -100. `exp(-100)` $\approx 3.7 \times 10^{-44}$ - very small but still representable. However the **relative differences** between grid points are what matter for EAP, not the absolute magnitudes.
 
 By centering on the maximum:
 
 ```r
 # Before centering:
 log_lik <- c(-50.1, -48.3, -47.0, -51.2, ...)
-# All values very negative — exp gives tiny numbers
+# All values very negative - exp gives tiny numbers
 
 # After centering (subtract max = -47.0):
 log_lik_centered <- c(-3.1, -1.3, 0.0, -4.2, ...)
@@ -2238,25 +2238,25 @@ $$\pi(\theta_k) = \frac{1}{\sqrt{2\pi}} e^{-\theta_k^2 / 2}$$
 
 **Why $\mathcal{N}(0, 1)$ as prior?**
 
-This encodes the assumption that, before seeing any responses, the population of test-takers has ability distributed as a standard normal — most people cluster around $\theta = 0$ (average), with fewer at the extremes.
+This encodes the assumption that, before seeing any responses, the population of test-takers has ability distributed as a standard normal - most people cluster around $\theta = 0$ (average), with fewer at the extremes.
 
 **Effect of the prior on the estimate:**
 
 | Items answered | Prior influence | Likelihood influence |
 |---|---|---|
-| 1–3 | Strong — pulls theta toward 0 | Weak — little data |
+| 1–3 | Strong - pulls theta toward 0 | Weak - little data |
 | 4–7 | Moderate | Moderate |
-| 8–10 | Weak | Strong — data dominates |
+| 8–10 | Weak | Strong - data dominates |
 
 This is exactly what we want: the prior stabilizes estimates early when data is scarce, then gradually yields to the data as evidence accumulates.
 
 **Prior values across the grid:**
 
 ```r
-dnorm(-4)   # → 0.000134  almost zero — extreme abilities unlikely a priori
+dnorm(-4)   # → 0.000134  almost zero - extreme abilities unlikely a priori
 dnorm(-2)   # → 0.054
 dnorm(-1)   # → 0.242
-dnorm(0)    # → 0.399     peak — average ability most likely a priori
+dnorm(0)    # → 0.399     peak - average ability most likely a priori
 dnorm(1)    # → 0.242
 dnorm(2)    # → 0.054
 dnorm(4)    # → 0.000134
@@ -2295,7 +2295,7 @@ The normalized weights $\tilde{w}_k$ represent the **discrete posterior distribu
 
 ---
 
-##### Step 2g: EAP Estimate — Posterior Mean
+##### Step 2g: EAP Estimate - Posterior Mean
 
 ```r
 theta <- sum(theta_grid * weights_norm)
@@ -2309,13 +2309,13 @@ $$\hat{\theta}_{EAP} \approx \sum_{k=1}^{K} \theta_k \cdot \tilde{w}_k$$
 
 $$\hat{\theta}_{EAP} = (-2)(0.013) + (-1)(0.234) + (0)(0.965) + (1)(0.351) + (2)(0.013)$$
 
-Wait — those don't sum to 1. Let me normalize properly:
+Wait - those don't sum to 1. Let me normalize properly:
 
 $$\text{sum} = 0.0054 + 0.0968 + 0.3990 + 0.1452 + 0.0054 = 0.6518$$
 $$\tilde{w} = (0.008, 0.149, 0.612, 0.223, 0.008)$$
 $$\hat{\theta}_{EAP} = (-2)(0.008)+(-1)(0.149)+(0)(0.612)+(1)(0.223)+(2)(0.008) = 0.090$$
 
-This theta ($\approx 0.09$) is slightly above average — consistent with more correct than incorrect responses.
+This theta ($\approx 0.09$) is slightly above average - consistent with more correct than incorrect responses.
 
 ---
 
@@ -2335,10 +2335,10 @@ This is the square root of the **weighted variance** of the posterior distributi
 
 | SE value | Meaning | 95% CI width |
 |---|---|---|
-| $\geq 0.8$ | Very uncertain — early in test | $\pm 1.57$ |
+| $\geq 0.8$ | Very uncertain - early in test | $\pm 1.57$ |
 | $0.5 - 0.8$ | Moderate uncertainty | $\pm 0.98 - 1.57$ |
 | $0.3 - 0.5$ | Acceptable precision | $\pm 0.59 - 0.98$ |
-| $< 0.3$ | High precision — test can stop | $< \pm 0.59$ |
+| $< 0.3$ | High precision - test can stop | $< \pm 0.59$ |
 
 **SE progression across a 10-item test:**
 
@@ -2432,9 +2432,9 @@ max_items     <- as.numeric(max_items)
 test_complete <- n_answered >= max_items
 ```
 
-**`as.numeric(max_items)`** — same defensive conversion as before. `max_items = 10` in `eval - init` but may arrive as `"10"` (string) through the flow variable pointer.
+**`as.numeric(max_items)`** - same defensive conversion as before. `max_items = 10` in `eval - init` but may arrive as `"10"` (string) through the flow variable pointer.
 
-**`n_answered >= max_items`** — produces a logical value:
+**`n_answered >= max_items`** - produces a logical value:
 
 ```r
 # After item 9:   9 >= 10  → FALSE  → if node "false" port → loop back
@@ -2442,14 +2442,14 @@ test_complete <- n_answered >= max_items
 ```
 
 **Why `n_answered` not `answered`?**
-`n_answered = length(responses)` is computed from the actual vector length — immune to serialization corruption. `answered` is a flow variable that has been passed through Concerto and could theoretically be wrong.
+`n_answered = length(responses)` is computed from the actual vector length - immune to serialization corruption. `answered` is a flow variable that has been passed through Concerto and could theoretically be wrong.
 
 **The `if` node reads `test_complete`:**
 The `if` node expression is set to `test_complete`. When this is `TRUE`, it routes to `eval - compute result` → `showPage - result` → `test end`. When `FALSE`, it routes back to `eval - select item` for the next iteration.
 
 ---
 
-## Node 5: `if` — Check Stopping Rule
+## Node 5: `if` - Check Stopping Rule
 
 ### Concept
 The stopping rule decides whether to continue the test or end it. We use a **fixed-length** stopping rule: stop after `max_items` questions [11, 13]. The `if` node reads the `test_complete` logical variable (TRUE/FALSE) and routes the flow:
@@ -2478,13 +2478,13 @@ Click blue `+` → name it `test_complete` → click it → check **Flow variabl
 
 ---
 
-## Node 6: `eval - compute result` — Compute Labels and Confidence Interval
+## Node 6: `eval - compute result` - Compute Labels and Confidence Interval
 
 ### Concept
 Before showing results, this node computes:
-- `ability_label` — human-readable interpretation of theta [5]
-- `ci_lower`, `ci_upper` — 95% confidence interval using EAP standard error [8]
-- `precision_label` — description of measurement precision based on SE [13]
+- `ability_label` - human-readable interpretation of theta [5]
+- `ci_lower`, `ci_upper` - 95% confidence interval using EAP standard error [8]
+- `precision_label` - description of measurement precision based on SE [13]
 
 The 95% confidence interval is [8]:
 $$[\hat{\theta} - 1.96 \cdot SE_{EAP},\quad \hat{\theta} + 1.96 \cdot SE_{EAP}]$$
@@ -2557,11 +2557,11 @@ pct_correct <- round((total_correct / answered) * 100, 1)
 
 ### Details
 
-The `eval - compute result` node runs **exactly once** — after the `if` node routes to the `true` port (test is complete). Its purpose is to **transform raw numeric outputs** from the CAT algorithm into human-readable labels, derived metrics, and formatted values that the results page can display meaningfully.
+The `eval - compute result` node runs **exactly once** - after the `if` node routes to the `true` port (test is complete). Its purpose is to **transform raw numeric outputs** from the CAT algorithm into human-readable labels, derived metrics, and formatted values that the results page can display meaningfully.
 
 | Property | Value |
 |---|---|
-| **Runs** | Once only — after stopping rule is met |
+| **Runs** | Once only - after stopping rule is met |
 | **Position in flow** | `if` (true) → `eval - compute result` → `showPage - result` |
 | **Purpose** | Compute labels, CI bounds, precision assessment, and percentage |
 | **Inputs** | `theta`, `se_theta`, `answered`, `total_correct` |
@@ -2575,7 +2575,7 @@ It would be technically possible to compute these values inside `showPage - resu
 
 | Reason | Detail |
 |---|---|
-| **Clean display node** | `showPage - result` only handles HTML rendering — no logic |
+| **Clean display node** | `showPage - result` only handles HTML rendering - no logic |
 | **Testability** | Computed values can be logged and inspected before display |
 | **Reusability** | The same computed variables can be passed to multiple display nodes if needed |
 | **Concerto limitation** | Complex R logic inside `showPage` templates is unreliable |
@@ -2586,7 +2586,7 @@ It would be technically possible to compute these values inside `showPage - resu
 
 ---
 
-##### `ability_label` — Human-Readable Ability Classification
+##### `ability_label` - Human-Readable Ability Classification
 
 ```r
 if (theta >= 2.0) {
@@ -2653,11 +2653,11 @@ These thresholds correspond to the **68-95-99.7 rule** of the standard normal di
 Using `if-else if` ensures **only one branch executes**. Using separate `if` statements would allow multiple conditions to be true and overwrite each other:
 
 ```r
-# WRONG — multiple ifs: theta=1.5 would match BOTH conditions
+# WRONG - multiple ifs: theta=1.5 would match BOTH conditions
 if (theta >= 1.0) ability_label <- "High"
 if (theta >= -1.0) ability_label <- "Average"   # overwrites "High"!
 
-# CORRECT — else if: theta=1.5 matches first TRUE, stops
+# CORRECT - else if: theta=1.5 matches first TRUE, stops
 if (theta >= 2.0) {
   ability_label <- "Exceptional"
 } else if (theta >= 1.0) {
@@ -2688,7 +2688,7 @@ if (theta >= 1.5) {
 
 ---
 
-##### `ci_lower` and `ci_upper` — 95% Confidence Interval
+##### `ci_lower` and `ci_upper` - 95% Confidence Interval
 
 ```r
 ci_lower <- round(theta - 1.96 * se_theta, 3)
@@ -2717,13 +2717,13 @@ Other common confidence levels:
 | **95%** | **1.960** | **`theta ± 1.96 * se_theta`** |
 | 99% | 2.576 | `theta ± 2.576 * se_theta` |
 
-###### `round(..., 3)` — 3 decimal places
+###### `round(..., 3)` - 3 decimal places
 
-The CI bounds are rounded to 3 decimal places for clean display. More decimals would imply false precision — given the uncertainty in the estimate, 3 decimal places is sufficient.
+The CI bounds are rounded to 3 decimal places for clean display. More decimals would imply false precision - given the uncertainty in the estimate, 3 decimal places is sufficient.
 
 ###### Concrete examples
 
-**Example 1** — Average ability, moderate precision:
+**Example 1** - Average ability, moderate precision:
 ```r
 theta    <- 0.3821
 se_theta <- 0.5803
@@ -2738,10 +2738,10 @@ ci_upper <- round(0.3821 + 1.96 * 0.5803, 3)
            = round(1.5195, 3)
            = 1.520
 
-# Result: CI = [-0.755, 1.520]  (wide — only 3 items answered)
+# Result: CI = [-0.755, 1.520]  (wide - only 3 items answered)
 ```
 
-**Example 2** — Higher ability, high precision:
+**Example 2** - Higher ability, high precision:
 ```r
 theta    <- 1.2341
 se_theta <- 0.2814
@@ -2749,7 +2749,7 @@ se_theta <- 0.2814
 ci_lower <- round(1.2341 - 1.96 * 0.2814, 3)  = round(0.6826, 3)  = 0.683
 ci_upper <- round(1.2341 + 1.96 * 0.2814, 3)  = round(1.7856, 3)  = 1.786
 
-# Result: CI = [0.683, 1.786]  (narrower — 10 items answered)
+# Result: CI = [0.683, 1.786]  (narrower - 10 items answered)
 ```
 
 ###### CI width as a measure of test quality
@@ -2760,7 +2760,7 @@ ci_width <- ci_upper - ci_lower   # = 2 * 1.96 * se_theta = 3.92 * se_theta
 
 | SE | CI width | Interpretation |
 |---|---|---|
-| 0.89 (after Q1) | 3.49 | Covers almost entire scale — very uncertain |
+| 0.89 (after Q1) | 3.49 | Covers almost entire scale - very uncertain |
 | 0.62 (after Q3) | 2.43 | Still very wide |
 | 0.48 (after Q5) | 1.88 | Moderate |
 | 0.31 (after Q10) | 1.21 | Reasonably narrow |
@@ -2785,7 +2785,7 @@ A CI of width ~1.2 after 10 items is typical for a well-calibrated 3PL CAT.
 
 ---
 
-##### `precision_label` — Measurement Precision Assessment
+##### `precision_label` - Measurement Precision Assessment
 
 ```r
 if (se_theta < 0.3) {
@@ -2807,9 +2807,9 @@ The thresholds `0.3` and `0.5` come from the CAT psychometrics literature:
 
 | SE threshold | Source | Meaning |
 |---|---|---|
-| $SE < 0.30$ | Standard CAT stopping criterion | High precision — equivalent to reliability $\geq 0.91$ |
-| $SE < 0.50$ | Acceptable for many applications | Moderate precision — reliability $\approx 0.75$ |
-| $SE \geq 0.50$ | Below standard | Low precision — more items needed |
+| $SE < 0.30$ | Standard CAT stopping criterion | High precision - equivalent to reliability $\geq 0.91$ |
+| $SE < 0.50$ | Acceptable for many applications | Moderate precision - reliability $\approx 0.75$ |
+| $SE \geq 0.50$ | Below standard | Low precision - more items needed |
 
 **Relationship between SE and reliability ($\rho$):**
 
@@ -2857,7 +2857,7 @@ if (se_theta < 0.25) {
 } else if (se_theta < 0.40) {
   precision_label <- "Acceptable precision"
 } else {
-  precision_label <- "Insufficient precision — retest recommended"
+  precision_label <- "Insufficient precision - retest recommended"
 }
 
 # Formative assessment (more lenient):
@@ -2872,7 +2872,7 @@ if (se_theta < 0.40) {
 
 ---
 
-##### `pct_correct` — Percentage Correct (Classical Score)
+##### `pct_correct` - Percentage Correct (Classical Score)
 
 ```r
 pct_correct <- round((total_correct / answered) * 100, 1)
@@ -2880,15 +2880,15 @@ pct_correct <- round((total_correct / answered) * 100, 1)
 
 ###### What it does
 
-Computes the percentage of items answered correctly — the classical test theory (CTT) equivalent of the IRT theta estimate.
+Computes the percentage of items answered correctly - the classical test theory (CTT) equivalent of the IRT theta estimate.
 
 $$\text{pct\_correct} = \text{round}\left(\frac{\sum u_j}{n} \times 100,\ 1\right)$$
 
 Where:
-- $\sum u_j$ = `total_correct` — number of correct responses
-- $n$ = `answered` — total items answered
-- $\times 100$ — converts proportion to percentage
-- `round(..., 1)` — rounds to 1 decimal place
+- $\sum u_j$ = `total_correct` - number of correct responses
+- $n$ = `answered` - total items answered
+- $\times 100$ - converts proportion to percentage
+- `round(..., 1)` - rounds to 1 decimal place
 
 ###### Why include this alongside theta?
 
@@ -2931,7 +2931,7 @@ Because CAT selects items adaptively, percentage correct is **not a fair compari
 | Average ability | 0.0 | Mixed items ($b \approx 0$) | 58% |
 | Low ability | -2.0 | Mostly easy items ($b \approx -2$) | 60% |
 
-The low-ability test-taker has the **highest** percentage correct despite the **lowest** theta — because they were given easy items they could answer correctly. This is why theta (IRT) is a fairer and more informative measure than raw percentage in adaptive testing.
+The low-ability test-taker has the **highest** percentage correct despite the **lowest** theta - because they were given easy items they could answer correctly. This is why theta (IRT) is a fairer and more informative measure than raw percentage in adaptive testing.
 
 The `pct_correct` is included as a **supplementary familiar metric**, not as the primary score. The `theta` estimate is the primary result.
 
@@ -2959,7 +2959,7 @@ By keeping full precision in `eval - score` and only rounding in `eval - compute
 
 The `round()` in `eval - score` only applies to the **final display values**:
 ```r
-theta    <- round(theta, 4)      # 4 decimal places — sufficient precision for display
+theta    <- round(theta, 4)      # 4 decimal places - sufficient precision for display
 se_theta <- round(se_theta, 4)   # while keeping more precision than 3 decimal places
 ```
 
@@ -2975,10 +2975,10 @@ pct_correct <- round((total_correct / answered) * 100, 1)   # 1 decimal for perc
 
 ```
 INPUTS via flow variable pointers (↓):
-  theta         0.3821    — final EAP estimate after 10 items
-  se_theta      0.5803    — final EAP standard error
-  answered      10        — items answered
-  total_correct 6         — correct responses
+  theta         0.3821    - final EAP estimate after 10 items
+  se_theta      0.5803    - final EAP standard error
+  answered      10        - items answered
+  total_correct 6         - correct responses
         ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │  COMPUTE ability_label                                          │
@@ -3117,14 +3117,14 @@ percentile_rank <- round(pnorm(theta) * 100, 0)
 | `total_correct = 6`, `answered = 10` | `pct_correct = 60.0` |
 
 Its design principles are:
-1. **Never modify** `theta` or `se_theta` — only compute derived quantities from them
-2. **Round for display** — apply final rounding here, not in computation nodes
-3. **Pass through** all inputs — `showPage - result` needs everything
-4. **Separate concerns** — computation here, rendering in `showPage - result`
+1. **Never modify** `theta` or `se_theta` - only compute derived quantities from them
+2. **Round for display** - apply final rounding here, not in computation nodes
+3. **Pass through** all inputs - `showPage - result` needs everything
+4. **Separate concerns** - computation here, rendering in `showPage - result`
 
 ---
 
-## Node 7: `showPage - result` — Display Final Score
+## Node 7: `showPage - result` - Display Final Score
 
 ### Concept
 Shows the final results including the EAP theta estimate, standard error, 95% confidence interval, ability label, and precision assessment.
@@ -3272,7 +3272,7 @@ Shows the final results including the EAP theta estimate, standard error, 95% co
       with the 3-Parameter Logistic (3PL) IRT model.<br><br>
       <strong>What is EAP?</strong><br>
       EAP combines the likelihood of your response pattern with a standard
-      normal prior distribution. The result is the posterior mean — a
+      normal prior distribution. The result is the posterior mean - a
       weighted average of the ability scale, where the weights reflect how
       consistent each ability level is with your responses.<br><br>
       <strong>What is SE(θ̂)?</strong><br>
@@ -3376,7 +3376,7 @@ showPage - result (out) ───────→ test end (in)
 
 1. Click **Debug test** (bottom right of the test flow screen)
 2. Press **F12** → open **Console** tab in your browser
-3. Answer each question — the EAP update log appears in the R log after each response
+3. Answer each question - the EAP update log appears in the R log after each response
 4. After 10 questions, the results page shows theta, SE, and confidence interval
 
 ### View EAP logs in real-time
@@ -3400,7 +3400,7 @@ EAP UPDATE after item 3
 ========================================
 ```
 
-Notice how SE decreases as more items are answered — the estimate becomes more precise with each question.
+Notice how SE decreases as more items are answered - the estimate becomes more precise with each question.
 
 ---
 
@@ -3443,12 +3443,12 @@ You have built a complete **3PL CAT test with Bayesian EAP estimation** in Conce
 1. ✅ **Initializes** theta at 0 with full response history tracking [12]
 2. ✅ **Selects items** using Maximum Information based on 3PL IRT [3, 11, 14]
 3. ✅ **Presents items** via `showPage` with Flow variable pointers [20, 21]
-4. ✅ **Estimates theta** using Bayesian EAP — stable, works for all response patterns, provides SE [8, 10]
+4. ✅ **Estimates theta** using Bayesian EAP - stable, works for all response patterns, provides SE [8, 10]
 5. ✅ **Tracks precision** via $SE_{EAP}$ and 95% confidence interval [8]
 6. ✅ **Loops** using the `if` node with a `test_complete` logical variable [20]
 7. ✅ **Reports results** with theta, SE, CI, ability label, and precision assessment [13]
 
-The key improvement over Newton-Raphson is that EAP is **robust** — it never fails for all-correct or all-incorrect patterns, provides a meaningful SE after every item, and produces stable estimates throughout the test [8, 9, 10].
+The key improvement over Newton-Raphson is that EAP is **robust** - it never fails for all-correct or all-incorrect patterns, provides a meaningful SE after every item, and produces stable estimates throughout the test [8, 9, 10].
 
 ---
 
@@ -3457,10 +3457,10 @@ The key improvement over Newton-Raphson is that EAP is **robust** — it never f
 ### Foundational IRT Models
 
 **[1]** Rasch, G. (1960). *Probabilistic Models for Some Intelligence and Attainment Tests*. Danish Institute for Educational Research.
-> The original 1-parameter logistic (Rasch) model — the simplest IRT model and the historical starting point for all subsequent IRT development.
+> The original 1-parameter logistic (Rasch) model - the simplest IRT model and the historical starting point for all subsequent IRT development.
 
 **[2]** Birnbaum, A. (1968). Some latent trait models and their use in inferring an examinee's ability. In F. M. Lord & M. R. Novick (Eds.), *Statistical Theories of Mental Test Scores* (pp. 397–479). Addison-Wesley.
-> The foundational paper proposing the 2PL and **3PL models** — including the guessing parameter $c$ used throughout this tutorial. All 3PL item selection and information formulas derive from this work.
+> The foundational paper proposing the 2PL and **3PL models** - including the guessing parameter $c$ used throughout this tutorial. All 3PL item selection and information formulas derive from this work.
 
 **[3]** Lord, F. M. (1980). *Applications of Item Response Theory to Practical Testing Problems*. Lawrence Erlbaum Associates / Routledge. https://doi.org/10.4324/9780203056615
 > The definitive IRT reference textbook. Covers item information functions, ability estimation, and the theoretical basis for CAT item selection criteria used in this tutorial.
@@ -3528,7 +3528,7 @@ The key improvement over Newton-Raphson is that EAP is **robust** — it never f
 ### Applied CAT Studies
 
 **[18]** Huda, A., Firdaus, F., Irfan, D., Hendriyani, Y., Almasri, A., & Sukmawati, M. (2024). Optimizing Educational Assessment: The Practicality of Computer Adaptive Testing (CAT) with an Item Response Theory (IRT) Approach. *JOIV: International Journal on Informatics Visualization, 8*(1), 473–480. https://doi.org/10.62527/joiv.8.1.2217
-> Recent practical CAT implementation study in educational assessment context. Demonstrates the feasibility of building CAT systems with modern web platforms — the closest published work to the Concerto implementation in this tutorial.
+> Recent practical CAT implementation study in educational assessment context. Demonstrates the feasibility of building CAT systems with modern web platforms - the closest published work to the Concerto implementation in this tutorial.
 
 **[19]** Kim, J., & Chung, H. (2017). The impacts of computer adaptive testing from a variety of perspectives. *Journal of Educational Evaluation for Health Professions*. https://pmc.ncbi.nlm.nih.gov/articles/PMC5549015/
 > Multi-perspective review of CAT advantages and challenges. Supports the claims made in the tutorial about CAT efficiency (50% fewer items), equal precision, and test-taker experience.
@@ -3537,7 +3537,7 @@ The key improvement over Newton-Raphson is that EAP is **robust** — it never f
 
 ### Concerto Platform
 
-**[20]** Concerto Platform Wiki. (2024). *Concerto Platform — Open Source Adaptive Testing*. https://github.com/campsych/concerto-platform/wiki
+**[20]** Concerto Platform Wiki. (2024). *Concerto Platform - Open Source Adaptive Testing*. https://github.com/campsych/concerto-platform/wiki
 > Official documentation for the Concerto Platform used throughout this tutorial. Covers node types, flow variable pointers, template syntax, and test deployment.
 
 **[21]** campsych. (2024). *Concerto Platform* [Software]. GitHub. https://github.com/campsych/concerto-platform

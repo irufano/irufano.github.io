@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Markdown Viewer — Tools — irufano';
+	const title = 'Markdown Viewer - Tools - irufano';
 	const description =
 		'Write or paste Markdown and see it rendered live, with the same math, code highlighting, callouts, tables, and diagrams as a blog post on this site.';
 	const canonicalUrl = `${SITE_URL}/tools/md-viewer`;
@@ -131,7 +131,7 @@
 		try {
 			code = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -232,7 +232,7 @@
 <section class="w-full px-4 py-10 sm:px-6">
 	<h1 class="font-mono text-2xl font-extrabold text-fg sm:text-3xl">Markdown Viewer</h1>
 	<p class="mt-2 text-sm text-fg-muted">
-		Write or paste Markdown and see it rendered live — math, syntax-highlighted code, callouts,
+		Write or paste Markdown and see it rendered live - math, syntax-highlighted code, callouts,
 		tables, and Mermaid diagrams, exactly like a post on this site.
 	</p>
 

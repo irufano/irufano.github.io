@@ -1,7 +1,7 @@
 <script lang="ts">
   import { SITE_URL, DEFAULT_OG_IMAGE } from "$lib/seo";
 
-  const title = "Regex Tester — Tools — irufano";
+  const title = "Regex Tester - Tools - irufano";
   const description =
     "Test a regular expression against a string, see matches highlighted, and preview replacements.";
   const canonicalUrl = `${SITE_URL}/tools/regex-tester`;
@@ -296,7 +296,7 @@
       for="regex-replacement"
       class="font-mono text-xs uppercase tracking-wide text-fg-muted"
     >
-      Replacement (optional — use $1, $2 for groups)
+      Replacement (optional - use $1, $2 for groups)
     </label>
     <input
       id="regex-replacement"

@@ -2,9 +2,9 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = "irufano — The Developer's Knowledge Hub";
+	const title = "irufano - The Developer's Knowledge Hub";
 	const description =
-		'Developer notes, tutorials, and docs, plus a growing collection of client-side dev tools — JSON formatting, hashing, regex testing, and more.';
+		'Developer notes, tutorials, and docs, plus a growing collection of client-side dev tools - JSON formatting, hashing, regex testing, and more.';
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Tree MD Generator — Tools — irufano';
+	const title = 'Tree MD Generator - Tools - irufano';
 	const description =
 		'Turn an indented list of folders and files into an ASCII tree or markdown list, ready to paste into a README.';
 	const canonicalUrl = `${SITE_URL}/tools/tree-md-generator`;
@@ -181,7 +181,7 @@
 		try {
 			input = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -367,7 +367,7 @@
 
 			<p class="mt-2 text-xs text-fg-muted">
 				Use indentation to nest items. Prefix a line with <code class="text-fg">dir</code> (or add a
-				trailing <code class="text-fg">/</code>) to mark it as a folder — everything else is treated
+				trailing <code class="text-fg">/</code>) to mark it as a folder - everything else is treated
 				as a file. Bullets like <code class="text-fg">+</code>, <code class="text-fg">-</code>, or
 				<code class="text-fg">*</code> are optional.
 			</p>

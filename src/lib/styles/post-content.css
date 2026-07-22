@@ -119,7 +119,7 @@
 
 /* ---------- code blocks ----------
    Code blocks are a self-contained "island": the wrapper's background is set
-   inline (mirroring shiki's own Material Theme background — see
+   inline (mirroring shiki's own Material Theme background - see
    remark-shiki.ts), so the chrome below uses fixed light-on-dark tones
    instead of the active site theme's variables. That keeps the header and
    code area seamless no matter which of the 19 site themes is active. */
@@ -338,7 +338,7 @@
 	overflow-y: hidden;
 	padding: 0.25em 0;
 }
-/* Single-line `$$...$$` promoted by remark-promote-display-math — kept
+/* Single-line `$$...$$` promoted by remark-promote-display-math - kept
    left-aligned so it stays visually distinct from a real multi-line `$$`
    block, which stays centered above. */
 .math-display-left .katex-display {

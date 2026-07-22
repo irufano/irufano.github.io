@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Base64 Encode/Decode — Tools — irufano';
+	const title = 'Base64 Encode/Decode - Tools - irufano';
 	const description = 'Encode text to Base64 or decode Base64 back to text.';
 	const canonicalUrl = `${SITE_URL}/tools/base64`;
 
@@ -47,7 +47,7 @@
 		try {
 			return { ok: true, value: mode === 'encode' ? toBase64(input) : fromBase64(input) };
 		} catch {
-			return { ok: false, error: 'Invalid Base64 input — check for stray characters or bad padding.' };
+			return { ok: false, error: 'Invalid Base64 input - check for stray characters or bad padding.' };
 		}
 	});
 
@@ -75,7 +75,7 @@
 		try {
 			input = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 

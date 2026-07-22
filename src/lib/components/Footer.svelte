@@ -8,7 +8,7 @@
   >
     <LogoMark size={12} />
     <p class="font-mono">
-      irufano — {new Date().getFullYear()}
+      irufano - {new Date().getFullYear()}
     </p>
     <!-- <a
       href="https://github.com"

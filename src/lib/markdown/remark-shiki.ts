@@ -184,7 +184,7 @@ export const remarkShiki: Plugin<[], Root> = function remarkShiki() {
 
 			// mirror shiki's own background onto the wrapper so the header row
 			// and the code area always share the exact same color, regardless
-			// of which site theme is active — no seam between the two
+			// of which site theme is active - no seam between the two
 			const preStyle = typeof preEl.properties.style === 'string' ? preEl.properties.style : '';
 			const bgMatch = /background-color:\s*([^;]+)/.exec(preStyle);
 			const wrapperStyle = bgMatch ? `background-color:${bgMatch[1]}` : undefined;

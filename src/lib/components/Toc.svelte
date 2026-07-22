@@ -99,7 +99,7 @@
 		event.preventDefault();
 		history.pushState(null, '', `#${id}`);
 		scrollToHeading(target, 'smooth');
-		// activeId is left to the IntersectionObserver — it flips once the
+		// activeId is left to the IntersectionObserver - it flips once the
 		// heading actually arrives at the scrollspy threshold, not on click
 	}
 </script>

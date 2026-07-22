@@ -16,7 +16,7 @@ Machine learning (ML) is a subset of artificial intelligence (AI) that involves 
 
 ### Traditional Programming
 
-Traditional programming is a manual process—meaning a person (programmer) creates the program. But without anyone programming the logic, one has to manually formulate or code rules.
+Traditional programming is a manual process-meaning a person (programmer) creates the program. But without anyone programming the logic, one has to manually formulate or code rules.
 
 > [note]: **Traditional Programming**
 > INPUT + PROGRAM = OUTPUT

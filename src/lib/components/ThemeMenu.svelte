@@ -77,7 +77,7 @@
 
   // the navbar's backdrop-blur creates a containing block for `position:
   // fixed` descendants, which would confine the overlay to the navbar's
-  // box instead of the viewport — portal it to <body> to escape that
+  // box instead of the viewport - portal it to <body> to escape that
   function portal(node: HTMLElement) {
     document.body.appendChild(node);
     return {

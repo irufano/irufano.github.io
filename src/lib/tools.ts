@@ -4,6 +4,7 @@ import FolderTree from 'lucide-svelte/icons/folder-tree';
 import Dices from 'lucide-svelte/icons/dices';
 import CodeXml from 'lucide-svelte/icons/code-xml';
 import FileText from 'lucide-svelte/icons/file-text';
+import Presentation from 'lucide-svelte/icons/presentation';
 import PenLine from 'lucide-svelte/icons/pen-line';
 import Braces from 'lucide-svelte/icons/braces';
 import Binary from 'lucide-svelte/icons/binary';
@@ -85,8 +86,16 @@ export const TOOLS: Tool[] = [
 		slug: 'md-viewer',
 		label: 'Markdown Viewer',
 		description:
-			'Write or paste Markdown and see it rendered live, with math, code highlighting, callouts, tables, and diagrams.',
+			'Write or paste Markdown and see it rendered live.',
 		icon: FileText,
+		category: 'Code & Data'
+	},
+	{
+		slug: 'md-slide-viewer',
+		label: 'MD Slide Viewer',
+		description:
+			'Write Markdown slides, present them as a live slideshow.',
+		icon: Presentation,
 		category: 'Code & Data'
 	},
 	{

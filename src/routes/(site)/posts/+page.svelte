@@ -6,7 +6,7 @@
   import type { PageData } from "./$types";
 
   const PAGE_SIZE = 8;
-  const title = "Posts — irufano";
+  const title = "Posts - irufano";
   const description = "Developer notes, tutorials, and docs.";
 
   let { data }: { data: PageData } = $props();
@@ -84,7 +84,7 @@
         post.title.toLowerCase().includes(query.trim().toLowerCase());
 
       // while searching, only enforce the category filter if the user opted
-      // into a category-scoped search — otherwise search spans all posts
+      // into a category-scoped search - otherwise search spans all posts
       const categoryFilterApplies = !hasQuery || searchScopedToCategory;
 
       return matchesQuery && (categoryFilterApplies ? matchesCategory : true);
@@ -131,7 +131,7 @@
         Posts
       </h1>
       <p class="mt-2 text-sm text-fg-muted">
-        Developer notes and documentatoions.
+        Developer notes and documentations.
       </p>
     </div>
 

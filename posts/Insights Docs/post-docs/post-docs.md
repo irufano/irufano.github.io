@@ -349,7 +349,7 @@ $$
 
 > [tip]:
 >
-> `$...$` and `$$...$$` patterns inside fenced code blocks or inline code are **never** rendered as math — they are safely ignored during processing.
+> `$...$` and `$$...$$` patterns inside fenced code blocks or inline code are **never** rendered as math - they are safely ignored during processing.
 
 ## Diagram (Mermaid)
 
@@ -507,7 +507,7 @@ erDiagram
 
 > [tip]:
 >
-> Mermaid diagram source inside fenced code blocks with any other language label (e.g. ` ```md `) is **never** rendered as a diagram — only ` ```mermaid ` triggers rendering.
+> Mermaid diagram source inside fenced code blocks with any other language label (e.g. ` ```md `) is **never** rendered as a diagram - only ` ```mermaid ` triggers rendering.
 
 ## Reference Citations
 
@@ -540,13 +540,13 @@ Add a `## References` section **at the end** of your post. Each entry must start
 ```
 
 When the post is rendered:
-- `[1]` in the body becomes `[[1]](#ref-1)` — a clickable link
+- `[1]` in the body becomes `[[1]](#ref-1)` - a clickable link
 - `[1] Author...` in the reference list gets an anchor `<a id="ref-1">` so the browser can scroll to it
 - The scroll position is offset-aware and accounts for the fixed navbar height
 
 > [tip]:
 >
-> `[N]` patterns inside fenced code blocks or inline code are **never** converted — they are safely ignored during processing.
+> `[N]` patterns inside fenced code blocks or inline code are **never** converted - they are safely ignored during processing.
 
 > [important]:
 >

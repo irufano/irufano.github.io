@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'HTML Viewer — Tools — irufano';
+	const title = 'HTML Viewer - Tools - irufano';
 	const description =
 		'Write or paste HTML and see a live preview instantly. Build a page from scratch, then copy, download, or open it in a new tab.';
 	const canonicalUrl = `${SITE_URL}/tools/html-viewer`;
@@ -74,7 +74,7 @@
 		try {
 			code = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 

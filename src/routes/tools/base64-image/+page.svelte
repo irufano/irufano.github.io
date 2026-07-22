@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Base64 Image Converter — Tools — irufano';
+	const title = 'Base64 Image Converter - Tools - irufano';
 	const description =
 		'Convert an image to a Base64 data URI, or decode a Base64 string back into an image.';
 	const canonicalUrl = `${SITE_URL}/tools/base64-image`;
@@ -111,9 +111,9 @@
 
 	const encodeStats = $derived([
 		{ label: 'Type', value: fileType },
-		{ label: 'Dimensions', value: encWidth ? `${encWidth}×${encHeight}` : '—' },
-		{ label: 'Original', value: fileSize ? formatBytes(fileSize) : '—' },
-		{ label: 'Encoded', value: base64Only ? formatBytes(base64Only.length) : '—' }
+		{ label: 'Dimensions', value: encWidth ? `${encWidth}×${encHeight}` : '-' },
+		{ label: 'Original', value: fileSize ? formatBytes(fileSize) : '-' },
+		{ label: 'Encoded', value: base64Only ? formatBytes(base64Only.length) : '-' }
 	]);
 
 	async function copyEncoded() {
@@ -169,11 +169,11 @@
 	);
 
 	const decodeStats = $derived([
-		{ label: 'Type', value: decodeStatus === 'valid' ? activeMime : '—' },
-		{ label: 'Dimensions', value: decodeStatus === 'valid' ? `${decWidth}×${decHeight}` : '—' },
+		{ label: 'Type', value: decodeStatus === 'valid' ? activeMime : '-' },
+		{ label: 'Dimensions', value: decodeStatus === 'valid' ? `${decWidth}×${decHeight}` : '-' },
 		{
 			label: 'Size',
-			value: decodedDataUrl ? formatBytes((decodedDataUrl.split(',')[1] ?? '').length) : '—'
+			value: decodedDataUrl ? formatBytes((decodedDataUrl.split(',')[1] ?? '').length) : '-'
 		}
 	]);
 
@@ -181,7 +181,7 @@
 		try {
 			decodeInput = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -519,14 +519,14 @@
 								{/each}
 							</select>
 						</div>
-						<p class="text-xs text-fg-muted">No data: prefix detected — pick the image format.</p>
+						<p class="text-xs text-fg-muted">No data: prefix detected - pick the image format.</p>
 					</div>
 				{/if}
 
 				{#if decodeInput && decodeStatus === 'error'}
 					<p class="mt-2 flex items-start gap-1.5 text-xs text-red-400">
 						<ImageOff class="mt-0.5 h-3.5 w-3.5 shrink-0" />
-						Couldn't render this as an image — check the Base64 data.
+						Couldn't render this as an image - check the Base64 data.
 					</p>
 				{/if}
 			</div>

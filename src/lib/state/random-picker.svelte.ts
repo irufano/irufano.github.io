@@ -70,6 +70,6 @@ export function saveRandomPickerState() {
 	try {
 		localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
 	} catch {
-		// storage unavailable or full — ignore
+		// storage unavailable or full - ignore
 	}
 }

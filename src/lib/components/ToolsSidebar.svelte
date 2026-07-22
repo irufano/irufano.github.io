@@ -3,8 +3,8 @@
 	import LogoMark from './LogoMark.svelte';
 	import { TOOLS, groupToolsByCategory, CATEGORY_ICONS } from '$lib/tools';
 	import Wrench from 'lucide-svelte/icons/wrench';
-	import PanelLeftClose from 'lucide-svelte/icons/panel-left-close';
-	import PanelLeftOpen from 'lucide-svelte/icons/panel-left-open';
+	import PanelLeftClose from './PanelLeftCloseIcon.svelte';
+	import PanelLeftOpen from './PanelLeftOpenIcon.svelte';
 
 	let {
 		open = false,
@@ -36,9 +36,11 @@
 {#snippet sidebarContent(isCollapsed: boolean, showToggle: boolean)}
 	<div class="group relative flex items-center justify-between mx-4 my-4">
 		<a
-			href="/"
-			class="flex items-center w-min border-border ml-0.5 {isCollapsed
-				? 'transition-opacity duration-150 group-hover:opacity-0'
+			href={isCollapsed ? undefined : '/'}
+			aria-disabled={isCollapsed}
+			tabindex={isCollapsed ? -1 : undefined}
+			class="flex items-center w-min border-border ml-1 {isCollapsed
+				? 'pointer-events-none transition-opacity duration-150 group-hover:opacity-0'
 				: ''}"
 		>
 			<LogoMark size={20} />

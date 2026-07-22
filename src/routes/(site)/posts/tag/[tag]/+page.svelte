@@ -9,7 +9,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	const title = $derived(`#${data.tag.name} — Posts — irufano`);
+	const title = $derived(`#${data.tag.name} - Posts - irufano`);
 	const description = $derived(`Posts tagged "${data.tag.name}".`);
 	const canonicalUrl = $derived(`${SITE_URL}/posts/tag/${data.tag.slug}`);
 

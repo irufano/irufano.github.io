@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Rich Text Editor — Tools — irufano';
+	const title = 'Rich Text Editor - Tools - irufano';
 	const description = 'Format text visually with a WYSIWYG editor and copy the generated HTML.';
 	const canonicalUrl = `${SITE_URL}/tools/rich-text-editor`;
 
@@ -32,7 +32,7 @@
 	});
 
 	// Load any persisted content into the contenteditable once, when it first
-	// mounts — not on every keystroke, or the cursor would jump to the start.
+	// mounts - not on every keystroke, or the cursor would jump to the start.
 	$effect(() => {
 		if (!editorEl) return;
 		const el = editorEl;
@@ -59,8 +59,8 @@
 		{ label: 'Size', value: stats.size }
 	]);
 
-	// Strips anything that could execute or style outside the editor —
-	// scripts, styles, event-handler attributes, javascript: URLs — so pasted
+	// Strips anything that could execute or style outside the editor -
+	// scripts, styles, event-handler attributes, javascript: URLs - so pasted
 	// content from elsewhere can't affect the page or run unexpected code.
 	function sanitizeHtml(dirty: string): string {
 		const doc = new DOMParser().parseFromString(dirty, 'text/html');
@@ -148,7 +148,7 @@
 <section class="w-full px-4 py-10 sm:px-6">
 	<h1 class="font-mono text-2xl font-extrabold text-fg sm:text-3xl">Rich Text Editor</h1>
 	<p class="mt-2 text-sm text-fg-muted">
-		Format text visually — bold, headings, lists, links — and copy the HTML it generates.
+		Format text visually - bold, headings, lists, links - and copy the HTML it generates.
 	</p>
 
 	<div class="mt-8 grid grid-cols-3 gap-3 sm:max-w-sm">

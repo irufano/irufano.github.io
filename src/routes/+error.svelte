@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>{page.status} — {title}</title>
+	<title>{page.status} - {title}</title>
 </svelte:head>
 
 <Navbar />

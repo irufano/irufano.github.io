@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Random Picker — Tools — irufano';
+	const title = 'Random Picker - Tools - irufano';
 	const description =
 		'Paste a list of names or options and pick a random winner, with an animated reveal and pick history.';
 	const canonicalUrl = `${SITE_URL}/tools/random-picker`;
@@ -53,7 +53,7 @@
 	const uniqueCount = $derived(new Set(items).size);
 
 	// Keeps the "remove after pick" pool in sync with the input, but only
-	// resets it when the input actually changes — not on every render — so a
+	// resets it when the input actually changes - not on every render - so a
 	// depleted pool survives navigation and page refresh.
 	$effect(() => {
 		const key = items.join('\n');
@@ -150,7 +150,7 @@
 		try {
 			input = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -368,7 +368,7 @@
 				{/each}
 			</ul>
 		{:else}
-			<p class="mt-2 text-sm text-fg-muted">No picks yet — your history will show up here.</p>
+			<p class="mt-2 text-sm text-fg-muted">No picks yet - your history will show up here.</p>
 		{/if}
 	</div>
 </section>

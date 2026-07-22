@@ -9,7 +9,7 @@ export function scrollToHeading(target: HTMLElement, behavior: ScrollBehavior = 
 		return;
 	}
 
-	// Land the heading flush at the container's top edge — no offset gap.
+	// Land the heading flush at the container's top edge - no offset gap.
 	const top =
 		target.getBoundingClientRect().top - container.getBoundingClientRect().top + container.scrollTop;
 	container.scrollTo({ top, behavior });

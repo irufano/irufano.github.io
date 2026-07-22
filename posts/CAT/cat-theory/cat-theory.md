@@ -19,7 +19,7 @@ The core idea:
 - If you answer incorrectly → next question is **easier**
 - The test **converges** on your true ability with fewer questions than a fixed test
 
-> "CAT yields a high and equal degree of precision for all candidates, and requires fewer items than a conventional test to reach a given degree of precision." — Eggen & Verschoor (2006) [3]
+> "CAT yields a high and equal degree of precision for all candidates, and requires fewer items than a conventional test to reach a given degree of precision." - Eggen & Verschoor (2006) [3]
 
 ---
 
@@ -36,15 +36,15 @@ P(\theta) = c + (1-c) \cdot \frac{1}{1 + e^{-a(\theta - b)}}
 $$
 
 Where:
-- **θ (theta)** — the person's ability (typically ranges from -3 to +3)
-- **a** — discrimination parameter (how well the item differentiates abilities)
-- **b** — difficulty parameter (the ability level where P = 0.5)
-- **c** — guessing parameter (probability of correct answer by chance)
+- **θ (theta)** - the person's ability (typically ranges from -3 to +3)
+- **a** - discrimination parameter (how well the item differentiates abilities)
+- **b** - difficulty parameter (the ability level where P = 0.5)
+- **c** - guessing parameter (probability of correct answer by chance)
 
 Simpler models [4]:
-- **1PL (Rasch)** — only difficulty `b`, assumes equal discrimination
-- **2PL** — difficulty `b` + discrimination `a`, no guessing
-- **3PL** — full model with guessing `c`
+- **1PL (Rasch)** - only difficulty `b`, assumes equal discrimination
+- **2PL** - difficulty `b` + discrimination `a`, no guessing
+- **3PL** - full model with guessing `c`
 
 ---
 
@@ -85,7 +85,7 @@ Key insight:
 - Items that are too easy or too hard provide little information
 - Higher discrimination `a` = more information overall
 
-This is why CAT selects items where **difficulty ≈ current theta** — it's the point of maximum information [5].
+This is why CAT selects items where **difficulty ≈ current theta** - it's the point of maximum information [5].
 
 ---
 
@@ -111,8 +111,8 @@ $$
 \theta_{posterior} = \int \theta \cdot L(\theta) \cdot prior(\theta) \, d\theta
 $$
 
-- **EAP (Expected A Posteriori)** — takes the mean of the posterior
-- **MAP (Maximum A Posteriori)** — takes the mode of the posterior
+- **EAP (Expected A Posteriori)** - takes the mean of the posterior
+- **MAP (Maximum A Posteriori)** - takes the mode of the posterior
 
 Bayesian methods work even with all-correct or all-incorrect patterns, making them preferred for CAT [3, 6].
 
@@ -122,7 +122,7 @@ if correct:   theta = theta + 0.3
 if incorrect: theta = theta - 0.3
 ```
 
-This is a simplified approximation — not true IRT but easy to implement for prototyping.
+This is a simplified approximation - not true IRT but easy to implement for prototyping.
 
 ---
 
@@ -271,7 +271,7 @@ $$
 
 > The goal of CAT is always: **estimate theta as accurately as possible using as few items as possible** [1, 3].
 
-CAT achieves this by always asking the question that provides the most information about the person's ability at their current estimated level — making every question count.
+CAT achieves this by always asking the question that provides the most information about the person's ability at their current estimated level - making every question count.
 
 ---
 

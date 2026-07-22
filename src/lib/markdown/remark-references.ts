@@ -19,7 +19,7 @@ function leadingRefNumber(node: PhrasingContent | undefined): string | undefined
 /**
  * Converts `[N]` / `[N, M]` inline citations into anchor links pointing at
  * `#ref-N`, and tags matching "[N] ..." paragraphs under a "## References"
- * heading with that same id — but only when a "## References" section
+ * heading with that same id - but only when a "## References" section
  * exists. Runs before remark-rehype, so it only ever touches mdast `text`
  * nodes, which naturally excludes fenced/inline code.
  */
@@ -75,9 +75,9 @@ export const remarkReferences: Plugin<[], Root> = function remarkReferences() {
 			while ((m = BRACKET_RE.exec(text.value))) {
 				const content = m[1];
 
-				// Pure number list, e.g. "[1]" / "[1, 2]" — one link per number.
+				// Pure number list, e.g. "[1]" / "[1, 2]" - one link per number.
 				// Only treated as a citation if every number resolves to a real
-				// reference — avoids false positives like "responses = [0, 1, 1]".
+				// reference - avoids false positives like "responses = [0, 1, 1]".
 				if (PURE_NUMBER_LIST_RE.test(content)) {
 					const numbers = content.split(',').map((n) => n.trim());
 					if (!numbers.every((num) => definedNumbers.has(num))) continue;
@@ -100,7 +100,7 @@ export const remarkReferences: Plugin<[], Root> = function remarkReferences() {
 					continue;
 				}
 
-				// Annotated single citation, e.g. "[1, p.276: \"...\"]" — the whole
+				// Annotated single citation, e.g. "[1, p.276: \"...\"]" - the whole
 				// bracket becomes one link to the leading reference number.
 				const annotated = ANNOTATED_RE.exec(content);
 				if (!annotated || !definedNumbers.has(annotated[1])) continue;

@@ -140,6 +140,10 @@ export function getPostsByTag(tagSlug: string): PostSummary[] {
 	);
 }
 
+export function getPostRawContent(categorySlug: string, slug: string): string | undefined {
+	return entries.find((e) => e.categorySlug === categorySlug && e.slug === slug)?.content;
+}
+
 export async function getPostBySlug(
 	categorySlug: string,
 	slug: string

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SITE_URL, DEFAULT_OG_IMAGE } from '$lib/seo';
 
-	const title = 'Table MD Generator — Tools — irufano';
+	const title = 'Table MD Generator - Tools - irufano';
 	const description =
 		'Paste CSV, TSV, or delimited data and get a clean Markdown table, ready to paste into a README.';
 	const canonicalUrl = `${SITE_URL}/tools/table-md-generator`;
@@ -67,7 +67,7 @@
 		try {
 			input = await navigator.clipboard.readText();
 		} catch {
-			// clipboard read denied or unavailable — ignore
+			// clipboard read denied or unavailable - ignore
 		}
 	}
 
@@ -232,7 +232,7 @@
 			></textarea>
 
 			<p class="mt-2 text-xs text-fg-muted">
-				Paste CSV, TSV, or semicolon/pipe-delimited data — quoted fields with embedded delimiters
+				Paste CSV, TSV, or semicolon/pipe-delimited data - quoted fields with embedded delimiters
 				are supported. Cells containing <code class="text-fg">|</code> are escaped automatically.
 			</p>
 		</div>

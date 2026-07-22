@@ -252,8 +252,8 @@ llm = BedrockModel(
 )
 
 SYSTEM_PROMPT = """You are an assistant with access to two retrieval tools:
-1) company_info_search — for general company information.
-2) legal_info_search — for legal information.
+1) company_info_search - for general company information.
+2) legal_info_search - for legal information.
 
 
 Rules:
