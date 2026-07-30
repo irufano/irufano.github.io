@@ -8,8 +8,6 @@
 - **Tools** (`/tools`) - a collection of self-contained, client-side utilities (JSON formatter, Base64/AES/hash/JWT tools, regex tester, color converter, Markdown table/tree generators, and more), grouped into categories and listed in `src/lib/tools.ts`.
 - **Theme picker** - a dark/light theme switcher with a dozen-plus palettes (Catppuccin, Dracula, Nord, Tokyo Night, Gruvbox, One Dark/Light, Solarized, Kanagawa, Rosé Pine, Vesper, Terminal), kept in sync with the Shiki code-highlighting theme (`src/lib/theme.svelte.ts`).
 
-See [CLAUDE.md](./CLAUDE.md) for a deeper architectural walkthrough.
-
 ## Creating a project
 
 This project was originally scaffolded with [`sv`](https://github.com/sveltejs/cli):
