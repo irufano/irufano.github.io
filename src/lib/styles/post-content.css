@@ -338,6 +338,13 @@
 	overflow-y: hidden;
 	padding: 0.25em 0;
 }
+/* Flex items shrink to their content's width by default, which collapses
+   `.katex` down to the equation's own width. KaTeX's `\tag` is positioned
+   `absolute; right: 0` relative to that box, so without this it lands on
+   top of the equation's last glyph instead of out in the page margin. */
+.katex-display > .katex {
+	flex: 1 1 auto;
+}
 /* Single-line `$$...$$` promoted by remark-promote-display-math - kept
    left-aligned so it stays visually distinct from a real multi-line `$$`
    block, which stays centered above. */

@@ -6,6 +6,7 @@
 	let activeId = $state<string | null>(null);
 	let listEl: HTMLElement | undefined = $state();
 	let isScrolling = $state(false);
+	let hasSyncedInitialHash = false;
 
 	$effect(() => {
 		if (!listEl) return;
@@ -69,6 +70,21 @@
 			scrollTarget.removeEventListener('scroll', onScroll);
 			window.removeEventListener('resize', onScroll);
 		};
+	});
+
+	$effect(() => {
+		// Reflect the currently-read heading in the URL so a refresh lands back
+		// where the reader left off. Skip the very first activeId assignment -
+		// that fires on mount, before the page's own hash-based scroll-restore
+		// effect has necessarily run, and writing here would race it.
+		if (!activeId) return;
+		if (!hasSyncedInitialHash) {
+			hasSyncedInitialHash = true;
+			return;
+		}
+		if (window.location.hash.slice(1) !== activeId) {
+			history.replaceState(null, '', `#${activeId}`);
+		}
 	});
 
 	$effect(() => {
