@@ -156,9 +156,17 @@
 	const sortedTree = $derived.by(() => sortTree(parsedTree, sortMode));
 	const stats = $derived.by(() => countStats(parsedTree));
 
-	const treeBody = $derived.by(() =>
-		format === 'ascii' ? renderAscii(sortedTree) : renderMarkdown(sortedTree)
-	);
+	const treeBody = $derived.by(() => {
+		if (format === 'markdown') return renderMarkdown(sortedTree);
+
+		if (sortedTree.length === 1) {
+			const root = sortedTree[0];
+			const suffix = root.isDir && trailingSlash ? '/' : '';
+			return `${root.name}${suffix}\n${renderAscii(root.children)}`;
+		}
+
+		return renderAscii(sortedTree);
+	});
 
 	const output = $derived(
 		format === 'ascii' && wrapFence && treeBody ? '```\n' + treeBody + '```' : treeBody
