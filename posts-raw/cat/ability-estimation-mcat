@@ -397,6 +397,43 @@ dibuktikan ulang secara eksperimental di [#5.2.3](#323-demo-3-kasus-divergen-all
 | $N$ | Jumlah item yang sudah di-administer |
 | $\mathbf{I}_S(\boldsymbol\theta)^{-1}$ | Invers FIM kumulatif - berperan sebagai "step size" matriks pada Newton step |
 
+#### 3.1.1 Teori: Standard Error (SE) untuk MLE
+
+SE bukan formula terpisah - ia jatuh langsung dari sifat asimtotik normal yang sudah dibuktikan di
+[#2.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring) [1, Eq.7, p.277]:
+$\hat{\boldsymbol\theta}\sim N(\theta_0,\mathbf{I}_S^{-1}(\theta_0))$. Jika $\mathbf{I}_S^{-1}(\theta_0)$
+adalah matriks kovarians (asimtotik) dari estimator, maka **variance per-dimensi adalah elemen
+diagonalnya**, dan SE adalah akarnya:
+
+$$
+\boxed{SE(\hat\theta_j) = \sqrt{\left[\mathbf{I}_S(\hat{\boldsymbol\theta})^{-1}\right]_{jj}}}, \qquad j=1,\dots,k
+$$
+
+dengan $\mathbf{I}_S(\hat{\boldsymbol\theta})$ dievaluasi pada estimasi **final** (konvergen), bukan
+pada titik awal. Untuk kasus univariat ($k=1$), ini tereduksi ke bentuk skalar yang memakai penyebut
+yang sama persis dengan Newton step Eq.[5-1] Baker [2, p.86] (lihat [#3.1](#31-teori)):
+
+$$
+SE(\hat\theta) = \frac{1}{\sqrt{\displaystyle\sum_{i=1}^N a_i^2\,P_i(\hat\theta)\,Q_i(\hat\theta)}}
+$$
+
+**Identik dengan kode produksi:** `se_vector()` (`mirt.rs:62-71`) menghitung
+$\sqrt{\text{diag}(\mathbf{I}_S^{-1})}$ persis seperti rumus di atas, dipanggil lewat
+`McatEngine::compute_se` (`engine.rs:159`): `EstimationMethod::Mle => se_vector(cum_fim, k)`.
+`cum_fim` sendiri adalah $\mathbf{I}_S(\hat{\boldsymbol\theta})$ - dijumlahkan dari `item_fim()`
+(`mirt.rs:26-36`, definisi identik [#2.2](#22-fisher-information-matrix-sebagai-pengganti-hessian-fisher-scoring))
+atas seluruh item yang sudah dijawab, dievaluasi pada $\hat{\boldsymbol\theta}$ hasil konvergensi -
+**bukan** dihitung di dalam `mle.rs` itu sendiri (lihat komentar `mle.rs:34-36`: *"MLE's SE is derived
+afterward from the cumulative FIM (McatEngine::compute_se), not produced here"*), melainkan satu
+langkah terpisah setelah loop Newton-Raphson berhenti.
+
+**Interpretasi:** SE mengukur presisi estimasi $\hat\theta$ - semakin banyak item terjawab (atau
+semakin diskriminatif item-nya, $a_i$ besar), semakin besar $\mathbf{I}_S$, semakin kecil
+$\mathbf{I}_S^{-1}$, dan semakin kecil SE (estimasi makin presisi). Karena MLE tidak punya suku prior
+penambah informasi, SE-nya selalu $\geq$ SE MAP pada data identik - dibuktikan di
+[#4.1.2](#412-teori-standard-error-se-untuk-map): $\mathbf{H}_{MAP}\succeq\mathbf{I}_S \Rightarrow
+\mathbf{H}_{MAP}^{-1}\preceq\mathbf{I}_S^{-1}$.
+
 ### 3.2 Perhitungan Manual
 
 #### 3.2.1 DEMO 1: Reproduksi Baker (2001), k=1
@@ -518,6 +555,26 @@ $$
 $$|\hat\theta_4-\hat\theta_3| = |\Delta\hat\theta| = 9.05\times10^{-8} < 10^{-6} \Rightarrow \textbf{KONVERGEN} \text{ - iterasi berhenti.}$$
 
 → **$\hat\theta_{MLE}\approx 0.324846$** (presisi penuh: $0.3248462760...$).
+
+**Step 5: Hitung Standard Error (SE)** (teori [#3.1.1](#311-teori-standard-error-se-untuk-mle))
+
+Evaluasi FIM pada estimasi **final** $\hat\theta_{MLE}=0.3248462760$ (bukan pada $\hat\theta_0$):
+
+| Item | $z_i=a\hat\theta+d$ | $P_i$ | $Q_i$ | $a_i^2P_iQ_i$ |
+|---|---|---|---|---|
+| 1 | $1.0(0.324846)+1.0=1.324846$ | 0.789987 | 0.210013 | $(1.0)^2(0.789987)(0.210013)=0.165908$ |
+| 2 | $1.2(0.324846)+0.0=0.389816$ | 0.596238 | 0.403762 | $(1.2)^2(0.596238)(0.403762)=0.346663$ |
+| 3 | $0.8(0.324846)-0.8=-0.540123$ | 0.368159 | 0.631841 | $(0.8)^2(0.368159)(0.631841)=0.148875$ |
+| **sum** | | | | $\mathbf{I}_S(\hat\theta)=0.661446$ |
+
+$$
+SE(\hat\theta_{MLE}) = \frac{1}{\sqrt{\mathbf{I}_S(\hat\theta)}} = \frac{1}{\sqrt{0.661446}} \approx 1.229569
+$$
+
+(Bukan kebetulan bahwa $\mathbf{I}_S(\hat\theta)=0.661446$ nyaris identik dengan Hessian di
+denominator Iterasi 4 ($0.6614$, lihat langkah update terakhir) - Newton-Raphson berhenti persis saat
+$\hat\theta$ konvergen, sehingga Hessian pada iterasi konvergensi terakhir memang dievaluasi pada
+titik yang sama dengan $\hat\theta_{MLE}$ final.)
 
 #### 3.2.2 DEMO 2: Multidimensional (k=3), 7 item
 
@@ -718,6 +775,40 @@ $$
 \hat{\boldsymbol\theta}_{MLE} = \hat{\boldsymbol\theta}_4 = [0.03796883984503478,\,-0.6537043452916178,\,0.29657317310496684]
 $$
 
+**Step 8: Hitung Standard Error (SE)** (teori [#3.1.1](#311-teori-standard-error-se-untuk-mle))
+
+FIM dievaluasi pada estimasi **final** $\hat{\boldsymbol\theta}_{MLE}=[0.037969,-0.653704,0.296573]$ -
+pola perhitungan sama seperti Step 1-6 Iterasi 1 di atas, hanya di titik konvergen:
+
+| Item | $z_i$ | $P_i$ | $Q_i$ | $P'_i=P_iQ_i$ |
+|---|---|---|---|---|
+| m2p-v001 | 0.4304 | 0.6060 | 0.3940 | 0.2388 |
+| m2p-v002 | 0.0931 | 0.5233 | 0.4767 | 0.2495 |
+| m2p-n001 | -0.3120 | 0.4226 | 0.5774 | 0.2440 |
+| m2p-n002 | -0.5466 | 0.3666 | 0.6334 | 0.2322 |
+| m2p-r001 | 0.6506 | 0.6572 | 0.3428 | 0.2253 |
+| m2p-r002 | 0.6519 | 0.6574 | 0.3426 | 0.2252 |
+| m2p-r003 | 1.0529 | 0.7413 | 0.2587 | 0.1918 |
+
+Menjumlahkan $\mathbf{I}_i=P'_i\,\mathbf{a}_i\mathbf{a}_i^\top$ atas ke-7 item (pola identik Step 5-6
+Iterasi 1):
+
+$$
+\mathbf{I}_S(\hat{\boldsymbol\theta}_{MLE}) \approx \begin{bmatrix} 1.7330 & 0.5622 & 0.7698 \\ 0.5622 & 1.8502 & 1.0031 \\ 0.7698 & 1.0031 & 2.4432 \end{bmatrix}
+$$
+
+$$
+\mathbf{I}_S^{-1} \approx \begin{bmatrix} 0.6904 & -0.1181 & -0.1690 \\ -0.1181 & 0.7154 & -0.2565 \\ -0.1690 & -0.2565 & 0.5679 \end{bmatrix}
+$$
+
+$$
+SE(\hat{\boldsymbol\theta}_{MLE}) = \sqrt{\text{diag}(\mathbf{I}_S^{-1})} \approx [0.8309,\; 0.8458,\; 0.7536]
+$$
+
+**Interpretasi:** dimensi **reasoning** ($SE\approx0.754$) paling presisi diestimasi - konsisten
+dengan item bank yang punya 3 item dominan-reasoning ($a_3\in\{2.0,1.9,1.8\}$) vs hanya sebaran lebih
+kecil untuk verbal/numeric, sehingga informasi (FIM) terkumpul lebih banyak di dimensi reasoning.
+
 #### 3.2.3 DEMO 3: Kasus Divergen (all-correct)
 
 Menggunakan 3-item subset ($\texttt{m2p-v001}$, $\texttt{m2p-n001}$, $\texttt{m2p-r001}$) dengan
@@ -899,8 +990,9 @@ mulai dari $\hat{\boldsymbol\theta}_0=\boldsymbol\mu$, bukan $\mathbf 0$ seperti
 Karena $\boldsymbol\Sigma^{-1}\succeq0$ selalu ditambahkan ke $\mathbf{I}_S(\boldsymbol\theta)\succeq0$,
 $\mathbf{H}_{MAP}\succeq\mathbf{H}_{MLE}$ - informasi MAP selalu $\geq$ MLE, menjelaskan standard
 error MAP yang lebih kecil, sesuai [3, Eq.6, p.5]:
-$se(\hat\theta_{BM}) = 1/\sqrt{1/\sigma^2 + \sum_i I_i(\hat\theta_{BM})}$ (bentuk univariat; kode
-produksi tidak menghitung $se$ secara eksplisit, hanya titik estimasi $\hat\theta$).
+$se(\hat\theta_{BM}) = 1/\sqrt{1/\sigma^2 + \sum_i I_i(\hat\theta_{BM})}$ (bentuk univariat).
+Generalisasi multivariat dan pembuktian bahwa formula ini **memang** dihitung oleh kode produksi -
+dijabarkan di [#4.1.2](#412-teori-standard-error-se-untuk-map).
 
 **Keterangan variabel (tambahan untuk MAP):**
 
@@ -911,6 +1003,52 @@ produksi tidak menghitung $se$ secara eksplisit, hanya titik estimasi $\hat\thet
 | $\boldsymbol\mu$, $\boldsymbol\Sigma$ | Mean & kovarians prior (produksi: `prior_mean`, `diag(prior_cov_diag)`) |
 | $\boldsymbol\Sigma^{-1}$ | *Prior precision* - presisi/informasi prior, ditambahkan langsung ke FIM |
 | $\mathbf{H}_{MAP}$ | Hessian (Fisher scoring) posterior $=\mathbf{I}_S(\theta)+\boldsymbol\Sigma^{-1}$ |
+
+#### 4.1.2 Teori: Standard Error (SE) untuk MAP
+
+Sama seperti MLE ([#3.1.1](#311-teori-standard-error-se-untuk-mle)), SE MAP berasal dari **pendekatan
+Laplace**: di sekitar mode posterior $\hat\theta_{BM}$, posterior didekati normal dengan matriks
+kovarians $=$ invers Hessian posterior yang sudah dibuktikan di [#4.1](#41-teori),
+$\mathbf{H}_{MAP}=\mathbf{I}_S(\boldsymbol\theta)+\boldsymbol\Sigma^{-1}$ - Hessian yang **sama persis**
+dengan yang dipakai Newton-Raphson untuk mencari $\hat\theta_{BM}$ itu sendiri (tidak ada perhitungan
+tambahan terpisah). Generalisasi multivariat dari bentuk univariat Magis & Raîche [3, Eq.6, p.5]:
+
+$$
+\boxed{SE(\hat\theta_{BM,j}) = \sqrt{\left[\mathbf{H}_{MAP}(\hat{\boldsymbol\theta}_{BM})^{-1}\right]_{jj}}}, \qquad
+\mathbf{H}_{MAP} = \mathbf{I}_S(\hat{\boldsymbol\theta}_{BM}) + \boldsymbol\Sigma^{-1}
+$$
+
+Untuk $k=1$ dengan $\boldsymbol\Sigma^{-1}=1/\sigma^2$, ini tereduksi tepat ke
+$se(\hat\theta_{BM})=1/\sqrt{1/\sigma^2+\sum_iI_i(\hat\theta_{BM})}$ [3, Eq.6, p.5] yang dikutip di
+[#4.1](#41-teori).
+
+Karena $\mathbf{H}_{MAP}\succeq\mathbf{I}_S$ (dibuktikan [#4.1](#41-teori)),
+$\mathbf{H}_{MAP}^{-1}\preceq\mathbf{I}_S^{-1}$ (invers matriks definit-positif membalik urutan
+Loewner) - sehingga $SE_{MAP}\leq SE_{MLE}$ **untuk setiap dimensi**, secara aljabar menjelaskan
+pengamatan "informasi MAP selalu $\geq$ MLE" di [#4.1](#41-teori): prior menambah informasi, sehingga
+selalu memperkecil (atau menyamakan, jika $\boldsymbol\Sigma^{-1}\to0$) SE dibanding MLE murni pada
+data identik.
+
+**Identik dengan kode produksi:** `map::estimate()` sendiri tidak menghitung SE (`map.rs:51-53`:
+`posterior_se: None`, sesuai komentar *"MAP's SE is derived afterward from cum_fim + prior_cov_inv
+(McatEngine::compute_se), not produced here"*) - persis seperti MLE, satu langkah terpisah setelah
+Newton-Raphson berhenti yang menghitung rumus di atas:
+
+```rust
+// engine.rs, closure map_style_se() dipakai untuk EstimationMethod::Map:
+let prior_cov_inv = DMatrix::from_diagonal(&DVector::from_vec(
+    settings.prior_cov_diag.0.iter().map(|v| 1.0 / v).collect(),
+));
+se_vector(&(cum_fim + prior_cov_inv), k)   // = sqrt(diag(inv(I_S + Σ⁻¹)))
+```
+
+`se_vector()` (`mirt.rs:62-71`) itu sendiri identik dengan definisi di
+[#3.1.1](#311-teori-standard-error-se-untuk-mle): akar diagonal invers matriks yang diberikan - hanya
+matriks yang diberikan berbeda (`cum_fim + prior_cov_inv` untuk MAP, vs `cum_fim` saja untuk MLE).
+Konsekuensi praktis lain: karena $\boldsymbol\Sigma^{-1}$ selalu $\succ0$ untuk prior proper, SE MAP
+tetap terdefinisi bahkan pada $n=0$ item (posterior $=$ prior, $\mathbf{H}_{MAP}=\boldsymbol\Sigma^{-1}$)
+- berbeda dari SE MLE yang `None`/tak terdefinisi sebelum ada item terjawab sama sekali ($\mathbf{I}_S=\mathbf 0$
+tidak invertible).
 
 ### 4.2 Perhitungan Manual
 
@@ -1041,6 +1179,20 @@ $$\hat\theta_3 = \hat\theta_2 + \Delta\hat\theta \approx 0.130769$$
 | MAP | 0.1308 | $\theta_0=0$ | $N(0,1)$ |
 
 MAP tersusut (*shrinkage*) signifikan ke arah mean prior $\mu=0$ - dari 0.3248 menjadi 0.1308 (60% lebih dekat ke 0). Ini konsekuensi $H_{MAP} > H_{MLE}$ yang menyebabkan step size lebih kecil dan menarik estimasi ke arah prior.
+
+**Step tambahan: Hitung Standard Error (SE)** (teori [#4.1.2](#412-teori-standard-error-se-untuk-map))
+
+Karena kriteria konvergensi terpenuhi tepat di Iterasi 3, $H_{MAP}$ pada titik itu (dihitung di Step 6
+Iterasi 3 sebelumnya, $H_{MAP}\approx1.684383$) langsung dipakai untuk SE - tidak perlu evaluasi ulang:
+
+$$
+SE(\hat\theta_{MAP}) = \frac{1}{\sqrt{H_{MAP}}} = \frac{1}{\sqrt{1.684383}} \approx 0.770512
+$$
+
+Dibandingkan MLE pada data identik ($SE(\hat\theta_{MLE})=1/\sqrt{0.661446}\approx1.229569$, dihitung
+di [#3.2.1](#321-demo-1-reproduksi-baker-2001-k1)) - SE MAP **37% lebih kecil** ($0.7705$ vs $1.2296$),
+konsekuensi langsung $H_{MAP}=0.661446+1.0=1.684383 > \mathbf{I}_S(\hat\theta)_{MLE}=0.661446$ yang
+dibuktikan di [#4.1.2](#412-teori-standard-error-se-untuk-map).
 
 #### 4.2.2 DEMO 2: Multidimensional (k=3), 7 item, prior N(0,I)
 
@@ -1298,6 +1450,25 @@ $$\|\hat{\boldsymbol\theta}_4-\hat{\boldsymbol\theta}_3\| = \|\Delta\hat{\boldsy
 - **Reasoning:** $0.2966 \to 0.1340$ (55% lebih dekat ke 0) - shrinkage sedang
 
 MAP tersusut (*shrinkage*) ke arah $\mathbf 0$ di **ketiga** dimensi - konsekuensi langsung $\mathbf{H}_{MAP}=\mathbf{I}_S+\mathbf{I}\succ\mathbf{I}_S$ yang dibuktikan di [#4.1](#41-teori). Hessian yang lebih besar berarti curvature posterior lebih tajam, sehingga step-size lebih kecil dan penarik dari $\mu=0$ lebih kuat.
+
+**Step tambahan: Hitung Standard Error (SE)** (teori [#4.1.2](#412-teori-standard-error-se-untuk-map))
+
+Menggunakan $\mathbf{H}_{MAP}^{(3)}$ dari Iterasi 3 (titik konvergen praktis, karena
+$\hat{\boldsymbol\theta}_4\approx\hat{\boldsymbol\theta}_3$ hingga presisi $10^{-6}$):
+
+$$
+\big(\mathbf{H}_{MAP}^{(3)}\big)^{-1} \approx \begin{bmatrix} 0.39619 & -0.05224 & -0.07362 \\ -0.05224 & 0.38824 & -0.10189 \\ -0.07362 & -0.10189 & 0.32531 \end{bmatrix}
+$$
+
+$$
+SE(\hat{\boldsymbol\theta}_{MAP}) = \sqrt{\text{diag}\big(\mathbf{H}_{MAP}^{-1}\big)} \approx [0.6294,\,0.6231,\,0.5704]
+$$
+
+Dibandingkan MLE pada data identik ($SE(\hat{\boldsymbol\theta}_{MLE})\approx[0.8309,\,0.8458,\,0.7536]$,
+dihitung di [#3.2.2](#322-demo-2-multidimensional-k3-7-item)) - SE MAP lebih kecil di **ketiga**
+dimensi (24-32% penyusutan), pola shrinkage yang sama seperti pada titik estimasi $\hat\theta$ sendiri
+(lihat "Analisis shrinkage" di atas): prior menyumbang informasi tambahan $\boldsymbol\Sigma^{-1}=\mathbf I$
+yang langsung memperkecil variance posterior di semua dimensi.
 
 #### 4.2.3 DEMO 3: MAP Meregularisasi Kasus Divergen
 
@@ -1618,6 +1789,75 @@ $v_{q,0}$ komponen pertama eigenvector ternormalisasi ke-$q$.
 | $pts$ | Jumlah titik grid per dimensi (`eap_quad_pts`, default 21 di `engine.rs:123`) |
 | $A_q$, $A(\boldsymbol\theta_q)$ | Bobot kuadratur Gauss-Hermite (sudah termasuk densitas prior), $=\prod_d A_{q,d}$, $\sum_q A_q=1$ |
 | $L(\boldsymbol\theta_q)$ | Likelihood seluruh respons pada titik grid $=\prod_i P_i(\boldsymbol\theta_q)^{u_i}Q_i(\boldsymbol\theta_q)^{1-u_i}$ |
+
+#### 5.1.2 Teori & Pembuktian: Standard Error (SE) untuk EAP
+
+Berbeda dari MLE/MAP ([#3.1.1](#311-teori-standard-error-se-untuk-mle)/[#4.1.2](#412-teori-standard-error-se-untuk-map))
+yang mengandalkan aproksimasi asimtotik-normal (invers FIM/Hessian di satu titik), SE EAP dihitung
+**langsung** dari bentuk posterior aktual - definisinya sendiri adalah **standard deviation posterior**
+[3, Eq.11, p.6] (dikutip di [#5.1](#51-teori)):
+
+$$
+se(\hat\theta_{EAP}) = \sqrt{\frac{\int(\theta-\hat\theta_{EAP})^2f(\theta)L(\theta)\,d\theta}{\int f(\theta)L(\theta)\,d\theta}} = \sqrt{\mathrm{Var}[\theta\mid\mathbf u]}
+$$
+
+- tidak butuh pendekatan Laplace/Gaussian di sekitar mode karena EAP mengintegralkan seluruh bentuk
+posterior, bukan hanya kelengkungannya di satu titik - salah satu alasan EAP "tidak pernah divergen"
+dan tetap stabil pada posterior yang skewed (lihat [#5.3](#53-kelebihan-dan-kekurangan)).
+
+**Pembuktian aljabar (identitas momen, bukan dikutip):** variance bisa dihitung dua cara yang identik
+secara aljabar - bentuk **tersentral** (Eq.11 di atas, dipakai manual di
+[#5.2.1](#521-demo-1-reproduksi-1-dimensi-pts5) Step 6) dan bentuk **momen mentah**:
+
+$$
+\mathrm{Var}[\theta] = E\big[(\theta-E[\theta])^2\big] = E[\theta^2]-2\,\theta\,E[\theta]\big|_{E[\cdot]}+E[\theta]^2 = E[\theta^2]-2E[\theta]^2+E[\theta]^2
+$$
+
+$$
+\boxed{\mathrm{Var}[\theta\mid\mathbf u] = E[\theta^2\mid\mathbf u] - \big(E[\theta\mid\mathbf u]\big)^2}
+$$
+
+Dalam notasi kuadratur grid (sama seperti Eq.10 di [#5.1](#51-teori)):
+
+$$
+E[\theta\mid\mathbf u] \approx \frac{\sum_q\theta_qL(\theta_q)A_q}{\sum_qL(\theta_q)A_q} = \hat\theta_{EAP}, \qquad
+E[\theta^2\mid\mathbf u] \approx \frac{\sum_q\theta_q^2L(\theta_q)A_q}{\sum_qL(\theta_q)A_q}
+$$
+
+**Verifikasi numerik identitas ini** memakai angka Step 3-6 di
+[#5.2.1](#521-demo-1-reproduksi-1-dimensi-pts5) DEMO 1 ($pts=5$, $den=\sum_qw_q=0.500000$,
+$\hat\theta_{EAP}=0.525310$):
+
+| $\theta_q$ | $w_q=L\cdot A_q$ | $\theta_q^2\,w_q$ |
+|---|---|---|
+| $-2.856970$ | 0.000153 | $8.1623\times0.000153=0.001249$ |
+| $-1.355626$ | 0.025702 | $1.8377\times0.025702=0.047233$ |
+| $0.000000$ | 0.266667 | $0.0000\times0.266667=0.000000$ |
+| $+1.355626$ | 0.196374 | $1.8377\times0.196374=0.360934$ |
+| $+2.856970$ | 0.011105 | $8.1623\times0.011105=0.090642$ |
+| **sum** | 0.500000 | **0.500058** |
+
+$$
+E[\theta^2] = \frac{0.500058}{0.500000} = 1.000116, \qquad E[\theta]^2 = 0.525310^2 = 0.275951
+$$
+
+$$
+\mathrm{Var}[\theta] = E[\theta^2]-E[\theta]^2 = 1.000116 - 0.275951 = 0.724165 \qquad\Rightarrow\qquad se(\hat\theta_{EAP}) = \sqrt{0.724165} \approx 0.850979
+$$
+
+- identik (selisih $6.8\times10^{-5}$ murni akibat pembulatan tampilan 6-desimal pada $w_q$, bukan
+kesalahan aljabar) dengan hasil bentuk tersentral di [#5.2.1](#521-demo-1-reproduksi-1-dimensi-pts5)
+Step 6: $se(\hat\theta_{EAP})=0.850911$ - **membuktikan kedua bentuk identik secara aljabar**.
+
+**Identik dengan kode produksi:** `eap.rs:50-110` mengakumulasi **tiga** penjumlah sekaligus dalam
+satu pass atas grid ($num=\sum\theta_qw_q$, $num2=\sum\theta_q^2w_q$, $den=\sum w_q$), lalu menghitung
+`variance = num2[d]/den - mean*mean` (`eap.rs:103`) - persis identitas momen-mentah yang dibuktikan
+di atas, dipilih **karena efisiensi**: satu pass kuadratur $pts^k$-titik, bukan dua (pass pertama untuk
+$\hat\theta_{EAP}$, pass kedua untuk $(\theta-\hat\theta_{EAP})^2$ seperti bentuk tersentral manual).
+`posterior_se` yang dihasilkan (`None` hanya bila `den` terlalu kecil untuk dinormalisasi, mis. seluruh
+titik grid punya likelihood yang collapse ke nol) inilah yang dipakai `McatEngine::compute_se`
+(`engine.rs:190-196`, cabang `EstimationMethod::Eap`) sebagai SE EAP - **tanpa** jatuh ke formula
+gaya-MAP kecuali `eap_posterior_se` benar-benar `None` (lihat komentar `engine.rs:167-172`).
 
 ### 5.2 Perhitungan Manual
 
@@ -2070,6 +2310,20 @@ pilihan lebih realistis secara komputasi.
 | MAP ($\Sigma=I$) | 0.0105 | -0.3656 | 0.1340 |
 | EAP ($pts=21$) | 0.0323 | -0.3641 | 0.1824 |
 
+**SE pada dataset identik yang sama** - teori masing-masing di
+[#3.1.1](#311-teori-standard-error-se-untuk-mle)/[#4.1.2](#412-teori-standard-error-se-untuk-map)/[#5.1.2](#512-teori--pembuktian-standard-error-se-untuk-eap):
+
+| Metode | $SE_{verbal}$ | $SE_{numeric}$ | $SE_{reasoning}$ |
+|---|---|---|---|
+| MLE | 0.8309 | 0.8458 | 0.7536 |
+| MAP ($\Sigma=I$) | 0.6294 | 0.6231 | 0.5704 |
+| EAP ($pts=21$) | 0.6751 | 0.6679 | 0.6099 |
+
+Pola $SE_{MAP}<SE_{EAP}<SE_{MLE}$ konsisten di semua dimensi: MAP paling kecil karena mode posterior +
+kelengkungan Hessian penuh (termasuk prior) selalu memberi variance Laplace terkecil; MLE paling besar
+karena tanpa informasi prior sama sekali; EAP di antaranya karena mengukur *spread* aktual posterior
+(bisa lebih lebar dari sekadar kelengkungan di mode jika posterior tidak simetris sempurna).
+
 **Hasil numerik pada dataset all-correct (kasus divergen MLE)** - lihat [#5.2.3](#323-demo-3-kasus-divergen-all-correct):
 
 | Metode | $\hat\theta$ | $\|\hat\theta\|$ |
@@ -2380,3 +2634,6 @@ cocok tepat dengan node numerik yang dihasilkan `gauss_hermite()` dan dipakai di
 | $\hat\theta_{EAP}=\int\theta f L\,d\theta/\int fL\,d\theta$ | EAP | [3] Eq.10, p.5; asal-usul [5] |
 | Grid kuadratur multi-indeks $k$-dimensi | EAP | Teknik dibandingkan dengan [6] Eq.6, p.5 |
 | Node $x_q$/bobot $w_q$ via eigen matriks Jacobi (Golub-Welsch) | EAP (`gauss_hermite()`) | [7]; diverifikasi analitik untuk $pts=5$ di [#5.1](#51-teori) |
+| $SE(\hat\theta_j)=\sqrt{[\mathbf I_S(\hat\theta)^{-1}]_{jj}}$ | MLE | Diturunkan sendiri di [#3.1.1](#311-teori-standard-error-se-untuk-mle) dari [1] Eq.7, p.277 |
+| $SE(\hat\theta_{BM,j})=\sqrt{[H_{MAP}(\hat\theta)^{-1}]_{jj}}$ | MAP | [3] Eq.6, p.5 (bentuk univariat); generalisasi multivariat diturunkan sendiri di [#4.1.2](#412-teori-standard-error-se-untuk-map) |
+| $se(\hat\theta_{EAP})=\sqrt{E[\theta^2\mid\mathbf u]-E[\theta\mid\mathbf u]^2}$ | EAP | [3] Eq.11, p.6; identitas momen-mentah $\equiv$ bentuk tersentral dibuktikan sendiri di [#5.1.2](#512-teori--pembuktian-standard-error-se-untuk-eap) |
