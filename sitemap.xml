@@ -16,6 +16,12 @@
 		<priority>0.8</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/posts/generative-ai/dev_testing_standard</loc>
+		<lastmod>2026-09-04</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/posts/cat/ability-estimation-mcat</loc>
 		<lastmod>2026-07-14</lastmod>
 		<changefreq>monthly</changefreq>
@@ -212,6 +218,11 @@
 	</url>
 	<url>
 		<loc>https://irufano.github.io/posts/tag/setfit</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://irufano.github.io/posts/tag/test</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>

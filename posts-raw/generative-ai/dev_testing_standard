@@ -1,0 +1,228 @@
+
+Setiap fitur atau perubahan code yang dibuat developer perlu mempertimbangkan **4 jenis testing utama**:
+
+| Testing | Tujuan | Scope |
+|---|---|---|
+| **Unit Test** | Memastikan logic individual bekerja dengan benar | Function, class, module |
+| **Integration Test** | Memastikan beberapa component bekerja dengan benar saat digabung | Service, repository, DB, external service |
+| **E2E Test** | Memastikan complete business/user flow berjalan | Sistem secara keseluruhan |
+| **Security Test** | Memastikan sistem aman terhadap misuse dan attack | Auth, authorization, input, API, data |
+
+## 1. Unit Test — Logic
+
+Unit test adalah test paling dasar dan paling banyak dibuat developer.
+
+```text
+Function
+   ↓
+Input → Logic → Output
+```
+
+Contoh:
+
+- `calculateScore()`
+- `validateEmail()`
+- `calculateMCATScore()`
+- `calculatePrice()`
+
+**Tujuan:**
+
+> Apakah logic/code ini menghasilkan hasil yang benar?
+
+Unit test sebaiknya mencakup:
+
+- Happy path
+- Edge cases
+- Invalid input
+- Error handling
+- Boundary conditions
+
+---
+
+## 2. Integration Test — Interaction
+
+Integration test menguji ketika beberapa bagian code bekerja bersama.
+
+```text
+API
+ ↓
+Controller
+ ↓
+Service
+ ↓
+Repository
+ ↓
+Database
+```
+
+Contoh:
+
+```text
+POST /users
+→ validate
+→ create user
+→ save to DB
+→ return response
+```
+
+**Tujuan:**
+
+> Apakah component yang berbeda bisa bekerja dengan benar ketika diintegrasikan?
+
+Integration test dapat mencakup:
+
+- API dengan service
+- Service dengan repository
+- Repository dengan database
+- Interaksi antar module
+- Interaksi dengan external service
+
+---
+
+## 3. E2E Test — Business Flow
+
+E2E (End-to-End) test menguji alur lengkap dari awal sampai akhir.
+
+### FE E2E
+
+```text
+Login
+ ↓
+Dashboard
+ ↓
+Create Test
+ ↓
+Submit Test
+ ↓
+View Result
+```
+
+### BE API-level E2E
+
+```text
+POST /login
+ ↓
+POST /test
+ ↓
+POST /answer
+ ↓
+POST /submit
+ ↓
+GET /result
+```
+
+**Tujuan:**
+
+> Apakah fitur secara keseluruhan bekerja sesuai flow yang diharapkan user/business?
+
+E2E test sebaiknya fokus pada **critical business flow**, bukan seluruh kemungkinan kombinasi.
+
+Contoh:
+
+- Login
+- Registration
+- Checkout
+- Payment
+- Create/submit test
+- Critical workflow aplikasi
+
+E2E test sebaiknya lebih sedikit dibandingkan unit test karena biasanya lebih lambat dan lebih fragile.
+
+---
+
+## 4. Security Test — Protection
+
+Security test menguji apakah code dan sistem aman terhadap penggunaan yang tidak seharusnya.
+
+Area yang perlu diperhatikan:
+
+- Authentication
+- Authorization
+- Input validation
+- SQL injection
+- XSS
+- IDOR
+- Privilege escalation
+- Sensitive data exposure
+
+Contoh authorization:
+
+```text
+User A
+  ↓
+GET /users/B
+  ↓
+403 Forbidden
+```
+
+**Tujuan:**
+
+> Apakah sistem tetap aman ketika menerima input atau request yang malicious atau berasal dari user yang tidak memiliki hak akses?
+
+Security test terutama penting untuk:
+
+- Authentication
+- Authorization
+- API endpoint
+- Database query
+- File upload
+- Input handling
+- Sensitive data
+- Payment
+- Admin functionality
+
+---
+
+# Testing Strategy
+
+Developer tidak harus selalu membuat keempat jenis test untuk setiap perubahan.
+
+Pemilihan testing harus berdasarkan **scope, risiko, dan dampak perubahan**.
+
+```text
+                 ┌─────────────┐
+                 │    E2E      │
+                 │   sedikit   │
+                 └──────┬──────┘
+                        │
+              ┌─────────▼─────────┐
+              │   Integration     │
+              │      sedang       │
+              └─────────┬─────────┘
+                        │
+            ┌───────────▼───────────┐
+            │       Unit Test       │
+            │        banyak         │
+            └───────────────────────┘
+
+        + Security Testing
+        (cross-cutting concern)
+```
+
+## Prioritas
+
+### Unit Test — Wajib
+
+Gunakan untuk business logic dan function/module yang memiliki behavior penting.
+
+### Integration Test — Wajib
+
+Gunakan ketika terdapat interaksi antar component, database, API, atau service.
+
+### E2E Test — Untuk Critical Flow
+
+Gunakan untuk memastikan business flow utama berjalan dari awal sampai akhir.
+
+### Security Test — Sesuai Risk
+
+Wajib dipertimbangkan untuk fitur yang berkaitan dengan authentication, authorization, input, database, sensitive data, payment, dan akses privileged.
+
+---
+
+# Developer Testing Principle
+
+> **Unit Test untuk Logic, Integration Test untuk Interaction, E2E Test untuk Business Flow, Security Test untuk Protection.**
+
+Keempat testing ini menjadi **baseline developer testing standard**.
+
+Tidak semua perubahan code harus memiliki keempat jenis test, tetapi developer harus menentukan **testing layer yang relevan berdasarkan risiko dan scope perubahan**.
