@@ -1,1 +1,0 @@
-import"./DP6Ocvz9.js";function e(e){return e.toLowerCase().trim().replace(/[^a-z0-9]+/g,`-`).replace(/(^-+|-+$)/g,``)}export{e as t};
