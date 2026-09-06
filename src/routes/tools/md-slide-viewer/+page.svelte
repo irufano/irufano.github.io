@@ -109,6 +109,7 @@
 	// Video/track title for the visualizer marquee - fetched from YouTube's
 	// oEmbed endpoint (see the $effect below), not part of persisted state.
 	let countdownMusicTitle = $state('');
+	let musicIframeEl: HTMLIFrameElement | undefined = $state();
 
 	const slides = $derived(splitSlides(code));
 	const activeTheme = $derived(
@@ -155,6 +156,7 @@
 			playsinline: '1',
 			loop: '1',
 			playlist: countdownMusicVideoId,
+			enablejsapi: '1',
 			origin
 		});
 		if (start > 0) params.set('start', String(start));
@@ -231,6 +233,41 @@
 		return () => {
 			cancelled = true;
 		};
+	});
+
+	// Belt-and-suspenders loop: the `loop`+`playlist` params on the embed URL
+	// already ask YouTube to replay the track on its own, but that native loop
+	// is known to occasionally not kick in (autoplay-policy quirks, certain
+	// videos). While the countdown is still running, listen for the IFrame
+	// API's "ended" state and explicitly seek back to 0 and replay - so music
+	// keeps looping for as long as the timer does, and simply stops (with the
+	// iframe) once the countdown finishes or is cancelled.
+	$effect(() => {
+		if (!counting || !countdownMusicActive || !musicIframeEl) return;
+
+		function handleMessage(e: MessageEvent) {
+			if (e.origin !== 'https://www.youtube.com') return;
+			let data: unknown;
+			try {
+				data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+			} catch {
+				return;
+			}
+			const info = data as { event?: string; info?: number };
+			if (info?.event !== 'onStateChange' || info.info !== 0) return;
+			const player = musicIframeEl?.contentWindow;
+			player?.postMessage(
+				JSON.stringify({ event: 'command', func: 'seekTo', args: [0, true] }),
+				'https://www.youtube.com'
+			);
+			player?.postMessage(
+				JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+				'https://www.youtube.com'
+			);
+		}
+
+		window.addEventListener('message', handleMessage);
+		return () => window.removeEventListener('message', handleMessage);
 	});
 
 	// keep currentSlide in range whenever the slide count changes
@@ -1021,6 +1058,7 @@
 		     and torn down (stopping audio) as soon as the countdown ends or is cancelled. -->
 		{#if countdownMusicActive}
 			<iframe
+				bind:this={musicIframeEl}
 				src={countdownMusicSrc}
 				title="Countdown music"
 				aria-hidden="true"
