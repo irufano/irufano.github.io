@@ -106,10 +106,17 @@
 	);
 	let counting = $state(false);
 	let countdownValue = $state(0);
-	// Video/track title for the visualizer marquee - fetched from YouTube's
-	// oEmbed endpoint (see the $effect below), not part of persisted state.
+	// Video/track title and channel name for the visualizer marquee - fetched
+	// from YouTube's oEmbed endpoint (see the $effect below), not part of
+	// persisted state.
 	let countdownMusicTitle = $state('');
+	let countdownMusicAuthor = $state('');
 	let musicIframeEl: HTMLIFrameElement | undefined = $state();
+	let marqueeWrapEl: HTMLDivElement | undefined = $state();
+	let marqueeTextEl: HTMLSpanElement | undefined = $state();
+	// Whether the title is actually wider than its box - a short title that
+	// fits doesn't need to (and shouldn't) scroll; see the $effect below.
+	let marqueeScrolls = $state(false);
 
 	const slides = $derived(splitSlides(code));
 	const activeTheme = $derived(
@@ -211,13 +218,15 @@
 		return () => clearTimeout(timer);
 	});
 
-	// Fetches the current track's title from YouTube's public oEmbed endpoint
-	// (no API key needed, CORS-enabled) so it can scroll across the visualizer
-	// as a marquee. Re-runs whenever the video ID changes; `cancelled` guards
-	// against an older request resolving after a newer one has started.
+	// Fetches the current track's title and channel name from YouTube's
+	// public oEmbed endpoint (no API key needed, CORS-enabled) so they can
+	// scroll across the visualizer as a marquee. Re-runs whenever the video
+	// ID changes; `cancelled` guards against an older request resolving
+	// after a newer one has started.
 	$effect(() => {
 		const videoId = countdownMusicVideoId;
 		countdownMusicTitle = '';
+		countdownMusicAuthor = '';
 		if (!videoId) return;
 
 		let cancelled = false;
@@ -225,7 +234,9 @@
 		fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(watchUrl)}&format=json`)
 			.then((res) => (res.ok ? res.json() : null))
 			.then((data) => {
-				if (!cancelled && typeof data?.title === 'string') countdownMusicTitle = data.title;
+				if (cancelled) return;
+				if (typeof data?.title === 'string') countdownMusicTitle = data.title;
+				if (typeof data?.author_name === 'string') countdownMusicAuthor = data.author_name;
 			})
 			.catch(() => {
 				// blocked or offline - the marquee just stays hidden
@@ -233,6 +244,36 @@
 		return () => {
 			cancelled = true;
 		};
+	});
+
+	// The channel name is appended when we actually have one - a bare oEmbed
+	// failure (title fetched but no author_name) still shows just the title.
+	const countdownMusicMarqueeText = $derived(
+		countdownMusicTitle && countdownMusicAuthor
+			? `${countdownMusicTitle} · ${countdownMusicAuthor}`
+			: countdownMusicTitle
+	);
+
+	// Only scroll the marquee when the text actually overflows its box - a
+	// short title (+ channel name) marqueeing through empty trailing space
+	// looks broken, so text that already fits just sits centered and static
+	// instead. Re-runs (and re-measures after the DOM updates) whenever the
+	// text or the bound elements change, and on window resize since the
+	// box's width is partly viewport-relative (`min(220px, 45vw)`).
+	$effect(() => {
+		countdownMusicMarqueeText;
+		const wrap = marqueeWrapEl;
+		const text = marqueeTextEl;
+		if (!wrap || !text) {
+			marqueeScrolls = false;
+			return;
+		}
+		function measure() {
+			marqueeScrolls = text!.scrollWidth > wrap!.clientWidth;
+		}
+		tick().then(measure);
+		window.addEventListener('resize', measure);
+		return () => window.removeEventListener('resize', measure);
 	});
 
 	// Belt-and-suspenders loop: the `loop`+`playlist` params on the embed URL
@@ -1100,11 +1141,16 @@
 						</div>
 					{/if}
 
-					{#if countdownMusicTitle}
-						<div class="visualizer-marquee">
+					{#if countdownMusicMarqueeText}
+						<div
+							bind:this={marqueeWrapEl}
+							class={`visualizer-marquee ${marqueeScrolls ? 'is-scrolling' : ''}`}
+						>
 							<div class="visualizer-marquee-track">
-								<span>{countdownMusicTitle}</span>
-								<span>{countdownMusicTitle}</span>
+								<span bind:this={marqueeTextEl}>{countdownMusicMarqueeText}</span>
+								{#if marqueeScrolls}
+									<span aria-hidden="true">{countdownMusicMarqueeText}</span>
+								{/if}
 							</div>
 						</div>
 					{/if}
@@ -1785,28 +1831,41 @@
 		}
 	}
 
-	/* Track title marquee: two copies of the text placed back-to-back and
-	   scrolled left by exactly half the track's width, so the loop point is
-	   seamless regardless of title length. */
+	/* Track title marquee: only scrolls when the title is actually wider than
+	   the box (`.is-scrolling`, toggled from measuring scrollWidth vs
+	   clientWidth in JS) - a title that fits sits centered and still, since
+	   animating a duplicate copy through empty space looks broken. When it
+	   does scroll, two copies of the text are placed back-to-back and slid
+	   left by exactly half the track's width, so the loop point is seamless
+	   regardless of title length. */
 	.visualizer-marquee {
 		width: min(220px, 45vw);
 		overflow: hidden;
+	}
+	.visualizer-marquee.is-scrolling {
 		mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
 		-webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
 	}
 	.visualizer-marquee-track {
 		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.visualizer-marquee.is-scrolling .visualizer-marquee-track {
 		width: max-content;
+		justify-content: flex-start;
 		animation: visualizer-marquee 12s linear infinite;
 	}
 	.visualizer-marquee-track span {
 		flex-shrink: 0;
-		padding-right: 2.5rem;
 		white-space: nowrap;
 		font-family: var(--font-mono);
 		font-size: 0.7rem;
 		letter-spacing: 0.02em;
 		color: var(--color-fg-muted);
+	}
+	.visualizer-marquee.is-scrolling .visualizer-marquee-track span {
+		padding-right: 2.5rem;
 	}
 	@keyframes visualizer-marquee {
 		from {
