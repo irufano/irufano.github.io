@@ -16,6 +16,12 @@
 		<priority>0.8</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/posts/generative-ai/developer_code_testing</loc>
+		<lastmod>2026-09-06</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/posts/generative-ai/dev_testing_standard</loc>
 		<lastmod>2026-09-04</lastmod>
 		<changefreq>monthly</changefreq>
@@ -147,6 +153,11 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/posts/tag/e2e-test</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/posts/tag/framework</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
@@ -158,6 +169,11 @@
 	</url>
 	<url>
 		<loc>https://irufano.github.io/posts/tag/git</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://irufano.github.io/posts/tag/integration-test</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -217,12 +233,22 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/posts/tag/security-test</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/posts/tag/setfit</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://irufano.github.io/posts/tag/test</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://irufano.github.io/posts/tag/unit-test</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
