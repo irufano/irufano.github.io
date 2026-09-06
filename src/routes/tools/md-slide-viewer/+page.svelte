@@ -106,6 +106,9 @@
 	);
 	let counting = $state(false);
 	let countdownValue = $state(0);
+	// Video/track title for the visualizer marquee - fetched from YouTube's
+	// oEmbed endpoint (see the $effect below), not part of persisted state.
+	let countdownMusicTitle = $state('');
 
 	const slides = $derived(splitSlides(code));
 	const activeTheme = $derived(
@@ -204,6 +207,30 @@
 			}
 		}, 1000);
 		return () => clearTimeout(timer);
+	});
+
+	// Fetches the current track's title from YouTube's public oEmbed endpoint
+	// (no API key needed, CORS-enabled) so it can scroll across the visualizer
+	// as a marquee. Re-runs whenever the video ID changes; `cancelled` guards
+	// against an older request resolving after a newer one has started.
+	$effect(() => {
+		const videoId = countdownMusicVideoId;
+		countdownMusicTitle = '';
+		if (!videoId) return;
+
+		let cancelled = false;
+		const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+		fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(watchUrl)}&format=json`)
+			.then((res) => (res.ok ? res.json() : null))
+			.then((data) => {
+				if (!cancelled && typeof data?.title === 'string') countdownMusicTitle = data.title;
+			})
+			.catch(() => {
+				// blocked or offline - the marquee just stays hidden
+			});
+		return () => {
+			cancelled = true;
+		};
 	});
 
 	// keep currentSlide in range whenever the slide count changes
@@ -1034,6 +1061,15 @@
 							{/each}
 						</div>
 					{/if}
+
+					{#if countdownMusicTitle}
+						<div class="visualizer-marquee">
+							<div class="visualizer-marquee-track">
+								<span>{countdownMusicTitle}</span>
+								<span>{countdownMusicTitle}</span>
+							</div>
+						</div>
+					{/if}
 				</div>
 			</div>
 		{/if}
@@ -1708,6 +1744,38 @@
 		100% {
 			transform: scale(2.2);
 			opacity: 0;
+		}
+	}
+
+	/* Track title marquee: two copies of the text placed back-to-back and
+	   scrolled left by exactly half the track's width, so the loop point is
+	   seamless regardless of title length. */
+	.visualizer-marquee {
+		width: min(220px, 45vw);
+		overflow: hidden;
+		mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+		-webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+	}
+	.visualizer-marquee-track {
+		display: flex;
+		width: max-content;
+		animation: visualizer-marquee 12s linear infinite;
+	}
+	.visualizer-marquee-track span {
+		flex-shrink: 0;
+		padding-right: 2.5rem;
+		white-space: nowrap;
+		font-family: var(--font-mono);
+		font-size: 0.7rem;
+		letter-spacing: 0.02em;
+		color: var(--color-fg-muted);
+	}
+	@keyframes visualizer-marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
 		}
 	}
 
