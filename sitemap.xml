@@ -278,6 +278,11 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/tools/json-string-escape</loc>
+		<changefreq>monthly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/tools/html-viewer</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
