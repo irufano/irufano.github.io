@@ -4,7 +4,7 @@
 
 <footer class="border-t border-border">
   <div
-    class="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-3 text-sm text-fg-muted sm:px-6"
+    class="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-sm text-fg-muted sm:px-6"
   >
     <LogoMark size={12} />
     <p class="font-mono">

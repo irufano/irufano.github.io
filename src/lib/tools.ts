@@ -18,6 +18,7 @@ import Type from 'lucide-svelte/icons/type';
 import FileCode from 'lucide-svelte/icons/file-code';
 import Shield from 'lucide-svelte/icons/shield';
 import Sparkles from 'lucide-svelte/icons/sparkles';
+import FileJson from 'lucide-svelte/icons/file-json';
 import type { ComponentType, SvelteComponent } from 'svelte';
 
 export const TOOL_CATEGORIES = ['Text', 'Code & Data', 'Encoding & Security', 'Design & Random'] as const;
@@ -73,6 +74,13 @@ export const TOOLS: Tool[] = [
 		label: 'JSON Formatter',
 		description: 'Format, validate, and minify JSON with instant error feedback.',
 		icon: Braces,
+		category: 'Code & Data'
+	},
+	{
+		slug: 'json-string-escape',
+		label: 'JSON String Escaper',
+		description: 'Unescape a JSON-encoded string into valid JSON, or escape JSON back into a quoted string.',
+		icon: FileJson,
 		category: 'Code & Data'
 	},
 	{

@@ -76,8 +76,9 @@
 			onmouseenter={(e) => showTooltip(e, 'All Tools')}
 			onmouseleave={hideTooltip}
 			title="All Tools"
-			class="flex items-center rounded-none px-3 py-2 font-semibold transition {page.url.pathname ===
-			'/tools'
+			class="flex items-center rounded-none font-semibold transition {isCollapsed
+				? 'mx-auto h-9 w-9 justify-center px-0'
+				: 'px-3 py-2'} {page.url.pathname === '/tools'
 				? 'bg-accent/10 text-accent'
 				: 'text-fg-muted hover:bg-bg-alt hover:text-fg'}"
 		>
@@ -123,7 +124,9 @@
 					onmouseenter={(e) => showTooltip(e, tool.label)}
 					onmouseleave={hideTooltip}
 					title={tool.label}
-					class="flex items-center rounded-none px-3 py-2 transition {page.url.pathname === href
+					class="flex items-center rounded-none transition {isCollapsed
+						? 'mx-auto h-9 w-9 justify-center px-0'
+						: 'px-3 py-2'} {page.url.pathname === href
 						? 'bg-accent/10 text-accent'
 						: 'text-fg-muted hover:bg-bg-alt hover:text-fg'}"
 				>

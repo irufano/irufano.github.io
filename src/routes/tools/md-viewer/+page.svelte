@@ -356,9 +356,10 @@
 					<p class="font-mono text-xs uppercase tracking-wide text-fg-muted">Preview</p>
 					<!-- `contents` makes each wrapper a layout no-op outside fullscreen, so
 					     the header/toc stay siblings of previewEl instead of being crammed
-					     inside its own scrolling content (which caused the overlap). The
-					     backdrop + padded frame mirrors the HTML Viewer's fullscreen modal
-					     instead of stretching the content edge-to-edge. -->
+					     inside its own scrolling content (which caused the overlap). Below
+					     `sm`, the frame has no padding/border and fills the viewport edge-to-
+					     edge; from `sm` up it becomes the padded, bordered, backdrop-framed
+					     modal that mirrors the HTML Viewer's fullscreen. -->
 					<div
 						class={fullscreen
 							? 'fixed inset-0 z-100 flex flex-col bg-black/70 backdrop-blur-[2px]'
@@ -380,10 +381,10 @@
 								</button>
 							</div>
 						{/if}
-						<div class={fullscreen ? 'flex min-h-0 flex-1 p-4 sm:p-6' : 'contents'}>
+						<div class={fullscreen ? 'flex min-h-0 flex-1 sm:p-4 md:p-6' : 'contents'}>
 							<div
 								class={fullscreen
-									? 'flex min-h-0 flex-1 border border-border bg-bg max-w-6xl mx-auto'
+									? 'flex min-h-0 flex-1 bg-bg max-w-6xl mx-auto sm:border sm:border-border'
 									: 'contents'}
 							>
 								<div
