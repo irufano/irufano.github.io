@@ -144,9 +144,8 @@
     else url.searchParams.delete("q");
     const search = url.searchParams.toString();
     goto(`${url.pathname}${search ? `?${search}` : ""}${url.hash}`, {
-      replaceState: true,
-      keepFocus: true,
-      noScroll: true,
+      replace: true,
+      reset: false,
     });
   }
 

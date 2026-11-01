@@ -19,7 +19,10 @@ export default defineConfig({
 			// hydrated app render +error.svelte instead of GitHub's generic 404 page.
 			adapter: adapter({
 				fallback: '404.html'
-			})
+			}),
+
+			// Kit 3 removed the built-in `$lib`; keep the existing imports working.
+			alias: { $lib: 'src/lib' }
 		})
 	]
 });

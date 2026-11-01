@@ -34,9 +34,8 @@
     if (page > 1) params.set("page", String(page));
     const search = params.toString();
     goto(search ? `?${search}` : "?", {
-      replaceState: true,
-      keepFocus: true,
-      noScroll: true,
+      replace: true,
+      reset: false,
     });
   }
 

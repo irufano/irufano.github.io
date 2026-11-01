@@ -29,7 +29,7 @@
 		if (query.trim()) params.set('q', query.trim());
 		if (page > 1) params.set('page', String(page));
 		const search = params.toString();
-		goto(search ? `?${search}` : '?', { replaceState: true, keepFocus: true, noScroll: true });
+		goto(search ? `?${search}` : '?', { replace: true, reset: false });
 	}
 
 	function handleSearchInput() {
