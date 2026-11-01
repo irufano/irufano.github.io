@@ -1,0 +1,1 @@
+import"./DG4wIcZC.js";function e(e){return e.toLowerCase().trim().replace(/[^a-z0-9]+/g,`-`).replace(/(^-+|-+$)/g,``)}export{e as t};

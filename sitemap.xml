@@ -16,6 +16,12 @@
 		<priority>0.8</priority>
 	</url>
 	<url>
+		<loc>https://irufano.github.io/posts/claude-code/claude-code-tips</loc>
+		<lastmod>2026-11-02</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>https://irufano.github.io/posts/generative-ai/developer_code_testing</loc>
 		<lastmod>2026-09-06</lastmod>
 		<changefreq>monthly</changefreq>
@@ -144,6 +150,16 @@
 	</url>
 	<url>
 		<loc>https://irufano.github.io/posts/tag/cheatheets</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://irufano.github.io/posts/tag/claude-code</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://irufano.github.io/posts/tag/coding-agent</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
